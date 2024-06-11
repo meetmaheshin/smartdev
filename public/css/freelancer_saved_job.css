@@ -1,0 +1,34 @@
+.job_saved_items_section .job_saved_item_header button{
+    color: #000;
+    background: inherit;
+    border: 0;
+    border-bottom: 2px solid #000;
+  }
+.job_saved_items_section{
+    border: 1px solid #ddd;
+    border-radius: 16px;
+}
+.job_saved_items_section  .job_save_content_header button{
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    max-height: unset;
+    border: 2px solid #d5e0d5;
+    background-color: white;
+}
+.job_saved_item_content{
+    background: #f7f7f7;
+    border-radius: 16px;
+}
+.job_blank_item_body{
+    height: 150px;
+}
+@media (max-width: 480px) {
+    .job_blank_item_body{
+        height: 200px;
+    }
+    
+}

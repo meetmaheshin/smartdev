@@ -1,0 +1,109 @@
+.up_setting_container ul li a:hover span,
+.up_setting_container ul li a.active span{
+	color: #00B050;
+    font-weight: 600;
+}
+.up_setting_container ul li a:before{
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: #ddd;
+}
+.up_setting_container ul li a.active:before{
+	top: 4px;
+	height: calc(100% - 8px);
+	background: #00B050;
+}
+.user_setting_header a:hover{
+	text-decoration: underline !important;
+	color: #00B050;
+}
+.user_contact_block.border-grey-radius{
+    border-radius: 20px;
+}
+.user_contact_block .edit_account_icon{
+    margin-left: 10px;
+    padding: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    color: #000;
+    border-radius: 50%;
+    font-size: 14px;
+}
+.user_contact_block .edit_account_icon i{
+    color: #00B050;
+}
+.user_contact_block.additional_account button{
+    background: inherit;
+    border: 2px solid #00B050;
+    border-radius: 22px;
+    padding: 8px;
+    width: 100%;
+    color: #00B050;
+}
+.user_contact_edit a:hover{
+    text-decoration: underline !important;
+}
+.user_contact_edit input{
+    height: 34px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+.user_contact_edit input:focus,
+.user_contact_block .user_contact_edit select{
+    border: 2px solid #ddd;
+    outline: 0;
+}
+.user_contact_btn button{
+    background: #00B050;
+    color: #fff;
+    border: 0;
+    padding: 8px 24px;
+    border-radius: 20px;
+}
+.user_contact_btn button.cancel_btn{
+    background: inherit;
+    color: #00B050;
+}
+.user_contact_block .user_contact_edit select{
+    width: 100%;
+    border-radius: 5px;
+    height: 33px;
+    padding: 0px 5px;
+    background: #fff;
+    border: 2px solid #ddd;
+}
+.user_contact_block .user_contact_edit{
+    display: none;
+}
+.up_setting_container ul li i{
+    display: none;
+}
+@media (min-width: 1200px) {
+     .profile_contact .container-md{
+        width: 1070px;
+    }
+}
+@media (max-width: 767px) {
+    .user_contact_block.border-grey-radius{
+        border-radius: 0px;
+    }
+    .up_setting_container ul li{
+        border-bottom: 2px solid #ddd;
+    }
+    .up_setting_container ul li a:before{
+        display: none;
+    }
+    .up_setting_container ul li i{
+        display: inline-block;
+    }
+    .title_mobile_hide{
+        display: none;
+    }
+}

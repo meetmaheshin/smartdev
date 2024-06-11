@@ -1,0 +1,848 @@
+.user_on span i{
+  bottom: 10px;
+  right: 5px;
+  border: 4px solid white;
+  color: #14a800;
+}
+.project_proposal_nav_tabbing{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-content: center;
+    position: relative;
+    height: 100%;
+    width: auto;
+    color: #5e6d55;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+}
+.project_proposal_nav_tabbing a{
+    flex: 1;
+    height: 60px;
+    outline: none;
+    color: var(--gray-1);
+    margin-right: -2px;
+}
+.project_proposal_nav_tabbing a ,
+.project_proposal_nav_tabbing a>div{
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+.project_proposal_nav_tabbing a>div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #000;
+}
+.project_proposal_nav_tabbing a.active div{
+  color: #fff;
+}
+.project_proposal_nav_tabbing a:first-child>div {
+    position: relative;
+}
+.project_proposal_nav_tabbing a:after, .project_proposal_nav_tabbing a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    border-left: 2px solid #ddd;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid #ddd;
+    border-top: 2px solid transparent;
+    -webkit-border-radius: 1px;
+    -webkit-backface-visibility: hidden;
+}
+.project_proposal_nav_tabbing a:before {
+    top: 0;
+    transform: skewX(25deg);
+    border-bottom-width: 0;
+}
+.project_proposal_nav_tabbing a:after {
+    top: 50%;
+    transform: skewX(-25deg);
+    border-top-width: 0;
+}
+.project_proposal_nav_tabbing a:first-child>div:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    border-left: 2px solid #ddd;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid #ddd;
+    border-top: 2px solid transparent;
+    left: 0;
+    border: none;
+    z-index: -1;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+/* .project_proposal_nav_tabbing a:last-of-type:after, .project_proposal_nav_tabbing a:last-of-type:before{
+    border-right: 2px solid transparent;
+} */
+.project_proposal_nav_tabbing a:last-child>div:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 1px;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    border-left: 2px solid #ddd;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid #ddd;
+    border-top: 2px solid transparent;
+    z-index: -1;
+    border: none;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+.project_proposal_nav_tabbing a:focus, .project_proposal_nav_tabbing a:hover {
+    z-index: 2;
+    text-decoration: none!important;
+    color: #14a800;
+}
+.project_proposal_nav_tabbing a:focus:after, .project_proposal_nav_tabbing a:focus:before, .project_proposal_nav_tabbing a:hover:after, .project_proposal_nav_tabbing a:hover:before{
+    border-color: #14a800;
+}
+.project_proposal_nav_tabbing a.active:focus:after, .project_proposal_nav_tabbing a.active:focus:before, .project_proposal_nav_tabbing a.active:hover:after, .project_proposal_nav_tabbing a.active:hover:before{
+  border-color: transparent;
+}
+.project_proposal_nav_tabbing a:first-child:focus>div:before, .project_proposal_nav_tabbing a:first-child:hover>div:before{
+    border-width: 2px!important;
+    border: solid;
+    border-right: none;
+    border-color: #14a800;
+}
+.project_proposal_nav_tabbing a:last-child:focus>div:before, .project_proposal_nav_tabbing a:last-child:hover>div:before {
+    border-width: 2px!important;
+    border: solid;
+    border-left: 0;
+    border-color: #14a800;
+}
+.proposal_applicants_nav_tabbing .nav-tabs button{
+    background: inherit;
+    border: 0;
+    border-bottom: 2px solid transparent;
+}
+.proposal_applicants_nav_tabbing .nav-tabs button.active{
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+.proposal_applicants_body{
+    border: 1px solid #ddd;
+    border-radius: 16px;
+}
+.project_proposal_nav_tabbing a.active:before,
+.project_proposal_nav_tabbing a.active:after,
+.project_proposal_nav_tabbing a.active:first-child>div:before,
+.project_proposal_nav_tabbing a.active:last-child>div:before{
+    background-color: #14a800;
+    border-color: transparent;
+}
+.project_proposal_nav_tabbing a.active{
+    color: #fff;
+}
+.proposal_search_item input,
+.proposal_search_item button{
+    height: 40px;
+}
+.proposal_search_item input{
+  background-color: #f7f7f7;
+}
+.proposal_search_item button{
+    background-color: #14a800;
+    right: 24px;
+    padding: 0 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.proposal_search_item button i{
+    color: #fff;
+}
+.proposal_item .proposal_user_img_block .user_img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.proposal_item .proposal_user_img_block .user_status{
+    border: 1px solid #1f57c3;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 4px 6px;
+    border-radius: 3px;
+}
+.proposal_item .proposal_user_img_block .user_status p{
+    line-height: 10px;
+}
+.proposal_user_intro .proposal_user_name h5,
+.proposal_user_des h6{
+    margin-bottom: 2px;
+}
+.profile-stats .progress {
+    height: 4px;
+    margin-top: 10px;
+}
+.profile-stats .profile_rated span {
+    color: #13544e;
+}
+.proposal_user_badgets span,
+.expertise_grp_badget span{
+    background: #e4ebe4;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: #000;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.proposal_applicants_body .proposal_item{
+    border-bottom: 1px solid #ddd;
+}
+.proposal_applicants_body .proposal_item:last-of-type{
+    border-bottom: 0;
+}
+.proposal_item:hover{
+  background: #f2f7f2;
+}
+.proposal_item:hover .proposal_user_name h5{
+  text-decoration: underline;
+}
+.proposal_item:hover .proposal_user_name,#nav-proposals .proposal_item:hover{
+    cursor: pointer;
+}
+.proposal_user_btn button{
+  background-color: #fff;
+  color: #14a800;
+  font-size: 14px;
+  padding: 8px 25px;
+  border-radius: 22px;
+  border: 2px solid #14a800;
+  max-height: 40px;
+}
+.proposal_user_btn button.invited_btn {
+  background-color: lightgray;
+  border-color: transparent;
+}
+.proposal_user_btn button.btn-close:focus-within{
+  box-shadow: none;
+}
+.proposal_user_btn a.hire_btn{
+    background: #14a800;
+    color: #fff;
+    padding: 8px 40px;
+    border-radius: 22px;
+}
+.proposal_user_popoup .proposal_user_content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85%;
+    display: none;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    z-index: 999;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    overflow: auto;
+  }
+  .selected {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+  }
+  
+  .dismiss {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+  }
+  @keyframes slide-in {
+    0% {
+      -webkit-transform: translateX(100%);
+    }
+    100% {
+      -webkit-transform: translateX(0%);
+    }
+  }
+  
+  @-webkit-keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slide-out {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @-webkit-keyframes slide-out {
+    0% {
+      -webkit-transform: translateX(0%);
+    }
+    100% {
+      -webkit-transform: translateX(100%);
+    }
+  }
+  .proposal_user_popoup_bg{
+    position: fixed;
+    display: none;
+    background: #000;
+    opacity: 0.5;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    overflow: hidden;
+  }
+  .show_proposal_popup .proposal_user_popoup_bg{
+    display: block;
+  }
+  .proposal_user_popoup .proposal_user_header i{
+    font-size: 35px;
+    color: #14a800;
+    cursor: pointer;
+  }
+  .show_proposal_popup{
+    overflow: hidden;
+  }
+  .proposal_user_modal_profile .proposal_user_details img{
+    width: 80px;
+    height: 80px;
+  }
+  .proposal_user_btn .heart_icon{
+    border: 2px solid #ddd;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+.proposal_user_modal_profile{
+  border: 1px solid #ddd;
+  border-radius: 22px;
+}
+.modal_proposal_details{
+  border-top: 1px solid #ddd;
+}
+.modal_proposal_sidebar{
+  border-right: 1px solid #ddd;
+}
+.ready_chat_box button{
+    background: #14a800;
+    color: #fff;
+    padding: 8px 40px;
+    border-radius: 22px;
+    border: 0;
+}
+.ready_chat_box{
+  background: #f7f7f7;
+  padding: 30px;
+}
+.mile_datepicker{
+  z-index: 2;
+}
+.user_relationship a{
+  background-color: #fff;
+    color: #14a800;
+    font-size: 14px;
+    padding: 5px 25px;
+    border-radius: 22px;
+    border: 2px solid #14a800;
+}
+.proposal_user_head_block .user_mobile_img img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.proposal_item .proposal_user_des h6{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review_proposal .p-md-12{
+  padding: 0 12px;
+}
+.mobile_proposal_user_btn{
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+.proposal_user_modal_profile .proposal_user_btn a.hire_btn{
+  padding: 5px 40px;
+}
+.proposal_item .proposal_user_img_block .user_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* invite freelancer tab  */
+.proposal_item .portfolio_img{
+  width: 200px;
+}
+.proposal_item .portfolio_img img{
+    height: 150px;
+    width: 100%;
+}
+.invite_application .proposal_user_intro .proposal_user_head_block img{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.invite_application .proposal_user_intro .user_status .status_icon{
+  width: 12px;
+}
+.invite_application .proposal_user_intro .user_status .status_icon svg{
+  object-fit: contain;
+  width: 100%!important;
+  height: 100%!important;
+  display: block;
+  overflow: visible;
+}
+.invite_application .proposal_user_intro .user_status .user_status_block{
+    border: 1px solid;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+.invite_application .proposal_user_intro .user_status .user_status_block.online{
+  border-color: #1f57c3;
+  color: #1f57c3;
+}
+.invite_application .proposal_user_intro .user_status .user_status_block.online svg{
+  fill: #1f57c3;
+}
+.invite_application .popover-icon{
+  background: inherit;
+}
+.invite_application .popover{
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border: 0;
+}
+.popover-header{
+  border: 0;
+  background: inherit;
+  padding: 0 20px;
+}
+.popover-header i{
+  font-size: 16px;
+}
+.popover-body{
+  display: flex;
+}
+#invite-freelancers .proposal_applicants_body .proposal_item img.rounded-circle{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+#inviteJob .modal-dialog {
+  max-width: 750px;
+}
+.view_job_location .location_svg{
+    width: 14px;
+    height: 14px;
+}
+.view_job_location .location_svg svg{
+  fill: #1f57c3;
+  object-fit: contain;
+  width: 100%!important;
+  height: 100%!important;
+  display: block;
+  overflow: visible;
+}
+section.view_job_block{
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.view_job_right_block{
+  border-bottom: 1px solid #ddd;
+}
+.view_job_block ul li{
+  list-style: none;
+}
+.view_job_block button.popover-icon{
+  background: inherit;
+}
+.view_job_right_block ul li i{
+  min-width: 20px;
+}
+.view_job_right_block .ellipsis_icon{
+  background: #fff;
+  border: 2px solid #ddd;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.view_job_right_block  .popover-icon{
+  background: inherit;
+}
+.view_job_copy_link button{
+  background: inherit;
+}
+.view_job_copy_link input{
+    height: 34px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    background: #e4ebe4;
+}
+section.view_job_block .view_job_description{
+  word-break: break-word;
+}
+.modal_proposal_sidebar .education_block ul li h5{
+  line-height: 23px;
+}
+.slot_proposal_section .proposal_skill_block .all_proposal_skill span{
+  background: #e4ebe4;
+  padding: 5px 10px;
+  border-radius: 25px;
+  color: #000;
+  margin-right: 7px;
+  margin-bottom: 7px;
+  cursor: default;
+}
+.review_application .proposal_user_intro{
+  flex-basis: 22%;
+}
+.review_application .proposal_user_message_box{
+  flex-basis: 70%;
+  margin-right: 30px;
+}
+.review_application .proposal_user_message_box .cover_letter{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.proposal_applicants_body .proposal_item:last-of-type{
+  border: 0;
+}
+.review_proposal .up_svg{
+  width: 22px;
+  height: 22px;
+}
+.price_decide .nav-link:hover{
+  border-color: #108a00;
+  box-shadow: 0 0 0 1px #108a00;
+}
+.price_decide .nav-link.active{
+  border-color: #108a00;
+  background-color: #f2f7f2 !important;
+  color: #001e00 !important;
+}
+.price_decide .nav-link{
+  color: #000 !important;
+  background-color: transparent !important;
+  border: 1px solid #e4ebe4;
+  box-shadow: 0 0 0 1px #e4ebe4;
+  cursor: pointer;
+}
+.main_rate.depo_amount input{
+  width: 100% !important;
+}
+.add_mile:hover{
+  text-decoration: underline;
+}
+.price_radio.project_type_radio_content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  min-height: unset;
+}
+.price_radio label input:checked {
+  background: #4EA52F;
+}
+.price_radio label input {
+  width: 24px;
+  height: 24px;
+  background: #eee;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-right: 10px;
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+.price_radio label span {
+  width: 18px;
+  height: 18px;
+  background: #F8FAF7;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 50%;
+  position: absolute;
+  right: 13px;
+  top: 7px;
+}
+.price_radio label input:checked~span i.mid_dot{
+  background-color: #108a00;
+  width: 10px;
+  display: block;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  right: 0;
+  margin: auto;
+}
+.price_radio label {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+.up-card.offer_block p span:last-of-type .seperator_sign{
+  display: none;
+}
+/* Absolute Center Spinner */
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+
+  background: -webkit-radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+}
+/* Add a right margin to each icon */
+/* .fa {
+  margin-left: -12px;
+  margin-right: 8px;
+} */
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 150ms infinite linear;
+  -moz-animation: spinner 150ms infinite linear;
+  -ms-animation: spinner 150ms infinite linear;
+  -o-animation: spinner 150ms infinite linear;
+  animation: spinner 150ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@media(max-width: 992px){
+  .proposal_user_popoup .proposal_user_content{
+    width: 100%;
+  }
+  section.view_job_block.border-bottom-0{
+
+    border-bottom: 1px solid #ddd !important;
+  }
+  .view_job_right_block{
+    border-bottom: 0;
+  }
+  .view_job_edit_btn{
+    border-bottom: 1px solid #ddd;
+  }
+  .view_job_edit_btn ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .review_application .proposal_user_intro{
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+  .review_application .proposal_user_message_box{
+    flex-basis: 60%;
+  }
+  .review_application .hire_job{
+    flex-basis: 20%;
+    margin-left: auto;
+    text-align: right;
+  }
+  .proposal_applicants_body .proposal_item{
+    flex-wrap: wrap;
+  }
+  .review_application .proposal_user_intro{
+    margin-bottom: 20px;
+  }
+}
+@media(max-width: 767px){
+  .proposal_applicants_body{
+    border: 0;
+  }
+  .review_proposal .p-md-12{
+    padding: 0;
+  }
+  .project_proposal_nav_tabbing{
+    border-radius: 0;
+  }
+  .project_proposal_nav_tabbing a{
+    height: 45px;
+  }
+  .proposal_search_item.w-50{
+    width: 100% !important;
+  }
+  .project_proposal_nav_tabbing a>div{
+    font-size: 12px;
+  }
+  .proposal_item .profile-stats div{
+    flex-basis: 50%;
+  }
+  .proposal_item .profile-stats div.job-success-bar{
+    flex-basis: inherit;
+  }
+  .proposal_user_message_box .messagr_status{
+    margin-bottom: 5px;
+  }
+  .modal_proposal_sidebar{
+    border-right: 0;
+  }
+  .project_proposal_nav_tabbing a:last-child>div:before{
+    border-radius: 0;
+  }
+  #invite-freelancers .proposal_applicants_body .proposal_item img.rounded-circle {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+  }
+  .view_job_edit_btn ul li{
+    flex-basis: 50%;
+  }
+}
+
+@media(max-width: 480px){
+  .review_application .proposal_user_message_box{
+    flex-basis: 100%;
+  }
+  .review_application .hire_job{
+    flex-basis: 100%;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+  .review_application .hire_job a{
+    width: 100%;
+  }
+}

@@ -1,0 +1,227 @@
+.message_container_section .message_container_box{
+    height: calc(100vh - 64px);
+}
+.message_container_section .message_container_box,.lefi_list_box {
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   border-radius: 10px;
+}
+.message_container_section .user_list_block .search input:focus-visible,
+.message_container_section .user_list_block .search input:focus{
+   outline: none;
+}
+.message_container_section .user_list_block .search input{
+   border: none;
+   border-top: 1px solid lightgrey;
+   padding: 18px 14px 18px 40px;
+   background: #fff;
+   border-bottom: 1px solid lightgrey;
+}
+.message_container_section .user_list_block .search i{
+   left: 25px;
+   top: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
+.message_container_section .user_list_block .about .status i{
+   font-size: 10px;
+}
+.message_container_section .user_list_block .about .status .online,
+.message_container_section .message_content_header .chat-about .status .online,.chatboxicon .online{
+   color: #86BB71;
+}
+/* .message_container_section .user_list_block .about .status .offline{
+    color: #E38968;
+ } */
+ .message_container_box .message_content_header{
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   border-radius: 10px;
+ }
+ .fa-circle span{
+      font-family: 'Nunito Sans', sans-serif;
+ }
+ .message_container_box .type_text_box textarea{
+   resize: none;
+   width: 100%;
+   border: 0px;
+   border-radius: 0px;
+   margin-right: 10px;
+   overflow: hidden;
+    min-height: 30px;
+    max-height: 100px
+ }
+ .message_container_box .type_text_box textarea:focus{
+   outline: 0;
+ }
+ .message_container_box .chat_input_box{
+   width: 100%;
+   bottom: 0;
+   z-index: 999;
+   background: #fff;
+ }
+ .message_container_box .type_text_box button{
+   background: inherit;
+   outline: 0;
+   border: 1px solid lightgrey;
+   border-radius: 50%;
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #00B050;
+ }
+ .message_container_box  .message_content{
+    height: calc(100% - 194px);
+    overflow: auto;
+ }
+ .message_container_box .message_content .message{
+    color: white;
+    padding: 18px 20px;
+    line-height: 26px;
+    font-size: 14px;
+    border-radius: 7px;
+    width: 50%;
+    position: relative;
+    right: 0px;
+    /* top: 12px; */
+    word-break: break-all;
+ }
+ .message_container_box .message_content .message::after{
+    bottom: 100%;
+    left: 7%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #86BB71;
+    border-width: 10px;
+    margin-left: -10px;
+ }
+ .message_container_box .message_content .message.other-message::after{
+    border-bottom-color: #FFA137;
+    left: 94%
+ }
+ .message_container_box .message_content .message.other-message{
+    background: #FFA137;
+ }
+ .message_container_box .message_content .message.my-message{
+    background: #86BB71;
+ }
+ .message_container_box .message-data i{
+    font-size: 10px;
+ }
+ /* .message_container_box .message-data{
+   margin-top: 22px;
+ } */
+ .message_container_section .user_list_block .self_user img{
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+ }
+ .message_container_section .user_list_block .user_lists .user_img img,
+ .message_container_box .message_content_header .chat-about .user_img img{
+   width: 50px;
+   height: 50px;
+   object-fit: cover;
+ }
+ .message_container_section .user_list_block .user_lists .user_img .status,
+ .message_container_box .message_content_header .chat-about .user_img .status{
+   right: 12px;
+   bottom: -2px;
+ }
+ .message_container_section .user_list_block .user_lists ul li.active{
+   background: #ebebeb;
+ }
+ .message_container_section .user_list_block .user_lists .user_img .status i[data-title="Away"], .message_container_box .message_content_header .chat-about .user_img .status i[data-title="Away"]{
+   color: #FFAF33;
+ }
+ .message_container_box .type_text_box{
+   display: flex;
+   align-items: center;
+ }
+.message_container_box .type_text_box .image-upload input{
+  display: none;
+}
+.message_container_box .type_text_box .image-upload label{
+   border: 1px solid lightgrey;
+   border-radius: 50%;
+   padding: 9px 11px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 10px;
+   cursor: pointer;
+   color: #00B050;
+}
+.textbox_container{
+   border: 1px solid lightgrey;
+   border-radius: 10px;
+   padding: 10px 0 0 10px;
+   width: 100%;
+   height: auto;
+   margin-right: 10px;
+}
+.textbox_container img{
+   width: 100%;
+}
+#selected_img{
+   display: flex;
+   flex-wrap: wrap;
+   padding-right: 10px;
+   padding-bottom: 10px;
+   border-bottom: 1px solid #000;
+   margin-right: 10px;
+}
+#selected_img.img-thumbs-hidden{
+   padding-bottom: 0;
+   border-bottom: 0;
+}
+#selected_img .wrapper-thumb-list{
+   margin-right: 10px;
+   position: relative;
+   margin-bottom: 10px;
+}
+#selected_img .wrapper-thumb-list .remove-btn{
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#selected_img .wrapper-thumb-list .remove-btn i{
+   font-size: 12px;
+}
+.message_container_box .message_content .message.other-message.image_container{
+   background: inherit;
+   text-align: right;
+}
+.message_container_box .message_content .message.other-message.image_container:after{
+   display: none;
+}
+.message_container_box .message_content .message.my-message.image_container{
+   background: inherit;
+}
+.message_container_box .message_content .message.my-message.image_container:after{
+   display: none;
+}
+.headingLine::before{ 
+    content: "";
+}
+.headingLine::after{ 
+   content: "";
+}
+.headingLine h6{
+   min-width: max-content;
+}
+.lefi_list_box{
+   max-height: calc(100vh - 65px);
+   overflow: auto;
+}

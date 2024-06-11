@@ -1,0 +1,407 @@
+.up_setting_container ul li a:hover span{
+	color: #00B050;
+}
+.up_setting_container ul li a:before{
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: #ddd;
+}
+.up_setting_container ul li a.active:before{
+	top: 4px;
+	height: calc(100% - 8px);
+	background: #00B050;
+}
+.user_setting_header a:hover{
+	text-decoration: underline !important;
+	color: #00B050;
+}
+.user_project_preference select:focus-visible{
+    outline: none;
+}
+.user_project_preference select{
+	width: 50%;
+	padding: 8px;
+    border-radius: 5px;
+    background: #fff;
+    border-color: #ddd;
+}
+.user_profile_setting_block .border-grey-radius{
+	border-radius: 20px;
+}
+.experience_btn_box .btn_box p{
+	font-size: 14px;
+}
+.signup_btn_box.experience_btn_box .btn_box{
+	width: 33.33%;
+}
+.signup_btn_box.experience_btn_box .btn_box.active{
+	background: #f2f7f2;
+}
+.user_profile_setting_block .edit_draft_icon {
+    margin-left: 10px;
+    padding: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #00B050;
+    color: #000;
+    border-radius: 50%;
+    font-size: 14px;
+}
+.profile_section_Specialized_block a:hover{
+    color: #00B050;
+}
+#editsearchcategories .badge_items span{
+    display: inline-block;
+    margin-bottom: 8px;
+}
+#editsearchcategories .badge_items span button{
+    border: unset;
+    width: 24px;
+    margin-left: 4px;
+}
+#editsearchcategories .badge_items span button i{
+    color: #505050;
+}
+#editsearchcategories .accordion-item{
+    border-radius: 0;
+    border-left: unset;
+    border-right: unset;
+}
+#editsearchcategories .accordion-item button{
+    background: inherit;
+    outline: 0;
+    box-shadow: none;
+}
+#editsearchcategories .accordion-button:not(.collapsed){
+    color: #000;
+}
+#editsearchcategories .accordion-button:not(.collapsed)::after{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+#editsearchcategories .accordion_inner_content input{
+    -webkit-appearance: none;
+    appearance: none;
+}
+#editsearchcategories .accordion_inner_content label .custom_checkbox:before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    top: 2px;
+    margin-left: -23px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+#editsearchcategories .accordion_inner_content label input[type="checkbox"]:checked + .custom_checkbox:before{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 10px;
+    color: #fff;
+    background-color: #00B050;
+    line-height: 16px;
+    border-color: unset;
+    text-align: center;
+}
+.accordion_inner_content div{
+    flex-basis: 50%;
+}
+.profile_section_category_block .user_setting_header a:hover{
+    text-decoration: none !important;
+}
+#specialized_form fieldset:not(:first-of-type) {
+    display: none;
+}
+.custom_popup #specialized_form .progress{
+    height: 4px;
+}
+.custom_popup #specialized_form .progress-bar{
+    background-color: #4EA52F;
+}
+.selected_specialty input{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.selected_specialty span.custom_radio:before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #eee;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.selected_specialty span.custom_radio:after{
+    width: 10px;
+    height: 10px;
+    background: #F8FAF7;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 50%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+}
+.selected_specialty input[type="radio"]:checked + span.custom_radio:before{
+    background: #4EA52F;
+}
+.selected_specialty span:last-of-type{
+    padding-left: 35px;
+}
+.all_specialty select{
+    border-radius: 5px;
+    background: #fff;
+    border-color: #ddd;
+}
+#specialized_form .anchor_hover:hover{
+    color: #00B050;
+    text-decoration: underline !important;
+}
+.selected_specialty label{
+    cursor: pointer;
+}
+.specialty_btn input.action-button{
+    background: #00B050;
+    border-radius: 25px;
+    border: inherit;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 20px;
+    width: auto;
+}
+.specialty_btn input.previous{
+    background: inherit;
+    border: 0;
+    padding-right: 20px;
+}
+.specialty_btn .cancel_btn{
+    background: inherit;
+    text-decoration: underline;
+}
+.see_all_btn{
+    cursor: pointer;
+}
+.all_specialty{
+    display: none;
+}
+.development_group_selector .development_select_items h4{
+    display: inline;
+    z-index: 1;
+    background: #fff;
+    position: relative;
+    padding-right: 10px;
+}
+.development_group_selector .development_select_items hr{
+    width: 100%;
+    top: -3px;
+    z-index: 0;
+}
+.development_group_selector .development_select_item_group span .fa-check{
+    display: none;
+}
+.development_group_selector .development_select_item_group > span{
+    background: #e4ebe4;
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.development_select_item_group input[type="search"],
+.speciality_description input[type="text"]{
+    line-height: 36px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+.development_select_item_group input[type="search"]:focus-visible,
+.speciality_description input[type="text"]:focus-visible,
+#specialized_form textarea:focus-visible{
+    outline: 0;
+}
+#specialized_form fieldset .form-card{
+    min-height: 400px;
+}
+.speciality_description .specialty_btn{
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+#specialized_form textarea{
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 3px 10px;
+    resize: none;
+}
+.development_group_selector .development_select_item_group a:hover{
+    color: #00B050;
+}
+.speciality_description .specialty_btn .save_btn{
+    background: #00B050;
+    border-radius: 25px;
+    border: inherit;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 20px;
+    width: auto;
+}
+.selected_skills_block .specialty_btn{
+    right: 24px;
+    bottom: 24px;
+}
+.loader {
+    width: 16px;
+    height: 16px;
+    border:2px solid #FFF;
+    border-radius: 50%;
+    position: relative;
+    transform:rotate(45deg);
+    box-sizing: border-box;
+    top: 45%;
+    right: 50%;
+    z-index: 9999;
+    transform: translate(50%, 45%);
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    inset: -10px;
+    border-radius: 50%;
+    border: 3px solid #4EA52F;
+    animation: prixClipFix 2s infinite linear;
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+  .experience_btn_block .loader{
+    display: none;
+  }
+  .development_group_selector .development_select_item_group span.checked_skillId{
+    background-color: green;
+    color: white;
+    pointer-events: none;
+  }
+  .specialty_btn .next[disabled = "disabled"]{
+    background: #ddd;
+  }
+.badge_items span{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.user_project_preference .loader{
+    width: 0px;
+    height: 0px;
+    border: 0px solid #FFF;
+    right: -11px;
+    top: 12px;
+    display: none;
+}
+.user_project_preference .loader:before{
+    inset: -7px;
+    border: 2px solid #4EA52F;
+}
+.my_profile_update_btn button{
+    background: #00B050;
+    border-radius: 25px;
+    font-style: normal;
+    font-size: 16px;
+    color: #fff;
+    padding: 7px 25px;
+    line-height: 26px;
+    border: 0;
+}
+.my_profile_dropdown button{
+    background: #fff;
+    transform: rotate(90deg);
+    border: 2px solid #ddd;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.my_profile_dropdown button:after{
+    display: none;
+}
+.my_profile_dropdown button i{
+    font-size: 14px;
+    color: #00B050;
+}
+.my_profile_dropdown ul.dropdown-menu{
+    box-shadow: 0 6px 12px rgb(57 73 76 / 25%);
+    margin-top: 15px !important;
+}
+.my_profile_dropdown ul.dropdown-menu:before {
+    content: "";
+    border: none;
+    box-shadow: -2px 2px 3px rgb(57 73 76 / 20%);
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 1;
+    background: linear-gradient(45deg,#fff,#fff 55%,transparent 0,transparent);
+    transform: rotate(135deg);
+    top: -8px;
+    right: 10px;
+}
+.my_profile_dropdown ul.dropdown-menu[data-popper-placement="bottom-start"],
+.my_profile_dropdown ul.dropdown-menu[data-popper-placement="top-start"]{
+    left: -125px !important;
+}
+.my_profile_dropdown ul.dropdown-menu[data-popper-placement="top-end"],
+.my_profile_dropdown ul.dropdown-menu[data-popper-placement="top-start"]{
+    margin-bottom: 15px !important;
+}
+.my_profile_dropdown ul.dropdown-menu[data-popper-placement="top-end"]:before,
+.my_profile_dropdown ul.dropdown-menu[data-popper-placement="top-start"]:before{
+   bottom: -8px;
+   top: inherit;
+   transform: rotate(316deg);
+}
+.up_setting_container ul li a.active span{
+    color: #00B050;
+    font-weight: 600;
+}
+@media (min-width: 1200px) {
+    .profile_setting .container-md{
+       width: 1070px;
+   }
+}
+@media (max-width: 991px) {
+    .user_project_preference select,
+    .signup_btn_box.experience_btn_box .btn_box{
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .user_profile_setting_block .border-grey-radius{
+        border-radius: 0px;
+    }
+    .up_setting_container ul li{
+        border-bottom: 2px solid #ddd;
+    }
+    .up_setting_container ul li a:before{
+        display: none;
+    }
+    .up_setting_container ul li i{
+        display: inline-block;
+    }
+    .title_mobile_hide{
+        display: none;
+    }
+}

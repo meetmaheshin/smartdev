@@ -1,0 +1,138 @@
+.proposal_nav_tabbing .nav-tabs button{
+    background: inherit;
+    border: 0;
+    border-bottom: 2px solid transparent;
+}
+.proposal_nav_tabbing .nav-tabs button.active{
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+.proposal_active_list .proposal_list_row:last-of-type{
+    border-bottom: 0 !important;
+}
+.proposal_list_block .fa-question-circle{
+    cursor: pointer;
+}
+button.popover-icon{
+    background: inherit;
+}
+.proposal_table table tr td:nth-child(2),.proposal_table table tr td:nth-child(3){
+    vertical-align: middle;
+}
+.proposal_table table tr:last-of-type td{
+    border-bottom: 0;
+}
+.proposal_table table tr td:nth-child(2) a:hover{
+    color: #00B050;
+}
+.proposal_table table tr:hover{
+    --bs-table-accent-bg: inherit;
+}
+.proposal_table nav svg{
+    width: 20px;
+    color: #ddd;
+}
+.proposal_table nav div:first-of-type{
+    display: none;
+}
+.proposal_table nav div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.proposal_table nav div .border{
+    border: 0 !important;
+}
+.proposal_table nav a svg{
+    color: #00B050;
+}
+.proposal_table nav div span[aria-current="page"] span{
+    background-color: #00B050 !important;
+    color: #fff;
+    padding: 0px 0px !important;
+    border-radius: 50%;
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+}
+.proposal_table nav div a{
+    color: #000;
+    text-decoration: none;
+    padding: 6px 13px !important;
+    font-size: 14px;
+}
+.proposal_table nav div a[rel="prev"]{
+    padding-right: 0 !important;
+}
+.proposal_table nav div a[rel="next"]{
+    padding-left: 0 !important;
+}
+.proposal_table nav div span.shadow-sm{
+    box-shadow: none !important;
+}
+.proposal_block_title h2 i.fa-angle-down{
+    display: none;
+}
+.proposal_block_title .popover{
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    border: 0;
+}
+.proposal_block_title .popover-header{
+    border: 0;
+    background: inherit;
+    padding: 0 20px;
+}
+.proposal_block_title .popover-header i{
+    font-size: 16px;
+}
+.proposal_block_title .popover-body{
+    display: flex;
+}
+.dollar_before i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #333333cf;
+}
+@media (max-width: 767px) {
+    .question_icon{
+        display: none;
+    }
+    .proposal_list_section .container{
+        width: 100%;
+        padding: 0;
+        max-width: 100%;
+    }
+    .proposal_list_section .border_radius_20{
+        border-radius: 0;
+    }
+    .proposal_block_title h2 i.fa-angle-down{
+        display: block;
+    }
+    .proposal_active_list{
+        display: none;
+    }
+    .proposal_block_title.open i.fa-angle-down{
+        transform: rotate(180deg);
+    }
+    .proposal_table table tr{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .proposal_table table tr td{
+        flex-basis: 100%;
+        padding-bottom: 0;
+    }
+    .proposal_table table tr td:nth-child(1){
+        order: 2;
+    }
+    .proposal_table table tr td:nth-child(2){
+        order: 1;
+    }
+    .proposal_table table tr td:nth-child(3){
+        order: 3;
+    }
+}
