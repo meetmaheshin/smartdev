@@ -46,8 +46,8 @@
                                     <i class="far fa-user-circle"></i>
                                 </span>
                                 <div class="avtar_decrp">
-                                    <h6 class="m-0">Ravi Ojha</h6>
-                                    <p class="m-0">Freelancer</p>
+                                    <h6 class="m-0">USER</h6>
+                                    <p class="m-0">Web3 Professional</p>
                                 </div>
                             </li>
                             <li class="drop_op"><a class="dropdown-item" href="#"><i class="fas me-2 fa-user-cog"></i> Settings</a></li>
@@ -65,7 +65,7 @@
                         </span>
                         <div class="avtar_decrp text-center">
                             <h6 class="m-0 mt-3">{{auth()->user()->firstname}} {{auth()->user()->lastname}}</h6>
-                            <p>Freelancer</p>
+                            <p>Web3 Professional</p>
                         </div>
                     </li>
                     <!-- <li class="drop_op"><a class="dropdown-item" href="#"><i class="fas me-2 fa-user-cog"></i> Settings</a></li> -->

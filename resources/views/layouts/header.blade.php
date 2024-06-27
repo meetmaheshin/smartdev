@@ -151,7 +151,7 @@
 										<img class="rounded-circle border-0 object-fit-cover" src="{{ auth()->user()->profile_photo_path ? asset('/storage/images/client_profile/'.auth()->user()->profile_photo_path):  asset('images/user_default.jpeg') }}" width="88" height="88" alt="">
 									</div>
 									<span class="d-block font_16 font_weight_600 block_heading">{{Auth::user()->fullname}}</span>
-									<span class="d-block font_11 color_grey">{{Auth::user()->is_admin== App\Models\User::ROLE_FREELANCER ? 'Freelancer':'Client'}}</span>
+									<span class="d-block font_11 color_grey">{{Auth::user()->is_admin== App\Models\User::ROLE_FREELANCER ? 'Web3 Professional':'Client'}}</span>
 								</li>
 								@php
 								$route = auth()->user()->is_admin == 0 ? 'contact.info.settings' : 'settings.myinfo';

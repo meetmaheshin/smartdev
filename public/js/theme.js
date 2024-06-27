@@ -27,10 +27,10 @@ jQuery(document).ready(function () {
         } else if (btn_text === "freelancer") {
             // signup_join_btn.text("Apply as a Freelancer").prop('disabled', false);
 
-            signup_join_btn.text("Apply as a Freelancer");
+            signup_join_btn.text("Apply as a Web3 Professional");
             signup_join_btn.removeAttr("disabled");
             jQuery(".sign_up_form").find("h4").text(
-                "I'm a freelancer, looking for work"
+                "I'm a Web3 Professional, looking for work"
             );
             jQuery("#is_admin").val("0");
             jQuery(".header_right a").text("Join as a Client");
@@ -62,7 +62,7 @@ jQuery(document).ready(function () {
             jQuery(this).text("Apply as talent");
         } else if (test == 1) {
             jQuery(".signup_heading").text(
-                "I'm a freelancer, looking for work"
+                "I'm a Web3 Professional, looking for work"
             );
             jQuery("#is_admin").val("0");
             jQuery(this).text("Join as a Client");
