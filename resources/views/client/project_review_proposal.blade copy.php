@@ -18,7 +18,7 @@
                                 <div class="d-flex d-md-none">View Job</div>
                             </a>
                             <a class="color_grey font_14 text-decoration-none" id="nav-invite-freelancers" data-bs-toggle="tab" data-bs-target="#invite-freelancers" type="button" role="tab" aria-controls="invite-freelancers" aria-selected="false">
-                                <div class="d-none d-md-flex font_weight_700">Invite Freelancers</div>
+                                <div class="d-none d-md-flex font_weight_700">Invite Web3 Professional</div>
                                 <div class="d-flex d-md-none">Invite</div>
                             </a>
                             <a class="color_grey font_14  text-decoration-none" id="nav-review-proposal" data-bs-toggle="tab" data-bs-target="#review-proposals" type="button" role="tab" aria-controls="review-proposals" aria-selected="false">

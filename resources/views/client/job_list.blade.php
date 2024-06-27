@@ -72,7 +72,7 @@
                             <ul class="dropdown-menu">
                                 @if($project->job=='new')
                                 <li> <span class="view_proposals dropdown-item" data-action="{{route('project.proposal.ajax')}}" data-id="{{$project->id.'?view=nav-review-proposal'}}">View Proposals</span></li>
-                                <li> <span class="view_proposals dropdown-item" data-action="{{route('project.proposal.ajax')}}" data-id="{{$project->id.'?view=nav-invite-freelancers'}}">Invite Freelancers</span></li>
+                                <li> <span class="view_proposals dropdown-item" data-action="{{route('project.proposal.ajax')}}" data-id="{{$project->id.'?view=nav-invite-freelancers'}}">Invite Web3 Professional</span></li>
                                 <li> <span class="view_proposals dropdown-item" data-action="{{route('project.proposal.ajax')}}" data-id="{{$project->id.'?view=nav-view-job'}}">View Job Posting</span></li>
                                 <li>
                                     <span class="edit_draft dropdown-item" data-action="{{route('project.review.ajax')}}" data-id="{{$project->id}}"> Edit Posting</span>

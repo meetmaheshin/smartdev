@@ -21,7 +21,7 @@
                 @csrf
                 <input type="hidden" name="is_admin" value="{{ old('is_admin') }}" id="is_admin">
                 <div class="signup_content text-center">
-                    <h3 class="signup_heading font_weight_600">Join as a client or freelancer</h3>
+                    <h3 class="signup_heading font_weight_600">Join as a client or Web3 Professional</h3>
                     <div class="signup_btn_box mt-4 d-xl-flex px-4 justify-content-around">
                         <div class="btn_box p-3 me-xl-5 mb-3 mb-xl-0" data-text="client">
                             <div class="btn_box_inner d-flex justify-content-between">
@@ -49,7 +49,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <p class="text-start m-0">I'm a freelancer, looking for work</p>
+                            <p class="text-start m-0">I'm a Web3 Professional, looking for work</p>
                         </div>
                     </div>
                     <div class="join_btn">

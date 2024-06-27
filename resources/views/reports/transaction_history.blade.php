@@ -11,7 +11,7 @@
                     <th scope="col">Date</th>
                     <th scope="col">Type</th>
                     <th scope="col">Description</th>
-                    <th scope="col">{{ auth()->user()->is_admin==1 ? 'Freelancer': 'Client' }}</th>
+                    <th scope="col">{{ auth()->user()->is_admin==1 ? 'Web3 Professional': 'Client' }}</th>
                     <th scope="col" class="text-center">Amount/Balance</th>
                     <th scope="col" class="text-center">Status</th>
 
@@ -26,7 +26,7 @@
                     <td>{{ auth()->user()->is_admin== 1 ? $histories->clientHire->freelancer->FullName: $histories->clientHire->clients->FullName }}</td>
                     <td class="text-center">${{$histories->deposit_amount}}</td>
                     <td class="text-center font_weight_700">
-                        <span class="badge {{ $histories->status == 0 ? 'text-bg-secondary' : ($histories->status == 1 ? 'text-bg-info' : ($histories->status == 2 ? 'text-bg-primary' : ($histories->status == 3 ? 'text-bg-success' : '-')))}}">{{ $histories->status == 0 ? 'Await Payment' : ($histories->status == 1 ? 'Escrow Funding' : ($histories->status == 2 ? 'Pay to freelancer' : ($histories->status == 3 ? 'Approved Work and Paid' : '-')))}}</span>
+                        <span class="badge {{ $histories->status == 0 ? 'text-bg-secondary' : ($histories->status == 1 ? 'text-bg-info' : ($histories->status == 2 ? 'text-bg-primary' : ($histories->status == 3 ? 'text-bg-success' : '-')))}}">{{ $histories->status == 0 ? 'Await Payment' : ($histories->status == 1 ? 'Escrow Funding' : ($histories->status == 2 ? 'Pay to Web3 Professional' : ($histories->status == 3 ? 'Approved Work and Paid' : '-')))}}</span>
                     </td>
                 </tr>
                 @endforeach
