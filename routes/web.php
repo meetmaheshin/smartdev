@@ -13,6 +13,7 @@ use App\Http\Controllers\Freelancer\InitiateDetailController;
 use App\Http\Controllers\Freelancer\MessageController;
 use App\Http\Controllers\Search\SearchController;
 use App\Http\Controllers\TransactionHistoryController;
+use App\Http\Controllers\Auth\VerificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +36,28 @@ Route::view('/hire-us', 'static.hire_us');
 Route::view('/faqs', 'static.faqs');
 
 Route::group(['middleware' => 'prevent-back-history'], function () {
-    Auth::routes(['verify' => true, 'login' => true]);
+    Auth::routes();
 });
+
+Route::get('/email/verify', function () {
+    return view('auth.verify');
+    //return redirect('/login');
+});
+
+// Route::post('email/resend', [VerificationController::class, 'resend'])->middleware([ 'throttle:6,1'])->name('verification.resend');
+// Route to show the resend form
+Route::get('/email/resend',  [VerificationController::class, 'showResendForm'] )->name('verification.resend');
+
+// Route to handle the resend request
+Route::post('/email/resend',  [VerificationController::class, 'resend'])->name('verification.resend');
+
+
+
+Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])
+    ->middleware(['signed'])->name('verification.verify');
+
+// Route::post('email/resend', 'VerificationController@resend')
+//     ->middleware(['auth', 'throttle:6,1'])->name('verification.resend');
 
 /* 
 is_admin middleware check user is client
