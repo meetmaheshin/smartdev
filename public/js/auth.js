@@ -17,11 +17,7 @@ jQuery(document).ready(function () {
                 if (response.status == 200) {
                     notify.show("success", "Registration Successfully");
                     setTimeout(function () {
-                        if (isadmin == 0) {
-                            window.location.replace("create-profile/title");
-                        } else {
-                            window.location.replace("client/dashboard");
-                        }
+                        window.location.replace("email/verify");
                     }, 3000);
                 } else {
                     notify.show(response.type, response.msg);

@@ -2,19 +2,22 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail  as MustVerifyEmailContract;
+use Illuminate\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Notifications\CustomVerifyEmailNotification;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
     use Notifiable;
     use SoftDeletes;
+    // use MustVerifyEmail;
 
 
     const ROLE_CLIENT = '1';
@@ -124,4 +127,9 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getUserDetails($userId) {
         return $this->where('id', $userId)->first();
     }
+
+    // public function sendEmailVerificationNotification()
+    // {
+    //     $this->notify(new CustomVerifyEmailNotification);
+    // }
 }

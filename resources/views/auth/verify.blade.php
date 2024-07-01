@@ -1,4 +1,4 @@
-@extends('layouts.freelance_register')
+@extends('layouts.user_verify')
 
 @section('content')
 <div class="container mt-5 email_verify_block">
@@ -18,10 +18,8 @@
 
                     {{ __('Before proceeding, please check your email for a verification link.') }}
                     {{ __('If you did not receive the email') }},
-                    <form class="d-block" method="POST" action="{{ route('verification.resend') }}">
-                        @csrf
-                        <button type="submit" class="up_green_btn font_weight_600 my-4 align-baseline">{{ __('click here to request another') }}</button>
-                    </form>
+                    
+                    <a href="{{route('verification.resend')}}"><button type="button" class="up_green_btn font_weight_600 my-4 align-baseline">{{ __('click here to request another') }}</button></a>
                 </div>
             </div>
         </div>

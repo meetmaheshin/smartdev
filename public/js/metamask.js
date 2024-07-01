@@ -774,7 +774,7 @@ async function transaction(coin,tokensToTransfer,devTokenToTransfer,usdtTokenToT
 		var rpc_url = bsc_rpc_url;
 		var chainName = 'Smart Chain';
 		var symbol = 'BNB';
-		var decimals = '18';
+		var decimals = 18;
 	}else if(coin == 'Dev3'){
 		var transactionAction = '2';
 		var res_pay_add = BigInt(devTokenToTransfer*1000000000000000000);
@@ -784,9 +784,9 @@ async function transaction(coin,tokensToTransfer,devTokenToTransfer,usdtTokenToT
 		var web3 = new Web3(poloygon_rpc_url);
 		var selectedchainId = POLYGON_chain_id;
 		var rpc_url = poloygon_rpc_url;
-		var chainName = 'Polygon Network';
+		var chainName = 'Polygon Matic';
 		var symbol = 'MATIC';
-		var decimals = '18';
+		var decimals = 18;
 
 	}else if(coin == 'USDT'){
 		var transactionAction = '3';
@@ -799,7 +799,7 @@ async function transaction(coin,tokensToTransfer,devTokenToTransfer,usdtTokenToT
 		var rpc_url = ethereum_rpc_url;
 		var chainName = 'Ethereum Network';
 		var symbol = 'USDT';
-		var decimals = '6';
+		var decimals = 18;
 
 	}
 	Swal.fire({
@@ -836,7 +836,7 @@ async function transaction(coin,tokensToTransfer,devTokenToTransfer,usdtTokenToT
 				  });
 				}catch (error) {
 				  if (error.code === 4902) {
-					  try {
+					try {
 						await window.ethereum.request({
 						  method: 'wallet_addEthereumChain',
 						  params: [
@@ -849,14 +849,14 @@ async function transaction(coin,tokensToTransfer,devTokenToTransfer,usdtTokenToT
 								  symbol:symbol, // 2-6 characters long
 								  decimals: decimals
 							  },
-							  blockExplorerUrls: [rpc_url],
+							//   blockExplorerUrls: [rpc_url],
 	  
 							},
 						  ],
 						});
 					  } catch (addError) {
 						console.error(addError);
-					  }
+					}
 				  }
 				  console.log("Cannot switch to the network"+error);
 			  }
@@ -877,6 +877,7 @@ async function transaction(coin,tokensToTransfer,devTokenToTransfer,usdtTokenToT
 			  params: [tx]
 			})
 			.catch((error) => {
+				console.log("error",error.code);
 			  if (error.code === 4001) {
 				  swal.close();
 			  }
@@ -927,7 +928,7 @@ async function transaction(coin,tokensToTransfer,devTokenToTransfer,usdtTokenToT
 	  console.log("hash",hash);
 	  console.log("url",url);
 
-	  const web3 = new Web3('https://rpc-mumbai.maticvigil.com/');
+	  const web3 = new Web3(url);
 		 web3.eth.getTransactionReceipt(hash, function (error, transaction) {
 			console.log("error",error);
 			console.log("transaction",transaction);

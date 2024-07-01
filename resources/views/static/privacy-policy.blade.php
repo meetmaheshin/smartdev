@@ -19,7 +19,7 @@
                 <h3>This Privacy Policy is effective as of December 1, 2022.</h3>
                 <p>SmartDev3 provides this Privacy Policy to inform users of our policies and procedures regarding the
                     collection, use and disclosure of personally identifiable information received from users of
-                    this website, located at <a href="https://www.SmartDev3.com">https://www.SmartDev3.com</a> (“Site” )
+                    this website, located at <a href="{{URL::to('/')}}">https://www.SmartDev3.ae</a> (“Site” )
                     or collected through our service,
                     including via SMS, WAP and Instant Messaging (“Service” ). This Privacy Policy may be updated
                     from time to time for any reason; each version will apply to information collected while it was
