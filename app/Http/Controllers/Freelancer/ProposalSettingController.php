@@ -102,7 +102,7 @@ class ProposalSettingController extends Controller
         $receiver = $request->project_user_id;
         $conversationData = $this->conservation->conservationByProject($request->project_id,auth()->user()->id, $request->project_user_id);
         
-        $freelancerWallet = Wallet::where('user_id',auth()->user()->id)->where('primary',1)->first();
+        $freelancerWallet = Wallet::where('user_id',auth()->user()->id)->where('primary','1')->first();
         if(empty($conversationData)){
             $conservation = new Conservation;
             $conservation->sender_id = auth()->user()->id;

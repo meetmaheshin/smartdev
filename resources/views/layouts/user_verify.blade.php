@@ -38,47 +38,9 @@
                         </button>
                     </div>
                 </nav>
-                <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="bg-light p-4">
-                        <ul class="px-0 list-unstyled">
-                            <li class="mob_list">
-                                <span class="d-flex justify-content-center align-items-center" href="#">
-                                    <i class="far fa-user-circle"></i>
-                                </span>
-                                <div class="avtar_decrp">
-                                    <h6 class="m-0">{{auth()->user()->firstname}} {{auth()->user()->lastname}}</h6>
-                                    <p class="m-0">Web3 Professional</p>
-                                </div>
-                            </li>
-                            <li class="drop_op"><a class="dropdown-item" href="#"><i class="fas me-2 fa-user-cog"></i> Settings</a></li>
-                            <li class="drop_op"><a class="dropdown-item" href="#"><i class="fas me-2 fa-sign-out-alt"></i> Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
-            <div class="dropdown  d-none d-md-block p-2 log_drop">
-                <button class="dropdown-toggle border-0 bg-transparent" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="far fa-user-circle"></i></button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li>
-                        <span class="d-flex justify-content-center align-items-center" href="#">
-                            <i class="far fa-user-circle"></i>
-                        </span>
-                        <div class="avtar_decrp text-center">
-                            <h6 class="m-0 mt-3">{{auth()->user()->firstname}} {{auth()->user()->lastname}}</h6>
-                            <p>Web3 Professional</p>
-                        </div>
-                    </li>
-                    <!-- <li class="drop_op"><a class="dropdown-item" href="#"><i class="fas me-2 fa-user-cog"></i> Settings</a></li> -->
-                    <li class="drop_op">
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                            <i class="fas fa-sign-out-alt me-2"></i>{{ __('Logout') }}
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </li>
-                </ul>
-            </div>
+           
         </div>
     </nav>
     @yield('content')

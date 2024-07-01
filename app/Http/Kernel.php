@@ -62,7 +62,7 @@ class Kernel extends HttpKernel
         'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'verified' => \App\Http\Middleware\EnsureEmailIsVerified::class,
         'accessControl' => \App\Http\Middleware\AccessControl::class,
         'prevent-back-history' => \App\Http\Middleware\PreventBackLogin::class,
         'check-profile' => \App\Http\Middleware\FreelancerProfile::class

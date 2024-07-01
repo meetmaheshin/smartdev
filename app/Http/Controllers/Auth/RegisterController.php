@@ -7,13 +7,15 @@ use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\Country;
 use App\Models\UserBalance;
+use App\Mail\CustomVerifyEmail;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
-use Auth,DB;
+use App\Rules\Password as PasswordRule;
+use Auth,DB,Mail;
 
 class RegisterController extends Controller
 {
@@ -60,12 +62,18 @@ class RegisterController extends Controller
         if(count($existingUser)>=1 && $existingUser[0]->is_admin != $data['is_admin']){
             $existingUserId = $existingUser[0]->id;
         }
+        $messages = [
+            'password.regex.alpha' => 'Password must contain at least one letter.',
+            'password.regex.num' => 'Password must contain at least one number.',
+            'password.regex.special' => 'Password must contain at least one special character.',
+            'password.min' => 'Password must be at least 8 characters long.',
+        ];
         return Validator::make($data, [
             'firstname' => 'required|string|regex:/^[\pL\s\-]+$/u',
             'lastname' => 'required|string|regex:/^[\pL\s\-]+$/u',
-            'email' => 'required|email|unique:users,email,'.$existingUserId,
+            'email' => 'required|email|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/|unique:users,email,'.$existingUserId,
             'country_id'=>"required",
-            'password' => 'required|min:8',
+            'password' => ['required', new PasswordRule],
             'confirm_password' => 'required|same:password',
             'terms'=>'required',
             'is_admin'=>'nullable'
@@ -106,16 +114,20 @@ class RegisterController extends Controller
             DB::beginTransaction();
             /* Trigger event for email verification */
             $user = User::create($request->all());
-            event(new Registered($user));
+            // event(new Registered($user));
+
             UserBalance::insert([
                 'user_id' => $user->id,
                 'rovi_balance' => 0,
                 'dev3_balance' => 0,
                 'usdt_balance' => 0,
             ]);
+            // Mail::to($user->email)->send(new CustomVerifyEmail($user));
+            $user->sendEmailVerificationNotification();
+
             DB::commit();
-            Auth::login($user);
-            return response()->json(['status'=>200,'type'=>'success','msg'=>'Registration Successful']);        
+            // Auth::login($user);
+            return response()->json(['status'=>200,'type'=>'success','msg'=>'Registration successful. Please verify your email']);        
         }
         catch (\Throwable $th) {
             DB::rollBack();
