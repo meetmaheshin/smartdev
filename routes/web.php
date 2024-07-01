@@ -43,7 +43,7 @@ Route::get('/email/verify', function () {
     return view('auth.verify');
     //return redirect('/login');
 });
-
+  
 // Route::post('email/resend', [VerificationController::class, 'resend'])->middleware([ 'throttle:6,1'])->name('verification.resend');
 // Route to show the resend form
 Route::get('/email/resend',  [VerificationController::class, 'showResendForm'] )->name('verification.resend');
