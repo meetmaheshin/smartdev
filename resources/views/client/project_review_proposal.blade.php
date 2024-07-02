@@ -124,7 +124,7 @@
                                                     
                                                     <div class="expertise_grp_badget d-flex font_12 pt-3 flex-wrap">
                                                         @foreach ($projectDetail->images as $image)
-                                                            <div class="posting_one_content up_image me-3 col-2 mb-4 position-relative pip_{{ $image->id }}">
+                                                            <div class="posting_one_content up_image me-3 mb-4 position-relative pip_{{ $image->id }}">
                                                                 <img src ="{{ url($image->filename) }}" alt="image" class="form-control img-fluid p-0 pip_{{ $image->id }}"/>
                                                             </div>
                                                         @endforeach

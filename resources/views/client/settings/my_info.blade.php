@@ -1,5 +1,24 @@
 @extends('layouts.app')
 @section('content')
+<style type="text/css">
+    #progress-bar {
+        width: 100%;
+        background-color: #ccc;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    #progress {
+        height: 20px;
+        width: 0;
+        background-color: #4caf50;
+        border-radius: 5px;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-2 mb-4">
@@ -21,6 +40,12 @@
                         </label>
                         <div class="text-danger error" data-error="filename"></div>
                     </div>
+
+                    <div id="progress-bar" class="hidden">
+                        <div id="progress"></div>
+                    </div>
+                   
+
                     <hr class="grey_hr_full_width">
                     <div class="client_user_details">
                         <h6 class="font_weight_600 font_14 mb-2">Full Name</h6>
