@@ -218,10 +218,14 @@
             <div role="group">
                 <button type="submit" class="btn btn-sm btn-success continue border-0 font_weight_500 px-3" disabled>Send</button>
             </div>
-        </form>
+        </form>        
         <div class="cover_letter_id"></div>
     </div>
 </div>
+<div class="loader-section">
+    <div class="loader-img"><img src="{{asset('images/Spinner-bg.gif')}}" ></div>
+</div>
+
 @endsection
 @section('js')
 <script type="text/javascript" src="{{asset('js/proposal.js')}}"></script>

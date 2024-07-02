@@ -1225,10 +1225,14 @@ div#country_list li.no_skill{
     border: 4px solid transparent;
 }
 .posting_one_content {
+    height: 100%;
+    width: 100%;
+}
+.view_job_block .up_image{
     height: 120px;
     width: 100px;
 }
-.up_image img{
+.view_job_block .up_image img{
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -1836,6 +1840,38 @@ iframe#FORWARDER_ID {
     right: 0;
     margin: auto;
 }
+
+/*loader-section*/
+body {
+    position: relative;
+}
+.loader-section{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.loader-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+.loader-section:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    content: "";
+    transform: translate(-50%, -50%);
+}
+
 @media (min-width: 1200px) {
     .user_dashboard .container,
     .client_job_post .container{
