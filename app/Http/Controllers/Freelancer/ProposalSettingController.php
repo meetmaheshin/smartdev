@@ -16,6 +16,7 @@ use App\Models\UserBalanceHistory;
 use App\Models\WithdrawProposal;
 use App\Models\User;
 use App\Notifications\AcceptInterview;
+use App\Notifications\SendProposal;
 use Auth,DB,socket;
 
 
@@ -161,7 +162,8 @@ class ProposalSettingController extends Controller
 
             ]
         );
-
+        $receiver = User::find($request->project_user_id);
+        $receiver->notify(new SendProposal($sender, $proposalSetting, $new_picture_array));
         return response()->json(['success'=>'true','message' => 'Proposal Successfully Sent.'], 201);
     }
 

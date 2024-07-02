@@ -127,9 +127,11 @@ jQuery(document).on(
                     if (response.data.attachments.length != 0) {
                         var sel1 = $('<ul class="list-unstyled">');
                         $.each(response.data.attachments, function (key, value) {
+                            var filename = value.attachment.split('/').pop();
+
                             sel1.append(
                                 '<li><div class="up-icon d-flex" data-test="up-c-icon"><i class="fas fa-paperclip color_green me-2 font_12"></i><a href="/'+value.attachment+'" target="_blank">' +
-                                    value.attachment +
+                                filename +
                                     "</a></div></li>"
                             );
                         });
