@@ -21,7 +21,8 @@
     word-wrap: break-word;
 }
 .green_edit {
-    border: 2px dashed #14a800;
+    border: 2px solid rgb(20, 168, 0, 0.5) !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 .freelancer .container {
     padding: 30px 15px;

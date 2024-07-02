@@ -1,13 +1,18 @@
 // store client info
 $("#storeAccountInfo").on("submit", function (e) {
     e.preventDefault();
+    
+    // Show the progress bar
+    $("#progress-bar").removeClass("hidden");
+    
     var formData = new FormData(this);
-    var formData = new FormData();
     var files = $("#client-user-file-upload")[0].files;
+    
     // Check file selected or not
     if (files.length > 0) {
         formData.append("filename", files[0]);
     }
+    
     var other_data = $("#storeAccountInfo").serializeArray();
     $.each(other_data, function (key, input) {
         formData.append(input.name, input.value);
@@ -20,7 +25,25 @@ $("#storeAccountInfo").on("submit", function (e) {
         cache: false,
         contentType: false,
         processData: false,
-        success: (response) => {
+        xhr: function() {
+            var xhr = new window.XMLHttpRequest();
+            // Upload progress
+            xhr.upload.addEventListener("progress", function(evt) {
+                if (evt.lengthComputable) {
+                    var percentComplete = evt.loaded / evt.total;
+                    percentComplete = parseInt(percentComplete * 100);
+                    
+                    // Update the progress bar
+                    $("#progress").css("width", percentComplete + "%");
+                    
+                    if (percentComplete === 100) {
+                        $("#upload-status").removeClass("hidden");
+                    }
+                }
+            }, false);
+            return xhr;
+        },
+        success: function (response) {
             $(".error").html("");
             if (response.status == "true") {
                 notify.show("success", "User Info Updated");
@@ -35,7 +58,7 @@ $("#storeAccountInfo").on("submit", function (e) {
             );
             $(".client_user_details, .client_user_details_edit").toggle(200);
         },
-        error(error) {
+        error: function (error) {
             $(".error").html("");
             let errors = error.responseJSON.errors;
             for (let key in errors) {
@@ -47,8 +70,78 @@ $("#storeAccountInfo").on("submit", function (e) {
                 }
             }
         },
+        complete: function () {
+            // Simulate the progress bar animation for 2 seconds if there is no file upload
+            var progress = 0;
+            var interval = setInterval(function() {
+                progress += 10;
+                $("#progress").css("width", progress + "%");
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    $("#upload-status").removeClass("hidden");
+                    
+                    // Hide the progress bar after a few seconds
+                    setTimeout(function () {
+                        $("#progress-bar").addClass("hidden");
+                        $("#progress").css("width", "0%");
+                        $("#upload-status").addClass("hidden");
+                    }, 2000); // Adjust the time in milliseconds (2000ms = 2 seconds)
+                }
+            }, 200); // Update the progress every 200ms
+        }
     });
 });
+
+// $("#storeAccountInfo").on("submit", function (e) {
+//     e.preventDefault();
+//     var formData = new FormData(this);
+//     var formData = new FormData();
+//     var files = $("#client-user-file-upload")[0].files;
+
+//     if (files.length > 0) {
+//         formData.append("filename", files[0]);
+//     }
+//     var other_data = $("#storeAccountInfo").serializeArray();
+//     $.each(other_data, function (key, input) {
+//         formData.append(input.name, input.value);
+//     });
+
+//     $.ajax({
+//         type: "POST",
+//         url: "/client/store-account-info",
+//         data: formData,
+//         cache: false,
+//         contentType: false,
+//         processData: false,
+//         success: (response) => {
+//             $(".error").html("");
+//             if (response.status == "true") {
+//                 notify.show("success", "User Info Updated");
+//             }
+//             if ($("#client-user-file-upload").prop("disabled")) {
+//                 $("#client-user-file-upload").prop("disabled", false);
+//             } else {
+//                 $("#client-user-file-upload").prop("disabled", true);
+//             }
+//             $("#client-user-preview-selected-image").toggleClass(
+//                 "green_edit cursor-pointer"
+//             );
+//             $(".client_user_details, .client_user_details_edit").toggle(200);
+//         },
+//         error(error) {
+//             $(".error").html("");
+//             let errors = error.responseJSON.errors;
+//             for (let key in errors) {
+//                 let errorDiv = $(`.error[data-error="${key}"]`);
+//                 if (errorDiv.length) {
+//                     errorDiv.text(errors[key][0]);
+//                 } else {
+//                     errorDiv.text("");
+//                 }
+//             }
+//         },
+//     });
+// });
 
 // store client company details
 $("#companyDetails").on("submit", function (e) {
