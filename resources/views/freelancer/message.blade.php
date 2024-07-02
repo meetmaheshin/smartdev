@@ -24,7 +24,7 @@
                                 <ul class="list-unstyled px-3" id="user_list_real">
                                     @foreach($messages as $key=> $userLists)
                                     @if($userLists->listData)
-                                    <li class="cursor_pointer rounded position-relative p-3 d-flex border_bottom current_user users_list_{{$key}}" data-project_id="{{$userLists->project->id}}" data-conversation="{{$userLists->id}}" data-image="{{$userLists->listData->profile_photo_path}}" data-id="{{$userLists->listData->id}}" data-username="{{$userLists->listData->firstname}} {{$userLists->listData->lastname}}">
+                                    <li class="cursor_pointer rounded position-relative p-3 d-flex border_bottom current_user users_list_{{$key}}" data-project_id="{{$userLists->project->id}}" data-conversation="{{$userLists->id}}" data-image="{{ !empty($userLists->listData->profile_photo_path) ? asset('/storage/images/client_profile/'.$userLists->listData->profile_photo_path)   : asset('images/user_default.jpeg') }}" data-id="{{$userLists->listData->id}}" data-username="{{$userLists->listData->firstname}} {{$userLists->listData->lastname}}">
                                         <div>
                                             <div class="user_img pe-2 position-relative">
                                                 <img class="rounded-circle" src="{{ !empty($userLists->listData->profile_photo_path) ? asset('/storage/images/client_profile/'.$userLists->listData->profile_photo_path)   : asset('images/user_default.jpeg') }}" alt="avatar">
@@ -33,7 +33,7 @@
                                         </div>
 
                                         <div class="about">
-                                            <div class="name font_16 color_black font_weight_600 user_name text-break pe-4" data-project_id="{{$userLists->project->id}}" data-conversation="{{$userLists->id}}" data-image="{{$userLists->listData->profile_photo_path}}" data-id="{{$userLists->listData->id}}" data-username="{{$userLists->listData->firstname}} {{$userLists->listData->lastname}}">{{$userLists->listData->firstname}} {{$userLists->listData->lastname}}</div>
+                                            <div class="name font_16 color_black font_weight_600 user_name text-break pe-4" data-project_id="{{$userLists->project->id}}" data-conversation="{{$userLists->id}}" data-image="{{ !empty($userLists->listData->profile_photo_path) ? asset('/storage/images/client_profile/'.$userLists->listData->profile_photo_path)   : asset('images/user_default.jpeg') }}" data-id="{{$userLists->listData->id}}" data-username="{{$userLists->listData->firstname}} {{$userLists->listData->lastname}}">{{$userLists->listData->firstname}} {{$userLists->listData->lastname}}</div>
                                             <div class="name font_14 text-muted font-weight-light text-break">{{$userLists->project->title}}</div>
                                             <span class="unread_msg badge rounded-pill {{$userLists->unread_msg_count != 0 ?  'notifi_count' : ''}}" id="unread-messages-{{$userLists->listData->id}}-{{$userLists->id}}">{{$userLists->unread_msg_count != 0 ?  $userLists->unread_msg_count : ''}}</sapn>
                                                 <!-- <div class="status font_12 color_grey">
@@ -162,14 +162,11 @@
 
         $.each(data.users, function(key, value) {
             if (value != null && value != 0) {
-                console.log("key1",'user-icon-'+key);
-
                 let $userIcon = $('.user-icon-' + key);
                 $userIcon.addClass('online');
                 $('.icon-' + key).addClass('online');
                 $userIcon.attr('title', 'Online')
             } else {
-                console.log("key",'user-icon-'+key);
                 let $userIcon = $('.user-icon-' + key);
                 $userIcon.addClass('offline');
                 $('.icon-' + key).addClass('offline');
@@ -183,11 +180,10 @@
         var receiver_id = $(this).attr('data-id');
         var user_name = $(this).attr('data-username');
         var user_image = $(this).attr('data-image');
-        console.log("user_image",user_image);
         var conversationId = $(this).attr('data-conversation');
         var projectId = $(this).attr('data-project_id');
         $('.room-title').text(user_name);
-        $('.user_image').attr('src','/storage/images/client_profile/'+user_image);
+        $('.user_image').attr('src',user_image);
 
         socket.emit('user_connected', {
             sender_id,
@@ -456,11 +452,13 @@
                             $(`#unread-messages-${receiver}-${conversationId}`).text(data.individualUnreadMessageCount);
                         }
                     }else{
+
                         $('.notifi_count_'+senderid).html(data.unreadMessageCount);
                             if(data.individualUnreadMessageCount > 0){
                                 $(`#unread-messages-${receiver_id}-${conversationId}`).addClass('notifi_count');
                                 $(`#unread-messages-${receiver_id}-${conversationId}`).text(data.individualUnreadMessageCount);
                             }else{
+                                $('.notifi_count_'+senderid).text('');
                                 $(`#unread-messages-${receiver_id}-${conversationId}`).removeClass('notifi_count');
                                 $(`#unread-messages-${receiver_id}-${conversationId}`).text('');
                             }
