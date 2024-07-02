@@ -65,7 +65,7 @@ class SendProposal extends Notification
                 'proposalSetting' => $this->proposalSetting,
                 'proposalDetails' => $this->proposalDetails,
                 'url' => $url,
-                'duration'=>$Duration
+                'Duration'=>$Duration
             ]);
     }
 
