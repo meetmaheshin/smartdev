@@ -306,8 +306,8 @@ class SettingController extends Controller
             $file = $request->file('filename'); 
             $fkey = rand(10,100);
             if($file != null){
-                $image_path = public_path('/storage/images/client_profile/').$data->profile_photo_path;
-                $image_thumbnail_path = public_path('/storage/thumbnail/client_profile/').$data->profile_photo_path;
+                $image_path = public_path('/storage/images/client_profile/').$userData->profile_photo_path;
+                $image_thumbnail_path = public_path('/storage/thumbnail/client_profile/').$userData->profile_photo_path;
                 if(File::exists($image_path)) {
                     File::delete($image_path);
                     File::delete($image_thumbnail_path);

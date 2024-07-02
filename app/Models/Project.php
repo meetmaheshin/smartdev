@@ -61,7 +61,7 @@ class Project extends Model
     }
 
     public function projectData($projectId) {
-        return  Project::whereId($projectId)->with('user')->first();
+        return  Project::whereId($projectId)->with(['user','images'])->first();
     }
 
     public function getProjectDetailsWithRelations($projectId) {
