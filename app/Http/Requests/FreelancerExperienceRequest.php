@@ -44,14 +44,17 @@ class FreelancerExperienceRequest extends FormRequest
 	private function storeRules(): array
 	{
 
-		if ($this->input('end_date_check')  == null) {
-            $rules['start_date'] = 'required';
-            $rules['end_date'] = 'required|after_or_equal:start_date';
-        }
-        $rules['company'] = 'required|max:191|regex:/^[\pL\s\-]+$/u';
+		   // Check if 'end_date_check' is null
+		if ($this->input('end_date_check') == null) {
+			$rules['start_date'] = 'required|date|before_or_equal:today';
+			$rules['end_date'] = 'required|date|after_or_equal:start_date';
+		} else {
+			$rules['start_date'] = 'required|date|before_or_equal:today';
+		}
+
+        $rules['company'] = 'required|string|max:191';
         $rules['title'] = 'required|max:191';
         $rules['location'] = 'required';
-        $rules['start_date'] = 'required';
         $rules['country_id'] = 'required';
         return $rules;
 	}
