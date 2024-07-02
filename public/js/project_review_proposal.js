@@ -69,6 +69,7 @@ jQuery(document).on(
             },
             success(response) {
                 if (response.status == "true") {
+                    $('#attachment').html('');
                     $('#all_freelancer_skills').html('');
                     $("#education-list").html('');
                     $(".freelancerExperiencedetail").html('');
@@ -123,6 +124,24 @@ jQuery(document).on(
                     $("#fullTitle").html(fullTitle);
                     $("#hourly_rate").html(hourlyRate);
                     $("#cover_letter").html(coverLetter);
+                    if (response.data.attachments.length != 0) {
+                        var sel1 = $('<ul class="list-unstyled">');
+                        $.each(response.data.attachments, function (key, value) {
+                            var filename = value.attachment.split('/').pop();
+
+                            sel1.append(
+                                '<li><div class="up-icon d-flex" data-test="up-c-icon"><i class="fas fa-paperclip color_green me-2 font_12"></i><a href="/'+value.attachment+'" target="_blank">' +
+                                filename +
+                                    "</a></div></li>"
+                            );
+                        });
+                        $("#attachment").append(sel1);
+                    }else{
+                        $("#attachment").append('No Files');
+
+                    }
+
+
                     $("#applicant").html(
                         firstName +
                             " has applied to or been invited to your or your company's job"
