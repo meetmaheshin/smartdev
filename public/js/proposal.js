@@ -84,8 +84,10 @@ $("#submit_proposal").on("submit", function (e) {
         contentType: false,
         beforeSend: function () {
             jQuery("button .continue").attr("disabled", "disabled");
+            $(".loader-section").css('display', 'block');
         },
         success(response) {
+            $(".loader-section").css('display', 'none');
             if (response.success == 'true') {
                 swal.fire({
                     title: "Proposal Sent!",
