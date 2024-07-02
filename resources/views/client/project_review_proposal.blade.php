@@ -802,6 +802,12 @@
                                                                         <p class="m-0 text-break" id="cover_letter"></p>
                                                                     </div>
                                                                 </div>
+                                                                <div class="cover_letter_section">
+                                                                    <h5 class="color_black font_weight_600">Attachment</h5>
+                                                                    <div class="cover_letter_message py-3">
+                                                                        <p class="m-0 text-break" id="attachment"></p>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="p-4 border-bottom proposal_skill_block">
                                                                 <h2 class="font_18 color_black font_weight_600">

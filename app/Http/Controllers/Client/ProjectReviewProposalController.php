@@ -153,7 +153,7 @@ class ProjectReviewProposalController extends Controller
 
     public function showFreelancerData(Request $request) {
         $status = 'false';
-        $projectProposal = ProposalSetting::with(['users.country', 'projects', 'freelancerSkills.skill', 'freelancerRate', 'freelancerProfile', 'freelancerEducation','freelancerExperience'])->where('id', $request->proposalId)->first();
+        $projectProposal = ProposalSetting::with(['users.country', 'projects', 'freelancerSkills.skill', 'freelancerRate', 'freelancerProfile', 'freelancerEducation','freelancerExperience','attachments'])->where('id', $request->proposalId)->first();
         $status = $projectProposal ? 'true' :'false';
         return response()->json(['data' => $projectProposal, 'status' => $status]);
     }
