@@ -28,13 +28,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `specialties`
 --
 
-CREATE TABLE `specialties` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` int NOT NULL DEFAULT '0' COMMENT '0:web2,1:web3',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- CREATE TABLE `specialties` (
+--   `id` bigint UNSIGNED NOT NULL,
+--   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+--   `type` int NOT NULL DEFAULT '0' COMMENT '0:web2,1:web3',
+--   `created_at` timestamp NULL DEFAULT NULL,
+--   `updated_at` timestamp NULL DEFAULT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `specialties`
@@ -101,8 +101,8 @@ INSERT INTO `specialties` (`id`, `title`, `type`, `created_at`, `updated_at`) VA
 --
 -- Indexes for table `specialties`
 --
-ALTER TABLE `specialties`
-  ADD PRIMARY KEY (`id`);
+-- ALTER TABLE `specialties`
+--   ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -111,8 +111,8 @@ ALTER TABLE `specialties`
 --
 -- AUTO_INCREMENT for table `specialties`
 --
-ALTER TABLE `specialties`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+-- ALTER TABLE `specialties`
+--   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
