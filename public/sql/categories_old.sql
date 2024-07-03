@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 03, 2024 at 07:04 AM
+-- Generation Time: Jul 03, 2024 at 06:17 AM
 -- Server version: 8.0.37-0ubuntu0.20.04.3
 -- PHP Version: 8.2.18
 
@@ -41,6 +41,16 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `title`, `type`, `created_at`, `updated_at`) VALUES
+(1, 'Accounting & Consulting', 0, NULL, NULL),
+(2, 'Admin Support', 0, NULL, NULL),
+(3, 'Customer Service', 0, NULL, NULL),
+(4, 'Data Science & Analytics', 0, NULL, NULL),
+(5, 'Design & Creative', 0, NULL, NULL),
+(6, 'Engineering & Architecture', 0, NULL, NULL),
+(7, 'IT & Networking', 0, NULL, NULL),
+(8, 'Legal', 0, NULL, NULL),
+(9, 'Sales & Marketing', 0, NULL, NULL),
+(10, 'Web, Mobile & Software Dev', 0, NULL, NULL),
 (11, 'Blockchain Development Platforms', 1, NULL, NULL),
 (12, 'Web Mobile and Software Development', 1, NULL, NULL),
 (13, 'Smart Contracts Development', 1, NULL, NULL),
