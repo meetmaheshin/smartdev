@@ -76,7 +76,7 @@ class ProposalSettingController extends Controller
             'earned_amount' =>  ($request->earned_amount-(($request->earned_amount*20)/100)) ,
             'charged_amount' =>  $request->earned_amount 
         ]);
-        
+        $new_picture_array =[];
         
         if($request->hasFile('attachment'))
         {
