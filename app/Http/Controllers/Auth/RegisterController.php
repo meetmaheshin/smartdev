@@ -127,7 +127,7 @@ class RegisterController extends Controller
 
             DB::commit();
             // Auth::login($user);
-            return response()->json(['status'=>200,'type'=>'success','msg'=>'Registration successful. Please verify your email']);        
+            return response()->json(['status'=>200,'type'=>'success','msg'=>'Registered Successfully']);        
         }
         catch (\Throwable $th) {
             DB::rollBack();
