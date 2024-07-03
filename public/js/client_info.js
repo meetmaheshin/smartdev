@@ -46,7 +46,7 @@ $("#storeAccountInfo").on("submit", function (e) {
         success: function (response) {
             $(".error").html("");
             if (response.status == "true") {
-                notify.show("success", "User Info Updated");
+                notify.show("Success!", "Account Info updated Successfully");
             }
             if ($("#client-user-file-upload").prop("disabled")) {
                 $("#client-user-file-upload").prop("disabled", false);
