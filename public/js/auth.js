@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
             },
             success(response) {
                 if (response.status == 200) {
-                    notify.show("success", "Registration Successfully");
+                    notify.show("Success!", response.msg);
                     setTimeout(function () {
                         window.location.replace("email/verify");
                     }, 3000);

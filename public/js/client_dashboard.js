@@ -49,7 +49,7 @@ $(".remove_posting,.reuse_posting,.remove_draft").on("click", function (e) {
                 dataType: "json",
                 success: function (response) {
                     swal.fire(status, status, "success");
-                    notify.show('success', 'Project Successfully '+status)
+                    notify.show('Success!', 'Project Successfully '+status)
                     setTimeout(function(){
                         location.reload();
                     },3000);
@@ -85,7 +85,7 @@ $('#send_invitation_form').on("submit", function (e) {
                 });
                 console.log("hideeeeeeee");
                 $('#inviteJob').modal('hide');
-                notify.show("success", "Success! Invitation Sent Successfully");
+                notify.show("Success!", "Invitation Sent Successfully");
                 setTimeout(function () {
                     location.href = response.url;
                 }, 500);

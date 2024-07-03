@@ -18,7 +18,7 @@ notify = {
         return {
             'danger': ['danger', 'error'],
             'info': ['information', 'info', 'message'],
-            'success': ['success'],
+            'success': ['success','Success!'],
             'warning': ['warning'],
             'notice': ['notice']
         }
