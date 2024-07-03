@@ -64,10 +64,10 @@
                                         <input type="radio" name="project_type" id="web3" value="1" @if($project->projectType != 0) checked @endif>
                                         <span class="d-inline-block me-1"><i class="mid_dot"></i></span>Web3
                                     </label>
-                                    <label for="web2" class="cursor_pointer position-relative d-flex mb-3  align-items-center">
+                                    <!-- <label for="web2" class="cursor_pointer position-relative d-flex mb-3  align-items-center">
                                         <input type="radio" name="project_type" id="web2" value="0" @if($project->projectType==0) checked @endif>
                                         <span class="d-inline-block me-1"><i class="mid_dot"></i></span>Web2
-                                    </label>
+                                    </label> -->
                                 </div>
                             </div>
                         </div>
