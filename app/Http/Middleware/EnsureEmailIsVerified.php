@@ -16,15 +16,23 @@ class EnsureEmailIsVerified
      */
     public function handle(Request $request, Closure $next)
     {
+        // if(Auth::check()){
+        //     if(!Auth::user()->hasVerifiedEmail()){
+        //         return $request->expectsJson()
+        //         ? abort(403, 'Your email address is not verified.')
+        //         : redirect()->route('auth.verify');
+        //     }
+        // }else{
+        //     return $request->expectsJson()
+        //                 ? abort(403, 'Your email address is not verified.')
+        //                 : redirect()->route('auth.verify');
+        // }
 
-        if (Auth::check() && !Auth::user()->hasVerifiedEmail() && Auth::user() instanceof MustVerifyEmail) {
-
+        if (Auth::check() && !Auth::user()->hasVerifiedEmail() ) {
             return $request->expectsJson()
                         ? abort(403, 'Your email address is not verified.')
-                        : redirect()->route('verification.notice');
+                        : redirect()->route('auth.verify');
         }
-
-
         return $next($request);
     }
 }
