@@ -14,6 +14,11 @@ class SqlFileSeeder extends Seeder
      */
     public function run()
     {
+
+        $path = public_path('sql/categories.sql');
+        $sql = file_get_contents($path);
+        DB::unprepared($sql);
+
         $path = public_path('sql/specialties.sql');
         $sql = file_get_contents($path);
         DB::unprepared($sql);
