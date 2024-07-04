@@ -14,6 +14,7 @@ use App\Http\Controllers\Freelancer\MessageController;
 use App\Http\Controllers\Search\SearchController;
 use App\Http\Controllers\TransactionHistoryController;
 use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ use App\Http\Controllers\Auth\VerificationController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/home',  [HomeController::class, 'index'] );
 
 
 Route::get('/', function () {
@@ -42,7 +44,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
 Route::get('/email/verify', function () {
     return view('auth.verify');
     //return redirect('/login');
-});
+})->name('auth.verify');
   
 // Route::post('email/resend', [VerificationController::class, 'resend'])->middleware([ 'throttle:6,1'])->name('verification.resend');
 // Route to show the resend form
@@ -62,7 +64,7 @@ Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify']
 /* 
 is_admin middleware check user is client
 */
-Route::middleware(['auth', 'prevent-back-history'])->group(function () {
+Route::middleware(['auth', 'prevent-back-history','verified'])->group(function () {
     Route::get('/search_project', [SearchController::class, 'searchProjectView'])->name('search_project_view');
     Route::get('/search_projects', [SearchController::class, 'searchProject'])->name('search_project');
     Route::get('/freelancerDetails', [SearchController::class, 'freelancerDetails'])->name('search.details');
@@ -80,7 +82,7 @@ Route::middleware(['auth', 'prevent-back-history'])->group(function () {
         Route::get('/ab/notifications/','getNotification')->name('notifications');
         Route::get('/ab/notifications/delete/{id}','NotificationDestroy')->name('notifications.destroy');
         Route::get('/ab/notifications/read_noti/{id}','NotificationRead')->name('notifications.read');
-
+        Route::post('/fetch-timezone-code', 'fetchTimezone')->name('fetch-timezone');
     });
     Route::prefix('nx/payments/reports')->group(function () {
         Route::get('/transaction-history', [TransactionHistoryController::class, 'index'])->name('transaction-history');

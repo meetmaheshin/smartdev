@@ -8,18 +8,23 @@ if($("#country_state_city").attr('data-oldid')!='' && typeof($("#country_country
 
 
 var countryId = $('#country :selected').val();
+var code = $('#country').find('option:selected').data('code');
 
 getCountry(countryId);
 getState(countryId);
+getTimeZone(code);
 
 // get state
 $('#country').on('change',function(){
     countryId = this.value;
+    code = $(this).find('option:selected').data('code');
     state ='';
     $("#country_states").html('');
     $("#country_state_city").html('');
+    $('#timeZone').html('');
     getCountry(countryId);
-    getState(countryId)
+    getState(countryId);
+    getTimeZone(code);
   
 });
 
@@ -89,6 +94,47 @@ function getState(countryId){
         },
     });
 }
+
+function getTimeZone(code){
+    $.ajax({
+        type:'POST',
+        url: "/fetch-timezone-code",
+        data: {
+            'code' : code,
+            '_token' : _token
+        },
+        success: (data) => {
+            const timeZoneDropdown = $('#timeZone');
+            timeZoneDropdown.empty().append($('<option></option>').val('').text('Select Timezone'));
+            data.forEach(function(timeZone) {
+                var optionValue = timeZone.zone_name + '|' + timeZone.time_start;
+                timeZoneDropdown.append('<option value="' + optionValue + '">' + timeZone.zone_name + ' (' + timeZone.abbreviation + ')'+ ' (' + timeZone.time_start  +')</option>');
+            });
+            $('#timeZone [value="'+timezone+'"]').attr('selected', 'true');
+
+            const oldId = timeZoneDropdown.attr('data-oldid');
+            if (oldId && oldId !== '') {
+                timeZoneDropdown.val(oldId).find(`[value="${oldId}"]`).attr('selected', 'true');
+                timezone = jQuery("#timeZoneDropdown").attr('data-oldid');
+            }
+
+
+        },
+        error(error) {
+            $(".error").html("");
+            let errors = error.responseJSON.errors;
+            for (let key in errors) {
+                let errorDiv = $(`.error[data-error="${key}"]`);
+                if (errorDiv.length) {
+                    errorDiv.text(errors[key][0]);
+                }else{
+                    errorDiv.text('');
+                }
+            }
+        },
+    });
+}
+
 
 function getCity(stateId){
     $.ajax({

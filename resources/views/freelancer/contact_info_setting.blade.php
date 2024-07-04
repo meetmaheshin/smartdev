@@ -140,7 +140,7 @@
 										<label class="d-block font_14 font_weight_500 mb-2 mt-3">Country <span class="asterisk">*</span></label>
 										<select class="" name="country" id="country" aria-label="Country">
 											@foreach($countries as $country)
-											<option value="{{$country->id}}" {{$freelancerInfo->country_id == $country->id ? 'selected' : ''}}>{{$country->name}}</option>
+											<option value="{{$country->id}}" data-code="{{$country->code}}" {{$freelancerInfo->country_id == $country->id ? 'selected' : ''}}>{{$country->name}}</option>
 											@endforeach
 										</select>
 										<div class="text-danger error" data-error="country"></div>
@@ -169,12 +169,14 @@
 									<div class="form-group">
 										<input type="hidden" value="locationInfo" name="freelancerInfo">
 										<label class="d-block font_14 font_weight_500 mb-2 mt-3">Time Zone <span class="asterisk">*</span></label>
-										<select class="" name="timeZone" id="timeZone" aria-label="Time Zone">
+										<select class="timeZone" name="timeZone" id="timeZone" aria-label="timeZone">
+										</select>
+										<!-- <select class="" name="timeZone" id="timeZone" aria-label="Time Zone">
 											<option value="">Select Timezone</option>
 											@foreach($timezone as $key=> $timezones)
 											<option value="{{$key}}" {{$freelancerInfo->time_zone == $key ? 'selected' : ''}}>{{$timezones}}</option>
 											@endforeach
-										</select>
+										</select> -->
 										<div class="text-danger error" data-error="timeZone"></div>
 									</div>
 								</div>
@@ -223,6 +225,8 @@
 <script>
 	var state = '{{$freelancerInfo->state_id}}';
 	var city = '{{$freelancerInfo->city_id}}';
+	var timezone = '{{$freelancerInfo->time_zone}}';
+
 	var _token = document.getElementById('_token').value;
 </script>
 <script type="text/javascript" src="{{asset('js/country_state_city.js')}}"></script>

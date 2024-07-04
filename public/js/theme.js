@@ -583,6 +583,7 @@ jQuery(document).ready(function () {
     // modal edit budget on review page
     $(".edit_budget").on("click", function (e) {
         e.preventDefault();
+        $('.error').html('');
         // editBudget budget
         var budgetCheck = $(".budget:checked").val();
         var hourlyFrom,
@@ -606,7 +607,6 @@ jQuery(document).ready(function () {
             },
             dataType: "json",
             success: function (response) {
-                console.log(response);
                 if (
                     jQuery(".btn_box.active").attr("data-text") ==
                     "project_budget"
@@ -620,12 +620,11 @@ jQuery(document).ready(function () {
                     var hourly_from = $("#hourly_from").val();
                     var hourly_to = $("#hourly_to").val();
                     jQuery(".btn-close").trigger("click");
-                    var data = `Hourly $ ${hourly_from}-$${hourly_to}`;
+                    var data = `Hourly $${hourly_from}-$${hourly_to}`;
                     jQuery(".review_budget").text(data);
                 }
             },
             error(error) {
-                console.log(error);
                 let errors = error.responseJSON.errors;
                 for (let key in errors) {
                     let errorDiv = $(`.error[data-error="${key}"]`);
@@ -756,6 +755,8 @@ jQuery(document).ready(function () {
         "click",
         ".posting_accordion_inner_content .skill_sub",
         function () {
+        console.log("33333333");
+
             var skillSubId = $(this).attr("data-id");
             var skillName = $(this).attr("data-cy");
             var skillId = $(this).attr("data-skill");
@@ -802,14 +803,12 @@ jQuery(document).ready(function () {
     );
 
     $(document).on("click", ".posting_add_feature .fa-times", function () {
+        console.log("1111111111");
         var skillSubId = $(this).parent(".posting_add_feature").attr("data-id");
         var skillName = $(this).parent(".posting_add_feature").attr("data-cy");
         var skillId = $(this).parent(".posting_add_feature").attr("data-skill");
 
-        console.log("skillSubId", skillSubId);
-        console.log("skillName", skillName);
-        console.log("skillId", skillId);
-
+        
         var html =
             '<span id="skill_subcat_' +
             skillSubId +
@@ -841,7 +840,6 @@ jQuery(document).ready(function () {
             selectedId.push($(this).val());
         });
         var mainval = $("#skill_subcat_" + skillSubId).attr("data-skill");
-        console.log("MailVal" + mainval);
 
         if (
             jQuery(".heading" + mainval)
@@ -867,17 +865,28 @@ jQuery(document).ready(function () {
     $("#search").on("keyup", function () {
         var query = $(this).val();
         var selectedId = [];
+        var selectedTest = [];
+
         var searchId = jQuery(".posting_seach_item")
             .siblings(".selected_skills")
             .find("div")
             .find("input");
+
+        var searchTest = jQuery(".posting_seach_item")
+            .siblings(".selected_skills")
+            .find("div")
+            .find("span");
         $(searchId).each(function () {
             selectedId.push($(this).val());
         });
+        $(searchTest).each(function () {
+            selectedTest.push($(this).text());
+        });
+        console.log("selectedTest",selectedTest);
         $.ajax({
             url: "/client/autocomplete",
             type: "GET",
-            data: { term: query, selectedId: selectedId },
+            data: { term: query, selectedId: selectedId ,selectedTest:selectedTest},
             success: function (data) {
                 $("#country_list").html(data);
             },
@@ -886,8 +895,11 @@ jQuery(document).ready(function () {
 
     // initiate a click function on each search result
     $(document).on("click", "li.list-group-item", function () {
+
         // declare the value in the input field to a variable
         var skillName = $(this).text();
+        // console.log("22222222"+skillName);
+
         var skillId = $(this).attr("data-skill");
         var skillSubId = $(this).attr("value");
 

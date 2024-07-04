@@ -326,7 +326,7 @@ class SettingController extends Controller
                 ]
             );
         }
-        return response()->json(['data' => $userData,'freelancerInfo' => $request->freelancerInfo]);
+        return response()->json(['data' => $userUpdate,'freelancerInfo' => $request->freelancerInfo]);
     }
 
     public function fetchState(Request $request){

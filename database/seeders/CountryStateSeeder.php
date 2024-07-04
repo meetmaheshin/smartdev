@@ -25,6 +25,10 @@ class CountryStateSeeder extends Seeder
         $path = public_path('sql/cities.sql');
         $sql = file_get_contents($path);
         DB::unprepared($sql);
+
+        $path = public_path('sql/timezone.sql');
+        $sql = file_get_contents($path);
+        DB::unprepared($sql);
        
     }
 }

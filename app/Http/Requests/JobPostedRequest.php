@@ -27,15 +27,22 @@ class JobPostedRequest extends FormRequest
     {
         return [
             'budget' => 'required',
+            'hourly_from' => [
+                'required_if:budget,hourly',
+                'numeric',
+                'min:2',
+            ],
             'hourly_to' => [
                 'required_if:budget,hourly',
+                'numeric',
                 function ($attribute, $value, $fail) {
                     if ($this->input('budget') === 'hourly' && $value < $this->input('hourly_from')) {
                         $fail('Hourly rate must be greater than starting charges when budget type is hourly.');
                     }
                 },
             ],
-            'project_budget' => 'required_if:budget,project',
+            'project_budget' => 'required_if:budget,project','numeric',
+            'min:5',
         ];
     }
 

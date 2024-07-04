@@ -123,26 +123,11 @@ $("#accountInfo,#locationInfo").on("submit", function (e) {
                 ).toggle(200);
             }
             var fullName = data.data.firstname + " " + data.data.lastname;
-            var phoneCode = data.data.country.phonecode;
-            var phoneNo = "+" + phoneCode + " " + data.data.phone_no;
+            var phoneNo = data.data.phone_no;
             $(".user_name").html(fullName);
             $("#user_id_phone").html(phoneNo);
-            // var updateBtn = $(this);
-            // setTimeout(function () {
-            //     $(updateBtn)
-            //         .parents(".user_contact_block")
-            //         .find(".user_contact_edit")
-            //         .hide();
-            //     $(updateBtn)
-            //         .parents(".user_contact_block")
-            //         .find(".user_contact_edited")
-            //         .show();
-            //     $(updateBtn)
-            //         .parents(".user_contact_block")
-            //         .find(".edit_account_icon")
-            //         .addClass("d-flex")
-            //         .show();
-            // }, 3500);
+            $('.location_timezone').html(data.data.time_zone)
+            
         },
         error(error) {
             $(".error").html("");

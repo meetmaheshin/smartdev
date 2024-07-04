@@ -246,17 +246,25 @@ class ProjectController extends Controller
     public function autocomplete(Request $request)
     {
         $selectedId = [];
+        $selectedTest = [];
         // check if ajax request is coming or not
         if ($request->ajax()) {
             if ($request->selectedId != '') {
                 $selectedId = $request->selectedId;
             }
-            $data = Skill::whereNotIn('id', $selectedId)->where('skills_sub', 'LIKE', $request->term . '%')->groupBy('skills_sub')->get();
+            $data = Skill::whereNotIn('id', $selectedId)->where('skills_sub', 'LIKE', $request->term . '%');
+            if ($request->selectedTest != '') {
+                $selectedTest = $request->selectedTest;
+                foreach ($selectedTest as $text) {
+                    $data->where('skills_sub','!=',$text);
+                }
+            }
+            $result = $data->groupBy('skills_sub')->get();
             $output = '';
             // if searched countries count is larager than zero
-            if (count($data) > 0) {
+            if (count($result) > 0) {
                 $output = '<ul class="list-group" style="display: block; position: relative; z-index: 1">';
-                foreach ($data as $row) {
+                foreach ($result as $row) {
                     $getParentskillTitle = Skill::select('title')->whereId($row->id)->first();
                     $parentTitle = $getParentskillTitle->title;
                     $getParentskillData = Skill::select('id')->where('title', $parentTitle)->first();

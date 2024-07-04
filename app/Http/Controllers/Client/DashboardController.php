@@ -11,6 +11,7 @@ use App\Models\Country;
 use App\Models\State;
 use App\Models\City;
 use App\Models\ClientHire;
+use App\Models\Timezone;
 
 class DashboardController extends Controller
 {
@@ -71,6 +72,13 @@ class DashboardController extends Controller
         $country = Country::where('id', $request->countryId)->get();
         return $country;
     }
+
+    public function fetchTimezone(Request $request) {
+        $timezone = Timezone::where('country_code', $request->code)->get();
+        return $timezone;
+    }
+
+    
     public function details(Request $request) {
         $projectDetail = $this->project->getProjectDetailsWithRelations($request->id);
         $proposalSetting = $this->proposalSetting->getProposalSettingForProject(auth()->user()->id,$request->id);

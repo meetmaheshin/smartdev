@@ -178,11 +178,11 @@
                 {{-- company contact --}}
                 <div class="up-card mt-5">
                     <div class="d-flex align-items-center justify-content-between mb-5">
-                        <h5 class="w-100 m-0 font_weight_600">Company contacts</h5>
+                        <h5 class="w-100 m-0 font_weight_600">Company Contacts</h5>
                         <button class="c_company_contacts border-0 bg-transparent"><i class="fas fa-pen fade_edit_btn"></i></button>
                     </div>
                     <div class="client_user_details">
-                        <h6 class="font_weight_600 font_14 mb-2">Owner</h6>
+                        <h6 class="font_weight_600 font_14 mb-2">Owner Details</h6>
                         <p class="text-muted font_14 mb-10">&nbsp;</p>
                     </div>
                     <hr class="grey_hr_full_width">
@@ -216,7 +216,7 @@
                                         @if (count($countries) > 0)
                                         <option value="">Select Country</option>
                                         @foreach ($countries as $country)
-                                        <option value="{{ $country->id }}" {{ ($clientInfo->country_id ?? '') == $country->id ? 'selected' : '' }}>
+                                        <option value="{{ $country->id }}"  data-code="{{$country->code}}" {{ ($clientInfo->country_id ?? '') == $country->id ? 'selected' : '' }}>
                                             {{ $country->name }}
                                         </option>
                                         @endforeach
@@ -254,11 +254,8 @@
                                     <label class="form-label" for="timeZone">Time Zone <span class="asterisk">*</span></label>
                                     <select class="form-select" name="timeZone" id="timeZone" aria-label="Time Zone">
                                         <option>Select Timezone</option>
-                                        @foreach ($timezone as $key => $timezones)
-                                        <option value="{{ $key }}" {{ ($clientInfo->clientDetails->time_zone ?? '') == $key ? 'selected' : '' }}>
-                                            {{ $timezones }}
-                                        </option>
-                                        @endforeach
+                                        <select class="timeZone" name="timeZone" id="timeZone" aria-label="timeZone">
+										</select>
                                     </select>
                                     <div class="text-danger error" data-error="timeZone"></div>
                                 </div>
@@ -330,6 +327,8 @@
 <script>
     var state = '{{$clientInfo->clientDetails->state_id ?? ""}}';
     var city = '{{$clientInfo->clientDetails->city_id ?? ""}}';
+    var timezone = '{{$clientInfo->clientDetails->time_zone}}';
+
     var _token = document.getElementById('_token').value;
 </script>
 <script type="text/javascript" src="{{ asset('js/profile_setting.js') }}"></script>
