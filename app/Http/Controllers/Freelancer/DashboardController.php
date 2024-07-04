@@ -72,7 +72,9 @@ class DashboardController extends Controller
     public function details(Request $request){
         $projectDetail = $this->project->getProjectDetailsWithRelations($request->id);
         $converstaion = $this->conservation->getSenderId($request->id, auth()->user()->id);
-        $proposalSetting = $this->proposalSetting->getProposalSettingForProject($converstaion ? $converstaion->sender_id : auth()->user()->id, $request->id);  
+        // $proposalSetting = $this->proposalSetting->getProposalSettingForProject($converstaion ? $converstaion->sender_id : auth()->user()->id, $request->id);  
+        $proposalSetting = $this->proposalSetting->getProposalSettingForProject( auth()->user()->id, $request->id);  
+
         $status = !empty($proposalSetting) ? 'true' : '';
         $userBalance = UserBalance::where('user_id',auth()->user()->id)->first();
         return response()->json(['response' => 'true','data'=>$projectDetail,'status'=>$status,'userBalance'=>$userBalance]);

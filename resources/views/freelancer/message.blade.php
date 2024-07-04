@@ -71,8 +71,9 @@
                             <div>
                                 <div class="chat-with font_14 color_green font_weight_500 room-title clickable"></div>
                                 <div class="chat-num-messages font_12 color_grey"></div>
-                                <a href="client/projects/proposals/<?php echo $userLists->project->id; ?>?view=nav-review-proposal" target="_blank">    
-                                <div class="name font_14 text-muted font-weight-light text-break">View Proposal</div></a>
+                                @if(auth()->user()->is_admin == '1')<a href="#" class="user_view_proposal" target="_blank">
+
+                                <div class="name font_14 text-muted font-weight-light text-break">View Proposal</div></a>@endif
                             </div>
                         </div>
                     </div>
@@ -185,6 +186,10 @@
         var conversationId = $(this).attr('data-conversation');
         var projectId = $(this).attr('data-project_id');
         $('.room-title').text(user_name);
+        $('.user_view_proposal').attr('href','client/projects/proposals/'+projectId+'?view=nav-review-proposal');
+
+
+        
         $('.user_image').attr('src',user_image);
 
         socket.emit('user_connected', {
