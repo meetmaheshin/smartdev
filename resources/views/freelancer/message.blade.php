@@ -71,6 +71,8 @@
                             <div>
                                 <div class="chat-with font_14 color_green font_weight_500 room-title clickable"></div>
                                 <div class="chat-num-messages font_12 color_grey"></div>
+                                <a href="client/projects/proposals/<?php echo $userLists->project->id; ?>?view=nav-review-proposal" target="_blank">    
+                                <div class="name font_14 text-muted font-weight-light text-break">View Proposal</div></a>
                             </div>
                         </div>
                     </div>

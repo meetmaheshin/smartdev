@@ -393,7 +393,7 @@
                                                         </div>
                                                         <div class="proposal_user_badgets d-flex font_12 pt-3">
                                                             @foreach ($invite->freelancerSkills as $skills)
-                                                            <span>{{ $skills->skill->skills_sub }}</span>
+                                                            <span>{{ $skills->skill->skills_sub ?? ''}}</span>
                                                             @endforeach
                                                         </div>
                                                     </div>

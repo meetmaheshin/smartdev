@@ -55,7 +55,7 @@
                             @endforeach
                             @endif
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-sm-12">
                                 <p class="font_16 font_weight_500 color_black">Project Type<span class="asterisk">*</span></<p>
 
@@ -64,16 +64,13 @@
                                         <input type="radio" name="project_type" id="web3" value="1" @if($project->projectType != 0) checked @endif>
                                         <span class="d-inline-block me-1"><i class="mid_dot"></i></span>Web3
                                     </label>
-                                    <!-- <label for="web2" class="cursor_pointer position-relative d-flex mb-3  align-items-center">
-                                        <input type="radio" name="project_type" id="web2" value="0" @if($project->projectType==0) checked @endif>
-                                        <span class="d-inline-block me-1"><i class="mid_dot"></i></span>Web2
-                                    </label> -->
+                                   
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row d-none web2_speciality">
                             <div class="col-sm-12">
-                                <p class="font_16 font_weight_500 color_black">Web2 Job Speciality <span class="asterisk">*</span></<p>
+                                <p class="font_16 font_weight_500 color_black">Web3 Job Speciality <span class="asterisk">*</span></<p>
                                 <div class="category_radio_content font font_14 font_weight_600 color_grey">
                                     @foreach($specialty as $key => $data)
                                     <label for="category_{{$data->id}}" class="position-relative d-flex mb-3  align-items-center">
@@ -89,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row d-none web3_speciality">
+                        <div class="row web3_speciality">
                             <div class="col-sm-12">
                                 <p class="font_16 font_weight_500 color_black">Web3 Job Speciality <span class="asterisk">*</span></<p>
                                 <div class="web3_category_radio_content font font_14 font_weight_600 color_grey">
@@ -198,7 +195,7 @@
     var project_specialty_name = '{{@$project->specialities->title}}';
     var project_type = '{{@$project->projectType}}';
 
-    projectType();
+    // projectType();
     if (project_specialty_id != '') {
         if ($("input[name='specialty_id']").is(":checked")) {} else {
             var html = '<label for="category_' + project_specialty_id + '" class="position-relative d-flex mb-3 align-items-center"><input type="radio" name="specialty_id" id="category_' + project_specialty_id + '"  value="' + project_specialty_id + '" checked>\
@@ -211,19 +208,19 @@
         }
     }
 
-    $("[name=project_type]").click(function() {
-        projectType();
-    });
+    // $("[name=project_type]").click(function() {
+    //     projectType();
+    // });
 
-    function projectType() {
-        var projectVal = $("input[type='radio']:checked").val();
-        if (projectVal == 1) {
-            $('.web3_speciality').removeClass("d-none");
-            $('.web2_speciality').addClass("d-none");
-        } else {
-            $('.web3_speciality').addClass("d-none");
-            $('.web2_speciality').removeClass("d-none");
-        }
-    }
+    // function projectType() {
+    //     var projectVal = $("input[type='radio']:checked").val();
+    //     if (projectVal == 1) {
+    //         $('.web3_speciality').removeClass("d-none");
+    //         $('.web2_speciality').addClass("d-none");
+    //     } else {
+    //         $('.web3_speciality').addClass("d-none");
+    //         $('.web2_speciality').removeClass("d-none");
+    //     }
+    // }
 </script>
 @endsection

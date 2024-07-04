@@ -48,7 +48,7 @@ class SendProposal extends Notification
     public function toMail($notifiable)
     {
         // dd($notifiable);
-
+        $Duration='';
         $url = url('/client/projects/proposals/'.$this->proposalSetting->project_id.'?view=nav-review-proposal'); // Example URL
         if ($this->proposalSetting->duration_dropdown == "more_than_6") {
             $Duration = "More Than 6";

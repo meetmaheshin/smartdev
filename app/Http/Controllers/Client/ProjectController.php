@@ -126,7 +126,7 @@ class ProjectController extends Controller
         ], [
             'title' => $request->title,
             'description' => $request->description,
-            'projectType' => $request->project_type,
+            'projectType' => 1,
 
             'specialty_id' => $request->specialty_id,
             'category_id' => $category_id,
