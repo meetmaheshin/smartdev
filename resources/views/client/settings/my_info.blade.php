@@ -212,7 +212,6 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="country">Country <span class="asterisk">*</span></label>
                                     <select class="form-select" name="country" id="country" aria-label="Country">
-                                        {{$clientInfo}}
                                         @if (count($countries) > 0)
                                         <option value="">Select Country</option>
                                         @foreach ($countries as $country)
