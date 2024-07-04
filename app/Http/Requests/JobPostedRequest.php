@@ -31,10 +31,11 @@ class JobPostedRequest extends FormRequest
                 'required_if:budget,hourly',
                 'numeric',
                 'min:2',
+                'nullable'
             ],
             'hourly_to' => [
                 'required_if:budget,hourly',
-                'numeric',
+                'numeric', 'nullable',
                 function ($attribute, $value, $fail) {
                     if ($this->input('budget') === 'hourly' && $value < $this->input('hourly_from')) {
                         $fail('Hourly rate must be greater than starting charges when budget type is hourly.');
@@ -42,7 +43,7 @@ class JobPostedRequest extends FormRequest
                 },
             ],
             'project_budget' => 'required_if:budget,project','numeric',
-            'min:5',
+            'min:5', 'nullable'
         ];
     }
 

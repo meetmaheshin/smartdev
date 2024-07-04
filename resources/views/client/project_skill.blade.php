@@ -63,7 +63,7 @@
                                                     <?php $newArrskill = 0; ?>
                                                     @foreach ($popularSkills as $skills)
                                                     @if (!in_array($skills->skills_sub, $single))
-                                                    <span data-skill="1" class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub" id="skill_subcat_{{ $skills->id }}" data-cy="{{ $skills->skills_sub }}" data-id="{{ $skills->id }}">{{ $skills->skills_sub }}
+                                                    <span data-skill="1" class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub main_skills" id="skill_subcat_{{ $skills->id }}" data-cy="{{ $skills->skills_sub }}" data-id="{{ $skills->id }}">{{ $skills->skills_sub }}
                                                         <i class=" fas fa-solid fa-plus"></i>
                                                     </span>
                                                     @else
@@ -102,7 +102,7 @@
                                                                 if (!in_array($skill_sub->skills_sub, $single)) {
 
                                                     ?>
-                                                                    <span class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub" data-skill="{{ $data->id }}" id="skill_subcat_{{ $skill_sub->id }}" data-cy="{{ $skill_sub->skills_sub }}" data-id="{{ $skill_sub->id }}">{{ $skill_sub->skills_sub }}
+                                                                    <span class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub main_skills"  data-skill="{{ $data->id }}" id="skill_subcat_{{ $skill_sub->id }}" data-cy="{{ $skill_sub->skills_sub }}" data-id="{{ $skill_sub->id }}">{{ $skill_sub->skills_sub }}
                                                                         <i class=" fas fa-solid fa-plus"></i>
                                                                     </span>
                                                                     <?php } else {

@@ -782,7 +782,7 @@ jQuery(document).ready(function () {
 
             var mainval = $("#skill_subcat_" + skillSubId).attr("data-skill");
             $("#skill_subcat_" + skillSubId).remove();
-
+            $(".main_skills[data-cy='"+skillName+"']").remove();
             if (
                 jQuery(".heading" + mainval)
                     .find(".posting_accordion_inner_content")
