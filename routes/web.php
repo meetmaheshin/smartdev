@@ -71,6 +71,8 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
     Route::get('/getDatahistory', [SearchController::class, 'getDatahistory'])->name('setting.getDatahistory');
     Route::get('/messages', [MessageController::class, 'index'])->name('messages.list');
     Route::post('/messages/store', [MessageController::class, 'store'])->name('store_messages');
+    Route::post('/messages/url_freelancer_message', [MessageController::class, 'Urlfreelancer_message'])->name('url_freelancer_message');
+
     Route::post('/messages/getMessages', [MessageController::class, 'getMessages'])->name('get_messages');
     Route::post('/messages/read_message', [MessageController::class, 'updateReadMessage'])->name('read_message');
     Route::post('/messages/usersList', [MessageController::class, 'getUserList'])->name('user_list');
@@ -125,6 +127,8 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
             Route::get('/freelancer-proposal', [ProjectReviewProposalController::class, 'showFreelancerData'])->name('freelancer-proposal');
             // invite to job
             Route::get('/invite_to_job', [ProjectReviewProposalController::class, 'inviteToJob'])->name('invite_to_job');
+            Route::get('/uninvite_to_job', [ProjectReviewProposalController::class, 'unInviteToJob'])->name('uninvite_to_job');
+
             Route::post('/send_invitation', [ProjectReviewProposalController::class, 'sendInvitation'])->name('send_invitation');
             // offer to freelancer
             Route::get('/send-offer/userId/{userId}/projectId/{projectId}', [ProjectReviewProposalController::class, 'sendOffer'])->name('send.offer.view');

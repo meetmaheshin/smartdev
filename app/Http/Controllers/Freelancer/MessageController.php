@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Conservation;
 use App\Models\Message;
 use App\Models\User;
+use App\Models\ProposalSetting;
 use App\Http\Traits\FileUploadTrait;
 use Auth, File, DB, Image;
 
@@ -330,5 +331,24 @@ class MessageController extends Controller
         $receiverData = User::find($request->receiverId);
         $userStatus = "<i class='fa fa-circle " . ($receiverData && $receiverData->chat_status == 1 ? "online" : "smart_text") . " icon-$request->receiverId'></i><div class='user-icon-$request->receiverId' id='status_show text-success' title='" . ($receiverData && $receiverData->chat_status == 1 ? "Online" : "Away") . "'>";
         return $userStatus;
+    }
+
+    public function Urlfreelancer_message(Request $request){
+        $receiverId = $request->user_id;
+        $conId = $request->conversationId;
+        $projectId = $request->projectId;
+        $senderId = auth()->user()->id;
+
+        $proposal = ProposalSetting::where(['project_id'=>$projectId,'receiver_id'=>$receiverId,'user_id'=>$senderId,'proposal_proposed_by'=>0])->first();
+
+        if($proposal){
+            return response()->json(['response' => 'true', 'url' => 'freelancer/freelance_job_proposal/'.$proposal->id]);
+
+        }else{
+            return response()->json(['response' => 'true', 'url' => 'freelancer/proposals/interview/uid/'.$projectId]);
+
+        }
+
+        
     }
 }

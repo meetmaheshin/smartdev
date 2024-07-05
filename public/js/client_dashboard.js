@@ -83,7 +83,6 @@ $('#send_invitation_form').on("submit", function (e) {
                     notifiable_id: response.notification.notifiable_id,
                     message: response.notification,
                 });
-                console.log("hideeeeeeee");
                 $('#inviteJob').modal('hide');
                 notify.show("Success!", "Invitation Sent Successfully");
                 setTimeout(function () {

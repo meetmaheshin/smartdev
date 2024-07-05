@@ -71,9 +71,15 @@
                             <div>
                                 <div class="chat-with font_14 color_green font_weight_500 room-title clickable"></div>
                                 <div class="chat-num-messages font_12 color_grey"></div>
-                                @if(auth()->user()->is_admin == '1')<a href="#" class="user_view_proposal" target="_blank">
-
-                                <div class="name font_14 text-muted font-weight-light text-break">View Proposal</div></a>@endif
+                                @if(auth()->user()->is_admin == '1')
+                                    <a href="#" class="user_view_proposal" target="_blank">
+                                        <div class="name font_14 text-muted font-weight-light text-break">View Proposal</div>
+                                    </a>
+                                @else
+                                     <a href="#" class="user_view_proposal_free" target="_blank">
+                                        <div class="name font_14 text-muted font-weight-light text-break">View Proposal</div>
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -187,9 +193,8 @@
         var projectId = $(this).attr('data-project_id');
         $('.room-title').text(user_name);
         $('.user_view_proposal').attr('href','client/projects/proposals/'+projectId+'?view=nav-review-proposal');
+        url_forfreelancer(receiver_id,conversationId,projectId);
 
-
-        
         $('.user_image').attr('src',user_image);
 
         socket.emit('user_connected', {
@@ -213,6 +218,7 @@
     });
 
     socket.on("new_message", function(data, unreadCount,getTotalUnreadCount) {
+        // console.log("new_message",data);
         if (data.sender_id == receiver) {
             if(getTotalUnreadCount > 0){
                 $('.notifi_count_'+data.receiver_id).html(getTotalUnreadCount);
@@ -271,6 +277,33 @@
             sendMessage(); // Call your function
         }
     });
+
+    function url_forfreelancer(receiver_id,conversationId,projectId){
+        // console.log(receiver_id);
+        // console.log(projectId);
+        // console.log(conversationId);
+
+        $.ajax({
+                url: "{{route('url_freelancer_message')}}",
+                type: "POST",
+                data: {
+                    'conversation': conversationId,
+                    'user_id': receiver_id,
+                    'projectId':projectId,
+                    "_token": "{{ csrf_token() }}",
+                },
+                dataType:'json',
+                
+                success: function(data) {
+                    $('.user_view_proposal_free').attr('href',data.url);
+
+                },
+                error: function(err) {
+                    // alert(err);
+                }
+            });
+    }
+
 
     function sendMessage() {
         var message = $('#message-to-send').val().trim();

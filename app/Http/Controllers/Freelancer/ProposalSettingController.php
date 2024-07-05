@@ -212,8 +212,8 @@ class ProposalSettingController extends Controller
     public function invitationInterview(Request $request, $id) {
         $data['project'] = Project::with(['categories', 'specialities'])->findOrFail($id);
         $data['allProject'] = Project::where('user_id',$data['project']->user_id )->count();
-        $data['proposalSettings'] = ProposalSetting::where('project_id', $id)
-        ->where('receiver_id', auth()->user()->id)
+        $data['proposalSettings'] = ProposalSetting::withTrashed()->where('project_id', $id)
+        ->where('receiver_id', auth()->user()->id)->orderBy('id','desc')
         ->first();
        
         return view('freelancer.freelance_job_proposal_interview',$data);

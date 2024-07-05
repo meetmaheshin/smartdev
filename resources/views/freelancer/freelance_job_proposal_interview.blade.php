@@ -80,10 +80,12 @@
             </div>
             <aside class="col-md-3">
                 <p class="text-muted font_13">Interested in discussing this job?</p>
-                @if($proposalSettings->status == 1)
+                @if($proposalSettings->deleted_at != null)
+                <button class="btn btn-secondary w-100 font_weight_600">Declined By Client</button>
+                @elseif($proposalSettings->status == 1)
                 <button class="btn btn-secondary w-100 font_weight_600">Accepted Interview</button>
                 @elseif($proposalSettings->status == 2)
-                <button class="btn btn-secondary w-100 font_weight_600">Declined</button>
+                <button class="btn btn-secondary w-100 font_weight_600">Declined By Freelancer</button>
                 @elseif($proposalSettings->status == 3)
                 <button class="btn btn-secondary w-100 font_weight_600">Hired</button>
                 @else

@@ -241,6 +241,53 @@ $(".invite_to_job").click(function (e) {
 
     // $("#inviteJob").modal("show");
 });
+
+// uninvite job by client
+
+$(".uninvite_to_job").click(function (e) {
+    e.preventDefault();
+    var userId = $(this).attr("data-user_id");
+    var url = $(this).attr("data-url");
+    var projectId = $(this).attr("data-project_id");
+
+    swal.fire({
+        title: "Are you sure?",
+        text: "You want to uninvite",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Yes!",
+        closeOnConfirm: false,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: url,
+                method: "GET",
+                data: { userId: userId, url: url, projectId: projectId },
+                dataType: "json",
+                success: function (response) {
+                    socket.emit("sendNotification", {
+                        notifiable_id: response.notification.notifiable_id,
+                        message: response.notification,
+                    });
+                    swal.fire("Success!", "", "success");
+                    setTimeout(function () {
+                        location.reload();
+                    }, 500);
+                    // location.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    swal.fire("Error deleting!!", "Please try again", "error");
+                },
+            });
+        } else {
+            swal.fire("Changes are not saved", "", "info");
+        }
+    });
+    // $("#inviteJob").modal("show");
+});
+
+
 // Define variables to hold the selectors for the labels and inputs
 var $contactLabel = $(".contact_label");
 var $contactLabelInput = $(".contact_label_input");

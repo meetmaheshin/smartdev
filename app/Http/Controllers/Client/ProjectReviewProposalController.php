@@ -15,6 +15,7 @@ use App\Models\ClientHire;
 use App\Models\ProjectMilestone;
 use App\Http\Requests\SendHireRequest;
 use App\Notifications\SendInvitation;
+use App\Notifications\UnsendInvitation;
 use App\Notifications\PaymentReceived;
 use Illuminate\Support\Facades\Notification;
 use Auth, Session, URL,DB;
@@ -165,6 +166,24 @@ class ProjectReviewProposalController extends Controller
         return response()->json(['status' => 'true', 'data' => $userDetail, 'project' => $projectDetail->user]);
     }
 
+    public function unInviteToJob(Request $request)
+    {
+        $sender = auth()->user()->id;
+        $receiver = $request->userId;
+        $projectId = $request->projectId;
+        $proposalSetting = ProposalSetting::where(['receiver_id'=>$receiver,'project_id'=>$projectId,'user_id'=>$sender,'proposal_proposed_by'=>1])->delete();        
+        $userReciverData  = User::where('id',$receiver)->first();
+        $conversationData = $this->conservation->conservationByProject($projectId, $sender, $receiver);
+        if (!empty($conversationData)) {
+            $message = "Dear {$userReciverData->firstname}, the invitation sent by ".auth()->user()->firstname." has been retracted. Please contact the client for further information.";
+            $message = Message::create(['sender_id' => auth()->user()->id, 'conservation_id' => $conversationData->id, 'message' => $message]);
+        }
+        $projectData  = $this->project->projectData($projectId);
+        Notification::send($userReciverData, new UnsendInvitation($projectData));
+        return response()->json(['status' => 'true','notification'=>$userReciverData->notifications->first()]);
+    }
+
+
     public function sendInvitation(Request $request) {
         $sender = auth()->user()->id;
         $receiver = $request->user_id;
@@ -186,6 +205,9 @@ class ProjectReviewProposalController extends Controller
             $conservation->project_id = $projectId;
             $conservation->save();
             $message = Message::create(['sender_id' => auth()->user()->id, 'conservation_id' => $conservation->id, 'message' => $request->message]);
+        }else{
+            $message = Message::create(['sender_id' => auth()->user()->id, 'conservation_id' => $conversationData->id, 'message' => $request->message]);
+
         }
 
         $userReciverData  = User::where('id',$receiver)->first();

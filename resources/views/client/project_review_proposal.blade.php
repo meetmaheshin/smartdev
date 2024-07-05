@@ -297,8 +297,8 @@
                                                             </button>
                                                             @elseif($invite->conv_status->status == 0)
                                                             <a href="{{route('send.offer.view',['userId' => $invite->id , 'projectId' => $project_id])}}" class="font_weight_600 up_green_btn text-decoration-none">Hire</a>
-                                                            <button type="button" class="invited_btn open_btn font_weight_600 font-15 text-decoration-none mx-2 text-muted" disabled>
-                                                                <i class="fas fa-check"></i> Invited
+                                                            <button type="button" class="open_btn font_weight_600 font-15 text-decoration-none mx-2 uninvite_to_job" data-url="{{ route('uninvite_to_job') }}" data-project_id="{{ $project_id }}" data-user_id="{{ $invite->id }}">
+                                                                <i class="fas fa-check"></i> UnInvite
                                                             </button>
                                                             @elseif($invite->conv_status->status == 1)
                                                             <a href="{{route('send.offer.view',['userId' => $invite->id , 'projectId' => $project_id])}}" class="font_weight_600 up_green_btn text-decoration-none">Hire</a>
