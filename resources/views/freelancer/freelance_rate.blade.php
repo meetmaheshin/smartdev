@@ -19,10 +19,10 @@
                                 <input class="text-end" placeholder="100" type="number" name="hourly_rate" id="hourly_rate" step="any" value="{{$freelancerRate->hourly_rate ?? ""}}">
                             </div>
                             <p class="m-0 ms-2">/hr</p>
-                            @if($errors->has('hourly_rate'))
-                            <span class="error px-2" style="color: red">{{ $errors->first('hourly_rate') }}</span>
-                            @endif
                         </div>
+                        @if($errors->has('hourly_rate'))
+                        <span class="error px-2" style="color: red">{{ $errors->first('hourly_rate') }}</span>
+                        @endif
                     </div>
                     <hr class="my-5">
                     <div class="col-md-7">
@@ -53,10 +53,10 @@
                                 <input class="text-end" placeholder="78" type="number" name="receive_fee" id="receive_fee" step="any" value="{{$freelancerRate->receive_fee ?? ""}}">
                             </div>
                             <p class="m-0 ms-2">/hr</p>
-                            @if($errors->has('receive_fee'))
-                            <span class="error px-2" style="color: red">{{ $errors->first('receive_fee') }}</span>
-                            @endif
                         </div>
+                        @if($errors->has('receive_fee'))
+                        <span class="error px-2" style="color: red">{{ $errors->first('receive_fee') }}</span>
+                        @endif
                     </div>
                 </div>
                 <div class="d-flex mt-5 justify-content-between">

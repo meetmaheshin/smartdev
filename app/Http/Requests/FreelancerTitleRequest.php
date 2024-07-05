@@ -29,7 +29,7 @@ class FreelancerTitleRequest extends FormRequest
             $rules['title'] = 'required|string';
         }
         if($this->has('hourly_rate')){
-            $rules['hourly_rate'] = 'required';
+            $rules['hourly_rate'] = 'required|numeric|min:5';
         }
         if($this->has('receive_fee')){
             $rules['receive_fee'] = 'required';
@@ -60,6 +60,8 @@ class FreelancerTitleRequest extends FormRequest
         return [
             'country_states.required' => 'State field is required',
             'country_state_city.required' => 'City field is required!',
+            'hourly_rate.min' => 'The hourly rate must be at least :min',
+
         ];
     }
 }
