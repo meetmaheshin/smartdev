@@ -47,54 +47,59 @@
                                     <p class="font_14">Browse jobs that match your experience to a client's hiring preferences. Ordered by most relevant.</p>
                                     @if(count($project_best)>0)
                                     @foreach($project_best as $projects)
-                                    @if($projects->saveJobs == null)
-                                    <div class="job-tile-list contact_home_list_{{$projects->id}}">
-                                        <div class="row">
-                                            <div class="col">
-                                                <button type="button" class="bg-transparent border-0 open_btn best_matches_result font_20 font_weight_600" data-action="{{route('details')}}" data-id="{{$projects->id}}" data-title="{{$projects->title}}" data-bs-toggle="modal" data-bs-target="#sideModal">
-                                                    {{$projects->title}}
-                                                </button>
 
-                                            </div>
-                                            <div class="pr-15 save_btn">
-                                                <button class="job_save_btn">
-                                                    <div class="d-inline-block"><i class="far fa-heart save_project"></i><input type="hidden" id="job_save_btn_id" value="{{$projects->id}}"></div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="mt-2">
-                                            <small class="text-muted display-inline-block text-muted"><strong data-test="job-type">{{($projects->budget=='project'? 'Fixed-price' : 'Hourly: $'.$projects->hourly_from.'.00-$'.$projects->hourly_to.'.00')}}</strong> <span>
-                                                    - <span data-test="contractor-tier">{{ucfirst($projects->level)}} level</span></span> <span>
+                                        <div class="job-tile-list contact_home_list_{{$projects->id}}">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <button type="button" class="bg-transparent border-0 open_btn best_matches_result font_20 font_weight_600" data-action="{{route('details')}}" data-id="{{$projects->id}}" data-title="{{$projects->title}}" data-bs-toggle="modal" data-bs-target="#sideModal">
+                                                        {{$projects->title}}
+                                                    </button>
 
-                                                    @if($projects->budget=='project')
-                                                    <span>Est. Budget: </span> <span data-test="budget">
-                                                        ${{$projects->project_budget}}
+                                                </div>
+                                                <div class="pr-15 save_btn">
+                                                    <button class="job_save_btn">
+                                                        <div class="d-inline-block">
+                                                                @if($projects->saveJobs == null)
+                                                                    <i class="far fa-heart save_project"></i>
+                                                                @else
+                                                                    <i class="fa fa-heart save_project"></i>
+                                                                @endif
+                                                            <input type="hidden" id="job_save_btn_id" value="{{$projects->id}}"></div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="mt-2">
+                                                <small class="text-muted display-inline-block text-muted"><strong data-test="job-type">{{($projects->budget=='project'? 'Fixed-price' : 'Hourly: $'.$projects->hourly_from.'.00-$'.$projects->hourly_to.'.00')}}</strong> <span>
+                                                        - <span data-test="contractor-tier">{{ucfirst($projects->level)}} level</span></span> <span>
+
+                                                        @if($projects->budget=='project')
+                                                        <span>Est. Budget: </span> <span data-test="budget">
+                                                            ${{$projects->project_budget}}
+                                                        </span>
+                                                        @endif
                                                     </span>
-                                                    @endif
-                                                </span>
-                                                <span>
-                                                    - Posted
-                                                    <span data-test="posted-on"><span>{{TimeChange($projects->updated_at)}} </span></span></span>
-                                            </small>
+                                                    <span>
+                                                        - Posted
+                                                        <span data-test="posted-on"><span>{{TimeChange($projects->updated_at)}} </span></span></span>
+                                                </small>
+                                            </div>
+                                            <div class="mt-1 small_desc">
+                                                <p>- {{$projects->description}}</p>
+                                            </div>
+                                            <div class="up_skill">
+                                                @if(count($projects->ProjectSkill)>0)
+                                                @foreach($projects->ProjectSkill as $dataskills)
+                                                <a href="javascript:void(0)">{{$dataskills->skill->skills_sub}}</a>
+                                                @endforeach
+                                                @endif
+                                            </div>
+                                            <div class="up_prop">
+                                                <small class="d-inline-block mr-10 font-14">
+                                                    <span class="text-muted">Proposal: </span>
+                                                    <span class="font_weight_500">{{$projects->get_proposal_setting_count}}</span>
+                                                </small>
+                                            </div>
                                         </div>
-                                        <div class="mt-1 small_desc">
-                                            <p>- {{$projects->description}}</p>
-                                        </div>
-                                        <div class="up_skill">
-                                            @if(count($projects->ProjectSkill)>0)
-                                            @foreach($projects->ProjectSkill as $dataskills)
-                                            <a href="javascript:void(0)">{{$dataskills->skill->skills_sub}}</a>
-                                            @endforeach
-                                            @endif
-                                        </div>
-                                        <div class="up_prop">
-                                            <small class="d-inline-block mr-10 font-14">
-                                                <span class="text-muted">Proposal: </span>
-                                                <span class="font_weight_500">{{$projects->get_proposal_setting_count}}</span>
-                                            </small>
-                                        </div>
-                                    </div>
-                                    @endif
                                     @endforeach
                                     @endif
                                 </div>
@@ -104,7 +109,6 @@
                                     <p class="font_14">Profile browse jobs that match your experience to a client's hiring preferences. Ordered by most relevant.</p>
                                     @if(count($project_recent)>0)
                                         @foreach($project_recent as $projects)
-                                            @if($projects->saveJobs == null)
                                             <div class="job-tile-list contact_recent_list_{{$projects->id}}">
                                                 <div class="row">
                                                     <div class="col">
@@ -115,7 +119,14 @@
                                                     </div>
                                                     <div class="pr-15 save_btn">
                                                         <button class="job_save_btn">
-                                                            <div class="d-inline-block"><i class="far fa-heart save_project"></i><input type="hidden" id="job_save_btn_id" value="{{$projects->id}}"></div>
+                                                            <div class="d-inline-block">
+                                                                @if($projects->saveJobs == null)
+                                                                    <i class="far fa-heart save_project"></i>
+                                                                @else
+                                                                    <i class="fa fa-heart save_project"></i>
+                                                                @endif
+                                                                
+                                                                <input type="hidden" id="job_save_btn_id" value="{{$projects->id}}"></div>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -151,7 +162,6 @@
                                                     </small>
                                                 </div>
                                             </div>
-                                            @endif
                                         @endforeach
                                     @endif
                                 </div>

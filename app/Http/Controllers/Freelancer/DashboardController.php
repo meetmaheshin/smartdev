@@ -82,7 +82,7 @@ class DashboardController extends Controller
  
     public function saveProject(Request $request) {
         // Retrieve project details with relationships
-        $projectDetail = Project::find($request->id);
+        $projectDetail = Project::with('ProjectSkill.skill')->find($request->id);
          // Use ternary operator to add or delete SaveJob
         $type = SaveJob::where(['project_id' => $request->id, 'user_id' => Auth::user()->id])->exists() ? 'Delete' : 'Add';
         $type === 'Add' ? $projectDetail->saveJobs()->create(['user_id' => Auth::user()->id]) : $projectDetail->saveJobs()->where(['project_id' => $request->id, 'user_id' => Auth::user()->id])->delete();

@@ -1098,11 +1098,17 @@ jQuery(document).ready(function () {
                     </div>\
                 </div>';
                     $("#contact").append(html);
-                    $(".contact_home_list_" + response.data.id).remove();
-                    $(".contact_recent_list_" + response.data.id).remove();
+                    var $siblings = $('.contact_home_list_'+response.data.id).find('i');
+                    $siblings.addClass('fa');
+                    var $sibling1 = $('.contact_recent_list_'+response.data.id).find('i');
+                    $sibling1.addClass('fa');
                 } else {
                     $(".contact_save_list_" + response.data.id).remove();
-
+                    var $siblings = $('.contact_home_list_'+response.data.id).find('i');
+                    $siblings.removeClass('fa').addClass('far');
+                    var $sibling1 = $('.contact_recent_list_'+response.data.id).find('i');
+                    $sibling1.removeClass('fa').addClass('far');
+                    
                     var html =
                         '<div class="job-tile-list contact_home_list_' +
                         response.data.id +
@@ -1153,17 +1159,17 @@ jQuery(document).ready(function () {
                         response.data.project_skill,
                         function (index, value) {
                             html +=
-                                '<a href="javascript:void(0)">' +
-                                value.skill.skills_sub +
-                                "</a>";
-                        }
-                    );
-                    html +=
-                        '</div>\
-                        <div class="up_prop">\
-                        </div>\
-                    </div>';
-                    $("#home").append(html);
+                            '<a href="javascript:void(0)">' +
+                            value.skill.skills_sub +
+                            "</a>";
+                    }
+                );
+                html +=
+                    '</div>\
+                    <div class="up_prop">\
+                    </div>\
+                </div>';
+                    // $("#home").append(html);
                 }
             },
         });
