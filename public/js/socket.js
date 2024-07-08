@@ -7,7 +7,10 @@ socket.on("new_notification", function(data) {
          message = 'You posted the job "'+data.message.data.title +'" in "'+receiverDataName ;
     }else if(data.message.type.includes('SendInvitation')){
         message = 'You have received an invitation to interview for the job "'+data.message.data.title ;
-    }else if(data.message.type.includes('FinishedWork')){
+    }else if(data.message.type.includes('UnsendInvitation')){
+          message = 'the invitation has been retracted.Please contact the client for further information "'+data.message.data.title ;
+     }
+    else if(data.message.type.includes('FinishedWork')){
          message = 'Your milestone work has finished "'+data.message.data.title ;
     }else if(data.message.type.includes('PaymentReceived')){
          message = 'Your milestone has Ended and payment received "'+data.message.data.title  ;

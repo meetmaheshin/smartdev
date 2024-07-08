@@ -148,20 +148,14 @@
     var receiver = $('#receiverId').val();
     var conversationId = $('#conversationId').val();
     var projectId = $('#projectId').val();
-   
-    socket.once('connect', function() {
-        socket.emit('join', {
-            id: sender_id
-        });
-    });
     setTimeout(() => {
         $('.users_list_0 .user_name,.users_list_0 .current_user').trigger('click');
     }, 500);
 
-    // USER IS ONLINE
-    // socket.on("online", (userId) => {
-    //     console.log(userId, "Is Online!"); // update online status
-    // });
+    // // USER IS ONLINE
+    // // socket.on("online", (userId) => {
+    // //     console.log(userId, "Is Online!"); // update online status
+    // // });
 
     socket.on('updateUserStatus', function(data) {
         let $userStatusIcon = $('#status_show');
@@ -218,7 +212,6 @@
     });
 
     socket.on("new_message", function(data, unreadCount,getTotalUnreadCount) {
-        // console.log("new_message",data);
         if (data.sender_id == receiver) {
             if(getTotalUnreadCount > 0){
                 $('.notifi_count_'+data.receiver_id).html(getTotalUnreadCount);
@@ -279,10 +272,6 @@
     });
 
     function url_forfreelancer(receiver_id,conversationId,projectId){
-        // console.log(receiver_id);
-        // console.log(projectId);
-        // console.log(conversationId);
-
         $.ajax({
                 url: "{{route('url_freelancer_message')}}",
                 type: "POST",

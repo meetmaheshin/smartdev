@@ -50,11 +50,16 @@ io.on('connection', (socket) => {
     socket.on('sendNotification', (data) => {
       io.emit('new_notification', data);
     });
-
+    
+    // socket.on('send_message_mew', (data) => {
+    //     io.to(data.receiver_id).emit('send_message_dashboard_new', data);
+    // });
+    
  
     // listen from client
     socket.on("send_message",function(data){
         io.to(data.receiver_id).emit('new_message', data);
+        io.to(data.receiver_id).emit('send_message_dashboard_new', data);
     });
 
     socket.on('disconnect', (socket) => {

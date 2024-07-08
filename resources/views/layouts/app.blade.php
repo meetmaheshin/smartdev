@@ -43,6 +43,22 @@
 				id: "<?= auth()->user()->id ?>"
 			}
 		});
+		socket.once('connect', function() {
+			socket.emit('join', {
+				id: receiverData
+			});
+		});		
+		socket.on("send_message_dashboard_new", function(data) {
+			console.log("send_message_dashboard_new-nd");
+			// if (data.sender_id == receiver) {
+				console.log("SENDERiD",data.sender_id);
+				console.log("receiver",receiverData);
+				var count = parseInt($('.notifi_count_' + receiverData).html(), 10); // Parse the count as an integer
+				var total = count+1;
+				$('.notifi_count_'+receiverData).html(total);
+
+		});
+
 		var base_url = "<?= url('/') ?>";
 		var rovi_contract_address = "{{env('ROVI_CONTRACT_ADDRESS')}}";
 

@@ -48,7 +48,7 @@
 
 
 					<li class="nav-item">
-						<a class="nav-link position-relative" aria-current="page" href="{{route('messages.list')}}">Messages <span class="start-100 notifi_count notifi_count_{{auth()->user()->id}} badge rounded-pill">{{ getUnreadMessageCount()!=0 ? getUnreadMessageCount() : '' }}</span></a>
+						<a class="nav-link position-relative" aria-current="page" href="{{route('messages.list')}}">Messages <span class="start-100 notifi_count notifi_count_{{auth()->user()->id}} badge rounded-pill">{{ getUnreadMessageCount()!= 0 ? getUnreadMessageCount() : '' }}</span></a>
 					</li>
 				</ul>
 				<ul class="d-none d-lg-flex navbar-nav right_nav d-flex align-items-center">
@@ -101,6 +101,9 @@
 											@break
 											@case('App\Notifications\SendInvitation')
 											<a class="text-decoration-none color_black read_noti"  data-id="{{ $notification->id }}" href="{{ $notification->data['url'] }}">You have received an invitation to interview for the job "{{ $notification->data['title'] }}"</a>
+											@break
+											@case('App\Notifications\UnsendInvitation')
+											<a class="text-decoration-none color_black read_noti"  data-id="{{ $notification->id }}" href="{{ $notification->data['url'] }}">the invitation has been retracted. Please contact the client for further information "{{ $notification->data['title'] }}"</a>
 											@break
 											@case('App\Notifications\FinishedWork')
 											<a class="text-decoration-none color_black read_noti"  data-id="{{ $notification->id }}" href="{{ @$notification->data['url'] }}">Your milestone work has finished "{{ $notification->data['title'] }}"</a>
