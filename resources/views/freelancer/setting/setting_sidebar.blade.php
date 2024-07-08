@@ -9,6 +9,11 @@
                 </a>
             </li>
             <li>
+                <a href="{{route('myprofile')}}" class="position-relative text-decoration-none font_14 color_grey d-inline-block py-2 ps-3">
+                    <span>My Profile</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{route('settings')}}" class="position-relative text-decoration-none font_14 color_grey d-inline-block py-2 ps-3">
                     <span>Profile Setting</span>
                 </a>

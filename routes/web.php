@@ -9,6 +9,7 @@ use App\Http\Controllers\Client\ProjectReviewProposalController;
 use App\Http\Controllers\Freelancer\DashboardController as FreelancerDashboard;
 use App\Http\Controllers\Freelancer\ProposalSettingController;
 use App\Http\Controllers\Freelancer\SettingController;
+use App\Http\Controllers\Freelancer\PortfolioController;
 use App\Http\Controllers\Freelancer\InitiateDetailController;
 use App\Http\Controllers\Freelancer\MessageController;
 use App\Http\Controllers\Search\SearchController;
@@ -228,6 +229,12 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
                 Route::post('/desc','profileDesc')->name('desc');
                 Route::post('/specialized-profiles','specializedProfiles')->name('specialized-profiles');
                 Route::get('/specialized-profiles/delete/{specialty_id}','specializedProfilesDelete')->name('specialized-profiles-delete');
+            });
+
+            Route::controller(PortfolioController::class)->group(function () {
+                Route::get('/settings/myprofile','index')->name('myprofile');
+                Route::post('/settings/myprofile/create','create')->name('myprofile.create');
+
             });
         });
     });

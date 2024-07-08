@@ -25,8 +25,7 @@ class ProposalSettingController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth','verified']);
-        $this->middleware(['check-profile']);
+        $this->middleware(['auth','verified','check-profile']);
         $this->conservation = new Conservation;
     }
 
