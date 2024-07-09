@@ -9,6 +9,8 @@ use App\Http\Controllers\Freelancer\ProposalSettingController;
 use App\Http\Controllers\Freelancer\SettingController;
 use App\Http\Controllers\Client\DashboardController;
 use App\Http\Controllers\Client\ProjectController;
+use App\Http\Controllers\Admin\Auth\LoginController as adminLoginController;
+
 use Closure;
 use App\Models\User;
 
@@ -37,10 +39,13 @@ class AccessControl {
 
         $dashboardController = get_class(new DashboardController());
         $projectController = get_class(new ProjectController());
+        $adminLoginController = get_class(new FreelancerDashboard());
 
 
         $roleClient = User::ROLE_CLIENT;
         $roleFreelancer = User::ROLE_FREELANCER;
+        $roleAdmin = User::ROLE_ADMIN;
+
          
         
         return [
@@ -65,6 +70,9 @@ class AccessControl {
             ],
             $projectController => [
                 $roleClient
+            ],
+            $adminLoginController => [
+                $roleAdmin
             ],
         ];
     }

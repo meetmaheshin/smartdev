@@ -107,6 +107,8 @@ class LoginController extends Controller
                 return redirect()->route('clientdashboard');
             }else if (auth()->user()->is_admin == User::TYPE['freelancer']) {
                 return redirect()->route($this->redirectUser(auth()->user()->id));
+            }else if (auth()->user()->is_admin == User::TYPE['admin']) {
+                return redirect()->route('admin.dashboard');
             }else{
                 return redirect()->route('/');
             }

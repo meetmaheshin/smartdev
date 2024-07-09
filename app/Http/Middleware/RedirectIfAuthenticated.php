@@ -27,8 +27,10 @@ class RedirectIfAuthenticated
                 if(auth()->user()->status == '1'){
                     if(auth()->user()->is_admin== User::ROLE_CLIENT){
                         return redirect()->route('clientdashboard');
-                    }else{
+                    }elseif(auth()->user()->is_admin== User::ROLE_FREELANCER){
                         return redirect()->route('dashboard');
+                    }else{
+                        return redirect()->route('admin.dashboard');
                     }
                 }
             }

@@ -16,6 +16,9 @@ use App\Http\Controllers\Search\SearchController;
 use App\Http\Controllers\TransactionHistoryController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Admin\Auth\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\Auth\JobController as AdminJobController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +32,41 @@ use App\Http\Controllers\Auth\LoginController;
 */
 Route::get('/home',  [HomeController::class, 'index'] );
 
+// admin
+
+Route::middleware(['auth','prevent-back-history','accessControl'])->group(function () {
+
+    //  Dashboard and JOb 
+    Route::get('/admin/dashboard',  [AdminDashboardController::class, 'index'] )->name('admin.dashboard');
+    Route::get('/admin/jobs',  [AdminJobController::class, 'index'] )->name('admin.jobs');
+    Route::get('/admin/jobs/edit/{id}',  [AdminJobController::class, 'edit'] )->name('admin.jobs.edit');
+    Route::post('admin/getSpeciality', [AdminJobController::class, 'getSpeciality'])->name('admin.jobs.getSpeciality');
+    Route::post('admin/job/update/{id}', [AdminJobController::class, 'project_review'])->name('admin.jobs.review');
+
+    // Catgeory 
+    Route::get('/admin/category',  [AdminJobController::class, 'category'] )->name('admin.category');
+    Route::get('/admin/category/edit/{id}',  [AdminJobController::class, 'categoryEdit'] )->name('admin.category.edit');
+    Route::get('/admin/category/add',  [AdminJobController::class, 'categoryAdd'] )->name('admin.category.add');
+    Route::post('admin/category/update', [AdminJobController::class, 'categoryUpdate'])->name('admin.category.update');
+
+
+    // SPeciality
+    Route::get('/admin/speciality',  [AdminJobController::class, 'speciality'] )->name('admin.speciality');
+    Route::get('/admin/speciality/edit/{id}',  [AdminJobController::class, 'specialityEdit'] )->name('admin.speciality.edit');
+    Route::get('/admin/speciality/add',  [AdminJobController::class, 'specialityAdd'] )->name('admin.speciality.add');
+    Route::post('admin/speciality/update', [AdminJobController::class, 'specialityUpdate'])->name('admin.speciality.update');
+
+    // Skills
+    Route::get('/admin/skills',  [AdminJobController::class, 'skills'] )->name('admin.skills');
+    Route::get('/admin/skills/edit/{id}',  [AdminJobController::class, 'skillsEdit'] )->name('admin.skills.edit');
+    Route::get('/admin/skills/add',  [AdminJobController::class, 'skillsAdd'] )->name('admin.skills.add');
+    Route::post('admin/skills/update', [AdminJobController::class, 'skillsUpdate'])->name('admin.skills.update');
+
+});
+
+
+
+// end admn
 
 Route::get('/', function () {
     return view('static.index');
@@ -40,6 +78,9 @@ Route::view('/faqs', 'static.faqs');
 
 Route::group(['middleware' => 'prevent-back-history'], function () {
     Auth::routes();
+    Route::get('/admin/login', function () {
+        return view('admin.auth.login');
+    });
 });
 
 Route::get('/email/verify', function () {
