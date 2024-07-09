@@ -88,15 +88,53 @@
 	            					</div>
 	            				</div>
 	            				<div class="Portfolio_tabs">
-									<nav>
-										<div class="nav nav-tabs" id="nav-tab" role="tablist">
-											<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Published</button>
-											<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Drafts</button>
+									<div class="">
+										<ul class="nav nav-pills mb-3 border-bottom border-2" id="pills-tab" role="tablist">
+											<li class="nav-item" role="presentation">
+												<button class="nav-link fw-semibold active position-relative" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Published</button>
+											</li>
+																				
+										</ul>
+										<div class="tab-content " id="pills-tabContent">
+											<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+												<div id="news-slider" class="owl-carousel">
+													<div class="slider_div">
+														<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
+															<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
+															<div class="btn-group position-absolute toggle_btn">
+																<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+																 	<i class="fas fa-ellipsis-h"></i>
+																</button>
+															  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+															    <li><a class="dropdown-item" href="#">Menu item</a></li>
+															    <li><a class="dropdown-item" href="#">Menu item</a></li>
+															    <li><a class="dropdown-item" href="#">Menu item</a></li>
+															  </ul>
+															</div>
+														</div>
+														<div>Corner echo</div>
+													</div>
+
+													<div class="slider_div">
+														<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
+															<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
+															<div class="btn-group position-absolute toggle_btn">
+																<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+																 	<i class="fas fa-ellipsis-h"></i>
+																</button>
+															  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+															    <li><a class="dropdown-item" href="#">Menu item</a></li>
+															    <li><a class="dropdown-item" href="#">Menu item</a></li>
+															    <li><a class="dropdown-item" href="#">Menu item</a></li>
+															  </ul>
+															</div>
+														</div>
+														<div>Corner echo</div>
+													</div>
+												</div>												
+											</div>
+																					
 										</div>
-									</nav>
-									<div class="tab-content" id="nav-tabContent">
-										<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">1</div>
-										<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2</div>
 									</div>
 	            				</div>
 	            			</div>
