@@ -154,11 +154,13 @@
                         <li>
                             @if(auth()->user())
 
-                            @if(auth()->user()->is_admin==1)
-                            <a href="{{url('/client/dashboard')}}" class="nav-liink">Dashboard</a>
-                            @else
-                            <a href="{{url('/freelancer/dashboard')}}" class="nav-liink">Dashboard</a>
-                            @endif
+                                @if(auth()->user()->is_admin==1)
+                                <a href="{{url('/client/dashboard')}}" class="nav-liink">Dashboard</a>
+                                @elseif(auth()->user()->is_admin==0)
+                                <a href="{{url('/freelancer/dashboard')}}" class="nav-liink">Dashboard</a>
+                                @else
+                                <a href="{{route('admin.dashboard')}}" class="nav-liink">Dashboard</a>
+                                @endif
                             @endif
                         </li>
                         @if(!auth()->user())
