@@ -1321,3 +1321,28 @@ jQuery(document).ready(function() {
     })
 
 });
+
+// Change text on icons hover
+$(document).ready(function() {
+      const hoverText = $('#hover-text');
+
+      const uploads = [
+        { id: '#image-upload', text: 'Upload image (up to 10MB) ' },
+        { id: '#video-upload', text: 'Link a Video (YouTube or Vimeo) or upload (up to 100MB)' },
+        { id: '#text-upload', text: 'Add Text block' },
+        { id: '#link-upload', text: 'Add a Weblink' },
+        { id: '#file-upload', text: 'Add PDF file (up to 10MB, max 5 files)' },
+        { id: '#music-upload', text: 'Add Music' },
+      ];
+
+      $.each(uploads, function(index, upload) {
+        $(upload.id).hover(
+          function() {
+            hoverText.text(upload.text);
+          },
+          function() {
+            hoverText.text('Add content');
+          }
+        );
+      });
+});

@@ -1872,6 +1872,65 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/****** myprofile *******/
+.profile_img img{
+    width: 88px;
+    height: 88px;
+}
+.custom_btn {
+    background: #00b050;
+    color: #fff !important;
+    padding: .5em 1.2em;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 3px solid #00b050;
+    transition: all ease .3s;
+}
+.custom_btn:hover{
+    background: transparent;
+    color: #00b050 !important;
+}
+.border-radius-16{
+    border-radius: 16px;
+}
+.btn_transprent {
+    border: 2px solid #00b050;
+    padding: 6px 15px;
+    display: inline-block;
+    color: #00b050;
+    transition: all ease .3s;
+}
+.btn_transprent:hover{
+    background: #00b050;
+    color: #fff;
+}
+/*form_popup*/
+.icon_color {
+    color: #00b050;
+    border: 2px solid #d9d9d9;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50px;
+}
+.gap-15{
+    gap: 15px;
+}
+.media_editors {
+    border: 2px dashed;
+    padding: 50px;
+}
+.text_green {
+    color: #00b050;
+}
+.text_green:hover{
+    color: #00b050;
+}
+
 @media (min-width: 1200px) {
     .user_dashboard .container,
     .client_job_post .container{
