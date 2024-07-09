@@ -14,18 +14,18 @@
 		            			<div>
 		            				<h2 class="font_36 mb-3 d-none d-md-block font_weight_700">{{auth()->user()->FullName}}</h2>
 		            				<div class="location">
-		            					<i class="fa fa-map-marker" aria-hidden="true"></i>	<span>Baran, India – 4:49 pm local time</span>
+		            					<i class="fa fa-map-marker" aria-hidden="true"></i>	<span>{{auth()->user()->cities->name}}, {{auth()->user()->country->name}} – {{$timezone}}</span>
 		            				</div>
 		            			</div>
 		            			<div class="profile_setting_btn">
-		            				<a href="" class="custom_btn btn_green font_weight_700 font_18">Profile settings</a>
+		            				<a href="{{route('settings')}}" class="custom_btn btn_green font_weight_700 font_18">Profile settings</a>
 		            			</div>
 	            			</div>
 	            		</div>
 	            	</div>
 	            	<div class="row p-4">
 	            		<div class="col-md-4 p-0">
-	            			<div class="profile_summary d-flex">
+	            			<!-- <div class="profile_summary d-flex">
 	            				<div class="me-3">
 	            					<div class="font_20 font_weight_700">6</div>
 	            					<div class="jobs font-14">Total jobs</div>
@@ -34,24 +34,23 @@
 	            					<div class="font_20 font_weight_700">2,303</div>
 	            					<div class="jobs font-14">Total hours</div>
 	            				</div>
-	            			</div>
+	            			</div> -->
 	            		</div>
 	            		<div class="col-md-8 p-0">
 	            			<div class="profile_description">
 	            				<div class="d-flex justify-content-between">
 	            					<div class="d-flex align-items-center">
-	            						<h3 class="font_24 font_weight_600 mb-0 me-3">Expert UI /UX Developer</h3>
+	            						<h3 class="font_24 font_weight_600 mb-0 me-3">{{auth()->user()->FreelancerProfile->title ?? '-'}}</h3>
 	            						<a href=""> <i class="fas fa-edit"></i> </a>
 	            					</div>
 	            					<div class="d-flex align-items-center">
-	            						<h4 class="font_16 font_weight_600 mb-0 me-3">Rate is private</h4>
+	            						<!-- <h4 class="font_16 font_weight_600 mb-0 me-3">Rate is private</h4> -->
 	            						<a href=""> <i class="fas fa-edit"></i> </a>
 	            					</div>
 	            				</div>
 	            				<div class="profile_description_content">
 	            					<ul>
-	            						<li>UI /UX Developer with 6 years of professional experience in Web and Mobile platforms. As an experience designer, my key responsibilities includes understanding business and user needs, brainstorming the ideas with product team, conceptualizing, prototyping and execute them successfully.</li>
-	            						<li>UI /UX Developer with 6 years of professional experience in Web and Mobile platforms. As an experience designer, my key responsibilities includes understanding business and user needs, brainstorming the ideas with product team, conceptualizing, prototyping and execute them successfully.</li>
+	            						<li>{{auth()->user()->FreelancerProfile->bio ?? '-'}}</li>
 	            					</ul>
 	            				</div>
 	            				<div class="consultations">
