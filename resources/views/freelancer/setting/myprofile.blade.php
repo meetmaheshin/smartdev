@@ -139,7 +139,7 @@
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
-		<form id="portfolio_form" data-action="{{route('myprofile.create')}}" method="POST">	
+		<form id="portfolio_form" data-action="{{route('myprofile.create')}}" method="POST" enctype= multipart/form-data>	
 			<div class="modal-body">
 			<div class="new_portfolio">
 				<div class="d-flex justify-content-between">
@@ -203,7 +203,7 @@
 											  <div class="upload__btn-box">
 											    <label class="upload__btn img_upload" id="image-upload">
 											      <p class="icon_color mb-0"><i class="far fa-image"></i></p>
-											      <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+											      <input type="file" id="filename" name="filename[]" multiple data-max_length="20" class="upload__inputfile">
 											    </label>
 											  </div>											  
 											</div>	

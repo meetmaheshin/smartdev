@@ -1418,11 +1418,22 @@ function ImgUpload() {
       $("#portfolio_form").on("submit", function (e) {
         e.preventDefault();
         var url = $(this).data('action');
+        const formID = $(this).closest("form").attr("id");
+
+        const formData = new FormData($("#" + formID)[0]);
+        let TotalFiles = $("#filename")[0].files.length; //Total files
+        let images = $("#filename")[0];
+        for (let i = 0; i < TotalFiles; i++) {
+            formData.append("filename[]", images.files[i]);
+        }
+        formData.append("TotalImages", TotalFiles);
         $.ajax({
             url: url,
             type: "POST",
-            data : $(this).serialize(),
+            data : formData,
             dataType: "json",
+            processData: false,
+            contentType: false,
             success(response) {
                 if (response.response == "true") {
                         location.href = response.url;
@@ -1474,16 +1485,40 @@ function ImgUpload() {
             fetchDetails(dataId);
         }
     });
-        $('body').on('click', '.delete_skill_portfolio',function(event){
-            event.preventDefault(); // Prevent the default link behavior
-            var skillId = $(this).parent(".posting_add_feature").attr("data-skill");
-            $('#selected_skills_sub_'+skillId).remove();
+    $('body').on('click', '.delete_skill_portfolio',function(event){
+        event.preventDefault(); // Prevent the default link behavior
+        var skillId = $(this).parent(".posting_add_feature").attr("data-skill");
+        $('#selected_skills_sub_'+skillId).remove();
+    });
+
+    $('body').on('click', '.remove_portfolio_attachment',function(event){
+
+        event.preventDefault(); // Prevent the default link behavior
+        const dataId = $(this).data('id');
+        console.log("sf",dataId);
+
+        $.ajax({
+            url: '/freelancer/portfolio/attachment/delete',
+            type: "POST",
+            data : {'id':dataId},
+            dataType: "json",
+            success(response) {
+                if (response.status == "true") {
+                    $('.uplaod_img_'+dataId).remove();
+                }
+            },
+
+            error(error) {
+            },
         });
+    });
+
 
     
 
     function fetchDetails(dataId) {
         $('.selected_skills').html('');
+        $('.upload__img-wrap').html('');
         $.ajax({
             url: '/freelancer/portfolio/getPortfolioDetails',
             type: "POST",
@@ -1518,6 +1553,19 @@ function ImgUpload() {
 
                         $(".selected_skills").append(html);
                     });
+
+
+                    $.each(response.data.detail.attachment, function (key, value) {
+                        var path = 'img/uploads';
+                        var html =
+                        '<div class="upload__img-box uplaod_img_'+value.id+'">\
+                            <img class="img-bg" src="/'+value.filename+'" alt="image">\
+                        <a href="javascript::void(0)" class="remove_portfolio_attachment" data-id="'+value.id+'">\
+                            <i class="fa fa-times" aria-hidden="true"></i>\
+                        </a>\
+                        </div>';
+                        $(".upload__img-wrap").append(html);
+                    });
                     
 
 
@@ -1531,4 +1579,5 @@ function ImgUpload() {
         });
     }
 
+   
 });

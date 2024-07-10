@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Portfolio;
 use App\Models\PortfolioSkill;
+use App\Models\PortfolioAttachment;
+use Illuminate\Support\Facades\Storage;
+
 use App\Models\Skill;
 use Carbon\Carbon;
 
@@ -38,7 +41,7 @@ class PortfolioController extends Controller
                 'skill_id' => 'required',
                 'title' => 'required|min:3|max:100',
                 'description' => 'required',
-                'filename.*' => 'mimes:jpg,png,jpeg,JPEG,JPG,PNG|max:5000'
+                'filename.*' => 'mimes:jpg,png,jpeg,JPEG,JPG,PNG'
             ]
         );
         $portfolio = Portfolio::updateOrCreate([
@@ -58,6 +61,28 @@ class PortfolioController extends Controller
             }
             PortfolioSkill::insert($skillData);
         }
+        if ($request->hasFile('filename')) {
+            $allowedfileExtension = ['jpg', 'png', 'jpeg', 'JPEG', "PNG", 'JPG'];
+            $files = $request->file('filename');
+            $new_picture_array = [];
+            if ($request->TotalImages > 0) {
+                foreach ($files as $file) {
+                    $filename = $file->getClientOriginalName();
+                    $extension = $file->getClientOriginalExtension();
+                    $check = in_array($extension, $allowedfileExtension);
+                    if ($check) {
+
+                        $path = $file->store('/storage/portfolio', ['disk' =>   'my_files']);
+                        $new_picture_array[] = array('portfolio_id' => $portfolio->id, 'filename' => $path, 'type' => 'image');
+                    } else {
+                        return response()->json(['response' => 'false', 'errors' => 'Sorry Only Upload png , jpg,jpeg , doc']);
+                    }
+                }
+                PortfolioAttachment::insert($new_picture_array);
+            }
+        }
+
+
         return response()->json(['response' => 'true', 'url' => route('myprofile')]);
 
     }
@@ -102,6 +127,16 @@ class PortfolioController extends Controller
         $data['detail'] = $this->portfolio->portfolioRow(auth()->user()->id,$request->id);
         return response()->json(['response' => 'true', 'data' => $data]);
 
+    }
+
+    // delete Image
+    public function deleteAttachment(Request $request)
+    {
+        $avatar = PortfolioAttachment::findOrFail($request->id);
+        if (Storage::disk('my_files')->delete($avatar->filename)) {
+            $avatar->delete();
+        }
+        return response()->json(['status' => 'true']);
     }
 
 
