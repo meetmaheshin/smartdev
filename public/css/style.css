@@ -1980,12 +1980,13 @@ body {
 .upload__img-wrap {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  gap: 16px;
+  margin-top: 20px;
 }
 .upload__img-box {
   width: 200px;
-  padding: 0 10px;
-  margin-bottom: 12px;
+  height: 140px;
+  position: relative;
 }
 .upload__img-close {
   width: 24px;
@@ -2011,6 +2012,8 @@ body {
   background-size: cover;
   position: relative;
   width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .new-class {
@@ -2021,6 +2024,21 @@ body {
 }
 .text_gray{
     color: #676767;
+}
+a.remove_portfolio_attachment {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: #00b050;
+}
+.add_description_poppu {
+    right: 0;
+    top: 0;
 }
 
 

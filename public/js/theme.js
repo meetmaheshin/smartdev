@@ -1579,7 +1579,7 @@ function ImgUpload() {
                         var html =
                         '<div class="upload__img-box uplaod_img_'+value.id+'">\
                             <img class="img-bg" src="/'+value.filename+'" alt="image">\
-                        <a href="javascript::void(0)" class="remove_portfolio_attachment" data-id="'+value.id+'">\
+                        <a href="javascript::void(0)" class="remove_portfolio_attachment img_ellipsis" data-id="'+value.id+'">\
                             <i class="fa fa-times" aria-hidden="true"></i>\
                         </a>\
                         </div>';
@@ -1601,8 +1601,16 @@ function ImgUpload() {
    
 });
 
-
+// tooltip
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
+});
+
+// slick slider
+$('.slick-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
