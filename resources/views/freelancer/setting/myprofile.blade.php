@@ -311,24 +311,27 @@
 <!-- Add Description -->
 <div class="modal fade" id="add_description" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="d-flex justify-content-between">
-        	<div><h3 class="font_24 font_weight_700"> Profile overview </h3> </div>
-        	<div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        </div>
-        <div class="">        	
-				  <div class="">
-				    <label for="Profile_overview" class="form-label font_weight_700">Profile overview</label>
-				    <textarea class="form-control" placeholder="Add Profile overview" id="Profile_overview" style="height: 100px"></textarea>
-				  </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
-        <button type="button" class="custom_btn">Save changes</button>
-      </div>
-    </div>
+  <form id="profile_description" data-action="{{route('myprofile.description')}}" action="{{route('myprofile.description')}}" method="POST">	
+	@csrf
+		<div class="modal-content">
+		<div class="modal-body">
+			<div class="d-flex justify-content-between">
+				<div><h3 class="font_24 font_weight_700"> Profile overview </h3> </div>
+				<div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+			</div>
+			<div class="">        	
+					<div class="">
+						<label for="description" class="form-label font_weight_700">Profile overview</label>
+						<textarea class="form-control" name="description" placeholder="Add Profile overview" id="description" style="height: 100px">{{auth()->user()->FreelancerProfile->bio ?? '-'}}</textarea>
+					</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+			<button type="submit" class="custom_btn">Save changes</button>
+		</div>
+		</div>
+	</form>
   </div>
 </div>
 
