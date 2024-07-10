@@ -61,6 +61,14 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
     Route::get('/admin/skills/edit/{id}',  [AdminJobController::class, 'skillsEdit'] )->name('admin.skills.edit');
     Route::get('/admin/skills/add',  [AdminJobController::class, 'skillsAdd'] )->name('admin.skills.add');
     Route::post('admin/skills/update', [AdminJobController::class, 'skillsUpdate'])->name('admin.skills.update');
+    Route::post('/admin/skills/delete', [AdminJobController::class, 'skillsDelete'])->name('admin.skills.delete');
+
+    // Users
+    Route::get('/admin/user',  [AdminJobController::class, 'user'] )->name('admin.user');
+    Route::get('/admin/user/edit/{id}',  [AdminJobController::class, 'userEdit'] )->name('admin.user.edit');
+    Route::get('/admin/user/add',  [AdminJobController::class, 'userAdd'] )->name('admin.user.add');
+    Route::post('admin/user/update', [AdminJobController::class, 'userUpdate'])->name('admin.user.update');
+    Route::post('/admin/user/delete', [AdminJobController::class, 'userDelete'])->name('admin.user.delete');
 
 });
 

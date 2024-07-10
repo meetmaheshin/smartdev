@@ -27,6 +27,8 @@
 	<link rel="stylesheet" href="{{url('assets/vendor/css/dark-theme.css')}}" />
 	<link rel="stylesheet" href="{{url('assets/vendor/css/semi-dark.css')}}" />
 	<link rel="stylesheet" href="{{url('assets/vendor/css/header-colors.css')}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset('css/sweetalert2.min.css')}}">
+
 	<title>SmartDev3</title>
 </head>
 

@@ -16,8 +16,8 @@ class DashboardController extends Controller
 
   public function index(Request $request){
     $data['project']=Project::where('job','new')->count();
-    $data['client']=User::where('status',1)->where('is_admin',1)->count();
-    $data['freelancer']=User::where('status',1)->where('is_admin',0)->count();
+    $data['client']=User::where('status',1)->where('is_admin','1')->count();
+    $data['freelancer']=User::where('status',1)->where('is_admin','0')->count();
 
     return view('admin.dashboard',$data);
     

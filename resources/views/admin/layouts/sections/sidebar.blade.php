@@ -8,6 +8,14 @@
         
     </li>
     <li>
+        <a href="{{route('admin.user')}}" >
+            <div class="parent-icon"><i class='bx bx-user'></i>
+            </div>
+            <div class="menu-title">Users</div>
+        </a>
+        
+    </li>
+    <li>
         <a href="{{route('admin.category')}}" >
             <div class="parent-icon"><i class='bx bx-category'></i>
             </div>
