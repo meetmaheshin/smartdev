@@ -25,6 +25,10 @@ class PortfolioController extends Controller
         $data['detail'] = $this->portfolio->portfolioData(auth()->user()->id);
         $data['all'] = [];
 
+    
+
+
+
         return view('freelancer.setting.myprofile',$data);
     }
 
@@ -92,6 +96,12 @@ class PortfolioController extends Controller
             // return output result array
             return $output;
         }
+    }
+
+    public function getPortfolioDetails(Request $request){
+        $data['detail'] = $this->portfolio->portfolioRow(auth()->user()->id,$request->id);
+        return response()->json(['response' => 'true', 'data' => $data]);
+
     }
 
 

@@ -835,9 +835,7 @@ jQuery(document).ready(function () {
         $(searchId).each(function () {
             selectedId.push($(this).val());
         });
-        $(searchId).each(function () {
-            selectedId.push($(this).val());
-        });
+     
         var mainval = $("#skill_subcat_" + skillSubId).attr("data-skill");
 
         if (
@@ -911,7 +909,6 @@ jQuery(document).ready(function () {
         $(searchTest).each(function () {
             selectedTest.push($(this).text());
         });
-        console.log("selectedTest",selectedTest);
         $.ajax({
             url: "/freelancer/portfolio/autocomplete",
             type: "GET",
@@ -1357,33 +1354,32 @@ jQuery(document).ready(function() {
 
 // Change text on icons hover
 $(document).ready(function() {
-      const hoverText = $('#hover-text');
+    const hoverText = $('#hover-text');
 
-      const uploads = [
-        { id: '#image-upload', text: 'Upload image (up to 10MB) ' },
-        { id: '#video-upload', text: 'Link a Video (YouTube or Vimeo) or upload (up to 100MB)' },
-        { id: '#text-upload', text: 'Add Text block' },
-        { id: '#link-upload', text: 'Add a Weblink' },
-        { id: '#file-upload', text: 'Add PDF file (up to 10MB, max 5 files)' },
-        { id: '#music-upload', text: 'Add Music' },
-      ];
+    const uploads = [
+    { id: '#image-upload', text: 'Upload image (up to 10MB) ' },
+    { id: '#video-upload', text: 'Link a Video (YouTube or Vimeo) or upload (up to 100MB)' },
+    { id: '#text-upload', text: 'Add Text block' },
+    { id: '#link-upload', text: 'Add a Weblink' },
+    { id: '#file-upload', text: 'Add PDF file (up to 10MB, max 5 files)' },
+    { id: '#music-upload', text: 'Add Music' },
+    ];
 
-      $.each(uploads, function(index, upload) {
-        $(upload.id).hover(
-          function() {
-            hoverText.text(upload.text);
-          },
-          function() {
-            hoverText.text('Add content');
-          }
-        );
-      });
+    $.each(uploads, function(index, upload) {
+    $(upload.id).hover(
+        function() {
+        hoverText.text(upload.text);
+        },
+        function() {
+        hoverText.text('Add content');
+        }
+    );
+    });
   
 
       $("#portfolio_form").on("submit", function (e) {
         e.preventDefault();
         var url = $(this).data('action');
-        console.log(url);
         $.ajax({
             url: url,
             type: "POST",
@@ -1432,4 +1428,69 @@ $(document).ready(function() {
     $("#imageUpload").change(function() {
         readURL(this);
     });
+
+    $('.edit-portfolio').on('click',function(event){
+        event.preventDefault(); // Prevent the default link behavior
+        const dataId = $(this).data('id');
+        if (dataId) {
+            fetchDetails(dataId);
+        }
+    });
+        $('body').on('click', '.delete_skill_portfolio',function(event){
+            event.preventDefault(); // Prevent the default link behavior
+            var skillId = $(this).parent(".posting_add_feature").attr("data-skill");
+            $('#selected_skills_sub_'+skillId).remove();
+        });
+
+    
+
+    function fetchDetails(dataId) {
+        $('.selected_skills').html('');
+        $.ajax({
+            url: '/freelancer/portfolio/getPortfolioDetails',
+            type: "POST",
+            data : {'id':dataId},
+            dataType: "json",
+            success(response) {
+                if (response.response == "true") {
+                    console.log(response.data);
+                    $('#portfolio_id').val(response.data.detail.id)
+                    $('#title').val(response.data.detail.title);
+                    $('#role').val(response.data.detail.role);
+                    $('#description').text(response.data.detail.description);
+                    $('#title').val(response.data.detail.title);
+                    $.each(response.data.detail.portfolio_skill, function (key, value) {
+                        var html =
+                        '<div id="selected_skills_sub_' +
+                        value.skills_id +
+                        '"><input type="hidden" name="skill_id[]" id="' +
+                        value.skills_id +
+                        '" value="' +
+                        value.skills_id +
+                        '"><span data-skill="' +
+                        value.skills_id +
+                        '" class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub"  data-cy="' +
+                        value.skill.title +
+                        '"  data-id ="' +
+                        value.id +
+                        '">' +
+                        value.skill.title +
+                        '\
+                        <i class=" fas fa-solid fa-times delete_skill_portfolio"></i></span></div>';
+
+                        $(".selected_skills").append(html);
+                    });
+                    
+
+
+
+                } else {
+                }
+            },
+
+            error(error) {
+            },
+        });
+    }
+
 });

@@ -98,39 +98,25 @@
 										<div class="tab-content " id="pills-tabContent">
 											<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 												<div id="news-slider" class="owl-carousel">
-													<div class="slider_div">
-														<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
-															<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
-															<div class="btn-group position-absolute toggle_btn">
-																<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-																 	<i class="fas fa-ellipsis-h"></i>
-																</button>
-															  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															  </ul>
+													@if(count($detail)>0)
+														@foreach($detail as $details)
+															<div class="slider_div">
+																<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
+																	<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
+																	<div class="btn-group position-absolute toggle_btn">
+																		<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+																			<i class="fas fa-ellipsis-h"></i>
+																		</button>
+																	<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+																		<li><a class="dropdown-item edit-portfolio" role="button" data-id="{{$details->id}}" data-bs-toggle="modal" href="#exampleModalToggle">Edit item</a></li>
+																	</ul>
+																	</div>
+																</div>
+																<div>{{$details->title}}</div>
 															</div>
-														</div>
-														<div>Corner echo</div>
-													</div>
-
-													<div class="slider_div">
-														<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
-															<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
-															<div class="btn-group position-absolute toggle_btn">
-																<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-																 	<i class="fas fa-ellipsis-h"></i>
-																</button>
-															  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															  </ul>
-															</div>
-														</div>
-														<div>Corner echo</div>
-													</div>
+														@endforeach
+													@else
+													@endif
 												</div>												
 											</div>
 																					
