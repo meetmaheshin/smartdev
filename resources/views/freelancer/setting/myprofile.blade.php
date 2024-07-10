@@ -51,8 +51,13 @@
 	            					</div>
 
 	            				</div>
-	            				<div class="profile_description_content">	            					
-	            						<p class="mb-0">{{auth()->user()->FreelancerProfile->bio ?? '-'}}</p>	            					
+	            				<div class="profile_description_content position-relative">	            					
+	            						<p class="mb-0">{{auth()->user()->FreelancerProfile->bio ?? '-'}}</p>	
+	            						<div class="position-absolute add_description_poppu">
+	            							<a class="icon_color font_12" data-bs-toggle="modal" data-bs-target="#add_description">
+		            							<i class="fas fa-pencil-alt"></i> 
+		            						</a>
+	            						</div>            					
 	            				</div>
 	            				<!-- <div class="consultations">
 	            					<h2 class="font_20 font_weight_600">Consultations</h2>
@@ -98,7 +103,7 @@
 										</ul>
 										<div class="tab-content " id="pills-tabContent">
 											<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-												<div id="news-slider" class="owl-carousel d-flex justify-content-between flex-wrap">
+												<div id="news-slider" class="owl-carousel d-flex justify-content-between flex-wrap slick-slider">
 													@if(count($detail)>0)
 														@foreach($detail as $details)
 															<div class="slider_div mb-4">
@@ -139,12 +144,14 @@
 </section>
 
 
+
+
 <!-- add new portfolio project -->
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
 		<form id="portfolio_form" data-action="{{route('myprofile.create')}}" method="POST" enctype= multipart/form-data>	
-			<div class="modal-body">
+			<div class="modal-body p-4">
 			<div class="new_portfolio">
 				<div class="d-flex justify-content-between mb-5">
 					<div>
@@ -200,7 +207,7 @@
 								@endif
 							</div>
 					  	</div>
-					  	<div class="col-md-8 mt-4">
+					  	<div class="col-md-8 ps-4" style="margin-top: 32px;">
 					  		<div class="media_editors border-radius-16" id="imagePreview" >
 					  			<div class="Media_icons upload__box">
 										<div class="d-flex align-items-center justify-content-center gap-15">
@@ -296,6 +303,29 @@
   </div>
 </div>
 
+<!-- Add Description -->
+<div class="modal fade" id="add_description" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+        	<div><h3 class="font_24 font_weight_700"> Profile overview </h3> </div>
+        	<div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        </div>
+        <div class="">        	
+				  <div class="">
+				    <label for="Profile_overview" class="form-label font_weight_700">Profile overview</label>
+				    <textarea class="form-control" placeholder="Add Profile overview" id="Profile_overview" style="height: 100px"></textarea>
+				  </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+        <button type="button" class="custom_btn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
