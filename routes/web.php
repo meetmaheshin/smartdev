@@ -234,6 +234,9 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
             Route::controller(PortfolioController::class)->group(function () {
                 Route::get('/settings/myprofile','index')->name('myprofile');
                 Route::post('/settings/myprofile/create','create')->name('myprofile.create');
+                Route::get('/portfolio/autocomplete', 'autocomplete')->name('portfolio.autocomplete');
+                Route::post('/portfolio/getPortfolioDetails', 'getPortfolioDetails')->name('portfolio.getPortfolioDetails');
+
 
             });
         });

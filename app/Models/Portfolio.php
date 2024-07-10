@@ -26,7 +26,11 @@ class Portfolio extends Model
 
 
     public function portfolioData($userId){
-        return  $this->where('user_id',$userId)->with(['user','attachment','portfolioSkill'])->first();
+        return  $this->where('user_id',$userId)->with(['user','attachment','portfolioSkill.skill'])->get();
+    }
+
+    public function portfolioRow($userId,$portfolioId){
+        return $this->where('user_id',$userId)->where('id',$portfolioId)->with(['user','attachment','portfolioSkill.skill'])->first();
 
     }
 }

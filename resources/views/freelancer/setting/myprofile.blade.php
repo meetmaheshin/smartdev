@@ -7,7 +7,7 @@
             	<div class="border border-radius-16">
 	            	<div class="d-flex w-100 p-4 border-bottom">
 	            		<div class="profile_img me-3">
-	            			<img class="rounded-circle" src="{{url('images/chat_avatar_01.jpg')}}">
+	            			<img class="rounded-circle" src="{{ auth()->user()->profile_photo_path ? asset('/storage/images/client_profile/'.auth()->user()->profile_photo_path):  asset('images/user_default.jpeg') }}">
 	            		</div>
 	            		<div class="profile_details w-100">
 	            			<div class="d-flex justify-content-between">
@@ -53,7 +53,7 @@
 	            						<li>{{auth()->user()->FreelancerProfile->bio ?? '-'}}</li>
 	            					</ul>
 	            				</div>
-	            				<div class="consultations">
+	            				<!-- <div class="consultations">
 	            					<h2 class="font_20 font_weight_600">Consultations</h2>
 	            					<div class="border p-4 border-radius-16 d-flex">
 	            						<div class="col-md-8">
@@ -69,7 +69,7 @@
 	            							<img class="rounded-circle" src="{{url('images/chat_avatar_01.jpg')}}">
 	            						</div>
 	            					</div>
-	            				</div>
+	            				</div> -->
 	            			</div>
 	            			<div class="portfolio_section">
 	            				<div class="d-flex align-items-center justify-content-between">
@@ -80,11 +80,11 @@
 	            								<i class="fas fa-plus"></i>
 	            							</a>
 	            						</div>
-	            						<div class="short_data">
+	            						<!-- <div class="short_data">
 	            							<a href="" class="icon_color">
 		            							<i class="fas fa-sort-alpha-up-alt"></i>
 		            						</a>
-	            						</div>
+	            						</div> -->
 	            					</div>
 	            				</div>
 	            				<div class="Portfolio_tabs">
@@ -98,39 +98,25 @@
 										<div class="tab-content " id="pills-tabContent">
 											<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 												<div id="news-slider" class="owl-carousel">
-													<div class="slider_div">
-														<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
-															<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
-															<div class="btn-group position-absolute toggle_btn">
-																<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-																 	<i class="fas fa-ellipsis-h"></i>
-																</button>
-															  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															  </ul>
+													@if(count($detail)>0)
+														@foreach($detail as $details)
+															<div class="slider_div">
+																<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
+																	<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
+																	<div class="btn-group position-absolute toggle_btn">
+																		<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+																			<i class="fas fa-ellipsis-h"></i>
+																		</button>
+																	<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+																		<li><a class="dropdown-item edit-portfolio" role="button" data-id="{{$details->id}}" data-bs-toggle="modal" href="#exampleModalToggle">Edit item</a></li>
+																	</ul>
+																	</div>
+																</div>
+																<div>{{$details->title}}</div>
 															</div>
-														</div>
-														<div>Corner echo</div>
-													</div>
-
-													<div class="slider_div">
-														<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
-															<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
-															<div class="btn-group position-absolute toggle_btn">
-																<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-																 	<i class="fas fa-ellipsis-h"></i>
-																</button>
-															  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															    <li><a class="dropdown-item" href="#">Menu item</a></li>
-															  </ul>
-															</div>
-														</div>
-														<div>Corner echo</div>
-													</div>
+														@endforeach
+													@else
+													@endif
 												</div>												
 											</div>
 																					
@@ -153,7 +139,7 @@
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
-	    <form>
+		<form id="portfolio_form" data-action="{{route('myprofile.create')}}" method="POST">	
 			<div class="modal-body">
 			<div class="new_portfolio">
 				<div class="d-flex justify-content-between">
@@ -165,30 +151,48 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 				</div>
-				<div class="new_portfolio_form">			
+				<input type="hidden" name="portfolio_id" id="portfolio_id" value=""/>
+				<div class="new_portfolio_form">
 					<div class="mb-3">
-						<label for="exampleInputEmail1" class="form-label">Project title</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter a brief but descriptive title">
-						<div class="text-end" >70 characters left</div>
+						<label for="title" class="form-label">Project title</label>
+						<input type="text" class="form-control" id="title" name="title" placeholder="Enter a brief but descriptive title">
+						<div class="text-danger error" data-error="title"></div>
+
 					</div>
 					<div class="d-flex">
-					  	<div class="col-md-4">
-					  		<div class="mb-3">
-								<label for="exampleInputEmail1" class="form-label">Your role (optional)</label>
-								<textarea type="text" class="form-control" id="exampleInputEmail1" placeholder="e.g., Front-end engineer or Marketing analyst"></textarea>
-								<div class="text-end" >100 characters left</div>
+						<div class="col-md-4">
+							<div class="mb-3">
+								<label for="role" class="form-label">Your role (optional)</label>
+								<textarea type="text" class="form-control" id="role" name="role" placeholder="e.g., Front-end engineer or Marketing analyst"></textarea>
+								<div class="text-danger error" data-error="role"></div>
+
 							</div>
 							<div class="mb-3">
-								<label for="exampleInputEmail1" class="form-label">Project description</label>
-								<textarea type="text" class="form-control" id="exampleInputEmail1" placeholder="Briefly describe the project's goals, your solution and the impact you made here"></textarea>						
+								<label for="description" class="form-label">Project description</label>
+								<textarea type="text" class="form-control" id="description" name="description" placeholder="Briefly describe the project's goals, your solution and the impact you made here"></textarea>						
+								<div class="text-danger error" data-error="description"></div>
+
 							</div>
-							<div class="mb-3">
+							<div class="mb-3 posting_seach_item">
 								<label for="exampleInputEmail1" class="form-label">Skills and deliverables</label>
-								<textarea type="text" class="form-control" id="exampleInputEmail1" placeholder="Type to add skills relevant to this project"></textarea>
+								<input class="form-control me-2 search typeahead" name="search_portfolio" id="search_portfolio" type="text">
+								<i class="fa fa-search position-absolute" aria-hidden="true"></i>
+								<div id="skill_list"></div>
+								<div class="text-danger error" data-error="skill_id"></div>
+
 							</div>
-							<div class="mb-3">
-								<label for="exampleInputEmail1" class="form-label">Related Upwork job (optional)</label>
-								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Search a related job">
+							<div class="selected_skills d-flex flex-wrap">
+								@if (count($all) > 0)
+								@foreach ($all as $projectSkills)
+								<div id="selected_skills_sub_{{ $projectSkills['skill_id'] }}">
+									<input type="hidden" name="skill_id[]" id="{{ $projectSkills['skill_id'] }}" value="{{ $projectSkills['skill_id'] }}">
+									<span data-skill="{{ $projectSkills['parent_id'] }}" class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub" data-cy="{{ $projectSkills['skill_name'] }}" data-id="{{ $projectSkills['skill_id'] }}">
+										{{ $projectSkills['skill_name'] }}
+										<i class=" fas fa-solid fa-times"></i>
+									</span>
+								</div>
+								@endforeach
+								@endif
 							</div>
 					  	</div>
 					  	<div class="col-md-8">
@@ -215,13 +219,13 @@
 									</div>
 								</div>
 					  	</div>
+
 					</div>
 				</div>
 			</div>
 			</div>
 			<div class="modal-footer">
-			<button class="btn ">Save as draft</button>
-			<button class="custom_btn">Next: Preview </button>
+				<button class="custom_btn" type="submit">Update</button>
 			</div>
 	  	</form>
     </div>
