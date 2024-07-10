@@ -1921,7 +1921,7 @@ body {
     gap: 15px;
 }
 .media_editors {
-    border: 2px dashed;
+    border: 1px dashed #00b050;
     padding: 50px;
 }
 .text_green {
@@ -2010,7 +2010,7 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
-  padding-bottom: 100%;
+  width: 100%;
 }
 
 .new-class {
@@ -2022,7 +2022,6 @@ body {
 .text_gray{
     color: #676767;
 }
-
 
 
 @media (min-width: 1200px) {

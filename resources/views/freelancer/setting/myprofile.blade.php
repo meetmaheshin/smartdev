@@ -47,13 +47,12 @@
 	            					</div>
 	            					<div class="d-flex align-items-center">
 	            						<h4 class="font_16 font_weight_600 mb-0 me-3">$18.00</h4>
-	            						<a href="" class="icon_color font_12"> <i class="fas fa-pencil-alt"></i> </a>
+	            						<a class="icon_color font_12" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy link to clipboard"> <i class="fas fa-link"></i> </a>
 	            					</div>
+
 	            				</div>
-	            				<div class="profile_description_content">
-	            					
-	            						<p class="mb-0">{{auth()->user()->FreelancerProfile->bio ?? '-'}}</p>
-	            					
+	            				<div class="profile_description_content">	            					
+	            						<p class="mb-0">{{auth()->user()->FreelancerProfile->bio ?? '-'}}</p>	            					
 	            				</div>
 	            				<!-- <div class="consultations">
 	            					<h2 class="font_20 font_weight_600">Consultations</h2>
@@ -74,7 +73,7 @@
 	            				</div> -->
 	            			</div>
 	            			<div class="portfolio_section">
-	            				<div class="d-flex align-items-center justify-content-between">
+	            				<div class="d-flex align-items-center justify-content-between mb-4">
 	            					<div class="font_24 font_weight_600">Portfolio</div>
 	            					<div class="d-flex">
 	            						<div class="add_portfolio me-2">
@@ -149,10 +148,10 @@
 		<form id="portfolio_form" data-action="{{route('myprofile.create')}}" method="POST" enctype= multipart/form-data>	
 			<div class="modal-body">
 			<div class="new_portfolio">
-				<div class="d-flex justify-content-between">
+				<div class="d-flex justify-content-between mb-5">
 					<div>
-						<h2> Add a new portfolio project </h2>
-						<p>All fields are required unless otherwise indicated.</p>
+						<h2 class="font_24 font_weight_700"> Add a new portfolio project </h2>
+						<p class="mb-0">All fields are required unless otherwise indicated.</p>
 					</div>
 					<div>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -160,30 +159,31 @@
 				</div>
 				<input type="hidden" name="portfolio_id" id="portfolio_id" value=""/>
 				<div class="new_portfolio_form">
-					<div class="mb-3">
-						<label for="title" class="form-label">Project title</label>
+					<div class="mb-5">
+						<label for="title" class="form-label font_weight_600 font_16">Project title</label>
 						<input type="text" class="form-control" id="title" name="title" placeholder="Enter a brief but descriptive title">
 						<div class="text-danger error" data-error="title"></div>
-
 					</div>
 					<div class="d-flex">
 						<div class="col-md-4">
 							<div class="mb-3">
-								<label for="role" class="form-label">Your role (optional)</label>
+								<label for="role" class="form-label font_weight_600 font_16">Your role (optional)</label>
 								<textarea type="text" class="form-control" id="role" name="role" placeholder="e.g., Front-end engineer or Marketing analyst"></textarea>
 								<div class="text-danger error" data-error="role"></div>
 
 							</div>
 							<div class="mb-3">
-								<label for="description" class="form-label">Project description</label>
+								<label for="description" class="form-label font_weight_600 font_16">Project description</label>
 								<textarea type="text" class="form-control" id="description" name="description" placeholder="Briefly describe the project's goals, your solution and the impact you made here"></textarea>						
 								<div class="text-danger error" data-error="description"></div>
 
 							</div>
 							<div class="mb-3 posting_seach_item">
-								<label for="exampleInputEmail1" class="form-label">Skills and deliverables</label>
-								<input class="form-control me-2 search typeahead" name="search_portfolio" id="search_portfolio" type="text">
-								<i class="fa fa-search position-absolute" aria-hidden="true"></i>
+								<label for="exampleInputEmail1" class="form-label font_weight_600 font_16">Skills and deliverables</label>
+								<div class="position-relative">
+									<input class="form-control me-2 search typeahead" name="search_portfolio" id="search_portfolio" type="text">
+									<i class="fa fa-search position-absolute" aria-hidden="true"></i>
+								</div>
 								<div id="skill_list"></div>
 								<div class="text-danger error" data-error="skill_id"></div>
 
@@ -202,8 +202,8 @@
 								@endif
 							</div>
 					  	</div>
-					  	<div class="col-md-8">
-					  		<div class="media_editors" id="imagePreview" >
+					  	<div class="col-md-8 mt-4">
+					  		<div class="media_editors border-radius-16" id="imagePreview" >
 					  			<div class="Media_icons upload__box">
 										<div class="d-flex align-items-center justify-content-center gap-15">
 											<div class="">
