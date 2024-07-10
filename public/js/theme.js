@@ -1354,28 +1354,66 @@ jQuery(document).ready(function() {
 
 // Change text on icons hover
 $(document).ready(function() {
-    const hoverText = $('#hover-text');
+    // Change text on icons hover
+$(document).ready(function() {
+      const hoverText = $('#hover-text');
 
-    const uploads = [
-    { id: '#image-upload', text: 'Upload image (up to 10MB) ' },
-    { id: '#video-upload', text: 'Link a Video (YouTube or Vimeo) or upload (up to 100MB)' },
-    { id: '#text-upload', text: 'Add Text block' },
-    { id: '#link-upload', text: 'Add a Weblink' },
-    { id: '#file-upload', text: 'Add PDF file (up to 10MB, max 5 files)' },
-    { id: '#music-upload', text: 'Add Music' },
-    ];
+      const uploads = [
+        { id: '#image-upload', text: 'Upload image (up to 10MB) ' },
+        { id: '#link-upload', text: 'Add a Weblink' },
+      ];
 
-    $.each(uploads, function(index, upload) {
-    $(upload.id).hover(
-        function() {
-        hoverText.text(upload.text);
-        },
-        function() {
-        hoverText.text('Add content');
+      $.each(uploads, function(index, upload) {
+        $(upload.id).hover(
+          function() {
+            hoverText.text(upload.text);
+          },
+          function() {
+            hoverText.text('Add content');
+          }
+        );
+      });
+});
+
+// multiple image upload on Portfolio
+jQuery(document).ready(function () {
+  ImgUpload();
+});
+
+function ImgUpload() {
+  var imgArray = [];
+
+  $('.upload__inputfile').each(function () {
+    $(this).on('change', function (e) {
+      var imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
+      var maxLength = $(this).attr('data-max_length');
+      var files = Array.prototype.slice.call(e.target.files);
+
+      files.forEach(function (f) {
+        if (!f.type.match('image.*') || imgArray.length >= maxLength) return;
+
+        var len = imgArray.filter(function (img) { return img !== undefined; }).length;
+        if (len >= maxLength) return;
+
+        imgArray.push(f);
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var html = "<div class='upload__img-box'><div style='background-image: url(" + e.target.result + ")' data-number='" + $(".upload__img-close").length + "' data-file='" + f.name + "' class='img-bg'><div class='upload__img-close'></div></div></div>";
+          imgWrap.append(html);
         }
-    );
+        reader.readAsDataURL(f);
+      });
     });
-  
+  });
+
+  $('body').on('click', ".upload__img-close", function () {
+    var file = $(this).parent().data("file");
+    imgArray = imgArray.filter(function (img) { return img.name !== file; });
+    $(this).parent().parent().remove();
+  });
+}
+
 
       $("#portfolio_form").on("submit", function (e) {
         e.preventDefault();
