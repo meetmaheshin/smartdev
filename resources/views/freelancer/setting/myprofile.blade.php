@@ -7,7 +7,7 @@
             	<div class="border border-radius-16">
 	            	<div class="d-flex w-100 p-4 border-bottom">
 	            		<div class="profile_img me-3">
-	            			<img class="rounded-circle" src="{{url('images/chat_avatar_01.jpg')}}">
+	            			<img class="rounded-circle" src="{{ auth()->user()->profile_photo_path ? asset('/storage/images/client_profile/'.auth()->user()->profile_photo_path):  asset('images/user_default.jpeg') }}">
 	            		</div>
 	            		<div class="profile_details w-100">
 	            			<div class="d-flex justify-content-between">
@@ -53,7 +53,7 @@
 	            						<li>{{auth()->user()->FreelancerProfile->bio ?? '-'}}</li>
 	            					</ul>
 	            				</div>
-	            				<div class="consultations">
+	            				<!-- <div class="consultations">
 	            					<h2 class="font_20 font_weight_600">Consultations</h2>
 	            					<div class="border p-4 border-radius-16 d-flex">
 	            						<div class="col-md-8">
@@ -69,7 +69,7 @@
 	            							<img class="rounded-circle" src="{{url('images/chat_avatar_01.jpg')}}">
 	            						</div>
 	            					</div>
-	            				</div>
+	            				</div> -->
 	            			</div>
 	            			<div class="portfolio_section">
 	            				<div class="d-flex align-items-center justify-content-between">
@@ -80,11 +80,11 @@
 	            								<i class="fas fa-plus"></i>
 	            							</a>
 	            						</div>
-	            						<div class="short_data">
+	            						<!-- <div class="short_data">
 	            							<a href="" class="icon_color">
 		            							<i class="fas fa-sort-alpha-up-alt"></i>
 		            						</a>
-	            						</div>
+	            						</div> -->
 	            					</div>
 	            				</div>
 	            				<div class="Portfolio_tabs">
