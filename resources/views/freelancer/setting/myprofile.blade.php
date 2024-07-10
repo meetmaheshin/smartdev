@@ -192,38 +192,26 @@
 							</div>
 					  	</div>
 					  	<div class="col-md-8">
-					  		<div class="media_editors" id="imagePreview" style="background-image: ;">
-					  			<div class="Media_icons">
-										<div class="d-flex align-items-center justify-content-center gap-15">									
-		  
-									    <div class="avatar-upload">
-									        <div class="avatar-edit">
-									            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-									            <div class="img_upload" id="image-upload">
-																<label class="icon_color" for="imageUpload"><i class="far fa-image"></i></label>
-															</div>            
-									        </div>       
-									    </div>
-
-											<div class="img_upload" id="video-upload">
-												<a href="#" class="icon_color"><i class="fas fa-video"></i></a>
-											</div>
-											<div class="img_upload" id="text-upload">
-												<a href="#" class="icon_color"><i class="fas fa-text-width"></i></a>
-											</div>
+					  		<div class="media_editors" id="imagePreview" >
+					  			<div class="Media_icons upload__box">
+										<div class="d-flex align-items-center justify-content-center gap-15">
+											<div class="">
+											  <div class="upload__btn-box">
+											    <label class="upload__btn img_upload" id="image-upload">
+											      <p class="icon_color mb-0"><i class="far fa-image"></i></p>
+											      <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+											    </label>
+											  </div>											  
+											</div>	
+																					
 											<div class="img_upload" id="link-upload">
 												<a href="#" class="icon_color" data-bs-toggle="modal" data-bs-target="#web_link"><i class="fas fa-link"></i></a>
-											</div>
-											<div class="img_upload" id="file-upload">
-												<a href="#" class="icon_color"><i class="far fa-file"></i></a>
-											</div>
-											<div class="img_upload" id="music-upload">
-												<a href="#" class="icon_color"><i class="fas fa-music"></i></a>
 											</div>
 										</div>
 										<div class="text-center">
 											<span class="text_body" id="hover-text">Add content</span>
 										</div>
+										<div class="upload__img-wrap"></div>
 									</div>
 								</div>
 					  	</div>
@@ -241,7 +229,7 @@
 </div>
 
 <!-- Popup for Add a web link  -->
-<div class="modal fade" id="web_link" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="web_link" aria-hidden="true" aria-labelledby="exampleModalLabel" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">     
 	    <div class="modal-body p-4">
@@ -273,6 +261,9 @@
     </div>
   </div>
 </div>
+
+
+
 
 
 
