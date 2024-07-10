@@ -1614,3 +1614,16 @@ $('.slick-slider').slick({
   autoplay: true,
   autoplaySpeed: 2000,
 });
+
+  $(document).ready(function() {
+    $('#exampleModalToggle').on('hidden.bs.modal', function () {
+      // Reset the form
+      $('#portfolio_form')[0].reset();
+
+      // Optionally clear any other content or state
+      $('#skill_list').empty();
+      $('.selected_skills').empty();
+      $('.upload__img-wrap').empty();
+      $('#hover-text').text('Add content');
+    });
+  });
