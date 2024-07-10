@@ -1909,8 +1909,8 @@ body {
 .icon_color {
     color: #00b050;
     border: 2px solid #d9d9d9;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1947,8 +1947,8 @@ body {
   border-radius: 5px 5px 0 0;
 }
 .porject_image {
-    width: 200px;
-    height: 150px;
+    width: 230px;
+    height: 160px;
     background: #e9e9e9;
 }
 .img_ellipsis {
@@ -2018,6 +2018,9 @@ body {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+}
+.text_gray{
+    color: #676767;
 }
 
 
