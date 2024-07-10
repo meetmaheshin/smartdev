@@ -37,21 +37,23 @@
 	            			</div> -->
 	            		</div>
 	            		<div class="col-md-8 p-0">
-	            			<div class="profile_description">
-	            				<div class="d-flex justify-content-between">
+	            			<div class="profile_description mb-5">
+	            				<div class="d-flex justify-content-between mb-4">
 	            					<div class="d-flex align-items-center">
 	            						<h3 class="font_24 font_weight_600 mb-0 me-3">{{auth()->user()->FreelancerProfile->title ?? '-'}}</h3>
-	            						<a href=""> <i class="fas fa-edit"></i> </a>
+	            						<a href="" class="icon_color font_12" data-bs-toggle="modal" data-bs-target="#edit_title">
+	            							<i class="fas fa-pencil-alt"></i> 
+	            						</a>
 	            					</div>
 	            					<div class="d-flex align-items-center">
-	            						<!-- <h4 class="font_16 font_weight_600 mb-0 me-3">Rate is private</h4> -->
-	            						<a href=""> <i class="fas fa-edit"></i> </a>
+	            						<h4 class="font_16 font_weight_600 mb-0 me-3">$18.00</h4>
+	            						<a href="" class="icon_color font_12"> <i class="fas fa-pencil-alt"></i> </a>
 	            					</div>
 	            				</div>
 	            				<div class="profile_description_content">
-	            					<ul>
-	            						<li>{{auth()->user()->FreelancerProfile->bio ?? '-'}}</li>
-	            					</ul>
+	            					
+	            						<p class="mb-0">{{auth()->user()->FreelancerProfile->bio ?? '-'}}</p>
+	            					
 	            				</div>
 	            				<!-- <div class="consultations">
 	            					<h2 class="font_20 font_weight_600">Consultations</h2>
@@ -76,7 +78,7 @@
 	            					<div class="font_24 font_weight_600">Portfolio</div>
 	            					<div class="d-flex">
 	            						<div class="add_portfolio me-2">
-	            							<a class="icon_color" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+	            							<a class="icon_color font_12" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
 	            								<i class="fas fa-plus"></i>
 	            							</a>
 	            						</div>
@@ -97,10 +99,10 @@
 										</ul>
 										<div class="tab-content " id="pills-tabContent">
 											<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-												<div id="news-slider" class="owl-carousel">
+												<div id="news-slider" class="owl-carousel d-flex justify-content-between flex-wrap">
 													@if(count($detail)>0)
 														@foreach($detail as $details)
-															<div class="slider_div">
+															<div class="slider_div mb-4">
 																<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
 																	<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
 																	<div class="btn-group position-absolute toggle_btn">
@@ -112,10 +114,13 @@
 																	</ul>
 																	</div>
 																</div>
-																<div>{{$details->title}}</div>
+																<div class="pt-2">{{$details->title}}</div>
 															</div>
 														@endforeach
 													@else
+													<div class="text-center">
+														<h5>Portfolio images are missing please add portfolio images</h5>
+													</div>
 													@endif
 												</div>												
 											</div>
@@ -266,6 +271,30 @@
   </div>
 </div>
 
+<!-- Edit your title -->
+<div class="modal fade" id="edit_title" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+        	<div><h3 class="font_24 font_weight_700"> Edit your title </h3> </div>
+        	<div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        </div>
+        <div class="">
+        	<p class="text_gray py-4 mb-0">Enter a single sentence description of your professional skills/experience (e.g. Expert Web Designer with Ajax experience)</p>
+				  <div class="">
+				    <label for="your_title" class="form-label font_weight_700">Your title</label>
+				    <input type="text" class="form-control" id="your_title" placeholder="Example: Professional Magento Developer">
+				  </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+        <button type="button" class="custom_btn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
