@@ -46,8 +46,8 @@
 	            						</a>
 	            					</div>
 	            					<div class="d-flex align-items-center">
-	            						<h4 class="font_16 font_weight_600 mb-0 me-3">$18.00</h4>
-	            						<a class="icon_color font_12" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy link to clipboard"> <i class="fas fa-link"></i> </a>
+	            						<h4 class="font_16 font_weight_600 mb-0 me-3">${{auth()->user()->freelancerRate->hourly_rate ?? '-'}}</h4>
+	            						<!-- <a class="icon_color font_12" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy link to clipboard"> <i class="fas fa-link"></i> </a> -->
 	            					</div>
 
 	            				</div>
@@ -215,9 +215,9 @@
 											  </div>											  
 											</div>	
 																					
-											<div class="img_upload" id="link-upload">
+											<!-- <div class="img_upload" id="link-upload">
 												<a href="#" class="icon_color" data-bs-toggle="modal" data-bs-target="#web_link"><i class="fas fa-link"></i></a>
-											</div>
+											</div> -->
 										</div>
 										<div class="text-center">
 											<span class="text_body" id="hover-text">Add content</span>
@@ -276,25 +276,28 @@
 <!-- Edit your title -->
 <div class="modal fade" id="edit_title" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="d-flex justify-content-between">
-        	<div><h3 class="font_24 font_weight_700"> Edit your title </h3> </div>
-        	<div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        </div>
-        <div class="">
-        	<p class="text_gray py-4 mb-0">Enter a single sentence description of your professional skills/experience (e.g. Expert Web Designer with Ajax experience)</p>
-				  <div class="">
-				    <label for="your_title" class="form-label font_weight_700">Your title</label>
-				    <input type="text" class="form-control" id="your_title" placeholder="Example: Professional Magento Developer">
-				  </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
-        <button type="button" class="custom_btn">Save changes</button>
-      </div>
-    </div>
+  <form id="profile_title" data-action="{{route('myprofile.title')}}" action="{{route('myprofile.title')}}" method="POST">	
+	@csrf		
+  	<div class="modal-content">
+		<div class="modal-body">
+			<div class="d-flex justify-content-between">
+				<div><h3 class="font_24 font_weight_700"> Edit your title </h3> </div>
+				<div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+			</div>
+			<div class="">
+				<p class="text_gray py-4 mb-0">Enter a single sentence description of your professional skills/experience (e.g. Expert Web Designer with Ajax experience)</p>
+					<div class="">
+						<label for="title" class="form-label font_weight_700">Your title</label>
+						<input type="text" class="form-control" id="title" value="{{auth()->user()->FreelancerProfile->title ?? '-'}}" name="title" placeholder="Example: Professional Magento Developer">
+					</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+			<button type="submit" class="custom_btn">Save changes</button>
+		</div>
+		</div>
+	</form>
   </div>
 </div>
 

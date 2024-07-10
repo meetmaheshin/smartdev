@@ -238,8 +238,8 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
                 Route::post('/portfolio/getPortfolioDetails', 'getPortfolioDetails')->name('portfolio.getPortfolioDetails');
                 Route::post('/portfolio/attachment/delete', 'deleteAttachment')->name('portfolio.attachment.delete');
                 Route::post('/portfolio/delete', 'deletePortfolio')->name('portfolio.delete');
-
-
+                Route::post('/settings/myprofile/title','updateTitle')->name('myprofile.title');
+                Route::post('/settings/myprofile/description','updateDescription')->name('myprofile.description');
             });
         });
     });

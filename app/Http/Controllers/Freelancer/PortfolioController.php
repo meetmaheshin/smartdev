@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Portfolio;
 use App\Models\PortfolioSkill;
 use App\Models\PortfolioAttachment;
+use App\Models\FreelancerProfile;
+
 use Illuminate\Support\Facades\Storage;
 
 use App\Models\Skill;
@@ -28,11 +30,6 @@ class PortfolioController extends Controller
         $data['timezone']= $currentTime->format('g:i a');
         $data['detail'] = $this->portfolio->portfolioData(auth()->user()->id);
         $data['all'] = [];
-
-    
-
-
-
         return view('freelancer.setting.myprofile',$data);
     }
 
@@ -168,5 +165,14 @@ class PortfolioController extends Controller
             }
     }
 
+    public function updateTitle(Request $request){
+        $update = FreelancerProfile:: where('user_id',auth()->user()->id)->update(['title'=>$request->title]);
+        return redirect()->route('myprofile')->with('success','Title Updated');
+    }
+
+    public function updateDescription(Request $request){
+        $update = FreelancerProfile:: where('user_id',auth()->user()->id)->update(['bio'=>$request->description]);
+        return redirect()->route('myprofile')->with('success','Description Updated');
+    }
 
 }
