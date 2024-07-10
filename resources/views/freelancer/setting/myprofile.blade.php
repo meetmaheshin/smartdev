@@ -110,7 +110,9 @@
 																			<i class="fas fa-ellipsis-h"></i>
 																		</button>
 																	<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-																		<li><a class="dropdown-item edit-portfolio" role="button" data-id="{{$details->id}}" data-bs-toggle="modal" href="#exampleModalToggle">Edit item</a></li>
+																		<li><a class="dropdown-item edit-portfolio" role="button" data-id="{{$details->id}}" data-bs-toggle="modal" href="#exampleModalToggle">Edit</a></li>
+
+																		<li><a class="dropdown-item delete-portfolio" role="button" data-id="{{$details->id}}">Delete</a></li>
 																	</ul>
 																	</div>
 																</div>

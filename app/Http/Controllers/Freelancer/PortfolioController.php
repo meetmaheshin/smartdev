@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Models\Skill;
 use Carbon\Carbon;
+use DB;
 
 class PortfolioController extends Controller
 {
@@ -137,6 +138,34 @@ class PortfolioController extends Controller
             $avatar->delete();
         }
         return response()->json(['status' => 'true']);
+    }
+
+    public function deletePortfolio(Request $request)
+    {
+          // Start a transaction to ensure data integrity
+        DB::beginTransaction();
+        try {
+                $attachment = PortfolioAttachment::where('portfolio_id',$request->id)->get();
+                if(count($attachment)>0){
+                    foreach($attachment as $attachments){
+                        $avatar = PortfolioAttachment::findOrFail($attachments->id);
+                        if (Storage::disk('my_files')->delete($avatar->filename)) {
+                            $avatar->delete();
+                        }
+                    }
+
+                }
+                PortfolioSkill::where('portfolio_id', $request->id)->delete();
+            
+                Portfolio::whereId($request->id)->delete();
+                // Commit the transaction
+                DB::commit();
+                return response()->json(['status' => 'true']);
+            }catch (\Exception $e) {
+                // Rollback the transaction in case of an error
+                DB::rollBack();
+                return response()->json(['status' => 'false', 'message' => $e->getMessage()]);
+            }
     }
 
 

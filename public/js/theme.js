@@ -1415,7 +1415,7 @@ function ImgUpload() {
 }
 
 
-      $("#portfolio_form").on("submit", function (e) {
+    $("#portfolio_form").on("submit", function (e) {
         e.preventDefault();
         var url = $(this).data('action');
         const formID = $(this).closest("form").attr("id");
@@ -1423,6 +1423,7 @@ function ImgUpload() {
         const formData = new FormData($("#" + formID)[0]);
         let TotalFiles = $("#filename")[0].files.length; //Total files
         let images = $("#filename")[0];
+        formData.delete("filename[]");
         for (let i = 0; i < TotalFiles; i++) {
             formData.append("filename[]", images.files[i]);
         }
@@ -1513,6 +1514,24 @@ function ImgUpload() {
         });
     });
 
+    $('.delete-portfolio').on('click',function(event){
+        event.preventDefault(); // Prevent the default link behavior
+        const dataId = $(this).data('id');
+        $.ajax({
+            url: '/freelancer/portfolio/delete',
+            type: "POST",
+            data : {'id':dataId},
+            dataType: "json",
+            success(response) {
+                if (response.status == "true") {
+                    location.reload();
+                }
+            },
+
+            error(error) {
+            },
+        });
+    });
 
     
 
