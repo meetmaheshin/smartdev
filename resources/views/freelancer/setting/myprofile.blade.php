@@ -103,7 +103,7 @@
 										</ul>
 										<div class="tab-content " id="pills-tabContent">
 											<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-												<div id="news-slider" class="owl-carousel d-flex justify-content-between flex-wrap slick-slider">
+												<div id="news-slider" class="owl-carousel slick-slider">
 													@if(count($detail)>0)
 														@foreach($detail as $details)
 															<div class="slider_div mb-4">
