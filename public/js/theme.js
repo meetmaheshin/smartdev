@@ -1618,21 +1618,44 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 
 // slick slider
 $('.slick-slider').slick({
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 5000,
+  centerMode: true
 });
 
-  $(document).ready(function() {
+// Form date reset js
+$(document).ready(function() {
     $('#exampleModalToggle').on('hidden.bs.modal', function () {
       // Reset the form
       $('#portfolio_form')[0].reset();
-
       // Optionally clear any other content or state
       $('#skill_list').empty();
       $('.selected_skills').empty();
       $('.upload__img-wrap').empty();
       $('#hover-text').text('Add content');
     });
-  });
+});
+
+// select box js
+$(document).ready(function() {
+    $('.searchable-select').select2({
+        placeholder: "Select an option",
+        allowClear: true
+    });
+});
+
+// date picker js
+$('.datepicker').datepicker({
+    format: 'mm/dd/yyyy',
+    autoclose: true,
+    todayHighlight: true
+});
+
+$('.searchable-select').on('change', function() {
+    if ($(this).val()) {
+        $('.select_box').hide();
+        $('.add_certification_form').removeClass('d-none');
+    }
+});

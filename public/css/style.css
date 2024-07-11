@@ -2040,6 +2040,16 @@ a.remove_portfolio_attachment {
     right: 0;
     top: 0;
 }
+.slick-slider .slick-arrow:before {
+    color: #00b050;
+}
+.font_28{
+    font-size: 28px;
+}
+.select2-container {
+    z-index: 2050; 
+    width: 100% !important;
+}
 
 
 @media (min-width: 1200px) {
