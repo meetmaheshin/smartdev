@@ -1505,8 +1505,6 @@ function ImgUpload() {
 
         event.preventDefault(); // Prevent the default link behavior
         const dataId = $(this).data('id');
-        console.log("sf",dataId);
-
         $.ajax({
             url: '/freelancer/portfolio/attachment/delete',
             type: "POST",
@@ -1653,9 +1651,52 @@ $('.datepicker').datepicker({
     todayHighlight: true
 });
 
-$('.searchable-select').on('change', function() {
+$('.searchable-select').on('change', function(e) {
+    e.preventDefault();
     if ($(this).val()) {
+        var name = $(this).data('name');
+        $('#certification_id').val($(this).val());
+        $('.certification_name').val($(this).data('name'));
         $('.select_box').hide();
         $('.add_certification_form').removeClass('d-none');
     }
+});
+
+
+$("#profile_certification").on("submit", function (e) {
+    e.preventDefault();
+    var url = $(this).data('action');
+    const formID = $(this).closest("form").attr("id");
+
+    const formData = new FormData($("#" + formID)[0]);
+    $.ajax({
+        url: url,
+        type: "POST",
+        data : formData,
+        dataType: "json",
+        processData: false,
+        contentType: false,
+        success(response) {
+            if (response.response == "true") {
+                    location.href = response.url;
+            } else {
+                $("#fileserror").text(response.errors);
+            }
+        },
+
+        error(error) {
+            $(".error").text("");
+            let errors = error.responseJSON.errors;
+            for (let key in errors) {
+                let errorDiv = $(`.error[data-error="${key}"]`);
+                if (errorDiv.length) {
+                    errorDiv.text(errors[key][0]);
+                }
+                let errorfrom = $(`.form-control[data-name="${key}"]`);
+                if (errorfrom.length) {
+                    errorfrom.addClass("is-invalid");
+                }
+            }
+        },
+    });
 });

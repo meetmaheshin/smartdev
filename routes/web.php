@@ -240,6 +240,9 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
                 Route::post('/portfolio/delete', 'deletePortfolio')->name('portfolio.delete');
                 Route::post('/settings/myprofile/title','updateTitle')->name('myprofile.title');
                 Route::post('/settings/myprofile/description','updateDescription')->name('myprofile.description');
+                Route::post('/settings/myprofile/certification','certification')->name('myprofile.certification');
+                Route::post('/portfolio/certification/delete', 'deleteCertification')->name('portfolio.certification.delete');
+
             });
         });
     });

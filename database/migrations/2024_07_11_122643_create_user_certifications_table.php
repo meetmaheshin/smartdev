@@ -19,8 +19,8 @@ return new class extends Migration
             $table->foreign('certification_id')->nullable()->references('id')->on('certifications')->onDelete('cascade');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->nullable()->references('id')->on('users')->onDelete('cascade');
-            $table->date('issue_date'); // Issue date of the certification
-            $table->date('expiry_date')->nullable(); // Expiry date (optional)
+            $table->string('issue_date'); // Issue date of the certification
+            $table->string('expiry_date')->nullable(); // Expiry date (optional)
             $table->string('certificationId')->nullable(); // Certification ID (optional)
             $table->string('certification_url')->nullable();
             $table->timestamps();

@@ -8,6 +8,8 @@ use App\Models\Portfolio;
 use App\Models\PortfolioSkill;
 use App\Models\PortfolioAttachment;
 use App\Models\FreelancerProfile;
+use App\Models\Certification;
+use App\Models\UserCertification;
 
 use Illuminate\Support\Facades\Storage;
 
@@ -20,6 +22,7 @@ class PortfolioController extends Controller
     public function __construct() {
         $this->middleware(['auth','verified']);
         $this->portfolio = new Portfolio;
+        $this->certification = new Certification;
     }
  
     public function index(Request $request) {
@@ -30,6 +33,7 @@ class PortfolioController extends Controller
         $currentTime = Carbon::now($timezone);
         $data['timezone']= $currentTime->format('g:i a');
         $data['detail'] = $this->portfolio->portfolioData(auth()->user()->id);
+        $data['certification']= $this->certification->certificationData();
         $data['all'] = [];
         return view('freelancer.setting.myprofile',$data);
     }
@@ -174,6 +178,36 @@ class PortfolioController extends Controller
     public function updateDescription(Request $request){
         $update = FreelancerProfile:: where('user_id',auth()->user()->id)->update(['bio'=>$request->description]);
         return redirect()->route('myprofile')->with('success','Description Updated');
+    }
+
+    public function certification(Request $request){
+        $request->validate(
+            [
+                'issue_date' => 'required|date',
+                'certification_url'=>'nullable|url'
+            ]
+        );
+        $portfolio = UserCertification::updateOrCreate([
+            'id'   => $request->user_certification_id,
+        ], [
+            'issue_date'  =>   $request->issue_date,
+            'expiry_date'  =>   $request->expiry_date,
+            'certification_id'=>$request->certification_id,
+            'certificationId' => $request->certificationId,
+            'certification_url' => $request->certification_url,
+            'user_id'=>auth()->user()->id
+        ]);
+        
+   
+        return response()->json(['response' => 'true', 'url' => route('myprofile')]);
+
+    }
+
+    public function deleteCertification(Request $request)
+    {
+        $avatar = UserCertification::findOrFail($request->id);
+        $avatar->delete();
+        return response()->json(['status' => 'true']);
     }
 
 }
