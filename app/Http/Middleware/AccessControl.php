@@ -9,7 +9,8 @@ use App\Http\Controllers\Freelancer\ProposalSettingController;
 use App\Http\Controllers\Freelancer\SettingController;
 use App\Http\Controllers\Client\DashboardController;
 use App\Http\Controllers\Client\ProjectController;
-use App\Http\Controllers\Admin\Auth\LoginController as adminLoginController;
+use App\Http\Controllers\Admin\Auth\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\Auth\JobController as AdminJobController;
 
 use Closure;
 use App\Models\User;
@@ -39,7 +40,9 @@ class AccessControl {
 
         $dashboardController = get_class(new DashboardController());
         $projectController = get_class(new ProjectController());
-        $adminLoginController = get_class(new FreelancerDashboard());
+        $adminDashboardController = get_class(new AdminDashboardController());
+        $adminJobController = get_class(new AdminJobController());
+
 
 
         $roleClient = User::ROLE_CLIENT;
@@ -71,7 +74,10 @@ class AccessControl {
             $projectController => [
                 $roleClient
             ],
-            $adminLoginController => [
+            $adminDashboardController => [
+                $roleAdmin
+            ],
+            $adminJobController=>[
                 $roleAdmin
             ],
         ];
@@ -86,6 +92,7 @@ class AccessControl {
         $currentAction = \Route::currentRouteAction();
         list($controller, $method) = explode('@', $currentAction);
         $accessPath = $this->accessPath();
+
         if (!isset($accessPath[$controller])) {
             return;
         }
