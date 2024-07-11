@@ -36,6 +36,8 @@ class MessageController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index() {
+        $title = 'Messages - '.config('app.name');
+
         // Retrieve conversation IDs where the authenticated user is either the sender or receiver
         $conversations = Conservation::where('sender_id', auth()->user()->id)->orWhere('receiver_id', auth()->user()->id)->pluck('id');
         // Retrieve messages with related conversation, sender, and receiver, ordered by created_at in descending order, and unique by conservation_id
@@ -74,7 +76,7 @@ class MessageController extends Controller
 
             }
         }
-        return view('freelancer.message', compact('messages', 'receiverId', 'conversationId', 'lastDate','projectId'));
+        return view('freelancer.message', compact('messages', 'receiverId', 'conversationId', 'lastDate','projectId','title'));
     }
 
 

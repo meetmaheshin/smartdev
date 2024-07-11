@@ -23,6 +23,7 @@ class PortfolioController extends Controller
     }
  
     public function index(Request $request) {
+        $data['title'] = 'My Profile - '.config('app.name');
         $timezoneString = auth()->user()->time_zone;
         $parts = explode('|', $timezoneString);
         $timezone = $parts[0]; // 'Asia/Kolkata'

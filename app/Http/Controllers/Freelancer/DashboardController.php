@@ -45,6 +45,8 @@ class DashboardController extends Controller
      */
     public function index()
     { 
+        $data['title'] = 'Dashboard - '.config('app.name');
+
         $skillArry = [];
         $skillsMatch = FreelancerSkill::where('user_id',auth()->user()->id)->with('skill')->get();
         foreach($skillsMatch as $matches){
@@ -90,6 +92,7 @@ class DashboardController extends Controller
     }
 
     public function projectProposal(Request $request,$id) {
+        $data['title'] = 'Proposal - '.config('app.name');
         $data['id'] = $id;
         $data['projectDetail'] = $this->project->getProjectDetailsWithRelations($id);
         return view('freelancer.proposal',$data);
@@ -104,13 +107,15 @@ class DashboardController extends Controller
     }
 
     public function home(Request $request) {
+        $title = 'My Jobs - '.config('app.name');
+
         // Load projects, clients, and clientDetails relationships with eager loading
         $pendingContract = ClientHire::where(['freelancer_id' => auth()->user()->id, 'accept_offer' => '0'])
             ->whereIn('finish_project', ['1', '4'])
             ->with('projects', 'clients.clientDetails')
             ->get();        
         $activeContract = ClientHire::where('freelancer_id',auth()->user()->id)->where(['accept_offer'=>'1'])->whereIn('finish_project',['1','2','4'])->with('projects','clients.clientDetails','milestone')->orderBy('id','desc')->paginate($this->pageCount);
-        return view('freelancer.home',compact('pendingContract','activeContract'));
+        return view('freelancer.home',compact('pendingContract','activeContract','title'));
     }
 
     public function acceptOfferDetail(Request $request) {

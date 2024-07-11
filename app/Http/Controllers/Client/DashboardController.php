@@ -37,7 +37,7 @@ class DashboardController extends Controller
      */
 
     public function index(Request $request) {
-        $data['title'] = "Your Dashboard-SmartDev3";
+        $data['title'] = 'Dashboard - '.config('app.name');
         $data['project_draft'] = Project::where('job', 'draft')->whereNotNull('title')->where('user_id', auth()->user()->id)->get();
         $data['project'] = Project::withCount(['getProposalSetting', 'conversationRevertedCount', 'clientHire'])->where('job', 'new')->where('user_id', auth()->user()->id)
             ->orderBy('id', 'desc')->limit(4)->get();
@@ -46,6 +46,8 @@ class DashboardController extends Controller
     }
 
     public function showAllJobs(Request $request) {
+        $title = 'Job Listings - '.config('app.name');
+
         $job = $request->statuses;
         if ($job == 'all') {
             $projects = Project::query();
@@ -55,7 +57,7 @@ class DashboardController extends Controller
         $projects = $projects->where(function ($query) use ($request) {
             return $query->whereLike('title', $request->gsearch);
         })->withCount('getProposalSetting', 'conversationRevertedCount', 'clientHire')->where(['user_id' => auth()->id()])->orderBy('id', 'desc')->paginate($this->pageCount);
-        return view('client.project_all_job', compact('projects', 'job'));
+        return view('client.project_all_job', compact('projects', 'job','title'));
     }
 
     public function fetchState(Request $request) {
@@ -88,6 +90,8 @@ class DashboardController extends Controller
 
 
     public function showAllContracts(Request $request) {
+        $data['title'] = 'Contract List - '.config('app.name');
+
         $data['allContract'] = ClientHire::where(['client_id' => auth()->user()->id])
             ->whereHas('freelancer', function ($query) use ($request) {
                 return  $query->where('firstname', 'like', '%' . $request->gsearch . '%')->orWhere('lastname', 'like', '%' . $request->gsearch . '%');
@@ -105,14 +109,17 @@ class DashboardController extends Controller
     }
 
     public function contract_milestone(Request $request, $projectId,$freelancerId,) {
+        $data['title'] = 'Contract Milestone - '.config('app.name');
         $data['clientHire'] =  ClientHire::where(['client_id' => auth()->user()->id, 'project_id' => $projectId,'freelancer_id'=>$freelancerId])->with('projects', 'freelancer', 'milestone')->first();
         return view('client.contract_milestone',$data);
     }
 
     public function getNotification(Request $request) {
+        $title= 'Notifications - '.config('app.name');
+
         $todayNotification= auth()->user()->notifications()->whereDate('created_at', now())->latest()->get();
         $notificationList = auth()->user()->notifications()->whereDate('created_at', '<',now())->latest()->paginate($this->pageCount);
-        return view('notification.list',compact('todayNotification','notificationList'));
+        return view('notification.list',compact('todayNotification','notificationList','title'));
     }
     public function NotificationDestroy($id) {
         auth()->user()->notifications()->where('id', $id)->delete();

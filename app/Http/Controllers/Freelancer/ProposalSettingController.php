@@ -31,6 +31,8 @@ class ProposalSettingController extends Controller
 
 
     public function index(Request $request,$id){
+        $data['title'] = 'Submit a Proposal - '.config('app.name');
+
         $data['id'] = $id;
         $data['projectDetail'] = Project::whereId($id)->with('specialities')->with('saveJobs')->first();
         $data['ProposalSetting'] = ProposalSetting::where('project_id',$id)->where('user_id',Auth::user()->id)->first();
@@ -169,6 +171,8 @@ class ProposalSettingController extends Controller
     // list of proposals
 
     public function proposals(Request $request){
+        $data['title'] = 'Proposals - '.config('app.name');
+
         $data['submit_proposal_list'] = ProposalSetting::where(['user_id'=>auth()->user()->id,'proposal_proposed_by'=>'0'])->with('projects')->orderBy('id','desc')->paginate(5);
         $array_proposal = ProposalSetting::where(['receiver_id'=>auth()->user()->id,'status'=>'0',])->with('projects')->orderBy('id','desc')->get();
         $active_proposal = ProposalSetting::where(['receiver_id'=>auth()->user()->id,'status'=>'1'])->with('projects')->orderBy('id','desc')->get();
@@ -183,6 +187,8 @@ class ProposalSettingController extends Controller
     }
 
     public function proposalDetail(Request $request,$id){
+        $data['title'] = 'Job details - '.config('app.name');
+
         $data['proposal_list'] = ProposalSetting::whereId($id)->with('projects.skills')->first();
         $data['proposal_count'] = ProposalSetting::where('project_id', '=', $data['proposal_list']->project_id)
                      ->count();
@@ -209,6 +215,8 @@ class ProposalSettingController extends Controller
     }
     // invitaion interview
     public function invitationInterview(Request $request, $id) {
+        $data['title'] = 'Invitation to Interview - '.config('app.name');
+
         $data['project'] = Project::with(['categories', 'specialities'])->findOrFail($id);
         $data['allProject'] = Project::where('user_id',$data['project']->user_id )->count();
         $data['proposalSettings'] = ProposalSetting::withTrashed()->where('project_id', $id)

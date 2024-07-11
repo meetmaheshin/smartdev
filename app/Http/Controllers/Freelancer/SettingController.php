@@ -63,6 +63,8 @@ class SettingController extends Controller
      */
     public function index(Request $request)
     {
+        $data['title'] = 'Profile Setting - '.config('app.name');
+
         if(auth()->check() && auth()->user()->is_admin == 0){
             $data['category'] =array();
             $newCatArr=[];
@@ -276,6 +278,8 @@ class SettingController extends Controller
     }
 
     public function contactInfo(Request $request){
+        $data['title'] = 'Contact info - '.config('app.name');
+
         $data['countries'] = Country::all();
         $data['timezone'] = Timezone();
         $data['freelancerInfo'] = User::with('country','states','cities')->where('id',auth()->user()->id)->first();
@@ -340,7 +344,9 @@ class SettingController extends Controller
     }
 
     public function changeUserPassword(Request $request){
-        return view('freelancer.setting.changePassword');
+        $data['title'] = 'Change Password - '.config('app.name');
+
+        return view('freelancer.setting.changePassword',$data);
     }
 
     public function updateUserPassword(PasswordChangeRequest $request)
@@ -380,6 +386,8 @@ class SettingController extends Controller
     }
 
     public function buyConnects(Request $request){
+        $data['title'] = 'Welcome to MetaMask - '.config('app.name');
+
         $data['token']= $token = UserBalance::where('user_id',auth()->user()->id)->first();
         if ($request->ajax()) {
             return response()->json(['success'=>'true','data' => $token]);
@@ -421,6 +429,8 @@ class SettingController extends Controller
 
     public function wallet(Request $request) {
         if ($request->isMethod('GET')) {
+            $data['title'] = 'Wallet - '.config('app.name');
+
             $data['walletData'] = Wallet::where('user_id',auth()->user()->id)->orderBy('primary','desc')->orderBy('id','desc')->paginate($this->pageCount);
             return view('freelancer.setting.wallets',$data);
         }

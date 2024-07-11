@@ -50,9 +50,13 @@ class InitiateDetailController extends Controller
     }
 
     public function freelancerWelcome(Request $request) {
-        return view('freelancer.freelancer_welcome');
+        $data['title'] = 'Welcome - '.config('app.name');
+
+        return view('freelancer.freelancer_welcome',$data);
     }
     public function createProfileTitle(Request $request) {
+        $data['title'] = 'Profile Title - '.config('app.name');
+
         $data['profile'] = FreelancerProfile::getByUserId(auth()->user()->id);
         return view('freelancer.create_profile_title', $data);
     }
@@ -63,6 +67,8 @@ class InitiateDetailController extends Controller
     }
 
     public function experience(Request $request) {
+        $data['title'] = 'Experience - '.config('app.name');
+
         $data['countries'] = $this->all_country->get(["name", "id"]);
         $data['show_exp'] = $this->experience->getByUserId(auth()->user()->id);
         return view('freelancer.freelance_experience', $data);
@@ -93,8 +99,10 @@ class InitiateDetailController extends Controller
     }
 
     public function education(Request $request) {
+        $title = 'Education - '.config('app.name');
+
         $show_edu = $this->education->getEducationByUserId(auth()->user()->id);
-        return view('freelancer.freelance_education', compact('show_edu'));
+        return view('freelancer.freelance_education', compact('show_edu','title'));
     }
 
     public function storeEducation(FreelancerEducationRequest $request)
@@ -123,6 +131,8 @@ class InitiateDetailController extends Controller
 
     public function skills(Request $request)
     {
+        $data['title'] = 'Skills - '.config('app.name');
+
         $data['skill'] = Skill::groupBy('skills_sub')->get();
         $data['selectedSkills'] = FreelancerSkill::with('skill')->where('user_id', auth()->user()->id)->get();
         return view('freelancer.freelance_skills', $data);
@@ -146,15 +156,19 @@ class InitiateDetailController extends Controller
     }
 
     public function bio(Request $request) {
+        $title = 'Bio - '.config('app.name');
         $profileBio = FreelancerProfile::getByUserId(auth()->user()->id);
-        return view('freelancer.freelance_bio', compact('profileBio'));
+        return view('freelancer.freelance_bio', compact('profileBio','title'));
     }
 
     public function rate(Request $request) {
+        $title = 'Rate - '.config('app.name');
+
         $freelancerRate = FreelancerRate::where('user_id', auth()->user()->id)->first();
-        return view('freelancer.freelance_rate', compact('freelancerRate'));
+        return view('freelancer.freelance_rate', compact('freelancerRate','title'));
     }
     public function services(Request $request) {
+        $title = 'Services - '.config('app.name');
         $services = array();
         $selectedServices = array();
         $category =  $this->all_categories ;
@@ -164,7 +178,7 @@ class InitiateDetailController extends Controller
             }])->where('id', $spec->id)->first();
         }
         $selectedServices = $this->freelancerService->getServicesByUserId(auth()->user()->id);
-        return view('freelancer.freelance_services', compact('services', 'selectedServices'));
+        return view('freelancer.freelance_services', compact('title','services', 'selectedServices'));
     }
 
     // store bio 
@@ -191,6 +205,7 @@ class InitiateDetailController extends Controller
     }
 
     public function location(Request $request) {
+        $data['title'] = 'Location - '.config('app.name');
         $data['countries'] = $this->all_country->get() ;
         $data['userDetails'] =  $this->user->getUserDetails(auth()->user()->id);
         $data['states'] = State::where('country_id', $data['userDetails']->country_id)->get();
@@ -237,6 +252,7 @@ class InitiateDetailController extends Controller
     }
 
     public function primaryWallet() {
+        $data['title'] = 'Wallet - '.config('app.name');
         $data['walletData'] = Wallet::where(['user_id' => auth()->user()->id, 'primary' => '1'])->first();
         return view('freelancer.freelance_primary_wallet', $data);
     }

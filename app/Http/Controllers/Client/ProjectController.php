@@ -86,7 +86,7 @@ class ProjectController extends Controller
     public function project_title_view(Request $request)
     {
         if ($request->session()->get('project_id') != '') {
-            $data['title'] = 'Title - Smartdev3';
+            $data['title'] = 'Job Title - Smartdev3';
             $data['project'] = Project::with('specialities')->find($request->session()->get('project_id'));
             // dd($request->session()->get('project_id'));
             $data['specialty'] = Specialty::where('type', 0)->limit(3)->get();
@@ -176,7 +176,7 @@ class ProjectController extends Controller
     public function project_skill_view(Request $request)
     {
         if ($request->session()->has('project_id')) {
-            $data['title'] = 'Skills';
+            $data['title'] = 'Skills - '.config('app.name');
             $projectId     = $request->session()->get('project_id');
             $projectSkill = ProjectSkill::with('skill')->where('project_id', $projectId)->get();
             $data['popularSkills'] = Skill::where('title', 'Popular skills')->get();
@@ -288,7 +288,7 @@ class ProjectController extends Controller
     public function project_scope_view(Request $request)
     {
         if ($request->session()->get('project_id') != '') {
-            $data['title'] = 'Job Details';
+            $data['title'] = 'Project Scope - '.config('app.name');
             $data['project'] = Project::where('id', $request->session()->get('project_id'))->first();
             return view('client.project_scope', $data);
         }
@@ -314,7 +314,7 @@ class ProjectController extends Controller
     public function project_budget_view(Request $request)
     {
         if ($request->session()->get('project_id') != '') {
-            $data['title'] = 'Job Details';
+            $data['title'] = 'Project Budget - '.config('app.name');
             $data['project'] = Project::where('id', $request->session()->get('project_id'))->first();
 
             return view('client.project_budget', $data);
@@ -374,7 +374,7 @@ class ProjectController extends Controller
     public function project_review_view(Request $request, $id)
     {
 
-        $data['title'] = 'Project Review';
+        $data['title'] = 'Project Review - '.config('app.name');
         $data['all'] = [];
         $skills_sub_name = [];
         $project = Project::where('id', $id)->with(['categories', 'ProjectSkill', 'specialities'])->first();
@@ -590,9 +590,7 @@ class ProjectController extends Controller
         }
         if($duration == "more_than_6"){
             $duration = "More than 6";
-        }        
-
-   
+        }
         return $duration;
     }
 }

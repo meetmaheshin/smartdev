@@ -46,6 +46,7 @@ class ClientSettingController extends Controller
 
     public function index(Request $request)
     {
+        $data['title'] = 'My Info - '.config('app.name');
         $data['clientInfo'] = User::with('clientDetails.industry','clientDetails.getCountry','clientDetails.getState')->where('id', auth()->user()->id)->first();
         $data['countries'] = Country::all();
         $data['industries'] = Industry::all();
@@ -157,7 +158,9 @@ class ClientSettingController extends Controller
 
     public function changePassword(Request $request)
     {
-        return view('client.settings.changePassword');
+        $data['title'] = 'Change Password - '.config('app.name');
+
+        return view('client.settings.changePassword',$data);
     }
 
     public function updatePassword(PasswordChangeRequest $request)

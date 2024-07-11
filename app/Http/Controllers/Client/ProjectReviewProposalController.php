@@ -53,6 +53,7 @@ class ProjectReviewProposalController extends Controller
         $data['proposals_Byfreelancer'] = ProposalSetting::where('user_id', '!=', auth()->user()->id)->where(['project_id' => $id])->get();
         $data['project_count'] = Project::where('user_id', auth()->user()->id)->where('job', '!=', 'draft')->get()->count();
         $sender = auth()->user()->id;
+        $data['title'] = 'Review Proposal - '.config('app.name');
 
         // invite freelance tab
         $data['inviteFreelancer'] = User::where('is_admin', User::ROLE_FREELANCER)
@@ -235,6 +236,8 @@ class ProjectReviewProposalController extends Controller
 
 
     public function sendOfferByReview(Request $request, $userId, $projectId) {
+        $title = 'Offer - '.config('app.name');
+
         $request->session()->put('typeHire', 'reviewFreelancer');
         $project = $this->project->projectData($projectId);
         $user = User::where('id', $userId)->with(['country', 'freelancerSkills.skill', 'states','wallets' => function($query) { 
