@@ -24,7 +24,9 @@
 						<div>
 							<h3 class="color_black font_22 font_weight_600">Your Postings</h3>
 						</div>
-						<div><a href="{{route('project.all_jobs',['statuses' => 'new'])}}" class="color_green font-16 text-decoration-none">See all postings</a></div>
+						@if(count($project)>0)
+							<div><a href="{{route('project.all_jobs',['statuses' => 'new'])}}" class="color_green font-16 text-decoration-none">See all postings</a></div>
+						@endif
 					</div>
 					@if(count($project)>0)
 					@foreach($project as $data)

@@ -120,7 +120,12 @@ class ProjectController extends Controller
             ]
         );
         $specialty = Specialty::with('categories')->findOrFail($request->specialty_id);
-        $category_id = $specialty->categories[0]->pivot->category_id;
+        if(count($specialty->categories)>0){
+            $category_id = $specialty->categories[0]->pivot->category_id;
+        }else{
+            $category_id = 11;
+        }
+
         $newProduct = Project::updateOrCreate([
             'id'   => $request->project_id,
         ], [
@@ -129,7 +134,7 @@ class ProjectController extends Controller
             'projectType' => 1,
 
             'specialty_id' => $request->specialty_id,
-            'category_id' => $category_id,
+            'category_id' => $category_id
         ]);
 
 
@@ -410,8 +415,7 @@ class ProjectController extends Controller
 
     public function project_review(Request $request, $id)
     {
-        $validate = Validator::make(
-            $request->all(),
+            $request->validate(
             [
                 'title' => 'required',
                 'description' => 'required',
@@ -421,7 +425,8 @@ class ProjectController extends Controller
                 'skill_id' => 'required',
                 'duration' => 'required',
                 'level' => 'required',
-                'filename.*' => 'required|image|mimes:jpg,png,jpeg,JPG,PNG,JPEG,PDF,pdf|max:5000'
+                'filename'=>'required',
+                'filename.*' => 'sometimes|required|image|mimes:jpg,png,jpeg,JPG,PNG,JPEG|max:5000'
             ],
             [
                 'skill_id.required' => 'Must be select at least on skill',
@@ -432,12 +437,6 @@ class ProjectController extends Controller
                 'filename.*.max' => 'Sorry! Maximum allowed size for an image is 5MB',
             ]
         );
-
-        if ($validate->fails()) {
-
-            return Redirect::back()->withErrors($validate);
-        }
-
         if ($request->hasFile('filename')) {
             $allowedfileExtension = ['jpg', 'png', 'PNG', 'JPG', 'PNG', 'jpeg', 'JPEG'];
             $files = $request->file('filename');
@@ -450,7 +449,7 @@ class ProjectController extends Controller
                         $path = $file->store('/storage/filename', ['disk' =>   'my_files']);
                         $new_picture_array[] = array('project_id' => $id, 'filename' => $path, 'attachment' => $filename);
                     } else {
-                        return Redirect::back()->with('error', 'Sorry Only Upload png ,jpg ,jpeg');
+                        return response()->json(['status' => 'false', 'messages' => 'Sorry Only Upload png ,jpg ,jpeg']);
                     }
                 }
                 ProjectDetail::insert($new_picture_array);
@@ -485,7 +484,9 @@ class ProjectController extends Controller
             'duration' => $request->duration,
             'level' => $request->level,
         ]);
-        return redirect()->route('project.all_jobs', ['statuses' => 'all'])->with('success', 'Post Successfully Updated ');
+        return response()->json(['status' => 'true', 'url' => route('project.all_jobs')]);
+
+        // return redirect()->route('project.all_jobs', ['statuses' => 'all'])->with('success', 'Post Successfully Updated ');
     }
 
     public function projectDraftDelete(Request $request)

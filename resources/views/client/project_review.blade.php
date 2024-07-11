@@ -43,11 +43,8 @@
                                 <div class="client_message_box p-4">
                                     <h4 class="font_16">Title <span class="asterisk">*</span></h4>
                                     <input type="text" name="title" class="d-block w-100 form-control  @error('title') is-invalid @enderror" value="{{ old('title', $project->title) }}" />
-                                    @error('title')
-                                    <span class="text-danger" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
+                                    <div class="text-danger error" data-error="title"></div>
+
                                 </div>
 
                             </div>
@@ -61,13 +58,8 @@
 
                                     <div class="client_message_box">
                                         <textarea rows="6" name="description" placeholder="Already have a job description? Paste it here!" aria-label="Work Description" value="{{ $project->description }}" class="form-control d-block w-100 font_14">{{ $project->description }}</textarea>
-                                        @error('description')
-                                        <div class="">
-                                            <p class="font_14 error_mgs font_weight_500"><i class="fas fa-exclamation-circle"></i>
-                                                {{ $message }}
-                                            </p>
-                                        </div>
-                                        @enderror
+                                        <div class="text-danger error" data-error="description"></div>
+
                                     </div>
                                 </div>
                             </div>
@@ -80,11 +72,22 @@
                                                     <i class="fas fa-paperclip"></i>
                                                 </div>
                                                 <span class="font_14">
-                                                    Attach Image
+                                                    Attach Image(Maximum file size: 5 MB)
                                                 </span>
+                                                
                                                 <input class="position-absolute" accept=".png, .jpg, .jpeg" multiple="multiple" name="filename[]" id="attach_file" type="file" aria-labelledby="attach-file-input-label-1">
                                             </div>
+
                                         </div>
+                                        <div id="file-type-info" class="text-muted">Supported file types: .png, .jpg, .jpeg</div>
+                                        @foreach ($errors->get('filename.*') as $error)
+                                        @foreach ($error as $message) 
+                                          <span class="text-danger" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @endforeach
+                                        @endforeach
+                                        <div class="text-danger error" data-error="filename"></div>
                                         <div class="posting_content_images d-flex flex-wrap mt-3">
                                             @foreach ($projectDetail as $files)
                                             <div class="posting_one_content up_image me-3 col-2 mb-4 position-relative pip_{{ $files->id }}">
@@ -130,11 +133,9 @@
                                             <a href="javascript:void(0)" class="edit_draft_icon" id="edit_skill_review">
                                                 <i class="fa-solid fa-pen fas"></i>
                                             </a>
-                                            @error('skill_id')
-                                            <span class="text-danger skill_err" style="background:none" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
+                                            <div class="text-danger error" data-error="skill_id"></div>
+
+                                            
                                         </div>
                                     </div>
 
@@ -150,16 +151,10 @@
                                                     <i class="fa-solid fa-pen fas"></i>
                                                 </a>
                                             </p>
-                                            @error('duration')
-                                            <span class="text-danger" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                            @error('level')
-                                            <span class="text-danger" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
+                                            <div class="text-danger error" data-error="duration"></div>
+                                            <div class="text-danger error" data-error="level"></div>
+
+                                        
                                         </div>
                                     </div>
                                     <div class="client_job_post_budget_wrapper mb-4">
@@ -172,11 +167,9 @@
                                                 <a href="" class="edit_draft_icon" data-bs-toggle="modal" data-bs-target="#editbudget">
                                                     <i class="fa-solid fa-pen fas"></i>
                                                 </a>
-                                                @error('budget_check')
-                                                <span class="text-danger" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
+                                                <div class="text-danger error" data-error="budget_check"></div>
+
+                                               
                                             </p>
                                         </div>
                                     </div>
@@ -484,7 +477,7 @@
     var imgUpload = document.getElementById('attach_file'),
         imgPreview = document.getElementById('posting_content_images_block'),
         totalFiles, previewTitle, previewTitleText, img;
-
+    var selectedFiles = []; // Array to store selected files
     imgUpload.addEventListener('change', previewImgs, true);
 
     function previewImgs(event) {
@@ -492,7 +485,10 @@
         if (!!totalFiles) {
             imgPreview.classList.remove('img-thumbs-hidden');
         }
+        // Clear selected files array
+        selectedFiles = [];
         for (var i = 0; i < totalFiles; i++) {
+            selectedFiles.push(event.target.files[i]); // Add file to selectedFiles array
             wrapper = document.createElement('div');
             wrapper.classList.add('col-2');
             wrapper.classList.add('wrapper-thumb-list');
@@ -511,9 +507,78 @@
 
             $('.remove-btn').click(function() {
                 $(this).parent('.wrapper-thumb-list').remove();
+                 // Update file input: remove the corresponding file
+                var index = Array.from(imgPreview.children).indexOf(wrapper);
+                console.log(index);
+                if (index !== -1) {
+                    selectedFiles.files.splice(index, 1);
+                }
             });
 
         }
     }
+    $('#project_review').submit(function(e) {
+        e.preventDefault(); // Prevent normal form submission
+        // var formData = new FormData();
+        const formData = new FormData($(this)[0]);
+        formData.delete("filename[]");
+
+        selectedFiles.forEach(function(file) {
+            formData.append('filename[]', file);
+        });
+        $.ajax({
+            url: $(this).attr('action'),
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                // Handle success response
+                if (response.status == "true") {
+                        location.href = response.url+'?statuses=all';
+                } else {
+                    $("#fileserror").text(response.errors);
+                }
+                // Optionally, redirect or update UI
+            },
+            error: function(xhr, status, error) {
+                // Handle error response
+                if (error == 'Content Too Large') { // Check for Payload Too Large (HTTP 413)
+                    let errorDiv = $(`.error[data-error="filename"]`);
+                    if (errorDiv.length) {
+                        errorDiv.text('File size exceeds the limit.');
+                    }
+                }
+
+                var jsonResponse = JSON.parse(xhr.responseText);
+                if (jsonResponse.errors) {
+                    $(".error").text("");
+                    if (error.status == 413) { // Check for Payload Too Large (HTTP 413)
+                        let errorDiv = $(`.error[data-error="filename"]`);
+                        if (errorDiv.length) {
+                            errorDiv.text('File size exceeds the limit.');
+                        }
+                    }else{
+                        // let errors = error.responseJSON.errors;
+                        for (let key in jsonResponse.errors) {
+                           
+                            var errorMessages = jsonResponse.errors[key];
+                            var errorDiv = $(`.error[data-error="${key}"]`);
+                            if (errorDiv.length) {
+                                errorDiv.text(errorMessages[0]); // Display only the first error message
+                            }
+
+
+                            let errorfrom = $(`.form-control[data-name="${key}"]`);
+                            if (errorfrom.length) {
+                                errorfrom.addClass("is-invalid");
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    });
+
 </script>
 @endsection

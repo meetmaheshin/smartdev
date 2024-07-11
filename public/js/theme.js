@@ -386,7 +386,6 @@ jQuery(document).ready(function () {
     // project started
     $("#project_started,#project_title,#project_skill,#project_scope,#project_budget").on("submit", function (e) {
         e.preventDefault();
-        console.log("kkkkk");
         const formID = $(this).closest("form").attr("id");
         const job = $("input[name=job]:checked").val();
         const existing_project = $("#existing_project").val();
@@ -399,6 +398,8 @@ jQuery(document).ready(function () {
         if (formID == "project_title") {
             let TotalFiles = $("#filename")[0].files.length; //Total files
             let images = $("#filename")[0];
+            formData.delete("filename[]");
+
             for (let i = 0; i < TotalFiles; i++) {
                 formData.append("filename[]", images.files[i]);
             }
@@ -436,17 +437,25 @@ jQuery(document).ready(function () {
 
             error(error) {
                 $(".error").text("");
-                let errors = error.responseJSON.errors;
-                for (let key in errors) {
-                    let errorDiv = $(`.error[data-error="${key}"]`);
+                if (error.status == 413) { // Check for Payload Too Large (HTTP 413)
+                    let errorDiv = $(`.error[data-error="filename"]`);
                     if (errorDiv.length) {
-                        errorDiv.text(errors[key][0]);
+                        errorDiv.text('File size exceeds the limit.');
                     }
-                    let errorfrom = $(`.form-control[data-name="${key}"]`);
-                    if (errorfrom.length) {
-                        errorfrom.addClass("is-invalid");
+                }else{
+                    let errors = error.responseJSON.errors;
+                    for (let key in errors) {
+                        let errorDiv = $(`.error[data-error="${key}"]`);
+                        if (errorDiv.length) {
+                            errorDiv.text(errors[key][0]);
+                        }
+                        let errorfrom = $(`.form-control[data-name="${key}"]`);
+                        if (errorfrom.length) {
+                            errorfrom.addClass("is-invalid");
+                        }
                     }
                 }
+                
                 jQuery("button .continue").removeAttr("disabled");
             },
         });
