@@ -42,7 +42,13 @@
             </div>
             <div class="menu-title">Jobs</div>
         </a>
-        
+    </li>
+    <li>
+        <a href="{{route('admin.certification')}}" >
+            <div class="parent-icon"><i class='bx bx-certification'></i>
+            </div>
+            <div class="menu-title">Certification</div>
+        </a>
     </li>
     
 </ul>

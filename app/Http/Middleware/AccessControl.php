@@ -11,6 +11,7 @@ use App\Http\Controllers\Client\DashboardController;
 use App\Http\Controllers\Client\ProjectController;
 use App\Http\Controllers\Admin\Auth\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\Auth\JobController as AdminJobController;
+use App\Http\Controllers\Client\ProjectReviewProposalController;
 
 use Closure;
 use App\Models\User;
@@ -42,6 +43,7 @@ class AccessControl {
         $projectController = get_class(new ProjectController());
         $adminDashboardController = get_class(new AdminDashboardController());
         $adminJobController = get_class(new AdminJobController());
+        $projectReviewProposalController = get_class(new ProjectReviewProposalController());
 
 
 
@@ -80,6 +82,9 @@ class AccessControl {
             $adminJobController=>[
                 $roleAdmin
             ],
+            $projectReviewProposalController=>[
+                $roleClient
+            ]
         ];
     }
 

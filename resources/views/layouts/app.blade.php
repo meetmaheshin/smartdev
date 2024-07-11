@@ -10,6 +10,8 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 	<link href="{{asset('assets/fonts-awesome/css/all.min.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/freelancer.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/jquery-ui.min.css')}}">
@@ -85,6 +87,7 @@
 	<script type="text/javascript" src="{{asset('js/sweetalert2.all.min.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/notify.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/toastr.js')}}"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script type="text/javascript" src="{{asset('js/theme.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/socket.js')}}"></script>
 	@yield('before_js')

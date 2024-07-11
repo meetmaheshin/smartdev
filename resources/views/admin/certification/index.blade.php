@@ -4,7 +4,7 @@
     <div class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-            <div class="breadcrumb-title pe-3">Skill</div>
+            <div class="breadcrumb-title pe-3">Certification</div>
             <div class="ps-3">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 p-0">
@@ -16,7 +16,7 @@
             </div>
             <div class="ms-auto">
                 <div class="btn-group">
-                    <a class="btn btn-primary" href="{{route('admin.skills.add')}}"> 
+                    <a class="btn btn-primary" href="{{route('admin.certification.add')}}"> 
                         <button type="button" class="btn btn-primary">Add</button> 
                     </a>
 
@@ -26,7 +26,7 @@
         </div>
         
         <!--end breadcrumb-->
-        <h6 class="mb-0 text-uppercase">Skill</h6>
+        <h6 class="mb-0 text-uppercase">Certification</h6>
         
         <hr/>
         <div class="card">
@@ -35,24 +35,22 @@
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Sno.</th>
+                                <th> Sno.</th>
                                 <th>Title</th>
-                                <th>Skill</th>
                                 <th>Actions</th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($skills as $key=> $skill)
+                            @foreach($certification as $key=> $certifications)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$skill->title}}</td>
-                                <td>{{$skill->skills_sub}}</td>
+                                <td>{{$certifications->title}}</td>
                                 
                                 <td>
                                     <div class="d-flex order-actions">
-                                        <a href="{{route('admin.skills.edit',['id'=>$skill->id])}}" class=""><i class='bx bxs-edit'></i></a>
-                                        <a href="javascript:;" data-id = '{{$skill->id}}' class="ms-3 delete_skill"><i class='bx bxs-trash'></i></a>
+                                        <a href="{{route('admin.certification.edit',['id'=>$certifications->id])}}" class=""><i class='bx bxs-edit'></i></a>
+                                        <a href="javascript:;" data-id = '{{$certifications->id}}' class="ms-3 delete_certifications"><i class='bx bxs-trash'></i></a>
 
                                     </div>
                                 </td>
@@ -73,7 +71,7 @@
 <script>
 		$(document).ready(function() {
 			$('#example').DataTable();
-            $('.delete_skill').on('click',function(e){
+            $('.delete_certifications').on('click',function(e){
                 var id = $(this).data('id')
                 swal.fire({
                     title: 'Are you sure?',
@@ -87,7 +85,7 @@
                     }).then((result) => {
                         if (result.isConfirmed) {
                             $.ajax({
-                                url: '/admin/skills/delete',
+                                url: '/admin/certification/delete',
                                 type: "POST",
                                 data: {
                                     "_token": "{{ csrf_token() }}",
@@ -99,6 +97,7 @@
                                     setTimeout(function () {
                                         location.reload();
                                     }, 500);
+
                                 },
                                 error: function (xhr, ajaxOptions, thrownError) {
                                     swal.fire(
@@ -113,6 +112,6 @@
                         }
                     });
             });
-		  });
+		  } );
 	</script>
 @endsection

@@ -1872,6 +1872,176 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/****** myprofile *******/
+.profile_img img{
+    width: 88px;
+    height: 88px;
+}
+.custom_btn {
+    background: #00b050;
+    color: #fff !important;
+    padding: .5em 1.2em;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 3px solid #00b050;
+    transition: all ease .3s;
+}
+.custom_btn:hover{
+    background: transparent;
+    color: #00b050 !important;
+}
+.border-radius-16{
+    border-radius: 16px;
+}
+.btn_transprent {
+    border: 2px solid #00b050;
+    padding: 6px 15px;
+    display: inline-block;
+    color: #00b050;
+    transition: all ease .3s;
+}
+.btn_transprent:hover{
+    background: #00b050;
+    color: #fff;
+}
+/*form_popup*/
+.icon_color {
+    color: #00b050;
+    border: 2px solid #d9d9d9;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50px;
+}
+.gap-15{
+    gap: 15px;
+}
+.media_editors {
+    border: 1px dashed #00b050;
+    padding: 50px;
+}
+.text_green {
+    color: #00b050;
+}
+.text_green:hover{
+    color: #00b050;
+}
+.nav-pills .nav-link{
+    color: #676767;
+}
+.nav .nav-item button.active {
+  background-color: transparent;
+  color: var(--bs-danger) !important;
+}
+.nav .nav-item button.active::after {
+  content: "";
+  border-bottom: 4px solid var(--bs-danger);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  border-radius: 5px 5px 0 0;
+}
+.porject_image {
+    width: 230px;
+    height: 160px;
+    background: #e9e9e9;
+}
+.img_ellipsis {
+    height: 32px;
+    width: 32px;
+    border-radius: 50px;
+    background: #fff;
+    border: 2px solid #00b050;
+    line-height: 32px;
+}
+.img_ellipsis .fa-ellipsis-h {
+    color: #00b050;
+}
+.toggle_btn {
+    right: 10px;
+    top: 10px;
+}
+/*image upload*/
+
+.upload__inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.upload__img-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+.upload__img-box {
+  width: 200px;
+  height: 140px;
+  position: relative;
+}
+.upload__img-close {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  line-height: 24px;
+  z-index: 1;
+  cursor: pointer;
+}
+.upload__img-close:after {
+  content: "✖";
+  font-size: 14px;
+  color: white;
+}
+.img-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.new-class {
+    height: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.text_gray{
+    color: #676767;
+}
+a.remove_portfolio_attachment {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: #00b050;
+}
+.add_description_poppu {
+    right: 0;
+    top: 0;
+}
+
+
 @media (min-width: 1200px) {
     .user_dashboard .container,
     .client_job_post .container{

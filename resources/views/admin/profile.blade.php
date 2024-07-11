@@ -72,6 +72,14 @@
                                             <input type="text" class="form-control" value="{{auth()->user()->phone_no}}" name="phone_no" />
                                         </div>
                                     </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Password</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="password" class="form-control" value="" name="password" />
+                                        </div>
+                                    </div>
                                 
                                 
                                     <div class="row">

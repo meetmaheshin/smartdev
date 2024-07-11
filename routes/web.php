@@ -74,6 +74,14 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
     Route::get('/admin/profile',  [AdminDashboardController::class, 'profile'] )->name('admin.profile');
     Route::post('/admin/profile',  [AdminDashboardController::class, 'saveProfile'] )->name('admin.profile');
 
+    // certification
+    Route::get('/admin/certification',  [AdminDashboardController::class, 'certification'] )->name('admin.certification');
+    Route::get('/admin/certification/edit/{id}',  [AdminDashboardController::class, 'certificationEdit'] )->name('admin.certification.edit');
+    Route::get('/admin/certification/add',  [AdminDashboardController::class, 'certificationAdd'] )->name('admin.certification.add');
+    Route::post('admin/certification/update', [AdminDashboardController::class, 'certificationUpdate'])->name('admin.certification.update');
+    Route::post('/admin/certification/delete', [AdminDashboardController::class, 'certificationDelete'])->name('admin.certification.delete');
+
+
 
 });
 
@@ -288,7 +296,12 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
             Route::controller(PortfolioController::class)->group(function () {
                 Route::get('/settings/myprofile','index')->name('myprofile');
                 Route::post('/settings/myprofile/create','create')->name('myprofile.create');
-
+                Route::get('/portfolio/autocomplete', 'autocomplete')->name('portfolio.autocomplete');
+                Route::post('/portfolio/getPortfolioDetails', 'getPortfolioDetails')->name('portfolio.getPortfolioDetails');
+                Route::post('/portfolio/attachment/delete', 'deleteAttachment')->name('portfolio.attachment.delete');
+                Route::post('/portfolio/delete', 'deletePortfolio')->name('portfolio.delete');
+                Route::post('/settings/myprofile/title','updateTitle')->name('myprofile.title');
+                Route::post('/settings/myprofile/description','updateDescription')->name('myprofile.description');
             });
         });
     });

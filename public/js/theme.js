@@ -803,7 +803,6 @@ jQuery(document).ready(function () {
     );
 
     $(document).on("click", ".posting_add_feature .fa-times", function () {
-        console.log("1111111111");
         var skillSubId = $(this).parent(".posting_add_feature").attr("data-id");
         var skillName = $(this).parent(".posting_add_feature").attr("data-cy");
         var skillId = $(this).parent(".posting_add_feature").attr("data-skill");
@@ -836,9 +835,7 @@ jQuery(document).ready(function () {
         $(searchId).each(function () {
             selectedId.push($(this).val());
         });
-        $(searchId).each(function () {
-            selectedId.push($(this).val());
-        });
+     
         var mainval = $("#skill_subcat_" + skillSubId).attr("data-skill");
 
         if (
@@ -893,17 +890,45 @@ jQuery(document).ready(function () {
         });
     });
 
+    $("#search_portfolio").on("keyup", function () {
+        var query = $(this).val();
+        var selectedId = [];
+        var selectedTest = [];
+        var searchId = jQuery(".posting_seach_item")
+            .siblings(".selected_skills")
+            .find("div")
+            .find("input");
+
+        var searchTest = jQuery(".posting_seach_item")
+            .siblings(".selected_skills")
+            .find("div")
+            .find("span");
+        $(searchId).each(function () {
+            selectedId.push($(this).val());
+        });
+        $(searchTest).each(function () {
+            selectedTest.push($(this).text());
+        });
+        $.ajax({
+            url: "/freelancer/portfolio/autocomplete",
+            type: "GET",
+            data: { term: query, selectedId: selectedId ,selectedTest:selectedTest},
+            success: function (data) {
+                $("#skill_list").html(data);
+            },
+        });
+    });
+
     // initiate a click function on each search result
     $(document).on("click", "li.list-group-item", function () {
 
         // declare the value in the input field to a variable
         var skillName = $(this).text();
-        // console.log("22222222"+skillName);
 
         var skillId = $(this).attr("data-skill");
         var skillSubId = $(this).attr("value");
-
-        var html =
+        if(skillName != 'No results'){
+            var html =
             '<div id="selected_skills_sub_' +
             skillSubId +
             '"><input type="hidden" name="skill_id[]" id="' +
@@ -927,6 +952,11 @@ jQuery(document).ready(function () {
         $("#skill_subcat_" + skillSubId).remove();
         // after click is done, search results segment is made empty
         $("#country_list").html("");
+        $("#skill_list").html("");
+        }
+
+        
+
     });
 
     // save job project
@@ -1321,3 +1351,279 @@ jQuery(document).ready(function() {
     })
 
 });
+
+// Change text on icons hover
+$(document).ready(function() {
+    // Change text on icons hover
+$(document).ready(function() {
+      const hoverText = $('#hover-text');
+
+      const uploads = [
+        { id: '#image-upload', text: 'Upload image (up to 10MB) ' },
+        { id: '#link-upload', text: 'Add a Weblink' },
+      ];
+
+      $.each(uploads, function(index, upload) {
+        $(upload.id).hover(
+          function() {
+            hoverText.text(upload.text);
+          },
+          function() {
+            hoverText.text('Add content');
+          }
+        );
+      });
+});
+
+// multiple image upload on Portfolio
+jQuery(document).ready(function () {
+  ImgUpload();
+});
+
+function ImgUpload() {
+  var imgArray = [];
+
+  $('.upload__inputfile').each(function () {
+    $(this).on('change', function (e) {
+      var imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
+      var maxLength = $(this).attr('data-max_length');
+      var files = Array.prototype.slice.call(e.target.files);
+
+      files.forEach(function (f) {
+        if (!f.type.match('image.*') || imgArray.length >= maxLength) return;
+
+        var len = imgArray.filter(function (img) { return img !== undefined; }).length;
+        if (len >= maxLength) return;
+
+        imgArray.push(f);
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var html = "<div class='upload__img-box'><div style='background-image: url(" + e.target.result + ")' data-number='" + $(".upload__img-close").length + "' data-file='" + f.name + "' class='img-bg'><div class='upload__img-close'></div></div></div>";
+          imgWrap.append(html);
+        }
+        reader.readAsDataURL(f);
+      });
+    });
+  });
+
+  $('body').on('click', ".upload__img-close", function () {
+    var file = $(this).parent().data("file");
+    imgArray = imgArray.filter(function (img) { return img.name !== file; });
+    $(this).parent().parent().remove();
+  });
+}
+
+
+    $("#portfolio_form").on("submit", function (e) {
+        e.preventDefault();
+        var url = $(this).data('action');
+        const formID = $(this).closest("form").attr("id");
+
+        const formData = new FormData($("#" + formID)[0]);
+        let TotalFiles = $("#filename")[0].files.length; //Total files
+        let images = $("#filename")[0];
+        formData.delete("filename[]");
+        for (let i = 0; i < TotalFiles; i++) {
+            formData.append("filename[]", images.files[i]);
+        }
+        formData.append("TotalImages", TotalFiles);
+        $.ajax({
+            url: url,
+            type: "POST",
+            data : formData,
+            dataType: "json",
+            processData: false,
+            contentType: false,
+            success(response) {
+                if (response.response == "true") {
+                        location.href = response.url;
+                } else {
+                    $("#fileserror").text(response.errors);
+                }
+            },
+
+            error(error) {
+                $(".error").text("");
+                let errors = error.responseJSON.errors;
+                for (let key in errors) {
+                    let errorDiv = $(`.error[data-error="${key}"]`);
+                    if (errorDiv.length) {
+                        errorDiv.text(errors[key][0]);
+                    }
+                    let errorfrom = $(`.form-control[data-name="${key}"]`);
+                    if (errorfrom.length) {
+                        errorfrom.addClass("is-invalid");
+                    }
+                }
+            },
+        });
+    });
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                $('#imagePreview').hide();
+                $('#imagePreview').fadeIn( function() {
+                    $(this).addClass('new-class'); // Add the desired class here
+                    $('.Media_icons').hide(); // Hide the Media_icons div
+                });
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#imageUpload").change(function() {
+        readURL(this);
+    });
+
+    $('.edit-portfolio').on('click',function(event){
+        event.preventDefault(); // Prevent the default link behavior
+        const dataId = $(this).data('id');
+        if (dataId) {
+            fetchDetails(dataId);
+        }
+    });
+    $('body').on('click', '.delete_skill_portfolio',function(event){
+        event.preventDefault(); // Prevent the default link behavior
+        var skillId = $(this).parent(".posting_add_feature").attr("data-skill");
+        $('#selected_skills_sub_'+skillId).remove();
+    });
+
+    $('body').on('click', '.remove_portfolio_attachment',function(event){
+
+        event.preventDefault(); // Prevent the default link behavior
+        const dataId = $(this).data('id');
+        console.log("sf",dataId);
+
+        $.ajax({
+            url: '/freelancer/portfolio/attachment/delete',
+            type: "POST",
+            data : {'id':dataId},
+            dataType: "json",
+            success(response) {
+                if (response.status == "true") {
+                    $('.uplaod_img_'+dataId).remove();
+                }
+            },
+
+            error(error) {
+            },
+        });
+    });
+
+    $('.delete-portfolio').on('click',function(event){
+        event.preventDefault(); // Prevent the default link behavior
+        const dataId = $(this).data('id');
+        $.ajax({
+            url: '/freelancer/portfolio/delete',
+            type: "POST",
+            data : {'id':dataId},
+            dataType: "json",
+            success(response) {
+                if (response.status == "true") {
+                    location.reload();
+                }
+            },
+
+            error(error) {
+            },
+        });
+    });
+
+    
+
+    function fetchDetails(dataId) {
+        $('.selected_skills').html('');
+        $('.upload__img-wrap').html('');
+        $.ajax({
+            url: '/freelancer/portfolio/getPortfolioDetails',
+            type: "POST",
+            data : {'id':dataId},
+            dataType: "json",
+            success(response) {
+                if (response.response == "true") {
+                    console.log(response.data);
+                    $('#portfolio_id').val(response.data.detail.id)
+                    $('#title').val(response.data.detail.title);
+                    $('#role').val(response.data.detail.role);
+                    $('#description').text(response.data.detail.description);
+                    $('#title').val(response.data.detail.title);
+                    $.each(response.data.detail.portfolio_skill, function (key, value) {
+                        var html =
+                        '<div id="selected_skills_sub_' +
+                        value.skills_id +
+                        '"><input type="hidden" name="skill_id[]" id="' +
+                        value.skills_id +
+                        '" value="' +
+                        value.skills_id +
+                        '"><span data-skill="' +
+                        value.skills_id +
+                        '" class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub"  data-cy="' +
+                        value.skill.title +
+                        '"  data-id ="' +
+                        value.id +
+                        '">' +
+                        value.skill.title +
+                        '\
+                        <i class=" fas fa-solid fa-times delete_skill_portfolio"></i></span></div>';
+
+                        $(".selected_skills").append(html);
+                    });
+
+
+                    $.each(response.data.detail.attachment, function (key, value) {
+                        var path = 'img/uploads';
+                        var html =
+                        '<div class="upload__img-box uplaod_img_'+value.id+'">\
+                            <img class="img-bg" src="/'+value.filename+'" alt="image">\
+                        <a href="javascript::void(0)" class="remove_portfolio_attachment img_ellipsis" data-id="'+value.id+'">\
+                            <i class="fa fa-times" aria-hidden="true"></i>\
+                        </a>\
+                        </div>';
+                        $(".upload__img-wrap").append(html);
+                    });
+                    
+
+
+
+                } else {
+                }
+            },
+
+            error(error) {
+            },
+        });
+    }
+
+   
+});
+
+// tooltip
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+});
+
+// slick slider
+$('.slick-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+
+  $(document).ready(function() {
+    $('#exampleModalToggle').on('hidden.bs.modal', function () {
+      // Reset the form
+      $('#portfolio_form')[0].reset();
+
+      // Optionally clear any other content or state
+      $('#skill_list').empty();
+      $('.selected_skills').empty();
+      $('.upload__img-wrap').empty();
+      $('#hover-text').text('Add content');
+    });
+  });
