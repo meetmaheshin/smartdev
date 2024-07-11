@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="{{url('assets/vendor/css/semi-dark.css')}}" />
 	<link rel="stylesheet" href="{{url('assets/vendor/css/header-colors.css')}}" />
 	<link rel="stylesheet" type="text/css" href="{{asset('css/sweetalert2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/toastr.css')}}">
 
 	<title>SmartDev3</title>
 </head>
@@ -60,14 +61,14 @@
 					</div>
 					<div class="user-box dropdown">
 						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="{{url('assets/vendor/images/avatars/avatar-1.png')}}" class="user-img" alt="user avatar">
+							<img src="{{asset('images/user_default.jpeg')}}" class="user-img" alt="user avatar">
 							<div class="user-info ps-3">
 								<p class="user-name mb-0">{{auth()->user()->fullname}}</p>
 								<p class="designattion mb-0">Admin</p>
 							</div>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end">
-							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+							<li><a class="dropdown-item" href="{{route('admin.profile')}}"><i class="bx bx-user"></i><span>Profile</span></a>
 							</li>
 							<li>
 								<div class="dropdown-divider mb-0"></div>
@@ -84,7 +85,7 @@
 				</nav>
 			</div>
 		</header>
-		<!-- Layout Content -->
+		
 		@yield('content')
 		<div class="overlay toggle-icon"></div>
 
@@ -97,6 +98,15 @@
   <!--/ Layout Content -->
   	@include('admin.layouts.sections.commonjs')
 	@yield('js')
+	<script> 
+
+		toastr.options.timeOut = 10000;
+		@if (Session::has('error'))
+			toastr.error("{{ Session::get('error') }}");
+		@elseif(Session::has('success'))
+			toastr.success("{{ Session::get('success') }}");
+		@endif
+	</script>
 </body>
 
 </html>

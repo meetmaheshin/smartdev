@@ -70,6 +70,11 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
     Route::post('admin/user/update', [AdminJobController::class, 'userUpdate'])->name('admin.user.update');
     Route::post('/admin/user/delete', [AdminJobController::class, 'userDelete'])->name('admin.user.delete');
 
+    // profile
+    Route::get('/admin/profile',  [AdminDashboardController::class, 'profile'] )->name('admin.profile');
+    Route::post('/admin/profile',  [AdminDashboardController::class, 'saveProfile'] )->name('admin.profile');
+
+
 });
 
 

@@ -9,6 +9,7 @@
 	<script src="{{url('assets/vendor/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
 	<script src="{{url('assets/vendor/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/sweetalert2.all.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/toastr.js')}}"></script>
 
     <!--app JS-->
 
