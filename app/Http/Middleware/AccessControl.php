@@ -9,6 +9,8 @@ use App\Http\Controllers\Freelancer\ProposalSettingController;
 use App\Http\Controllers\Freelancer\SettingController;
 use App\Http\Controllers\Client\DashboardController;
 use App\Http\Controllers\Client\ProjectController;
+use App\Http\Controllers\Client\ProjectReviewProposalController;
+
 use Closure;
 use App\Models\User;
 
@@ -37,6 +39,8 @@ class AccessControl {
 
         $dashboardController = get_class(new DashboardController());
         $projectController = get_class(new ProjectController());
+        $projectReviewProposalController = get_class(new ProjectReviewProposalController());
+
 
 
         $roleClient = User::ROLE_CLIENT;
@@ -66,6 +70,9 @@ class AccessControl {
             $projectController => [
                 $roleClient
             ],
+            $projectReviewProposalController=>[
+                $roleClient
+            ]
         ];
     }
 
