@@ -525,11 +525,6 @@
     }
     $('#project_review').submit(function(e) {
         e.preventDefault(); // Prevent normal form submission
-
-        // Show loader
-            $('.loader-section').show();
-
-        // var formData = new FormData();
         const formData = new FormData($(this)[0]);
         formData.delete("filename[]");
 
@@ -542,17 +537,25 @@
             data: formData,
             contentType: false,
             processData: false,
+            beforeSend: function () {
+                $('.loader-section').show();
+            },
             success: function(response) {
 
                 // Hide loader
-                $('.loader-section').hide();
 
                 // Handle success response
                 if (response.status == "true") {
+                    setTimeout(function () {
                         location.href = response.url+'?statuses=all';
+                        $('.loader-section').hide();
+
+                    }, 1000);
                 } else {
                     $("#fileserror").text(response.errors);
+                    $('.loader-section').hide();
                 }
+
                 // Optionally, redirect or update UI
             },
             error: function(xhr, status, error) {

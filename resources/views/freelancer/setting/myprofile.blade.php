@@ -145,7 +145,7 @@
 				  <div class="card-header font_28 font_weight_700 d-flex justify-content-between p-4 bg-white">
 				   	<h3 class="mb-0"> Certifications</h3>
 				   	<div class="add_portfolio">
-							<a class="icon_color font_12" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+							<a href="javascript:void(0)" class="icon_color font_12" data-bs-target="#certification" data-bs-toggle="modal" >
 								<i class="fas fa-plus"></i>
 							</a>
 						</div>
@@ -154,7 +154,7 @@
 				  	<div class=" mb-5">
 					    <img class="w-25" src="{{url('images/wolfram-u-certifications.png')}}" alt="">
 					  </div>
-				    <p class="card-text font_16">Listing your certifications can help prove your specific knowledge or abilities. (+10%) <br /> You can add them manually or import them from Credly. </p>		
+				    <p class="card-text font_16">Listing your certifications can help prove your specific knowledge or abilities. (+10%) <br /> You can add them manually. </p>		
 				    <a class="">  </a>   
 				    <a href="javascript:void(0)" class="font_16 text_green text-decoration-none" data-bs-toggle="modal" data-bs-target="#certification">
 							Add manually
@@ -360,7 +360,7 @@
 <!-- Certifications popup -->
 <div class="modal fade" id="certification" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
-  <form class="w-100" id="profile_description" data-action="{{route('myprofile.description')}}" action="{{route('myprofile.description')}}" method="POST">	
+  <form class="w-100" id="profile_certification" data-action="{{route('myprofile.certification')}}" action="{{route('myprofile.certification')}}" method="POST">	
 	@csrf
 		<div class="modal-content ">
 			<div class="modal-body">
@@ -372,43 +372,52 @@
 						<div class="select_box">
 							<label for="description" class="form-label font_weight_700 w-100">Certificate</label>
 							<select class="searchable-select form-select">
-				        <option value="option1">Option 1</option>
-				        <option value="option2">Option 2</option>
-				        <option value="option3">Option 3</option>
-				        <option value="option4">Option 4</option>
-					    </select>
+								<option>Select Certificate</option>
+								@if(count($certification)>0)
+									@foreach($certification as $certifications)
+				        				<option value="{{$certifications->id}}" data-name="{{$certifications->title}}">{{$certifications->title}}</option>
+									@endforeach
+								@endif
+
+					    	</select>
 						</div>
 						<div class="add_certification_form d-none">
-							<h3 class="font_20 font_weight_700">Accredited Tax Advisor (ATA)</h3>
-							<p class="font_16 font_weight_600 mb-4">Provider: Accreditation Council for Accountancy and Taxation (ACAT)</p>
-							<p class="font_16">The Accredited Tax Advisor (ATA) is a leading national credential for practitioners who handle sophisticated tax planning issues, including planning for owners of closely held businesses, planning for the highly compensated, choosing qualified retirement plans and performing estate tax planning. Their expertise covers tax returns for individuals, business entities, fiduciaries, trusts and estates, as well as tax planning, tax consulting and ethics.</p>
-							<a href="javascript:void(0)" class="mb-4 d-block">Learn More</a>
-
+							<h3 class="font_20 font_weight_700 certification_name"></h3>
+							<input type="hidden" value="" name="certification_id" id="certification_id"/>
+							<input type="hidden" value="" name="user_certification_id" id="user_certification_id"/>
 
 							<div class="row">
 								<div class="col-md-6 mb-3">
 									<div class="form-group">
-			              <label for="Issue_date">Issue date</label>
-			              <input type="text" class="form-control datepicker" id="Issue_date" placeholder="MM/DD/YYYY">
-			            </div>
+										<label for="issue_date">Issue date</label>
+										<input type="text" class="form-control datepicker" name="issue_date" id="Issue_date" placeholder="MM/DD/YYYY">
+									</div>
+									<div class="text-danger error" data-error="issue_date"></div>
+
 								</div>
 								<div class="col-md-6 mb-3">
 									<div class="form-group">
-			              <label for="Expiration">Expiration date (Optional)</label>
-			              <input type="text" class="form-control datepicker" id="Expiration" placeholder="MM/DD/YYYY">
-			            </div>
+										<label for="expiry_date">Expiration date (Optional)</label>
+										<input type="text" class="form-control datepicker" name="expiry_date" id="expiry_date" placeholder="MM/DD/YYYY">
+									</div>
+									<div class="text-danger error" data-error="expiry_date"></div>
+
 								</div>
 								<div class="col-md-12 mb-3">
 									<div class="">
-								    <label for="Certification_id" class="form-label">Certification ID (Optional)</label>
-								    <input type="text" class="form-control" id="Certification_id" >
+								    <label for="certificationId" class="form-label">Certification ID (Optional)</label>
+								    <input type="text" class="form-control" id="certificationId" name="certificationId">
 								  </div>
+								  <div class="text-danger error" data-error="certificationId"></div>
+
 								</div>
 								<div class="col-md-12">
 									<div class="">
-								    <label for="Certification_url" class="form-label">Certification URL (Optional)</label>
-								    <input type="text" class="form-control" id="Certification_url" >
+								    <label for="certification_url" class="form-label">Certification URL (Optional)</label>
+								    <input type="text" class="form-control" id="certification_url" name="certification_url" >
 								  </div>
+								  <div class="text-danger error" data-error="certification_url"></div>
+
 								</div>
 							</div>							
 						</div>
