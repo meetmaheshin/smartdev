@@ -17,7 +17,7 @@
                     <span class="font_weight_500 color_grey">Skills</span>
                 </div>
                 <div class="posting_step_heading mb-4">
-                    <h4 class="font_weight_500">What are the main skills required for your work?</h4>
+                    <h4 class="font_weight_700">What are the main skills required for your work?</h4>
                 </div>
             </div>
 
@@ -26,12 +26,14 @@
                     <form method="POST" id="project_skill" action="{{ route('project.skill') }}">
                         @csrf
                         <input type="hidden" name="project_id" value="{{ Session::get('project_id') }}" id="project_id">
-                        <p class="font_15 font_weight_500">Search skills</p>
-                        <div class="posting_seach_item position-relative">
-                            <input class="form-control me-2 search typeahead" name="search" id="search" type="text">
-                            <i class="fa fa-search position-absolute" aria-hidden="true"></i>
-                            <div id="country_list"></div>
-                            <span class="font_12 fw-normal p-3">For the best results, add 3-5 skills</span>
+                        <div class="mb-3">
+                            <p class="font_16 font_weight_600 mb-1">Search skills</p>
+                            <div class="posting_seach_item position-relative">
+                                <input class="form-control me-2 search typeahead" name="search" id="search" type="text">
+                                <i class="fa fa-search position-absolute" aria-hidden="true"></i>
+                                <div id="country_list"></div>
+                                <span class="font_12 fw-normal p-3">For the best results, add 3-5 skills</span>
+                            </div>
                         </div>
                         <div class="selected_skills d-flex flex-wrap">
                             @if (count($all) > 0)

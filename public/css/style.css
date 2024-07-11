@@ -2051,6 +2051,15 @@ a.remove_portfolio_attachment {
     width: 100% !important;
 }
 
+/*client-job-post-regular-review-css*/
+.posting_content_images .posting_one_content {
+    width: 150px;
+}
+.posting_content_images .posting_one_content img {
+    height: 150px;
+    object-fit: cover;
+}
+
 
 @media (min-width: 1200px) {
     .user_dashboard .container,

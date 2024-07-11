@@ -16,35 +16,38 @@
                     <span class="font_weight_500 color_grey">Title</span>
                 </div>
                 <div class="posting_step_heading mb-4">
-                    <h4 class="font_weight_500">Let's start with a strong title.</h4>
+                    <h4 class="font_weight_700">Let's start with a strong title.</h4>
                 </div>
-                <p class="font_14 color_grey fw-normal">This helps your job post stand out to the right candidates. It's the first thing they'll see, so make it count!</p>
+                <p class="font_16 color_grey fw-normal">This helps your job post stand out to the right candidates. It's the first thing they'll see, so make it count!</p>
             </div>
             <div class="col-lg-6 create_post">
                 <div class="posting_one_content px-lg-4">
                     <form method="POST" id="project_title" action="{{ route('project.title') }}">
                         @csrf
                         <input type="hidden" name="project_id" value="{{Session::get('project_id')}}" id="project_id">
-                        <p class="font_15 font_weight_500">Write a title for your job post <span class="asterisk">*</span></p>
-
-                        <div class="position-relative">
-                            <input class="form-control me-2" type="text" name="title" value="{{ old('title', @$project->title) }}">
-                            <div class="text-danger error" data-error="title"></div>
+                        <div class="mb-3">
+                            <p class="font_16 font_weight_600 mb-1">Write a title for your job post <span class="asterisk">*</span></p>
+                            <div class="position-relative">
+                                <input class="form-control me-2" type="text" name="title" value="{{ old('title', @$project->title) }}">
+                                <div class="text-danger error" data-error="title"></div>
+                            </div>
                         </div>
-
-                        <p class="font_15 font_weight_500 mt-2">Description <span class="asterisk">*</span></p>
-                        <div class="position-relative">
-                            <textarea class="form-control me-2" name="description" value="{{ old('description', @$project->description) }}" rows="5">{{@$project->description}}</textarea>
-                            <div class="text-danger error" data-error="description"></div>
+                        <div class="mb-3">
+                            <p class="font_16 font_weight_600 mb-1">Description <span class="asterisk">*</span></p>
+                            <div class="position-relative">
+                                <textarea class="form-control me-2" name="description" value="{{ old('description', @$project->description) }}" rows="5">{{@$project->description}}</textarea>
+                                <div class="text-danger error" data-error="description"></div>
+                            </div>
                         </div>
-
-                        <p class="font_15 font_weight_500 mt-4">Images(Maximum file size: 5 MB)</p>
-                        <div id="file-type-info" class="text-muted">Supported file types: .png, .jpg, .jpeg</div>
-                        <div class="position-relative">
-                            <input type="file" class="form-control me-2" id="filename" name="filename[]" accept=".png, .jpg, .jpeg" multiple />
-                            <span class="text-danger error" id="fileserror" data-error="filename"></span>
+                        <div class="mb-3">
+                            <p class="font_15 font_weight_500 mb-0">Images(Maximum file size: 5 MB)</p>
+                            <div id="file-type-info" class="text-muted mb-2">Supported file types: .png, .jpg, .jpeg</div>
+                            <div class="position-relative">
+                                <input type="file" class="form-control me-2" id="filename" name="filename[]" accept=".png, .jpg, .jpeg" multiple />
+                                <span class="text-danger error" id="fileserror" data-error="filename"></span>
+                            </div>
                         </div>
-                        <div class="row mt-4">
+                        <div class="row ">
                             @if(count($projectDetail)>0)
                             @foreach($projectDetail as $files)
                             <div class="image-preview-container col-4 mb-4 position-relative pip_{{$files->id}}">
@@ -71,7 +74,7 @@
                         </div> -->
                         <div class="row d-none web2_speciality">
                             <div class="col-sm-12">
-                                <p class="font_16 font_weight_500 color_black">Web3 Job Speciality <span class="asterisk">*</span></<p>
+                                <p class="font_16 font_weight_500 color_black ">Web3 Job Speciality <span class="asterisk">*</span></<p>
                                 <div class="category_radio_content font font_14 font_weight_600 color_grey">
                                     @foreach($specialty as $key => $data)
                                     <label for="category_{{$data->id}}" class="position-relative d-flex mb-3  align-items-center">
@@ -89,10 +92,10 @@
                         </div>
                         <div class="row web3_speciality">
                             <div class="col-sm-12">
-                                <p class="font_16 font_weight_500 color_black">Web3 Job Speciality <span class="asterisk">*</span></<p>
+                                <p class="font_16 font_weight_600 color_black">Web3 Job Speciality <span class="asterisk">*</span></<p>
                                 <div class="web3_category_radio_content font font_14 font_weight_600 color_grey">
                                     @foreach($web3specialty as $key => $data)
-                                    <label for="category_{{$data->id}}" class="cursor_pointer position-relative d-flex mb-3  align-items-center">
+                                    <label for="category_{{$data->id}}" class="cursor_pointer position-relative d-flex mb-2  align-items-center">
                                         <input type="radio" name="specialty_id" id="category_{{$data->id}}" value="{{$data->id}}" @if($project->specialty_id==$data->id) checked @endif>
                                         <span class="d-inline-block"><i class="mid_dot"></i></span>{{$data->title}}
                                     </label>
