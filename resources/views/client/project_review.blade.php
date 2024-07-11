@@ -79,7 +79,7 @@
                                             </div>
 
                                         </div>
-                                        <div id="file-type-info" class="text-muted mb-4">Supported file types: .png, .jpg, .jpeg</div>
+                                        <div id="file-type-info" class="text-muted mb-4">Supported file types: png, jpg, jpeg</div>
                                         @foreach ($errors->get('filename.*') as $error)
                                         @foreach ($error as $message) 
                                           <span class="text-danger" role="alert">
@@ -587,6 +587,12 @@
                             var errorDiv = $(`.error[data-error="${key}"]`);
                             if (errorDiv.length) {
                                 errorDiv.text(errorMessages[0]); // Display only the first error message
+                            }
+                            if(errorMessages[0] == 'The filename.0 failed to upload.'){
+                                let errorDiv = $(`.error[data-error="filename"]`);
+                                if (errorDiv.length) {
+                                    errorDiv.text('File size exceeds the limit.');
+                                }
                             }
 
 

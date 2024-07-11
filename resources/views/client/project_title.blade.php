@@ -41,7 +41,7 @@
                         </div>
                         <div class="mb-3">
                             <p class="font_15 font_weight_500 mb-0">Images(Maximum file size: 5 MB)</p>
-                            <div id="file-type-info" class="text-muted mb-2">Supported file types: .png, .jpg, .jpeg</div>
+                            <div id="file-type-info" class="text-muted mb-2">Supported file types: png, jpg, jpeg</div>
                             <div class="position-relative">
                                 <input type="file" class="form-control me-2" id="filename" name="filename[]" accept=".png, .jpg, .jpeg" multiple />
                                 <span class="text-danger error" id="fileserror" data-error="filename"></span>

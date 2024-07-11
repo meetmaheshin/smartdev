@@ -352,7 +352,7 @@ jQuery(document).ready(function () {
     }
 
     if (formID == "project_title") {
-        specialityDropdown(1);
+        specialityDropdown(11);
         web3SpecialityDropdown(11);
 
     }
@@ -445,13 +445,22 @@ jQuery(document).ready(function () {
                 }else{
                     let errors = error.responseJSON.errors;
                     for (let key in errors) {
-                        let errorDiv = $(`.error[data-error="${key}"]`);
+                        console.log(errors[key]);
+                        let errorKey = key.replace('.', '_');
+                        let errorDiv = $(`.error[data-error="${errorKey}"]`);
+                        console.log("error",errorDiv);
                         if (errorDiv.length) {
                             errorDiv.text(errors[key][0]);
                         }
                         let errorfrom = $(`.form-control[data-name="${key}"]`);
                         if (errorfrom.length) {
                             errorfrom.addClass("is-invalid");
+                        }
+                        if(errors[key][0] == 'The filename.0 failed to upload.'){
+                            let errorDiv = $(`.error[data-error="filename"]`);
+                            if (errorDiv.length) {
+                                errorDiv.text('File size exceeds the limit.');
+                            }
                         }
                     }
                 }
