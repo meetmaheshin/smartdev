@@ -22,6 +22,7 @@ class User extends Authenticatable
 
     const ROLE_CLIENT = '1';
     const ROLE_FREELANCER = '0';
+    const ROLE_ADMIN = '2';
     public $timestamps = false;
 
     /**
@@ -44,6 +45,8 @@ class User extends Authenticatable
     public const TYPE = [
         'client'  => '1',
         'freelancer' => '0',
+        'admin' => '2',
+
     ];
     protected array $enumStatuses = self::TYPE;
     /**
