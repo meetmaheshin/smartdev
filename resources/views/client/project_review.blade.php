@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="client_job_post_content">
-                    <div class="client_detail_block border-bottom py-4">
+                    <div class="client_detail_block border-bottom pb-4">
                         <div class="row">
                             <div class="col-sm-8">
                                 <div class="client_details px-4">
@@ -27,7 +27,7 @@
                                                     : asset('images/user_default.jpeg') !!}">
                                         </div>
                                         <div class="color_black">
-                                            <h5 class="font_weight_500 mb-1">{{ Auth::user()->firstname }}
+                                            <h5 class="font_weight_500 mb-1 font_22 font_weight_600 text-capitalize">{{ Auth::user()->firstname }}
                                                 {{ Auth::user()->lastname }}
                                             </h5>
                                         </div>
@@ -66,7 +66,7 @@
                             <div class="col-sm-12 border-bottom">
                                 <div class="p-4 pt-0">
                                     <div class="file_input_block">
-                                        <div class="file_input w-25 p-1">
+                                        <div class="file_input w-50 p-1 mb-2">
                                             <div class="d-flex position-relative align-items-center justify-content-center color_green">
                                                 <div class="up-icon p-1">
                                                     <i class="fas fa-paperclip"></i>
@@ -79,7 +79,7 @@
                                             </div>
 
                                         </div>
-                                        <div id="file-type-info" class="text-muted">Supported file types: .png, .jpg, .jpeg</div>
+                                        <div id="file-type-info" class="text-muted mb-4">Supported file types: .png, .jpg, .jpeg</div>
                                         @foreach ($errors->get('filename.*') as $error)
                                         @foreach ($error as $message) 
                                           <span class="text-danger" role="alert">
@@ -110,24 +110,24 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="client_job_post_category_content p-4">
-                                    <div class="client_job_post_category_wrapper mb-4">
-                                        <h4 class="font_16 mb-3 font_weight_600">Category <span class="asterisk">*</span></h4>
+                                    <div class="client_job_post_category_wrapper mb-5">
+                                        <h4 class="font_18 mb-2 font_weight_600">Category <span class="asterisk">*</span></h4>
                                         <div class="d-flex font_14">
-                                            <p class="mb-0 review_category">{{ $project->specialities->title }}
+                                            <p class="mb-0 review_category font_16">{{ $project->specialities->title }}
                                                 <a href="" class="edit_draft_icon" data-bs-toggle="modal" data-bs-target="#editcategory">
                                                     <i class="fa-solid fa-pen fas"></i>
                                                 </a>
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="client_job_post_skill_wrapper mb-4">
-                                        <h4 class="font_16 mb-3 font_weight_600">Skills <span class="asterisk">*</span></h4>
+                                    <div class="client_job_post_skill_wrapper mb-5">
+                                        <h4 class="font_18 mb-2 font_weight_600">Skills <span class="asterisk">*</span></h4>
                                         <div class="add_skills d-flex align-items-center">
                                             @if (count($project->ProjectSkill) > 0)
                                             @foreach ($project->ProjectSkill as $dataskills)
                                             <!-- <input type="hidden" name="skill_id[]"
                                                             value="{{ $dataskills->id }}" /> -->
-                                            <span class="font_12 d-inline-block">{{ isset($dataskills->skill->skills_sub) ? $dataskills->skill->skills_sub : null }}</span>
+                                            <span class="font_14 d-inline-block">{{ isset($dataskills->skill->skills_sub) ? $dataskills->skill->skills_sub : null }}</span>
                                             @endforeach
                                             @endif
                                             <a href="javascript:void(0)" class="edit_draft_icon" id="edit_skill_review">
@@ -139,12 +139,12 @@
                                         </div>
                                     </div>
 
-                                    <div class="client_job_post_scope_wrapper mb-4">
-                                        <h4 class="font_16 mb-3 font_weight_600">Scope <span class="asterisk">*</span></h4>
+                                    <div class="client_job_post_scope_wrapper mb-5">
+                                        <h4 class="font_18 mb-2 font_weight_600">Scope <span class="asterisk">*</span></h4>
                                         <div class="d-flex font_14">
                                             <input type="hidden" name="duration" value="{{ $project->duration }}" id="hidden_duration" />
                                             <input type="hidden" name="level" value="{{ $project->level }}" id="hidden_level" />
-                                            <p class="mb-0 review_scope" name="project_term">{{ $project->type }},
+                                            <p class="mb-0 review_scope font_16" name="project_term">{{ $project->type }},
                                                 {{ $project->duration == 'more_than_6' ? 'More than 6' : ($project->duration == 'month_3_to_6' ? '3 to 6 months' : ($project->duration == 'less_1' ? 'Less than 1 month' : '1 to 3 months')) }},
                                                 {{ $project->level }}
                                                 <a href="" class="edit_draft_icon" data-bs-toggle="modal" data-bs-target="#editscope">
@@ -157,10 +157,10 @@
                                         
                                         </div>
                                     </div>
-                                    <div class="client_job_post_budget_wrapper mb-4">
-                                        <h4 class="font_16 mb-3 font_weight_600">Budget <span class="asterisk">*</span></h4>
+                                    <div class="client_job_post_budget_wrapper">
+                                        <h4 class="font_18 mb-2 font_weight_600">Budget <span class="asterisk">*</span></h4>
                                         <div class="d-flex font_14">
-                                            <p class="mb-0 d-inline-block review_budget">
+                                            <p class="mb-0 d-inline-block review_budget font_16">
                                                 {{ $project->budget == 'project' ? 'Fixed-price : $' . $project->project_budget : 'Hourly: $' . $project->hourly_from . '.00-$' . $project->hourly_to . '.00' }}
                                             </p>
                                             <p>
@@ -464,6 +464,12 @@
             </form>
         </div>
     </div>
+
+    <div class="loader-section">
+        <div class="loader-img">
+            <img src="{{asset('images/Spinner-bg.gif')}}" class="">
+        </div>
+    </div>
 </section>
 
 @endsection
@@ -519,6 +525,10 @@
     }
     $('#project_review').submit(function(e) {
         e.preventDefault(); // Prevent normal form submission
+
+        // Show loader
+            $('.loader-section').show();
+
         // var formData = new FormData();
         const formData = new FormData($(this)[0]);
         formData.delete("filename[]");
@@ -533,6 +543,10 @@
             contentType: false,
             processData: false,
             success: function(response) {
+
+                // Hide loader
+                $('.loader-section').hide();
+
                 // Handle success response
                 if (response.status == "true") {
                         location.href = response.url+'?statuses=all';
@@ -542,6 +556,10 @@
                 // Optionally, redirect or update UI
             },
             error: function(xhr, status, error) {
+
+                // Hide loader
+                    $('.loader-section').hide();
+                
                 // Handle error response
                 if (error == 'Content Too Large') { // Check for Payload Too Large (HTTP 413)
                     let errorDiv = $(`.error[data-error="filename"]`);
