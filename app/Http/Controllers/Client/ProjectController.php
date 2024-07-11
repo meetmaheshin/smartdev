@@ -425,7 +425,6 @@ class ProjectController extends Controller
                 'skill_id' => 'required',
                 'duration' => 'required',
                 'level' => 'required',
-                'filename'=>'required',
                 'filename.*' => 'sometimes|required|image|mimes:jpg,png,jpeg,JPG,PNG,JPEG|max:5000'
             ],
             [
