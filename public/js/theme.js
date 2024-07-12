@@ -1376,7 +1376,7 @@ $(document).ready(function() {
       const hoverText = $('#hover-text');
 
       const uploads = [
-        { id: '#image-upload', text: 'Upload image (up to 10MB) ' },
+        { id: '#image-upload', text: 'Upload image (Max 5MB) ' },
         { id: '#link-upload', text: 'Add a Weblink' },
       ];
 
@@ -1460,18 +1460,37 @@ function ImgUpload() {
                 }
             },
 
-            error(error) {
-                $(".error").text("");
-                let errors = error.responseJSON.errors;
-                for (let key in errors) {
-                    let errorDiv = $(`.error[data-error="${key}"]`);
-                    if (errorDiv.length) {
-                        errorDiv.text(errors[key][0]);
+            error: function(xhr, status, error) {
+
+                var jsonResponse = JSON.parse(xhr.responseText);
+                if (jsonResponse.errors) {
+                    $(".error").text("");
+                   
+                    // let errors = error.responseJSON.errors;
+                    for (let key in jsonResponse.errors) {
+                        
+                        var errorMessages = jsonResponse.errors[key];
+                        console.log("errorMessages",errorMessages);
+                        console.log("errorMessages",errorMessages[0]);
+    
+                        var errorDiv = $(`.error[data-error="${key}"]`);
+                        if (errorDiv.length) {
+                            errorDiv.text(errorMessages[0]); // Display only the first error message
+                        }
+                        if(errorMessages[0] == 'The filename.0 failed to upload.'){
+                            let errorDiv = $(`.error[data-error="filename"]`);
+                            if (errorDiv.length) {
+                                errorDiv.text('File size exceeds the limit.');
+                            }
+                        }
+    
+    
+                        let errorfrom = $(`.form-control[data-name="${key}"]`);
+                        if (errorfrom.length) {
+                            errorfrom.addClass("is-invalid");
+                        }
                     }
-                    let errorfrom = $(`.form-control[data-name="${key}"]`);
-                    if (errorfrom.length) {
-                        errorfrom.addClass("is-invalid");
-                    }
+                    
                 }
             },
         });
@@ -1691,21 +1710,32 @@ $("#profile_certification").on("submit", function (e) {
                 $("#fileserror").text(response.errors);
             }
         },
+        error: function(xhr, status, error) {
 
-        error(error) {
-            $(".error").text("");
-            let errors = error.responseJSON.errors;
-            for (let key in errors) {
-                let errorDiv = $(`.error[data-error="${key}"]`);
-                if (errorDiv.length) {
-                    errorDiv.text(errors[key][0]);
+            var jsonResponse = JSON.parse(xhr.responseText);
+            if (jsonResponse.errors) {
+                $(".error").text("");
+               
+                // let errors = error.responseJSON.errors;
+                for (let key in jsonResponse.errors) {
+                    
+                    var errorMessages = jsonResponse.errors[key];
+                    
+                    var errorDiv = $(`.error[data-error="${key}"]`);
+                    if (errorDiv.length) {
+                        errorDiv.text(errorMessages[0]); // Display only the first error message
+                    }
+                    let errorfrom = $(`.form-control[data-name="${key}"]`);
+                    if (errorfrom.length) {
+                        errorfrom.addClass("is-invalid");
+                    }
                 }
-                let errorfrom = $(`.form-control[data-name="${key}"]`);
-                if (errorfrom.length) {
-                    errorfrom.addClass("is-invalid");
-                }
+                
             }
         },
+
+
+       
     });
 });
 $('.delete-certificate').on('click',function(event){

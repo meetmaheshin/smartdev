@@ -50,7 +50,7 @@ class PortfolioController extends Controller
                 'skill_id' => 'required',
                 'title' => 'required|min:3|max:100',
                 'description' => 'required',
-                'filename.*' => 'mimes:jpg,png,jpeg,JPEG,JPG,PNG'
+                'filename.*' => 'mimes:jpg,png,jpeg,JPEG,JPG,PNG|max:5000'
             ]
         );
         $portfolio = Portfolio::updateOrCreate([

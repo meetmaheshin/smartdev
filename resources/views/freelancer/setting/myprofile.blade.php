@@ -95,42 +95,42 @@
         					</div>
         				</div>
         				<div class="Portfolio_tabs">
-									<div class="">
-										<ul class="nav nav-pills mb-3 border-bottom border-2" id="pills-tab" role="tablist">
-											<li class="nav-item" role="presentation">
-												<button class="nav-link fw-semibold active position-relative" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Published</button>
-											</li>																				
-										</ul>
-										<div class="tab-content " id="pills-tabContent">
-											<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-												<div id="news-slider" class="owl-carousel slick-slider">
-													@if(count($detail)>0)
-														@foreach($detail as $details)
-															<div class="slider_div">
-																<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
-																	<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
-																	<div class="btn-group position-absolute toggle_btn">
-																		<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-																			<i class="fas fa-ellipsis-h"></i>
-																		</button>
-																		<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-																			<li><a class="dropdown-item edit-portfolio" role="button" data-id="{{$details->id}}" data-bs-toggle="modal" href="#exampleModalToggle">Edit</a></li>
-																			<li><a class="dropdown-item delete-portfolio" role="button" data-id="{{$details->id}}">Delete</a></li>
-																		</ul>
-																	</div>
-																</div>
-																<div class="pt-2">{{$details->title}}</div>
+							<div class="">
+								<ul class="nav nav-pills mb-3 border-bottom border-2" id="pills-tab" role="tablist">
+									<li class="nav-item" role="presentation">
+										<button class="nav-link fw-semibold active position-relative" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Published</button>
+									</li>																				
+								</ul>
+								<div class="tab-content " id="pills-tabContent">
+									<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+										<div id="news-slider" class="owl-carousel slick-slider">
+											@if(count($detail)>0)
+												@foreach($detail as $details)
+													<div class="slider_div">
+														<div class="porject_image d-flex align-items-center border-radius-16 position-relative">
+															<img src="{{url('images/banner-home.jpg')}}" class="img-fluid" alt="...">
+															<div class="btn-group position-absolute toggle_btn">
+																<button class="img_ellipsis " type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+																	<i class="fas fa-ellipsis-h"></i>
+																</button>
+																<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+																	<li><a class="dropdown-item edit-portfolio" role="button" data-id="{{$details->id}}" data-bs-toggle="modal" href="#exampleModalToggle">Edit</a></li>
+																	<li><a class="dropdown-item delete-portfolio" role="button" data-id="{{$details->id}}">Delete</a></li>
+																</ul>
 															</div>
-														@endforeach
-													@else
-													<div class="text-center">
-														<h5>Portfolio images are missing please add portfolio images</h5>
+														</div>
+														<div class="pt-2">{{$details->title}}</div>
 													</div>
-													@endif
-												</div>												
-											</div>																					
-										</div>
-									</div>
+												@endforeach
+											@else
+											<div class="text-center">
+												<h5>Talent are hired 9x more often if they’ve published a portfolio.</h5>
+											</div>
+											@endif
+										</div>												
+									</div>																					
+								</div>
+							</div>
         				</div>
         			</div>
         		</div>
@@ -261,7 +261,9 @@
 										@endif
 									</div>
 							  </div>
+							  
 						  	<div class="col-md-8 ps-4" style="margin-top: 32px;">
+								<div class="text-danger error" data-error="filename"></div>
 						  		<div class="media_editors border-radius-16" id="imagePreview" >
 						  			<div class="Media_icons upload__box">
 											<div class="d-flex align-items-center justify-content-center gap-15">
