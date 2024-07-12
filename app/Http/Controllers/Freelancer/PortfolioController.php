@@ -23,6 +23,8 @@ class PortfolioController extends Controller
         $this->middleware(['auth','verified']);
         $this->portfolio = new Portfolio;
         $this->certification = new Certification;
+        $this->userCertification = new UserCertification;
+
     }
  
     public function index(Request $request) {
@@ -30,10 +32,14 @@ class PortfolioController extends Controller
         $timezoneString = auth()->user()->time_zone;
         $parts = explode('|', $timezoneString);
         $timezone = $parts[0]; // 'Asia/Kolkata'
-        $currentTime = Carbon::now($timezone);
-        $data['timezone']= $currentTime->format('g:i a');
+        if(!empty($timezone)){
+            $currentTime = Carbon::now($timezone);
+            $data['timezone']= $currentTime->format('g:i a');
+        }
         $data['detail'] = $this->portfolio->portfolioData(auth()->user()->id);
         $data['certification']= $this->certification->certificationData();
+        $data['userCertification']= $this->userCertification->certificationData();
+
         $data['all'] = [];
         return view('freelancer.setting.myprofile',$data);
     }

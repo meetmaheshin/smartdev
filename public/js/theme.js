@@ -96,7 +96,6 @@ jQuery(document).ready(function () {
         $(this).next().show();
         var job_btn = $(this).find("label").attr("for");
         if (job_btn == "existing_job") {
-            console.log('dgggggggggggg'+projectsDetails);
             $(".getting_started_btn button:last-of-type").removeAttr(
                 "disabled"
             );
@@ -1708,4 +1707,44 @@ $("#profile_certification").on("submit", function (e) {
             }
         },
     });
+});
+$('.delete-certificate').on('click',function(event){
+    event.preventDefault(); // Prevent the default link behavior
+    const dataId = $(this).data('id');
+    swal.fire({
+        title: "Are you sure?",
+        text: "You want to delete this Certificate",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Yes, delete it!",
+        closeOnConfirm: false,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: '/freelancer/portfolio/certification/delete',
+                type: "POST",
+                data: {
+                    id: dataId,
+                },
+                dataType: "json",
+                success: function (response) {
+                    swal.fire(
+                        "success!",
+                        "Deleted!",
+                        "Your Certificate has been deleted."
+                    );
+                    setTimeout(function () {
+                        location.reload();
+                    }, 500);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    swal.fire("Error deleting!!", "Please try again", "error");
+                },
+            });
+        } else if (result.isDenied) {
+            swal.fire("Changes are not saved", "", "info");
+        }
+    });
+
 });

@@ -12,8 +12,8 @@ $('#speciality').on('change', function(e) {
 // project preference
 $('select[name="project_preference"]').on("change", function () {
     $(".user_project_preference .loader").show();
+    $('#project_preference').attr('disabled','disabled')
     var project_preference = $(this).val();
-    console.log(project_preference);
     $.ajax({
         type: "POST",
         url: "/freelancer/profile-preference",
@@ -24,8 +24,8 @@ $('select[name="project_preference"]').on("change", function () {
         success: function (response) {
             setTimeout(function () {
                 $(".user_project_preference .loader").hide();
-            }, 500);
-            // console.log(response.data.project_preference);
+                $('#project_preference').removeAttr('disabled')
+            }, 1000);
         },
     });
 });
@@ -33,10 +33,7 @@ $('select[name="project_preference"]').on("change", function () {
 // Experience level
 jQuery(".user_profile_setting_block .btn_box").click(function () {
     var experience_level = jQuery(this).find("input").val();
-    console.log("ex"+experience_level);
     var project_preference = $("#project_preference :selected").val();
-    console.log("project_preference->"+project_preference);
-
     jQuery(this).parents(".experience_btn_block").find(".loader").show();
     jQuery(this).parents(".experience_btn_box").css("opacity", "0.1");
     $.ajax({

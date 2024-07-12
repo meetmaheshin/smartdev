@@ -50,7 +50,7 @@
 						<div class="user_setting_header  p-4">
 							<h2 class="font_22 font_weight_600">Project Preference</h2>
 						</div>
-						<div class="position-relative experience_btn_block">
+						<div class="position-relative experience_btn_block user_project_preference">
 							<div class="user_setting_header_inner_block p-4">
 								<div class="pb-4">
 									<div class="user_project_preference">

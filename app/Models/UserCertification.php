@@ -13,4 +13,8 @@ class UserCertification extends Model
     public function certification() {
         return $this->belongsTo(Certification::class,'certification_id','id');
     }
+
+    public function certificationData(){
+        return $this->where('user_id',auth()->user()->id)->get();
+    }
 }
