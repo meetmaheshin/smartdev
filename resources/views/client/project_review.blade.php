@@ -560,9 +560,7 @@
             },
             error: function(xhr, status, error) {
 
-                // Hide loader
-                    $('.loader-section').hide();
-                
+              
                 // Handle error response
                 if (error == 'Content Too Large') { // Check for Payload Too Large (HTTP 413)
                     let errorDiv = $(`.error[data-error="filename"]`);
@@ -603,6 +601,10 @@
                         }
                     }
                 }
+                  // Hide loader
+                  setTimeout(function () {
+                        $('.loader-section').hide();
+                }, 1000);                
             }
         });
     });
