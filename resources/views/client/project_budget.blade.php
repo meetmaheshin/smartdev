@@ -15,9 +15,9 @@
                     <span class="font_weight_500 color_grey">Budget</span>
                 </div>
                 <div class="posting_step_heading mb-4">
-                    <h4 class="font_weight_500">Tell us about your budget.</h4>
+                    <h4 class="font_weight_600">Tell us about your budget.</h4>
                 </div>
-                <p class="font_14 color_grey fw-normal">This will help us match you to talent within your range.</p>
+                <p class="font_16 color_grey fw-normal">This will help us match you to talent within your range.</p>
             </div>
             <div class="col-lg-6">
                 <form method="POST" id="project_budget" action="{{ route('project.budget') }}">
@@ -63,20 +63,20 @@
                         <div class="project_hour_budget">
                             <div class="d-flex">
                                 <div class="me-4 d-flex align-items-center">
-                                    <label for="hourly_from" class="form-label font_14 fw-normal color_grey position-relative">
+                                    <label for="hourly_from" class="form-label font_16 font_weight_600 fw-normal color_grey position-relative">
                                         From <span class="asterisk">*</span>
                                         <input type="number" name="hourly_from" class="form-control text-end font_16 font_weight_500 color_black" data-name="hourly_from" value="{{ old('hourly_from', @$project->hourly_from) }}" id="hourly_from">
                                         <i class="fas fa-solid fa-dollar-sign position-absolute color_black font_16"></i>
                                     </label>
-                                    <div id="emailHelp" class="form-text ms-2 mt-3">/hour</div>
+                                    <div id="emailHelp" class="form-text ms-2 mt-3 font_16 font_weight_600">/hour</div>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <label for="hourly_to" class="form-label font_14 fw-normal color_grey position-relative">
+                                    <label for="hourly_to" class="form-label font_16 font_weight_600 fw-normal color_grey position-relative">
                                         To <span class="asterisk">*</span>
                                         <input type="number" name="hourly_to" class="form-control text-end font_16 font_weight_500 color_black" data-name="hourly_to" value="{{ old('hourly_to', @$project->hourly_to) }}" id="hourly_to">
                                         <i class="fas fa-solid fa-dollar-sign position-absolute color_black font_16"></i>
                                     </label>
-                                    <div id="emailHelp" class="form-text ms-2 mt-3">/hour</div>
+                                    <div id="emailHelp" class="form-text ms-2 mt-3 font_16 font_weight_600">/hour</div>
 
                                 </div>
 
@@ -85,7 +85,7 @@
                             <div class="text-danger error" data-error="hourly_from"></div>
                             <div class="text-danger error" data-error="hourly_to"></div>
                             <p class="mb-3 font_13 fw-normal color_grey">This is the average rate for similar projects.</p>
-                            <p class="font_13 font_weight_500 color_black">Professionals tend to charge $12.00 - $30.00/hour (USD) for ux/ui design projects like yours. Experts may charge higher rates.</p>
+                            <p class="font_16 font_weight_500 color_black">Professionals tend to charge $12.00 - $30.00/hour (USD) for ux/ui design projects like yours. Experts may charge higher rates.</p>
                         </div>
                         <div class="project_max_budget">
                             <div class="me-4">

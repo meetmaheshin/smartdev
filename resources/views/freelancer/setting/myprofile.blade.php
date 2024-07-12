@@ -139,7 +139,7 @@
       </div>            
      </div>        
 		<!-- Certifications Section -->
-		<div class="row">
+		<div class="row mt-5">
 			<div class="col-md-12">
 				<div class="card">
 				  <div class="card-header font_28 font_weight_700 d-flex justify-content-between p-4 bg-white">

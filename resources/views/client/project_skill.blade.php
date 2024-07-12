@@ -32,7 +32,7 @@
                                 <input class="form-control me-2 search typeahead" name="search" id="search" type="text">
                                 <i class="fa fa-search position-absolute" aria-hidden="true"></i>
                                 <div id="country_list"></div>
-                                <span class="font_12 fw-normal p-3">For the best results, add 3-5 skills</span>
+                                <span class="font_12 fw-normal d-block">For the best results, add 3-5 skills</span>
                             </div>
                         </div>
                         <div class="selected_skills d-flex flex-wrap">
@@ -40,7 +40,7 @@
                             @foreach ($all as $projectSkills)
                             <div id="selected_skills_sub_{{ $projectSkills['skill_id'] }}">
                                 <input type="hidden" name="skill_id[]" id="{{ $projectSkills['skill_id'] }}" value="{{ $projectSkills['skill_id'] }}">
-                                <span data-skill="{{ $projectSkills['parent_id'] }}" class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub" data-cy="{{ $projectSkills['skill_name'] }}" data-id="{{ $projectSkills['skill_id'] }}">
+                                <span data-skill="{{ $projectSkills['parent_id'] }}" class="posting_add_feature font_14 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub" data-cy="{{ $projectSkills['skill_name'] }}" data-id="{{ $projectSkills['skill_id'] }}">
                                     {{ $projectSkills['skill_name'] }}
                                     <i class=" fas fa-solid fa-times"></i>
                                 </span>
@@ -50,11 +50,11 @@
                         </div>
                         <div class="text-danger error" data-error="skill_id"></div>
 
-                        <div class="posting_two_accordion mt-3 mb-5">
+                        <div class="posting_two_accordion mb-5">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item heading1">
                                     <h2 class="accordion-header" id="heading1">
-                                        <button class="accordion-button font_weight_500 font_16 color_black" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        <button class="accordion-button font_weight_600 font_16 color_black ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                                             Popular skills
                                         </button>
                                     </h2>
@@ -65,7 +65,7 @@
                                                     <?php $newArrskill = 0; ?>
                                                     @foreach ($popularSkills as $skills)
                                                     @if (!in_array($skills->skills_sub, $single))
-                                                    <span data-skill="1" class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub main_skills" id="skill_subcat_{{ $skills->id }}" data-cy="{{ $skills->skills_sub }}" data-id="{{ $skills->id }}">{{ $skills->skills_sub }}
+                                                    <span data-skill="1" class="posting_add_feature font_14 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub main_skills" id="skill_subcat_{{ $skills->id }}" data-cy="{{ $skills->skills_sub }}" data-id="{{ $skills->id }}">{{ $skills->skills_sub }}
                                                         <i class=" fas fa-solid fa-plus"></i>
                                                     </span>
                                                     @else
@@ -87,7 +87,7 @@
                                 @endphp
                                 <div class="accordion-item heading{{ $data->id }}">
                                     <h2 class="accordion-header" id="heading{{ $data->id }}">
-                                        <button class="accordion-button font_weight_500 font_16 color_black" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $data->id }}" aria-expanded="false" aria-controls="collapse{{ $data->id }}">
+                                        <button class="accordion-button font_weight_600 font_16 color_black ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $data->id }}" aria-expanded="false" aria-controls="collapse{{ $data->id }}">
                                             {{ $data->title }}
                                         </button>
                                     </h2>
@@ -104,7 +104,7 @@
                                                                 if (!in_array($skill_sub->skills_sub, $single)) {
 
                                                     ?>
-                                                                    <span class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub main_skills"  data-skill="{{ $data->id }}" id="skill_subcat_{{ $skill_sub->id }}" data-cy="{{ $skill_sub->skills_sub }}" data-id="{{ $skill_sub->id }}">{{ $skill_sub->skills_sub }}
+                                                                    <span class="posting_add_feature font_14 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub main_skills"  data-skill="{{ $data->id }}" id="skill_subcat_{{ $skill_sub->id }}" data-cy="{{ $skill_sub->skills_sub }}" data-id="{{ $skill_sub->id }}">{{ $skill_sub->skills_sub }}
                                                                         <i class=" fas fa-solid fa-plus"></i>
                                                                     </span>
                                                                     <?php } else {
