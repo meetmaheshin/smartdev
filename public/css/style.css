@@ -1871,6 +1871,9 @@ body {
     content: "";
     transform: translate(-50%, -50%);
 }
+.certification_image img {
+    width: 120px;
+}
 
 /****** myprofile *******/
 .profile_img img{
