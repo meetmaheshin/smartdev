@@ -220,6 +220,8 @@ class ProjectReviewProposalController extends Controller
 
     public function sendOffer(Request $request, $userId, $projectId) {
         $request->session()->put('typeHire', '');
+        $title = 'Send an Offer - '.config('app.name');
+
         $project = $this->project->projectData($projectId);
         $user = User::where('id', $userId)->with(['country', 'freelancerSkills.skill', 'states','wallets' => function($query) { 
             $query->where('primary', '1');
@@ -231,12 +233,12 @@ class ProjectReviewProposalController extends Controller
         $hireFreelancers = ClientHire::with('milestone')->where('client_id', auth()->user()->id)->where(['freelancer_id'=>$userId,'project_id'=>$projectId])->first();
         $jwtoken = JwtToken();
         $request->session()->put('jwttoken', $jwtoken['data']);
-        return view('client.project_send_offer', compact('project', 'user', 'hireFreelancers','freelancer_wallet_address'));
+        return view('client.project_send_offer', compact('title','project', 'user', 'hireFreelancers','freelancer_wallet_address'));
     }
 
 
     public function sendOfferByReview(Request $request, $userId, $projectId) {
-        $title = 'Offer - '.config('app.name');
+        $title = 'Send an Offer - '.config('app.name');
 
         $request->session()->put('typeHire', 'reviewFreelancer');
         $project = $this->project->projectData($projectId);
@@ -251,7 +253,7 @@ class ProjectReviewProposalController extends Controller
         $hireFreelancers = ClientHire::with('milestone')->where(['client_id'=>auth()->user()->id,'freelancer_id'=>$userId,'project_id'=>$projectId])->first();
         $jwtoken = JwtToken();
         $request->session()->put('jwttoken', $jwtoken['data']);
-        return view('client.project_send_offer', compact('project', 'user', 'hireFreelancers','freelancer_wallet_address'));
+        return view('client.project_send_offer', compact('title','project', 'user', 'hireFreelancers','freelancer_wallet_address'));
     }
 
     public function hireFreelancer(SendHireRequest $request)
