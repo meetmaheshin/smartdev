@@ -150,15 +150,65 @@
 							</a>
 						</div>
 				  </div>
-				  <div class="card-body text-center p-4">
-				  	<div class=" mb-5">
-					    <img class="w-25" src="{{url('images/wolfram-u-certifications.png')}}" alt="">
-					  </div>
-				    <p class="card-text font_16">Listing your certifications can help prove your specific knowledge or abilities. (+10%) <br /> You can add them manually. </p>		
-				    <a class="">  </a>   
-				    <a href="javascript:void(0)" class="font_16 text_green text-decoration-none" data-bs-toggle="modal" data-bs-target="#certification">
-							Add manually
-						</a>
+				  <div class="card-body p-4">
+				  	<div class="certification_on">
+				  		<div class="d-flex border-bottom pb-4 pt-4">
+				  			<div class="col-md-2">
+				  				<div class="certification_image">
+				  					<img src="{{url('images/twitter_thumb.png')}}" class="img-fluid">
+				  				</div>
+				  			</div>
+				  			<div class="col-md-9">
+				  				<div class="certification_details ">
+				  					<h2 class="font_24 font_weight_700">Meta Certified Buying Professional</h2>
+				  					<p class="mb-0 font_14">Provider: <span> Meta/ FB </span></p>
+				  					<p class="mb-0 font_14">Issue: <span> March 2024 - Expires: March 2025 </span> </p>
+				  					<p class="mb-0 font_14">Certification ID: <span> dc8880a8-0e1d-46d3-8ebe-7611beead1fb </span></p>
+				  					<a href="" class="text-decoration-none mt-2 d-block">Show Description</a>
+				  				</div>
+				  			</div>
+				  			<div class="col-md-1">
+				  				<div class="add_portfolio float-end">
+										<a href="javascript:void(0)" class="icon_color font_12">
+											<i class="fas fa-trash-alt"></i>
+										</a>
+									</div>
+				  			</div>
+				  		</div>
+				  		<div class="d-flex border-bottom pb-4 pt-4">
+				  			<div class="col-md-2">
+				  				<div class="certification_image">
+				  					<img src="{{url('images/twitter_thumb.png')}}" class="img-fluid">
+				  				</div>
+				  			</div>
+				  			<div class="col-md-9">
+				  				<div class="certification_details ">
+				  					<h2 class="font_24 font_weight_700">Meta Certified Buying Professional</h2>
+				  					<p class="mb-0 font_14">Provider: <span> Meta/ FB </span></p>
+				  					<p class="mb-0 font_14">Issue: <span> March 2024 - Expires: March 2025 </span> </p>
+				  					<p class="mb-0 font_14">Certification ID: <span> dc8880a8-0e1d-46d3-8ebe-7611beead1fb </span></p>
+				  					<a href="" class="text-decoration-none mt-2 d-block">Show Description</a>
+				  				</div>
+				  			</div>
+				  			<div class="col-md-1">
+				  				<div class="add_portfolio float-end">
+										<a href="javascript:void(0)" class="icon_color font_12">
+											<i class="fas fa-trash-alt"></i>
+										</a>
+									</div>
+				  			</div>
+				  		</div>
+				  	</div>
+				  	<!-- Yadi certification   -->
+				  	<div class="no-certifications text-center mt-4">
+					  	<div class=" mb-5">
+						    <img class="w-25" src="{{url('images/wolfram-u-certifications.png')}}" alt="">
+						  </div>
+					    <p class="card-text font_16">Listing your certifications can help prove your specific knowledge or abilities. (+10%) <br /> You can add them manually. </p>	
+					    <a href="javascript:void(0)" class="font_16 text_green text-decoration-none" data-bs-toggle="modal" data-bs-target="#certification">
+								Add manually
+							</a>
+						</div>
 				  </div>
 				</div>
 			</div>

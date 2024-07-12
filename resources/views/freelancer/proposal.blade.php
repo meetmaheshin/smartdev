@@ -137,17 +137,19 @@
                                 </div>
                             </div>
                         </div>
-                        <hr class="grey_hr">
-                        <div class="col-md-8">
-                            <h6 class="font_weight_600">You'll Receive</h6>
-                            <p class="text-muted font_13">Your estimated payment, after service fees<button type="button" class="bg-transparent border-0 ms-2 color_green" id="final_cut_tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="This is the number of Tokens that will be deducted from your balance when you submit proposal."><i class="fas fa-info-circle font_14"></i></button></p>
+                        <div class="row">
+                            <hr class="grey_hr">
+                            <div class="col-md-8">
+                                <h6 class="font_weight_600">You'll Receive</h6>
+                                <p class="text-muted font_13">Your estimated payment, after service fees<button type="button" class="bg-transparent border-0 ms-2 color_green" id="final_cut_tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="This is the number of Tokens that will be deducted from your balance when you submit proposal."><i class="fas fa-info-circle font_14"></i></button></p>
 
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <div class="dollar_before position-relative">
-                                    <i class="fas fa-dollar-sign"></i>
-                                    <input class="form-control text-end" id="final_cut_rate" step="any" type="number" placeholder="0.00" value="0" />
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <div class="dollar_before position-relative">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <input class="form-control text-end" id="final_cut_rate" step="any" type="number" placeholder="0.00" value="0" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

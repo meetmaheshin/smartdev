@@ -43,7 +43,9 @@
                             @endif
                         </div>
                         <div class="mb-3">
-                            <label class="form-label font_weight_600" for="wallet_address">Wallet Address<span class="asterisk">*</span></label>
+                            <label class="form-label font_weight_600" for="wallet_address">Wallet Address<span class="asterisk">*</span>
+                                <button type="button" class="bg-transparent border-0 ms-1 color_green font_14" id="Wallet_Address" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Please enter a valid wallet address. Ensure it matches the correct format for the specific cryptocurrency. Common formats include a string of alphanumeric characters, typically starting with specific prefixes depending on the currency (e.g., '0x' for Ethereum, '1' or '3' for Bitcoin). Double-check for any typos or extra spaces."><i class="fas fa-info-circle font_14"></i></button></label>
+                            </label>
                             <input class="form-control" id="wallet_address" type="text" placeholder="Wallet Address" name="wallet_address" value="{{ old('wallet_address') }}" />
                             @if ($errors->has('wallet_address'))
                             <span class="text-danger">{{ $errors->first('wallet_address') }}</span>
