@@ -15,9 +15,9 @@
 					<span class="font_weight_500 color_grey">Scope</span>
 				</div>
 				<div class="posting_step_heading mb-4">
-					<h4 class="font_weight_500">Next, estimate the scope of your work.</h4>
+					<h4 class="font_weight_600">Next, estimate the scope of your work.</h4>
 				</div>
-				<p class="font_14 color_grey fw-normal">These aren't final answers, but this information helps us recommend the right talent for what you need.</p>
+				<p class="font_16 color_grey fw-normal">These aren't final answers, but this information helps us recommend the right talent for what you need.</p>
 			</div>
 			<div class="col-lg-6 create_post">
 				<div class="posting_three_content px-md-4 px-2">
@@ -31,8 +31,8 @@
 									<input type="radio" name="type" id="project_term_1" value="large" @if($project->type=='large') checked @endif>
 									<span class="mid_dot_parent"></span>
 									<div class="label_content">
-										<p class="font_14 color_black font_weight_500">Large</p>
-										<p class="m-0 font_11 color_black">Longer term or complex initiatives (ex. design and build a full website)</p>
+										<p class="font_16 color_black font_weight_600">Large</p>
+										<p class="m-0 font_12 color_black">Longer term or complex initiatives (ex. design and build a full website)</p>
 									</div>
 								</label>
 							</div>
@@ -41,8 +41,8 @@
 									<input type="radio" name="type" id="project_term_2" value="medium" @if($project->type=='medium') checked @endif>
 									<span class="mid_dot_parent"></span>
 									<div class="label_content">
-										<p class="font_14 color_black font_weight_500">Medium</p>
-										<p class="m-0 font_11 color_black">Well-defined projects (ex. a landing page)</p>
+										<p class="font_16 color_black font_weight_600">Medium</p>
+										<p class="m-0 font_12 color_black">Well-defined projects (ex. a landing page)</p>
 									</div>
 								</label>
 
@@ -52,14 +52,14 @@
 									<input type="radio" name="type" id="project_term_3" value="small" @if($project->type=='small') checked @endif>
 									<span class="mid_dot_parent"></span>
 									<div class="label_content">
-										<p class="font_14 color_black font_weight_500">Small</p>
-										<p class="m-0 font_11 color_black">Quick and straightforward tasks (ex. update text and images on a webpage)</p>
+										<p class="font_16 color_black font_weight_500">Small</p>
+										<p class="m-0 font_12 color_black">Quick and straightforward tasks (ex. update text and images on a webpage)</p>
 									</div>
 								</label>
 
 							</div>
 						</div>
-						<div class="project_term_length font_13 fw-normal color_black"></div>
+						<div class="project_term_length font_14 fw-normal color_black"></div>
 						<div class="project_level_experience mt-4"></div>
 
 						<!-- <div class="contract_hire">
