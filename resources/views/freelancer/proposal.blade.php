@@ -206,12 +206,16 @@
                         </div>
                         <div class="wp-attach">
                             <label class="up-label">
-                                Attachments
+                                Attachments(Maximum file size: 5 MB)
+                                <div id="file-type-info" class="text-muted mb-2">Supported file types: png, jpg, jpeg</div>
                             </label>
+
                             <div class="d-flex font_14 up_upload_btn justify-content-center align-items-center">
                                 <input type="file" name="attachment[]" id="attachment" accept="image/*" multiple />
                             </div>
                         </div>
+                        <div class="text-danger error" data-error="attachment"></div>
+
                     </div>
                 </div>
             </div>

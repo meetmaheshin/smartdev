@@ -61,6 +61,7 @@ $(function () {
 // Proposal Submit by freelancer
 $("#submit_proposal").on("submit", function (e) {
     e.preventDefault();
+    $('.error').html('');
     var formData = new FormData();
     let TotalFiles = $("#attachment")[0].files.length; //Total files
     let images = $("#attachment")[0];
@@ -103,17 +104,47 @@ $("#submit_proposal").on("submit", function (e) {
                 });
             } else {
                 $("#fileserror").text(response.errors);
-               
+                $(".loader-section").css('display', 'none');
             }
         },
-        error(error) {
-            let errors = error.responseJSON.errors;
-            for (let key in errors) {
-                let errorDiv = $(`.error[data-error="${key}"]`);
-                if (errorDiv.length) {
-                    errorDiv.text(errors[key][0]);
+        error: function(xhr, status, error) {
+
+            var jsonResponse = JSON.parse(xhr.responseText);
+            if (jsonResponse.errors) {
+                $(".error").text("");
+                if (error.status == 413) { // Check for Payload Too Large (HTTP 413)
+                    let errorDiv = $(`.error[data-error="filename"]`);
+                    if (errorDiv.length) {
+                        errorDiv.text('File size exceeds the limit.');
+                    }
+                }else{
+                    // let errors = error.responseJSON.errors;
+                    for (let key in jsonResponse.errors) {
+                       
+                        var errorMessages = jsonResponse.errors[key];
+                        var errorDiv = $(`.error[data-error="${key}"]`);
+                        if (errorDiv.length) {
+                            errorDiv.text(errorMessages[0]); // Display only the first error message
+                        }
+                        if(errorMessages[0] == 'The attachment.0 failed to upload.'){
+                            let errorDiv = $(`.error[data-error="attachment"]`);
+                            if (errorDiv.length) {
+                                errorDiv.text('File size exceeds the limit.');
+                            }
+                        }
+
+
+                        let errorfrom = $(`.form-control[data-name="${key}"]`);
+                        if (errorfrom.length) {
+                            errorfrom.addClass("is-invalid");
+                        }
+                    }
                 }
             }
+            setTimeout(function () {
+                $(".loader-section").css('display', 'none');
+
+            }, 1000);
             jQuery("button .continue").removeAttr("disabled");
         },
     });

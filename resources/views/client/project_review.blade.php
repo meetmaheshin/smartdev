@@ -512,12 +512,12 @@
             imgPreview.appendChild(wrapper);
 
             $('.remove-btn').click(function() {
-                $(this).parent('.wrapper-thumb-list').remove();
-                 // Update file input: remove the corresponding file
-                var index = Array.from(imgPreview.children).indexOf(wrapper);
-                console.log(index);
+                var wrapper =  $(this).parent('.wrapper-thumb-list');
+                var index = Array.from(imgPreview.children).indexOf(wrapper[0]);
                 if (index !== -1) {
-                    selectedFiles.files.splice(index, 1);
+                    selectedFiles.splice(index, 1);
+                    // Remove the image preview element
+                    wrapper.remove();
                 }
             });
 
@@ -541,9 +541,6 @@
                 $('.loader-section').show();
             },
             success: function(response) {
-
-                // Hide loader
-
                 // Handle success response
                 if (response.status == "true") {
                     setTimeout(function () {
