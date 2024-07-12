@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
+class EnsureEmailIsNotVerified
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
+     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
+     */
+    public function handle(Request $request, Closure $next)
+    {
+        if (Auth::check() && Auth::user()->hasVerifiedEmail()) {
+            if(auth()->user()->status == '1'){
+                if(auth()->user()->is_admin== User::ROLE_CLIENT){
+                    return redirect()->route('clientdashboard');
+                }elseif(auth()->user()->is_admin== User::ROLE_FREELANCER){
+                    return redirect()->route('dashboard');
+                }else{
+                    return redirect()->route('admin.dashboard');
+                }
+            }
+            return redirect('/');
+        }
+
+        return $next($request);
+    }
+}

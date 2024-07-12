@@ -66,6 +66,7 @@ class Kernel extends HttpKernel
         'verified' => \App\Http\Middleware\EnsureEmailIsVerified::class,
         'accessControl' => \App\Http\Middleware\AccessControl::class,
         'prevent-back-history' => \App\Http\Middleware\PreventBackLogin::class,
-        'check-profile' => \App\Http\Middleware\FreelancerProfile::class
+        'check-profile' => \App\Http\Middleware\FreelancerProfile::class,
+        'unverified' => \App\Http\Middleware\EnsureEmailIsNotVerified::class,
     ];
 }

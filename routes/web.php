@@ -102,12 +102,11 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('/admin/login', function () {
         return view('admin.auth.login');
     });
+    Route::get('/email/verify', function () {
+        return view('auth.verify',['title'=>'Verify your email - '.config('app.name')]);
+    })->name('auth.verify')->middleware('unverified');;
 });
 
-Route::get('/email/verify', function () {
-    return view('auth.verify');
-    //return redirect('/login');
-})->name('auth.verify');
   
 // Route::post('email/resend', [VerificationController::class, 'resend'])->middleware([ 'throttle:6,1'])->name('verification.resend');
 // Route to show the resend form
