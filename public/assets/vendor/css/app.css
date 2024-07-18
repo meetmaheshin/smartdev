@@ -2379,6 +2379,14 @@ input.search-control-2::placeholder {
 	border-radius: 10px;
 	cursor: pointer
 }
+.remove {
+    position: absolute;
+    top: -15px;
+    right: -12px;
+    font-size: 18px;
+}
+
+
 
 @media screen and (max-width:1280px) {
 	.email-header {
