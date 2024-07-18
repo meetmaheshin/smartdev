@@ -62,24 +62,7 @@
 						<div class="project_term_length font_14 fw-normal color_black"></div>
 						<div class="project_level_experience mt-4"></div>
 
-						<!-- <div class="contract_hire">
-								<p class="font_13 font_weight_500 color_black mb-1">Is this job a contract-to-hire opportunity?</p>
-								<span class="font_11 fw-normal color_grey d-inline-block mb-4">
-									This means you'll start with a contract, and later explore a full-time option with the talent. Your answer helps us better support your hiring needs.
-								</span>
-								<div class="custom_radio_btn d-flex">
-									<label for="contract_yes" class="position-relative d-flex mb-3 me-4">
-										<input type="radio" name="contract_hire" id="contract_yes" checked="checked">
-										<span class="d-inline-block"></span>
-										Yes
-									</label>
-									<label for="contract_no" class="position-relative d-flex mb-3">
-										<input type="radio" name="contract_hire" id="contract_no">
-										<span class="d-inline-block"></span>
-										No
-									</label>
-								</div>
-							</div> -->
+						
 						<div class="back-fwd-btn px-0 d-flex justify-content-between">
 							<a href="{{route('project.skill.view')}}" class="btn">Back</a>
 							<button type="submit" class="btn btn-sm btn-success continue border-0 font_weight_500" disabled>Next: Budget</button>

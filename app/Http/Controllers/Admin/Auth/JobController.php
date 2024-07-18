@@ -114,6 +114,9 @@ class JobController extends Controller
             'hourly_from' => $request->hourly_from,
             'hourly_to' => $request->hourly_to,
             'project_budget' => $request->fixed,
+            'type' => $request->type,
+            'duration' => $request->duration,
+            'level' => $request->level,
         ]);
         return redirect()->route('admin.jobs')->with('success', 'Post Successfully Updated ');
     }
