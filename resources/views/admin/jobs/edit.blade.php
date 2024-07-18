@@ -141,7 +141,7 @@
 
                                     <div class="project_term">
                                         <div class="project_term_radio custom_radio_btn">
-                                            <label for="project_term_1" class="position-relative d-flex mb-3">
+                                            <label for="project_term_1" class="position-relative d-flex mb-3 align-items-baseline">
                                                 <input type="radio" name="type" id="project_term_1" value="large" @if($project->type=='large') checked @endif>
                                                 <span class="mid_dot_parent"></span>
                                                 <div class="label_content">
@@ -151,7 +151,7 @@
                                             </label>
                                         </div>
                                         <div class="project_term_radio custom_radio_btn">
-                                            <label for="project_term_2" class="position-relative d-flex mb-3">
+                                            <label for="project_term_2" class="position-relative d-flex mb-3 align-items-baseline">
                                                 <input type="radio" name="type" id="project_term_2" value="medium" @if($project->type=='medium') checked @endif>
                                                 <span class="mid_dot_parent"></span>
                                                 <div class="label_content">
@@ -162,12 +162,12 @@
 
                                         </div>
                                         <div class="project_term_radio custom_radio_btn">
-                                            <label for="project_term_3" class="position-relative d-flex mb-3">
+                                            <label for="project_term_3" class="position-relative d-flex mb-3 align-items-baseline">
                                                 <input type="radio" name="type" id="project_term_3" value="small" @if($project->type=='small') checked @endif>
                                                 <span class="mid_dot_parent"></span>
                                                 <div class="label_content">
                                                     <p class="font_16 color_black font_weight_500">Small</p>
-                                                    <p class="m-0 font_12 color_black">Quick and straightforward tasks (ex. update text and images on a webpage)</p>
+                                                    <p class="m-0 color_black">Quick and straightforward tasks (ex. update text and images on a webpage)</p>
                                                 </div>
                                             </label>
 
@@ -456,6 +456,23 @@
             }
         });
 
+
+jQuery(document).on("click", ".project_term_edit", function () {
+            let edit_button = jQuery(this);
+            if (edit_button.parents().hasClass("project_term_length")) {
+                jQuery(".project_term_length .custom_radio_btn")
+                    .find("label")
+                    .find(".label_text")
+                    .removeClass("font_14 color_black font_weight_500");
+            }
+            edit_button.parents(".project_term_radio").removeClass("d-flex");
+            edit_button.parent().siblings().show();
+            edit_button.parent().show();
+            edit_button.parent().find("label").find("input").show();
+            edit_button.parent().find("label").find("span").show();
+            edit_button.parent().find("label").css("pointer-events", "inherit");
+            edit_button.remove();
+
         $(".remove").click(function (e) {
             e.preventDefault();
             var id = $(this).attr("id");
@@ -476,6 +493,7 @@
                     console.log(error);
                 },
             });
+
         });
 </script>
 @endsection

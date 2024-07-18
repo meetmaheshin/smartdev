@@ -2385,7 +2385,17 @@ input.search-control-2::placeholder {
     right: -12px;
     font-size: 18px;
 }
-
+.project_term .label_content p:last-of-type, .project_level_experience .label_content p:last-of-type {
+    background: #F4F6F8;
+    opacity: 0.79;
+    border-radius: 8px;
+    padding: 8px 12px 11px 8px;    
+    line-height: 16px;
+    font-size: 14px;
+}
+.custom_radio_btn label input{
+	margin-right: 10px;
+}
 
 
 @media screen and (max-width:1280px) {
