@@ -52,7 +52,7 @@
                                 <td>
                                     <div class="d-flex order-actions">
                                         <a href="{{route('admin.skills.edit',['id'=>$skill->id])}}" class=""><i class='bx bxs-edit'></i></a>
-                                        <a href="javascript:;" data-id = '{{$skill->id}}' class="ms-3 delete_skill"><i class='bx bxs-trash'></i></a>
+                                        <a href="javascript:;" data-url="{{route('admin.skills.delete')}}" data-id = '{{$skill->id}}' class="ms-3 delete_row"><i class='bx bxs-trash'></i></a>
 
                                     </div>
                                 </td>
@@ -69,50 +69,4 @@
     </div>
 </div>
 @endsection 
-@section('js')
-<script>
-		$(document).ready(function() {
-			$('#example').DataTable();
-            $('.delete_skill').on('click',function(e){
-                var id = $(this).data('id')
-                swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to delete this!",
-                    type: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!',
-                    showLoaderOnConfirm: true,
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            $.ajax({
-                                url: '/admin/skills/delete',
-                                type: "POST",
-                                data: {
-                                    "_token": "{{ csrf_token() }}",
-                                    id: id,
-                                },
-                                dataType: "json",
-                                success: function (response) {
-                                    swal.fire("Saved!", "", "success");
-                                    setTimeout(function () {
-                                        location.reload();
-                                    }, 500);
-                                },
-                                error: function (xhr, ajaxOptions, thrownError) {
-                                    swal.fire(
-                                        "Error deleting!!",
-                                        "Please try again",
-                                        "error"
-                                    );
-                                },
-                            });
-                        } else if (result.isDenied) {
-                            swal.fire("Changes are not saved", "", "info");
-                        }
-                    });
-            });
-		  });
-	</script>
-@endsection
+

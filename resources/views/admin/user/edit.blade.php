@@ -56,6 +56,26 @@
                                         </span>
                                         @enderror
                                     </div>
+                                    @if($user->is_admin == 0)
+                                    <div class="mb-3">
+                                        <label for="title" class="form-label">Title</label>
+                                        <input type="text" class="form-control" id="title" placeholder="Enter Title" name="title" value="{{$user->FreelancerProfile ? $user->FreelancerProfile->bio : '' }}">
+                                        @error('title')
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="user_profile_bio" class="form-label">Bio</label>
+                                        <textarea class="form-control" id="user_profile_bio" placeholder="Enter Bio" name="user_profile_bio">{{$user->FreelancerProfile ? $user->FreelancerProfile->title : ''}}</textarea>
+                                        @error('bio')
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    @endif
                                     <div class="d-grid">
                                         <button type="submit" class="btn btn-primary">Update</button>
                                     </div>

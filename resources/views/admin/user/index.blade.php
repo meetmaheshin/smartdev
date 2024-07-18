@@ -45,7 +45,7 @@
                                 <td>
                                     <div class="d-flex order-actions">
                                         <a href="{{route('admin.user.edit',['id'=>$users->id])}}" class=""><i class='bx bxs-edit'></i></a>
-                                        <a href="javascript:;" data-id = '{{$users->id}}' class="ms-3 account_closed"><i class='bx bxs-trash'></i></a>
+                                        <a href="javascript:;" data-id = '{{$users->id}}' data-url="{{route('admin.user.delete')}}" class="ms-3 delete_row"><i class='bx bxs-trash'></i></a>
 
                                     </div>
                                 </td>
@@ -62,48 +62,4 @@
     </div>
 </div>
 @endsection 
-@section('js')
-<script>
-		$(document).ready(function() {
-			$('#example').DataTable();
-            $('.account_closed').on('click',function(e){
-                var id = $(this).data('id')
-                swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to close account this!",
-                    type: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, Close it!',
-                    showLoaderOnConfirm: true,
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            $.ajax({
-                                url: '/admin/user/delete',
-                                type: "POST",
-                                data: {
-                                    "_token": "{{ csrf_token() }}",
-                                    id: id,
-                                },
-                                dataType: "json",
-                                success: function (response) {
-                                    swal.fire("Saved!", "", "Closed Account");
-                                    location.reload();
-                                },
-                                error: function (xhr, ajaxOptions, thrownError) {
-                                    swal.fire(
-                                        "Error deleting!!",
-                                        "Please try again",
-                                        "error"
-                                    );
-                                },
-                            });
-                        } else if (result.isDenied) {
-                            swal.fire("Changes are not saved", "", "info");
-                        }
-                    });
-            });
-		  });
-	</script>
-@endsection
+

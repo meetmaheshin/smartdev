@@ -48,6 +48,7 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
     Route::get('/admin/category/edit/{id}',  [AdminJobController::class, 'categoryEdit'] )->name('admin.category.edit');
     Route::get('/admin/category/add',  [AdminJobController::class, 'categoryAdd'] )->name('admin.category.add');
     Route::post('admin/category/update', [AdminJobController::class, 'categoryUpdate'])->name('admin.category.update');
+    Route::post('/admin/category/delete', [AdminJobController::class, 'categoryDelete'])->name('admin.category.delete');
 
 
     // SPeciality
@@ -80,6 +81,13 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
     Route::get('/admin/certification/add',  [AdminDashboardController::class, 'certificationAdd'] )->name('admin.certification.add');
     Route::post('admin/certification/update', [AdminDashboardController::class, 'certificationUpdate'])->name('admin.certification.update');
     Route::post('/admin/certification/delete', [AdminDashboardController::class, 'certificationDelete'])->name('admin.certification.delete');
+
+
+     // portfolio
+     Route::get('/admin/portfolio',  [AdminDashboardController::class, 'portfolio'] )->name('admin.portfolio');
+     Route::get('/admin/portfolio/edit/{id}',  [AdminDashboardController::class, 'portfolioEdit'] )->name('admin.portfolio.edit');
+     Route::post('admin/portfolio/update', [AdminDashboardController::class, 'portfolioUpdate'])->name('admin.portfolio.update');
+     Route::post('/admin/portfolio/delete', [AdminDashboardController::class, 'portfolioDelete'])->name('admin.portfolio.delete');
 
 
 

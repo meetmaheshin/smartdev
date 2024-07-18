@@ -50,5 +50,12 @@
             <div class="menu-title">Certification</div>
         </a>
     </li>
+    <li>
+        <a href="{{route('admin.portfolio')}}" >
+            <div class="parent-icon"><i class='bx bx-briefcase'></i>
+            </div>
+            <div class="menu-title">Portfolio</div>
+        </a>
+    </li>
     
 </ul>

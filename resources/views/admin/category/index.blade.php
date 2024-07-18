@@ -50,6 +50,7 @@
                                 <td>
                                     <div class="d-flex order-actions">
                                         <a href="{{route('admin.category.edit',['id'=>$categories->id])}}" class=""><i class='bx bxs-edit'></i></a>
+                                        <a href="javascript:;" data-url="{{route('admin.category.delete')}}" data-id = '{{$categories->id}}' class="ms-3 delete_row"><i class='bx bxs-trash'></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -65,10 +66,3 @@
     </div>
 </div>
 @endsection 
-@section('js')
-<script>
-		$(document).ready(function() {
-			$('#example').DataTable();
-		  } );
-	</script>
-@endsection

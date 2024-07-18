@@ -8,10 +8,8 @@
 	<!--favicon-->
 	<link rel="icon" href="{{url('images/dev3dao_fav_icon.png')}}" type="image/png" />
 	<!--plugins-->
-	<link href="{{url('assets/vendor/plugins/vectormap/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet"/>
 	<link href="{{url('assets/vendor/plugins/simplebar/css/simplebar.css')}}" rel="stylesheet" />
 	<link href="{{url('assets/vendor/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" />
-	<link href="{{url('assets/vendor/plugins/metismenu/css/metisMenu.min.css')}}" rel="stylesheet" />
 	<!-- loader-->
 	<link href="{{url('assets/vendor/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
 
@@ -24,9 +22,6 @@
 	<link href="{{url('assets/vendor/css/app.css')}}" rel="stylesheet">
 	<link href="{{url('assets/vendor/css/icons.css')}}" rel="stylesheet">
 	<!-- Theme Style CSS -->
-	<link rel="stylesheet" href="{{url('assets/vendor/css/dark-theme.css')}}" />
-	<link rel="stylesheet" href="{{url('assets/vendor/css/semi-dark.css')}}" />
-	<link rel="stylesheet" href="{{url('assets/vendor/css/header-colors.css')}}" />
 	<link rel="stylesheet" type="text/css" href="{{asset('css/sweetalert2.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/toastr.css')}}">
 
@@ -78,8 +73,6 @@
 							<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
 								@csrf
 							</form>
-
-
 						</ul>
 					</div>
 				</nav>
@@ -99,6 +92,7 @@
   	@include('admin.layouts.sections.commonjs')
 	@yield('js')
 	<script> 
+		$('#example').DataTable();
 
 		toastr.options.timeOut = 10000;
 		@if (Session::has('error'))
@@ -106,6 +100,59 @@
 		@elseif(Session::has('success'))
 			toastr.success("{{ Session::get('success') }}");
 		@endif
+
+
+		$(document).on('click', '.delete_row', function(e){
+			var id = $(this).data('id');
+			var url = $(this).data('url');
+
+			swal.fire({
+				title: 'Are you sure?',
+				text: "You won't be able to delete this!",
+				type: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Yes, delete it!',
+				showLoaderOnConfirm: true,
+				}).then((result) => {
+				if (result.isConfirmed) {
+					$.ajax({
+						url: url,
+						type: "POST",
+						data: {
+							"_token": "{{ csrf_token() }}",
+							id: id,
+						},
+						dataType: "json",
+						success: function (response) {
+							if(response.status == true){
+								swal.fire("success!", response.message, "success");
+								setTimeout(function () {
+									location.reload();
+								}, 500);
+							}else{
+								swal.fire("error", response.message, "error");
+						
+							}
+
+						},
+						error: function (xhr, ajaxOptions, thrownError) {
+							swal.fire(
+								"Error deleting!!",
+								"Please try again",
+								"error"
+							);
+						},
+					});
+				} else if (result.isDenied) {
+					swal.fire("Changes are not saved", "", "info");
+				}
+			});
+		});
+
+
+
 	</script>
 </body>
 

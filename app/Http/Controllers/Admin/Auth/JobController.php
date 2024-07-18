@@ -10,6 +10,8 @@ use App\Models\Specialty;
 use App\Models\Skill;
 use App\Models\Category;
 use App\Models\ProjectDetail;
+use App\Models\FreelancerProfile;
+use App\Models\ProjectSkill;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use DB;
@@ -18,111 +20,117 @@ use DB;
 class JobController extends Controller
 {
 
-  public function index(Request $request){
-    $data['project']=Project::where('job','new')->get();
-    return view('admin.jobs.index',$data);
-    
-  }
+    public function __construct() {
+        $this->middleware(['auth']);
+        $this->profile = new FreelancerProfile;
+        $this->user = new User;
+    }
 
-  public function edit(Request $request){
-    $data['project']=Project::whereId($request->id)->first();
-    $data['web3specialty'] = Specialty::where('type', 1)->get();
-    $data['web3_category'] = Category::where('type', 1)->get();
-    return view('admin.jobs.edit',$data);
-  }
-  public function getSpeciality(Request $request)
-  {
-      $category = Category::with('specialties')->where('id', $request->catId)->first();
-      $speciality = $category->specialties()
-          ->groupBy('title')
-          ->get();
-      return response()->json(['data' => $speciality]);
-  }
+    public function index(Request $request){
+        $data['project']=Project::where('job','new')->get();
+        return view('admin.jobs.index',$data);
+        
+    }
 
-  public function project_review(Request $request, $id)
-  {
-            $validate = Validator::make(
-            $request->all(),
-            [
-                'title' => 'required',
-                'description' => 'required',
-                'budgets' => 'required',
-                'filename.*' => 'required|image|mimes:jpg,png,jpeg,JPG,PNG,JPEG,PDF,pdf|max:5000',
-                'hourly_from' => [
-                    'required_if:budgets,hourly',
-                    'numeric',
-                    'min:2',
-                    'nullable'
+    public function edit(Request $request){
+        $data['project']=Project::whereId($request->id)->first();
+        $data['web3specialty'] = Specialty::where('type', 1)->get();
+        $data['web3_category'] = Category::where('type', 1)->get();
+        return view('admin.jobs.edit',$data);
+    }
+    public function getSpeciality(Request $request)
+    {
+        $category = Category::with('specialties')->where('id', $request->catId)->first();
+        $speciality = $category->specialties()
+            ->groupBy('title')
+            ->get();
+        return response()->json(['data' => $speciality]);
+    }
+
+    public function project_review(Request $request, $id)
+    {
+                $validate = Validator::make(
+                $request->all(),
+                [
+                    'title' => 'required',
+                    'description' => 'required',
+                    'budgets' => 'required',
+                    'filename.*' => 'required|image|mimes:jpg,png,jpeg,JPG,PNG,JPEG,PDF,pdf|max:5000',
+                    'hourly_from' => [
+                        'required_if:budgets,hourly',
+                        'numeric',
+                        'min:2',
+                        'nullable'
+                    ],
+                    'hourly_to' => [
+                        'required_if:budgets,hourly',
+                        'numeric', 
+                        'nullable',
+                        function ($attribute, $value, $fail) use($request) {
+                            if ($request->input('budgets') === 'hourly' && $value < $request->input('hourly_from')) {
+                                $fail('Hourly rate must be greater than starting charges when budget type is hourly.');
+                            }
+                        },
+                    ],
+                    'project_budget' => 'required_if:budgets,project|numeric|min:5|nullable'
                 ],
-                'hourly_to' => [
-                    'required_if:budgets,hourly',
-                    'numeric', 
-                    'nullable',
-                    function ($attribute, $value, $fail) use($request) {
-                        if ($request->input('budgets') === 'hourly' && $value < $request->input('hourly_from')) {
-                            $fail('Hourly rate must be greater than starting charges when budget type is hourly.');
-                        }
-                    },
-                ],
-                'project_budget' => 'required_if:budgets,project|numeric|min:5|nullable'
-            ],
-            [
-                'skill_id.required' => 'Must be select at least one skill',
-                'duration.required' => 'Please select duration',
-                'filename.*.required' => 'Please attach at least one file',
-                'filename.*.mimes' => 'Only jpg, jpeg, png images are allowed',
-                'filename.*.max' => 'Sorry! Maximum allowed size for an image is 5MB',
-            ]
-        );
+                [
+                    'skill_id.required' => 'Must be select at least one skill',
+                    'duration.required' => 'Please select duration',
+                    'filename.*.required' => 'Please attach at least one file',
+                    'filename.*.mimes' => 'Only jpg, jpeg, png images are allowed',
+                    'filename.*.max' => 'Sorry! Maximum allowed size for an image is 5MB',
+                ]
+            );
 
-      if ($validate->fails()) {
-          return Redirect::back()->withErrors($validate);
-      }
+        if ($validate->fails()) {
+            return Redirect::back()->withErrors($validate);
+        }
 
-      if ($request->hasFile('filename')) {
-          $allowedfileExtension = ['jpg', 'png', 'PNG', 'JPG', 'PNG', 'jpeg', 'JPEG'];
-          $files = $request->file('filename');
-          if (count($request->filename) > 0) {
-              foreach ($files as $file) {
-                  $filename = $file->getClientOriginalName();
-                  $extension = $file->getClientOriginalExtension();
-                  $check = in_array($extension, $allowedfileExtension);
-                  if ($check) {
-                      $path = $file->store('/storage/filename', ['disk' =>   'my_files']);
-                      $new_picture_array[] = array('project_id' => $id, 'filename' => $path, 'attachment' => $filename);
-                  } else {
-                      return Redirect::back()->with('error', 'Sorry Only Upload png ,jpg ,jpeg');
-                  }
-              }
-              ProjectDetail::insert($new_picture_array);
-          }
-      }
-      
-      $project = Project::where('id', $id);
-      $project->update([
-          'title' => $request->title,
-          'description' => $request->description,
-          'budget' => $request->budgets,
-          'hourly_from' => $request->hourly_from,
-          'hourly_to' => $request->hourly_to,
-          'project_budget' => $request->fixed,
-      ]);
-      return redirect()->route('admin.jobs')->with('success', 'Post Successfully Updated ');
-  }
+        if ($request->hasFile('filename')) {
+            $allowedfileExtension = ['jpg', 'png', 'PNG', 'JPG', 'PNG', 'jpeg', 'JPEG'];
+            $files = $request->file('filename');
+            if (count($request->filename) > 0) {
+                foreach ($files as $file) {
+                    $filename = $file->getClientOriginalName();
+                    $extension = $file->getClientOriginalExtension();
+                    $check = in_array($extension, $allowedfileExtension);
+                    if ($check) {
+                        $path = $file->store('/storage/filename', ['disk' =>   'my_files']);
+                        $new_picture_array[] = array('project_id' => $id, 'filename' => $path, 'attachment' => $filename);
+                    } else {
+                        return Redirect::back()->with('error', 'Sorry Only Upload png ,jpg ,jpeg');
+                    }
+                }
+                ProjectDetail::insert($new_picture_array);
+            }
+        }
+        
+        $project = Project::where('id', $id);
+        $project->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'budget' => $request->budgets,
+            'hourly_from' => $request->hourly_from,
+            'hourly_to' => $request->hourly_to,
+            'project_budget' => $request->fixed,
+        ]);
+        return redirect()->route('admin.jobs')->with('success', 'Post Successfully Updated ');
+    }
 
-  public function category(Request $request){
-    $data['category']=Category::where('type',1)->orderby('id','desc')->get();
-    return view('admin.category.index',$data);
-  }
+    public function category(Request $request){
+        $data['category']=Category::where('type',1)->orderby('id','desc')->get();
+        return view('admin.category.index',$data);
+    }
 
-  public function categoryAdd(Request $request){
-    return view('admin.category.edit',['category' => new Category()]);
-  }
+    public function categoryAdd(Request $request){
+        return view('admin.category.edit',['category' => new Category()]);
+    }
 
-  public function categoryEdit(Request $request,$id){
-      $data['category'] = Category::whereId($request->id)->first();
-    return view('admin.category.edit',$data);
-  }
+    public function categoryEdit(Request $request,$id){
+        $data['category'] = Category::whereId($request->id)->first();
+        return view('admin.category.edit',$data);
+    }
 
     public function categoryUpdate(Request $request){
         $validate = Validator::make(
@@ -142,6 +150,17 @@ class JobController extends Controller
         $cat->type = 1;
         $cat->save();
         return redirect()->route('admin.category')->with('success', 'Category Successfully Updated ');
+    }
+
+    public function categoryDelete(Request $request){
+        $check = Project::where('category_id',$request->id)->first();
+        if(empty($check)){
+            DB::table('category_speciality_skill')->where('category_id', $request->id)->delete();
+            $skill = Category::whereId($request->id)->delete();
+            return response()->json(['status'=> true,'message' => 'Category deleted successfully']);
+        }else{
+            return response()->json(['status'=> false,'message' => 'we cannot delete this Category because this Category is added to any job']);
+        }
     }
 
     public function speciality(Request $request){
@@ -228,9 +247,14 @@ class JobController extends Controller
     }
 
     public function skillsDelete(Request $request){
-        DB::table('category_speciality_skill')->where('skill_id', $request->id)->delete();
-        $skill = Skill::whereId($request->id)->delete();
-        return response()->json(['message' => 'Skill deleted successfully']);
+        $check = ProjectSkill::where('skill_id',$request->id)->first();
+        if(empty($check)){
+            DB::table('category_speciality_skill')->where('skill_id', $request->id)->delete();
+            $skill = Skill::whereId($request->id)->delete();
+            return response()->json(['status'=> true,'message' => 'Skill deleted successfully']);
+        }else{
+            return response()->json(['status'=> false,'message' => 'we cannot delete this skill because this skill is added to any job']);
+        }
     }
 
     // users
@@ -240,7 +264,7 @@ class JobController extends Controller
     }
     
     public function userEdit(Request $request,$id){
-        $data['user'] = User::whereId($request->id)->first();
+        $data['user'] = User::with('FreelancerProfile')->whereId($request->id)->first();
         return view('admin.user.edit',$data);
     }
     
@@ -257,7 +281,7 @@ class JobController extends Controller
             if ($validate->fails()) {
                 return Redirect::back()->withErrors($validate);
             }
-            $user = User::find( $request->id);
+            $user = User::find($request->id);
             if (empty($user)) {// you can do this condition to check if is empty
                 $user= new User;//then create new object
             }
@@ -265,7 +289,10 @@ class JobController extends Controller
             $user->lastname = $request->lastname;
             $user->phone_no = $request->phone_no;
             $user->save();
-           
+
+            $this->profile->updateOrCreateTitle($request->id, $request->title);
+            $this->profile->updateOrCreateBio($request->id, $request->user_profile_bio);
+
 
             return redirect()->route('admin.user')->with('success', 'User Successfully Updated ');
     }
@@ -274,7 +301,7 @@ class JobController extends Controller
         $user = User::whereId($request->id)->update(['status'=>2]);
 
         $user = User::whereId($request->id)->delete();
-        return response()->json(['message' => 'USER Account Closed']);
+        return response()->json(['status'=> true,'message' => 'USER Account Closed']);
     }
     
 

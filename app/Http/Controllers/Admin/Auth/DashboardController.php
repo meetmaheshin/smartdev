@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\User;
 use App\Models\Certification;
+use App\Models\Portfolio;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Hash;
@@ -78,10 +79,50 @@ class DashboardController extends Controller
       return redirect()->route('admin.certification')->with('success', 'Certification Successfully Updated ');
   }
 
-  public function certificationDelete(Request $request){
-    $certification = Certification::whereId($request->id)->delete();
-    return response()->json(['message' => 'Certification deleted successfully']);
-}
+    public function certificationDelete(Request $request){
+      $certification = Certification::whereId($request->id)->delete();
+      return response()->json(['status'=> true,'message' => 'Certification deleted successfully']);
+  }
+
+  // portfolio section
+
+  public function portfolio(){
+    $data['portfolio'] = Portfolio::get();
+    return view('admin.portfolio.index',$data);
+  }
+
+
+  public function portfolioEdit(Request $request){
+    $data['portfolio'] = portfolio::whereId($request->id)->first();
+    return view('admin.portfolio.edit',$data);
+  }
+
+  public function portfolioUpdate(Request $request){
+    $validate = Validator::make(
+        $request->all(),
+        [
+            'title' => 'required',
+        ]
+    );
+    if ($validate->fails()) {
+        return Redirect::back()->withErrors($validate);
+    }
+    $portfolio = portfolio::find( $request->portfolio_id);
+    if (empty($portfolio)) {// you can do this condition to check if is empty
+        $portfolio= new portfolio;//then create new object
+    }
+    $portfolio->title = $request->title;
+    $portfolio->description = $request->description;
+    $portfolio->role = $request->role;
+
+    $portfolio->save();
+    return redirect()->route('admin.portfolio')->with('success', 'Portfolio Successfully Updated ');
+  }
+
+  public function portfolioDelete(Request $request){
+    $portfolio = portfolio::whereId($request->id)->delete();
+    return response()->json(['status'=> true,'message' => 'Portfolio deleted successfully']);
+  }
 
 
 }

@@ -4,7 +4,7 @@
     <div class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-            <div class="breadcrumb-title pe-3">Speciality</div>
+            <div class="breadcrumb-title pe-3">Portfolio</div>
             <div class="ps-3">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 p-0">
@@ -14,19 +14,10 @@
                     </ol>
                 </nav>
             </div>
-            <div class="ms-auto">
-                <div class="btn-group">
-                    <a class="btn btn-primary" href="{{route('admin.speciality.add')}}"> 
-                        <button type="button" class="btn btn-primary">Add</button> 
-                    </a>
-
-                    
-                </div>
-            </div>
         </div>
         
         <!--end breadcrumb-->
-        <h6 class="mb-0 text-uppercase">Speciality</h6>
+        <h6 class="mb-0 text-uppercase">Portfolio</h6>
         
         <hr/>
         <div class="card">
@@ -35,21 +26,24 @@
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
-                                <th> Sno.</th>
+                                <th>Sno.</th>
+                                <th>User</th>
                                 <th>Title</th>
                                 <th>Actions</th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($speciality as $key=> $specialities)
+                            @foreach($portfolio as $key=> $portfolios)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$specialities->title}}</td>
+                                <td>{{$portfolios->user->fullname}}</td>
+                                <td>{{$portfolios->title}}</td>
                                 
                                 <td>
                                     <div class="d-flex order-actions">
-                                        <a href="{{route('admin.speciality.edit',['id'=>$specialities->id])}}" class=""><i class='bx bxs-edit'></i></a>
+                                        <a href="{{route('admin.portfolio.edit',['id'=>$portfolios->id])}}" class=""><i class='bx bxs-edit'></i></a>
+                                        <a href="javascript:;" data-url="{{route('admin.portfolio.delete')}}" data-id = '{{$portfolios->id}}' class="ms-3 delete_row"><i class='bx bxs-trash'></i></a>
                                     </div>
                                 </td>
                             </tr>
