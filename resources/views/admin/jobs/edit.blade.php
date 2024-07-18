@@ -56,7 +56,7 @@
                                             @foreach ($project->images as $files)
                                                 <div class="posting_one_content up_image me-3 col-2 mb-4 position-relative pip_{{ $files->id }}">
                                                     <img src="{{ url($files->filename) }}" class="form-control img-fluid p-0 pip_{{ $files->id }}" />
-                                                    <a href="{{ route('project.image.destroy') }}" class="remove" id="{{ $files->id }}">
+                                                    <a href="{{ route('admin.image.destroy') }}" class="remove" id="{{ $files->id }}">
                                                         <i class='bx bx-x-circle'></i>
                                                     </a>
                                                 </div>
@@ -204,7 +204,6 @@
         web3SpecialityDropdown(project_cat_id);
     }
 
-
     $("#web3_category_id").on("change", function (e) {
         e.preventDefault();
         const catId = $(this).val();
@@ -329,8 +328,8 @@
                                             </label>\
                                         </div>';
 
-// jQuery(document).on("click", ".project_term_radio input", function () {
-jQuery(document).on("click", ".project_term_radio input", function () {
+        // jQuery(document).on("click", ".project_term_radio input", function () {
+        jQuery(document).on("click", ".project_term_radio input", function () {
             let input_change = jQuery(this);
             let input_val = jQuery(this).val();
             let = input_name = jQuery(this).attr("name");
@@ -473,6 +472,28 @@ jQuery(document).on("click", ".project_term_edit", function () {
             edit_button.parent().find("label").find("span").show();
             edit_button.parent().find("label").css("pointer-events", "inherit");
             edit_button.remove();
+
+        $(".remove").click(function (e) {
+            e.preventDefault();
+            var id = $(this).attr("id");
+            $.ajax({
+                url: "/admin/imageDestroy",
+                method: "post",
+                data: {	"_token": "{{ csrf_token() }}", id: id },
+                dataType: "json",
+                success(response) {
+                    if (response.status == "true") {
+                        console.log(this);
+                        $(".posting_one_content .remove")
+                            .parent(".pip_" + id)
+                            .remove();
+                    }
+                },
+                error(error) {
+                    console.log(error);
+                },
+            });
+
         });
 </script>
 @endsection
