@@ -57,7 +57,7 @@
                                                 <div class="posting_one_content up_image me-3 col-2 mb-4 position-relative pip_{{ $files->id }}">
                                                     <img src="{{ url($files->filename) }}" class="form-control img-fluid p-0 pip_{{ $files->id }}" />
                                                     <a href="{{ route('project.image.destroy') }}" class="remove" id="{{ $files->id }}">
-                                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                                        <i class='bx bx-x-circle'></i>
                                                     </a>
                                                 </div>
                                             @endforeach
