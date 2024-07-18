@@ -363,7 +363,7 @@
                 input_change
                     .parents(".project_term_radio")
                     .append(
-                        '<div class="project_term_edit ms-auto pe-5"><i class="font_16 fa-solid fa-pen fas"></i></div>'
+                        '<div class="project_term_edit ms-auto pe-5"> <i class="bx bxs-pencil font_16"></i> </div>'
                     );
             }
             if (
