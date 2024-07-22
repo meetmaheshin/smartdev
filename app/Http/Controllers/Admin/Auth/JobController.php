@@ -15,6 +15,7 @@ use App\Models\ProjectSkill;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use DB;
+use App\Models\Country;
 
 
 class JobController extends Controller
@@ -268,6 +269,10 @@ class JobController extends Controller
     
     public function userEdit(Request $request,$id){
         $data['user'] = User::with('FreelancerProfile')->whereId($request->id)->first();
+        $data['countries'] = Country::all();
+        $data['timezone'] = Timezone();
+        $data['freelancerInfo'] = User::with('country','states','cities')->where('id',$request->id)->first();
+        $data['countryCode'] = Country::where('id',$data['freelancerInfo']->country_id)->first();
         return view('admin.user.edit',$data);
     }
     
@@ -279,10 +284,14 @@ class JobController extends Controller
                     'firstname' => 'required|regex:/^[a-zA-Z ]*$/',
                     'lastname' => 'required|regex:/^[a-zA-Z ]*$/',
                     'phone_no' => 'required|numeric|digits:10',
+                    'country_id' => 'required|exists:countries,id',
+                    'state_id' => 'required|exists:states,id',
+                    'city_id' => 'required|exists:cities,id',
+                    'time_zone' => 'required'
                 ]
             );
             if ($validate->fails()) {
-                return Redirect::back()->withErrors($validate);
+                return Redirect::back()->withErrors($validate)->withInput();
             }
             $user = User::find($request->id);
             if (empty($user)) {// you can do this condition to check if is empty
@@ -291,6 +300,10 @@ class JobController extends Controller
             $user->firstname = $request->firstname;
             $user->lastname = $request->lastname;
             $user->phone_no = $request->phone_no;
+            $user->country_id = $request->country_id;
+            $user->state_id = $request->state_id;
+            $user->city_id = $request->city_id;
+            $user->time_zone = $request->time_zone;
             $user->save();
 
             $this->profile->updateOrCreateTitle($request->id, $request->title);
