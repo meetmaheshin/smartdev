@@ -66,7 +66,7 @@ class Project extends Model
 
     public function getProjectDetailsWithRelations($projectId) {
         return $this->whereId($projectId)
-                    ->with('user.country', 'specialities', 'ProjectSkill.skill', 'images')
+                    ->with('user.country', 'user.states', 'specialities', 'ProjectSkill.skill', 'images')
                     ->with(['saveJobs' => function ($q) {
                         $q->where('user_id', auth()->user()->id);
                     }])

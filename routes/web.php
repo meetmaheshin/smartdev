@@ -56,6 +56,7 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
     Route::get('/admin/speciality/edit/{id}',  [AdminJobController::class, 'specialityEdit'] )->name('admin.speciality.edit');
     Route::get('/admin/speciality/add',  [AdminJobController::class, 'specialityAdd'] )->name('admin.speciality.add');
     Route::post('admin/speciality/update', [AdminJobController::class, 'specialityUpdate'])->name('admin.speciality.update');
+    Route::post('/admin/speciality/delete', [AdminJobController::class, 'specialityDelete'])->name('admin.speciality.delete');
 
     // Skills
     Route::get('/admin/skills',  [AdminJobController::class, 'skills'] )->name('admin.skills');
@@ -88,6 +89,10 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
      Route::get('/admin/portfolio/edit/{id}',  [AdminDashboardController::class, 'portfolioEdit'] )->name('admin.portfolio.edit');
      Route::post('admin/portfolio/update', [AdminDashboardController::class, 'portfolioUpdate'])->name('admin.portfolio.update');
      Route::post('/admin/portfolio/delete', [AdminDashboardController::class, 'portfolioDelete'])->name('admin.portfolio.delete');
+
+
+
+     Route::post('/admin/imageDestroy', [ProjectController::class, 'destroyProjectImage'])->name('project.image.destroys');
 
 
 

@@ -48,10 +48,10 @@
                                     @if(count($project_best)>0)
                                     @foreach($project_best as $projects)
 
-                                        <div class="job-tile-list contact_home_list_{{$projects->id}}">
+                                        <div class="job-tile-list best_matches_result contact_home_list_{{$projects->id}}" data-action="{{route('details')}}" data-id="{{$projects->id}}" data-title="{{$projects->title}}">
                                             <div class="row">
                                                 <div class="col">
-                                                    <button type="button" class="bg-transparent border-0 open_btn best_matches_result font_20 font_weight_600" data-action="{{route('details')}}" data-id="{{$projects->id}}" data-title="{{$projects->title}}" data-bs-toggle="modal" data-bs-target="#sideModal">
+                                                    <button type="button" class="bg-transparent border-0 open_btn font_20 font_weight_600" >
                                                         {{$projects->title}}
                                                     </button>
 
@@ -109,10 +109,10 @@
                                     <p class="font_14">Profile browse jobs that match your experience to a client's hiring preferences. Ordered by most relevant.</p>
                                     @if(count($project_recent)>0)
                                         @foreach($project_recent as $projects)
-                                            <div class="job-tile-list contact_recent_list_{{$projects->id}}">
+                                            <div class="job-tile-list best_matches_result contact_recent_list_{{$projects->id}}" data-action="{{route('details')}}" data-id="{{$projects->id}}" data-title="{{$projects->title}}">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <button type="button" class="bg-transparent border-0 open_btn best_matches_result font_20 font_weight_600" data-action="{{route('details')}}" data-id="{{$projects->id}}" data-title="{{$projects->title}}" data-bs-toggle="modal" data-bs-target="#sideModal">
+                                                        <button type="button" class="bg-transparent border-0 open_btn font_20 font_weight_600" >
                                                             {{$projects->title}}
                                                         </button>
 
@@ -171,10 +171,10 @@
                                     @if(count($project_best)>0)
                                         @foreach($project_best as $projects)
                                             @if($projects->saveJobs != null)
-                                            <div class="job-tile-list contact_save_list_{{$projects->id}}">
+                                            <div class="job-tile-list best_matches_result contact_save_list_{{$projects->id}}" data-action="{{route('details')}}" data-id="{{$projects->id}}" data-title="{{$projects->title}}">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <button type="button" class="bg-transparent border-0 open_btn best_matches_result font_20 font_weight_600" data-action="{{route('details')}}" data-id="{{$projects->id}}" data-title="{{$projects->title}}" data-bs-toggle="modal" data-bs-target="#sideModal">
+                                                        <button type="button" class="bg-transparent border-0 open_btn font_20 font_weight_600">
                                                             {{$projects->title}}
                                                         </button>
                                                     </div>
@@ -344,8 +344,27 @@
                             <div class="about_client_block font_13">
                                 <div class="about_inner color_black py-3">
                                     <h5 class="font_weight_bold mb-3">About the Client</h5>
-                                    <p class="mb-1 font_weight_bold font_14" id="client_name">Client Name</p>
-                                    <p class="mb-0" id="client_country"></p>
+                                    <strong class="font_12 color_black f">
+                                        <p class="mb-1 font_weight_bold font_14" id="client_name">Client Name</p>
+                                        <p class="mb-0" id="client_country"></p>
+                                    </strong>
+                                    <p>
+                                        <small class="text-muted">
+                                            <span class="mb-0" id="client_state"></span>
+                                        </small>
+                                        - <span id="timezone"></span>
+                                    </p>
+                                    <strong class="font_12 color_black f">
+                                        <p> <span id="project_count"></span> jobs posted </p>
+                                    </strong>
+                                    {{-- <p>
+                                        @php
+                                            $avgPaid = ($projects->hourly_from + $projects->hourly_to) / 2;
+                                        @endphp
+                                        <small class="text-muted display-inline-block">
+                                            <strong data-test="job-type">{{ ($projects->budget == 'project' ? 'Fixed-price' : '$' . $avgPaid . '/hr avg hourly rate paid') }}</strong>
+                                        </small>
+                                    </p> --}}
                                 </div>
                             </div>
                         </div>

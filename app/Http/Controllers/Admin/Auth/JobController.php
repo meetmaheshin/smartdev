@@ -15,6 +15,7 @@ use App\Models\ProjectSkill;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use DB;
+use App\Models\Country;
 
 
 class JobController extends Controller
@@ -33,9 +34,27 @@ class JobController extends Controller
     }
 
     public function edit(Request $request){
+        $skills_sub_name = [];
+        $data['all'] = [];
         $data['project']=Project::whereId($request->id)->first();
         $data['web3specialty'] = Specialty::where('type', 1)->get();
         $data['web3_category'] = Category::where('type', 1)->get();
+
+        $data['popularSkills'] = Skill::where('title', 'Popular skills')->get();
+        $projectSkill = ProjectSkill::with('skill')->where('project_id', $request->id)->get();
+
+        foreach ($projectSkill as $key => $projectSkills) {
+            $skill_id = $projectSkills->skill_id;
+            $getParentskillTitle = Skill::select('title')->whereId($skill_id)->first();
+            $parentTitle = $getParentskillTitle->title;
+            $getParentskillData = Skill::select('id')->where('title', $parentTitle)->first();
+            $data_skill = array('skill_id' => $projectSkills->skill_id, 'skill_name' => $projectSkills->skill->skills_sub, 'parent_id' => $getParentskillData->id);
+            $data_skill_name = array($projectSkills->skill->skills_sub);
+            array_push($data['all'], $data_skill);
+            $skills_sub_name[$key] = $data_skill_name;
+        }
+        $data['single'] = array_reduce($skills_sub_name, 'array_merge', array());
+
         return view('admin.jobs.edit',$data);
     }
     public function getSpeciality(Request $request)
@@ -200,6 +219,17 @@ class JobController extends Controller
         return redirect()->route('admin.speciality')->with('success', 'Speciality Successfully Updated ');
     }
 
+    public function specialityDelete(Request $request){
+        $check = Project::where('specialty_id',$request->id)->first();
+        if(empty($check)){
+            DB::table('category_speciality_skill')->where('Specialty_id', $request->id)->delete();
+            $skill = Specialty::whereId($request->id)->delete();
+            return response()->json(['status'=> true,'message' => 'Specialty deleted successfully']);
+        }else{
+            return response()->json(['status'=> false,'message' => 'we cannot delete this specialty because this specialty is added to any job']);
+        }
+    }
+
 
 
     public function skills(Request $request){
@@ -268,6 +298,10 @@ class JobController extends Controller
     
     public function userEdit(Request $request,$id){
         $data['user'] = User::with('FreelancerProfile')->whereId($request->id)->first();
+        $data['countries'] = Country::all();
+        $data['timezone'] = Timezone();
+        $data['freelancerInfo'] = User::with('country','states','cities')->where('id',$request->id)->first();
+        $data['countryCode'] = Country::where('id',$data['freelancerInfo']->country_id)->first();
         return view('admin.user.edit',$data);
     }
     
@@ -279,10 +313,14 @@ class JobController extends Controller
                     'firstname' => 'required|regex:/^[a-zA-Z ]*$/',
                     'lastname' => 'required|regex:/^[a-zA-Z ]*$/',
                     'phone_no' => 'required|numeric|digits:10',
+                    'country_id' => 'required|exists:countries,id',
+                    'state_id' => 'required|exists:states,id',
+                    'city_id' => 'required|exists:cities,id',
+                    'time_zone' => 'required'
                 ]
             );
             if ($validate->fails()) {
-                return Redirect::back()->withErrors($validate);
+                return Redirect::back()->withErrors($validate)->withInput();
             }
             $user = User::find($request->id);
             if (empty($user)) {// you can do this condition to check if is empty
@@ -291,6 +329,10 @@ class JobController extends Controller
             $user->firstname = $request->firstname;
             $user->lastname = $request->lastname;
             $user->phone_no = $request->phone_no;
+            $user->country_id = $request->country_id;
+            $user->state_id = $request->state_id;
+            $user->city_id = $request->city_id;
+            $user->time_zone = $request->time_zone;
             $user->save();
 
             $this->profile->updateOrCreateTitle($request->id, $request->title);

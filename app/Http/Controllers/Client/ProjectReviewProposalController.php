@@ -17,6 +17,7 @@ use App\Http\Requests\SendHireRequest;
 use App\Notifications\SendInvitation;
 use App\Notifications\UnsendInvitation;
 use App\Notifications\PaymentReceived;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Notification;
 use Auth, Session, URL,DB;
 
@@ -144,6 +145,14 @@ class ProjectReviewProposalController extends Controller
         })
        
         ->paginate($this->pageCount);
+
+        $timezoneString = $data['projectDetail']->user->clientDetails->time_zone;
+        $parts = explode('|', $timezoneString);
+        $timezone = $parts[0]; // 'Asia/Kolkata'
+        if(!empty($timezone)){
+            $currentTime = Carbon::now($timezone);
+            $data['timezone']= $currentTime->format('g:i a');
+        }
 
         return view('client.project_review_proposal', $data);
     }

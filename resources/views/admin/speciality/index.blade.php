@@ -50,6 +50,7 @@
                                 <td>
                                     <div class="d-flex order-actions">
                                         <a href="{{route('admin.speciality.edit',['id'=>$specialities->id])}}" class=""><i class='bx bxs-edit'></i></a>
+                                        <a href="javascript:;" data-url="{{route('admin.speciality.delete')}}" data-id = '{{$specialities->id}}' class="ms-3 delete_row"><i class='bx bxs-trash'></i></a>
                                     </div>
                                 </td>
                             </tr>
