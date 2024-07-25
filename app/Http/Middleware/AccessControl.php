@@ -74,7 +74,8 @@ class AccessControl {
                 $roleClient
             ],
             $projectController => [
-                $roleClient
+                $roleClient,
+                $roleAdmin
             ],
             $adminDashboardController => [
                 $roleAdmin

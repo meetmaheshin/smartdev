@@ -34,9 +34,27 @@ class JobController extends Controller
     }
 
     public function edit(Request $request){
+        $skills_sub_name = [];
+        $data['all'] = [];
         $data['project']=Project::whereId($request->id)->first();
         $data['web3specialty'] = Specialty::where('type', 1)->get();
         $data['web3_category'] = Category::where('type', 1)->get();
+
+        $data['popularSkills'] = Skill::where('title', 'Popular skills')->get();
+        $projectSkill = ProjectSkill::with('skill')->where('project_id', $request->id)->get();
+
+        foreach ($projectSkill as $key => $projectSkills) {
+            $skill_id = $projectSkills->skill_id;
+            $getParentskillTitle = Skill::select('title')->whereId($skill_id)->first();
+            $parentTitle = $getParentskillTitle->title;
+            $getParentskillData = Skill::select('id')->where('title', $parentTitle)->first();
+            $data_skill = array('skill_id' => $projectSkills->skill_id, 'skill_name' => $projectSkills->skill->skills_sub, 'parent_id' => $getParentskillData->id);
+            $data_skill_name = array($projectSkills->skill->skills_sub);
+            array_push($data['all'], $data_skill);
+            $skills_sub_name[$key] = $data_skill_name;
+        }
+        $data['single'] = array_reduce($skills_sub_name, 'array_merge', array());
+
         return view('admin.jobs.edit',$data);
     }
     public function getSpeciality(Request $request)
@@ -199,6 +217,17 @@ class JobController extends Controller
         $cat->type = 1;
         $cat->save();
         return redirect()->route('admin.speciality')->with('success', 'Speciality Successfully Updated ');
+    }
+
+    public function specialityDelete(Request $request){
+        $check = Project::where('specialty_id',$request->id)->first();
+        if(empty($check)){
+            DB::table('category_speciality_skill')->where('Specialty_id', $request->id)->delete();
+            $skill = Specialty::whereId($request->id)->delete();
+            return response()->json(['status'=> true,'message' => 'Specialty deleted successfully']);
+        }else{
+            return response()->json(['status'=> false,'message' => 'we cannot delete this specialty because this specialty is added to any job']);
+        }
     }
 
 

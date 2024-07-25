@@ -362,13 +362,13 @@ jQuery(document).ready(function () {
 
     if (formID == "project_skill") {
         var selectedId = [];
-        var searchId = jQuery(".posting_seach_item")
-            .siblings(".selected_skills")
-            .find("div")
-            .find("input");
+        var searchId = jQuery(".selected_skills")
+        .find("div")
+        .find("input");
         $(searchId).each(function () {
             selectedId.push($(this).val());
         });
+        console.log("kfirst selected", selectedId.length);
 
         if (selectedId.length != 0) {
             jQuery(".continue").removeAttr("disabled");
@@ -772,7 +772,6 @@ jQuery(document).ready(function () {
         "click",
         ".posting_accordion_inner_content .skill_sub",
         function () {
-        console.log("33333333");
 
             var skillSubId = $(this).attr("data-id");
             var skillName = $(this).attr("data-cy");
@@ -845,8 +844,7 @@ jQuery(document).ready(function () {
         ).append(html);
 
         var selectedId = [];
-        var searchId = jQuery(".posting_seach_item")
-            .siblings(".selected_skills")
+        var searchId = jQuery(".selected_skills")
             .find("div")
             .find("input");
         $(searchId).each(function () {
@@ -870,7 +868,8 @@ jQuery(document).ready(function () {
         }
         $("#selected_skills_sub_" + skillSubId).remove();
 
-        if (selectedId.length == 0) {
+
+        if (selectedId.length-1 == 0) {
             jQuery(".continue").attr("disabled", "disabled");
         }
     });
@@ -881,13 +880,11 @@ jQuery(document).ready(function () {
         var selectedId = [];
         var selectedTest = [];
 
-        var searchId = jQuery(".posting_seach_item")
-            .siblings(".selected_skills")
+        var searchId = jQuery(".selected_skills")
             .find("div")
             .find("input");
 
-        var searchTest = jQuery(".posting_seach_item")
-            .siblings(".selected_skills")
+        var searchTest = jQuery(".selected_skills")
             .find("div")
             .find("span");
         $(searchId).each(function () {
@@ -896,7 +893,6 @@ jQuery(document).ready(function () {
         $(searchTest).each(function () {
             selectedTest.push($(this).text());
         });
-        console.log("selectedTest",selectedTest);
         $.ajax({
             url: "/client/autocomplete",
             type: "GET",
@@ -967,6 +963,7 @@ jQuery(document).ready(function () {
         // assign the value to the search box
         $("#search").val("");
         $("#skill_subcat_" + skillSubId).remove();
+        $(".main_skills[data-cy='"+skillName+"']").remove();
         // after click is done, search results segment is made empty
         $("#country_list").html("");
         $("#skill_list").html("");
@@ -977,7 +974,8 @@ jQuery(document).ready(function () {
     });
 
     // save job project
-    $(document).on("click", ".job_save_btn", function () {
+    $(document).on("click", ".job_save_btn", function (e){    
+        e.stopPropagation();
         var id = $(this).find("#job_save_btn_id, #popup_job_save_btn_id").val();
         $(this).find(".fa-heart").toggleClass("fa");
         saveProject(id);
@@ -1085,16 +1083,16 @@ jQuery(document).ready(function () {
                           response.data.hourly_to;
                 if (response.type == "Add") {
                     var html =
-                        '<div class="job-tile-list contact_save_list_' +
+                        '<div class="job-tile-list best_matches_result contact_save_list_' +
                         response.data.id +
-                        '">\
-                    <div class="row">\
-                        <div class="col">\
-                            <button type="button" class="bg-transparent border-0 open_btn best_matches_result" data-id="' +
+                        '" data-id="' +
                         response.data.id +
                         '" data-title="' +
                         response.data.title +
-                        '" data-action="'+urlDetails+'" data-bs-toggle="modal" data-bs-target="#sideModal">' +
+                        '" data-action="'+urlDetails+'">\
+                    <div class="row">\
+                        <div class="col">\
+                            <button type="button" class="bg-transparent border-0 open_btn" >' +
                         response.data.title +
                         '</button>\
                         </div>\

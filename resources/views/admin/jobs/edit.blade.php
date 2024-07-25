@@ -47,21 +47,47 @@
                                         </span>
                                         @enderror
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="attach_file" class="form-label">Images</label>
-                                        <input name="filename[]" id="attach_file" type="file" accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf" multiple>
-                                    </div>
-                                    <div class="posting_content_images d-flex flex-wrap mt-3">
-                                        @if(count($project->images)>0)
-                                            @foreach ($project->images as $files)
-                                                <div class="posting_one_content up_image me-3 col-2 mb-4 position-relative pip_{{ $files->id }}">
-                                                    <img src="{{ url($files->filename) }}" class="form-control img-fluid p-0 pip_{{ $files->id }}" />
-                                                    <a href="{{ route('admin.image.destroy') }}" class="remove" id="{{ $files->id }}">
-                                                        <i class='bx bx-x-circle'></i>
-                                                    </a>
+                                    
+                                    <div class="col-sm-12 border-bottom">
+                                        <div class="p-4 pt-0">
+                                            <div class="file_input_block">
+                                                <div class="file_input w-50 p-1 mb-2">
+                                                    <div class="d-flex position-relative align-items-center ">
+                                                        <div class="up-icon p-1">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </div>
+                                                        {{-- <span class="font_14">
+                                                            Attach Image (Maximum file size: 5 MB)
+                                                        </span> --}}
+                                                        <input class="position-absolute" accept=".png, .jpg, .jpeg" multiple="multiple" name="filename[]" id="attach_file" type="file" aria-labelledby="attach-file-input-label-1">
+                                                    </div>
                                                 </div>
-                                            @endforeach
-                                        @endif
+                                                {{-- <div id="file-type-info" class="text-muted mb-4">Supported file types: png, jpg, jpeg</div> --}}
+                                                @foreach ($errors->get('filename.*') as $error)
+                                                    @foreach ($error as $message) 
+                                                        <span class="text-danger" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @endforeach
+                                                @endforeach
+                                                <div class="text-danger error" data-error="filename"></div>
+                                                <div class="posting_content_images d-flex flex-wrap mt-3">
+                                                    @if(count($project->images)>0)
+                                                        @foreach ($project->images as $files)
+                                                            <div class="posting_one_content up_image me-3 col-2 mb-4 position-relative pip_{{ $files->id }}">
+                                                                <img src="{{ url($files->filename) }}" class="form-control img-fluid p-0 pip_{{ $files->id }}" />
+                                                                <a href="{{ route('project.image.destroy') }}" class="remove" id="{{ $files->id }}">
+                                                                    <i class="bx bx-x-circle" aria-hidden="true"></i>
+                                                                </a>
+                                                            </div>
+                                                        @endforeach
+                                                    @endif
+                                                </div>
+                                                <div id="" class="posting_content_images_block position-relative d-flex flex-wrap">
+                                                    <div id="posting_content_images_block" class="d-flex flex-wrap"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
                                         <label for="inputProductDescription" class="form-label">Category</label>
@@ -177,8 +203,107 @@
                                     <div class="project_level_experience mt-4"></div>
 
 
+                                    <div class="client_job_post_skill_wrapper mb-5">
+                                        <h4 class="font_18 mb-2 font_weight_600">Skills <span class="asterisk">*</span></h4>
+                                        <div class="add_skills d-flex align-items-center">
+                                            @if (count($project->ProjectSkill) > 0)
+                                            @foreach ($project->ProjectSkill as $dataskills)
+                                            <!-- <input type="hidden" name="skill_id[]"
+                                                            value="{{ $dataskills->id }}" /> -->
+                                            <span class="font_14 d-inline-block">{{ isset($dataskills->skill->skills_sub) ? $dataskills->skill->skills_sub : null }}</span>
+                                            @endforeach
+                                            @endif
+                                            {{-- <a href="javascript:void(0)" class="edit_draft_icon" id="edit_skill_review">
+                                                <i class="fa-solid fa-pen fas"></i>
+                                            </a> --}}
+                                            <div class="text-danger error" data-error="skill_id"></div>
 
-                                    <div class="d-grid">
+                                            
+                                        </div>
+                                    </div>
+                                    {{-- Edit Skills --}}
+                                    <div class="modal fade custom_popup" id="editpostSkills" tabindex="-1" aria-labelledby="editpostSkillsLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content border-0">
+                                                <div class="modal-header border-0 p-4">
+                                                    <h5 class="modal-title font_22 color_black" id="">Edit skills</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body mb-5 p-0 edit_post_skills_body">
+                                                    <div class="" id="project_skill">
+                                                        <div class="modal_inner">
+                                                            <div class="p-4">
+                                                                <p class="font_16 color_black">Search skills or add your own</p>
+                                                                <div class="seach_skills position-relative">
+                                                                    <input class="form-control me-2 search typeahead" name="search" id="search" type="text">
+                                                                    <i class="fa fa-search position-absolute" aria-hidden="true"></i>
+                                                                    <div id="country_list"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="selected_skills d-flex flex-wrap px-4">
+
+                                                                @if (count($all) > 0)
+                                                                @foreach ($all as $projectSkills)
+                                                                <div id="selected_skills_sub_{{ $projectSkills['skill_id'] }}">
+                                                                    <input type="hidden" name="skill_id[]" id="{{ $projectSkills['skill_id'] }}" value="{{ $projectSkills['skill_id'] }}">
+                                                                    <span data-skill="{{ $projectSkills['parent_id'] }}" class="posting_add_feature font_12 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub" data-cy="{{ $projectSkills['skill_name'] }}" data-id="{{ $projectSkills['skill_id'] }}">
+                                                                        {{ $projectSkills['skill_name'] }}
+                                                                        <i class=" fas fa-solid fa-times"></i>
+                                                                    </span>
+                                                                </div>
+                                                                @endforeach
+                                                                @endif
+                                                            </div>
+
+                                                            <div class="mt-4">
+                                                                <div class="accordion" id="accordionExample">
+                                                                    {{-- Popular skills --}}
+                                                                    <div class="accordion-item">
+                                                                        <h2 class="accordion-header" id="heading1">
+                                                                            <button class="accordion-button font_weight_500 font_16 color_black" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                                                                Popular skills
+                                                                            </button>
+                                                                        </h2>
+                                                                        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+                                                                            <div class="accordion-body px-3 py-3">
+                                                                                <div class="posting_accordion_body_content accordion_body_content">
+                                                                                    <div class="posting_accordion_inner_content accordion_inner_content">
+                                                                                        <?php $newArrskill = 0; ?>
+                                                                                        @foreach ($popularSkills as $skills)
+                                                                                        @if (!in_array($skills->skills_sub, $single))
+                                                                                        <span data-skill="1" class="posting_skill_feature font_12 font_weight_500 color_grey px-3 py-1 skill_sub" id="skill_subcat_{{ $skills->id }}" data-cy="{{ $skills->skills_sub }}" data-id="{{ $skills->id }}">{{ $skills->skills_sub }}
+                                                                                            <i class=" fas fa-solid fa-plus"></i>
+                                                                                        </span>
+                                                                                        @else
+                                                                                        <?php $newArrskill += 1;
+                                                                                        if (count($popularSkills) == $newArrskill) { ?>
+                                                                                            <p class="ps-4 m-0">Looking for more skills? Try the search bar above.</p>
+                                                                                        <?php  } ?>
+
+                                                                                        @endif
+                                                                                        @endforeach
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="accordionData"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer border-0 px-4">
+                                                    <button type="button" class="font_15 border-0 font_weight_500 me-4" data-bs-dismiss="modal">Cancel</button>
+                                                    <a href="javascript:void(0)" class="green_btn text-decoration-none font_15 font_weight_500" id="edit_skils">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-md-2">
                                         <button type="submit" class="btn btn-primary">Update</button>
                                     </div>
                                 </div>
@@ -457,7 +582,7 @@
         });
 
 
-jQuery(document).on("click", ".project_term_edit", function () {
+        jQuery(document).on("click", ".project_term_edit", function () {
             let edit_button = jQuery(this);
             if (edit_button.parents().hasClass("project_term_length")) {
                 jQuery(".project_term_length .custom_radio_btn")
@@ -472,28 +597,126 @@ jQuery(document).on("click", ".project_term_edit", function () {
             edit_button.parent().find("label").find("span").show();
             edit_button.parent().find("label").css("pointer-events", "inherit");
             edit_button.remove();
-
-        $(".remove").click(function (e) {
-            e.preventDefault();
-            var id = $(this).attr("id");
-            $.ajax({
-                url: "/admin/imageDestroy",
-                method: "post",
-                data: {	"_token": "{{ csrf_token() }}", id: id },
-                dataType: "json",
-                success(response) {
-                    if (response.status == "true") {
-                        console.log(this);
-                        $(".posting_one_content .remove")
-                            .parent(".pip_" + id)
-                            .remove();
-                    }
-                },
-                error(error) {
-                    console.log(error);
-                },
-            });
-
         });
+
+        $(document).ready(function(){
+            $(".remove").click(function (e) {
+                e.preventDefault();
+                var id = $(this).attr("id");
+                console.log(id);
+                $.ajax({
+                    url: "/admin/imageDestroy",
+                    method: "post",
+                    data: {	"_token": "{{ csrf_token() }}", id: id },
+                    dataType: "json",
+                    success(response) {
+                        if (response.status == "true") {
+                            console.log(response);
+                            $(".posting_one_content .remove")
+                                .parent(".pip_" + id)
+                                .remove();
+                        }
+                    },
+                    error(error) {
+                        console.log(error);
+                    },
+                });
+
+            });
+        });
+
+
+
+        $(document).ready(function() {
+            var imgUpload = document.getElementById('attach_file');
+            var imgPreview = document.getElementById('posting_content_images_block');
+            var selectedFiles = []; // Array to store selected files
+
+            imgUpload.addEventListener('change', previewImgs, true);
+
+            function previewImgs(event) {
+                var totalFiles = imgUpload.files.length;
+                if (!!totalFiles) {
+                    imgPreview.classList.remove('img-thumbs-hidden');
+                }
+                // Clear selected files array
+                selectedFiles = Array.from(imgUpload.files);
+
+                // Clear the preview
+                imgPreview.innerHTML = '';
+
+                for (var i = 0; i < totalFiles; i++) {
+                    var wrapper = document.createElement('div');
+                    wrapper.classList.add('col-2');
+                    wrapper.classList.add('wrapper-thumb-list');
+
+                    var removeBtn = document.createElement("span");
+                    var closeBtn = document.createElement("i");
+                    removeBtn.appendChild(closeBtn);
+                    removeBtn.classList.add('remove-btn');
+                    closeBtn.classList.add('fa');
+                    closeBtn.classList.add('fa-times');
+
+                    var img = document.createElement('img');
+                    img.src = URL.createObjectURL(event.target.files[i]);
+                    img.classList.add('img-preview-thumb');
+
+                    wrapper.appendChild(img);
+                    wrapper.appendChild(removeBtn);
+                    imgPreview.appendChild(wrapper);
+
+                    removeBtn.addEventListener('click', function() {
+                        var wrapper = this.parentElement;
+                        var index = Array.from(imgPreview.children).indexOf(wrapper);
+                        if (index !== -1) {
+                            selectedFiles.splice(index, 1);
+                            updateFileList();
+                            wrapper.remove();
+                        }
+                    });
+                }
+            }
+
+            function updateFileList() {
+                var dataTransfer = new DataTransfer();
+                selectedFiles.forEach(file => {
+                    dataTransfer.items.add(file);
+                });
+                imgUpload.files = dataTransfer.files;
+            }
+        });
+        
+
+
+        $(document).ready(function(){
+            $("#edit_skill_review").on("click", function (e) {
+                e.preventDefault();
+                var specialityId = $(".modal_speciality_id_review").val();
+                var projectId = $("#hidden_project_id").val();
+                $("#hidden_speciality_id").val(specialityId);
+                $("#editpostSkills").modal("show");
+    
+                // skill update ajax
+                $.ajax({
+                    url: "/client/reviewEditSkill",
+                    type: "post",
+                    data: {
+                        _token: $("#_token").val(),
+                        specialityId: specialityId,
+                        projectId: projectId,
+                    },
+                    dataType: "json",
+                    success: function (response) {
+                        $("#accordionData").html(response.data);
+                    },
+                });
+            });
+        });
+
+
+
+
+
+    
 </script>
 @endsection

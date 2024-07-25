@@ -14,6 +14,7 @@ if ($(".window_error_open").length > 0) {
 }
 $(document).on("click", ".best_matches_result", function (e) {
     e.preventDefault();
+    $('#sideModal').modal('show');
     var id = $(this).attr("data-id");
     var title = $(this).attr("data-title");
     var url = $(this).attr('data-action');
@@ -31,8 +32,11 @@ $(document).on("click", ".best_matches_result", function (e) {
                 var budget  = response.data.budget;
                 var duration = response.data.duration;
                 var saveJob = response.data.save_jobs;
-                var level   = response.data.level.charAt(0).toUpperCase() + response.data.level.slice(1);
-                var date    = $.timeago(time);
+                var level = '';
+                if(response.data.level !== null){
+                    level = response.data.level.charAt(0).toUpperCase() + response.data.level.slice(1);
+                }
+                var date = $.timeago(time);
                 var budgetType = '';
                 var Duration = '';
                if(budget == 'project'){
@@ -87,6 +91,9 @@ $(document).on("click", ".best_matches_result", function (e) {
                 $('#available_usdt_user_balance').html(newUsdtBalance);
                 $('#client_name').html(response.data.user.firstname+' '+response.data.user.lastname);
                 $('#client_country').html(response.data.user.country.name);
+                $('#client_state').html(response.data.user.states.name);
+                $('#project_count').html(response.project_count);
+                $('#timezone').html(response.timezone);
                 if (response.data.images.length != 0) {
                     var sel1 = $('<ul class="list-unstyled">');
                     $.each(response.data.images, function (key, value) {

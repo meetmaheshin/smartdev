@@ -22,6 +22,8 @@
 	<link href="{{url('assets/vendor/css/app.css')}}" rel="stylesheet">
 	<link href="{{url('assets/vendor/css/icons.css')}}" rel="stylesheet">
 	<!-- Theme Style CSS -->
+	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+	<link href="{{asset('assets/fonts-awesome/css/all.min.css')}}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/sweetalert2.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/toastr.css')}}">
 

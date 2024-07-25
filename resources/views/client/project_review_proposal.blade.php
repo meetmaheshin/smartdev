@@ -104,9 +104,9 @@
                                             </h4>
                                             <div class="row">
                                                 <div class="col-sm-6">
-                                                    <div class="expertise_grp_title">
+                                                    {{-- <div class="expertise_grp_title">
                                                         <p class="m-0 font_weight_500 font_14">{{$projectDetail->specialities->title}}</p>
-                                                    </div>
+                                                    </div> --}}
                                                     <div class="expertise_grp_badget d-flex font_12 pt-3 flex-wrap">
                                                         @foreach($projectDetail->ProjectSkill as $skills)
                                                         <span>{{$skills->skill->skills_sub}}</span>
@@ -208,6 +208,13 @@
                                                         <strong class="font_12 color_black f">
                                                             {{ $projectDetail->user->clientDetails->getCountry ? $projectDetail->user->clientDetails->getCountry->name : ""}}
                                                         </strong>
+                                                        <p>
+                                                            <small class="font_12 color_black f">
+                                                                {{ $projectDetail->user->clientDetails->getState ? $projectDetail->user->clientDetails->getState->name : ""}}
+                                                            </small>
+                                                            - 
+                                                            <small>{{$timezone}}</small>
+                                                        </p>
                                                     </li>
                                                     <li class="py-1">
                                                         <strong class="font_12 color_black f">
