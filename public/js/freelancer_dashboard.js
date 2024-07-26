@@ -21,6 +21,9 @@ $(document).on("click", ".best_matches_result", function (e) {
     $("#job_apply_btn").removeAttr("disabled").text("Apply");
     $(".job_skills").html("");
     $('.job_attachments').html('');
+    $('#client_state').html("");
+    $('#project_count').html("");
+    $('#timezone').html("");
     $.ajax({
         url: url,
         method: "GET",
@@ -91,9 +94,18 @@ $(document).on("click", ".best_matches_result", function (e) {
                 $('#available_usdt_user_balance').html(newUsdtBalance);
                 $('#client_name').html(response.data.user.firstname+' '+response.data.user.lastname);
                 $('#client_country').html(response.data.user.country.name);
-                $('#client_state').html(response.data.user.states.name);
-                $('#project_count').html(response.project_count);
-                $('#timezone').html(response.timezone);
+                if(response.data.user.states != null && response.data.user.states.name) {
+                    $('#client_state').html(response.data.user.states.name);
+                }
+                if(response.project_count){
+                    $('#project_count').html(response.project_count + " jobs posted");
+                }
+                if(response.timezone){
+                    $('#timezone').html(" - " + response.timezone);
+                }
+                if (response.data.user.created_at) {
+                    $('#member_since').html('Member Since ' + new Date(response.data.user.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }));
+                }
                 if (response.data.images.length != 0) {
                     var sel1 = $('<ul class="list-unstyled">');
                     $.each(response.data.images, function (key, value) {

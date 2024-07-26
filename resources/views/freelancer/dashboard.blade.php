@@ -352,11 +352,14 @@
                                         <small class="text-muted">
                                             <span class="mb-0" id="client_state"></span>
                                         </small>
-                                        - <span id="timezone"></span>
+                                        <span id="timezone"></span>
                                     </p>
                                     <strong class="font_12 color_black f">
-                                        <p> <span id="project_count"></span> jobs posted </p>
+                                        <span id="project_count"></span>
                                     </strong>
+                                    <p>
+                                        <small id="member_since"></small>
+                                    </p>
                                     {{-- <p>
                                         @php
                                             $avgPaid = ($projects->hourly_from + $projects->hourly_to) / 2;
