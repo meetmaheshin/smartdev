@@ -149,6 +149,7 @@ class ProjectReviewProposalController extends Controller
         $timezoneString = $data['projectDetail']->user->clientDetails->time_zone;
         $parts = explode('|', $timezoneString);
         $timezone = $parts[0]; // 'Asia/Kolkata'
+        $data['timezone'] = '';
         if(!empty($timezone)){
             $currentTime = Carbon::now($timezone);
             $data['timezone']= $currentTime->format('g:i a');

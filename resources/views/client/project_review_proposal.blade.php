@@ -212,14 +212,22 @@
                                                             <small class="font_12 color_black f">
                                                                 {{ $projectDetail->user->clientDetails->getState ? $projectDetail->user->clientDetails->getState->name : ""}}
                                                             </small>
-                                                            - 
-                                                            <small>{{$timezone}}</small>
+                                                            <small>
+                                                                {{ $timezone ? ' - ' . $timezone : '' }}
+                                                            </small>
                                                         </p>
                                                     </li>
                                                     <li class="py-1">
                                                         <strong class="font_12 color_black f">
                                                             <span>{{$project_count}}</span> jobs posted
                                                         </strong>
+                                                    </li>
+                                                    <li class="py-1">
+                                                        @if($projectDetail->user->created_at)
+                                                            <small class="font_12 color_black f">
+                                                                Member since <span>{{ $projectDetail->user->created_at->format('M j, Y') }}</span>
+                                                            </small>
+                                                        @endif
                                                     </li>
                                                     <li class="py-1">
                                                         <strong class="font_12 color_black f">

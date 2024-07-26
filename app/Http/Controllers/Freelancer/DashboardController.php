@@ -82,14 +82,15 @@ class DashboardController extends Controller
         $timezoneString = $projectDetail->user->time_zone;
         $parts = explode('|', $timezoneString);
         $timezone = $parts[0]; // 'Asia/Kolkata'
+        $time_zone = '';
         if(!empty($timezone)){
             $currentTime = Carbon::now($timezone);
-            $timezone= $currentTime->format('g:i a');
+            $time_zone= $currentTime->format('g:i a');
         }
 
         $status = !empty($proposalSetting) ? 'true' : '';
         $userBalance = UserBalance::where('user_id',auth()->user()->id)->first();
-        return response()->json(['response' => 'true','data'=>$projectDetail,'status'=>$status,'userBalance'=>$userBalance, 'project_count'=>$project_count, 'timezone'=>$timezone]);
+        return response()->json(['response' => 'true','data'=>$projectDetail,'status'=>$status,'userBalance'=>$userBalance, 'project_count'=>$project_count, 'timezone'=>$time_zone]);
     }
  
     public function saveProject(Request $request) {
