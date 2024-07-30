@@ -134,6 +134,7 @@
 }
 .job-tile-list:hover {
     background-color: #f2f7f2;
+    cursor: pointer;
 }
 .save_btn {
     width: 90px;

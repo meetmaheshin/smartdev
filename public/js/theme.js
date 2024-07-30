@@ -967,6 +967,7 @@ jQuery(document).ready(function () {
         // after click is done, search results segment is made empty
         $("#country_list").html("");
         $("#skill_list").html("");
+        jQuery(".continue").removeAttr("disabled");
         }
 
         
