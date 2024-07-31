@@ -1,0 +1,64 @@
+/*Navbar-css-start*/
+.navbar-menu {
+    box-shadow: 0px 4px 14px 0px #0000000D;
+    border-top: 3px solid #FF9934;
+}
+.navbar-menu .nav-item a.nav-link {
+    color: #000;
+    font-weight: 600;
+    font-size: 19px;
+    padding: 0 15px;
+}
+.custom_btn_border {
+    border: 1px solid #138708;
+    border-radius: 8px;
+    padding: 6px 25px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #138708;
+}
+.custom_btn_BG {
+    border: 1px solid #138708;
+    background: #138708;
+    border-radius: 8px;
+    padding: 6px 25px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+
+/*  Footer Section  */
+
+.footer {
+    background-color: #242D3F;
+}
+.footer .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f57c00;
+}
+
+.footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+}    
+.footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+.footer .footer-links li {
+    margin: 10px 0;
+}
+.footer .footer-links a {
+    color: #fff;
+}
+.footer .footer-links a:hover {
+    text-decoration: underline;
+}
+.footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
