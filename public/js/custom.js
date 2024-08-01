@@ -1,3 +1,17 @@
+$(document).ready(function(){
+  $('a.nav-link[href*="#"]').on('click', function(event) {
+      var targetID = this.href.split("#")[1];
+      var target = $('#' + targetID);
+      if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+          scrollTop: target.offset().top
+      }, 1500); // Adjust the duration here (1000ms = 1s)
+      }
+  });
+});
+
+
 let elmID = document.getElementsByTagName('section');
 let util = {
   mobileMenu() {
@@ -40,7 +54,7 @@ let util = {
 $(document).ready(function () {
   $('#menu').click(util.mobileMenu);
   $(window).resize(util.windowResize);
-  $(document).scroll(util.scrollEvent);
+  // $(document).scroll(util.scrollEvent);
 });
 
 function stickyHeader() {
@@ -141,7 +155,7 @@ function responsiveMenu() {
   );
 }
 
-responsiveMenu();
+// responsiveMenu();
 
 $(document).ready(function () {
   $('.developer-list').isotope({

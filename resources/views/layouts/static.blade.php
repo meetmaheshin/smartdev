@@ -8,6 +8,8 @@
     <meta name="description" content="> 500 experienced blockchain engineers to choose from for you Blockchain development Idea ; Solidity Developers, Rust Developers  for Smart Contract,  Defi Exchange, NFT Marketplace, Defi Wallet, ENS Forks and for other crypto development projects. Contact us and let us help you!" />
     <title>Hire Blockchain Coders, Solidity programmers from SmartDev3 Ecosystem</title>
     <link rel="shortcut icon" href="{{url('images/dev3dao_fav_icon.png')}}" type="{{url('images/dev3dao_fav_icon.png')}}" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/home-comman.css')}}">
     @stack('css')
     @yield('css')
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -25,203 +27,130 @@
 </head>
 @section('body')
 @show
-<header id="sticky_header" class="pos-header">
-    <div class="element-wrap">
-        <div class="top-header">
-            <div class="logo-box">
-                <h1 class="logo">
-                    <a href="{{url('/')}}"><img src="{{url('images/logo.png')}}" width="1200" height="316" alt="logo"></a>
-                </h1>
-            </div>
-            <div class="burger-menu-btn " id="burger-menu1">
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-            </div>
-            <div class="nav-box">
-                <ul>
-                    <li>
-                        <a href="{{url('/#vision')}}" class="nav-link">Vision</a>
-                    </li>
-                    <li>
-                        <a href="{{url('/#services')}}" class="nav-link">Services</a>
-                    </li>
-                    <li>
-                        <a href="{{url('/#portfolio')}}" class="nav-link">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="{{url('/#join')}}" class="nav-link">Join Us</a>
-                    </li>
-                    <li>
-                        <a href="{{url('/#devs')}}" class="nav-link">DAO Devs</a>
-                    </li>
-                    <li>
-                        <a href="{{url('/hire-us')}}" class="nav-liink">Hire Us</a>
-                    </li>
-                    <li>
-                        <a href="{{url('/faqs')}}" class="nav-liink">FAQ's</a>
-                    </li>
 
-                    <li>
-                        @if(auth()->user())
+<header class="navbar-menu">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="{{url('/')}}"><img src="{{url('images/new-logo.svg')}}" alt="SmartDev3"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/#vision-us-section')}}">Vision</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/#dao-devs-section')}}">DAO DEVS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/#join-us-section')}}">Join Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('hire-us')}}">Hire Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('faqs')}}">FAQ'S</a>
+                </li>
+            </ul>
+            <div class="form-inline">
 
-                        @if(auth()->user()->is_admin==1)
-
-                        <a href="{{url('/client/dashboard')}}" class="nav-liink">Dashboard</a>
-                        @else
-                        <a href="{{url('/freelancer/dashboard')}}" class="nav-liink">Dashboard</a>
-                        @endif
-
-                        @endif
-                    </li>
-                    @if(!auth()->user())
-                    <li>
-                        <a href="{{url('login')}}" class="nav-liink">Login</a>
-                    </li>
-                    <li>
-                        <a href="{{url('register')}}" class="nav-liink">Register</a>
-                    </li>
+                @if(auth()->user())
+                    @if(auth()->user()->is_admin == 1)
+                        <a href="{{ url('/client/dashboard') }}" class="btn my-2 my-sm-0 mr-2 custom_btn_border">Dashboard</a>
+                    @elseif(auth()->user()->is_admin==0)
+                        <a href="{{ url('/freelancer/dashboard') }}" class="btn my-2 my-sm-0 mr-2 custom_btn_border">Dashboard</a>
                     @else
-                    <li>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </li>
-                    @endif
-                </ul>
+                        <a href="{{route('admin.dashboard')}}" class="btn my-2 my-sm-0 mr-2 custom_btn_border">Dashboard</a>
+                @endif
+                    <a class="nav-link btn my-2 my-sm-0 custom_btn_BG" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <img src="{{url('images/signup.svg')}}" class="mr-2">
+                    {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                    </form>
+                @else
+                    <a href="{{ url('register') }}" class="btn my-2 my-sm-0 mr-2 custom_btn_border">Sign Up</a>
+                    <a href="{{ url('login') }}" class="btn my-2 my-sm-0 custom_btn_BG">
+                    <img src="{{url('images/signup.svg')}}" class="mr-2">Log In</a>
+                @endif
+                
             </div>
         </div>
-    </div>
+    </nav>
 </header>
-<div class="element-panel web3-panel" id="main-screen">
-    <div class="element-wrap">
-        <section class="main-banner-screen">
-            <header class="top-header">
-                <div class="logo-box">
-                    <h1 class="logo">
-                        <a href="{{url('/')}}"><img src="{{url('images/logo.png')}}" width="1200" height="316" alt="logo"></a>
-                    </h1>
-                </div>
 
-                <div class="burger-menu-btn" id="burger-menu2">
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                </div>
-
-                <div class="nav-box" id="nav_menu">
-                    <div class="burger-menu-btn is-active" id="close-menu">
-                        <span class="burger-line"></span>
-                        <span class="burger-line"></span>
-                        <span class="burger-line"></span>
-                        <span class="burger-line"></span>
-                    </div>
-
-                    <ul>
-                        <li>
-                            <a href="{{url('/#vision')}}" class="nav-link">Vision</a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/#services')}}" class="nav-link">Services</a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/#portfolio')}}" class="nav-link">Portfolio</a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/#join')}}" class="nav-link">Join Us</a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/#devs')}}" class="nav-link">DAO Devs</a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('hire-us')}}" class="nav-liink">Hire Us</a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('faqs')}}" class="nav-liink">FAQ's</a>
-                        </li>
-                        <li>
-                            @if(auth()->user())
-
-                                @if(auth()->user()->is_admin==1)
-                                <a href="{{url('/client/dashboard')}}" class="nav-liink">Dashboard</a>
-                                @elseif(auth()->user()->is_admin==0)
-                                <a href="{{url('/freelancer/dashboard')}}" class="nav-liink">Dashboard</a>
-                                @else
-                                <a href="{{route('admin.dashboard')}}" class="nav-liink">Dashboard</a>
-                                @endif
-                            @endif
-                        </li>
-                        @if(!auth()->user())
-                        <li>
-                            <a href="{{url('login')}}" class="nav-liink">Login</a>
-                        </li>
-                        <li>
-                            <a href="{{url('register')}}" class="nav-liink">Register</a>
-                        </li>
-                        @else
-                        <li>
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </li>
-                        @endif
-                </div>
-
-
-            </header>
-            @section('banner')
-            @show
-        </section>
-    </div>
-</div>
 <main id="parent_div">
     @yield('content')
 </main>
-<footer class="element-panel ftr-panel">
-    <div class="ftr-layer-bg"></div>
-    <div class="element-wrap">
-        <div class="ftr-blk">
-            <div class="ftr-lft-col">
-                <div class="ftr-logo">
-                    <a href="{{url('/')}}"><img src="{{url('images/logo.png')}}" width="1200" height="316" alt="logo"></a>
+<footer class="footer py-5">
+    <div class="container custom-width">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="logo"> 
+                    {{-- <img src="{{url('images/new-logo.svg')}}" alt="Footer-Logo"> --}}
+                    <a href="{{url('/')}}"><img src="{{url('images/new-logo.svg')}}" alt="SmartDev3"></a>
                 </div>
-            </div>
-            <div class="ftr-rgt-col">
-                <div class="ftr-nav-blk">
-                    <div class="ftr-nav">
-                        <ul>
-                            <li>
-                                <a href="{{url('/hire-us')}}">Hire Us</a>
-                            </li>
-
-                            <li>
-                                <a href="{{url('/faqs')}}">FAQ's</a>
-                            </li>
-
-                            <li>
-                                <a href="{{url('privacy-policy')}}">Privacy Policy</a>
-                            </li>
-                        </ul>
+                <div>
+                    <span 
+                        class="font-26 text-white font-weight-700" 
+                        style="
+                            position: relative;
+                            display: inline-block;
+                            background: url({{url('images/web3.svg')}}) no-repeat bottom;
+                            background-size: contain;
+                            padding-bottom: 15px;
+                        "
+                    > 
+                        Web3 
+                    </span>
+                </div>
+                <div>
+                    <p>Social links</p>
+                    <div class="social-links mt-3">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
+            </div>
+            <div class="col-md-4">
+                <h5 class="font-18 font-weight-600 text-white mb-4">For customers</h5>
+                <ul class="footer-links">
+                    <li><a href="{{url('faqs')}}" class="font-16 text-decoration-none">FAQs</a></li>
+                    <li><a href="#" class="font-16 text-decoration-none">Results</a></li>
+                    <li><a href="#" class="font-16 text-decoration-none">Remote Profile</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="font-18 font-weight-600 text-white mb-4">For customers</h5>
+                <ul class="footer-links">
+                    <li><a href="#" class="font-16 text-decoration-none">UC Review</a></li>
+                    <li><a href="#" class="font-16 text-decoration-none">Categories Near You</a></li>
+                    <li><a href="#" class="font-16 text-decoration-none">Blog</a></li>
+                    <li><a href="#" class="font-16 text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>            
+    </div>        
+</footer>
+<footer class="coppy-right text-center p-3">
+    <div class="container">
+        <div class="row bg-white">
+        <div class="col-12">
+            <div class="copyright font-16 text-black">
+                © Copyright 2024 Company Name. All rights reserved.
             </div>
         </div>
+    </div>
     </div>
 </footer>
 @yield('modal')
@@ -229,6 +158,7 @@
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/isotope.pkgd.min.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
