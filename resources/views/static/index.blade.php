@@ -118,7 +118,11 @@
                     </div>
                 </div>
                 <div class="z-index mt-5">
-                    <a href="{{ url('/freelancer/dashboard') }}" class="btn custom_btn_BG mr-2">Find Projects</a>
+                    @if(auth()->check() && auth()->user()->is_admin == 0)
+                        <a href="{{ url('/freelancer/dashboard') }}" class="btn custom_btn_BG mr-2">Find Projects</a>
+                    @else
+                        <a href="{{ url('/login') }}" class="btn custom_btn_BG mr-2">Find Projects</a>
+                    @endif
                 </div>
             </div>
         </div>
@@ -248,6 +252,9 @@
                             <p class="font-20 font-weight-500w text-white neue-medium">DLearn about our collaboration with an Trading Superdapp that leveraged our network to launch their groundbreaking platform.</p>
                         </div>
                     </div>
+                    <div class="col-md-12 mt-5">
+                        <a href="#" class="btn custom_btn_BG">Get More Details</a>
+                    </div>
                 </div>
             </div>
             
@@ -267,8 +274,17 @@
                         </p>
                         <div class="join-us-buttons">
                             <a href="#" class="btn custom_btn_border">Book Free Consultation</a>
-                            <a href="{{ url('/client/project_started') }}" class="btn custom_btn_BG">Post Your Project</a>
-                            <a href="{{ url('/freelancer/dashboard') }}" class="btn custom_btn_border">Find Projects</a>
+                            @if(auth()->check() && auth()->user()->is_admin == 1)
+                                <a href="{{ url('/client/project_started') }}" class="btn custom_btn_BG">Post Your Project</a>
+                            @else
+                                <a href="{{ url('login') }}" class="btn custom_btn_BG">Post Your Project</a>
+                            @endif
+
+                            @if(auth()->check() && auth()->user()->is_admin == 0)
+                                <a href="{{ url('/freelancer/dashboard') }}" class="btn custom_btn_border">Find Projects</a>
+                            @else
+                                <a href="{{ url('login') }}" class="btn custom_btn_border">Find Projects</a>
+                            @endif
                         </div>                    
                     </div>
                 </div>
