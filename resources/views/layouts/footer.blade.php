@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7 order-2 order-md-1 text-center text-md-start">
-                <a class="foot_logo" href="{{url('/')}}"><img src="{{url('images/logo.png')}}" width="242" alt="logo"></a>
+                {{-- <a class="foot_logo" href="{{url('/')}}"><img src="{{url('images/logo.png')}}" width="242" alt="logo"></a> --}}
+                <a class="foot_logo" href="{{url('/')}}"><img src="{{url('images/new-logo.svg')}}" width="242" alt="logo"></a>
             </div>
             <div class="col-md-5 order-1 order-md-2">
                 <div class="d-flex foot_menu">

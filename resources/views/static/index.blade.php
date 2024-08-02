@@ -95,7 +95,7 @@
     <section class="talent-section-main p-smaller">
         <div class="container custom-width">
             <div class="overlay py-5 px-4" style="background: url('{{url('images/great-work.svg')}}');">
-                <p class="font-28 font-weight-500 text-white z-index">For talent section</p>
+                <p class="font-28 font-weight-500 text-white z-index">Talent</p>
                 <div class="z-index w-45">
                     <h2 class="font-70 font-weight-800 text-white mb-4 inter">Find great work</h2>
                     <p class="font-18 text-white mb-0 inter font-weight-600">Empower Your Web3 Career and grow your business by leaps and bounds.</p>

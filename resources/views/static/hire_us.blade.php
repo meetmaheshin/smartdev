@@ -347,8 +347,26 @@
                         <h3>Talk to Us
                             <span>About your project</span>
                         </h3>
+                        <!-- Display Success Message -->
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
 
-                        <div class="form-elm-blk">
+                        <!-- Display Validation Errors -->
+                        @if($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        <form action="/contact-us" method="POST" class="form-elm-blk" onsubmit="return validateForm()">
+                            @csrf
                             <div class="element-content-grid">
                                 <div class="col-item">
                                     <div class="input_field_row">
@@ -358,7 +376,7 @@
 
                                 <div class="col-item">
                                     <div class="input_field_row">
-                                        <input type="text" name="email_id" value="" placeholder="Email Id *" class="custom_input" required />
+                                        <input type="text" name="email_id" value="" placeholder="Email Id *" class="custom_input" required/>
                                     </div>
                                 </div>
 
@@ -367,13 +385,13 @@
                             <div class="element-content-grid">
                                 <div class="col-item">
                                     <div class="input_field_row">
-                                        <input type="number" name="phone_no" value="" placeholder="Phone No *" class="custom_input" required />
+                                        <input type="number" name="phone_number" value="" placeholder="Phone No *" class="custom_input" required />
                                     </div>
                                 </div>
 
                                 <div class="col-item">
                                     <div class="input_field_row">
-                                        <input type="text" name="app_name" value="" placeholder="Telegram/Discord/Email" class="custom_input" required />
+                                        <input type="text" name="preferred_contact_method" value="" placeholder="Telegram/Discord/Email" class="custom_input" />
                                     </div>
                                 </div>
 
@@ -408,7 +426,7 @@
                                 <div class="col-item">
                                     <div class="input_field_row">
                                         <div class="pos-rel">
-                                            <select name="Time-Frame" class="custom_select">
+                                            <select name="time_frame" class="custom_select">
                                                 <option value="Time Frame" disabled>Time Frame</option>
                                                 <option value="Less than 1 month">Less than 1 month</option>
                                                 <option value="1 month - 3 month">1 month - 3 month</option>
@@ -433,7 +451,7 @@
                             <div class="element-content-grid full-grid">
                                 <div class="col-item">
                                     <div class="input_field_row">
-                                        <textarea name="special" placeholder="Special Requirements *" class="custom_txtarea" required></textarea>
+                                        <textarea name="special_requirement" placeholder="Special Requirements *" class="custom_txtarea" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -442,12 +460,13 @@
                                 <div class="col-item">
                                     <div class="input_field_row">
                                         <label class="signup_label">
-                                            <input type="checkbox" name="signup_newsletter" value="" required />
+                                            <input type="checkbox" id="signup_newsletter" name="signup_newsletter" value="yes" />
                                             <div class="signup_txt_label">
                                                 Sign up for our newsletter. You can
                                                 unsubscribe at any time. See our Privacy Policy for more
                                                 detail.</div>
                                         </label>
+                                        <span id="signup_error" style="color:red; display:none;">please check this checkbox</span>
                                     </div>
                                 </div>
                             </div>
@@ -457,23 +476,12 @@
                                     <div class="submit-request">
                                         <input type="submit" value="submit now" class="submit-btn">
                                     </div>
-
                                 </div>
-
                             </div>
-
-
-
-
-                        </div>
-
-
-
+                        </form>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
-    @endsection
+@endsection

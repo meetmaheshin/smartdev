@@ -147,7 +147,7 @@
         <div class="row bg-white">
         <div class="col-12">
             <div class="copyright font-16 text-black">
-                © Copyright 2024 Company Name. All rights reserved.
+                &copy; Copyright <span id="current-year"></span> SmartDev3. All rights reserved.
             </div>
         </div>
     </div>

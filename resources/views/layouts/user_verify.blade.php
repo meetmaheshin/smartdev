@@ -27,7 +27,9 @@
         <div class="container-fluid">
             <div class="mobile_center">
                 <a class="navbar-brand pe-2" href="{{url('/')}}">
-                    <img src="{{asset('images/logo.png')}}" alt="logo" width="100">
+                    {{-- <img src="{{asset('images/logo.png')}}" alt="logo" width="100"> --}}
+                    <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="100">
+                    
                 </a>
             </div>
             <div class="d-sm-block mobile_ham w-100 d-md-none">

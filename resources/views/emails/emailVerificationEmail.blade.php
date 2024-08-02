@@ -17,7 +17,8 @@
 <body>
     <table style="margin: 0; background: #f9f5f2; width: 600px; padding:15px; margin:0 auto;font-size: 20px; text-align: center;">
         <tr>
-            <td style="text-align:center;padding: 15px 0;"><img src="{{asset('images/logo.png')}}" style="width:200px;"></td>
+            {{-- <td style="text-align:center;padding: 15px 0;"><img src="{{asset('images/logo.png')}}" style="width:200px;"></td> --}}
+            <td style="text-align:center;padding: 15px 0;"><img src="{{asset('images/new-logo.svg')}}" style="width:200px;"></td>
         </tr>
         <tr>
             <td style="font-size: 24px;padding: 15px 0;font-weight: bold;">Verify your email address to complete your registration</td>

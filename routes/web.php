@@ -18,6 +18,7 @@ use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\Auth\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\Auth\JobController as AdminJobController;
+use App\Http\Controllers\ContactUsController;
 
 
 /*
@@ -65,6 +66,13 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
     Route::post('admin/skills/update', [AdminJobController::class, 'skillsUpdate'])->name('admin.skills.update');
     Route::post('/admin/skills/delete', [AdminJobController::class, 'skillsDelete'])->name('admin.skills.delete');
 
+    // Popular Skills
+    Route::get('/admin/popular-skills',  [AdminJobController::class, 'popularSkills'] )->name('admin.popularSkills');
+    Route::get('/admin/popular-skills/edit/{id}',  [AdminJobController::class, 'popularSkillsEdit'] )->name('admin.popularSkills.edit');
+    Route::get('/admin/popular-skills/add',  [AdminJobController::class, 'popularSkillsAdd'] )->name('admin.popularSkills.add');
+    Route::post('admin/popular-skills/update', [AdminJobController::class, 'popularSkillsUpdate'])->name('admin.popularSkills.update');
+    Route::post('/admin/popular-skills/delete', [AdminJobController::class, 'popularSkillsDelete'])->name('admin.popularSkills.delete');
+
     // Users
     Route::get('/admin/user',  [AdminJobController::class, 'user'] )->name('admin.user');
     Route::get('/admin/user/edit/{id}',  [AdminJobController::class, 'userEdit'] )->name('admin.user.edit');
@@ -109,6 +117,8 @@ Route::get('/', function () {
 Route::view('/privacy-policy', 'static.privacy-policy');
 Route::view('/hire-us', 'static.hire_us');
 Route::view('/faqs', 'static.faqs');
+
+Route::post('/contact-us', [ContactUsController::class, 'contactUsForm'])->name('contactUsForm');
 
 Route::group(['middleware' => 'prevent-back-history'], function () {
     Auth::routes();
