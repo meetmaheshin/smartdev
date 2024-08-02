@@ -4,7 +4,8 @@
     <header class="p-4 d-flex justify-content-between align-items-center text-center">
         <div class="header_logo">
             <a href="{{url('/')}}">
-                <img src="{{asset('images/logo.png')}}" alt="logo" width="200">
+                {{-- <img src="{{asset('images/logo.png')}}" alt="logo" width="200"> --}}
+                <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="200">
             </a>
         </div>
         <div class="header_right mt-4 mt-sm-4">

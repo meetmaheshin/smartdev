@@ -235,7 +235,7 @@ class JobController extends Controller
     public function skills(Request $request){
         $data['skills']=Skill::orderby('id','desc')->get();
         return view('admin.skills.index',$data);
-        }
+    }
     
     public function skillsAdd(Request $request){
         $data['speciality']=Specialty::where('type',1)->get();
@@ -243,14 +243,14 @@ class JobController extends Controller
         $data['skills'] = new Skill();
 
         return view('admin.skills.edit',$data);
-        }
+    }
     
     public function skillsEdit(Request $request,$id){
         $data['speciality']=Specialty::where('type',1)->get();
         $data['category']=Category::where('type',1)->get();
         $data['skills'] = Skill::whereId($request->id)->first();
         return view('admin.skills.edit',$data);
-        }
+    }
     
     public function skillsUpdate(Request $request){
             
@@ -289,6 +289,58 @@ class JobController extends Controller
             return response()->json(['status'=> false,'message' => 'we cannot delete this skill because this skill is added to any job']);
         }
     }
+
+    // Popular Skills
+    public function popularSkills(Request $request){
+        $data['popularSkills']=Skill::orderby('id','desc')->get();
+        return view('admin.popular_skills.index',$data);
+    }
+
+
+    public function popularSkillsAdd(Request $request){
+        $data['popularSkills'] = new Skill();
+        return view('admin.popular_skills.edit',$data);
+    }
+
+    public function popularSkillsEdit(Request $request,$id){
+        $data['popularSkills'] = Skill::whereId($request->id)->first();
+        return view('admin.popular_skills.edit',$data);
+    }
+
+    public function popularSkillsUpdate(Request $request){
+            
+        $validate = Validator::make(
+            $request->all(),
+            [
+                'title' => 'required',
+                'skills_sub' => 'required',
+            ]
+        );
+        if ($validate->fails()) {
+            return Redirect::back()->withErrors($validate);
+        }
+        $skill = Skill::find( $request->skills_id);
+        if (empty($skill)) {    // you can do this condition to check if is empty
+            $skill= new Skill;  //then create new object
+        }
+        $skill->title = $request->title;
+        $skill->skills_sub = $request->skills_sub;
+        $skill->save();
+
+        return redirect()->route('admin.popularSkills')->with('success', 'Popular Skill Successfully Updated ');
+    }
+
+    public function popularSkillsDelete(Request $request){
+        $check = ProjectSkill::where('skill_id',$request->id)->first();
+        if(empty($check)){
+            $skill = Skill::whereId($request->id)->delete();
+            return response()->json(['status'=> true,'message' => 'Popular Skill deleted successfully']);
+        }else{
+            return response()->json(['status'=> false,'message' => 'we cannot delete this skill because this skill is added to any job']);
+        }
+    }
+
+
 
     // users
     public function user(Request $request){

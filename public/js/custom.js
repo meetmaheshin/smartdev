@@ -11,6 +11,8 @@ $(document).ready(function(){
   });
 });
 
+document.getElementById("current-year").textContent = new Date().getFullYear();
+
 
 let elmID = document.getElementsByTagName('section');
 let util = {
@@ -239,4 +241,26 @@ function joinUsModal() {
 
 function closeJoinUsModal() {
   document.body.classList.remove('mdl_body');
+}
+
+
+
+document.getElementById('signup_newsletter').addEventListener('change', function() {
+    const errorSpan = document.getElementById('signup_error');
+    if (this.checked) {
+        errorSpan.style.display = 'none';
+    }
+});
+
+function validateForm() {
+    const checkbox = document.getElementById('signup_newsletter');
+    const errorSpan = document.getElementById('signup_error');
+    
+    if (!checkbox.checked) {
+        errorSpan.style.display = 'block';
+        return false;
+    } else {
+        errorSpan.style.display = 'none';
+        return true;
+    }
 }

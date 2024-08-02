@@ -37,6 +37,13 @@
         </a>
     </li>
     <li>
+        <a href="{{route('admin.popularSkills')}}" >
+            <div class="parent-icon"><i class='bx bx-cookie'></i>
+            </div>
+            <div class="menu-title">Popular Skills</div>
+        </a>
+    </li>
+    <li>
         <a href="{{route('admin.jobs')}}" >
             <div class="parent-icon"><i class='bx bx-category'></i>
             </div>
