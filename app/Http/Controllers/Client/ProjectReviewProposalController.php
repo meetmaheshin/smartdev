@@ -20,6 +20,7 @@ use App\Notifications\PaymentReceived;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Notification;
 use Auth, Session, URL,DB;
+use App\Models\ProjectQuestion;
 
 
 class ProjectReviewProposalController extends Controller
@@ -55,6 +56,7 @@ class ProjectReviewProposalController extends Controller
         $data['project_count'] = Project::where('user_id', auth()->user()->id)->where('job', '!=', 'draft')->get()->count();
         $sender = auth()->user()->id;
         $data['title'] = 'Review Proposal - '.config('app.name');
+        $data['questions'] = ProjectQuestion::where('project_id', $id)->get();
 
         // invite freelance tab
         $data['inviteFreelancer'] = User::where('is_admin', User::ROLE_FREELANCER)

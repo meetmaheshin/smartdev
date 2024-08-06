@@ -30,7 +30,7 @@
 
 <header class="navbar-menu">
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="{{url('/')}}"><img src="{{url('images/new-logo.svg')}}" alt="SmartDev3"></a>
+        <a class="navbar-brand" href="{{url('/')}}"><img src="{{url('images/logo.png')}}" alt="SmartDev3" width="180"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -94,8 +94,8 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="logo"> 
-                    {{-- <img src="{{url('images/new-logo.svg')}}" alt="Footer-Logo"> --}}
-                    <a href="{{url('/')}}"><img src="{{url('images/new-logo.svg')}}" alt="SmartDev3"></a>
+                    <img src="{{url('images/logo.png')}}" width="230" alt="Footer-Logo">
+                    {{-- <a href="{{url('/')}}"><img src="{{url('images/new-logo.svg')}}" alt="SmartDev3"></a> --}}
                 </div>
                 <div>
                     <span 
@@ -111,7 +111,7 @@
                         Web3 
                     </span>
                 </div>
-                <div>
+                {{-- <div>
                     <p>Social links</p>
                     <div class="social-links mt-3">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -119,30 +119,32 @@
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 
             </div>
             <div class="col-md-4">
-                <h5 class="font-18 font-weight-600 text-white mb-4">For customers</h5>
+                {{-- <h5 class="font-18 font-weight-600 text-white mb-4">For customers</h5> --}}
                 <ul class="footer-links">
-                    <li><a href="{{url('faqs')}}" class="font-16 text-decoration-none">FAQs</a></li>
+                    {{-- <li><a href="{{url('faqs')}}" class="font-16 text-decoration-none">FAQs</a></li>
                     <li><a href="#" class="font-16 text-decoration-none">Results</a></li>
-                    <li><a href="#" class="font-16 text-decoration-none">Remote Profile</a></li>
+                    <li><a href="#" class="font-16 text-decoration-none">Remote Profile</a></li> --}}
                 </ul>
             </div>
             <div class="col-md-4">
-                <h5 class="font-18 font-weight-600 text-white mb-4">For customers</h5>
+                {{-- <h5 class="font-18 font-weight-600 text-white mb-4">For customers</h5> --}}
                 <ul class="footer-links">
-                    <li><a href="#" class="font-16 text-decoration-none">UC Review</a></li>
+                    {{-- <li><a href="#" class="font-16 text-decoration-none">UC Review</a></li>
                     <li><a href="#" class="font-16 text-decoration-none">Categories Near You</a></li>
                     <li><a href="#" class="font-16 text-decoration-none">Blog</a></li>
-                    <li><a href="#" class="font-16 text-decoration-none">Contact Us</a></li>
+                    <li><a href="#" class="font-16 text-decoration-none">Contact Us</a></li> --}}
+                    <li><a href="https://t.me/smartdev3ai" target="_blank" class="font-16 text-decoration-none">Join Community</a></li>
+                    <li><a href="{{ url('consultation') }}" class="font-16 text-decoration-none">Contact Us</a></li>
                 </ul>
             </div>
         </div>            
     </div>        
 </footer>
-<footer class="coppy-right text-center p-3">
+<footer class="coppy-right text-center p-3 bg-white">
     <div class="container">
         <div class="row bg-white">
         <div class="col-12">

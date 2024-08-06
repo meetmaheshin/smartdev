@@ -14,7 +14,7 @@
                 <div class="col-md-7">
                     <h1 class="mb-0">Web3 Development on Steroids. Supercharged by AI.</h1>
                     <p class="py-3">Managed Marketplace of Top-Tier Talent. Powered by Smart Contracts and Advanced AI Tools.</p>
-                    <a href="{{ url('register') }}" class="btn custom_btn_border mr-3">Find Talent</a>
+                    <a href="{{ url('/register?type=1') }}" class="btn custom_btn_border mr-3">Find Talent</a>
                     <a href="{{url('hire-us')}}" class="btn custom_btn_BG">Hire Us</a>
                 </div>
                 <div class="col-md-5 d-xs-none">
@@ -33,7 +33,7 @@
                             <span class="text-orange">FREE</span> Creative Content inside Telegram
                         </h3>
                         <p class="text-center font-20 text-black">Hi! 👋 I am SmartDev3 Creative AI. Add me inside Telegram. I can generate unlimited creative marketing content for you and your teams.</p>
-                        <a href="#" class="btn custom_btn_BG mt-3 "> <img src="{{url('images/telegrame.svg')}}" class="mr-2"> JOIN TELEGRAM TO GET ACCESS</a>
+                        <a href="https://t.me/smartdev3ai" target="_blank" class="btn custom_btn_BG mt-3 "> <img src="{{url('images/telegrame.svg')}}" class="mr-2"> JOIN TELEGRAM TO GET ACCESS</a>
                   </div>
                 </div>
             </div>
@@ -82,8 +82,8 @@
                             </div>
                         </div>
                         <div class="d-flex flex-wrap gap-2">
-                            <a href="#" class="btn custom_btn_border">BOOK FREE CONSULTATION</a>
-                            <a href="#" class="btn custom_btn_BG">START YOUR PROJECT TODAY</a>
+                            <a href="{{ url('consultation') }}" class="btn custom_btn_border">BOOK FREE CONSULTATION</a>
+                            <a href="{{ url('register') }}" class="btn custom_btn_BG">START YOUR PROJECT TODAY</a>
                         </div>
                     </div>
                 </div>  
@@ -121,7 +121,7 @@
                     @if(auth()->check() && auth()->user()->is_admin == 0)
                         <a href="{{ url('/freelancer/dashboard') }}" class="btn custom_btn_BG mr-2">Find Projects</a>
                     @else
-                        <a href="{{ url('/login') }}" class="btn custom_btn_BG mr-2">Find Projects</a>
+                        <a href="{{ url('/register?type=0') }}" class="btn custom_btn_BG mr-2">Find Projects</a>
                     @endif
                 </div>
             </div>
@@ -168,8 +168,8 @@
                             <p class="pt-2 mb-0 neue-regular">Access a global network of Web3 talent and opportunities, breaking geographical barriers.</p>
                         </div>
                         <div class="d-flex flex-wrap gap-2">
-                            <a href="#" class="btn custom_btn_border">Book Free Consultation</a>
-                            <a href="#" class="btn custom_btn_BG">Start Your Project Today</a>
+                            <a href="{{ url('consultation') }}" class="btn custom_btn_border">Book Free Consultation</a>
+                            <a href="{{ url('register') }}" class="btn custom_btn_BG">Start Your Project Today</a>
                         </div>
                     </div>
                 </div>
@@ -193,9 +193,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="review-details text-center">
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <img src="{{url('images/unsplash.png')}}" alt="review">
-                        </div>
+                        </div> --}}
                         <h3 class="font-26 text-black mb-1 font-weight-700 neue-bold">Gaurav Gupta</h3>
                         <p class="font-18 font-weight-500 text-black mb-3 neue-medium">Head of Engineering, HABIT Network</p>
                         <p class="text-black font-16 mb-0 montserrat">Smartdev3 transformed our project workflow. The smart contract system ensured transparency and trust every step of the way.</p>
@@ -204,9 +204,9 @@
 
                 <div class="col-md-4">
                     <div class="review-details text-center">
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <img src="{{url('images/unsplash.png')}}" alt="review">
-                        </div>
+                        </div> --}}
                         <h3 class="font-26 text-black mb-1 font-weight-700 neue-bold">Rome Viharo</h3>
                         <p class="font-18 font-weight-500 text-black mb-3 neue-medium">Rome Viharo, Founder, AikiWiki</p>
                         <p class="text-black font-16 mb-0 montserrat">Running entire development stack here now. The milestone-based payment system run by smart contracts is a game-changer.</p>
@@ -215,9 +215,9 @@
 
                 <div class="col-md-4">
                     <div class="review-details text-center">
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <img src="{{url('images/unsplash.png')}}" alt="review">
-                        </div>
+                        </div> --}}
                         <h3 class="font-26 text-black mb-1 font-weight-700 neue-bold">Trevor Mitchell</h3>
                         <p class="font-18 font-weight-500 text-black mb-3 neue-medium">Head of Engineering, HABIT Network</p>
                         <p class="text-black font-16 mb-0 montserrat">Smartdev3 transformed our project workflow. The smart contract system ensured transparency and trust every step of the way.</p>
@@ -226,8 +226,8 @@
             </div>
             <div class="text-center mt-5">
                 <div class="d-flex justify-content-center flex-wrap gap-2">
-                    <a href="#" class="btn custom_btn_border">Book Free Consultation</a>
-                    <a href="#" class="btn custom_btn_BG">Start Your Project Today</a>
+                    <a href="{{ url('consultation') }}" class="btn custom_btn_border">Book Free Consultation</a>
+                    <a href="{{ url('register') }}" class="btn custom_btn_BG">Start Your Project Today</a>
                 </div>
             </div>
         </div>
@@ -253,7 +253,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 mt-5">
-                        <a href="#" class="btn custom_btn_BG">Get More Details</a>
+                        <a href="{{url('faqs')}}" class="btn custom_btn_BG">Get More Details</a>
                     </div>
                 </div>
             </div>
@@ -273,7 +273,7 @@
                         SmartenDev is your gateway to the future of Web3 development.
                         </p>
                         <div class="join-us-buttons">
-                            <a href="#" class="btn custom_btn_border">Book Free Consultation</a>
+                            <a href="{{ url('consultation') }}" class="btn custom_btn_border">Book Free Consultation</a>
                             @if(auth()->check() && auth()->user()->is_admin == 1)
                                 <a href="{{ url('/client/project_started') }}" class="btn custom_btn_BG">Post Your Project</a>
                             @else
@@ -283,7 +283,7 @@
                             @if(auth()->check() && auth()->user()->is_admin == 0)
                                 <a href="{{ url('/freelancer/dashboard') }}" class="btn custom_btn_border">Find Projects</a>
                             @else
-                                <a href="{{ url('login') }}" class="btn custom_btn_border">Find Projects</a>
+                                <a href="{{ url('/register?type=0') }}" class="btn custom_btn_border">Find Projects</a>
                             @endif
                         </div>                    
                     </div>

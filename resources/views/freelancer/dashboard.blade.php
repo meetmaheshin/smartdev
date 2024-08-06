@@ -281,7 +281,7 @@
                                             </svg>
                                         </div>
                                         <span class="font_weight_500 " id="modal_price"></span>
-                                        <small class="text-muted font_12 d-block " id="modal_budget"></small>
+                                        <small class="text-muted font_12 d-block " id="modal_budget" style="margin-left: 24px;"></small>
                                     </li>
                                     <li class="">
                                         <div class="up_svg d-inline-block mr-5p" data-cy="expertise">
@@ -311,6 +311,20 @@
                                     <span class="job_skills"></span>
                                 </div>
                             </div>
+
+                            <section id="questions-section" class="view_job_block pt-4 pd-4 border-bottom-0 job_border .job_margin" style="display: none;">
+                                {{-- <div class="row">
+                                    <div class="col-sm-12"> --}}
+                                        <h2 role="heading" aria-level="2" class="font_18 font_weight_600 color_black mb-4">
+                                            You will be asked to answer the following questions when submitting a proposal
+                                        </h2>
+                                        <ul class="list-unstyled" id="questions-list">
+                                            <!-- Questions will be dynamically inserted here -->
+                                        </ul>
+                                    {{-- </div>
+                                </div> --}}
+                            </section>
+                            
                         </div>
                         <div class="col-4 job_details_sidebar ps-0">
                             <div class="job_apply job_margin">

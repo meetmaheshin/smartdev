@@ -4,8 +4,8 @@
     <header class="p-4 d-flex justify-content-between align-items-center text-center">
         <div class="header_logo">
             <a href="{{url('/')}}">
-                {{-- <img src="{{asset('images/logo.png')}}" alt="logo" width="200"> --}}
-                <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="200">
+                <img src="{{asset('images/logo.png')}}" alt="logo" width="200">
+                {{-- <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="200"> --}}
             </a>
         </div>
         <div class="header_right mt-4 mt-sm-4">
@@ -24,6 +24,7 @@
                 <div class="signup_content text-center">
                     <h3 class="signup_heading font_weight_600">Join as a client or Web3 Professional</h3>
                     <div class="signup_btn_box mt-4 d-xl-flex px-4 justify-content-around">
+                        <input type="hidden" id="checked_on_cond" value="{{$_GET['type'] ?? ''}}">
                         <div class="btn_box p-3 me-xl-5 mb-3 mb-xl-0" data-text="client">
                             <div class="btn_box_inner d-flex justify-content-between">
                                 <div class="signup_btn mb-3">

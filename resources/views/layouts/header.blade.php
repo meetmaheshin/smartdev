@@ -2,8 +2,8 @@
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
 			<a class="navbar-brand pe-2" href="{{url('/')}}">
-				{{-- <img src="{{asset('images/logo.png')}}" alt="logo" width="100"> --}}
-				<img src="{{asset('images/new-logo.svg')}}" alt="logo" width="100">
+				<img src="{{asset('images/logo.png')}}" alt="logo" width="100">
+				{{-- <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="100"> --}}
 
 			</a>
 			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

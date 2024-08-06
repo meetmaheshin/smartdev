@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Notification;
 use File;
+use App\Models\ProjectQuestion;
 
 class ProjectController extends Controller
 {
@@ -95,6 +96,7 @@ class ProjectController extends Controller
             $data['catgeory_id'] = 1;
             $data['projectDetail'] = ProjectDetail::where('project_id', $request->session()->get('project_id'))->get();
             $data['web3specialty'] = Specialty::where('type', 1)->limit(3)->get();
+            $data['questions'] = ProjectQuestion::where('project_id', $request->session()->get('project_id'))->get();
 
             return view('client.project_title', $data);
         } else {
@@ -137,6 +139,24 @@ class ProjectController extends Controller
             'category_id' => $category_id
         ]);
 
+        $projectId = $request->project_id;
+        $clientId = Auth::id();
+
+        // Delete existing questions for the project and client
+        ProjectQuestion::where('project_id', $projectId)
+                    ->where('client_id', $clientId)
+                    ->delete();
+
+        if($request->questions != null){
+            // Insert new questions
+            foreach ($request->questions as $questionData) {
+                ProjectQuestion::create([
+                    'question' => $questionData,
+                    'project_id' => $projectId,
+                    'client_id' => $clientId
+                ]);
+            }
+        }
 
         if ($request->hasFile('filename')) {
             $allowedfileExtension = ['jpg', 'png', 'jpeg', 'JPEG', "PNG", 'JPG'];

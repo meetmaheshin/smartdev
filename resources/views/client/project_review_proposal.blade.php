@@ -159,6 +159,25 @@
                                                 </div>
                                             </div>
                                         </section>
+                                        @if($questions && $questions->isNotEmpty())
+                                            <section class="view_job_block p-4 border-bottom-0" style="border-top: 1px solid #ddd;">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h2 role="heading" aria-level="2" class="font_18 font_weight_600 color_black mb-4">
+                                                            You will be asked to answer the following questions when submitting a proposal
+                                                        </h2>
+                                                        <ul class="list-unstyled">
+                                                            @foreach($questions as $index => $question)
+                                                                <li class="py-1">
+                                                                    <span class="font_14 color_grey me-1">{{ $index + 1 }}. </span>
+                                                                    <span class="font_14 color_black">{{ $question->question }}</span>
+                                                                </li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        @endif
                                     </div>
                                     <div class="col-lg-3 ps-lg-0">
                                         <div class="view_job_right_block view_job_edit_btn p-4">

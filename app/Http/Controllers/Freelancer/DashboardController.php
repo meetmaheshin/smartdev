@@ -19,6 +19,7 @@ use App\Models\ProjectMilestone;
 use App\Notifications\FinishedWork;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Carbon;
+use App\Models\ProjectQuestion;
 
 
 class DashboardController extends Controller
@@ -76,6 +77,7 @@ class DashboardController extends Controller
         $projectDetail = $this->project->getProjectDetailsWithRelations($request->id);
         $converstaion = $this->conservation->getSenderId($request->id, auth()->user()->id);
         $project_count = Project::where('user_id', $projectDetail->user->id)->where('job', '!=', 'draft')->get()->count();
+        $questions = ProjectQuestion::where('project_id', $request->id)->get();
         // $proposalSetting = $this->proposalSetting->getProposalSettingForProject($converstaion ? $converstaion->sender_id : auth()->user()->id, $request->id);  
         $proposalSetting = $this->proposalSetting->getProposalSettingForProject( auth()->user()->id, $request->id);  
 
@@ -90,7 +92,7 @@ class DashboardController extends Controller
 
         $status = !empty($proposalSetting) ? 'true' : '';
         $userBalance = UserBalance::where('user_id',auth()->user()->id)->first();
-        return response()->json(['response' => 'true','data'=>$projectDetail,'status'=>$status,'userBalance'=>$userBalance, 'project_count'=>$project_count, 'timezone'=>$time_zone]);
+        return response()->json(['response' => 'true','data'=>$projectDetail,'status'=>$status,'userBalance'=>$userBalance, 'project_count'=>$project_count, 'timezone'=>$time_zone, 'questions'=>$questions]);
     }
  
     public function saveProject(Request $request) {
