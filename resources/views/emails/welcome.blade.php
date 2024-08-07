@@ -17,8 +17,8 @@
 <body>
     <table style="margin: 0; background: #f9f5f2; width: 600px; padding:15px; margin:0 auto;font-size: 20px;">
         <tr>
-            {{-- <td style="text-align:center;padding: 15px 0;"><img src="{{asset('images/logo.png')}}" style="width:200px;"></td> --}}
-            <td style="text-align:center;padding: 15px 0;"><img src="{{asset('images/new-logo.svg')}}" style="width:200px;"></td>
+            <td style="text-align:center;padding: 15px 0;"><img src="{{asset('images/logo.png')}}" style="width:200px;"></td>
+            {{-- <td style="text-align:center;padding: 15px 0;"><img src="{{asset('images/new-logo.svg')}}" style="width:200px;"></td> --}}
         </tr>
         <tr>
             <td style="font-size: 26px;padding: 15px 0;">Thanks for Registering at SmartDev3</td>

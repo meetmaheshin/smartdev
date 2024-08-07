@@ -43,6 +43,14 @@
             <div class="menu-title">Popular Skills</div>
         </a>
     </li>
+    {{-- contact us --}}
+    <li>
+        <a href="{{route('admin.contactUs')}}">
+            <div class="parent-icon"><i class='bx bx-cookie'></i>
+            </div>
+            <div class="menu-title">Contact Us</div>
+        </a>
+    </li>
     <li>
         <a href="{{route('admin.jobs')}}" >
             <div class="parent-icon"><i class='bx bx-category'></i>

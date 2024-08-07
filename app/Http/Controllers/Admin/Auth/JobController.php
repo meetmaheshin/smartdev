@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use DB;
 use App\Models\Country;
+use App\Models\Consultation;
 
 
 class JobController extends Controller
@@ -340,6 +341,48 @@ class JobController extends Controller
         }
     }
 
+
+    // contact us 
+    public function contactUs(Request $request){
+        $data['users'] = Consultation::orderby('id','desc')->get();
+        return view('admin.contact_us.index',$data);
+    }
+
+    public function contactUsEdit(Request $request,$id){
+        $data['user'] = Consultation::whereId($request->id)->first();
+        return view('admin.contact_us.edit',$data);
+    }
+
+
+    public function contactUsUpdate(Request $request){
+        $validate = Validator::make(
+            $request->all(),
+            [
+                'first_name' => 'required|regex:/^[a-zA-Z ]*$/',
+                'last_name' => 'required|regex:/^[a-zA-Z ]*$/',
+                'email' => 'required|email|max:255',
+                'description' => 'required'
+            ]
+        );
+        if ($validate->fails()) {
+            return Redirect::back()->withErrors($validate)->withInput();
+        }
+        $user = Consultation::find($request->id);
+        if (empty($user)) {// you can do this condition to check if is empty
+            $user= new User;//then create new object
+        }
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->description = $request->description;
+        $user->save();
+        return redirect()->route('admin.contactUs')->with('success', 'Contact-Us Data Updated Successfully');
+    }
+
+    public function contactUsDelete(Request $request){
+        $user = Consultation::whereId($request->id)->delete();
+        return response()->json(['status'=> true,'message' => 'Contact-US Data deleted successfully']);
+    }
 
 
     // users

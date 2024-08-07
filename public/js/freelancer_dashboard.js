@@ -106,6 +106,24 @@ $(document).on("click", ".best_matches_result", function (e) {
                 if (response.data.user.created_at) {
                     $('#member_since').html('Member Since ' + new Date(response.data.user.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }));
                 }
+                if (response && response.questions && response.questions.length > 0) {
+                    var questionsList = $('#questions-list');
+                    questionsList.empty(); // Clear any existing content
+    
+                    $.each(response.questions, function(index, question) {
+                        var questionItem = `
+                            <li class="py-1">
+                                <span class="font_14 color_grey me-1">${index + 1}. </span>
+                                <span class="font_14 color_black">${question.question}</span>
+                            </li>
+                        `;
+                        questionsList.append(questionItem);
+                    });
+    
+                    $('#questions-section').show(); // Show the section if there are questions
+                } else {
+                    $('#questions-section').hide(); // Hide the section if there are no questions
+                }
                 if (response.data.images.length != 0) {
                     var sel1 = $('<ul class="list-unstyled">');
                     $.each(response.data.images, function (key, value) {

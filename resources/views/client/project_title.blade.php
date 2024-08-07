@@ -40,6 +40,25 @@
                             </div>
                         </div>
                         <div class="mb-3">
+                            <p class="font_16 font_weight_600 mb-1">Questions</p>
+                            <div class="add_questions d-flex flex-wrap">
+                                <input class="form-control me-2" type="text" id="questionInput" placeholder="Type your question and hit Enter">
+                            </div>
+                            <div id="questionContainer" class="d-flex flex-wrap">
+                                @if($questions)
+                                    @foreach($questions as $question)
+                                        <div id="question_{{ $question->id }}">
+                                            <input type="hidden" name="questions[]" id="{{ $question->id }}" value="{{ $question->question }}">
+                                            <span class="posting_add_feature font_14 font_weight_500 color_grey px-3 py-2 d-inline-block" data-question="{{ $question->question }}" data-id="{{ $question->id }}">
+                                                {{ $question->question }}
+                                                <i class="fas fa-solid fa-times"></i>
+                                            </span>
+                                        </div>
+                                    @endforeach
+                                @endif
+                            </div> 
+                        </div>
+                        <div class="mb-3">
                             <p class="font_15 font_weight_500 mb-0">Images(Maximum file size: 5 MB)</p>
                             <div id="file-type-info" class="text-muted mb-2">Supported file types: png, jpg, jpeg</div>
                             <div class="position-relative">
@@ -211,6 +230,57 @@
             }
         }
     }
+
+    document.getElementById('questionInput').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            addQuestion();
+        }
+    });
+
+    function addQuestion() {
+        const input = document.getElementById('questionInput');
+        const questionText = input.value.trim();
+        if (questionText === '') return;
+
+        const questionId = Date.now(); // Use timestamp as a unique ID for simplicity
+
+        const questionDiv = document.createElement('div');
+        questionDiv.id = `question_${questionId}`;
+
+        const hiddenInput = document.createElement('input');
+        hiddenInput.type = 'hidden';
+        hiddenInput.name = 'questions[]';
+        hiddenInput.id = questionId;
+        hiddenInput.value = questionText;
+
+        const questionSpan = document.createElement('span');
+        questionSpan.className = 'posting_add_feature font_14 font_weight_500 color_grey px-3 py-2 d-inline-block';
+        questionSpan.dataset.question = questionText;
+        questionSpan.dataset.id = questionId;
+        questionSpan.innerText = questionText;
+
+        const removeIcon = document.createElement('i');
+        removeIcon.className = 'ml-3 fas fa-solid fa-times';
+        removeIcon.style.marginLeft = "6px";
+        removeIcon.onclick = function() {
+            document.getElementById(`question_${questionId}`).remove();
+        };
+
+        questionSpan.appendChild(removeIcon);
+        questionDiv.appendChild(hiddenInput);
+        questionDiv.appendChild(questionSpan);
+
+        document.getElementById('questionContainer').appendChild(questionDiv);
+
+        input.value = ''; // Clear the input box
+    }
+
+    // Event delegation to handle removing question spans
+    $(document).on("click", "#questionContainer .fa-times", function () {
+        $(this).parent().parent().remove();
+    });
+
 
     // $("[name=project_type]").click(function() {
     //     projectType();

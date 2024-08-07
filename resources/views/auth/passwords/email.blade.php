@@ -8,8 +8,8 @@
                 <img src="{{asset('images/login_img.png')}}" alt="login" class="w-100 vh-100">
                 <div class="logo_img position-absolute">
                     <a href="/">
-                        {{-- <img src="{{asset('images/logo.png')}}" alt="logo" width="240"> --}}
-                        <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="240">
+                        <img src="{{asset('images/logo.png')}}" alt="logo" width="240">
+                        {{-- <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="240"> --}}
                     </a>
                 </div>
             </div>

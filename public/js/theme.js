@@ -42,6 +42,30 @@ jQuery(document).ready(function () {
             jQuery(".project_hour_budget").hide();
         }
     });
+
+
+    function preSelectBasedOnHiddenField() {
+        const checkedOnCond = $("#checked_on_cond").val(); // Fetch the hidden field value
+
+        if (checkedOnCond === '1') {
+            // ROLE_CLIENT
+            $(".btn_box[data-text='client']").addClass("active").find("input").prop("checked", true);
+            signup_join_btn.text("Join as a Client");
+            signup_join_btn.removeAttr("disabled");
+            $(".sign_up_form").find("h4").text("I'm a client, hiring for a project");
+            $("#is_admin").val("1");
+        } else if (checkedOnCond === '0') {
+            // ROLE_FREELANCER
+            $(".btn_box[data-text='freelancer']").addClass("active").find("input").prop("checked", true);
+            signup_join_btn.text("Apply as a Web3 Professional");
+            signup_join_btn.removeAttr("disabled");
+            $(".sign_up_form").find("h4").text("I'm a Web3 Professional, looking for work");
+            $("#is_admin").val("0");
+            $(".header_right a").text("Join as a Client");
+        }
+    }
+    preSelectBasedOnHiddenField();
+
     signup_join_btn.click(function () {
         jQuery(".signup_content").hide();
         jQuery(".sign_up_form").show();
