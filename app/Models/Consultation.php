@@ -13,6 +13,7 @@ class Consultation extends Model
         'first_name',
         'last_name',
         'email',
+        'telegram_id',
         'description'
     ];
 }

@@ -12,11 +12,11 @@ class ConsultationController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
+            'first_name' => 'required|string|max:255|regex:/^[a-zA-Z ]*$/',
+            'last_name' => 'required|string|max:255|regex:/^[a-zA-Z ]*$/',
             'email' => 'required|email|max:255',
-            'description' => 'required|string',
-            'confirmCheck' => 'accepted'
+            'telegram_id' => 'required|regex:/^@[a-zA-Z0-9_]{5,32}$/',
+            'description' => 'required|string'
         ]);
 
         if ($validator->fails()) {
@@ -27,6 +27,7 @@ class ConsultationController extends Controller
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
+            'telegram_id' => $request->telegram_id,
             'description' => $request->description
         ]);
 

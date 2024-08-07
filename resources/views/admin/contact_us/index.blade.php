@@ -29,6 +29,7 @@
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Email</th>
+                                <th>Telegram_id</th>
                                 <th>Description</th>
                                 <th>Actions</th>
 
@@ -41,6 +42,7 @@
                                 <td>{{$user->first_name}}</td>
                                 <td>{{$user->last_name}}</td>
                                 <td>{{$user->email}}</td>
+                                <td>{{$user->telegram_id}}</td>
                                 <td>{{$user->description}}</td>
                                 <td>
                                     <div class="d-flex order-actions">
