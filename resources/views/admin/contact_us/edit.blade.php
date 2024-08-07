@@ -54,7 +54,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <!-- Phone Number -->
+                                        <!-- Email -->
                                         <div class="col-md-6 mb-3">
                                             <label for="email" class="form-label">Email <span style="color: red">*</span></label>
                                             <input type="email" class="form-control" id="email" placeholder="Enter email address" name="email" value="{{$user->email}}">
@@ -64,11 +64,23 @@
                                             </span>
                                             @enderror
                                         </div>
-                                        {{-- @if($user->is_admin == 0) --}}
-                                        <!-- Title -->
+
+                                        <!-- telegram_id -->
                                         <div class="col-md-6 mb-3">
-                                            <label for="title" class="form-label">Description<span style="color: red">*</span></label></label>
-                                            <input type="text" class="form-control" id="description" placeholder="Enter Title" name="description" value="{{$user->description}}">
+                                            <label for="telegram_id" class="form-label">Telegram Id <span style="color: red">*</span></label></label>
+                                            <input type="text" class="form-control" id="telegram_id" placeholder="Enter Telegram Id" name="telegram_id" value="{{$user->telegram_id}}">
+                                            @error('telegram_id')
+                                            <span class="text-danger" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- Description -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="Description" class="form-label">Description <span style="color: red">*</span></label></label>
+                                            <input type="text" class="form-control" id="description" placeholder="Enter Description" name="description" value="{{$user->description}}">
                                             @error('description')
                                             <span class="text-danger" role="alert">
                                                 <strong>{{ $message }}</strong>

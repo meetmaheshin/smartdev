@@ -47,14 +47,14 @@
                         @csrf
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" id="firstName" name="first_name" placeholder="First Name *">
+                                <input type="text" class="form-control" id="firstName" name="first_name" placeholder="First Name *" value="{{ old('first_name') }}">
                                 <small class="error-message text-danger" id="firstNameError" style="display: none;">First Name is required.</small>
                                 @error('first_name')
                                     <small class="error-message text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last Name *">
+                                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last Name *" value="{{ old('last_name') }}">
                                 <small class="error-message text-danger" id="lastNameError" style="display: none;">Last Name is required.</small>
                                 @error('last_name')
                                     <small class="error-message text-danger">{{ $message }}</small>
@@ -62,23 +62,23 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email Address *">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email Address *" value="{{ old('email') }}">
                             <small class="error-message text-danger" id="emailError" style="display: none;">Valid Email is required.</small>
                             @error('email')
                                 <small class="error-message text-danger">{{ $message }}</small>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="description" name="description" placeholder="What can we description you with *">
-                            <small class="error-message text-danger" id="descriptionError" style="display: none;">This field is required.</small>
-                            @error('description')
+                            <input type="text" class="form-control" id="telegramId" name="telegram_id" placeholder="Telegram ID" value="{{ old('telegram_id') }}">
+                            <small class="error-message text-danger" id="telegramIdError" style="display: none;">Valid Telegram ID is required.</small>
+                            @error('telegram_id')
                                 <small class="error-message text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="confirmCheck" name="confirmCheck"> Terms and conditions
-                            <small class="error-message text-danger" id="confirmCheckError" style="display: none;">The confirm check must be accepted.</small>
-                            @error('confirmCheck')
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="description" name="description" placeholder="How can I assist you? *" value="{{ old('description') }}">
+                            <small class="error-message text-danger" id="descriptionError" style="display: none;">This field is required.</small>
+                            @error('description')
                                 <small class="error-message text-danger">{{ $message }}</small>
                             @enderror
                         </div>
@@ -102,22 +102,23 @@
             const firstName = document.getElementById('firstName');
             const lastName = document.getElementById('lastName');
             const email = document.getElementById('email');
+            const telegramId = document.getElementById('telegramId');
             const description = document.getElementById('description');
-            const confirmCheck = document.getElementById('confirmCheck');
     
             // Get error message elements
             const firstNameError = document.getElementById('firstNameError');
             const lastNameError = document.getElementById('lastNameError');
             const emailError = document.getElementById('emailError');
+            const telegramIdError = document.getElementById('telegramIdError');
             const descriptionError = document.getElementById('descriptionError');
-            const confirmCheckError = document.getElementById('confirmCheckError');
     
             // Reset error messages
             firstNameError.style.display = 'none';
             lastNameError.style.display = 'none';
             emailError.style.display = 'none';
+            telegramIdError.style.display = 'none';
             descriptionError.style.display = 'none';
-            confirmCheckError.style.display = 'none';
+            // confirmCheckError.style.display = 'none';
     
             // Validate first name
             if (firstName.value.trim() === '') {
@@ -137,16 +138,19 @@
                 emailError.style.display = 'block';
                 isValid = false;
             }   
+
+            // Validate telegram ID
+            if (telegramId.value.trim() === '') {
+                telegramIdError.style.display = 'block';
+                isValid = false;
+            } else if (!/^@[a-zA-Z0-9_]{5,32}$/.test(telegramId.value.trim())) {
+                telegramIdError.style.display = 'block';
+                isValid = false;
+            }
     
             // Validate description field
             if (description.value.trim() === '') {
                 descriptionError.style.display = 'block';
-                isValid = false;
-            }
-    
-            // Validate not a checkbox
-            if (!confirmCheck.checked) {
-                confirmCheckError.style.display = 'block';
                 isValid = false;
             }
     
@@ -167,12 +171,12 @@
             document.getElementById('emailError').style.display = 'none';
         });
 
-        document.getElementById('description').addEventListener('input', function() {
-            document.getElementById('descriptionError').style.display = 'none';
+        document.getElementById('telegramId').addEventListener('input', function() {
+            document.getElementById('telegramIdError').style.display = 'none';
         });
 
-        document.getElementById('confirmCheck').addEventListener('change', function() {
-            document.getElementById('confirmCheckError').style.display = 'none';
+        document.getElementById('description').addEventListener('input', function() {
+            document.getElementById('descriptionError').style.display = 'none';
         });
     </script>
     

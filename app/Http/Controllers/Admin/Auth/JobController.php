@@ -361,6 +361,7 @@ class JobController extends Controller
                 'first_name' => 'required|regex:/^[a-zA-Z ]*$/',
                 'last_name' => 'required|regex:/^[a-zA-Z ]*$/',
                 'email' => 'required|email|max:255',
+                'telegram_id' => 'required|regex:/^@[a-zA-Z0-9_]{5,32}$/',
                 'description' => 'required'
             ]
         );
@@ -374,6 +375,7 @@ class JobController extends Controller
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
+        $user->telegram_id = $request->telegram_id;
         $user->description = $request->description;
         $user->save();
         return redirect()->route('admin.contactUs')->with('success', 'Contact-Us Data Updated Successfully');

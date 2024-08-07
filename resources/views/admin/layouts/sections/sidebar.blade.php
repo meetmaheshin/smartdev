@@ -46,7 +46,7 @@
     {{-- contact us --}}
     <li>
         <a href="{{route('admin.contactUs')}}">
-            <div class="parent-icon"><i class='bx bx-cookie'></i>
+            <div class="parent-icon"><i class='bx bx-message'></i>
             </div>
             <div class="menu-title">Contact Us</div>
         </a>
