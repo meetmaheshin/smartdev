@@ -14,8 +14,9 @@
                 <div class="col-md-7">
                     <h1 class="mb-0">Web3 Development on Steroids. Supercharged by AI.</h1>
                     <p class="py-3">Managed Marketplace of Top-Tier Talent. Powered by Smart Contracts and Advanced AI Tools.</p>
-                    <a href="{{ url('/register?type=1') }}" class="btn custom_btn_border mr-3">Find Talent</a>
-                    <a href="{{url('hire-us')}}" class="btn custom_btn_BG">Hire Us</a>
+                    {{-- <a href="{{ url('/register?type=1') }}" class="btn custom_btn_border mr-3">Find Talent</a>
+                    <a href="{{url('hire-us')}}" class="btn custom_btn_BG">Hire Us</a> --}}
+                    <a href="{{ url('consultation') }}" class="btn custom_btn_BG">Start Your Project</a>
                 </div>
                 <div class="col-md-5 d-xs-none">
                     <img src="{{url('images/Banner_section.svg')}}" alt="Banner" class="img-fluid">
@@ -82,8 +83,9 @@
                             </div>
                         </div>
                         <div class="d-flex flex-wrap gap-2">
-                            <a href="{{ url('consultation') }}" class="btn custom_btn_border">BOOK FREE CONSULTATION</a>
-                            <a href="{{ url('register') }}" class="btn custom_btn_BG">START YOUR PROJECT TODAY</a>
+                            {{-- <a href="{{ url('consultation') }}" class="btn custom_btn_border">BOOK FREE CONSULTATION</a> --}}
+                            {{-- <a href="{{ url('register') }}" class="btn custom_btn_BG">START YOUR PROJECT TODAY</a> --}}
+                            <a href="{{ url('consultation') }}" class="btn custom_btn_BG">Start Your Project</a>
                         </div>
                     </div>
                 </div>  
@@ -168,8 +170,9 @@
                             <p class="pt-2 mb-0 neue-regular">Access a global network of Web3 talent and opportunities, breaking geographical barriers.</p>
                         </div>
                         <div class="d-flex flex-wrap gap-2">
-                            <a href="{{ url('consultation') }}" class="btn custom_btn_border">Book Free Consultation</a>
-                            <a href="{{ url('register') }}" class="btn custom_btn_BG">Start Your Project Today</a>
+                            {{-- <a href="{{ url('consultation') }}" class="btn custom_btn_border">Book Free Consultation</a> --}}
+                            {{-- <a href="{{ url('register') }}" class="btn custom_btn_BG">Start Your Project Today</a> --}}
+                            <a href="{{ url('consultation') }}" class="btn custom_btn_BG">Start Your Project</a>
                         </div>
                     </div>
                 </div>
@@ -226,8 +229,9 @@
             </div>
             <div class="text-center mt-5">
                 <div class="d-flex justify-content-center flex-wrap gap-2">
-                    <a href="{{ url('consultation') }}" class="btn custom_btn_border">Book Free Consultation</a>
-                    <a href="{{ url('register') }}" class="btn custom_btn_BG">Start Your Project Today</a>
+                    {{-- <a href="{{ url('consultation') }}" class="btn custom_btn_border">Book Free Consultation</a> --}}
+                    {{-- <a href="{{ url('register') }}" class="btn custom_btn_BG">Start Your Project Today</a> --}}
+                    <a href="{{ url('consultation') }}" class="btn custom_btn_BG">Start Your Project</a>
                 </div>
             </div>
         </div>
@@ -253,7 +257,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 mt-5">
-                        <a href="{{url('faqs')}}" class="btn custom_btn_BG">Get More Details</a>
+                        <a href="{{ url('consultation') }}" class="btn custom_btn_BG">Get More Details</a>
                     </div>
                 </div>
             </div>
@@ -273,7 +277,7 @@
                         SmartenDev is your gateway to the future of Web3 development.
                         </p>
                         <div class="join-us-buttons">
-                            <a href="{{ url('consultation') }}" class="btn custom_btn_border">Book Free Consultation</a>
+                            {{-- <a href="{{ url('consultation') }}" class="btn custom_btn_border">Book Free Consultation</a> --}}
                             @if(auth()->check() && auth()->user()->is_admin == 1)
                                 <a href="{{ url('/client/project_started') }}" class="btn custom_btn_BG">Post Your Project</a>
                             @else
