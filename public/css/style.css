@@ -2167,3 +2167,17 @@ a.remove_portfolio_attachment {
 .asterisk{
     color: red;
 }
+
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+#fileNames {
+    margin-top: 10px;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+}
+#fileNames li {
+    margin: 5px 0;
+}

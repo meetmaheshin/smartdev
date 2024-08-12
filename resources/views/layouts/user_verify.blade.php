@@ -26,7 +26,15 @@
     <nav class="navbar border-bottom border-1">
         <div class="container-fluid">
             <div class="mobile_center">
-                <a class="navbar-brand pe-2" href="{{url('/')}}">
+                <a class="navbar-brand pe-2" href="@if(auth()->check())
+                                                @if(auth()->user()->is_admin == 1)
+                                                    {{ url('/client/dashboard') }}
+                                                @elseif(auth()->user()->is_admin == 0)
+                                                    {{ url('/freelancer/dashboard') }}
+                                                @endif
+                                            @else
+                                                {{ url('/') }}
+                                            @endif">
                     <img src="{{asset('images/logo.png')}}" alt="logo" width="100">
                     {{-- <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="100"> --}}
                     

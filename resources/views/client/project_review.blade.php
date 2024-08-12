@@ -173,9 +173,63 @@
                                             </p>
                                         </div>
                                     </div>
+                                    <div class="client_job_post_skill_wrapper mb-5">
+                                        <h4 class="font_18 mb-2 font_weight_600">Questions <span class="asterisk">*</span></h4>
+                                        <div class="add_questions add_skills d-flex align-items-center">
+                                            @if($questions && $questions->isNotEmpty())
+                                                @foreach($questions as $index => $question)
+                                                    <span class="font_14 d-inline-block question">{{ isset($question->question) ? $question->question : null }}</span>
+                                                @endforeach
+                                            @endif
+                                            <a href="" class="edit_draft_icon" data-bs-toggle="modal" data-bs-target="#editquestion">
+                                                <i class="fa-solid fa-pen fas"></i>
+                                            </a>
+                                            <div class="text-danger error" data-error="skill_id"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+
+
+                        <div class="modal fade edit_question_popup" id="editquestion" tabindex="-1" aria-labelledby="editquestionLabel" aria-hidden="true">
+                                <input type="hidden" id="_token" value="{{ csrf_token() }}">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content border-0">
+                                        <div class="modal-header border-0 mb-4 p-4">
+                                            <h5 class="modal-title font_22 color_black" id="editquestionLabel">Edit Questions</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body mb-5 px-4">
+                                            <div class="mb-3">
+                                                <div id="addRowBtn" class="btn btn-success mb-3">Add question</div>
+                                                <div id="questionContainer" class="d-flex flex-column gap-2">
+                                                    <!-- Rows will be added here -->
+                                                    @if($questions)
+                                                        @foreach($questions as $question)
+                                                            <div class="row" id="question_{{ $question->id }}">
+                                                                <div class="col">
+                                                                    <div class="input-group">
+                                                                        <input type="text" name="questions[]" id="{{ $question->id }}" class="form-control" value="{{ $question->question }}">
+                                                                        <button type="button" class="btn btn-danger deleteBtn">X</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer border-0 px-4">
+                                            <button type="button" class="font_15 border-0 font_weight_500 me-4" data-bs-dismiss="modal">Cancel</button>
+                                            <a href="javascript:void(0)" class="green_btn text-decoration-none font_15 save_ques_btn" data-bs-dismiss="modal">Apply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+
 
                         {{-- Edit Category --}}
                         <div class="modal fade editdraft_popup edit_category_popup" id="editcategory" tabindex="-1" aria-labelledby="editcategoryLabel" aria-hidden="true">
@@ -603,6 +657,56 @@
                         $('.loader-section').hide();
                 }, 1000);                
             }
+        });
+    });
+
+
+    $(document).ready(function() {
+        $('#addRowBtn').click(function() {
+            // Clear previous error messages
+            $('.error-message').remove();
+
+            // Check if any input field is empty
+            let emptyInput = false;
+            $('#questionContainer .row').each(function() {
+                const input = $(this).find('input[type="text"]');
+                const errorDiv = $(this).find('.error-message');
+
+                if (input.val().trim() === '') {
+                    emptyInput = true;
+                    if (errorDiv.length === 0) {
+                        $(this).append('<div class="error-message text-danger">This field is required.</div>');
+                    }
+                    input.addClass('is-invalid'); // Highlight the empty field
+                } else {
+                    input.removeClass('is-invalid'); // Remove highlight if filled
+                    errorDiv.remove(); // Remove error message if field is filled
+                }
+            });
+
+            if (emptyInput) {
+                return; // Exit the function if there's an empty input
+            }
+
+            // Add a new row if all fields are filled
+            const newRow = `
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group">
+                            <input type="text" name="questions[]" class="form-control" placeholder="Enter your question">
+                            <button type="button" class="btn btn-danger deleteBtn">X</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('#questionContainer').append(newRow);
+        });
+
+        // Event delegation to handle delete button click
+        $('#questionContainer').on('click', '.deleteBtn', function() {
+            const row = $(this).closest('.row');
+            row.remove(); // Remove the row
+            row.find('.error-message').remove(); // Ensure any error message in the row is also removed
         });
     });
 

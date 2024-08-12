@@ -6,6 +6,19 @@
 <section class="review_proposal min_60vh mt-5">
     <div class="container-xl">
         <div class="row">
+            @if(session('error'))
+                <div class="alert alert-danger alert-dismissible fade show">
+                    {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="col-sm-12">
                 <h1 class="font_22 color_black mb-4 mt-3 font_weight_600">{{$projectDetail->title}}</h1>
             </div>

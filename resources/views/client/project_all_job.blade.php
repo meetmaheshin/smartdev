@@ -2,6 +2,19 @@
 @section('content')
 <div class="container min_60vh mt-5">
     <div class="row">
+        @if(session('error'))
+            <div class="alert alert-danger alert-dismissible fade show">
+                {{ session('error')}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        @if(session('success'))
+            <div class="alert alert-success alert-dismissible fade show">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="col-12 d-flex justify-content-between">
             <h4 class="font_weight_600">Job Listings</h4>
             <button class="up_green_btn"><a href="{{route('project_started')}}" class="text-light text-decoration-none">Post a New Job</a></button>

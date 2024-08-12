@@ -37,6 +37,7 @@
                             <tr>
                                 <th> Sno.</th>
                                 <th>Title</th>
+                                <th>Rank</th>
                                 <th>Actions</th>
 
                             </tr>
@@ -46,6 +47,7 @@
                             <tr>
                                 <td>{{$key+1}}</td>
                                 <td>{{$specialities->title}}</td>
+                                <td>{{$specialities->rank}}</td>
                                 
                                 <td>
                                     <div class="d-flex order-actions">

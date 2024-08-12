@@ -205,17 +205,35 @@ class JobController extends Controller
             $request->all(),
             [
                 'title' => 'required',
+                'rank' => 'nullable|integer|between:1,3',
             ]
         );
         if ($validate->fails()) {
             return Redirect::back()->withErrors($validate);
         }
+        // Check if rank is provided and if it's already used by another specialty
+        if (!is_null($request->rank)) {
+            $existingSpecialty = Specialty::where('rank', $request->rank)
+                ->where('id', '!=', $request->speciality_id)
+                ->first();
+
+            if ($existingSpecialty) {
+                return Redirect::back()->withErrors(['rank' => 'This rank is already assigned to another specialty.'])->withInput();
+            }
+        }
+
         $cat = Specialty::find( $request->speciality_id);
         if (empty($cat)) {// you can do this condition to check if is empty
             $cat= new Specialty;//then create new object
         }
         $cat->title = $request->title;
         $cat->type = 1;
+        // Assign the rank if provided
+        if (!is_null($request->rank)) {
+            $cat->rank = $request->rank;
+        } else {
+            $cat->rank = null; // Clear rank if no rank is selected
+        }
         $cat->save();
         return redirect()->route('admin.speciality')->with('success', 'Speciality Successfully Updated ');
     }

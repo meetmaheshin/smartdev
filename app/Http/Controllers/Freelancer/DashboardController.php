@@ -57,6 +57,7 @@ class DashboardController extends Controller
         // best matches 
         $data['project_best']  = Project::withCount('getProposalSetting')
                                         ->where('job','new')
+                                        ->where('job_type', '0')
                                         ->with('ProjectSkill.skill')->with(['saveJobs' => function($q) {
                                                 $q->where('user_id', auth()->user()->id);
                                             }])
@@ -65,6 +66,7 @@ class DashboardController extends Controller
 
         // most recent
         $data['project_recent']  = Project::withCount('getProposalSetting')->where('job','new')
+                                            ->where('job_type', '0')
                                             ->with('ProjectSkill.skill')
                                             ->matchingSkills($skillArry)
                                             ->recent()

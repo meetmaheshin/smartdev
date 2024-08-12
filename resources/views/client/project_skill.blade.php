@@ -127,7 +127,7 @@
                             <div class="back-fwd-btn px-0 d-flex justify-content-between">
                                 <a href="{{ route('project.title.view') }}" class="btn">Back</a>
                                 <button type="submit" class="btn btn-sm btn-success continue border-0" disabled>Next:
-                                    Skills</button>
+                                    Scope</button>
                             </div>
                         </div>
                     </form>

@@ -51,7 +51,7 @@ class SearchController extends Controller
                                     ->get(); 
             return view('search.search_talent',$data);
         }else if($data['searchType'] == 1){
-            $projectSearch   = Project::where('job','new')->with('ProjectSkill.skill')
+            $projectSearch   = Project::where('job','new')->where('job_type', '0')->with('ProjectSkill.skill')
             ->where(function($query) use ($searchString){
                 $query->where('title','LIKE','%'.$searchString.'%')
                 ->orWhere('description','LIKE','%'.$searchString.'%')

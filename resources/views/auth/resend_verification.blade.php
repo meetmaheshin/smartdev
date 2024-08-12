@@ -22,12 +22,13 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="{{ route('verification.resend') }}">
+                        <form method="POST" action="{{ route('verification.resend') }}" onsubmit="return validateForm()">
                             @csrf
 
                             <div class="form-group">
                                 <label for="email">{{ __('Email Address') }}</label>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <small class="error-message text-danger" id="emailError" style="display: none;">Valid Email is required.</small>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -45,4 +46,20 @@
             </div>
         </div>
     </div>
+    <script>
+        function validateForm() {
+            let isValid = true;
+            const email = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            emailError.style.display = 'none';
+
+            // Validate email
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email.value.trim())) {
+                emailError.style.display = 'block';
+                isValid = false;
+            } 
+            return isValid;
+        }
+    </script>
 @endsection

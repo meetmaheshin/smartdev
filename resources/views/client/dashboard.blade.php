@@ -4,6 +4,19 @@
 	<div class="container">
 		<div class="user_action pt-5">
 			<div class="row">
+				@if(session('error'))
+					<div class="alert alert-danger alert-dismissible fade show">
+						{{ session('error')}}
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				@endif
+
+				@if(session('success'))
+					<div class="alert alert-success alert-dismissible fade show">
+						{{ session('success') }}
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				@endif
 				<div class="col-lg-8">
 					<div class="d-flex flex-nowrap align-items-center">
 						<div class="d-flex flex-column flex-shrink">
@@ -65,7 +78,7 @@
 								<div class="user_post_status">
 									<div class="budget_status font_14 color_grey mb-1">
 										<span>{{($data->budget=='project'? 'Fixed' : 'Hourly')}} Price -</span>
-										<span>Public</span>
+										<span>{{($data->job_type=='0'? 'Public' : 'Private')}}</span>
 									</div>
 									<div class="post_date font_14 color_grey">
 										<span>Created {{TimeChange($data->updated_at)}}</span>

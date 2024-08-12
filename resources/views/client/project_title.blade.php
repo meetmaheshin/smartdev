@@ -40,31 +40,36 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <p class="font_16 font_weight_600 mb-1">Questions</p>
-                            <div class="add_questions d-flex flex-wrap">
-                                <input class="form-control me-2" type="text" id="questionInput" placeholder="Type your question and hit Enter">
-                            </div>
-                            <div id="questionContainer" class="d-flex flex-wrap">
+                            <div id="addRowBtn" class="btn btn-secondary mb-3">Add question</div>
+                            <div id="questionContainer" class="d-flex flex-column gap-2">
+                                <!-- Rows will be added here -->
                                 @if($questions)
                                     @foreach($questions as $question)
-                                        <div id="question_{{ $question->id }}">
-                                            <input type="hidden" name="questions[]" id="{{ $question->id }}" value="{{ $question->question }}">
-                                            <span class="posting_add_feature font_14 font_weight_500 color_grey px-3 py-2 d-inline-block" data-question="{{ $question->question }}" data-id="{{ $question->id }}">
-                                                {{ $question->question }}
-                                                <i class="fas fa-solid fa-times"></i>
-                                            </span>
+                                        <div class="row" id="question_{{ $question->id }}">
+                                            <div class="col">
+                                                <div class="input-group">
+                                                    <input type="text" name="questions[]" id="{{ $question->id }}" class="form-control" value="{{ $question->question }}">
+                                                    <button type="button" class="btn btn-danger deleteBtn">X</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     @endforeach
                                 @endif
-                            </div> 
+                            </div>
                         </div>
                         <div class="mb-3">
                             <p class="font_15 font_weight_500 mb-0">Images(Maximum file size: 5 MB)</p>
                             <div id="file-type-info" class="text-muted mb-2">Supported file types: png, jpg, jpeg</div>
-                            <div class="position-relative">
+                            {{-- <div class="position-relative">
                                 <input type="file" class="form-control me-2" id="filename" name="filename[]" accept=".png, .jpg, .jpeg" multiple />
                                 <span class="text-danger error" id="fileserror" data-error="filename"></span>
+                            </div> --}}
+                            <div class="position-relative custom-file-upload">
+                                <input type="file" id="filename" name="filename[]" accept=".png, .jpg, .jpeg" multiple />
+                                <label for="filename" id="fileLabel" class="btn btn-secondary px-3 py-2">Choose Files</label>
+                                <span class="text-danger error" id="fileserror" data-error="filename"></span>
                             </div>
+                            <ul id="fileNames"></ul>
                         </div>
                         <div class="row ">
                             @if(count($projectDetail)>0)
@@ -125,6 +130,19 @@
                                 <div class="my-3 mt-4 px-0">
                                     <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#web3_all_category" class="color_green">See all categories</a>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row web3_speciality">
+                            <p class="font_16 font_weight_500 color_black">Post Type <span class="asterisk">*</span></p>
+                            <div class="col-sm-12">
+                                <input type="radio" id="public" name="job_type" value="0" 
+                                    @if(isset($project->job_type) && $project->job_type == 0) checked @endif>
+                                <label for="public">Public Post</label><br>
+                                
+                                <input type="radio" id="private" name="job_type" value="1" 
+                                    @if(isset($project->job_type) && $project->job_type == 1) checked @endif>
+                                <label for="private">Private Post</label>
                             </div>
                         </div>
                         <div class="row">
@@ -231,54 +249,65 @@
         }
     }
 
-    document.getElementById('questionInput').addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            event.preventDefault();
-            addQuestion();
-        }
+    $(document).ready(function() {
+        $('#addRowBtn').click(function() {
+            // Clear previous error messages
+            $('.error-message').remove();
+
+            // Check if any input field is empty
+            let emptyInput = false;
+            $('#questionContainer .row').each(function() {
+                const input = $(this).find('input[type="text"]');
+                const errorDiv = $(this).find('.error-message');
+
+                if (input.val().trim() === '') {
+                    emptyInput = true;
+                    if (errorDiv.length === 0) {
+                        $(this).append('<div class="error-message text-danger">This field is required.</div>');
+                    }
+                    input.addClass('is-invalid'); // Highlight the empty field
+                } else {
+                    input.removeClass('is-invalid'); // Remove highlight if filled
+                    errorDiv.remove(); // Remove error message if field is filled
+                }
+            });
+
+            if (emptyInput) {
+                return; // Exit the function if there's an empty input
+            }
+
+            // Add a new row if all fields are filled
+            const newRow = `
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group">
+                            <input type="text" name="questions[]" class="form-control" placeholder="Enter your question">
+                            <button type="button" class="btn btn-danger deleteBtn">X</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('#questionContainer').append(newRow);
+        });
+
+        // Event delegation to handle delete button click
+        $('#questionContainer').on('click', '.deleteBtn', function() {
+            const row = $(this).closest('.row');
+            row.remove(); // Remove the row
+            row.find('.error-message').remove(); // Ensure any error message in the row is also removed
+        });
     });
 
-    function addQuestion() {
-        const input = document.getElementById('questionInput');
-        const questionText = input.value.trim();
-        if (questionText === '') return;
 
-        const questionId = Date.now(); // Use timestamp as a unique ID for simplicity
+    document.getElementById("filename").addEventListener("change", function() {
+        var fileNamesList = document.getElementById("fileNames");
+        fileNamesList.innerHTML = ""; // Clear previous file names
 
-        const questionDiv = document.createElement('div');
-        questionDiv.id = `question_${questionId}`;
-
-        const hiddenInput = document.createElement('input');
-        hiddenInput.type = 'hidden';
-        hiddenInput.name = 'questions[]';
-        hiddenInput.id = questionId;
-        hiddenInput.value = questionText;
-
-        const questionSpan = document.createElement('span');
-        questionSpan.className = 'posting_add_feature font_14 font_weight_500 color_grey px-3 py-2 d-inline-block';
-        questionSpan.dataset.question = questionText;
-        questionSpan.dataset.id = questionId;
-        questionSpan.innerText = questionText;
-
-        const removeIcon = document.createElement('i');
-        removeIcon.className = 'ml-3 fas fa-solid fa-times';
-        removeIcon.style.marginLeft = "6px";
-        removeIcon.onclick = function() {
-            document.getElementById(`question_${questionId}`).remove();
-        };
-
-        questionSpan.appendChild(removeIcon);
-        questionDiv.appendChild(hiddenInput);
-        questionDiv.appendChild(questionSpan);
-
-        document.getElementById('questionContainer').appendChild(questionDiv);
-
-        input.value = ''; // Clear the input box
-    }
-
-    // Event delegation to handle removing question spans
-    $(document).on("click", "#questionContainer .fa-times", function () {
-        $(this).parent().parent().remove();
+        for (var i = 0; i < this.files.length; i++) {
+            var listItem = document.createElement("li");
+            listItem.textContent = this.files[i].name;
+            fileNamesList.appendChild(listItem);
+        }
     });
 
 

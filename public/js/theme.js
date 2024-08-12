@@ -24,6 +24,7 @@ jQuery(document).ready(function () {
             signup_join_btn.removeAttr("disabled");
             jQuery(".sign_up_form").find("h4").text("I'm a client, hiring for a project");
             jQuery("#is_admin").val("1");
+            $('label[for="email"]').text("Email Address");
         } else if (btn_text === "freelancer") {
             // signup_join_btn.text("Apply as a Freelancer").prop('disabled', false);
 
@@ -34,6 +35,7 @@ jQuery(document).ready(function () {
             );
             jQuery("#is_admin").val("0");
             jQuery(".header_right a").text("Join as a Client");
+            $('.header_right span').text("Here to hire talent ?");
         } else if (btn_text === "hourly_rate") {
             jQuery(".project_hour_budget").show();
             jQuery(".project_max_budget").hide();
@@ -84,12 +86,16 @@ jQuery(document).ready(function () {
             );
             jQuery("#is_admin").val("1");
             jQuery(this).text("Apply as talent");
+            $('label[for="email"]').text("Email Address");
+            $('.header_right span').text("Looking for work ?");
         } else if (test == 1) {
             jQuery(".signup_heading").text(
                 "I'm a Web3 Professional, looking for work"
             );
             jQuery("#is_admin").val("0");
             jQuery(this).text("Join as a Client");
+            $('label[for="email"]').text("Work Email Address");
+            $('.header_right span').text("Here to hire talent ?");
         }
         return false;
     });
@@ -428,6 +434,30 @@ jQuery(document).ready(function () {
             }
             formData.append("TotalImages", TotalFiles);
         }
+        // Clear previous error messages
+        $('.error-message').remove();
+        // Check if any input field is empty
+        let emptyInput = false;
+        $('#questionContainer .row').each(function() {
+            const input = $(this).find('input[type="text"]');
+            const errorDiv = $(this).find('.error-message');
+
+            if (input.val().trim() === '') {
+                emptyInput = true;
+                if (errorDiv.length === 0) {
+                    $(this).append('<div class="error-message text-danger">This field is required.</div>');
+                }
+                input.addClass('is-invalid'); // Highlight the empty field
+            } else {
+                input.removeClass('is-invalid'); // Remove highlight if filled
+                errorDiv.remove(); // Remove error message if field is filled
+            }
+        });
+
+        if (emptyInput) {
+            e.preventDefault(); // Prevent form submission if there's an empty input
+            return false; // Stop further execution
+        }
         $.ajax({
             url: $(this).attr("action"),
             method: $(this).attr("method"),
@@ -712,6 +742,59 @@ jQuery(document).ready(function () {
         e.preventDefault();
         const catId = $(this).val();
         web3SpecialityDropdown(catId);
+    });
+
+
+    function getQuestionsArray() {
+        const questionsArray = [];
+        const questionInputs = document.querySelectorAll('#questionContainer input[name="questions[]"]');
+        
+        questionInputs.forEach(input => {
+            if (input.value.trim() !== '') {  // Ensure input is not empty
+                questionsArray.push(input.value.trim());
+            }
+        });
+
+        return questionsArray;
+    }
+
+    function updateQuestionsDisplay(questionsArray) {
+        const addQuestions = document.querySelector('.add_questions');
+
+        addQuestions.innerHTML = '';
+
+        // Append new questions
+        questionsArray.forEach(question => {
+            const span = document.createElement('span');
+            span.className = 'font_14 d-inline-block question';
+            span.textContent = question;
+            addQuestions.appendChild(span);
+        });
+
+        // Add the edit icon at the end
+        const a = document.createElement('a');
+        a.href = ""; // Set the href attribute
+        a.className = 'edit_draft_icon'; // Set the class
+
+        // Set the data attributes for the modal
+        a.setAttribute('data-bs-toggle', 'modal');
+        a.setAttribute('data-bs-target', '#editquestion');
+
+        // Create the <i> element
+        const i = document.createElement('i');
+        i.className = 'fa-solid fa-pen fas'; // Set the class for the icon
+
+        // Append the <i> element to the <a> element
+        a.appendChild(i);
+
+        // Append the <a> element to the desired parent (e.g., addQuestions)
+        addQuestions.appendChild(a);
+    }
+
+    // button
+    $(".save_ques_btn").on("click", function(e) {
+        const questionsArray = getQuestionsArray();
+        updateQuestionsDisplay(questionsArray);
     });
 
     $(".apply").on("click", function () {

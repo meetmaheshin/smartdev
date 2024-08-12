@@ -6,7 +6,15 @@
 			<div class="login_img d-none d-md-block position-relative">
 				<img src="images/login_img.png" alt="login" class="w-100 vh-100">
 				<div class="logo_img position-absolute">
-					<a href="/">
+					<a href="@if(auth()->check())
+								@if(auth()->user()->is_admin == 1)
+									{{ url('/client/dashboard') }}
+								@elseif(auth()->user()->is_admin == 0)
+									{{ url('/freelancer/dashboard') }}
+								@endif
+							@else
+								{{ url('/') }}
+							@endif">
 						<img src="{{asset('images/logo.png')}}" alt="logo" width="240">
 						{{-- <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="240"> --}}
 					</a>
@@ -17,7 +25,16 @@
 			<div class="vh-100 overflow-x-hidden">
 				<div class="login_content text-center text-md-start">
 					<h3 class="fw-normal d-flex justify-content-center align-items-center d-md-block"><span>Log in to</span><span class="fw-bold d-none d-md-inline"> <i class="smart_text">Smart</i><i class="dev3_text">Dev3</i></span>
-						<span class="logo_heading_img d-block d-md-none"><a href="/"><img src="{{asset('/images/logo.png')}}" width="100" height="100" alt="logo-heading" class="h-100 ms-2"></a></span>
+						<span class="logo_heading_img d-block d-md-none"><a href="@if(auth()->check())
+																						@if(auth()->user()->is_admin == 1)
+																							{{ url('/client/dashboard') }}
+																						@elseif(auth()->user()->is_admin == 0)
+																							{{ url('/freelancer/dashboard') }}
+																						@endif
+																					@else
+																						{{ url('/') }}
+																					@endif">
+							<img src="{{asset('/images/logo.png')}}" width="100" height="100" alt="logo-heading" class="h-100 ms-2"></a></span>
 					</h3>
 				</div>
 				<div class="login_form">

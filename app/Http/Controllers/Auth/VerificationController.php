@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Mail\CustomVerifyEmail;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
+
 class VerificationController extends Controller
 {
     /*
@@ -65,14 +67,21 @@ class VerificationController extends Controller
 
     public function resend(Request $request)
     {
-        $request->validate([
-            'email' => 'required|email',
+        // $request->validate([
+        //     'email' => 'required|email',
+        // ]);
+
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email'
         ]);
+        if ($validator->fails()) {
+            return redirect()->back()->with('error', $validator)->withInput();
+        }
 
         $user = User::where('email', $request->email)->first();
 
         if (!$user) {
-            return redirect()->back()->with('error', 'User not found.');
+            return redirect()->back()->with('error', "No account found with Provided Email. Ensure you're registered or use a different ID.")->withInput();
         }
 
         if ($user->hasVerifiedEmail()) {

@@ -2,7 +2,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7 order-2 order-md-1 text-center text-md-start">
-                <a class="foot_logo" href="{{url('/')}}"><img src="{{url('images/logo.png')}}" width="242" alt="logo"></a>
+                <a class="foot_logo" href="@if(auth()->check())
+                                                @if(auth()->user()->is_admin == 1)
+                                                    {{ url('/client/dashboard') }}
+                                                @elseif(auth()->user()->is_admin == 0)
+                                                    {{ url('/freelancer/dashboard') }}
+                                                @endif
+                                            @else
+                                                {{ url('/') }}
+                                            @endif">
+                    <img src="{{url('images/logo.png')}}" width="242" alt="logo"></a>
                 {{-- <a class="foot_logo" href="{{url('/')}}"><img src="{{url('images/new-logo.svg')}}" width="180" alt="logo"></a> --}}
             </div>
             <div class="col-md-5 order-1 order-md-2">
