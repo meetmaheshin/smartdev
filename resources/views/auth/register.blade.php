@@ -3,7 +3,15 @@
 <section class="signup-screen">
     <header class="p-4 d-flex justify-content-between align-items-center text-center">
         <div class="header_logo">
-            <a href="{{url('/')}}">
+            <a href="@if(auth()->check())
+                        @if(auth()->user()->is_admin == 1)
+                            {{ url('/client/dashboard') }}
+                        @elseif(auth()->user()->is_admin == 0)
+                            {{ url('/freelancer/dashboard') }}
+                        @endif
+                    @else
+                        {{ url('/') }}
+                    @endif">
                 <img src="{{asset('images/logo.png')}}" alt="logo" width="200">
                 {{-- <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="200"> --}}
             </a>

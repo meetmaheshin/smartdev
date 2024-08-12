@@ -1,7 +1,15 @@
 <header>
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
-			<a class="navbar-brand pe-2" href="{{url('/')}}">
+			<a class="navbar-brand pe-2" href="@if(auth()->check())
+													@if(auth()->user()->is_admin == 1)
+														{{ url('/client/dashboard') }}
+													@elseif(auth()->user()->is_admin == 0)
+														{{ url('/freelancer/dashboard') }}
+													@endif
+												@else
+													{{ url('/') }}
+												@endif">
 				<img src="{{asset('images/logo.png')}}" alt="logo" width="100">
 				{{-- <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="100"> --}}
 

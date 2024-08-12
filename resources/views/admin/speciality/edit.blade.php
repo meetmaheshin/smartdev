@@ -28,10 +28,10 @@
                     <input type="hidden" name="speciality_id" value="{{$speciality ? $speciality->id : ''}}" id="speciality_id">
 
                     <div class="form-body mt-4">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="border border-3 p-4 rounded">
-                                    <div class="mb-3">
+                        <div class="col-lg-12">
+                            <div class="border border-3 p-4 rounded">
+                                <div class="row">
+                                    <div class="mb-3 col-lg-6">
                                         <label for="inputProductTitle" class="form-label">Title</label>
                                         <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" value="{{$speciality->title}}">
                                         @error('title')
@@ -40,19 +40,30 @@
                                         </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-2">
-                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    <div class="mb-3 col-lg-6">
+                                        <label for="rank" class="form-label">Rank</label>
+                                        <select name="rank" id="rank" class="form-select">
+                                            <option value="">Select rank</option>
+                                            <option value="1" {{ $speciality->rank == 1 ? 'selected' : '' }}>1</option>
+                                            <option value="2" {{ $speciality->rank == 2 ? 'selected' : '' }}>2</option>
+                                            <option value="3" {{ $speciality->rank == 3 ? 'selected' : '' }}>3</option>
+                                        </select>
+                                        @error('rank')
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
                                 </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary">Update</button>
+                                </div>
                             </div>
-                           
-                    </div><!--end row-->
+                        </div>
+                    </div>
                 </form>
             </div>
-            </div>
         </div>
-
-
     </div>
 </div>
 @endsection

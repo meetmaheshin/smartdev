@@ -85,7 +85,7 @@
                             <div class="text-danger error" data-error="hourly_from"></div>
                             <div class="text-danger error" data-error="hourly_to"></div>
                             <p class="mb-3 font_13 fw-normal color_grey">This is the average rate for similar projects.</p>
-                            <p class="font_16 font_weight_500 color_black">Professionals tend to charge $12.00 - $30.00/hour (USD) for ux/ui design projects like yours. Experts may charge higher rates.</p>
+                            {{-- <p class="font_16 font_weight_500 color_black">Professionals tend to charge $12.00 - $30.00/hour (USD) for ux/ui design projects like yours. Experts may charge higher rates.</p> --}}
                         </div>
                         <div class="project_max_budget">
                             <div class="me-4">

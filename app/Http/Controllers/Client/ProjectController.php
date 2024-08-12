@@ -90,12 +90,14 @@ class ProjectController extends Controller
             $data['title'] = 'Job Title - Smartdev3';
             $data['project'] = Project::with('specialities')->find($request->session()->get('project_id'));
             // dd($request->session()->get('project_id'));
-            $data['specialty'] = Specialty::where('type', 0)->limit(3)->get();
+            // $data['specialty'] = Specialty::where('type', 0)->limit(3)->get();
+            $data['specialty'] = Specialty::where('type', 0)->whereNotNull('rank')->orderBy('rank')->get();
             $data['category'] = Category::where('type', 0)->get();
             $data['web3_category'] = Category::where('type', 1)->get();
             $data['catgeory_id'] = 1;
             $data['projectDetail'] = ProjectDetail::where('project_id', $request->session()->get('project_id'))->get();
-            $data['web3specialty'] = Specialty::where('type', 1)->limit(3)->get();
+            // $data['web3specialty'] = Specialty::where('type', 1)->limit(3)->get();
+            $data['web3specialty'] = Specialty::where('type', 1)->whereNotNull('rank')->orderBy('rank')->get();
             $data['questions'] = ProjectQuestion::where('project_id', $request->session()->get('project_id'))->get();
 
             return view('client.project_title', $data);
@@ -136,7 +138,8 @@ class ProjectController extends Controller
             'projectType' => 1,
 
             'specialty_id' => $request->specialty_id,
-            'category_id' => $category_id
+            'category_id' => $category_id,
+            'job_type' => $request->job_type
         ]);
 
         $projectId = $request->project_id;
@@ -356,7 +359,8 @@ class ProjectController extends Controller
                 'project_budget' => $request->project_budget,
             ]);
             $userSchema = auth()->user();
-             Notification::send($userSchema, new NewJobPosted($projectScope));
+            Notification::send($userSchema, new NewJobPosted($projectScope));
+            session()->flash('success', 'Post Successfully Posted');
             return response()->json(['response' => 'true', 'url' => route('clientdashboard'),'notification'=>$userSchema->notifications->first()]);
         } else {
             return redirect()->route('project_started');
@@ -408,6 +412,7 @@ class ProjectController extends Controller
         $projectSkill = ProjectSkill::with('skill')->where('project_id', $id)->get();
         $data['popularSkills'] = Skill::where('title', 'Popular skills')->get();
         $data['projectDetail'] = ProjectDetail::where('project_id', $id)->get();
+        $data['questions'] = ProjectQuestion::where('project_id', $id)->get();
 
         foreach ($projectSkill as $key => $projectSkills) {
             $skill_id = $projectSkills->skill_id;
@@ -503,6 +508,25 @@ class ProjectController extends Controller
             'duration' => $request->duration,
             'level' => $request->level,
         ]);
+
+        $clientId = Auth::id();
+
+        // Delete existing questions for the project and client
+        ProjectQuestion::where('project_id', $id)
+                    ->where('client_id', $clientId)
+                    ->delete();
+
+        if($request->questions != null){
+            // Insert new questions
+            foreach ($request->questions as $questionData) {
+                ProjectQuestion::create([
+                    'question' => $questionData,
+                    'project_id' => $id,
+                    'client_id' => $clientId
+                ]);
+            }
+        }
+        session()->flash('success', 'Proposal Successfully Edited');
         return response()->json(['status' => 'true', 'url' => route('project.all_jobs')]);
 
         // return redirect()->route('project.all_jobs', ['statuses' => 'all'])->with('success', 'Post Successfully Updated ');
@@ -592,6 +616,7 @@ class ProjectController extends Controller
     public function projectStatusChange(Request $request)
     {
         $statusChange = Project::whereId($request->id)->update(['job' => $request->status]);
+        session()->flash('success', 'Project Successfully deleted');
         return response()->json(['response' => 'true']);
     }
 

@@ -30,7 +30,15 @@
 
 <header class="navbar-menu">
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="{{url('/')}}"><img src="{{url('images/logo.png')}}" alt="SmartDev3" width="180"></a>
+        <a class="navbar-brand" href="@if(auth()->check())
+                                            @if(auth()->user()->is_admin == 1)
+                                                {{ url('/client/dashboard') }}
+                                            @elseif(auth()->user()->is_admin == 0)
+                                                {{ url('/freelancer/dashboard') }}
+                                            @endif
+                                        @else
+                                            {{ url('/') }}
+        @endif"><img src="{{url('images/logo.png')}}" alt="SmartDev3" width="180"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -94,7 +102,16 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="logo"> 
-                    <img src="{{url('images/logo.png')}}" width="230" alt="Footer-Logo">
+                    <a href="@if(auth()->check())
+                                @if(auth()->user()->is_admin == 1)
+                                    {{ url('/client/dashboard') }}
+                                @elseif(auth()->user()->is_admin == 0)
+                                    {{ url('/freelancer/dashboard') }}
+                                @endif
+                            @else
+                                {{ url('/') }}
+                            @endif">
+                    <img src="{{url('images/logo.png')}}" width="230" alt="SmartDev3"></a>
                     {{-- <a href="{{url('/')}}"><img src="{{url('images/new-logo.svg')}}" alt="SmartDev3"></a> --}}
                 </div>
                 <div>
