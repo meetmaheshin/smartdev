@@ -8,6 +8,12 @@
 		<div class="row">
 			@include("freelancer.setting.setting_sidebar")
 			<div class="col-md-9 px-0 px-md-2">
+				<div class="alert alert-danger" role="alert" id="errorAlert" style="display:none;">
+					<!-- Error messages will be shown here -->
+				</div>
+				<div class="alert alert-success" role="alert" id="successAlert" style="display:none;">
+					<!-- Error messages will be shown here -->
+				</div>
 				<h2 class="font_26 mb-4 d-none d-md-block font_weight_600">Contact info</h2>
 				<div class="user_contact_block fuser_account border-grey-radius mb-4 p-4 color_black">
 					<div class="user_contact_header pb-4 d-flex justify-content-between">

@@ -26,6 +26,12 @@
             <img src="{{url('images/frontend/signupbg.png')}}" alt="signup-bg" class="w-100">
         </div>
         <div class="w-50 px-sm-5 sign_up_right">
+            <div class="alert alert-danger" role="alert" id="errorAlert" style="display:none;">
+                <!-- Error messages will be shown here -->
+            </div>
+            <div class="alert alert-success" role="alert" id="successAlert" style="display:none;">
+                <!-- Error messages will be shown here -->
+            </div>
             <form method="POST" id="registration" action="{{ route('register') }}" autocomplete="off">
                 @csrf
                 <input type="hidden" name="is_admin" value="{{ old('is_admin') }}" id="is_admin">
@@ -105,9 +111,8 @@
                             <div class="col-md-6">
                                 <div class="form-group signup_email_div mb-2 mb-md-0">
                                     <label for="email" class="form-label font_weight_500 position-relative">Work email address</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Work email address" value="{{ old('email') }}" autocomplete="new-password">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Work Email Address" value="{{ old('email') }}" autocomplete="new-password">
                                     <div class="text-danger error" data-error="email"></div>
-
                                 </div>
                             </div>
                         </div>

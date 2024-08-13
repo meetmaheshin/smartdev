@@ -15,12 +15,33 @@ jQuery(document).ready(function () {
             },
             success(response) {
                 if (response.status == 200) {
-                    notify.show("Success!", response.msg);
+                    // notify.show("Success!", response.msg);
+                    const successAlert = document.getElementById('successAlert');
+                    successAlert.style.display = 'block';
+                    successAlert.innerHTML = response.msg;
+
+                    // Hide the alert after 5 seconds
+                    // setTimeout(() => {
+                    //     successAlert.style.display = 'none';
+                    //     successAlert.innerHTML = '';
+                    // }, 5000);
+    
                     setTimeout(function () {
+                        successAlert.style.display = 'none';
+                        successAlert.innerHTML = '';
                         window.location.replace("email/verify");
                     }, 3000);
                 } else {
-                    notify.show(response.type, response.msg);
+                    // notify.show(response.type, response.msg);
+                    const successAlert = document.getElementById('successAlert');
+                    successAlert.style.display = 'block';
+                    successAlert.innerHTML = response.msg;
+
+                    // Hide the alert after 5 seconds
+                    setTimeout(() => {
+                        successAlert.style.display = 'none';
+                        successAlert.innerHTML = '';
+                    }, 5000);
                     jQuery(".create_acc_btn button").removeAttr("disabled");
                 }
             },

@@ -49,10 +49,10 @@ $(".remove_posting,.reuse_posting,.remove_draft").on("click", function (e) {
                 dataType: "json",
                 success: function (response) {
                     swal.fire(status, status, "success");
-                    notify.show('Success!', 'Project Successfully '+status)
+                    // notify.show('Success!', 'Project Successfully '+status)
                     setTimeout(function(){
                         location.reload();
-                    },3000);
+                    },1000);
                     
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
@@ -84,10 +84,19 @@ $('#send_invitation_form').on("submit", function (e) {
                     message: response.notification,
                 });
                 $('#inviteJob').modal('hide');
-                notify.show("Success!", "Invitation Sent Successfully");
+                // notify.show("Success!", "Invitation Sent Successfully");
+                const successAlert = document.getElementById('successAlert');
+                successAlert.style.display = 'block';
+                successAlert.innerHTML = 'Invitation Sent Successfully';
+
+                // Hide the alert after 5 seconds
+                setTimeout(() => {
+                    successAlert.style.display = 'none';
+                    successAlert.innerHTML = '';
+                }, 5000);
                 setTimeout(function () {
                     location.href = response.url;
-                }, 500);
+                }, 1000);
             }
         },error(err){
             console.log("error"+err);

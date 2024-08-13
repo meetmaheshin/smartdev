@@ -8,6 +8,19 @@
         <div class="row">
             @include("freelancer.setting.setting_sidebar")
             <div class="col-md-9  px-0 px-md-2">
+                @if(session('error'))
+                    <div class="alert alert-danger alert-dismissible fade show">
+                        {{ session('error') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
+                @if(session('success'))
+                    <div class="alert alert-success alert-dismissible fade show">
+                        {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
                 <h3 class="mb-4 font_weight_600">Change Password</h3>
                 <div class="user_profile_setting_block">
                     <div class="border-grey-radius mt-5">

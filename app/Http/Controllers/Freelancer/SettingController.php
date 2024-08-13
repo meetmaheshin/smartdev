@@ -214,6 +214,7 @@ class SettingController extends Controller
         // Insert new user categories
         UserCategories::insert($userSpecialities);
         $data = $checkUser->get();
+        session()->flash('success', 'Category saved successfully');
         return response()->json($data);
         
     }
@@ -470,6 +471,7 @@ class SettingController extends Controller
         if($walletData->exists()){
             $walletData->delete();
         }
+        session()->flash('success', 'Wallet Deleted Successfully');
         return response()->json(['success' => 'true']);
     }
 }

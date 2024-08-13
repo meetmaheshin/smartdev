@@ -1474,7 +1474,7 @@ div#country_list li.no_skill{
     color: #fff;
     padding: 4px 8px;
     border-radius: 25px;
-    margin: 0px 2px 0 2px;
+    margin: 3px;
     cursor: pointer;
 }
 .client_job_post_header .post_job_btn button{

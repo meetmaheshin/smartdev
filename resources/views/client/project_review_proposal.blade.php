@@ -19,6 +19,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
+            <div class="alert alert-danger" role="alert" id="errorAlert" style="display:none;">
+                <!-- Error messages will be shown here -->
+            </div>
+            <div class="alert alert-success" role="alert" id="successAlert" style="display:none;">
+                <!-- Error messages will be shown here -->
+            </div>
             <div class="col-sm-12">
                 <h1 class="font_22 color_black mb-4 mt-3 font_weight_600">{{$projectDetail->title}}</h1>
             </div>
