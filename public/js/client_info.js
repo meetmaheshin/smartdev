@@ -45,9 +45,9 @@ $("#storeAccountInfo").on("submit", function (e) {
         },
         success: function (response) {
             $(".error").html("");
-            if (response.status == "true") {
-                notify.show("Success!", "Account Info updated Successfully");
-            }
+            // if (response.status == "true") {
+            //     notify.show("Success!", "Account Info updated Successfully");
+            // }
             if ($("#client-user-file-upload").prop("disabled")) {
                 $("#client-user-file-upload").prop("disabled", false);
             } else {
@@ -57,6 +57,18 @@ $("#storeAccountInfo").on("submit", function (e) {
                 "green_edit cursor-pointer"
             );
             $(".client_user_details, .client_user_details_edit").toggle(200);
+
+
+            const successAlert = document.getElementById('successAlert');
+            successAlert.style.display = 'block';
+            successAlert.innerHTML = 'Account Info updated Successfully.';
+
+            // Hide the alert after 5 seconds
+            setTimeout(() => {
+                successAlert.style.display = 'none';
+                successAlert.innerHTML = '';
+            }, 5000);
+    
         },
         error: function (error) {
             $(".error").html("");
@@ -156,7 +168,7 @@ $("#companyDetails").on("submit", function (e) {
         contentType: false,
         processData: false,
         success: (data) => {
-            notify.show("success", "Company Details Successfully Updated");
+            // notify.show("success", "Company Details Successfully Updated");
             $(".error").text("");
             if ($("#client-company-file-upload").prop("disabled")) {
                 $("#client-company-file-upload").prop("disabled", false);
@@ -169,6 +181,15 @@ $("#companyDetails").on("submit", function (e) {
             $(".client_company_details, .client_company_details_edit").toggle(
                 200
             );
+            const successAlert = document.getElementById('successAlert');
+            successAlert.style.display = 'block';
+            successAlert.innerHTML = 'Company Details Successfully Updated.';
+
+            // Hide the alert after 5 seconds
+            setTimeout(() => {
+                successAlert.style.display = 'none';
+                successAlert.innerHTML = '';
+            }, 5000);
         },
         error(error) {
             console.log(error);
@@ -204,7 +225,7 @@ $("#companyContact").click(function (e) {
         url: "/client/company-contact",
         data: data,
         success: function (response) {
-            notify.show("success", "Contact Information Updated");
+            // notify.show("success", "Contact Information Updated");
             console.log(response);
             $(".timezone").html(response.time_zone);
             $(".address").html(response.address);
@@ -212,6 +233,15 @@ $("#companyContact").click(function (e) {
             $(".client_company_contacts, .c_contacts_contacts_edit").toggle(
                 200
             );
+            const successAlert = document.getElementById('successAlert');
+            successAlert.style.display = 'block';
+            successAlert.innerHTML = 'Contact Information Updated.';
+
+            // Hide the alert after 5 seconds
+            setTimeout(() => {
+                successAlert.style.display = 'none';
+                successAlert.innerHTML = '';
+            }, 5000);
         },
         error(error) {
             console.log(error);

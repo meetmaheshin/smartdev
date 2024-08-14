@@ -26,6 +26,25 @@
             @include("client.settings.setting_sidebar")
         </div>
         <div class="col-md-10">
+            @if(session('error'))
+                <div class="alert alert-danger alert-dismissible fade show">
+                    {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            <div class="alert alert-danger" role="alert" id="errorAlert" style="display:none;">
+                <!-- Error messages will be shown here -->
+            </div>
+            <div class="alert alert-success" role="alert" id="successAlert" style="display:none;">
+                <!-- Error messages will be shown here -->
+            </div>
             <input type="hidden" id="_token" value="{{ csrf_token() }}">
             <main class="client_my_info">
                 <h3 class="mb-4 font_weight_600">My Info</h3>

@@ -213,12 +213,21 @@ class JobController extends Controller
         }
         // Check if rank is provided and if it's already used by another specialty
         if (!is_null($request->rank)) {
-            $existingSpecialty = Specialty::where('rank', $request->rank)
-                ->where('id', '!=', $request->speciality_id)
-                ->first();
+            // $existingSpecialty = Specialty::where('rank', $request->rank)
+            //     ->where('id', '!=', $request->speciality_id)
+            //     ->first();
 
-            if ($existingSpecialty) {
-                return Redirect::back()->withErrors(['rank' => 'This rank is already assigned to another specialty.'])->withInput();
+            // if ($existingSpecialty) {
+            //     return Redirect::back()->withErrors(['rank' => 'This rank is already assigned to another specialty.'])->withInput();
+            // }
+
+            // Find the specialty that currently has this rank
+            $existingSpecialty = Specialty::where('rank', $request->rank)->first();
+
+            // If another specialty has this rank, clear its rank
+            if ($existingSpecialty && $existingSpecialty->id != $request->speciality_id) {
+                $existingSpecialty->rank = null;
+                $existingSpecialty->save();
             }
         }
 

@@ -101,16 +101,25 @@ $("#accountInfo,#locationInfo").on("submit", function (e) {
         success: (data) => {
             $(".error").html("");
             if (data.freelancerInfo == "locationInfo") {
-                notify.show(
-                    "success",
-                    "Successfully Account Location Details Updated"
-                );
+                // notify.show(
+                //     "success",
+                //     "Successfully Account Location Details Updated"
+                // );
                 $(".user_location .user_contact_edited,.user_location  .user_contact_edit").toggle(200);
+                const successAlert = document.getElementById('successAlert');
+                successAlert.style.display = 'block';
+                successAlert.innerHTML = 'Successfully Account Location Details Updated';
+
+                // Hide the alert after 5 seconds
+                setTimeout(() => {
+                    successAlert.style.display = 'none';
+                    successAlert.innerHTML = '';
+                }, 5000);
             } else {
-                notify.show(
-                    "success",
-                    "Successfully AccountInfo Details Updated"
-                );
+                // notify.show(
+                //     "success",
+                //     "Successfully AccountInfo Details Updated"
+                // );
                 if ($("#freelancer-user-file-upload").prop("disabled")) {
                     $("#freelancer-user-file-upload").prop("disabled", false);
                 } else {
@@ -121,6 +130,15 @@ $("#accountInfo,#locationInfo").on("submit", function (e) {
                 );
                 $(".fuser_account .user_contact_edited,.fuser_account .user_contact_edit"
                 ).toggle(200);
+                const successAlert = document.getElementById('successAlert');
+                successAlert.style.display = 'block';
+                successAlert.innerHTML = 'Successfully Account Info Details Updated';
+
+                // Hide the alert after 5 seconds
+                setTimeout(() => {
+                    successAlert.style.display = 'none';
+                    successAlert.innerHTML = '';
+                }, 5000);
             }
             var fullName = data.data.firstname + " " + data.data.lastname;
             var phoneNo = data.data.phone_no;

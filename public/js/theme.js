@@ -22,12 +22,19 @@ jQuery(document).ready(function () {
             // signup_join_btn.text("Join as a Client").prop('disabled', false);
             signup_join_btn.text("Join as a Client");
             signup_join_btn.removeAttr("disabled");
+            jQuery(".signup_heading").text(
+                "I'm a client, hiring for a project"
+            );
             jQuery(".sign_up_form").find("h4").text("I'm a client, hiring for a project");
             jQuery("#is_admin").val("1");
             $('label[for="email"]').text("Email Address");
+            $('#email').attr('placeholder', 'Email Address');
         } else if (btn_text === "freelancer") {
             // signup_join_btn.text("Apply as a Freelancer").prop('disabled', false);
 
+            jQuery(".signup_heading").text(
+                "I'm a Web3 Professional, looking for work"
+            );
             signup_join_btn.text("Apply as a Web3 Professional");
             signup_join_btn.removeAttr("disabled");
             jQuery(".sign_up_form").find("h4").text(
@@ -87,6 +94,7 @@ jQuery(document).ready(function () {
             jQuery("#is_admin").val("1");
             jQuery(this).text("Apply as talent");
             $('label[for="email"]').text("Email Address");
+            $('#email').attr('placeholder', 'Email Address');
             $('.header_right span').text("Looking for work ?");
         } else if (test == 1) {
             jQuery(".signup_heading").text(
@@ -95,6 +103,7 @@ jQuery(document).ready(function () {
             jQuery("#is_admin").val("0");
             jQuery(this).text("Join as a Client");
             $('label[for="email"]').text("Work Email Address");
+            $('#email').attr('placeholder', 'Work Email Address');
             $('.header_right span').text("Here to hire talent ?");
         }
         return false;
@@ -476,7 +485,7 @@ jQuery(document).ready(function () {
                             type:'App\Notifications\NewJobPosted',
                             message: response.notification,
                         });
-                        notify.show("success", "Project Successfully Posted");
+                        // notify.show("success", "Project Successfully Posted");
                         setTimeout(function () {
                             location.href = response.url;
                         }, 500);
@@ -760,35 +769,17 @@ jQuery(document).ready(function () {
 
     function updateQuestionsDisplay(questionsArray) {
         const addQuestions = document.querySelector('.add_questions');
-
+    
+        // Clear the current list
         addQuestions.innerHTML = '';
-
-        // Append new questions
+    
+        // Append new questions as list items
         questionsArray.forEach(question => {
-            const span = document.createElement('span');
-            span.className = 'font_14 d-inline-block question';
-            span.textContent = question;
-            addQuestions.appendChild(span);
+            const li = document.createElement('li');
+            li.className = 'font_14 question';
+            li.textContent = question;
+            addQuestions.appendChild(li);
         });
-
-        // Add the edit icon at the end
-        const a = document.createElement('a');
-        a.href = ""; // Set the href attribute
-        a.className = 'edit_draft_icon'; // Set the class
-
-        // Set the data attributes for the modal
-        a.setAttribute('data-bs-toggle', 'modal');
-        a.setAttribute('data-bs-target', '#editquestion');
-
-        // Create the <i> element
-        const i = document.createElement('i');
-        i.className = 'fa-solid fa-pen fas'; // Set the class for the icon
-
-        // Append the <i> element to the <a> element
-        a.appendChild(i);
-
-        // Append the <a> element to the desired parent (e.g., addQuestions)
-        addQuestions.appendChild(a);
     }
 
     // button

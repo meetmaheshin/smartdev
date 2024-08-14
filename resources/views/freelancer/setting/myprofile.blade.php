@@ -2,8 +2,21 @@
 @section('content')
 <section class="profile_contact mt-5">
 	<div class="container">
-		<div class="row">			
-      <div class="col-md-12 px-0 px-md-2">
+		<div class="col-md-12 px-0 px-md-2">
+		<div class="row">	
+			@if(session('error'))
+				<div class="alert alert-danger alert-dismissible fade show">
+					{{ session('error') }}
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			@endif
+
+			@if(session('success'))
+				<div class="alert alert-success alert-dismissible fade show">
+					{{ session('success') }}
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			@endif		
       	<div class="border border-radius-16">
         	<div class="d-flex w-100 p-4 border-bottom">
         		<div class="profile_img me-3">

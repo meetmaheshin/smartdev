@@ -507,6 +507,7 @@ class ProjectController extends Controller
             'project_budget' => $request->fixed,
             'duration' => $request->duration,
             'level' => $request->level,
+            'job_type' => $request->job_type
         ]);
 
         $clientId = Auth::id();

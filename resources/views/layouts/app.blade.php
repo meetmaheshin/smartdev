@@ -96,12 +96,12 @@
 	<script type="text/javascript" src="{{asset('js/socket.js')}}"></script>
 	@yield('before_js')
 	<script> 
-		toastr.options.timeOut = 10000;
-		@if (Session::has('error'))
-			toastr.error("{{ Session::get('error') }}");
-		@elseif(Session::has('success'))
-			toastr.success("{{ Session::get('success') }}");
-		@endif
+		// toastr.options.timeOut = 10000;
+		// @if (Session::has('error'))
+		// 	toastr.error("{{ Session::get('error') }}");
+		// @elseif(Session::has('success'))
+		// 	toastr.success("{{ Session::get('success') }}");
+		// @endif
 		Filevalidation = () => {
             const fi = document.getElementById('file');
             // Check if any file is selected.

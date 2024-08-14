@@ -122,7 +122,7 @@
                                     </div>
                                     <div class="client_job_post_skill_wrapper mb-5">
                                         <h4 class="font_18 mb-2 font_weight_600">Skills <span class="asterisk">*</span></h4>
-                                        <div class="add_skills d-flex align-items-center">
+                                        <div class="add_skills d-flex align-items-center flex-wrap">
                                             @if (count($project->ProjectSkill) > 0)
                                             @foreach ($project->ProjectSkill as $dataskills)
                                             <!-- <input type="hidden" name="skill_id[]"
@@ -168,24 +168,42 @@
                                                     <i class="fa-solid fa-pen fas"></i>
                                                 </a>
                                                 <div class="text-danger error" data-error="budget_check"></div>
-
-                                               
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="client_job_post_skill_wrapper mb-5">
-                                        <h4 class="font_18 mb-2 font_weight_600">Questions <span class="asterisk">*</span></h4>
-                                        <div class="add_questions add_skills d-flex align-items-center">
-                                            @if($questions && $questions->isNotEmpty())
-                                                @foreach($questions as $index => $question)
-                                                    <span class="font_14 d-inline-block question">{{ isset($question->question) ? $question->question : null }}</span>
-                                                @endforeach
-                                            @endif
+
+                                    {{-- project type --}}
+                                    <div class="mb-4 row web3_speciality">
+                                        <p class="font_16 font_weight_500 color_black">Post Type <span class="asterisk">*</span></p>
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="form-check me-3">
+                                                <input class="form-check-input" type="radio" id="public" name="job_type" value="0" 
+                                                    @if(isset($project->job_type) && $project->job_type == 0) checked @endif>
+                                                <label class="form-check-label" for="public">Public Post</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" id="private" name="job_type" value="1" 
+                                                    @if(isset($project->job_type) && $project->job_type == 1) checked @endif>
+                                                <label class="form-check-label" for="private">Private Post</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{-- questions --}}
+                                    <div class="mb-5">
+                                        <h4 class="font_18 mb-2 font_weight_600">Questions <span class="asterisk">*</span>
                                             <a href="" class="edit_draft_icon" data-bs-toggle="modal" data-bs-target="#editquestion">
                                                 <i class="fa-solid fa-pen fas"></i>
                                             </a>
+                                        </h4>
+                                        <ol class="add_questions d-flex flex-column">
+                                            @if($questions && $questions->isNotEmpty())
+                                                @foreach($questions as $index => $question)
+                                                    <li class="font_14 question">{{ isset($question->question) ? $question->question : null }}</li>
+                                                @endforeach
+                                            @endif
                                             <div class="text-danger error" data-error="skill_id"></div>
-                                        </div>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
