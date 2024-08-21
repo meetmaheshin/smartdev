@@ -142,7 +142,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
   
 // Route::post('email/resend', [VerificationController::class, 'resend'])->middleware([ 'throttle:6,1'])->name('verification.resend');
 // Route to show the resend form
-Route::get('/email/resend',  [VerificationController::class, 'showResendForm'] )->name('verification.resend');
+Route::get('/email/resend',  [VerificationController::class, 'showResendForm'] )->name('verification.resend.form');
 
 // Route to handle the resend request
 Route::post('/email/resend',  [VerificationController::class, 'resend'])->name('verification.resend');
