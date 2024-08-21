@@ -37,7 +37,7 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="card">
-                            <form method="POST" action="{{route('admin.profile')}}">
+                            <form method="POST" action="{{route('admin.profile.save')}}">
                                 @csrf
                                 <div class="card-body">
                                     <div class="row mb-3">

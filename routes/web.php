@@ -89,7 +89,7 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
 
     // profile
     Route::get('/admin/profile',  [AdminDashboardController::class, 'profile'] )->name('admin.profile');
-    Route::post('/admin/profile',  [AdminDashboardController::class, 'saveProfile'] )->name('admin.profile');
+    Route::post('/admin/profile',  [AdminDashboardController::class, 'saveProfile'] )->name('admin.profile.save');
 
     // certification
     Route::get('/admin/certification',  [AdminDashboardController::class, 'certification'] )->name('admin.certification');
