@@ -18,6 +18,7 @@ $(document).on("click", ".best_matches_result", function (e) {
     var id = $(this).attr("data-id");
     var title = $(this).attr("data-title");
     var url = $(this).attr('data-action');
+    var baseUrl = $('#baseUrl').val();
     $("#job_apply_btn").removeAttr("disabled").text("Apply");
     $(".job_skills").html("");
     $('.job_attachments').html('');
@@ -70,6 +71,7 @@ $(document).on("click", ".best_matches_result", function (e) {
                 $("#modal_duration").html(Duration);
                 $("#popup_job_save_btn_id").val(id);
                 $("#project_id").val(id);
+                $('#jobLink').val(baseUrl + "/projects/shareable-link/" + response.data.id);
                 $("#receiver_id").val(response.data.user_id);
 
                 var sel = $('<p class="up_skill" id="job_skills_data">');

@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\Auth\DashboardController as AdminDashboardControl
 use App\Http\Controllers\Admin\Auth\JobController as AdminJobController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\ShareableLinkController;
 
 
 /*
@@ -340,3 +341,5 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
         });
     });
 });
+
+Route::get('/projects/shareable-link/{proposalId}', [ShareableLinkController::class, 'showShareableLink'])->name('project.shareable.link'); 

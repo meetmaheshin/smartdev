@@ -275,6 +275,15 @@
                                                             {{$projectDetail->user->clientDetails ? $projectDetail->user->clientDetails->people : ''}}
                                                         </div>
                                                     </li>
+                                                    <li class="py-3">
+                                                        <div class="job-link-container">
+                                                            <h4 data-testid="head-title" class="color_black font_16">Job link</h4>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control" id="jobLink" value="{{ url('/') }}/projects/shareable-link/{{$projectDetail->id}}" readonly>
+                                                            </div>
+                                                            <span style="cursor: pointer; color: green;" class="copy-link-btn" id="copyLink">Copy link</span>
+                                                        </div>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -938,5 +947,21 @@
             }
         }
     }, 10);
+
+    document.getElementById('copyLink').addEventListener('click', function() {
+        var copyText = document.getElementById('jobLink').value;
+        navigator.clipboard.writeText(copyText).then(function() {
+            var copyLinkElement = document.getElementById('copyLink');
+            var originalText = copyLinkElement.textContent; // Store the original text
+            copyLinkElement.textContent = 'Copied'; // Change the text to "Copied"
+
+            // Set a timeout to change the text back after 5 seconds
+            setTimeout(function() {
+                copyLinkElement.textContent = originalText; // Revert to the original text
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }).catch(function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    });
 </script>
 @endsection
