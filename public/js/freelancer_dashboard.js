@@ -18,6 +18,7 @@ $(document).on("click", ".best_matches_result", function (e) {
     var id = $(this).attr("data-id");
     var title = $(this).attr("data-title");
     var url = $(this).attr('data-action');
+    var baseUrl = $('#baseUrl').val();
     $("#job_apply_btn").removeAttr("disabled").text("Apply");
     $(".job_skills").html("");
     $('.job_attachments').html('');
@@ -42,6 +43,7 @@ $(document).on("click", ".best_matches_result", function (e) {
                 var date = $.timeago(time);
                 var budgetType = '';
                 var Duration = '';
+                var slug = response.data.slug;
                if(budget == 'project'){
                     budgetType = 'Fixed-price';
                     $("#modal_price").html("$" + response.data.project_budget);
@@ -70,6 +72,12 @@ $(document).on("click", ".best_matches_result", function (e) {
                 $("#modal_duration").html(Duration);
                 $("#popup_job_save_btn_id").val(id);
                 $("#project_id").val(id);
+                if (slug && slug.trim() !== "") {
+                    $('#jobLink').val(baseUrl + "/freelance-jobs/apply/" + slug);
+                    $('.job-link-container').show(); // Show the div if slug is not empty
+                } else {
+                    $('.job-link-container').hide(); // Hide the div if slug is null or empty
+                }
                 $("#receiver_id").val(response.data.user_id);
 
                 var sel = $('<p class="up_skill" id="job_skills_data">');

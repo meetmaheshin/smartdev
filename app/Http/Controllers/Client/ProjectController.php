@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Notification;
 use File;
 use App\Models\ProjectQuestion;
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -139,7 +140,8 @@ class ProjectController extends Controller
 
             'specialty_id' => $request->specialty_id,
             'category_id' => $category_id,
-            'job_type' => $request->job_type
+            'job_type' => $request->job_type,
+            'slug' => Str::slug($request->input('title')) . '-' . uniqid()
         ]);
 
         $projectId = $request->project_id;
