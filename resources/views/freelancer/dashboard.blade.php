@@ -377,7 +377,7 @@
 
                                     <div class="d-flex">
                                         <div class="job-link-container">
-                                            <h5 class="form-label">Job link</h5>
+                                            <h4 data-testid="head-title" class="color_black font_16">Job link</h4>
                                             <div class="input-group mb-3">
                                                 <input type="hidden" id="baseUrl" value="{{ url('/') }}">
                                                 <input type="text" class="form-control" id="jobLink" value="" readonly>

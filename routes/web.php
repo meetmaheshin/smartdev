@@ -342,4 +342,4 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
     });
 });
 
-Route::get('/projects/shareable-link/{proposalId}', [ShareableLinkController::class, 'showShareableLink'])->name('project.shareable.link'); 
+Route::get('/freelance-jobs/apply/{slug}', [ShareableLinkController::class, 'showShareableLink'])->name('project.shareable.link');

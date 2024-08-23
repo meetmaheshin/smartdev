@@ -23,10 +23,10 @@ class ShareableLinkController extends Controller
         $this->projectMilestone = new ProjectMilestone ;
         $this->pageCount = config('constants.pagination');
     }
-    protected $pageCount = 10; // or whatever default value you need
 
-    public function showShareableLink(Request $request, $id)
+    public function showShareableLink(Request $request, $slug)
     {
+        $id = Project::where('slug', $slug)->first()->id;
         $request->session()->put('project_id', $id);       
         $data['project_id'] = $id;
         $data['projectDetail'] = $this->project->projectData($id);

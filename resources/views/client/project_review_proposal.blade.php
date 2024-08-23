@@ -275,15 +275,17 @@
                                                             {{$projectDetail->user->clientDetails ? $projectDetail->user->clientDetails->people : ''}}
                                                         </div>
                                                     </li>
-                                                    <li class="py-3">
-                                                        <div class="job-link-container">
-                                                            <h4 data-testid="head-title" class="color_black font_16">Job link</h4>
-                                                            <div class="input-group mb-3">
-                                                                <input type="text" class="form-control" id="jobLink" value="{{ url('/') }}/projects/shareable-link/{{$projectDetail->id}}" readonly>
+                                                    @if($projectDetail->slug)
+                                                        <li class="py-3">
+                                                            <div class="job-link-container">
+                                                                <h4 data-testid="head-title" class="color_black font_16">Job link</h4>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="text" class="form-control" id="jobLink" value="{{ url('/') }}/freelance-jobs/apply/{{$projectDetail->slug}}" readonly>
+                                                                </div>
+                                                                <span style="cursor: pointer; color: green;" class="copy-link-btn" id="copyLink">Copy link</span>
                                                             </div>
-                                                            <span style="cursor: pointer; color: green;" class="copy-link-btn" id="copyLink">Copy link</span>
-                                                        </div>
-                                                    </li>
+                                                        </li>
+                                                    @endif
                                                 </ul>
                                             </div>
                                         </div>

@@ -43,6 +43,7 @@ $(document).on("click", ".best_matches_result", function (e) {
                 var date = $.timeago(time);
                 var budgetType = '';
                 var Duration = '';
+                var slug = response.data.slug;
                if(budget == 'project'){
                     budgetType = 'Fixed-price';
                     $("#modal_price").html("$" + response.data.project_budget);
@@ -71,7 +72,12 @@ $(document).on("click", ".best_matches_result", function (e) {
                 $("#modal_duration").html(Duration);
                 $("#popup_job_save_btn_id").val(id);
                 $("#project_id").val(id);
-                $('#jobLink').val(baseUrl + "/projects/shareable-link/" + response.data.id);
+                if (slug && slug.trim() !== "") {
+                    $('#jobLink').val(baseUrl + "/freelance-jobs/apply/" + slug);
+                    $('.job-link-container').show(); // Show the div if slug is not empty
+                } else {
+                    $('.job-link-container').hide(); // Hide the div if slug is null or empty
+                }
                 $("#receiver_id").val(response.data.user_id);
 
                 var sel = $('<p class="up_skill" id="job_skills_data">');
