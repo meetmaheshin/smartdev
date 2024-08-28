@@ -38,7 +38,7 @@
                 <div class="signup_content text-center">
                     <h3 class="signup_heading font_weight_600">Join as a client or Web3 Professional</h3>
                     <div class="signup_btn_box mt-4 d-xl-flex px-4 justify-content-around">
-                        <input type="hidden" id="checked_on_cond" value="{{$_GET['type'] ?? ''}}">
+                        {{-- <input type="hidden" id="checked_on_cond" value="{{$_GET['type'] ?? ''}}"> --}}
                         <div class="btn_box p-3 me-xl-5 mb-3 mb-xl-0" data-text="client">
                             <div class="btn_box_inner d-flex justify-content-between">
                                 <div class="signup_btn mb-3">
@@ -110,15 +110,29 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group signup_email_div mb-2 mb-md-0">
-                                    <label for="email" class="form-label font_weight_500 position-relative">Work email address</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Work Email Address" value="{{ old('email') }}" autocomplete="new-password">
+                                    <label for="email" class="form-label font_weight_500 position-relative">Email address</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" value="{{ old('email') }}" autocomplete="new-password">
                                     <div class="text-danger error" data-error="email"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6 mb-3 mb-md-0">
-                                <label for="password" class="form-label font_weight_500 position-relative">Password</label>
+                                <div class="d-flex">
+                                    <label for="password" class="form-label font_weight_500 position-relative">Password</label>
+                                    <span class="ml-auto" data-bs-toggle="tooltip" data-bs-html="true"
+                                        title="<div style='max-width: 300px; width: 100%;'>
+                                                    <ul class='list-unstyled mb-0'>
+                                                        <li>Password must contain at least one letter.</li>
+                                                        <li>Password must contain at least one number.</li>
+                                                        <li>Password must contain at least one uppercase character.</li>
+                                                        <li>Password must contain at least one special character.</li>
+                                                        <li>Password must be at least 8 characters long.</li>
+                                                    </ul>
+                                                </div>">
+                                        <i class="fas fa-info-circle text-black"></i>
+                                    </span>
+                                </div>
                                 <div class="position-relative">
                                     <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="{{ old('password') }}" autocomplete="new-password">
                                     <i class="position-absolute cursor-pointer toggle-password-login fas fa-eye-slash"></i>

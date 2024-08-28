@@ -16,7 +16,7 @@
         </div>
         <div class="element-wrap">
             <div class="policy-txt-block">
-                <h3>This Privacy Policy is effective as of December 1, 2022.</h3>
+                <h3>This Privacy Policy is effective as of December 1, <span id="current-year"></span>.</h3>
                 <p>SmartDev3 provides this Privacy Policy to inform users of our policies and procedures regarding the
                     collection, use and disclosure of personally identifiable information received from users of
                     this website, located at <a href="{{URL::to('/')}}">https://www.SmartDev3.ae</a> (“Site” )

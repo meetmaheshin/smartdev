@@ -102,13 +102,14 @@
 	<script type="text/javascript" src="{{asset('js/toastr.js')}}"></script>
 
     <script>
-        $(document).ready(function() {
+        // $(document).ready(function() {
             // toastr.options.timeOut = 10000;
             // @if (Session::has('error'))
             //     toastr.error("{{ Session::get('error') }}");
             // @elseif(Session::has('success'))
             //     toastr.success("{{ Session::get('success') }}");
             // @endif
+            
             jQuery(function() {
                 jQuery('#start_datepicker').datepicker();
                 jQuery('#end_datepicker').datepicker();
@@ -136,7 +137,7 @@
             jQuery('.skills_select').select2({
                 placeholder: "Select a skill",
             });
-        });
+        // });
     </script>
     @yield('js')
 </body>

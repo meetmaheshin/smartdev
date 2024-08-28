@@ -33,7 +33,7 @@
                         <div class="d-flex align-items-center no_border">
                             <div class="main_rate text-end position-relative">
                                 <i class="fas fa-dollar-sign"></i>
-                                <input class="text-end" placeholder="-22" type="number" name="service_fee" id="service_fee" step="any" value="{{$freelancerRate->service_fee ?? ""}}">
+                                <input class="text-end" placeholder="-20" type="number" name="service_fee" id="service_fee" step="any" value="{{$freelancerRate->service_fee ?? ""}}">
                             </div>
                             <p class="m-0 ms-2">/hr</p>
                             @if($errors->has('service_fee'))
@@ -50,7 +50,7 @@
                         <div class="d-flex align-items-center">
                             <div class="main_rate text-end position-relative">
                                 <i class="fas fa-dollar-sign"></i>
-                                <input class="text-end" placeholder="78" type="number" name="receive_fee" id="receive_fee" step="any" value="{{$freelancerRate->receive_fee ?? ""}}">
+                                <input class="text-end" placeholder="80" type="number" name="receive_fee" id="receive_fee" step="any" value="{{$freelancerRate->receive_fee ?? ""}}">
                             </div>
                             <p class="m-0 ms-2">/hr</p>
                         </div>

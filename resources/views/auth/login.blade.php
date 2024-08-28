@@ -85,7 +85,7 @@
 						</div>
 						<div class="mb-4 input-logindata">
 							<div class="form-group login_email_div">
-								<label for="email" class="form-label position-relative">Email</label>
+								<label for="email" class="form-label position-relative">Email <span class="asterisk">*</span></label>
 								<div class="icon">
 									<input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Email" value="{{ old('email') }}">
 								</div>
@@ -97,7 +97,7 @@
 							</div>
 						</div>
 						<div class="mb-3 input-logindata">
-							<label for="password" class="form-label position-relative">Password</label>
+							<label for="password" class="form-label position-relative">Password <span class="asterisk">*</span></label>
 							<div class="lock">
 								<input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Password" value="{{ old('password') }}">
 								<i class="position-absolute cursor-pointer toggle-password-login fas fa-eye-slash"></i>
@@ -127,7 +127,7 @@
 									<p>Don't have an account?</p>
 								</div>
 								<div class="register_btn text-center font_weight_500">
-									<a href="{{route('register')}}" class="text-decoration-none">Signup</a>
+									<a href="{{route('register')}}" class="text-decoration-none">Sign Up</a>
 								</div>
 							</div>
 						</div>

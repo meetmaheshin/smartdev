@@ -24,6 +24,13 @@
             background-color: #004D40;
             color: white;
         }
+        .tooltip-inner {
+            background-color: #00796B !important;
+            color: #fff !important;
+        }
+        .tooltip-arrow {
+            border-top-color: #00796B !important;
+        }
     </style>
 <body>
     @endsection
@@ -69,7 +76,14 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="telegramId" name="telegram_id" placeholder="Telegram ID" value="{{ old('telegram_id') }}">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="telegramId" name="telegram_id" placeholder="Telegram ID" value="{{ old('telegram_id') }}">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" data-bs-toggle="tooltip" data-bs-placement="left" title="Always use '@' before your Telegram ID">
+                                        <i class="fas fa-info-circle text-info"></i>
+                                    </span>
+                                </div>
+                            </div>
                             <small class="error-message text-danger" id="telegramIdError" style="display: none;">Valid Telegram ID is required.</small>
                             @error('telegram_id')
                                 <small class="error-message text-danger">{{ $message }}</small>
