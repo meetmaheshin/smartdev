@@ -135,6 +135,16 @@ class InitiateDetailController extends Controller
 
         $data['skill'] = Skill::groupBy('skills_sub')->get();
         $data['selectedSkills'] = FreelancerSkill::with('skill')->where('user_id', auth()->user()->id)->get();
+
+        // Extract the 'skills_sub' from the selected skills
+        $selectedSkillsSub = $data['selectedSkills']->pluck('skill.skills_sub')->unique();
+
+        // Get suggested skills excluding those already present in selectedSkills based on 'skills_sub'
+        $data['suggestedSkills'] = Skill::whereNotIn('skills_sub', $selectedSkillsSub)
+            ->groupBy('skills_sub')
+            ->take(10)
+            ->get();
+
         return view('freelancer.freelance_skills', $data);
     }
 

@@ -27,8 +27,8 @@ jQuery(document).ready(function () {
             );
             jQuery(".sign_up_form").find("h4").text("I'm a client, hiring for a project");
             jQuery("#is_admin").val("1");
-            $('label[for="email"]').text("Email Address");
-            $('#email').attr('placeholder', 'Email Address');
+            // $('label[for="email"]').text("Email Address");
+            // $('#email').attr('placeholder', 'Email Address');
         } else if (btn_text === "freelancer") {
             // signup_join_btn.text("Apply as a Freelancer").prop('disabled', false);
 
@@ -54,7 +54,8 @@ jQuery(document).ready(function () {
 
 
     function preSelectBasedOnHiddenField() {
-        const checkedOnCond = $("#checked_on_cond").val(); // Fetch the hidden field value
+        // const checkedOnCond = $("#checked_on_cond").val(); // Fetch the hidden field value
+        const checkedOnCond = localStorage.getItem('type') || '';
 
         if (checkedOnCond === '1') {
             // ROLE_CLIENT
@@ -72,6 +73,9 @@ jQuery(document).ready(function () {
             $("#is_admin").val("0");
             $(".header_right a").text("Join as a Client");
         }
+
+        // Clear the type value from local storage
+        localStorage.removeItem('type');
     }
     preSelectBasedOnHiddenField();
 
@@ -93,8 +97,8 @@ jQuery(document).ready(function () {
             );
             jQuery("#is_admin").val("1");
             jQuery(this).text("Apply as talent");
-            $('label[for="email"]').text("Email Address");
-            $('#email').attr('placeholder', 'Email Address');
+            // $('label[for="email"]').text("Email Address");
+            // $('#email').attr('placeholder', 'Email Address');
             $('.header_right span').text("Looking for work ?");
         } else if (test == 1) {
             jQuery(".signup_heading").text(
@@ -102,8 +106,8 @@ jQuery(document).ready(function () {
             );
             jQuery("#is_admin").val("0");
             jQuery(this).text("Join as a Client");
-            $('label[for="email"]').text("Work Email Address");
-            $('#email').attr('placeholder', 'Work Email Address');
+            // $('label[for="email"]').text("Email Address");
+            // $('#email').attr('placeholder', 'Email Address');
             $('.header_right span').text("Here to hire talent ?");
         }
         return false;

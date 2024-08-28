@@ -15,12 +15,16 @@ class freelancerExperience extends Model
         return $this->belongsTo(User::class,'user_id');
     }
 
+    public function country(){
+        return $this->belongsTo(Country::class, 'country_id');
+    }
+
     public function getByUserId($userId) {
-        return $this->where('user_id', $userId)->get();
+        return $this->with('country')->where('user_id', $userId)->get();
     }
 
     public function updateOrCreateExperience($data) {
-        $end_date = $data['end_date_check'] == 'on' ? '' : $data['end_date'];
+        $end_date = isset($data['end_date_check']) && $data['end_date_check'] == 'on' ? '' : $data['end_date'];
         return $this->updateOrCreate(
             ['id' => $data['hiddenId']],
             [

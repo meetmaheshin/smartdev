@@ -16,6 +16,7 @@
                     <p class="py-3">Managed Marketplace of Top-Tier Talent. Powered by Smart Contracts and Advanced AI Tools.</p>
                     {{-- <a href="{{ url('/register?type=1') }}" class="btn custom_btn_border mr-3">Find Talent</a>
                     <a href="{{url('hire-us')}}" class="btn custom_btn_BG">Hire Us</a> --}}
+                    {{-- <a href="{{ url('/register') }}" onclick="setTypeAndNavigate(1)" class="btn custom_btn_border mr-3">Find Talent</a> --}}
                     <a href="{{ url('consultation') }}" class="btn custom_btn_BG">Start Your Project</a>
                 </div>
                 <div class="col-md-5 d-xs-none">
@@ -123,7 +124,8 @@
                     @if(auth()->check() && auth()->user()->is_admin == 0)
                         <a href="{{ url('/freelancer/dashboard') }}" class="btn custom_btn_BG mr-2">Find Projects</a>
                     @else
-                        <a href="{{ url('/register?type=0') }}" class="btn custom_btn_BG mr-2">Find Projects</a>
+                        {{-- <a href="{{ url('/register?type=0') }}" class="btn custom_btn_BG mr-2">Find Projects</a> --}}
+                        <a href="{{ url('/register') }}" onclick="setTypeAndNavigate(0)" class="btn custom_btn_BG mr-2">Find Projects</a>
                     @endif
                 </div>
             </div>
@@ -287,7 +289,8 @@
                             @if(auth()->check() && auth()->user()->is_admin == 0)
                                 <a href="{{ url('/freelancer/dashboard') }}" class="btn custom_btn_border">Find Projects</a>
                             @else
-                                <a href="{{ url('/register?type=0') }}" class="btn custom_btn_border">Find Projects</a>
+                                {{-- <a href="{{ url('/register?type=0') }}" class="btn custom_btn_border">Find Projects</a> --}}
+                                <a href="{{ url('/register') }}" onclick="setTypeAndNavigate(0)" class="btn custom_btn_border">Find Projects</a>
                             @endif
                         </div>                    
                     </div>
@@ -295,4 +298,12 @@
             </div>
         </div>
     </section>
+    <script>
+        function setTypeAndNavigate(type) {
+            // Store the type value in local storage
+            localStorage.setItem('type', type);
+            // Navigate to the register page
+            window.location.href = '{{ url('/register') }}';
+        }
+    </script>
     @endsection

@@ -45,13 +45,19 @@ class FreelancerExperienceRequest extends FormRequest
 	{
 
 		   // Check if 'end_date_check' is null
-		if ($this->input('end_date_check') == null) {
-			$rules['start_date'] = 'required|date|before_or_equal:today';
+		// if ($this->input('end_date_check') == null) {
+		// 	$rules['start_date'] = 'required|date|before_or_equal:today';
+		// 	$rules['end_date'] = 'required|date|after_or_equal:start_date';
+		// } else {
+		// 	$rules['start_date'] = 'required|date|before_or_equal:today';
+		// }
+
+		// Apply end date validation only if the checkbox is not checked
+		if ($this->missing('end_date_check')) {
 			$rules['end_date'] = 'required|date|after_or_equal:start_date';
-		} else {
-			$rules['start_date'] = 'required|date|before_or_equal:today';
 		}
 
+		$rules['start_date'] = 'required|date|before_or_equal:today';
         $rules['company'] = 'required|string|max:191';
         $rules['title'] = 'required|max:191';
         $rules['location'] = 'required';
