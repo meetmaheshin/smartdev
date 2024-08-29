@@ -77,7 +77,7 @@
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <input type="text" class="form-control" id="telegramId" name="telegram_id" placeholder="Telegram ID" value="{{ old('telegram_id') }}">
+                                <input type="text" class="form-control" id="telegramId" name="telegram_id" placeholder="Telegram ID *" value="{{ old('telegram_id') }}">
                                 <div class="input-group-append">
                                     <span class="input-group-text" data-bs-toggle="tooltip" data-bs-placement="left" title="Always use '@' before your Telegram ID">
                                         <i class="fas fa-info-circle text-info"></i>

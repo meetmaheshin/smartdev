@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="email" class="col-lg-4 col-form-label fw-bold">{{ __('Email Address') }}</label>
+                            <label for="email" class="col-lg-4 col-form-label fw-bold">{{ __('Email Address') }} <span class="asterisk">*</span></label>
 
                             <div class="col-lg-8">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>

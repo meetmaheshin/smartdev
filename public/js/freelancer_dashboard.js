@@ -162,6 +162,7 @@ $(document).on("click", ".showDataExp", function (e) {
 
 $(".experienceModal,.educationModal").on("click", function (e) {
     e.preventDefault();
+    $("#educationModalLabel").html("Add Work Experience");
     $("#experienceForm,#educationForm").trigger("reset");
     $("#hiddenId").val('');
     $("#educationModal").modal("show");
@@ -194,13 +195,15 @@ $("#experienceForm,#educationForm").on("submit", function (e) {
                 if (hiddenId != "") {
                     if (formID == "experienceForm") {
                         $("#show_prev_title_" + response.data.id).text(
-                            response.data.title
+                            response.data.title.length > 45  ? response.data.title.substring(0, 45) + '...' : response.data.title
                         );
                         $("#show_prev_company_" + response.data.id).text(
-                            response.data.company
+                            (response.data.company.length > 40 ? response.data.company.substring(0, 40) + '...' : response.data.company) 
+                            + " | " + formatDateToMonthYear(response.data.start_date) 
+                            + " - " + formatDateToMonthYear(response.data.end_date)
                         );
                         $("#show_prev_location_" + response.data.id).text(
-                            response.data.location
+                            response.data.location + " - " + response.data.country.name
                         );
                     } else {
                         $("#show_prev_title_" + response.data.id).text(
@@ -285,6 +288,7 @@ $(document).on("click", ".delete-confirm", function (e) {
 
 function getExpData(entryId) {
     $(".error").html("");
+    $("#educationModalLabel").html("Edit Work Experience");
     $.ajax({
         url: "/create-profile/getexperienceData/" + entryId,
         type: "get",
@@ -386,3 +390,33 @@ const previewImage = (event) => {
     }
 };
 
+
+
+function formatDateToMonthYear(dateString) {
+    if(dateString === ""){
+        return "Present";
+    }
+    // Convert the input date string into a Date object
+    const date = new Date(dateString);
+    
+    // Check if the date is valid
+    if (isNaN(date)) {
+        throw new Error('Invalid date format. Please use MM/DD/YYYY.');
+    }
+
+    // Format the date to 'Month YYYY' using Intl.DateTimeFormat
+    const formattedDate = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(date);
+    
+    return formattedDate;
+}
+
+
+function truncateTitle(title, maxLength = 45) {
+    // Check if the title length is greater than the specified maxLength
+    if (title.length > maxLength) {
+        // Truncate the title and add '...' at the end
+        return title.substring(0, maxLength) + '...';
+    }
+    // Return the title as is if it's within the maxLength
+    return title;
+}
