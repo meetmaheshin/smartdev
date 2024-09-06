@@ -26,6 +26,8 @@
 	<link href="{{asset('assets/fonts-awesome/css/all.min.css')}}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/sweetalert2.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/toastr.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datepicker.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/select2.min.css')}}">
 
 	<title>SmartDev3</title>
 </head>
@@ -93,8 +95,17 @@
   <!--/ Layout Content -->
   	@include('admin.layouts.sections.commonjs')
 	@yield('js')
+	<script type="text/javascript" src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/select2.min.js')}}"></script>
 	<script> 
-		$('#example').DataTable();
+		var table = $('#example').DataTable();
+
+		// Filter the table based on the Role column
+        $('#roleFilter').on('change', function() {
+            var selectedRole = $(this).val();
+            // Search in the Role column (index 2) based on the selected value
+            table.column(2).search(selectedRole).draw();
+        });
 
 		toastr.options.timeOut = 10000;
 		@if (Session::has('error'))
@@ -154,6 +165,17 @@
 		});
 
 
+
+		// auto fill popular
+		$(document).ready(function () {
+            $('.popular_title').on('input', function () {
+				console.log('aa');
+                const inputValue = $(this).val().toLowerCase(); // Convert input value to lowercase
+                if (inputValue.includes('popular')) {
+                    $(this).val('Popular skills');
+                }
+            });
+        });
 
 	</script>
 </body>

@@ -2181,3 +2181,194 @@ a.remove_portfolio_attachment {
 #fileNames li {
     margin: 5px 0;
 }
+
+.signup_btn_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn_box {
+    flex: 1;
+    min-width: 280px; /* Minimum width to keep boxes aligned */
+    max-width: 400px; /* Maximum width for responsiveness */
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Optional styling */
+    border-radius: 8px; /* Optional styling */
+}
+
+.btn_box_inner {
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .btn_box {
+        max-width: 100%; /* Full width on smaller screens */
+        margin: 0 auto;
+    }
+}
+
+
+
+
+.image-preview-container img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.image-preview-container input {
+    display: none;
+}
+.image-preview-container label {
+    border-radius: 20px;
+    cursor: pointer;
+    color: #108a00;
+    background-color: transparent;
+    border: 2px solid #108a00;
+    height: 30px;
+    padding: 0 15px;
+    line-height: 25px;
+}
+
+/* skills */
+
+.skills_add .select2-container .select2-search--inline .select2-search__field {
+    margin: 0 !important;
+    height: 40px;
+    vertical-align: middle;
+    padding: 9px;
+}
+.skills_add
+    .select2-container--default.select2-container--focus
+    .select2-selection--multiple {
+    border: solid #5e6d55 2px !important;
+    outline: 0;
+}
+.select2-container--default .select2-selection--multiple {
+    border: 2px solid #aaa !important;
+    padding: 0;
+}
+.select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice {
+    background-color: #14a800 !important;
+    color: white;
+    padding: 2px 2px 2px 20px !important;
+    margin: 5px;
+}
+.select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice__remove {
+    bottom: 0;
+    color: white !important;
+    border: none !important;
+    background-color: #14a800 !important;
+}
+.select2-container--default
+    .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #f2f7f2;
+    color: #001e00;
+}
+
+
+
+/* services */
+.service_dropdown .dropdown-item .end-10 {
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.selected_services {
+    padding-left: 12px;
+}
+.service_dropdown .dropdown-item {
+    color: #212529;
+}
+.service_dropdown .dropdown-toggle::after {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.service_dropdown .btn {
+    border: 2px solid #e0e0e0;
+}
+.service_dropdown .btn-check:focus + .btn,
+.service_dropdown .btn:focus {
+    box-shadow: none;
+}
+.service_dropdown .dropdown-item.active,
+.service_dropdown .dropdown-item:active,
+.service_dropdown .dropdown-item:hover {
+    background-color: #f2f7f2;
+    color: #212529;
+}
+.service_dropdown .dropdown-menu {
+    -webkit-box-shadow: 0px 5px 13px 1px rgb(201 201 201);
+    -moz-box-shadow: 0px 5px 13px 1px rgba(201, 201, 201, 1);
+    box-shadow: 0px 5px 13px 1px rgb(201 201 201);
+    cursor: pointer;
+    color: #14a800;
+    width: 60%;
+}
+.drop_inner .form-check-input:checked {
+    background-color: #14a800;
+    border-color: #14a800;
+}
+.drop_inner .form-check-input:focus {
+    border-color: #14a800;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #14a80040;
+}
+.drop_inner .whole_check label:hover {
+    background-color: #f2f7f2;
+}
+.drop_inner .whole_check label {
+    padding: 6px 10px;
+    width: 100%;
+}
+.drop_inner input {
+    cursor: pointer;
+}
+.drop_inner {
+    display: none;
+    left: 100%;
+    top: -5px;
+    background: #ffff;
+    -webkit-box-shadow: 0px 5px 13px 1px rgb(201 201 201);
+    -moz-box-shadow: 0px 5px 13px 1px rgba(201, 201, 201, 1);
+    box-shadow: 0px 5px 13px 1px rgb(201 201 201);
+    padding: 5px 0px;
+    color: black;
+    min-width: 200px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: max-content;
+}
+.service_badge i {
+    cursor: pointer;
+}
+.service_badge {
+    background-color: #14a800;
+    color: #fff;
+    padding: 10px 12px;
+    font-size: 12px;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    height: 25px;
+    margin: 0 5px 10px 0;
+    border-radius: 12px;
+    line-height: 1;
+    cursor: default;
+}
+
+
+/* admin active bar */
+.active-bar{
+    background: powderblue;
+}

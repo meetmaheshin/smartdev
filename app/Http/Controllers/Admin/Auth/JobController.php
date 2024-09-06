@@ -17,21 +17,42 @@ use Illuminate\Support\Facades\Redirect;
 use DB;
 use App\Models\Country;
 use App\Models\Consultation;
+use File;
+use App\Http\Traits\FileUploadTrait;
+use App\Models\freelancerExperience;
+use App\Models\freelancerEducation;
+use App\Models\FreelancerSkill;
+use App\Models\FreelancerService;
+use App\Models\FreelancerRate;
+use App\Models\ClientHire;
 
 
 class JobController extends Controller
 {
-
+    use FileUploadTrait;
     public function __construct() {
         $this->middleware(['auth']);
         $this->profile = new FreelancerProfile;
         $this->user = new User;
+        $this->all_categories = Category::all();
+        $this->freelancerService = new FreelancerService;
     }
 
     public function index(Request $request){
-        $data['project']=Project::where('job','new')->get();
+        // Get the user ID from the request, if available
+        $userId = $request->input('user_id');
+
+        // Check if the user ID is empty
+        if (empty($userId)) {
+            // Existing flow: Fetch all projects where job is 'new'
+            $data['project'] = Project::where('job', 'new')->get();
+        } else {
+            // If user ID is present, filter projects based on the user ID
+            $data['project'] = Project::where('job', 'new')
+                                    ->where('user_id', $userId)
+                                    ->get();
+        }
         return view('admin.jobs.index',$data);
-        
     }
 
     public function edit(Request $request){
@@ -319,54 +340,54 @@ class JobController extends Controller
     }
 
     // Popular Skills
-    public function popularSkills(Request $request){
-        $data['popularSkills']=Skill::orderby('id','desc')->get();
-        return view('admin.popular_skills.index',$data);
-    }
+    // public function popularSkills(Request $request){
+    //     $data['popularSkills']=Skill::orderby('id','desc')->get();
+    //     return view('admin.popular_skills.index',$data);
+    // }
 
 
-    public function popularSkillsAdd(Request $request){
-        $data['popularSkills'] = new Skill();
-        return view('admin.popular_skills.edit',$data);
-    }
+    // public function popularSkillsAdd(Request $request){
+    //     $data['popularSkills'] = new Skill();
+    //     return view('admin.popular_skills.edit',$data);
+    // }
 
-    public function popularSkillsEdit(Request $request,$id){
-        $data['popularSkills'] = Skill::whereId($request->id)->first();
-        return view('admin.popular_skills.edit',$data);
-    }
+    // public function popularSkillsEdit(Request $request,$id){
+    //     $data['popularSkills'] = Skill::whereId($request->id)->first();
+    //     return view('admin.popular_skills.edit',$data);
+    // }
 
-    public function popularSkillsUpdate(Request $request){
+    // public function popularSkillsUpdate(Request $request){
             
-        $validate = Validator::make(
-            $request->all(),
-            [
-                'title' => 'required',
-                'skills_sub' => 'required',
-            ]
-        );
-        if ($validate->fails()) {
-            return Redirect::back()->withErrors($validate);
-        }
-        $skill = Skill::find( $request->skills_id);
-        if (empty($skill)) {    // you can do this condition to check if is empty
-            $skill= new Skill;  //then create new object
-        }
-        $skill->title = $request->title;
-        $skill->skills_sub = $request->skills_sub;
-        $skill->save();
+    //     $validate = Validator::make(
+    //         $request->all(),
+    //         [
+    //             'title' => 'required',
+    //             'skills_sub' => 'required',
+    //         ]
+    //     );
+    //     if ($validate->fails()) {
+    //         return Redirect::back()->withErrors($validate);
+    //     }
+    //     $skill = Skill::find( $request->skills_id);
+    //     if (empty($skill)) {    // you can do this condition to check if is empty
+    //         $skill= new Skill;  //then create new object
+    //     }
+    //     $skill->title = $request->title;
+    //     $skill->skills_sub = $request->skills_sub;
+    //     $skill->save();
 
-        return redirect()->route('admin.popularSkills')->with('success', 'Popular Skill Successfully Updated ');
-    }
+    //     return redirect()->route('admin.popularSkills')->with('success', 'Popular Skill Successfully Updated ');
+    // }
 
-    public function popularSkillsDelete(Request $request){
-        $check = ProjectSkill::where('skill_id',$request->id)->first();
-        if(empty($check)){
-            $skill = Skill::whereId($request->id)->delete();
-            return response()->json(['status'=> true,'message' => 'Popular Skill deleted successfully']);
-        }else{
-            return response()->json(['status'=> false,'message' => 'we cannot delete this skill because this skill is added to any job']);
-        }
-    }
+    // public function popularSkillsDelete(Request $request){
+    //     $check = ProjectSkill::where('skill_id',$request->id)->first();
+    //     if(empty($check)){
+    //         $skill = Skill::whereId($request->id)->delete();
+    //         return response()->json(['status'=> true,'message' => 'Popular Skill deleted successfully']);
+    //     }else{
+    //         return response()->json(['status'=> false,'message' => 'we cannot delete this skill because this skill is added to any job']);
+    //     }
+    // }
 
 
     // contact us 
@@ -426,47 +447,142 @@ class JobController extends Controller
         $data['timezone'] = Timezone();
         $data['freelancerInfo'] = User::with('country','states','cities')->where('id',$request->id)->first();
         $data['countryCode'] = Country::where('id',$data['freelancerInfo']->country_id)->first();
+        $data['experiences'] = freelancerExperience::where('user_id', $request->id)->get();
+        $data['education'] = freelancerEducation::where('user_id', $request->id)->get();
+        $data['skill'] = Skill::groupBy('skills_sub')->get();
+        $data['selectedSkills'] = FreelancerSkill::with('skill')->where('user_id', $request->id)->get();
+        $data['services'] = [];
+        $data['selectedServices'] = [];
+        $category =  $this->all_categories ;
+        foreach ($category as $spec) {
+            $data['services'][] = Category::with(['specialties' => function ($q) {
+                $q->groupBy('title');
+            }])->where('id', $spec->id)->first();
+        }
+        $data['selectedServices'] = $this->freelancerService->getServicesByUserId($request->id);
+        $data['freelancerRate'] = FreelancerRate::where('user_id', $request->id)->first();
         return view('admin.user.edit',$data);
     }
     
     public function userUpdate(Request $request){
-            
-            $validate = Validator::make(
-                $request->all(),
-                [
-                    'firstname' => 'required|regex:/^[a-zA-Z ]*$/',
-                    'lastname' => 'required|regex:/^[a-zA-Z ]*$/',
-                    'phone_no' => 'required|numeric|digits:10',
-                    'country_id' => 'required|exists:countries,id',
-                    'state_id' => 'required|exists:states,id',
-                    'city_id' => 'required|exists:cities,id',
-                    'time_zone' => 'required'
-                ]
-            );
-            if ($validate->fails()) {
-                return Redirect::back()->withErrors($validate)->withInput();
-            }
-            $user = User::find($request->id);
-            if (empty($user)) {// you can do this condition to check if is empty
-                $user= new User;//then create new object
-            }
-            $user->firstname = $request->firstname;
-            $user->lastname = $request->lastname;
-            $user->phone_no = $request->phone_no;
-            $user->country_id = $request->country_id;
-            $user->state_id = $request->state_id;
-            $user->city_id = $request->city_id;
-            $user->time_zone = $request->time_zone;
-            $user->save();
+        $user = User::find($request->id);
+        if (empty($user)) {// you can do this condition to check if is empty
+            $user= new User;//then create new object
+        }
 
+        $rules = [
+            'firstname' => 'required|regex:/^[a-zA-Z ]*$/',
+            'lastname' => 'required|regex:/^[a-zA-Z ]*$/',
+            'phone_no' => 'required|numeric|digits:10',
+            'country_id' => 'required|exists:countries,id',
+            'state_id' => 'required|exists:states,id',
+            'city_id' => 'required|exists:cities,id',
+            'time_zone' => 'required',
+        ];
+
+        if($request->hasFile('filename')){
+            $rules['filename'] = 'file|mimes:jpg,png,jpeg|max:5000';
+        }
+
+        if ($user->is_admin == 0) {
+            $rules['skills'] = 'required';  // You can adjust these rules as needed
+            $rules['services'] = 'required';
+
+            if($request->has('hourly_rate')){
+                $rules['hourly_rate'] = 'required|numeric|min:5';
+            }
+            if($request->has('receive_fee')){
+                $rules['receive_fee'] = 'required';
+            }
+        }
+
+        $validate = Validator::make($request->all(), $rules);
+
+        if ($validate->fails()) {
+            return Redirect::back()->withErrors($validate)->withInput();
+        }
+        
+        // add/edit profile
+        $fileName = $user->profile_photo_path;
+        if ($request->hasFile('filename')) {
+            $file = $request->file('filename');
+            $fkey = rand(10, 100);
+            $image_path = public_path('/storage/images/client_profile/') . $fileName;
+            $image_thumbnail_path = public_path('/storage/thumbnail/client_profile/') . $fileName;
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+                File::delete($image_thumbnail_path);
+            }
+            $fileName =   $this->UploadFunction($file, $fkey, 'client_profile', $type = 2);
+        }
+
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->phone_no = $request->phone_no;
+        $user->country_id = $request->country_id;
+        $user->state_id = $request->state_id;
+        $user->city_id = $request->city_id;
+        $user->time_zone = $request->time_zone;
+        $user->profile_photo_path = $fileName;
+        $user->save();
+
+        if($user->is_admin == 0){
             $this->profile->updateOrCreateTitle($request->id, $request->title);
             $this->profile->updateOrCreateBio($request->id, $request->user_profile_bio);
+    
+            // add/edit skills
+            $data = [];
+            $userCheck = FreelancerSkill::where('user_id', $user->id);
+            if ($userCheck->exists()) {
+                $userCheck->delete();
+            }
+            foreach ($request->skills as $skill) {
+                $data[] = [
+                    'user_id'  => $user->id,
+                    'skill_id' => $skill
+                ];
+            }
+            FreelancerSkill::insert($data);
+    
+            // add/edit services
+            $serviceData = [];
+            $serviceCheck = FreelancerService::where('user_id', $user->id);
+            if ($serviceCheck->exists()) {
+                $serviceCheck->delete();
+            }
+            foreach ($request->services as $service) {
+                $serviceData[] = [
+                    'user_id'  => $user->id,
+                    'speciality_id' => $service
+                ];
+            }
+            FreelancerService::insert($serviceData);
 
+            // add/update freelancer rates
+            $freelancerRate = FreelancerRate::updateOrCreate([
+                'user_id'   => $user->id,
+            ], [
+                'hourly_rate' => $request->hourly_rate,
+                'service_fee' => $request->service_fee,
+                'receive_fee' => $request->receive_fee
+            ]);
+        }
 
-            return redirect()->route('admin.user')->with('success', 'User Successfully Updated ');
+        return redirect()->route('admin.user')->with('success', 'User Successfully Updated ');
     }
 
     public function userDelete(Request $request){
+        $user = User::whereId($request->id)->first();
+
+        $hasActiveContracts = ClientHire::where(
+            $user->is_admin == 0 ? 'freelancer_id' : 'client_id',
+            $user->id
+        )->get();
+
+        if($hasActiveContracts->isNotEmpty()){
+            return response()->json(['status'=> false,'message' => 'This user cannot be deleted because they have active contracts.']);
+        }
+        
         $user = User::whereId($request->id)->update(['status'=>2]);
 
         $user = User::whereId($request->id)->delete();

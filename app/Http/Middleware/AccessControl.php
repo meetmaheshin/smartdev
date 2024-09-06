@@ -59,7 +59,7 @@ class AccessControl {
                 $roleFreelancer
             ],
             $initiateDetailController => [
-                $roleFreelancer
+                $roleFreelancer, $roleAdmin
             ],
 
             $proposalSettingController=>[

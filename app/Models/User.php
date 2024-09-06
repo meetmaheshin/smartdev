@@ -10,13 +10,14 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Notifications\CustomVerifyEmailNotification;
+use App\Notifications\CustomVerifyEmail;
 
 class User extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
     use Notifiable;
-    use SoftDeletes;
+    // use SoftDeletes;
     // use MustVerifyEmail;
 
 
@@ -131,8 +132,10 @@ class User extends Authenticatable
         return $this->where('id', $userId)->first();
     }
 
-    // public function sendEmailVerificationNotification()
-    // {
-    //     $this->notify(new CustomVerifyEmailNotification);
-    // }
+    public function sendEmailVerificationNotification()
+    {
+        // $this->notify(new CustomVerifyEmailNotification);
+        $this->notify(new CustomVerifyEmail($this));
+        
+    }
 }

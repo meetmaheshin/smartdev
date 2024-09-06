@@ -254,7 +254,7 @@ function JwtToken()
     $response = Http::withHeaders([
         'AccessKey' => 'lw3py3qGQnYSEEHLEZJTP7KnRi2uDyQA',
         'SecretKey' => 'gQPUFNiRlVeSPwak0djQDRFuH3W9iOWL',
-    ])->get('https://pgapi.smartdev3.com/rest/smart-dev3/jwt-token');
+    ])->get('https://pgapi.smartdev3.ae/rest/smart-dev3/jwt-token');
 
     $jsonData = $response->json();
     return $jsonData;
@@ -266,7 +266,7 @@ function DeployContract($token, $client_address, $freelancer_address)
     $response = Http::withHeaders([
         'Content-Type' => 'application/json',
         'Authorization' => 'Bearer ' . $token,
-    ])->post('https://pgapi.smartdev3.com/rest/smart-dev3/deploy-contract', [
+    ])->post('https://pgapi.smartdev3.ae/rest/smart-dev3/deploy-contract', [
         'buyer' => $client_address,
         'seller' => $freelancer_address,
     ]);
@@ -281,7 +281,7 @@ function addMilestone($token, $contractAddress, $milestoneData)
     $response = Http::withHeaders([
         'Contract-Address' => $contractAddress,
         'Authorization' => 'Bearer ' . $token,
-    ])->post('https://pgapi.smartdev3.com/rest/smart-dev3/add-milestone', ["milestones" => json_decode($milestoneData)]);
+    ])->post('https://pgapi.smartdev3.ae/rest/smart-dev3/add-milestone', ["milestones" => json_decode($milestoneData)]);
 
     $jsonData = $response->json();
     return $jsonData;
@@ -293,7 +293,7 @@ function updateMilestone($token, $contractAddress, $milestoneId, $amount)
     $response = Http::withHeaders([
         'Contract-Address' => $contractAddress,
         'Authorization' => 'Bearer ' . $token,
-    ])->post('https://pgapi.smartdev3.com/rest/smart-dev3/update-amount', [
+    ])->post('https://pgapi.smartdev3.ae/rest/smart-dev3/update-amount', [
         'milestoneId' => $milestoneId,
         'amount' => $amount,
     ]);

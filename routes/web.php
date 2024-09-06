@@ -69,11 +69,11 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
     Route::post('/admin/skills/delete', [AdminJobController::class, 'skillsDelete'])->name('admin.skills.delete');
 
     // Popular Skills
-    Route::get('/admin/popular-skills',  [AdminJobController::class, 'popularSkills'] )->name('admin.popularSkills');
-    Route::get('/admin/popular-skills/edit/{id}',  [AdminJobController::class, 'popularSkillsEdit'] )->name('admin.popularSkills.edit');
-    Route::get('/admin/popular-skills/add',  [AdminJobController::class, 'popularSkillsAdd'] )->name('admin.popularSkills.add');
-    Route::post('admin/popular-skills/update', [AdminJobController::class, 'popularSkillsUpdate'])->name('admin.popularSkills.update');
-    Route::post('/admin/popular-skills/delete', [AdminJobController::class, 'popularSkillsDelete'])->name('admin.popularSkills.delete');
+    // Route::get('/admin/popular-skills',  [AdminJobController::class, 'popularSkills'] )->name('admin.popularSkills');
+    // Route::get('/admin/popular-skills/edit/{id}',  [AdminJobController::class, 'popularSkillsEdit'] )->name('admin.popularSkills.edit');
+    // Route::get('/admin/popular-skills/add',  [AdminJobController::class, 'popularSkillsAdd'] )->name('admin.popularSkills.add');
+    // Route::post('admin/popular-skills/update', [AdminJobController::class, 'popularSkillsUpdate'])->name('admin.popularSkills.update');
+    // Route::post('/admin/popular-skills/delete', [AdminJobController::class, 'popularSkillsDelete'])->name('admin.popularSkills.delete');
 
     // contact us
     Route::get('/admin/contact-us',  [AdminJobController::class, 'contactUs'] )->name('admin.contactUs');
