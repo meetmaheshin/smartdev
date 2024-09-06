@@ -107,10 +107,11 @@ class InitiateDetailController extends Controller
 
     public function storeEducation(FreelancerEducationRequest $request)
     {
+        $user = $request->user_id ?? auth()->user()->id;
         $education = freelancerEducation::updateOrCreate([
             'id'   => $request->hiddenId,
         ], [
-            'user_id'  =>   auth()->user()->id,
+            'user_id'  =>  $user,
             'school' => $request->school,
             'degree' =>  $request->degree,
             'fieldOfStudy' =>  $request->fieldOfStudy,

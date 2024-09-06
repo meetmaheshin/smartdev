@@ -325,7 +325,7 @@ class ProjectReviewProposalController extends Controller
 
             // data to be send 
             $milestoneData = json_encode($milestone_array);
-            // add milestone on https://pgapi.smartdev3.com/rest/smart-dev3/add-milestone
+            // add milestone on https://pgapi.smartdev3.ae/rest/smart-dev3/add-milestone
             $add_milestone = addMilestone($token,$createOffer->contract_address,$milestoneData);            
         }
         return response()->json(['status' => true,'url'=>route('payments.checkout.view',['projectId'=>$request->projectId,'userId'=>$request->freelancerId])]);

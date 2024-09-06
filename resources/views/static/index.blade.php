@@ -14,8 +14,7 @@
                 <div class="col-md-7">
                     <h1 class="mb-0">Web3 Development on Steroids. Supercharged by AI.</h1>
                     <p class="py-3">Managed Marketplace of Top-Tier Talent. Powered by Smart Contracts and Advanced AI Tools.</p>
-                    {{-- <a href="{{ url('/register?type=1') }}" class="btn custom_btn_border mr-3">Find Talent</a>
-                    <a href="{{url('hire-us')}}" class="btn custom_btn_BG">Hire Us</a> --}}
+                    {{-- <a href="{{url('hire-us')}}" class="btn custom_btn_BG">Hire Us</a> --}}
                     {{-- <a href="{{ url('/register') }}" onclick="setTypeAndNavigate(1)" class="btn custom_btn_border mr-3">Find Talent</a> --}}
                     <a href="{{ url('consultation') }}" class="btn custom_btn_BG">Start Your Project</a>
                 </div>
@@ -124,7 +123,6 @@
                     @if(auth()->check() && auth()->user()->is_admin == 0)
                         <a href="{{ url('/freelancer/dashboard') }}" class="btn custom_btn_BG mr-2">Find Projects</a>
                     @else
-                        {{-- <a href="{{ url('/register?type=0') }}" class="btn custom_btn_BG mr-2">Find Projects</a> --}}
                         <a href="{{ url('/register') }}" onclick="setTypeAndNavigate(0)" class="btn custom_btn_BG mr-2">Find Projects</a>
                     @endif
                 </div>
@@ -306,4 +304,4 @@
             window.location.href = '{{ url('/register') }}';
         }
     </script>
-    @endsection
+@endsection

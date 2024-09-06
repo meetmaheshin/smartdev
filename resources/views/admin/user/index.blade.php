@@ -21,6 +21,14 @@
         <hr/>
         <div class="card">
             <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                    <label for="roleFilter" class="me-2">Filter by Role:</label>
+                    <select id="roleFilter" class="form-select" style="width: 150px;">
+                        <option value="">All</option>
+                        <option value="Freelancer">Freelancer</option>
+                        <option value="Client">Client</option>
+                    </select>
+                </div>
                 <div class="table-responsive">
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
                         <thead>
@@ -30,6 +38,7 @@
                                 <th>Role</th>
                                 <th>Email</th>
                                 <th>Mobile No</th>
+                                <th>Projects</th>
                                 <th>Actions</th>
 
                             </tr>
@@ -43,10 +52,19 @@
                                 <td>{{$users->email}}</td>
                                 <td>{{$users->phone_no}}</td>
                                 <td>
+                                    @if($users->is_admin)
+                                        <div class="d-flex order-actions">
+                                            <a href="{{ route('admin.jobs', ['user_id' => $users->id]) }}" class="ms-3 view-jobs">
+                                                {{-- <i class='bx bx-show'></i> --}}
+                                                <button class="btn btn-secondary">view</button>
+                                            </a>
+                                        </div>
+                                    @endif
+                                </td>
+                                <td>
                                     <div class="d-flex order-actions">
                                         <a href="{{route('admin.user.edit',['id'=>$users->id])}}" class=""><i class='bx bxs-edit'></i></a>
                                         <a href="javascript:;" data-id = '{{$users->id}}' data-url="{{route('admin.user.delete')}}" class="ms-3 delete_row"><i class='bx bxs-trash'></i></a>
-
                                     </div>
                                 </td>
                             </tr>

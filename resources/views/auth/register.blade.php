@@ -3,15 +3,7 @@
 <section class="signup-screen">
     <header class="p-4 d-flex justify-content-between align-items-center text-center">
         <div class="header_logo">
-            <a href="@if(auth()->check())
-                        @if(auth()->user()->is_admin == 1)
-                            {{ url('/client/dashboard') }}
-                        @elseif(auth()->user()->is_admin == 0)
-                            {{ url('/freelancer/dashboard') }}
-                        @endif
-                    @else
-                        {{ url('/') }}
-                    @endif">
+            <a href="{{ url('/') }}">
                 <img src="{{asset('images/logo.png')}}" alt="logo" width="200">
                 {{-- <img src="{{asset('images/new-logo.svg')}}" alt="logo" width="200"> --}}
             </a>
@@ -53,14 +45,14 @@
                             </div>
                             <p class="text-start m-0">I'm a client, hiring for a project</p>
                         </div>
-                        <div class="btn_box p-3" data-text="freelancer">
-                            <div class="btn_box_inner d-flex justify-content-between">
-                                <div class="signup_btn mb-3">
-                                    <img src="{{url('images/frontend/signup_btn.png')}}" class="w-100">
-                                </div>
-                                <div class="signup_btn_input d-flex justify-content-center align-items-center">
-                                    <label for="freelancer" class="position-relative">
-                                        <input type="radio" name="type" id="freelancer" value="0">
+                            <div class="btn_box p-3" data-text="freelancer">
+                                <div class="btn_box_inner d-flex justify-content-between">
+                                    <div class="signup_btn mb-3">
+                                        <img src="{{url('images/frontend/freelancer_4299316.png')}}" height="32" width="35">
+                                    </div>
+                                    <div class="signup_btn_input d-flex justify-content-center align-items-center">
+                                        <label for="freelancer" class="position-relative">
+                                            <input type="radio" name="type" id="freelancer" value="0">
                                         <span class="d-inline-block"><i class="mid_dot"></i></span>
                                     </label>
                                 </div>

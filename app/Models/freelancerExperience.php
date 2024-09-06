@@ -25,10 +25,11 @@ class freelancerExperience extends Model
 
     public function updateOrCreateExperience($data) {
         $end_date = isset($data['end_date_check']) && $data['end_date_check'] == 'on' ? '' : $data['end_date'];
+        $user = $data['user_id'] ?? auth()->user()->id;
         return $this->updateOrCreate(
             ['id' => $data['hiddenId']],
             [
-                'user_id' => auth()->user()->id,
+                'user_id' => $user,
                 'company' => $data['company'],
                 'title' => $data['title'],
                 'description' => $data['description'],

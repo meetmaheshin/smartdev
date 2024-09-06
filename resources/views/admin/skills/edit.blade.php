@@ -52,7 +52,7 @@
 
                                     <div class="mb-3">
                                         <label for="inputProductTitle" class="form-label">Title</label>
-                                        <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" value="{{$skills->title}}">
+                                        <input type="text" class="form-control popular_title" id="title" placeholder="Enter title" name="title" value="{{$skills->title}}">
                                         @error('title')
                                         <span class="text-danger" role="alert">
                                             <strong>{{ $message }}</strong>

@@ -411,12 +411,82 @@ function formatDateToMonthYear(dateString) {
 }
 
 
-function truncateTitle(title, maxLength = 45) {
-    // Check if the title length is greater than the specified maxLength
-    if (title.length > maxLength) {
-        // Truncate the title and add '...' at the end
-        return title.substring(0, maxLength) + '...';
-    }
-    // Return the title as is if it's within the maxLength
-    return title;
-}
+// freelancer skill
+
+document.addEventListener('DOMContentLoaded', function () {
+    const selectElement = $('.skills_select');
+    const suggestedSkillsContainer = document.querySelector('.posting_accordion_inner_content');
+
+    // Add suggested skill to the select element
+    suggestedSkillsContainer.addEventListener('click', function (e) {
+        let skillElement;
+
+        // Check if the clicked element is the icon or the skill span
+        if (e.target.classList.contains('fa-plus')) {
+            skillElement = e.target.closest('.main_skills');
+        } else if (e.target.classList.contains('main_skills')) {
+            skillElement = e.target;
+        }
+
+        if (skillElement) {
+            const skillId = skillElement.getAttribute('data-id');
+            const skillText = skillElement.getAttribute('data-cy');
+
+            // Add the skill to the select element
+            const option = new Option(skillText, skillId, true, true);
+            selectElement.append(option).trigger('change');
+
+            // Remove the skill span from suggested skills
+            skillElement.remove();
+        }
+    });
+
+    // Remove skill from the select element and add it back to suggested skills
+    selectElement.on('select2:unselect', function (e) {
+        const removedSkillId = e.params.data.id;
+        const removedSkillText = e.params.data.text;
+
+        // Re-add skill to the suggested skills container
+        const skillSpan = document.createElement('span');
+        skillSpan.setAttribute('data-skill', '1');
+        skillSpan.setAttribute('class', 'posting_add_feature font_14 font_weight_500 color_grey px-3 py-2 d-inline-block skill_sub main_skills');
+        skillSpan.setAttribute('id', `skill_subcat_${removedSkillId}`);
+        skillSpan.setAttribute('data-cy', removedSkillText);
+        skillSpan.setAttribute('data-id', removedSkillId);
+        skillSpan.innerHTML = `${removedSkillText} <i class="fas fa-solid fa-plus"></i>`;
+
+        suggestedSkillsContainer.appendChild(skillSpan);
+    });
+
+    // Initialize Select2 without tags creation and filtering selected items
+    selectElement.select2({
+        tags: false,  // Disable tag creation from search input
+        width: '100%',
+        placeholder: "Enter skills here",
+        // Custom matcher to filter out selected items
+        matcher: function(params, data) {
+            // Check if the item is already selected
+            if (selectElement.val() && selectElement.val().includes(data.id)) {
+                return null; // Exclude already selected items
+            }
+
+            // Default matcher for search term
+            if ($.trim(params.term) === '' || data.text.toLowerCase().indexOf(params.term.toLowerCase()) > -1) {
+                return data;
+            }
+
+            return null;
+        }
+    });
+
+    // Handle skill selection from search (removing from suggested if found)
+    selectElement.on('select2:select', function (e) {
+        const selectedSkillId = e.params.data.id;
+        // Find the skill in the suggested section
+        const suggestedSkillElement = document.querySelector(`#skill_subcat_${selectedSkillId}`);
+        if (suggestedSkillElement) {
+            // Remove the skill from the suggested section
+            suggestedSkillElement.remove();
+        }
+    });
+});
