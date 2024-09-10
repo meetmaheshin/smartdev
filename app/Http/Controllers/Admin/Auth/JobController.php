@@ -437,7 +437,7 @@ class JobController extends Controller
 
     // users
     public function user(Request $request){
-        $data['user']=User::where('is_admin','!=','2')->orderby('id','desc')->get();
+        $data['user']=User::where('is_admin','!=','2')->where('status', '1')->orderby('id','desc')->get();
         return view('admin.user.index',$data);
     }
     
@@ -574,6 +574,11 @@ class JobController extends Controller
     public function userDelete(Request $request){
         $user = User::whereId($request->id)->first();
 
+        // they have active Jobs
+        if (Project::where('user_id', $request->id)->where('job', 'new')->exists()) {
+            return response()->json(['status' => false, 'message' => 'This user cannot be deleted because they have active Jobs.']);
+        }
+
         $hasActiveContracts = ClientHire::where(
             $user->is_admin == 0 ? 'freelancer_id' : 'client_id',
             $user->id
@@ -581,6 +586,16 @@ class JobController extends Controller
 
         if($hasActiveContracts->isNotEmpty()){
             return response()->json(['status'=> false,'message' => 'This user cannot be deleted because they have active contracts.']);
+        }
+
+        // Retrieve project IDs associated with the user
+        $projectIds = Project::where('user_id', $request->id)->where('job', 'new')->pluck('id');
+
+        // Check if any of these project IDs are present in the ClientHire table
+        $hasProjectEntries = ClientHire::whereIn('project_id', $projectIds)->exists();
+
+        if ($hasProjectEntries) {
+            return response()->json(['status' => false, 'message' => 'This user cannot be deleted because they have active Jobs.']);
         }
         
         $user = User::whereId($request->id)->update(['status'=>2]);

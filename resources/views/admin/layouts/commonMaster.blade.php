@@ -100,6 +100,11 @@
 	<script> 
 		var table = $('#example').DataTable();
 
+		// Set initial filter value based on URL parameter
+        var filterRole = '{{ request()->get("filter") }}';
+        if (filterRole) {
+            table.column(2).search(filterRole).draw();
+        }
 		// Filter the table based on the Role column
         $('#roleFilter').on('change', function() {
             var selectedRole = $(this).val();
@@ -120,13 +125,19 @@
 			var url = $(this).data('url');
 
 			swal.fire({
-				title: 'Are you sure?',
-				text: "You won't be able to delete this!",
+				title: '<div style="display: flex; justify-content: center; margin-bottom: 10px;">' +
+						'<div style="width: 80px; height: 80px; border-radius: 50%; background-color: #ffc107; display: flex; align-items: center; justify-content: center;">' +
+						'<i class="fa fa-exclamation" style="color: white; font-size: 24px;"></i>' +
+						'</div>' +
+						'</div>' +
+						'Are you sure?', // Your alert title after the icon
+				text: "Do you really want to delete this record? This process cannot be undone.",
 				type: 'warning',
 				showCancelButton: true,
 				confirmButtonColor: '#3085d6',
 				cancelButtonColor: '#d33',
 				confirmButtonText: 'Yes, delete it!',
+				cancelButtonText: 'No',
 				showLoaderOnConfirm: true,
 				}).then((result) => {
 				if (result.isConfirmed) {
@@ -169,7 +180,6 @@
 		// auto fill popular
 		$(document).ready(function () {
             $('.popular_title').on('input', function () {
-				console.log('aa');
                 const inputValue = $(this).val().toLowerCase(); // Convert input value to lowercase
                 if (inputValue.includes('popular')) {
                     $(this).val('Popular skills');

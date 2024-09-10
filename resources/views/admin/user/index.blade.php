@@ -25,8 +25,8 @@
                     <label for="roleFilter" class="me-2">Filter by Role:</label>
                     <select id="roleFilter" class="form-select" style="width: 150px;">
                         <option value="">All</option>
-                        <option value="Freelancer">Freelancer</option>
-                        <option value="Client">Client</option>
+                        <option value="Freelancer" {{ request()->get('filter') == 'Freelancer' ? 'selected' : '' }}>Freelancer</option>
+                        <option value="Client" {{ request()->get('filter') == 'Client' ? 'selected' : '' }}>Client</option>
                     </select>
                 </div>
                 <div class="table-responsive">
