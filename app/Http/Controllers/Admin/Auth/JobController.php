@@ -25,6 +25,7 @@ use App\Models\FreelancerSkill;
 use App\Models\FreelancerService;
 use App\Models\FreelancerRate;
 use App\Models\ClientHire;
+use App\Models\ProposalSetting;
 
 
 class JobController extends Controller
@@ -596,6 +597,16 @@ class JobController extends Controller
 
         if ($hasProjectEntries) {
             return response()->json(['status' => false, 'message' => 'This user cannot be deleted because they have active Jobs.']);
+        }
+        
+        // check for freelancer 
+        $Proposals = ProposalSetting::where('receiver_id', $request->id)
+                                        ->whereNull('deleted_at')
+                                        ->whereIn('status', [0, 1, 3])
+                                        ->exists();
+
+        if($Proposals) {
+            return response()->json(['status' => false, 'message' => 'This user cannot be deleted because they have active contracts.']);
         }
         
         $user = User::whereId($request->id)->update(['status'=>2]);
