@@ -2182,27 +2182,27 @@ a.remove_portfolio_attachment {
     margin: 5px 0;
 }
 
-.signup_btn_box {
+.signup_btn_box_register {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-.btn_box {
+.btn_box_register {
     flex: 1;
-    min-width: 280px; /* Minimum width to keep boxes aligned */
-    max-width: 400px; /* Maximum width for responsiveness */
+    min-width: 280px;
+    max-width: 400px;
     box-sizing: border-box;
-    border: 1px solid #ddd; /* Optional styling */
-    border-radius: 8px; /* Optional styling */
+    border: 1px solid #ddd; 
+    border-radius: 8px;
 }
 
-.btn_box_inner {
+.btn_box_inner_register {
     gap: 1rem;
 }
 
 @media (max-width: 768px) {
-    .btn_box {
+    .btn_box_register {
         max-width: 100%; /* Full width on smaller screens */
         margin: 0 auto;
     }

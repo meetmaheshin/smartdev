@@ -29,10 +29,10 @@
                 <input type="hidden" name="is_admin" value="{{ old('is_admin') }}" id="is_admin">
                 <div class="signup_content text-center">
                     <h3 class="signup_heading font_weight_600">Join as a client or Web3 Professional</h3>
-                    <div class="signup_btn_box mt-4 d-xl-flex px-4 justify-content-around">
+                    <div class="signup_btn_box signup_btn_box_register mt-4 d-xl-flex px-4 justify-content-around">
                         {{-- <input type="hidden" id="checked_on_cond" value="{{$_GET['type'] ?? ''}}"> --}}
-                        <div class="btn_box p-3 me-xl-5 mb-3 mb-xl-0" data-text="client">
-                            <div class="btn_box_inner d-flex justify-content-between">
+                        <div class="btn_box btn_box_register p-3 me-xl-5 mb-3 mb-xl-0" data-text="client">
+                            <div class="btn_box_inner btn_box_inner_register d-flex justify-content-between">
                                 <div class="signup_btn mb-3">
                                     <img src="{{url('images/frontend/signup_btn.png')}}" class="w-100">
                                 </div>
@@ -45,8 +45,8 @@
                             </div>
                             <p class="text-start m-0">I'm a client, hiring for a project</p>
                         </div>
-                            <div class="btn_box p-3" data-text="freelancer">
-                                <div class="btn_box_inner d-flex justify-content-between">
+                            <div class="btn_box btn_box_register p-3" data-text="freelancer">
+                                <div class="btn_box_inner btn_box_inner_register d-flex justify-content-between">
                                     <div class="signup_btn mb-3">
                                         <img src="{{url('images/frontend/freelancer_4299316.png')}}" height="32" width="35">
                                     </div>
