@@ -26,6 +26,7 @@ use App\Models\FreelancerService;
 use App\Models\FreelancerRate;
 use App\Models\ClientHire;
 use App\Models\ProposalSetting;
+use App\Models\Conservation;
 
 
 class JobController extends Controller
@@ -607,6 +608,14 @@ class JobController extends Controller
 
         if($Proposals) {
             return response()->json(['status' => false, 'message' => 'This user cannot be deleted because they have active contracts.']);
+        }
+
+        // if conservation exists
+        $conservations = Conservation::where('sender_id', $request->id)
+                                    ->orWhere('receiver_id', $request->id)->exists();
+
+        if($conservations){
+            return response()->json(['status'=> false,'message' => 'This user cannot be deleted because they have active contracts.']);
         }
         
         $user = User::whereId($request->id)->update(['status'=>2]);
