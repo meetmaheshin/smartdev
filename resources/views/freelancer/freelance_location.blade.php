@@ -7,7 +7,7 @@
             @csrf
             <div class="col-md-10 offset-md-1">
                 <h1>A few last details - then you can check and publish your profile.</h1>
-                <p class="mt-3 mb-5 text-muted font_14">A professional photo helps you build trust with your clients. To keep things safe and simple, they'll pay you through us - which is why we need your personal information.</p>
+                <p class="mt-3 mb-5 text-muted font_15 font_weight_600">A professional photo helps you build trust with your clients. To keep things safe and simple, they'll pay you through us - which is why we need your personal information.</p>
                 <div class="row">
                     <div class="col-md-3 text-center avtar-upload">
                         <div class="image-preview-container">
