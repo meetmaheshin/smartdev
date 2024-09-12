@@ -1801,7 +1801,7 @@ iframe#FORWARDER_ID {
 }
 .create_profile_container .input_box .search_input input{
     width: 100%;
-    border-radius: 5px !important;
+    border-radius: 10px !important;
     border: 2px solid #eee ! important;
 }
 .project_type_radio_content label input:checked ~ span i.mid_dot,

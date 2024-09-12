@@ -6,7 +6,7 @@
             @csrf
             <div class="col-md-10 offset-md-1">
                 <h1>What are the main services you offer?</h1>
-                <p class="mt-3 mb-5 text-muted font_14">Choose at least 1 service that best describes the type of work you do. This helps us match you with clients who need your unique expertise.</p>
+                <p class="mt-3 mb-5 text-muted font_15 font_weight_600">Choose at least 1 service that best describes the type of work you do. This helps us match you with clients who need your unique expertise.</p>
                 <div class="col-md-7 service_dropdown">
                     <div class="dropdown">
                         <button class="btn w-100 text-start dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -7,7 +7,7 @@
 
             <div class="col-md-10 offset-md-1">
                 <h1>Clients like to know what you know - add your education here.</h1>
-                <p class="mt-3 mb-5 text-muted font_14">You don't have to have a degree. Adding any relevant education helps make your profile more visible.</p>
+                <p class="mt-3 mb-5 text-muted font_15 font_weight_600">You don't have to have a degree. Adding any relevant education helps make your profile more visible.</p>
                 <!-- mobile Button trigger modal -->
                 <div class="d-block d-md-none">
                     <a class="exp_m_btn text-decoration-none w-100 educationModal" data-bs-toggle="modal" data-bs-target="#educationModal"><i class="fas fa-plus"></i> Add Education</a>

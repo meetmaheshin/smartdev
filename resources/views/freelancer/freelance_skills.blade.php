@@ -6,7 +6,7 @@
             @csrf
             <div class="col-md-10 offset-md-1">
                 <h1>Nearly there! What work are you here to do?</h1>
-                <p class="mt-3 mb-5 text-muted font_14">Your skills show clients what you can offer, and help us choose which jobs to recommend to you. Add or remove the ones we've suggested, or start typing to pick more. It's up to you.</p>
+                <p class="mt-3 mb-5 text-muted font_15 font_weight_600">Your skills show clients what you can offer, and help us choose which jobs to recommend to you. Add or remove the ones we've suggested, or start typing to pick more. It's up to you.</p>
                 <div>
                     <h6 class="font_weight_600">Your skills</h6>
                     <div class="skills_add position-relative">

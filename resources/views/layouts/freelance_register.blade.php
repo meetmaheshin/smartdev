@@ -137,6 +137,33 @@
             jQuery('.skills_select').select2({
                 placeholder: "Select a skill",
             });
+
+
+            // cancel button functionality
+            $(document).ready(function() {
+                const titleInput = $('.has-clear-btn');
+                const clearBtn = $('#clear-btn');
+
+                // Show clear button when input has value
+                titleInput.on('input', function() {
+                    if ($(this).val().length > 0) {
+                        clearBtn.show();
+                    } else {
+                        clearBtn.hide();
+                    }
+                });
+
+                // Clear input when clear button is clicked
+                clearBtn.on('click', function() {
+                    titleInput.val('').focus();
+                    $(this).hide();
+                });
+
+                // Initial check if input has value on page load
+                if (titleInput.val().length > 0) {
+                    clearBtn.show();
+                }
+            });
         // });
     </script>
     @yield('js')

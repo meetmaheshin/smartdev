@@ -11,7 +11,7 @@
                 <p class="text-muted font_weight_600 font_16">Select what network and wallet your want to connect below.</p>
                 <form action="{{route('store_wallet')}}" method="post" class="wallet_decision">
                     @csrf
-                    <p class="font_weight_600">Choose Network</p>
+                    <p class="font_weight_600 font_18">Choose Network</p>
                     <div class="mb-4 d-flex">
                         <div class="form-check form-check-inline position-relative radio_container d-flex justify-content-center {{ @$walletData->network == 'etherium' ? 'active' : '' }} ">
                             <input class="form-check-input radio-button" type="radio" name="network" id="flexRadioEth" value="etherium" {{ isset($walletData->network) == 'etherium' ? 'checked' : '' }}>

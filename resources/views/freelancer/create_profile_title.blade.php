@@ -4,13 +4,17 @@
     <div class="row">
         <div class="col-md-10 offset-md-1">
             <h1 class="font_weight_600">Got it. Now, add a title to tell the world what you do.</h1>
-            <p class="mt-3 mb-5 color_black font_15 font_weight_600">It's the very first thing clients see, so make it count. Stand out by describing your expertise in your own words.</p>
+            <p class="mt-3 mb-5 font_15 text-muted font_weight_600">It's the very first thing clients see, so make it count. Stand out by describing your expertise in your own words.</p>
             <form action="{{route('storeTitle')}}" method="POST">
                 @csrf
-                <div class="col-md-9 input_box">
+                <div class="col-md-9 input_box position-relative">
                     <div class="input-group search_input">
-                        <label class="color_black font_16 font_weight_600 mb-2">Your professional role</label>
-                        <input class="form-control border rounded-0" type="text" id="title" name="title" value="{{ $profile ? $profile->title : old('title') }}" placeholder="Example: Full Stack Developer | Web & Mobile">
+                        <label class="font_18 font_weight_600 mb-2" style="color: #464343;">Your professional role</label>
+                        <input class="form-control border rounded-0 has-clear-btn" type="text" id="title" name="title" value="{{ $profile ? $profile->title : old('title') }}" placeholder="Example: Full Stack Developer | Web & Mobile">
+                        <span id="clear-btn" class="clear-input" style="display: none;">
+                            {{-- <i class="fas fa-times-circle"></i> --}}
+                            <i class="far fa-times-circle"></i>
+                        </span>
                     </div>
                     @error('title')
                     <span class="text-danger" role="alert">

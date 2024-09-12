@@ -7,7 +7,7 @@
             <input type="hidden" id="hiddenId" value="" name="hiddenId" />
             <div class="col-md-10 offset-md-1">
                 <h1>If you have relevant work experience, add it here.</h1>
-                <p class="mt-3 mb-5 text-muted font_14">Freelancers who add their experience are twice as likely to win work. But if you're just starting out, you can still create a great profile. Just head on to the next page.</p>
+                <p class="mt-3 mb-5 text-muted font_15 font_weight_600">Freelancers who add their experience are twice as likely to win work. But if you're just starting out, you can still create a great profile. Just head on to the next page.</p>
                 <!-- mobile Button trigger modal -->
                 <div class="d-block d-md-none experienceModal" data-bs-toggle="modal" data-bs-target="#educationModal" id="QuickInfo">
                     <a class="exp_m_btn text-decoration-none w-100"><i class="fas fa-plus"></i> Add Experince</a>

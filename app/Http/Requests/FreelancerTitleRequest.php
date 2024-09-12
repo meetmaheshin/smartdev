@@ -26,7 +26,7 @@ class FreelancerTitleRequest extends FormRequest
         $rules = [];
       
         if($this->has('title')){
-            $rules['title'] = 'required|string';
+            $rules['title'] = 'required|string|min:4';
         }
         if($this->has('hourly_rate')){
             $rules['hourly_rate'] = 'required|numeric|min:5';
