@@ -28,6 +28,8 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/toastr.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datepicker.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/select2.min.css')}}">
+	<!-- DataTables Search Highlight CSS -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/2.1.6/features/searchHighlight/dataTables.searchHighlight.css">
 
 	<title>SmartDev3</title>
 </head>
@@ -37,12 +39,12 @@
 		<!--sidebar wrapper -->
 		<div class="sidebar-wrapper" data-simplebar="true">
 			<div class="sidebar-header">
-				<!-- <div>
-					<img src="{{url('images/logo.png')}}" class="logo-icon" alt="logo icon">
-				</div> -->
-				<div>
+				<a class="navbar-brand" href="{{ url('/admin/dashboard') }}">
+					<img src="{{url('images/logo.png')}}" alt="SmartDev3" width="180">
+				</a>
+				{{-- <div>
 					<h4 class="logo-text">SmartDev3</h4>
-				</div>
+				</div> --}}
 				
 			</div>
 			<!--navigation-->
@@ -97,8 +99,15 @@
 	@yield('js')
 	<script type="text/javascript" src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/select2.min.js')}}"></script>
+	<!-- jQuery Highlight Plugin -->
+	<script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+	<!-- DataTables Search Highlight JS -->
+	<script src="https://cdn.datatables.net/plug-ins/2.1.6/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+
 	<script> 
-		var table = $('#example').DataTable();
+		var table = $('#example').DataTable({
+			searchHighlight: true // Enable search term highlighting
+		});
 
 		// Set initial filter value based on URL parameter
         var filterRole = '{{ request()->get("filter") }}';
@@ -120,17 +129,17 @@
 		@endif
 
 
-		$(document).on('click', '.delete_row', function(e){
+		$(document).on('click', '.delete_row', function(e) {
 			var id = $(this).data('id');
 			var url = $(this).data('url');
 
 			swal.fire({
 				title: '<div style="display: flex; justify-content: center; margin-bottom: 10px;">' +
-						'<div style="width: 80px; height: 80px; border-radius: 50%; background-color: #ffc107; display: flex; align-items: center; justify-content: center;">' +
-						'<i class="fa fa-exclamation" style="color: white; font-size: 24px;"></i>' +
-						'</div>' +
-						'</div>' +
-						'Are you sure?', // Your alert title after the icon
+					'<div style="width: 80px; height: 80px; border-radius: 50%; background-color: #ffc107; display: flex; align-items: center; justify-content: center;">' +
+					'<i class="fa fa-exclamation" style="color: white; font-size: 24px;"></i>' +
+					'</div>' +
+					'</div>' +
+					'Are you sure?', // Your alert title after the icon
 				text: "Do you really want to delete this record? This process cannot be undone.",
 				type: 'warning',
 				showCancelButton: true,
@@ -139,7 +148,7 @@
 				confirmButtonText: 'Yes, delete it!',
 				cancelButtonText: 'No',
 				showLoaderOnConfirm: true,
-				}).then((result) => {
+			}).then((result) => {
 				if (result.isConfirmed) {
 					$.ajax({
 						url: url,
@@ -149,25 +158,40 @@
 							id: id,
 						},
 						dataType: "json",
-						success: function (response) {
-							if(response.status == true){
+						success: function(response) {
+							console.log(id);
+							if (response.status == true) {
 								swal.fire("success!", response.message, "success");
-								setTimeout(function () {
+								setTimeout(function() {
 									location.reload();
 								}, 500);
-							}else{
+							} else if (response.showDeleteJobBtn == true) {
+								swal.fire({
+									title: "Error",
+									text: response.message,
+									icon: "error",
+									showCancelButton: true,
+									confirmButtonText: 'Delete Jobs',
+									cancelButtonText: 'Close',
+									confirmButtonColor: '#3085d6',
+									cancelButtonColor: '#d33'
+								}).then((errorResult) => {
+									if (errorResult.isConfirmed) {
+										// Redirect to the admin jobs route
+										window.location.href = "{{ route('admin.jobs') }}?user_id=" + id;
+									}
+								});
+							} else {
 								swal.fire("error", response.message, "error");
-						
 							}
-
 						},
-						error: function (xhr, ajaxOptions, thrownError) {
+						error: function(xhr, ajaxOptions, thrownError) {
 							swal.fire(
 								"Error deleting!!",
 								"Please try again",
 								"error"
 							);
-						},
+						}
 					});
 				} else if (result.isDenied) {
 					swal.fire("Changes are not saved", "", "info");

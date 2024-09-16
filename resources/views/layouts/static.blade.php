@@ -36,6 +36,8 @@
                                                 {{ url('/client/dashboard') }}
                                             @elseif(auth()->user()->is_admin == 0)
                                                 {{ url('/freelancer/dashboard') }}
+                                            @elseif(auth()->user()->is_admin == 2)
+                                                {{ url('/admin/dashboard') }}
                                             @endif
                                         @else
                                             {{ url('/') }}

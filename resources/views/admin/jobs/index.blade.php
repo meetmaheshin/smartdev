@@ -35,16 +35,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($project as $key=> $projects)
+                            @foreach($projects as $key=> $project)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$projects->user->fullname}}</td>
-                                <td>{{$projects->title}}</td>
-                                <td>{{$projects->categories->title}}</td>
-                                <td>{{$projects->created_at}}</td>
+                                <td>{{$project->user->fullname}}</td>
+                                <td>{{$project->title}}</td>
+                                <td>{{$project->categories->title}}</td>
+                                <td>{{$project->created_at}}</td>
                                 <td>
                                     <div class="d-flex order-actions">
-                                        <a href="{{route('admin.jobs.edit',['id'=>$projects->id])}}" class=""><i class='bx bxs-edit'></i></a>
+                                        <a href="{{route('admin.jobs.edit',['id'=>$project->id])}}" class=""><i class='bx bxs-edit'></i></a>
+                                        <a href="javascript:;" data-url="{{route('admin.jobs.delete')}}" data-id = '{{$project->id}}' class="ms-3 delete_row"><i class='bx bxs-trash'></i></a>
                                     </div>
                                 </td>
                             </tr>
