@@ -45,6 +45,7 @@ Route::middleware(['auth','prevent-back-history','accessControl'])->group(functi
     Route::get('/admin/jobs/edit/{id}',  [AdminJobController::class, 'edit'] )->name('admin.jobs.edit');
     Route::post('admin/getSpeciality', [AdminJobController::class, 'getSpeciality'])->name('admin.jobs.getSpeciality');
     Route::post('admin/job/update/{id}', [AdminJobController::class, 'project_review'])->name('admin.jobs.review');
+    Route::post('admin/job/delete', [AdminJobController::class, 'jobDelete'])->name('admin.jobs.delete');
 
     // Catgeory 
     Route::get('/admin/category',  [AdminJobController::class, 'category'] )->name('admin.category');

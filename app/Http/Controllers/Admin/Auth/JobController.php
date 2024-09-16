@@ -47,10 +47,10 @@ class JobController extends Controller
         // Check if the user ID is empty
         if (empty($userId)) {
             // Existing flow: Fetch all projects where job is 'new'
-            $data['project'] = Project::where('job', 'new')->get();
+            $data['projects'] = Project::where('job', 'new')->get();
         } else {
             // If user ID is present, filter projects based on the user ID
-            $data['project'] = Project::where('job', 'new')
+            $data['projects'] = Project::where('job', 'new')
                                     ->where('user_id', $userId)
                                     ->get();
         }
@@ -162,6 +162,27 @@ class JobController extends Controller
             'level' => $request->level,
         ]);
         return redirect()->route('admin.jobs')->with('success', 'Post Successfully Updated ');
+    }
+
+
+    public function jobDelete(Request $request){
+
+        $hasActiveContracts = ClientHire::where('project_id',$request->id)->exists();
+        if($hasActiveContracts){
+            return response()->json(['status'=> false,'message' => 'This Job cannot be deleted because they have active contracts.']);
+        }
+
+        // check for project exist in proposal_setting
+        $Proposals = ProposalSetting::where('project_id', $request->id)
+                                        ->whereNull('deleted_at')
+                                        ->whereIn('status', [0, 1, 3])
+                                        ->exists();
+        if($Proposals) {
+            return response()->json(['status' => false, 'message' => 'This Job cannot be deleted because they have active contracts.']);
+        }
+
+        $statusChange = Project::whereId($request->id)->update(['job' => 'delete']);
+        return response()->json(['status'=> true, 'message' => 'Job deleted successfully']);
     }
 
     public function category(Request $request){
@@ -578,7 +599,7 @@ class JobController extends Controller
 
         // they have active Jobs
         if (Project::where('user_id', $request->id)->where('job', 'new')->exists()) {
-            return response()->json(['status' => false, 'message' => 'This user cannot be deleted because they have active Jobs.']);
+            return response()->json(['status' => false, 'message' => 'This user cannot be deleted because they have active Jobs.', 'showDeleteJobBtn' => true]);
         }
 
         $hasActiveContracts = ClientHire::where(
@@ -597,7 +618,7 @@ class JobController extends Controller
         $hasProjectEntries = ClientHire::whereIn('project_id', $projectIds)->exists();
 
         if ($hasProjectEntries) {
-            return response()->json(['status' => false, 'message' => 'This user cannot be deleted because they have active Jobs.']);
+            return response()->json(['status' => false, 'message' => 'This user cannot be deleted because they have active Jobs.', 'showDeleteJobBtn' => true]);
         }
         
         // check for freelancer 
@@ -612,10 +633,9 @@ class JobController extends Controller
 
         // if conservation exists
         $conservations = Conservation::where('sender_id', $request->id)
-                                    ->orWhere('receiver_id', $request->id)->exists();
-
-        if($conservations){
-            return response()->json(['status'=> false,'message' => 'This user cannot be deleted because they have active contracts.']);
+                             ->orWhere('receiver_id', $request->id);
+        if ($conservations->exists()) {
+            $conservations->delete(); // deletion conservation
         }
         
         $user = User::whereId($request->id)->update(['status'=>2]);
