@@ -344,3 +344,14 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
 });
 
 Route::get('/freelance-jobs/apply/{slug}', [ShareableLinkController::class, 'showShareableLink'])->name('project.shareable.link');
+
+
+// new static pages
+// Route::get('/new-static-page', function () {
+//     return view('layouts.new_static');
+// })->name('new.static.page');
+
+// cryptocurrency
+Route::get('/cryptocurrency-development', function () {
+    return view('static.cryptocurrency-development');
+})->name('cryptocurrency-development.blade.page');
