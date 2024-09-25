@@ -41,7 +41,9 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <label class="form-label font_weight_600" for="wallet_address">Wallet Address<span class="asterisk">*</span></label>
+                        <label class="form-label font_weight_600" for="wallet_address">Wallet Address<span class="asterisk">*</span>
+                            <button type="button" class="bg-transparent border-0 ms-1 color_green font_14" id="Wallet_Address" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Please enter a valid wallet address. Ensure it matches the correct format for the specific cryptocurrency. Common formats include a string of alphanumeric characters, typically starting with specific prefixes depending on the currency (e.g., '0x' for Ethereum, '1' or '3' for Bitcoin). Double-check for any typos or extra spaces."><i class="fas fa-info-circle font_14"></i></button></label>
+                        </label>
                         <input class="form-control" id="wallet_address" type="text" placeholder="Wallet Address" name="wallet_address" value="{{ old('wallet_address',@$walletData->wallet_address) }}" />
                         @if ($errors->has('wallet_address'))
                         <span class="text-danger">{{ $errors->first('wallet_address') }}</span>
@@ -52,9 +54,16 @@
                             Note : This will be your primary wallet address, you can change it later.
                         </p>
                     </div>
-                    <div class="d-flex mt-5 justify-content-between">
+                    {{-- <div class="d-flex mt-5 justify-content-between">
                         <a class="back_btn text-decoration-none" href="{{route('create_rate')}}">Back</a>
                         <input type="submit" class="up_green_btn text-decoration-none" value="Lastly : Your photo and location">
+                    </div> --}}
+                    <div class="d-flex mt-5 flex-column flex-md-row justify-content-between align-items-center">
+                        <a class="back_btn text-decoration-none mb-3 mb-md-0" href="{{route('create_rate')}}">Back</a>
+                        <div class="col-5 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                            <a class="text-decoration-none mb-3 mb-md-0" href="{{route('create_location')}}" style="color: #108a00">Skip For Now</a>
+                            <input type="submit" class="up_green_btn text-decoration-none w-md-auto" value="Lastly : Your photo and location">
+                        </div>
                     </div>
                 </form>
             </div>

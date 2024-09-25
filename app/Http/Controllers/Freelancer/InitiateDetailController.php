@@ -262,6 +262,19 @@ class InitiateDetailController extends Controller
         return redirect()->route('dashboard')->with('success', 'Welcome to Dashboard');
     }
 
+    public function checkWallet(Request $request)
+    {
+        $userId = $request->user_id;
+        
+        // Check if the user has an entry in the wallets table
+        $hasWallet = Wallet::where('user_id', $userId)->exists();
+        
+        if($hasWallet == false){
+            session()->flash('error', 'You need to set up a wallet to accept proposal.');
+        }
+        return response()->json(['has_wallet' => $hasWallet]);
+    }
+
     public function primaryWallet() {
         $data['title'] = 'Wallet - '.config('app.name');
         $data['walletData'] = Wallet::where(['user_id' => auth()->user()->id, 'primary' => '1'])->first();

@@ -68,7 +68,7 @@
                                         </span>
                                         @enderror
                                     </div>
-                                    <div class="d-grid">
+                                    <div class="col-md-2">
                                         <button type="submit" class="btn btn-primary">Update</button>
                                     </div>
                                 </div>

@@ -26,6 +26,7 @@
 @endsection
 @section('js')
 <script type="text/javascript" src="{{asset('js/freelancer_dashboard.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/tinymce/tinymce.min.js')}}"></script>
 <script>
     // word count in freelancer bio
     $(document).ready(function () {
@@ -49,6 +50,19 @@
         $('#user_profile_bio').on('input', function () {
             updateCharCount();
         });
+    });
+
+    // tiny text editor code
+    tinymce.init({
+        selector: 'textarea#user_profile_bio',
+        // width: 1000,
+        height: 300,
+        plugins: [
+            'advlist', 'link', 'lists', 'code'
+        ],
+        toolbar: 'undo redo | bold italic underline | bullist numlist | link | code',
+        menubar: false,
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
     });
 </script>
 @endsection

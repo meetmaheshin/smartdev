@@ -3,6 +3,19 @@
 <div class="freelancer">
     <div class="container">
         <div class="row">
+            @if(session('error'))
+                <div class="alert alert-danger alert-dismissible fade show">
+                    {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="col-12 col-lg-9 order-sm-2 order-lg-1 order-2 mb-5">
                 <div class="announcements mb-30">
                     <h3 class="mb-5p">{{DateChange(date('Y-m-d'))}}</h3>

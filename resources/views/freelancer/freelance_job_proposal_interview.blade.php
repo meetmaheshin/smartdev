@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <form method="post" id="proposal_submit" action="{{route('interview.proposal.submit')}}">
+                    <form method="post" id="proposal_submit" action="{{route('interview.proposal.submit')}}" onsubmit="return checkWalletBeforeSubmit(event);">
                         @csrf
                         <input type="hidden" name="project_id" id="project_id" value="" />
                         <input type="hidden" name="receiver_id" id="receiver_id" value="" />
@@ -263,4 +263,38 @@
 @endsection
 @section('js')
 <script type="text/javascript" src="{{asset('js/freelancer_dashboard.js')}}"></script>
+
+<script>
+    let formSubmitting = false;  // Flag to check if the form is already submitting
+
+    function checkWalletBeforeSubmit(event) {
+        event.preventDefault();  // Prevent default form submission
+
+        if (formSubmitting) return;  // Stop if the form is already being submitted
+
+        $.ajax({
+            url: "{{ route('wallet.check') }}",  // Your route for wallet checking
+            type: "POST",
+            data: {
+                user_id: {{ auth()->id() }},
+                _token: "{{ csrf_token() }}"
+            },
+            success: function(response) {
+                if (response.has_wallet) {
+                    // User has a wallet, set the flag and submit the form
+                    formSubmitting = true;
+                    $('#proposal_submit')[0].submit();  // Use the DOM submit method
+                } else {
+                    // No wallet, redirect to settings
+                    window.location.href = "{{ route('setting.wallet') }}";
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error checking wallet:', error);
+                // Optionally, show an error message here
+            }
+        });
+    }
+</script>
+
 @endsection

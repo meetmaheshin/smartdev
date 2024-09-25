@@ -274,6 +274,7 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
             Route::post('/store_rate', [InitiateDetailController::class, 'storeRate'])->name('store_rate');
             Route::post('/store_location', [InitiateDetailController::class, 'storeLocation'])->name('store_location');
 
+            Route::post('/wallet/check', [InitiateDetailController::class, 'checkWallet'])->name('wallet.check');
             Route::get('/wallet-address', [InitiateDetailController::class, 'primaryWallet'])->name('add_wallet');
             Route::post('/store_wallet_address', [InitiateDetailController::class, 'primaryStoreWallet'])->name('store_wallet');
         });

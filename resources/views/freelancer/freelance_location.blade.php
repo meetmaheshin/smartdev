@@ -3,7 +3,7 @@
 <div class="container mt-5">
     <div class="row">
         <input type="hidden" id="_token" value="{{ csrf_token() }}">
-        <form action="{{route('store_location')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('store_location')}}" method="post" enctype="multipart/form-data" onsubmit="return LocationValidateForm()">
             @csrf
             <div class="col-md-10 offset-md-1">
                 <h1>A few last details - then you can check and publish your profile.</h1>
@@ -21,6 +21,7 @@
                             <label for="file-upload" class="font_14 font_weight_500"><i class="fas fa-plus me-1"></i>Upload Image</label>
                             <input type="file" name="filename" id="file-upload" accept="image/*" onchange="previewImage(event);" />
                             <br>
+                            <div id="filename-error" style="color: red"></div> <!-- JS validation error -->
                             @if($errors->has('filename'))
                             <span class="error" style="color: red">{{ $errors->first('filename') }}</span>
                             @endif
@@ -38,6 +39,7 @@
                                         <option value="{{$coun->id}}" {{ ( $coun->id == (old('country') ??$userDetails->country_id)) ? 'selected' : '' }}>{{$coun->name}}</option>
                                         @endforeach
                                     </select>
+                                    <div id="country-error" style="color: red"></div> <!-- JS validation error -->
                                     @if($errors->has('country'))
                                     <span class="error" style="color: red">{{ $errors->first('country') }}</span>
                                     @endif
@@ -52,7 +54,7 @@
 
                                     <select class="form-select" id="country_states" aria-label="State *" name="country_states" data-oldid="{{ Request::old()?Request::old('country_states'):'' }}">
                                     </select>
-
+                                    <div id="state-error" style="color: red"></div> <!-- JS validation error -->
                                     @if($errors->has('country_states'))
                                     <span class="error" style="color: red">{{ $errors->first('country_states') }}</span>
                                     @endif
@@ -67,6 +69,7 @@
                                     <select class="form-select" id="country_state_city" aria-label="City *" name="country_state_city" data-oldid="{{ Request::old()?Request::old('country_state_city'):'' }}">
 
                                     </select>
+                                    <div id="city-error" style="color: red"></div> <!-- JS validation error -->
                                     @if($errors->has('country_state_city'))
                                     <span class="error" style="color: red">{{ $errors->first('country_state_city') }}</span>
                                     @endif
@@ -85,6 +88,7 @@
                                     <label class="form-label" for="streetAdressesWontShowOnProfile">Street Address <span class="asterisk">*</span></label>
                                     <input class="form-control" id="streetAdressesWontShowOnProfile" type="text" name="street_address" value="{{old('street_address',$userDetails->street_adresses)}}" />
                                 </div>
+                                <div id="street-error" style="color: red"></div> <!-- JS validation error -->
                                 @if($errors->has('street_address'))
                                 <span class="error" style="color: red">{{ $errors->first('street_address') }}</span>
                                 @endif
@@ -99,6 +103,7 @@
                                         <input class="border-0 w-100" id="fornumber" type="number" name="phone" value="{{old('phone',$userDetails->phone_no)}}" />
                                     </div>
                                 </div>
+                                <div id="phone-error" style="color: red"></div> <!-- JS validation error -->
                                 @if($errors->has('phone'))
                                 <span class="error" style="color: red">{{ $errors->first('phone') }}</span>
                                 @endif
