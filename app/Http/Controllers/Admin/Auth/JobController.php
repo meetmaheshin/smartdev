@@ -231,7 +231,19 @@ class JobController extends Controller
     }
 
     public function speciality(Request $request){
-        $data['speciality']=Specialty::where('type',1)->orderby('id','desc')->get();
+        // $data['speciality']=Specialty::where('type',1)->orderby('id','desc')->get();
+        $rankedSpecialties = Specialty::where('type', 1)
+                            ->whereNotNull('rank')
+                            ->orderBy('rank', 'asc')
+                            ->orderBy('id', 'desc')
+                            ->get();
+
+        $unrankedSpecialties = Specialty::where('type', 1)
+                            ->whereNull('rank')
+                            ->orderBy('id', 'desc')
+                            ->get();
+        
+        $data['speciality'] = $rankedSpecialties->merge($unrankedSpecialties);
         return view('admin.speciality.index',$data);
     }
     

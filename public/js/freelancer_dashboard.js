@@ -490,3 +490,75 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+// Location Form validation function
+function LocationValidateForm() {
+    let isValid = true;
+
+    // Get form elements
+    const country = document.getElementById("country");
+    const state = document.getElementById("country_states");
+    const city = document.getElementById("country_state_city");
+    const street = document.getElementById("streetAdressesWontShowOnProfile");
+    const phone = document.getElementById("fornumber");
+    const filename = document.getElementById("file-upload");
+
+    // Clear previous errors
+    clearErrors();
+
+    // Country validation
+    if (country.value === "") {
+        document.getElementById("country-error").innerText = "Country is required.";
+        isValid = false;
+    }
+
+    // State validation
+    if (state.value === "") {
+        document.getElementById("state-error").innerText = "State is required.";
+        isValid = false;
+    }
+
+    // City validation
+    if (city.value === "") {
+        document.getElementById("city-error").innerText = "City is required.";
+        isValid = false;
+    }
+
+    // Street Address validation
+    if (street.value.trim() === "") {
+        document.getElementById("street-error").innerText = "Street address is required.";
+        isValid = false;
+    }
+
+    // Phone validation
+    const phonePattern = /^\d{10}$/;
+    if (!phonePattern.test(phone.value)) {
+        document.getElementById("phone-error").innerText = "Phone must be 10 digits.";
+        isValid = false;
+    }
+
+    // File validation
+    if (filename.files.length > 0) {
+        const file = filename.files[0];
+        const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+        if (!allowedExtensions.exec(file.name)) {
+            document.getElementById("filename-error").innerText = "Only .jpg, .jpeg, .png files are allowed.";
+            isValid = false;
+        } else if (file.size > 5000000) { // 5MB file size limit
+            document.getElementById("filename-error").innerText = "File size must be less than 5MB.";
+            isValid = false;
+        }
+    }
+    return isValid;
+}
+
+// Clear all error messages
+function clearErrors() {
+    document.getElementById("country-error").innerText = "";
+    document.getElementById("state-error").innerText = "";
+    document.getElementById("city-error").innerText = "";
+    document.getElementById("street-error").innerText = "";
+    document.getElementById("phone-error").innerText = "";
+    document.getElementById("filename-error").innerText = "";
+}
