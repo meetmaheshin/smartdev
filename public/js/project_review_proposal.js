@@ -200,14 +200,13 @@ $(".invite_to_job").click(function (e) {
     var userId = $(this).attr("data-user_id");
     var url = $(this).attr("data-url");
     var projectId = $(this).attr("data-project_id");
+    $("#user_skill").html('');
     $.ajax({
         url: url,
         method: "GET",
         data: { userId: userId, url: url, projectId: projectId },
         dataType: "json",
         success(response) {
-            console.log(response.data);
-            console.log(response.project);
             if (response.status == "true") {
                 var options = new Array();
                 $("#user_id").val(response.data.id);

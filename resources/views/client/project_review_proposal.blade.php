@@ -322,7 +322,7 @@
 
                                             @forelse ($inviteFreelancer as $invite)
                                             @if($invite->new_conv_status == null)
-                                            <div class="proposal_item px-4 d-flex py-4 " data-status="{{ $invite->status }}" data-id="{{ $invite->id }}">
+                                            <div class="proposal_item px-4 d-flex py-4 flex-column flex-md-row" data-status="{{ $invite->status }}" data-id="{{ $invite->id }}">
                                                 <div class="me-3 d-none d-md-block">
                                                     @if ($invite->profile_photo_path)
                                                     <img class="rounded-circle" src="{{ asset('/storage/images/client_profile/'.$invite->profile_photo_path) }}" alt="user-image">
@@ -457,7 +457,7 @@
                                                             <p class="font_14 color_black m-0">Has <span class="font_weight_500">{{ $invite->freelancerSkills->count() ?? '' }} relevant
                                                                     skills</span> to your job </p>
                                                         </div>
-                                                        <div class="proposal_user_badgets d-flex font_12 pt-3">
+                                                        <div class="proposal_user_badgets d-flex flex-wrap font_12 pt-3">
                                                             @foreach ($invite->freelancerSkills as $skills)
                                                             <span>{{ $skills->skill->skills_sub ?? ''}}</span>
                                                             @endforeach
