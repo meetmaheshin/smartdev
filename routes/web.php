@@ -356,3 +356,7 @@ Route::get('/freelance-jobs/apply/{slug}', [ShareableLinkController::class, 'sho
 Route::get('/cryptocurrency-development', function () {
     return view('static.cryptocurrency-development');
 })->name('cryptocurrency-development.blade.page');
+
+Route::get('/token-development', function () {
+    return view('static.token-development');
+})->name('token-development.blade.page');
