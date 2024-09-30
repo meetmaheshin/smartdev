@@ -21,6 +21,8 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/sweetalert2.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/toastr.css')}}">
 	<link href="{{asset('css/notify.css')}}" rel="stylesheet">
+	
+	  
 	@yield('before_styles')
 
 </head>
