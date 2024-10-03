@@ -286,8 +286,8 @@
                                 <div class="col-md-3">
                                     <h6>Crypto/Token</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li class=""><a href="#" class="font_11">Cryptocurrency Development</a></li>
-                                        <li><a href="#" class="font_11">Token Development</a></li>
+                                        <li class=""><a href="{{ url('cryptocurrency-development') }}" class="font_11">Cryptocurrency Development</a></li>
+                                        <li><a href="{{ url('token-development') }}" class="font_11">Token Development</a></li>
                                         <li><a href="#" class="font_11">Ethereum Token Development</a></li>
                                         <li><a href="#" class="font_11">Torn Token Development</a></li>
                                         <li><a href="#" class="font_11">Rebase Token Development</a></li>

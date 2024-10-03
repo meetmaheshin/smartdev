@@ -3,10 +3,10 @@
     <div class="row">
      <div class="col-md-12 section-header text-center">
       <h3 class="section-title underline common_h2">
-       Utilize Our Premium Crypto Software Development Approach
+       {{ $title }}
       </h3>
       <p class="section-subtitle">
-       Here, our team has perfectly outlined and tested various models to conduct a successful crypto software development service.
+       {{ $desc }}
       </p>
      </div>
     </div>
@@ -21,10 +21,10 @@
           </span>
          </div>
          <h4 class="title">
-          Ideation &amp; Whitepaper Creation
+          {{ $card_title_1 }}
          </h4>
          <p class="description">
-          We brainstorm with our blockchain experts to determine the best achievable vision to present in the whitepaper.
+          {{ $card_desc_1 }}
          </p>
         </div>
        </div>
@@ -35,11 +35,11 @@
            2
           </span>
          </div>
-         <h4 class="title">
-          ICO Marketing &amp; Dashboard Setup
+         <h4 class="title" style="width: 323px;">
+            {{ $card_title_2 }}
          </h4>
-         <p class="description">
-          Ramping up community support through Telegram, Reddit, Steemit, Twitter and Facebook. Investor dashboard setup.
+         <p class="description" style="width: 363px;">
+            {{ $card_desc_2 }}
          </p>
         </div>
        </div>
@@ -52,10 +52,10 @@
           </span>
          </div>
          <h4 class="title">
-          Wallet Setup &amp; Coin Drop
+            {{ $card_title_4 }}
          </h4>
          <p class="description">
-          Drop the allotted, bought amount of coins to your investors’ whitelabeled web and mobile wallets.
+            {{ $card_desc_4 }}
          </p>
         </div>
        </div>
@@ -67,10 +67,10 @@
           </span>
          </div>
          <h4 class="title">
-          Initial Coin Offering Open To All
+            {{ $card_title_3 }}
          </h4>
          <p class="description">
-          Open up the Pre-ICO and ICO in timed countdown intervals so that they commit investment amount that you determine and are allowed to buy your coin as you determine the price.
+            {{ $card_desc_3 }}
          </p>
         </div>
        </div>
@@ -79,14 +79,14 @@
      </div>
     </div>
     <div align="center" class="contentall" style="padding-top: 0;">
-     <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" rel="nofollow" style="border-radius: 30px !important;" target="_blank">
+     <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="#" rel="nofollow" style="border-radius: 30px !important;" target="_blank">
       <span>
-       Schedule A Meeting
+       {{ $cta }}
       </span>
      </a>
-     <a href="#newsletter-form-sec" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
+     {{-- <a href="#newsletter-form-sec" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
       Connect With Our Experts
-     </a>
+     </a> --}}
     </div>
    </div>
   </section>

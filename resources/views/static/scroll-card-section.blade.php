@@ -5,14 +5,14 @@
       <div itemscope="" itemtype="http://schema.org/CreativeWork">
        <div class="section-title text-left">
         <h3 class="text-white" itemprop="name">
-         Prolific Cryptocurrency Development Solutions Our Team Crafts
+         {{ $title }}
         </h3>
         <hr/>
         <p class="para text-white" itemprop="text">
-         As an esteemed provider of powerful cryptocurrency development solutions, we provide a plethora of crypto development services built by a seasoned team of developers. Our solutions are empowered by carefully written programs that activate novel features.
+         {{ $desc_1 }}
          <br/>
          <br/>
-         We focus on relying on the latest technological norms to create enterprise-grade solutions that cater to the wider market. Our specialized set of services provides you with functional business solutions.
+         {{ $desc_2 }}
         </p>
        </div>
       </div>
@@ -23,33 +23,33 @@
         <i aria-hidden="true" class="fa fa-check">
         </i>
         <strong class="dev">
-         Asset Tokenization
+         {{ $card_title_1 }}
         </strong>
-        Our crypto development team offers effective asset tokenization and management services that you can utilize to tokenize your valuable assets with high security, utility, and scalability.
+        {{ $card_desc_1 }}
        </p>
        <p>
         <i aria-hidden="true" class="fa fa-check">
         </i>
         <strong class="dev">
-         Sidechain Development
+         {{ $card_title_2 }}
         </strong>
-        We create sidechains upon established networks for crypto businesses to power projects and process coin transactions at increased speeds while ensuring top-notch safety and lower gas fees.
+        {{ $card_desc_2 }}
        </p>
        <p>
         <i aria-hidden="true" class="fa fa-check">
         </i>
         <strong class="dev">
-         Micropayment Solutions
+         {{ $card_title_3 }}
         </strong>
-        Micropayment solutions we build for cryptocurrency projects facilitate seamless processes for everyday crypto transactions that play a significant role in making the world crypto-friendly.
+        {{ $card_desc_3 }}
        </p>
        <p>
         <i aria-hidden="true" class="fa fa-check">
         </i>
         <strong class="dev">
-         Advanced Algorithms
+         {{ $card_title_4 }}
         </strong>
-        We tap into sophisticated algorithms to develop cryptocurrency coins that fill them with superlative features and safety, allowing them to reach the global crypto enthusiast community.
+        {{ $card_desc_4 }}
        </p>
       </div>
      </div>

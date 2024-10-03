@@ -1,14 +1,14 @@
 <section class="common_spacing">
    <div class="container">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
      <h3 class="sec_tit underline text-center">
-      Crypto Projects Empowered With Our Coin Development Services
+      {{ $title }}
      </h3>
     </div>
     <p class="text-center" style="color: #000;">
-     Our cutting-edge coin development services have consistently delivered outstanding results, enabling our clients to make a significant impact. From the initial concept to the final execution, we work closely with our clients, ensuring a seamless and rewarding experience throughout their crypto venture. We have collaborated with a diverse range of clients, each with their unique goals and aspirations. We celebrate the stories of our clients, sharing their experiences and the impact our collaborative efforts have had on their ventures.
+     {{ $desc }}
     </p>
-    <div class="row mt40">
+    {{-- <div class="row mt40">
      <div class="container container-center">
       <div class="col-lg-3 col-md-6 col-sm-12 m-auto equalize">
        <div class="cmt-bgcolor-white featured-icon-box icon-align-top-content text-left style3">
@@ -139,6 +139,6 @@
        </div>
       </div>
      </div>
-    </div>
+    </div> --}}
    </div>
   </section>

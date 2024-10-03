@@ -3,11 +3,11 @@
     <div class="row justify-content-md-center text-center">
      <div class="section-title text-center">
       <h3 class="common_h3">
-       Our Highly Secured Cryptocurrency Website Development Platforms
+       {{ $title }}
       </h3>
       <hr/>
       <p class="section-subtitle">
-       We have a perfect solution for developing major crypto replicas of the following cryptocurrency with customizable solutions.
+       {{ $desc }}
       </p>
      </div>
     </div>
@@ -16,7 +16,7 @@
       <div class="category category-grid-style-01 aos-item aos-init" data-aos="fade-up" data-aos-duration="500">
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Bitcoin" class="img-fuild lazy" data-src="images/logos/1.webp" height="40px" width="auto"/>
+         <img alt="Bitcoin" class="img-fuild lazy" src="{{ asset('images/logos/1.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Bitcoin
@@ -24,7 +24,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Litecoin" class="img-fuild lazy" data-src="images/logos/2.webp" height="40px" width="auto"/>
+         <img alt="Litecoin" class="img-fuild lazy" src="{{ asset('images/logos/2.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Litecoin
@@ -32,7 +32,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Ripple" class="img-fuild lazy" data-src="images/logos/6.webp" height="40px" width="auto"/>
+         <img alt="Ripple" class="img-fuild lazy" src="{{ asset('images/logos/6.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Ripple
@@ -40,7 +40,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Tether" class="img-fuild lazy" data-src="images/logos/tether.webp" height="40px" width="auto"/>
+         <img alt="Tether" class="img-fuild lazy" src="{{ asset('images/logos/tether.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Tether
@@ -48,7 +48,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Cardano" class="img-fuild lazy" data-src="images/logos/cardano.webp" height="40px" width="auto"/>
+         <img alt="Cardano" class="img-fuild lazy" src="{{ asset('images/logos/cardano.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Cardano
@@ -56,7 +56,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Bitcoin Cash" class="img-fuild lazy" data-src="images/logos/bitcash.webp" height="40px" width="auto"/>
+         <img alt="Bitcoin Cash" class="img-fuild lazy" src="{{ asset('images/logos/bitcash.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Bitcoin Cash
@@ -64,7 +64,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Chainlink" class="img-fuild lazy" data-src="images/logos/chainlink.webp" height="40px" width="auto"/>
+         <img alt="Chainlink" class="img-fuild lazy" src="{{ asset('images/logos/chainlink.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Chainlink
@@ -72,7 +72,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Binance Coin" class="img-fuild lazy" data-src="images/logos/binance-coin.webp" height="40px" width="auto"/>
+         <img alt="Binance Coin" class="img-fuild lazy" src="{{ asset('images/logos/binance-coin.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Binance Coin
@@ -80,7 +80,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Stellar" class="img-fuild lazy" data-src="images/logos/steller.webp" height="40px" width="auto"/>
+         <img alt="Stellar" class="img-fuild lazy" src="{{ asset('images/logos/steller.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Stellar
@@ -88,7 +88,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="USD Coin" class="img-fuild lazy" data-src="images/logos/coin.webp" height="40px" width="auto"/>
+         <img alt="USD Coin" class="img-fuild lazy" src="{{ asset('images/logos/coin.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          USD Coin
@@ -96,7 +96,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Bitcoin SV" class="img-fuild lazy" data-src="images/logos/coinsv.webp" height="40px" width="auto"/>
+         <img alt="Bitcoin SV" class="img-fuild lazy" src="{{ asset('images/logos/coinsv.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Bitcoin SV
@@ -104,7 +104,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="EOS" class="img-fuild lazy" data-src="images/logos/eos.webp" height="40px" width="auto"/>
+         <img alt="EOS" class="img-fuild lazy" src="{{ asset('images/logos/eos.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          EOS
@@ -112,7 +112,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Monero" class="img-fuild lazy" data-src="images/logos/mono.webp" height="40px" width="auto"/>
+         <img alt="Monero" class="img-fuild lazy" src="{{ asset('images/logos/mono.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Monero
@@ -120,7 +120,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="TRON" class="img-fuild lazy" data-src="images/logos/tron.webp" height="40px" width="auto"/>
+         <img alt="TRON" class="img-fuild lazy" src="{{ asset('images/logos/tron.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          TRON
@@ -128,7 +128,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="NEM" class="img-fuild lazy" data-src="images/logos/nem.webp" height="40px" width="auto"/>
+         <img alt="NEM" class="img-fuild lazy" src="{{ asset('images/logos/nem.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          NEM
@@ -136,7 +136,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Tezos" class="img-fuild lazy" data-src="images/logos/tezo.webp" height="40px" width="auto"/>
+         <img alt="Tezos" class="img-fuild lazy" src="{{ asset('images/logos/tezo.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Tezos
@@ -144,7 +144,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Crypto.com Coin" class="img-fuild lazy" data-src="images/logos/cry.webp" height="40px" width="auto"/>
+         <img alt="Crypto.com Coin" class="img-fuild lazy" src="{{ asset('images/logos/cry.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Crypto.com Coin
@@ -152,7 +152,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="VeChain" class="img-fuild lazy" data-src="images/logos/vechain.webp" height="40px" width="auto"/>
+         <img alt="VeChain" class="img-fuild lazy" src="{{ asset('images/logos/vechain.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          VeChain
@@ -160,7 +160,7 @@
        </div>
        <div class="category-item aos-item" style="border-left: 1px solid #eeeeee;">
         <div class="category-icon">
-         <img alt="Uniswap" class="img-fuild lazy" data-src="images/logos/unis.webp" height="40px" width="auto"/>
+         <img alt="Uniswap" class="img-fuild lazy" src="{{ asset('images/logos/unis.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Uniswap
@@ -168,7 +168,7 @@
        </div>
        <div class="category-item aos-item">
         <div class="category-icon">
-         <img alt="Aave" class="img-fuild lazy" data-src="images/logos/aave.webp" height="40px" width="auto"/>
+         <img alt="Aave" class="img-fuild lazy" src="{{ asset('images/logos/aave.webp') }}" height="40px" width="auto"/>
         </div>
         <a alt="" class="category-title" href="#">
          Aave
