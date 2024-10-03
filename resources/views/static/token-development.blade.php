@@ -97,7 +97,7 @@
          <div class="social">
             <a aria-label="calendly" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" rel="nofollow" target="_blank">
             <i aria-hidden="true" class="fa fa-calender" title="calendly">
-            </i>
+            </i>  
             Schedule A Meeting
             </a>
             <a aria-label="Mail" href="/cdn-cgi/l/email-protection#d5bcbbb3ba95b7b9bab6beb6bdb4bcbbb4a5a5b3b4b6a1baa7acfbb6bab8" rel="nofollow">
@@ -1468,30 +1468,30 @@
                         <div class="ovr">
                            <div itemscope="" itemtype="http://schema.org/CreativeWork">
                               <div class="ban_tirt">
-                                 <span style="font-weight: normal; font-size: 19px;">
+                                 {{-- <span style="font-weight: normal; font-size: 19px;">
                                  Launch Your Crypto Tokens with Our Esteemed
-                                 </span>
+                                 </span> --}}
                                  <h1 itemprop="name">
-                                    Token Development Company
+                                    Transform Your Own Tokens with Our Top-Tier Development Services
                                  </h1>
                               </div>
                               <p itemprop="text">
-                                 As the best token development company, we are committed to offering excellent services to create tokens on major layer-1 and layer-2 networks with everything you need, stamping your business’s identity in the market.
+                                 As a top-tier token development firm, we master the art of crafting exceptional tokens across leading layer-1 and layer-2 networks. Our custom solutions are designed to propel your business to the forefront of the market and ensure a powerful presence.
                               </p>
-                              <div class="txt">
+                              {{-- <div class="txt">
                                  <a class="nec-btn" href="https://www.blockchainappfactory.com/create-your-own-token-and-coin" id="cyz" rel="nofollow" style="border-radius: 30px !important; text-transform: capitalize !important; margin-left: 0;">
                                  Create your own token
                                  </a>
                                  <a class="nec-btn" href="#demo" id="cyz" rel="nofollow" style="margin-left: 0px !important;">
                                  view demo
                                  </a>
-                              </div>
+                              </div> --}}
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="col-md-7 col-sm-12 col-xs-12 text-center">
-                     <img alt="Crypto Token Development Company" class="magic" src="https://www.blockchainappfactory.com/https://www.blockchainappfactory.com/images/token-development/banner-img2.webp" title="Crypto Token Development Company"/>
+                     <img alt="Crypto Token Development Company" class="magic" src="{{asset('images/token-development/banner-img2.png')}}" title="Crypto Token Development Company"/>
                   </div>
                </div>
             </div>
@@ -1507,14 +1507,14 @@
             <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                <div class="section-title text-center">
                   <h2 class="title-th sec_tit underline">
-                     Token Development Services by Blockchain App Factory
+                     Token Development Solutions by OnGraph
                   </h2>
                </div>
                <p class="text-center mt20">
-                  As pioneers in token development services, our team from Blockchain App Factory lets you realize cryptocurrency tokens with a multitude of features. You can feel our prowess throughout the process, right from the first consulting session to the token launch and support. We ensure premium quality by utilizing only the best technological architecture out in the market while not meddling with any of your requirements.
+                  At OnGraph, we set the standard in token development, enabling you to craft cryptocurrency tokens with a wide range of functionalities. From initial consultation to launch and beyond, our expert team ensures excellence at every stage. We leverage the latest technology to meet your unique needs and deliver top-tier quality.
                   <br/>
                   <br/>
-                  We have successfully launched several hundreds of crypto token projects over the years. Some of our on-demand development services include:
+                  With a solid history of successfully launching hundreds of crypto token projects, our comprehensive suite of development services includes:
                </p>
                <style type="text/css">
                   .tree {position: relative; display: inline-block; font-size: 0;}
@@ -1531,31 +1531,31 @@
                <div class="content">
                   <div class="tree">
                      <div class="tree-item">
-                        <img alt="" class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/erc.webp"/>
+                        <img alt="" class="lazy" src="{{ asset('images/token-development/icons/erc.webp') }}"/>
                         <p>
                            ERC-20 Token
                         </p>
                      </div>
                      <div class="tree-item">
-                        <img alt="" class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/trc1.png"/>
+                        <img alt="" class="lazy" src="{{ asset('images/token-development/icons/trc1.png') }}"/>
                         <p>
                            TRC-20 Token
                         </p>
                      </div>
                      <div class="tree-item">
-                        <img alt="" class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/bep-20.png"/>
+                        <img alt="" class="lazy" src="{{ asset('images/token-development/icons/bep-20.png') }}"/>
                         <p>
                            BEP-20 Token
                         </p>
                      </div>
                      <div class="tree-item">
-                        <img alt="" class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/solana.webp"/>
+                        <img alt="" class="lazy" src="{{ asset('images/token-development/icons/solana.webp') }}"/>
                         <p>
                            SPL (Solana) Token
                         </p>
                      </div>
                      <div class="tree-item">
-                        <img alt="" class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/nep-141.png"/>
+                        <img alt="" class="lazy" src="{{ asset('images/token-development/icons/nep-141.png') }}"/>
                         <p>
                            NEP-141 (NEAR) Token
                         </p>
@@ -1563,13 +1563,13 @@
                   </div>
                </div>
                <div class="contentall">
-                  <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" rel="nofollow" target="_blank">
+                  <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="#" rel="nofollow" target="_blank">
                   <span>
-                  Schedule A Meeting
+                     Book a Consultation 
                   </span>
                   </a>
                   <a class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
-                  Talk to Our Experts
+                     Connect with Our Experts Today!
                   </a>
                </div>
             </div>
@@ -1583,116 +1583,116 @@
             <div class="col-lg-12 text-center col-md-12 col-sm-12 col-xs-12">
                <div class="section-title text-center">
                   <h2 class="title-th sec_tit underline text-white">
-                     Our Esteemed Token Development Services
+                     Our Premier Services for next-gen Token Development 
                   </h2>
                </div>
                <p class="text-white">
-                  Our cryptocurrency token development services encompass multiple blockchains and asset types, bringing a wide variety of possibilities in front of you!
+                  Unlock a world of possibilities with our comprehensive cryptocurrency token development services. We offer cutting-edge solutions across multiple blockchains and asset types, tailored to meet your unique needs.
                </p>
             </div>
             <div class="col-lg-12 text-center col-md-12 col-sm-12 col-xs-12">
                <ul>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/ethereum.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/ethereum.webp') }}"/>
                      </div>
                      <div class="content">
                         <h3>
-                           Ethereum Token
+                           Ethereum Tokens
                         </h3>
                         <p>
-                           We create Ethereum tokens based on multiple ERC standards and EVM compatibility to satisfy your extensive business needs.
+                           We specialize in crafting Ethereum tokens that adhere to ERC standards and are fully compatible with EVM, ensuring they are precisely aligned with your business goals.
                         </p>
                      </div>
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/bep.png"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/bep.webp') }}"/>
                      </div>
                      <div class="content">
                         <h3>
-                           BNB Chain Token
+                           BNB Chain Tokens
                         </h3>
                         <p>
-                           We develop tokens on the BNB Chain using relevant standards to facilitate a smooth business process for your project.
+                           Leverage our expertise in creating BNB Chain tokens using industry-leading protocols to streamline your business processes and ensure smooth project execution.
                         </p>
                      </div>
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/trc.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/trc.webp') }}"/>
                      </div>
                      <div class="content">
                         <h3>
-                           Tron Token
+                           Tron Tokens
                         </h3>
                         <p>
-                           We mint tokens on the Tron blockchain, allowing you to enjoy the unparalleled benefits the networks offer to ventures.
+                           Tap into the power of the Tron blockchain with our expertly crafted tokens, designed to maximize the network’s unique benefits for your projects.
                         </p>
                      </div>
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/spl.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/spl.webp') }}"/>
                      </div>
                      <div class="content">
                         <h3>
-                           Solana Token
+                           Solana Tokens
                         </h3>
                         <p>
-                           Our experts build quality tokens on Solana, bringing you the ultimate experience of attracting the global community.
+                           Discover the advantages of Solana with our top-tier token development, crafted to engage and captivate audiences on a global scale.
                         </p>
                      </div>
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/security.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/security.webp') }}"/>
                      </div>
                      <div class="content">
                         <h3>
-                           Security Token
+                           Security Tokens
                         </h3>
                         <p>
-                           Enjoy the benefits of running a legally regulated cryptocurrency business with our prowess in security token creation.
+                           Trust our expertise in security token creation to build a legally compliant cryptocurrency venture while fully benefiting from this innovative asset class.
                         </p>
                      </div>
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/assets.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/assets.png') }}"/>
                      </div>
                      <div class="content">
                         <h3>
-                           Asset Token
+                           Asset Tokens
                         </h3>
                         <p>
-                           Tokenize your assets on the blockchain with our asset token creation team to make real-world transactions efficient.
+                           Convert your assets into digital tokens with our asset tokenization services, enhancing real-world transactions and boosting operational efficiency.
                         </p>
                      </div>
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/equity.png"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/equity.png') }}"/>
                      </div>
                      <div class="content">
                         <h3>
-                           Equity Token
+                           Equity Tokens
                         </h3>
                         <p>
-                           Create equity crypto tokens to bring asset representations on the blockchain, making investments accessible to all.
+                           Launch equity tokens on the blockchain that represent real assets, democratizing investment opportunities and broadening access for all.
                         </p>
                      </div>
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/utility.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/utility.png') }}"/>
                      </div>
                      <div class="content">
                         <h3>
-                           Utility Token
+                           Utility Tokens
                         </h3>
                         <p>
-                           Develop utility crypto tokens with extensive functionality to make business interactions seamless from the first step.
+                           Develop utility tokens with robust features to streamline business interactions and enhance operational efficiency from the outset.
                         </p>
                      </div>
                   </li>
@@ -1718,10 +1718,10 @@
          <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                <h2 class="sec_tit underline text-center">
-                  Our Value-Added Services for Cryptocurrency Token Development Projects
+                  Unlock Your Project's Potential with Our Premier Crypto Token Development Services!
                </h2>
                <p class="text-center">
-                  Gain an immense threshold for your project even before launching with our value-added crypto token development services. Leverage our expertise to make the most of the evolving crypto market as a business!
+                  Elevate your project significantly, even before launch, with our comprehensive crypto token development services. Our expertise helps you maximize your potential in the ever-changing crypto market and drive your business!
                </p>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -1730,13 +1730,13 @@
                      <div class="item-center">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/marketing.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/marketing.png') }}" width="60px" height="60px"/>
                               <p class="text-white">
                                  Market Making Protocols
                               </p>
                            </div>
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/liquidity.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/liquidity.webp') }}"/>
                               <p class="text-white">
                                  Liquidity Pools
                               </p>
@@ -1744,7 +1744,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/distribution.webp" style="width: 64px;"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/distribution.png') }}" style="width: 64px;"/>
                               <p class="text-white">
                                  Widespread Distribution
                               </p>
@@ -1761,7 +1761,7 @@
                            Liquidity and Market Making
                         </h4>
                         <p>
-                           Each of our token projects comes with provisions for liquidity and market-making that power them to gain market prevalence. At Blockchain App Factory, we implement high-quality solutions to spread your crypto tokens in the wider market using strategized distribution mechanisms and promotional activities.
+                           We embed liquidity and market-making strategies into our token projects to boost market presence. At Blockchain App Factory, we leverage effective distribution techniques and targeted promotions to amplify the reach and visibility of your crypto tokens.
                         </p>
                      </div>
                   </li>
@@ -1773,7 +1773,7 @@
                      <div class="item-center">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/architecture.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/architecture.png') }}" width="60px"/>
                               <p class="text-white">
                                  Smart Contract Architecture
                               </p>
@@ -1781,13 +1781,13 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/audit.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/audit.png') }}" width="60px"/>
                               <p class="text-white">
                                  Smart Contract Auditing &amp; Testing
                               </p>
                            </div>
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/optimization.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/optimization.png') }}" width="60px"/>
                               <p class="text-white">
                                  Smart Contract Optimization
                               </p>
@@ -1804,7 +1804,7 @@
                            Smart Contract Development
                         </h4>
                         <p>
-                           Smart contracts facilitate all token projects, and our cryptocurrency token creation team excels in coding solid programs that enable all kinds of token operations. With our expertise, you can complement your tokens with powerful smart contracts that cater to your crypto project seamlessly at all times.
+                           Smart contracts are essential for every token project. Our team excels in creating robust contracts that enhance various token functions. Rely on our expertise to integrate smart contracts seamlessly into your crypto project, optimizing performance and functionality.
                         </p>
                      </div>
                   </li>
@@ -1816,13 +1816,13 @@
                      <div class="item-center">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/mobile-wallet.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/mobile-wallet.png') }}" width="60px"/>
                               <p class="text-white">
                                  Mobile Wallet Development
                               </p>
                            </div>
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/wallet.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/wallet.png') }}" width="60px"/>
                               <p class="text-white">
                                  Web Wallet Development
                               </p>
@@ -1830,7 +1830,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/desktop.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/desktop.png') }}" width="60px"/>
                               <p class="text-white">
                                  Desktop Wallet Development
                               </p>
@@ -1847,7 +1847,7 @@
                            Crypto Token Wallet Development
                         </h4>
                         <p>
-                           Our crypto token creation team empowers your token project with a feature-rich wallet application that can be used to hold and transact tokens seamlessly. We emphasize sublime user experience, shielded security provisions, and seamless scalability to launch crypto wallets that offer pleasant experiences to crypto holders.
+                           Our team develops feature-rich wallet apps for effortless token storage and transactions. We focus on delivering an exceptional user experience, top-notch security, and scalable solutions to meet the needs of token holders.
                         </p>
                      </div>
                   </li>
@@ -1859,7 +1859,7 @@
                      <div class="item-center">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/whitepaper.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/whitepaper.png') }}" width="60px"/>
                               <p class="text-white">
                                  White Paper Design
                               </p>
@@ -1867,13 +1867,13 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/content.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/content.png') }}" width="60px"/>
                               <p class="text-white">
                                  Informative Content &amp; Visuals
                               </p>
                            </div>
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/investors.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/investors.png') }}" width="60px"/>
                               <p class="text-white">
                                  Attract Investors
                               </p>
@@ -1890,7 +1890,7 @@
                            Whitepaper Creation
                         </h4>
                         <p>
-                           As a leader in launching cryptocurrency projects, we don’t leave you alone without giving you all you need. Our whitepaper creation service is a testament to this stand, as we have a team of technical writers and designers who can craft easy-to-understand whitepapers explaining your project in detail with attractive visuals and infographics.
+                           Leading cryptocurrency project launches, we offer expert whitepaper creation services. Our skilled writers and designers craft detailed, visually compelling whitepapers that clearly explain your project and engage your audience with impactful visuals and infographics.
                         </p>
                      </div>
                   </li>
@@ -1902,13 +1902,13 @@
                      <div class="item-center">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/ico.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/ico.png') }}" width="60px"/>
                               <p class="text-white">
                                  ICO Development
                               </p>
                            </div>
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/ido.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/ido.webp') }}"/>
                               <p class="text-white">
                                  IDO Development
                               </p>
@@ -1916,7 +1916,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                            <div class="items">
-                              <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/tokens.webp"/>
+                              <img class="lazy" src="{{ asset('images/token-development/icons/tokens.png') }}" width="60px"/>
                               <p class="text-white">
                                  Token Marketing
                               </p>
@@ -1933,7 +1933,7 @@
                            Initial Token Offerings
                         </h4>
                         <p>
-                           Initial offerings take crypto projects’ reach to another level, as they serve as the perfect way to attract investors. With several models available for use, our experts execute token offering programs seamlessly by creating separate portals and building partnerships with cryptocurrency exchanges wherever necessary.
+                           Amplify your crypto project with an Initial Token Offering (ITO), an effective strategy for attracting investors and broadening your reach. Our experts simplify the process with various offering models, dedicated portals, and strategic partnerships with exchanges to ensure a successful and streamlined launch.
                         </p>
                      </div>
                   </li>
@@ -1954,7 +1954,7 @@
                </h3>
                <div class="contentall" style="text-align: right;">
                   <a class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; margin-top: 20px; text-transform:none !important;">
-                  Contact Now!
+                     Empower Your Crypto Vision with Expert Token Solutions!
                   </a>
                </div>
             </div>
@@ -2027,11 +2027,11 @@
             <div class="section-title text-center">
                <div class="sec_tit mb20">
                   <h3 class="section-title underline mb20">
-                     Custom Token Development Solution Types We Create
+                     Bespoke Token Development Solutions for Every Need
                   </h3>
                </div>
                <p style="font-size: 16px;">
-                  Our custom token development solutions provide you with the ability to integrate different use cases into crypto tokens. We believe that defining a token’s functionality forms a business’s soul.
+                  Our bespoke token development services empower you to embed diverse functionalities into your crypto tokens, defining the very essence of your business.
                </p>
             </div>
          </div>
@@ -2046,7 +2046,7 @@
                            Security Tokens
                         </h4>
                         <p>
-                           Security tokens represent rights of ownership, value transfer, and promise of returns of external assets (digital/physical) registered on the blockchain.
+                           Security tokens represent ownership and value for digital and physical assets, recorded securely on the blockchain.
                         </p>
                      </div>
                   </li>
@@ -2058,7 +2058,7 @@
                            Utility Tokens
                         </h4>
                         <p>
-                           Utility tokens offer several functions to holders, including spending and voting capabilities that businesses can utilize to maintain their market value.
+                           Utility tokens offer functionalities like spending and voting rights, helping businesses sustain and boost market value.
                         </p>
                      </div>
                   </li>
@@ -2074,7 +2074,7 @@
                            Asset Tokens
                         </h4>
                         <p>
-                           Asset tokens represent digital and physical assets as blockchain entries without much utility, similar to ownership documentation in the real world.
+                           Asset tokens digitize physical and digital assets, serving as modern ownership documentation without added utility.
                         </p>
                      </div>
                   </li>
@@ -2086,7 +2086,7 @@
                            Equity Tokens
                         </h4>
                         <p>
-                           Equity tokens represent shares of the underlying assets, similar to share bonds in the real world, entitling holders to changes in the assets’ value.
+                           Equity tokens represent shares in assets, providing holders with the right to benefit from value changes.
                         </p>
                      </div>
                   </li>
@@ -2222,13 +2222,13 @@
    </style>
    <section class="common_spacing" style="background: #0d3881;">
       <div class="container">
-         <div class="row">
+         <div class="row d-flex justify-content-center">
             <h3 class="sec_tit underline text-center text-white">
-               Popular Crypto Tokens Crafted With Our Expert Services
+               Leading Crypto Tokens Developed with Our Expertise
             </h3>
          </div>
          <p class="text-center text-white">
-            Our cutting-edge token development services have empowered clients to disrupt markets and redefine industries. We cherish the strong bonds we forge with our clients, built on a foundation of trust, transparency, and unwavering support. From conceptualization to execution, we work hand in hand, ensuring a seamless and rewarding experience throughout the token creation and launch.
+            Our advanced token development services have enabled clients to innovate and transform industries. We cultivate strong, dependable relationships with our clients, ensuring clear communication and consistent support. From initial concept through to final launch, we collaborate closely with you to guarantee a seamless and successful token creation process. 
          </p>
          <div class="row mt40">
             <div class="container container-center">
@@ -2237,7 +2237,7 @@
                      <div class="featured-icon">
                         <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-color-skincolor cmt-icon_element-size-lg">
                            <i class="flaticon flaticon-air-freight">
-                           <img alt="" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/nftm/Amepay.webp" style="width: 80px !important; height:80px !important;"/>
+                           <img alt="" class="img-fuild lazy" src="{{ asset('images/nftm/Amepay.webp') }}" style="width: 80px !important; height:80px !important;"/>
                            </i>
                         </div>
                      </div>
@@ -2253,7 +2253,7 @@
                      <div class="featured-icon">
                         <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-color-skincolor cmt-icon_element-size-lg">
                            <i class="flaticon flaticon-air-freight">
-                           <img alt="" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/nftm/evai.webp" style="width: 80px !important; height:80px !important;"/>
+                           <img alt="" class="img-fuild lazy" src="{{ asset('images/nftm/evai.webp') }}" style="width: 80px !important; height:80px !important;"/>
                            </i>
                         </div>
                      </div>
@@ -2269,7 +2269,7 @@
                      <div class="featured-icon">
                         <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-color-skincolor cmt-icon_element-size-lg">
                            <i class="flaticon flaticon-air-freight">
-                           <img alt="" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/nftm/dash.webp" style="width: 80px !important; height:80px !important;"/>
+                           <img alt="" class="img-fuild lazy" src="{{ asset('images/nftm/dash.webp') }}" style="width: 80px !important; height:80px !important;"/>
                            </i>
                         </div>
                      </div>
@@ -2285,7 +2285,7 @@
                      <div class="featured-icon">
                         <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-color-skincolor cmt-icon_element-size-lg">
                            <i class="flaticon flaticon-air-freight">
-                           <img alt="" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/nftm/gsx.webp" style="width: 80px !important; height:80px !important;"/>
+                           <img alt="" class="img-fuild lazy" src="{{ asset('images/nftm/gsx.webp') }}" style="width: 80px !important; height:80px !important;"/>
                            </i>
                         </div>
                      </div>
@@ -2301,7 +2301,7 @@
                      <div class="featured-icon">
                         <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-color-skincolor cmt-icon_element-size-lg">
                            <i class="flaticon flaticon-air-freight">
-                           <img alt="" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/nftm/waifu.webp" style="width: 80px !important; height:80px !important;"/>
+                           <img alt="" class="img-fuild lazy" src="{{ asset('images/nftm/waifu.webp') }}" style="width: 80px !important; height:80px !important;"/>
                            </i>
                         </div>
                      </div>
@@ -2317,7 +2317,7 @@
                      <div class="featured-icon">
                         <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-color-skincolor cmt-icon_element-size-lg">
                            <i class="flaticon flaticon-air-freight">
-                           <img alt="" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/nftm/anyswap.webp" style="width: 80px !important; height:80px !important;"/>
+                           <img alt="" class="img-fuild lazy" src="{{ asset('images/nftm/anyswap.webp') }}" style="width: 80px !important; height:80px !important;"/>
                            </i>
                         </div>
                      </div>
@@ -2333,7 +2333,7 @@
                      <div class="featured-icon">
                         <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-color-skincolor cmt-icon_element-size-lg">
                            <i class="flaticon flaticon-air-freight">
-                           <img alt="" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/nftm/quickswap.webp" style="width: 80px !important; height:80px !important;"/>
+                           <img alt="" class="img-fuild lazy" src="{{ asset('images/nftm/quickswap.webp') }}" style="width: 80px !important; height:80px !important;"/>
                            </i>
                         </div>
                      </div>
@@ -2349,7 +2349,7 @@
                      <div class="featured-icon">
                         <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-color-skincolor cmt-icon_element-size-lg">
                            <i class="flaticon flaticon-air-freight">
-                           <img alt="" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/nftm/dascoin.webp" style="width: 80px !important; height:80px !important;"/>
+                           <img alt="" class="img-fuild lazy" src="{{ asset('images/nftm/dascoin.webp') }}" style="width: 80px !important; height:80px !important;"/>
                            </i>
                         </div>
                      </div>
@@ -2371,44 +2371,44 @@
       <div class="container">
          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h3 class="sec_tit underline text-center">
-               Unleash Tokens Like Top Projects for Unparalleled Market Reception
+               Launch Tokens Like the Industry Leaders for Unmatched Market Impact
             </h3>
             <p class="text-center">
-               Are you wondering how to become successful as a business in the competitive crypto token market? Create your own tokens inspired by the working mechanisms of top token projects out there to take the market by storm!
+               Curious about how to excel in the competitive crypto token landscape? Design your tokens by leveraging the proven strategies of leading projects to make a powerful market entry and achieve exceptional success!
             </p>
             <ul>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/nftm/icons/solana.webp"/>
+                  <img class="lazy" src="{{ asset('images/nftm/icons/solana.webp') }}"/>
                   <p class="white">
                      Solana ($SOL)
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/nftm/icons/cardano_ada-512.webp"/>
+                  <img class="lazy" src="{{ asset('images/nftm/icons/cardano_ada-512.webp') }}"/>
                   <p class="white">
                      Cardano ($ADA)
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/nftm/icons/chain.webp"/>
+                  <img class="lazy" src="{{ asset('images/nftm/icons/chain.webp') }}"/>
                   <p class="white">
                      Chainlink ($LINK)
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/nftm/icons/polygon.webp"/>
+                  <img class="lazy" src="{{ asset('images/nftm/icons/polygon.webp') }}"/>
                   <p class="white">
                      Polygon ($MATIC)
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/nftm/icons/cosmos.webp"/>
+                  <img class="lazy" src="{{ asset('images/nftm/icons/cosmos.webp') }}"/>
                   <p class="white">
                      Cosmos ($ATM)
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/nftm/icons/icp-token.webp"/>
+                  <img class="lazy" src="{{ asset('images/nftm/icons/icp-token.webp') }}"/>
                   <p class="white">
                      Internet Computer ($ICP)
                   </p>
@@ -2419,12 +2419,12 @@
             <div class="text-center cta_mine txt contentall">
                <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" target="_blank">
                <span>
-               Schedule A Meeting
+                  Book a free demo today
                </span>
                </a>
-               <a class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
+               {{-- <a class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
                Talk to Our Experts
-               </a>
+               </a> --}}
             </div>
          </div>
       </div>
@@ -2436,11 +2436,11 @@
             <div class="col-md-12">
                <div class="section-title">
                   <h2 class="common_h3 text-center font-wei">
-                     Multi-dimensional Features of Our Crypto Token Development
+                     Experience Top-Tier Token Development with Unmatched Features
                   </h2>
                   <hr class="mb40"/>
                   <p class="text-center" style="font-size: 16px;">
-                     As a leading cryptocurrency token development company, we care about how we create crypto tokens. Here are the elements we provide as part of our token creation services.
+                     As a leading cryptocurrency token development firm, we ensure excellence at every stage of token creation. Here’s how we deliver:
                   </p>
                </div>
             </div>
@@ -2457,7 +2457,7 @@
                         Token Minting
                      </h4>
                      <p>
-                        Our developers can mint your crypto tokens on a blockchain you wish using state-of-the-art technologies based on your individual business requirements.
+                        We leverage cutting-edge technology to mint your tokens on your selected blockchain, tailored to meet your business requirements.
                      </p>
                   </div>
                   <div class="clearfix">
@@ -2475,7 +2475,7 @@
                         Token Listing
                      </h4>
                      <p>
-                        We can list your tokens on many leading crypto exchanges after the token creation process is over to put your venture in the market’s limelight.
+                        After creation, we list your tokens on major exchanges to boost market visibility.
                      </p>
                   </div>
                   <div class="clearfix">
@@ -2493,7 +2493,7 @@
                         Wallet Compatibility
                      </h4>
                      <p>
-                        The crypto token creation campaigns we undertake focus on making token solutions compatible with most of the popular crypto wallets out there.
+                        Our tokens are optimized for seamless integration with popular crypto wallets.
                      </p>
                   </div>
                   <div class="clearfix">
@@ -2511,7 +2511,7 @@
                         Capped Supply
                      </h4>
                      <p>
-                        In case you want to have a limited token supply, we can set a token cap based on your needs and ensure no tokens are minted after the capped value.
+                        We establish a supply cap to prevent the minting of tokens beyond your set limit.
                      </p>
                   </div>
                   <div class="clearfix">
@@ -2529,7 +2529,7 @@
                         Token Pause
                      </h4>
                      <p>
-                        We can employ pausing techniques to halt your token minting to ensure not all tokens exist simultaneously, ensuring their market value is preserved.
+                        We incorporate pause functions to manage token minting and uphold market value.
                      </p>
                   </div>
                   <div class="clearfix">
@@ -2547,7 +2547,7 @@
                         Token Burning
                      </h4>
                      <p>
-                        We can utilize token-burning operations to remove excess tokens from the market, driving their value based on scarcity while ensuring optimal supply exists.
+                        We execute token-burning processes to control supply and increase token value through scarcity.
                      </p>
                   </div>
                   <div class="clearfix">
@@ -2848,10 +2848,10 @@
       <div class="container">
          <div class="">
             <h3 class="sec_tit underline text-center">
-               Our Cryptocurrency Token Development Encompasses These Applications
+               Comprehensive Applications of Our Cryptocurrency Token Development
             </h3>
             <p class="text-center" style="font-size: 16px;">
-               As a renowned crypto token development company, we provide many applications that bring tokens to the digital world. Be it for existing or upcoming ventures; these use cases can accelerate them to the top of the market.
+               As a leading crypto token development firm, we offer a range of applications that bring your tokens to the digital forefront, whether for existing or new ventures. These use cases are designed to propel your project to market prominence.
             </p>
          </div>
          <div class="row mt40">
@@ -2859,14 +2859,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/brc.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/brc.png') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
                            Cryptocurrencies
                         </h4>
                         <p>
-                           We can create fungible tokens that serve digital monetary purposes inside decentralized applications with added utilities, such as governance rights.
+                           We create fungible tokens for digital money in decentralized apps, including features like governance rights.
                         </p>
                      </div>
                   </div>
@@ -2874,14 +2874,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/stable-coin.png"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/stable-coin.png') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
                            Stablecoins
                         </h4>
                         <p>
-                           Our stablecoin creation enables us to develop monetary tokens backed by various real-world assets that keep their market value stable at all times.
+                           We build stablecoins backed by real-world assets to keep their market value stable.
                         </p>
                      </div>
                   </div>
@@ -2889,14 +2889,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/ico-green.png"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/ico.png') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
-                           ICO
+                           ICO (Initial Coin Offering)
                         </h4>
                         <p>
-                           Initial Coin Offering (ICO) tokens can be used by new Web3 ventures to build brand awareness and community funding to commence business operations.
+                           Our ICO tokens help new Web3 projects build their brand and raise community funding to start their operations.
                         </p>
                      </div>
                   </div>
@@ -2904,14 +2904,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/exchange.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/exchange.png') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
-                           IEO
+                           IEO (Initial Exchange Offering)
                         </h4>
                         <p>
-                           Initial Exchange Offering (IEO) tokens can help ventures to gain initial trust by getting launched by a crypto exchange to create brand recognition.
+                           IEO tokens build initial trust and brand recognition by launching through established crypto exchanges.
                         </p>
                      </div>
                   </div>
@@ -2919,14 +2919,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/ido.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/ido.webp') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
-                           IDO
+                           IDO (Initial DEX Offering)
                         </h4>
                         <p>
-                           Initial DEX Offering (IDO) tokens can be used by startups to raise funds and build a community without intermediaries using decentralized exchanges.
+                           IDO tokens help startups raise funds and grow their community by using decentralized exchanges, without needing middlemen.
                         </p>
                      </div>
                   </div>
@@ -2934,14 +2934,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/tokens.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/tokens.png') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
-                           STO
+                           STO (Security Token Offering)
                         </h4>
                         <p>
-                           We create tokens for Security Token Offerings (STO) backed by real-world assets that use decentralized applications for launching fundraising campaigns.
+                           We create tokens for STOs backed by real-world assets, using decentralized applications for fundraising.
                         </p>
                      </div>
                   </div>
@@ -2949,14 +2949,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/game.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/game.png') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
-                           IGO
+                           IGO (Initial Game Offering)
                         </h4>
                         <p>
-                           Initial Game Offering (IGO) tokens enable Web3 gaming ventures to gain their community while building hype around their new gaming applications.
+                           IGO tokens help Web3 gaming projects create a community and generate excitement for new games.
                         </p>
                      </div>
                   </div>
@@ -2964,14 +2964,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/equity.png"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/equity.png') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
-                           ETO
+                           ETO (Equity Token Offering)
                         </h4>
                         <p>
-                           Tokens in Equity Token Offering (ETO) represent shares in a company similar to real-world share bonds, creating digital interfaces for share markets.
+                           ETO tokens represent shares in a company, similar to traditional stocks, offering a digital approach to equity.
                         </p>
                      </div>
                   </div>
@@ -2979,14 +2979,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/decentralized.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/decentralized.png') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
-                           ILO
+                           ILO (Initial Liquidity Offering)
                         </h4>
                         <p>
-                           Initial Liquidity Offering (ILO) tokens are listed on decentralized crypto exchanges (DEXs), enabling businesses to raise funds through direct trades.
+                           ILO tokens are listed on decentralized exchanges (DEXs) to raise funds through direct trades.
                         </p>
                      </div>
                   </div>
@@ -2994,14 +2994,14 @@
                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 equalize">
                   <div class="awesome-features-wrapper text-center mb-30">
                      <div class="awesome-features-icon-img">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/investors.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/investors.png') }}"/>
                      </div>
                      <div class="awesome-features-text">
                         <h4 style="display:block; font-size: 20px; color: #000; padding-bottom: 0px; margin-bottom: 7px;">
-                           IFO
+                           IFO (Initial Farm Offering)
                         </h4>
                         <p>
-                           Initial Farm Offering (IFO) tokens enable ventures to gain investor trust by hosting pre-sales in a DEX before listing for trade to the general public.
+                           IFO tokens help projects build investor confidence by conducting pre-sales on DEXs before a wider market launch.
                         </p>
                      </div>
                   </div>
@@ -3009,7 +3009,7 @@
             </div>
          </div>
          <br/>
-         <div align="center" class="contentall">
+         {{-- <div align="center" class="contentall">
             <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" rel="nofollow" target="_blank">
             <span>
             Schedule A Meeting
@@ -3018,7 +3018,7 @@
             <a class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
             Talk to Our Experts
             </a>
-         </div>
+         </div> --}}
       </div>
    </div>
    <!-- =============SECTION-START============== -->
@@ -3027,17 +3027,17 @@
          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="section-title text-center">
                <h2 class="title-th sec_tit underline">
-                  Standards Your Token Development Platform Can Incorporate
+                  Customize Your Token Development with Leading Standards
                </h2>
                <p>
-                  Select a standard for your token development platform. We deliver what you exactly need!
+                  Select the perfect standard for your token platform and let us deliver exactly what you need!
                </p>
             </div>
          </div>
          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
             <div class="integration-items">
                <div class="icons">
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/ethereum.webp"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/ethereum.webp') }}"/>
                </div>
                <h4>
                   Ethereum
@@ -3056,7 +3056,7 @@
          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
             <div class="integration-items">
                <div class="icons">
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/bep.webp" style="width:54px;"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/bep.webp') }}" style="width:54px;"/>
                </div>
                <h4>
                   BNB Chain
@@ -3073,7 +3073,7 @@
          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
             <div class="integration-items">
                <div class="icons">
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/trc.webp" style="width:54px;"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/trc.webp') }}" style="width:54px;"/>
                </div>
                <h4>
                   Tron
@@ -3090,7 +3090,7 @@
          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
             <div class="integration-items">
                <div class="icons">
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/spl.webp" style="width:54px;"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/spl.webp') }}" style="width:54px;"/>
                </div>
                <h4>
                   Solana
@@ -3103,7 +3103,7 @@
          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
             <div class="integration-items">
                <div class="icons">
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/nep.webp" style="width:54px;"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/nep.webp') }}" style="width:54px;"/>
                </div>
                <h4>
                   NEAR Protocol
@@ -3287,7 +3287,7 @@
       }
       }
    </style>
-   <section class="common_spacing gray_bg">
+   {{-- <section class="common_spacing gray_bg">
       <div class="container">
          <h3 class="sec_tit underline text-center">
             How Our Cross-chain Token Development Team Builds Your Project
@@ -3304,7 +3304,7 @@
                            1
                         </div>
                         <div class="timeline-icon">
-                           <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/businesses.webp" style="width: 60px;"/>
+                           <img class="lazy" src="https://www.blockchainappfactory.com/images/token-development/icons/businesses.webp" style="width: 60px;"/>
                         </div>
                         <h4 class="title">
                            Business Discussion
@@ -3320,7 +3320,7 @@
                            2
                         </div>
                         <div class="timeline-icon">
-                           <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/creation.webp" style="width: 60px;"/>
+                           <img class="lazy" src="https://www.blockchainappfactory.com/images/token-development/icons/creation.webp" style="width: 60px;"/>
                         </div>
                         <h4 class="titleleft">
                            Prototype Creation
@@ -3336,7 +3336,7 @@
                            3
                         </div>
                         <div class="timeline-icon">
-                           <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/tokens.webp" style="width: 60px;"/>
+                           <img class="lazy" src="https://www.blockchainappfactory.com/images/token-development/icons/tokens.webp" style="width: 60px;"/>
                         </div>
                         <h4 class="title">
                            Token Creation
@@ -3352,7 +3352,7 @@
                            4
                         </div>
                         <div class="timeline-icon">
-                           <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/whitepaper.webp" style="width: 60px;"/>
+                           <img class="lazy" src="https://www.blockchainappfactory.com/images/token-development/icons/whitepaper.webp" style="width: 60px;"/>
                         </div>
                         <h4 class="titleleft">
                            White Paper Creation
@@ -3368,7 +3368,7 @@
                            5
                         </div>
                         <div class="timeline-icon">
-                           <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/blockchain.webp" style="width: 60px;"/>
+                           <img class="lazy" src="https://www.blockchainappfactory.com/images/token-development/icons/blockchain.webp" style="width: 60px;"/>
                         </div>
                         <h4 class="title">
                            Token Launch
@@ -3384,7 +3384,7 @@
                            6
                         </div>
                         <div class="timeline-icon">
-                           <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/ico.webp" style="width: 60px;"/>
+                           <img class="lazy" src="https://www.blockchainappfactory.com/images/token-development/icons/ico.webp" style="width: 60px;"/>
                         </div>
                         <h4 class="titleleft">
                            Initial Token Offering
@@ -3398,17 +3398,17 @@
             </div>
          </div>
       </div>
-   </section>
+   </section> --}}
    <!-- =============SECTION-START============== -->
    <div class="common_spacing" id="ret-inv" style="background-image: linear-gradient( 180deg , #0d3881 0%, #108ad6);">
       <div class="container">
          <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                <h3 class="text-white">
-                  Elevate Your Crypto Token Creation Project with High-Quality Technology!
+                  Boost Your Token Creation with Top-Tier Technology!
                </h3>
                <p class="text-white">
-                  Mint crypto tokens on renowned blockchain networks to generate huge buzz around your project in the market!
+                  Mint your crypto tokens on leading blockchain networks and create a buzz in the market!
                </p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -3439,7 +3439,7 @@
                      }
                   </style>
                   <div class="cta_mine contentall">
-                     <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" rel="nofollow" target="_blank">
+                     <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="#" rel="nofollow" target="_blank">
                      <span>
                      Schedule A Meeting
                      </span>
@@ -3475,7 +3475,7 @@
       }*/
       }
    </style>
-   <section class="gray_bg" id="demo" style="padding:40px 0px;">
+   {{-- <section class="gray_bg" id="demo" style="padding:40px 0px;">
       <div class="container">
          <div class="row">
             <div class="section-title text-center">
@@ -3491,7 +3491,7 @@
                   <h4 class="sec_tit underline text-center" style="font-size: 24px;">
                      Admin Demo
                   </h4>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/ico-devlopment/admin-ico1.png" style="max-width: 100%;"/>
+                  <img class="lazy" src="https://www.blockchainappfactory.com/images/ico-devlopment/admin-ico1.png" style="max-width: 100%;"/>
                   <div class="design" style="background: transparent;">
                      <p style="margin-bottom:10px;">
                         <b>
@@ -3524,7 +3524,7 @@
                   <h4 class="sec_tit underline text-center" style="font-size: 24px;">
                      User Demo
                   </h4>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/ico-devlopment/user-ico1.png" style="max-width: 100%;"/>
+                  <img class="lazy" src="https://www.blockchainappfactory.com/images/ico-devlopment/user-ico1.png" style="max-width: 100%;"/>
                   <div class="design" style="background: transparent;">
                      <p style="margin-bottom:10px;">
                         <b>
@@ -3557,9 +3557,9 @@
          </div>
          <br/>
       </div>
-   </section>
+   </section> --}}
    <!-- =============SECTION-START============== -->
-   <div class="pricing-table gray-bg" id="pricing-tabs" style="padding: 60px 0px;">
+   {{-- <div class="pricing-table gray-bg" id="pricing-tabs" style="padding: 60px 0px;">
       <div class="container">
          <div class="data table-responsive">
             <div class="section-title">
@@ -4171,7 +4171,7 @@
             </div>
          </div>
       </div>
-   </div>
+   </div> --}}
    <style type="text/css">
       .pricing-table {
       display: block;
@@ -4360,44 +4360,44 @@
             </div>
             <div class="row md-flex">
                <div class="col-md-6 col-sm-12 col-md-12 pull-left">
-                  <img alt=" " class="lazy br-5" data-src="https://www.blockchainappfactory.com/images/token-development/img-1.webp" title=" "/>
+                  <img alt=" " class="lazy br-5" src="{{ asset('images/token-development/img-1.webp') }}" title=" "/>
                </div>
                <div class="col-md-6 col-sm-12 col-md-12 pull-right">
                   <h3 class="font-wei mb20">
-                     Bolster Your Project’s Stature with Customized Crypto Tokens
+                     Supercharge Your Project with Custom-Built Crypto Tokens
                   </h3>
                   <p>
-                     Our seasoned token development company can aid you in creating customized crypto tokens filled with features to boost your business by manifolds. We’re here to bring the maximum potential of your venture by adapting to the latest market trends and technologies.
+                     Our expert token development team crafts custom crypto tokens designed to elevate your business. By harnessing the latest trends and cutting-edge technologies, we drive your venture to achieve its maximum potential.
                   </p>
                   <div class="col-lg-6 col-md-6 col-sm-12 col-md-12 pull-right">
                      <ul>
                         <li>
-                           Create Brand Value
+                           Ensure Token Liquidity
                         </li>
                         <li>
-                           Marketing through Airdrops
+                           Build Brand Value
                         </li>
                         <li>
-                           Token Rewards for Signups
+                           Improve Market Efficiency
                         </li>
                         <li>
-                           User Base Expansion
+                           Leverage Airdrop Marketing
                         </li>
                      </ul>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12 col-md-12 pull-right">
                      <ul>
                         <li>
-                           Assure Token Liquidity
+                           Remove Intermediaries
                         </li>
                         <li>
-                           Gain Market Efficiency
+                           Offer Token Rewards for Signups
                         </li>
                         <li>
-                           Eliminate Intermediaries
+                           Facilitate Global Investments
                         </li>
                         <li>
-                           Allow Global Investments
+                           Expand Your User Base
                         </li>
                      </ul>
                   </div>
@@ -4411,68 +4411,68 @@
       <div class="container">
          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h3 class="sec_tit underline text-center">
-               Industries Our Cryptocurrency Token Development Services Elevates
+               We Revolutionize Industries with Our Cryptocurrency Tokens
             </h3>
-            <p class="text-center" style="font-size: 16px;">
+            {{-- <p class="text-center" style="font-size: 16px;">
                Our crypto token development services bring novel solutions to several globe-building industries.
-            </p>
+            </p> --}}
             <ul>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/e-commerce.webp"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/e-commerce.png') }}"/>
                   <p class="white">
                      E-commerce
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/insurance.webp"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/insurance.png') }}"/>
                   <p class="white">
                      Banking &amp; Insurance
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/real-estate.webp"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/real-estate.png') }}"/>
                   <p class="white">
                      Real Estate
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/art.webp"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/art.webp') }}"/>
                   <p class="white">
                      Fine Art
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/government.svg"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/government.png') }}"/>
                   <p class="white">
                      Government
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/tourism.webp"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/tourism.png') }}"/>
                   <p class="white">
                      Tourism &amp; Hospitality
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/healthcare.webp"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/healthcare.png') }}"/>
                   <p class="white">
                      Healthcare
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/education.svg"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/education.png') }}"/>
                   <p class="white">
                      Education
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/energy.webp"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/energy.png') }}"/>
                   <p class="white">
                      Energy
                   </p>
                </li>
                <li>
-                  <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/nft-gaming.webp"/>
+                  <img class="lazy" src="{{ asset('images/token-development/icons/nft-gaming.png') }}"/>
                   <p class="white">
                      Gaming
                   </p>
@@ -4485,215 +4485,27 @@
    <style type="text/css">
       .category-item.aos-item:hover .text-center{position: relative; z-index: 99; color: #000 !important;}
    </style>
-   <section class="space-pt bg-dark-half-md tech-padding teck">
-      <div class="container">
-         <div class="row justify-content-md-center text-center">
-            <div class="section-title text-center">
-               <h3 class="common_h3">
-                  Blockchains We Offer Excellent Multi-chain Token Development
-               </h3>
-               <hr/>
-               <p>
-                  We excel in using numerous sophisticated blockchain networks to conduct multi-chain token development.
-               </p>
-            </div>
-         </div>
-         <div class="row mt20">
-            <div class="col-sm-12">
-               <div class="category category-grid-style-01 aos-item aos-init" data-aos="fade-up" data-aos-duration="500">
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Bitcoin" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/1.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Bitcoin
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Litecoin" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/2.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Litecoin
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Ripple" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/6.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Ripple
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Tether" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/tether.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Tether
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Cardano" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/cardano.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Cardano
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Bitcoin Cash" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/bitcash.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Bitcoin Cash
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Chainlink" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/chainlink.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Chainlink
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Binance Coin" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/binance-coin.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Binance Coin
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Stellar" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/steller.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Stellar
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="USD Coin" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/coin.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     USD Coin
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Bitcoin SV" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/coinsv.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Bitcoin SV
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="EOS" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/eos.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     EOS
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Monero" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/mono.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Monero
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="TRON" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/tron.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     TRON
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="NEM" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/nem.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     NEM
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Tezos" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/tezo.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Tezos
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Crypto.com Coin" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/cry.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Crypto.com Coin
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="VeChain" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/vechain.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     VeChain
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Uniswap" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/unis.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Uniswap
-                     </a>
-                  </div>
-                  <div class="category-item aos-item">
-                     <div class="category-icon">
-                        <img alt="Aave" class="img-fuild lazy" data-src="https://www.blockchainappfactory.com/images/logos/aave.webp" height="40px" width="auto"/>
-                     </div>
-                     <a alt="" class="category-title" href="#">
-                     Aave
-                     </a>
-                  </div>
-               </div>
-               <br/>
-               <div align="center" class="contentall">
-                  <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" rel="nofollow" target="_blank">
-                  <span>
-                  Schedule A Meeting
-                  </span>
-                  </a>
-                  <a class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
-                  Talk to Our Experts
-                  </a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
+   @include('static.crypto-coins', array(
+      'title' => 'Exceptional Multi-Chain Token Development Across Multiple Blockchains', 
+      'desc' => 'We specialize in leveraging a variety of advanced blockchain networks to deliver top-notch multi-chain token development solutions.',
+   ))
    <!-- =============SECTION-START============== -->
    <section class="welcome-content">
       <div class="container">
          <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt20">
                <h2 class="sec_tit underline text-center text-white">
-                  Diverse Technological Stack Our Crypto Token Development Services Use
+                  Our core Technology Component for High-tech Token development
                </h2>
                <p class="text-center text-white" style="font-size: 16px;">
-                  We tap into the best technology available to offer high-quality cryptocurrency token development services.
+                  Tap into the blockchain industry with the best technology available. We offer 15+ years of expertise in the following areas.
                </p>
             </div>
             <div align="center" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                <ul>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/react.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/react.webp') }}"/>
                      </div>
                      <p class="white">
                         React JS
@@ -4701,7 +4513,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/angular.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/angular.webp') }}"/>
                      </div>
                      <p class="white">
                         Angular JS
@@ -4709,7 +4521,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/laravel.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/laravel.webp') }}"/>
                      </div>
                      <p class="white">
                         Laravel
@@ -4717,7 +4529,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/php.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/php.png') }}"/>
                      </div>
                      <p class="white">
                         PHP
@@ -4725,7 +4537,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/node-js_logo.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/node-js_logo.webp') }}"/>
                      </div>
                      <p class="white">
                         Node JS
@@ -4733,7 +4545,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/go-lang.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/go-lang.webp') }}"/>
                      </div>
                      <p class="white">
                         Golang
@@ -4741,7 +4553,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/sql.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/sql.webp') }}"/>
                      </div>
                      <p class="white">
                         MySQL
@@ -4749,7 +4561,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/postgresql.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/postgresql.webp') }}"/>
                      </div>
                      <p class="white">
                         PostgreSQL
@@ -4757,7 +4569,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/mongodb.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/mongodb.webp') }}"/>
                      </div>
                      <p class="white">
                         MongoDB
@@ -4765,7 +4577,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/ipfs.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/ipfs.webp') }}"/>
                      </div>
                      <p class="white">
                         IPFS
@@ -4773,7 +4585,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/filecoin.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/filecoin.webp') }}"/>
                      </div>
                      <p class="white">
                         Filecoin
@@ -4781,7 +4593,7 @@
                   </li>
                   <li>
                      <div class="icons">
-                        <img class="lazy" data-src="https://www.blockchainappfactory.com/images/token-development/icons/pinata.webp"/>
+                        <img class="lazy" src="{{ asset('images/token-development/icons/pinata.webp') }}"/>
                      </div>
                      <p class="white">
                         Pinata
@@ -4799,71 +4611,392 @@
             <div class="row">
                <div class="col-lg-12 text-center">
                   <h3 class="font-wei mb20">
-                     Work with an Esteemed Token Development Company
+                     Partner with a Leading Token Development Company
                      
                   </h3>
                   <p>
-                        Our team of token developers is highly skilled in bringing project requirements to reality without hassles. Expect us to create tokens of various blockchain standards that come with top-notch utility and security.
+                     Our team of expert token developers is committed to turning your project vision into reality. We specialize in creating tokens across various blockchain standards, ensuring top-notch utility and security.
                         <br/>
                         <br/>
-                        At Blockchain App Factory, we strive to realize the aspirations of entrepreneurs and brand owners like you by leveraging our expertise in developing tokens with a plethora of features. Tap into our excellence to unleash tokens across 10+ leading layer-1 and layer-2 blockchain networks.
+                        At Blockchain App Factory, we transform the goals of entrepreneurs and brand owners into successful outcomes. Our expertise covers over 10 leading layer-1 and layer-2 blockchain networks, delivering versatile tokens with a range of features.
                      </p>
                </div>
             </div>
             <div class="row md-flex">
+               <p>Why Choose Us?</p>
                <div class="col-md-4 col-sm-12 col-md-12 pull-right">
                   <ul>
                      <li>
                         Experienced Blockchain Developers
                      </li>
                      <li>
-                        Expertise in Various Token Standards
+                        Expertise in Multiple Token Standards
                      </li>
                      <li>
-                        Certified Development Teams
+                        Certified and Skilled Teams
                      </li>
                      <li>
-                        Business-focused Solutions
+                        Business-Focused Solutions
                      </li>
                      <li>
-                        Cost-effective Services
+                        Cost-Effective Services
                      </li>
                   </ul>
                </div>
                <div class="col-md-3 col-sm-12 col-md-12 pull-right">
                   <ul>
                      <li>
-                        Personalized Token Solutions
+                        Custom Token Solutions
                      </li>
                      <li>
-                        Support for ICO Launch
+                        Complete ICO Support
                      </li>
                      <li>
-                        Free Consultation Sessions
+                        Free Consultation
                      </li>
                      <li>
-                        Timely Delivery
+                        Timely Project Delivery
                      </li>
                      <li>
-                        24 x 7 x 365 Technical Support
+                        24/7/365 Technical Support
                      </li>
                   </ul>
                </div>
                <div class="col-md-5 col-sm-12 col-md-12 pull-left">
-                  <img alt=" " class="lazy br-5" data-src="https://www.blockchainappfactory.com/images/token-development/img-2.webp" title=" "/>
+                  <img alt=" " class="lazy br-5" src="{{asset('images/token-development/img-2.webp')}}" title=" "/>
                </div>
             </div>
          </div>
       </div>
    </div>
    <!-- =============SECTION-START============== -->
-    <div class="common_spacing gray_bg"> @include('static.faq')</div>
+    {{-- <div class="common_spacing gray_bg"> @include('static.faq')</div> --}}
+
+    <div class="product-section fag_sec p-50">
+      <div class="container">
+         <div class="section-top">
+            <div class="section-header text-center">
+               <h4 class="section-title mt20 underline">
+                  FAQ
+               </h4>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-12 col-md-12">
+               <div class="faq-content">
+                  <div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                           <h5 class="panel-title">
+                              <a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#faq1" role="button">
+                              <span>
+                                 What is a Token in Blockchain and Cryptocurrency?
+                              </span>
+                              </a>
+                           </h5>
+                        </div>
+                        <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="faq1" role="tabpanel">
+                           <div class="panel-body">
+                              <p>
+                                 A token is a digital asset on a blockchain that represents different types of value or rights. Built on existing blockchains, tokens can be used for:
+                              </p>
+                              <ul class="list-ico">
+                                 <li>
+                                    <b>Transactions</b>
+                                 </li>
+                                 <li>
+                                    <b>Access to services</b>
+                                 </li>
+                                 <li>
+                                    <b>Representing assets or utilities</b>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                           <h5 class="panel-title">
+                              <a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#faq2" role="button">
+                              <span>
+                                 How is a Token Different from a Cryptocurrency?
+                              </span>
+                              </a>
+                           </h5>
+                        </div>
+                        <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="faq2" role="tabpanel">
+                           <div class="panel-body">
+                              <ul class="list-ico">
+                                 <li>
+                                    <b>
+                                       Cryptocurrency -
+                                    </b>
+                                    Digital money for transactions and value exchange (e.g., Bitcoin, Ethereum).
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Token -
+                                    </b>
+                                    Created on an existing blockchain and used for:
+                                    <ul class="list-ico">
+                                       <li><b>Representing assets</b></li>
+                                       <li><b>Providing access rights</b></li>
+                                       <li><b>Offering utility in applications</b></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                           <h5 class="panel-title">
+                              <a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#faq3" role="button">
+                              <span>
+                                 What is the Purpose of Developing a Token?
+                              </span>
+                              </a>
+                           </h5>
+                        </div>
+                        <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="faq3" role="tabpanel">
+                           <div class="panel-body">
+                              <p>
+                                 Developing a token serves multiple purposes, including:
+                              </p>
+                              <ul class="list-ico">
+                                 <li>
+                                    <b>
+                                       Fundraising -
+                                    </b>
+                                    Through Initial Coin Offerings (ICOs) or similar methods.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Access -
+                                    </b>
+                                    Granting rights to services or platforms.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Representation -
+                                    </b>
+                                    Digital assets or ownership in applications.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Engagement -
+                                    </b>
+                                    Building and managing a community or user base.
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                           <h5 class="panel-title">
+                              <a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#faq4" role="button">
+                              <span>
+                                 What is the Process of Creating a Token?
+                              </span>
+                              </a>
+                           </h5>
+                        </div>
+                        <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="faq4" role="tabpanel">
+                           <div class="panel-body">
+                              <ul class="list-ico">
+                                 <li>
+                                    <b>
+                                       Define Purpose -
+                                    </b>
+                                    Identify the token’s use case and functionality.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Select Platform -
+                                    </b>
+                                    Choose a suitable blockchain (e.g., Ethereum, Binance Smart Chain).
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Design Features
+                                    </b>
+                                    Set token attributes and functionalities.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Develop Smart Contract
+                                    </b>
+                                    Code and test the rules governing the token.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Deploy
+                                    </b>
+                                    Launch the token on the chosen blockchain.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Distribute
+                                    </b>
+                                    Implement strategies to reach your audience.
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                           <h5 class="panel-title">
+                              <a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#faq5" role="button">
+                              <span>
+                                 Which Blockchain Platforms Support Token Creation?
+                              </span>
+                              </a>
+                           </h5>
+                        </div>
+                        <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="faq5" role="tabpanel">
+                           <div class="panel-body">
+                              <ul class="list-ico">
+                                 <li>
+                                    <b>
+                                       Ethereum -
+                                    </b>
+                                    Popular for making various tokens (e.g., ERC-20, ERC-721).
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Binance Smart Chain -
+                                    </b>
+                                    Offers low fees and fast performance.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Solana
+                                    </b>
+                                    Ideal for quick transactions and low costs.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Polygon
+                                    </b>
+                                    Enhances the scalability of Ethereum tokens.
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                           <h5 class="panel-title">
+                              <a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#faq6" role="button">
+                              <span>
+                                 What Are the Common Token Standards?
+                              </span>
+                              </a>
+                           </h5>
+                        </div>
+                        <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="faq6" role="tabpanel">
+                           <div class="panel-body">
+                              <ul class="list-ico">
+                                 <li>
+                                    <b>
+                                       ERC-20 
+                                    </b>
+                                    for fungible tokens on Ethereum.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       ERC-721
+                                    </b>
+                                    for NFTs on Ethereum.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       BEP-20
+                                    </b>
+                                    for tokens on Binance Smart Chain.
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                           <h5 class="panel-title">
+                              <a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#faq7" role="button">
+                              <span>
+                                 How Can One Ensure the Security of a Token?
+                              </span>
+                              </a>
+                           </h5>
+                        </div>
+                        <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="faq7" role="tabpanel">
+                           <div class="panel-body">
+                              <ul class="list-ico">
+                                 <li>
+                                    <b>
+                                       Secure Coding 
+                                    </b>
+                                    Follow best practices in smart contract development.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Regular Audits
+                                    </b>
+                                    Conduct security audits by third-party experts.
+                                 </li>
+                                 <li>
+                                    <b>
+                                       Use Reputable Tools
+                                    </b>
+                                    Employ established development tools and platforms.
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                           <h5 class="panel-title">
+                              <a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#faq8" role="button">
+                              <span>
+                                 What is a Token in Blockchain and Cryptocurrency?
+                              </span>
+                              </a>
+                           </h5>
+                        </div>
+                        <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="faq8" role="tabpanel">
+                           <div class="panel-body">
+                              <ul class="list-ico">
+                                 <li>
+                                    <b>Regulatory Compliance</b>
+                                 </li>
+                                 <li>
+                                    <b>Security</b>
+                                 </li>
+                                 <li>
+                                    <b>Market Adoption</b>
+                                 </li>
+                                 <li>
+                                    <b>Platform Selection</b>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
   
-   @include('static.spotlight')
+   {{-- @include('static.spotlight')
    @include('static.newsletter')
-   @include('static.contact-form')
-   <!-- =============SECTION-START============== -->
-   <!-- =============SECTION-START============== -->
-   <!-- =============SECTION-START============== -->
+   @include('static.contact-form') --}}
 </div>
 @endsection

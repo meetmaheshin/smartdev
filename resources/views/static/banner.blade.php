@@ -12,18 +12,20 @@
             <div itemscope="" itemtype="http://schema.org/CreativeWork">
                 <div class="ban_tirt">
                 <span style="font-weight: normal; font-size: 19px;">
-                Create Your New Cryptocurrency with the Best
+                    {{ $banner_heading_1 }}
                 </span>
                 <h1 itemprop="name">
-                Cryptocurrency Development Company
+                    {{ $banner_heading_2 }}
                 </h1>
                 </div>
                 <p itemprop="text">
-                Propel your project with our expert cryptocurrency development company by crafting tailored tokenomics and amplifying your coin's presence.
+                {{-- Propel your project with our expert cryptocurrency development company by crafting tailored tokenomics and amplifying your coin's presence. --}}
+                {{ $banner_para }}
                 </p>
                 <div class="txt">
-                <a class="nec-btn" href="https://www.blockchainappfactory.com/create-your-own-token-and-coin" id="cyz" rel="nofollow" style="border-radius: 30px !important; text-transform: capitalize !important; margin: 1px!important;">
-                Create your own coin
+                <a class="nec-btn" href="#" id="cyz" rel="nofollow" style="border-radius: 30px !important; text-transform: capitalize !important; margin: 1px!important;">
+                {{-- Create your own coin --}}
+                {{ $banner_CTA }}
                 </a>
                 </div>
             </div>
@@ -31,7 +33,7 @@
             </div>
             </div>
             <div class="col-md-7 col-sm-12 col-xs-12 text-center">
-            <img alt="Crypto Development Company" class="magic" src="images/crypto/banner-img.webp" title="Crypto Development Company"/>
+            <img alt="Crypto Development Company" class="magic" src="{{ asset('images/crypto/banner-img.jpeg') }}" title="Crypto Development Company" width="532" height="490"/>
             </div>
         </div>
         </div>

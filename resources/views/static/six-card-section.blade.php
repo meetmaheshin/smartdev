@@ -5,12 +5,12 @@
       <div class="section-title">
        <h2 class="title">
         <strong>
-         What Our Cryptocurrency Development Services Cover
+         {{$heading}}
         </strong>
        </h2>
        <hr/>
        <p>
-        With our wide range of tech stack and a perfect crypto market analysis, we provide the ultimate cryptocurrency development services to boost your business.
+        {{ $para }}
        </p>
       </div>
      </div>
@@ -18,79 +18,79 @@
       <ul>
        <li>
         <div class="icons">
-         <img class="lazy" data-src="images/cryptocurrency-development/icons/consulting.webp"/>
+         <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/consulting.webp') }}"/>
         </div>
         <div class="content">
          <h3>
-          Crypto Consulting Services
+          {{ $card_title_1 }}
          </h3>
          <p>
-          Our crypto consulting team offers vital insights about your new project. We aid in framing your business using any model like exchanges, wallets, coins, and initial cryptocurrency offerings.
+          {{ $card_desc_1 }}
          </p>
         </div>
        </li>
        <li>
         <div class="icons">
-         <img class="lazy" data-src="images/cryptocurrency-development/icons/crypto.webp"/>
+         <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/crypto.png') }}"/>
         </div>
         <div class="content">
          <h3>
-          Crypto Coin Development
+            {{ $card_title_2 }}
          </h3>
          <p>
-          Our cryptocurrency development services enable you to launch coins on the desired blockchain(s) with numerous utilities that can aid in building a solid community based on a crypto-based platform.
+            {{ $card_desc_2 }}
          </p>
         </div>
        </li>
        <li>
         <div class="icons">
-         <img class="lazy" data-src="images/cryptocurrency-development/icons/tokens.webp"/>
+         <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/tokens.png') }}"/>
         </div>
         <div class="content">
          <h3>
-          Crypto Development
+            {{ $card_title_3 }}
          </h3>
          <p>
-          We create crypto coins representing various kinds of assets, equity shares, and fiat currencies that can be used in various crypto and Web3 business models to garner the wider community’s attention.
+            {{ $card_desc_3 }}
          </p>
         </div>
        </li>
        <li>
         <div class="icons">
-         <img class="lazy" data-src="images/cryptocurrency-development/icons/listing.webp"/>
+         <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/listing.png') }}"/>
         </div>
         <div class="content">
          <h3>
-          Crypto Listing Services
+            {{ $card_title_4 }}
          </h3>
          <p>
-          Our expert crypto listing services allow your cryptocurrency coins to get listed on prominent crypto exchange platforms, making your novel coins accessible to crypto enthusiasts worldwide.
+            {{ $card_desc_4 }}
          </p>
         </div>
        </li>
        <li>
         <div class="icons">
-         <img class="lazy" data-src="images/cryptocurrency-development/icons/crypto-wallet.webp"/>
+         <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/crypto-wallet.png') }}"/>
         </div>
         <div class="content">
          <h3>
-          Crypto Wallet Development
+            {{ $card_title_5 }}
          </h3>
          <p>
-          Cryptocurrency wallets built by our professional team can complement your crypto project well by helping your users hold and transact cryptos securely and seamlessly, alongside several novel features.
+            {{ $card_desc_5 }}
          </p>
         </div>
        </li>
        <li>
         <div class="icons">
-         <img class="lazy" data-src="images/cryptocurrency-development/icons/exchange.webp"/>
+         <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/exchange.png') }}"/>
         </div>
         <div class="content">
          <h3>
-          Crypto Exchange Development
+            {{ $card_title_6 }}
          </h3>
          <p>
-          Our professionals excel in launching cryptocurrency exchanges that can let your users trade numerous cryptocurrencies (including yours) to gain immense benefits that serve as a steady revenue source.
+            {{ $card_desc_6 }}
          </p>
         </div>
        </li>

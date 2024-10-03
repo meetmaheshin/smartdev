@@ -5,117 +5,117 @@
       <div class="section-title text-center">
        <h3>
         <strong>
-         Special Features Our Cryptocurrency Coin Development Services Include for Projects
+         {{ $title }}
         </strong>
        </h3>
        <hr/>
        <p>
-        We stand as the best company for developing cryptocurrencies around the globe, utilize our cryptocurrency coin development services and offer cutting-edge features with customizable solutions for every project.
+        {{ $desc }}
        </p>
       </div>
      </div>
      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
       <div class="travel-app-items">
        <div class="icons">
-        <img class="lazy" data-src="images/cryptocurrency-development/icons/security.webp"/>
+        <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/security.png') }}"/>
        </div>
        <p>
         <strong>
-         Multi-Factor Security
+         {{ $card_title_1 }}
         </strong>
-        We offer multi-faceted security solutions for our client crypto projects both from the user-end and back-end, enabling them to offer safe environments for users.
+        {{ $card_desc_1 }}
        </p>
       </div>
       <div class="travel-app-items">
        <div class="icons">
-        <img class="lazy" data-src="images/cryptocurrency-development/icons/trading.webp"/>
+        <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/trading.png') }}"/>
        </div>
        <p>
         <strong>
-         Smart Contract Trading
+         {{ $card_title_2 }}
         </strong>
-        Our experienced team excels in creating smart contract programs that enable decentralized cryptocurrency trading operations smoothly at incredibly low prices.
+        {{ $card_desc_2 }}
        </p>
       </div>
       <div class="travel-app-items">
        <div class="icons">
-        <img class="lazy" data-src="images/cryptocurrency-development/icons/payment-method.webp"/>
+        <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/payment-method.webp') }}"/>
        </div>
        <p>
         <strong>
-         Safe Payment Integrations
+         {{ $card_title_3 }}
         </strong>
-        Payment solutions we integrate into your cryptocurrency software come with high levels of security that ensure security for crypto transactions of multiple types.
+        {{ $card_desc_3 }}
        </p>
       </div>
       <div class="travel-app-items">
        <div class="icons">
-        <img class="lazy" data-src="images/cryptocurrency-development/icons/liquidity.webp"/>
+        <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/liquidity.webp') }}"/>
        </div>
        <p>
         <strong>
-         Crypto Liquidity Provisions
+         {{ $card_title_4 }}
         </strong>
-        We provide extensive provisions for your project to have sufficient crypto liquidity at all times, ensuring your venture gains high levels of user satisfaction.
+        {{ $card_desc_4 }}
        </p>
       </div>
      </div>
      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
       <div class="travel-app-items">
        <div class="icons">
-        <img class="lazy" data-src="images/cryptocurrency-development/icons/global.webp"/>
+        <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/global.png') }}"/>
        </div>
        <p>
         <strong>
-         Multi-Lingual Support
+         {{ $card_title_5 }}
         </strong>
-        Our experts build applications with support for prominent global languages, allowing people across the globe to access your cryptocurrency application easily.
+        {{ $card_desc_5 }}
        </p>
       </div>
       <div class="travel-app-items">
        <div class="icons">
-        <img class="lazy" data-src="images/cryptocurrency-development/icons/kyc.webp"/>
+        <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/kyc.png') }}"/>
        </div>
        <p>
         <strong>
-         User Verification Features
+         {{ $card_title_6 }}
         </strong>
-        We integrate verification elements like Know-Your-Customer (KYC) and Anti-Money Laundering (AML) to preserve your cryptocurrency venture’s overall integrity.
+        {{ $card_desc_6 }}
        </p>
       </div>
       <div class="travel-app-items">
        <div class="icons">
-        <img class="lazy" data-src="images/cryptocurrency-development/icons/support.webp"/>
+        <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/support.png') }}"/>
        </div>
        <p>
         <strong>
-         Multi-Currency Support
+         {{ $card_title_7 }}
         </strong>
-        Cryptocurrency platforms we develop offer support to multiple prominent cryptocurrencies, enabling your business to garner the wider community’s attention.
+        {{ $card_desc_7 }}
        </p>
       </div>
       <div class="travel-app-items">
        <div class="icons">
-        <img class="lazy" data-src="images/cryptocurrency-development/icons/payment-gateways.webp"/>
+        <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/payment-gateways.png') }}"/>
        </div>
        <p>
         <strong>
-         Crypto and Fiat Gateways
+         {{ $card_title_8 }}
         </strong>
-        The crypto development platforms we build come with crypto and fiat currency payment gateways that can empower ventures, ensuring users can trade cryptos easily.
+        {{ $card_desc_8 }}
        </p>
       </div>
      </div>
      <div class="col-lg-offset-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
       <div class="travel-app-items">
        <div class="icons">
-        <img class="lazy" data-src="images/cryptocurrency-development/icons/benefits.svg"/>
+        <img class="lazy" src="{{ asset('images/cryptocurrency-development/icons/benefits.png') }}"/>
        </div>
        <p>
         <strong>
-         Zero Intermediaries
+         {{ $card_title_9 }}
         </strong>
-        The crypto projects we create come with zero intermediary steps while letting you gain substantial benefits, satisfying the requirements of everyone involved.
+        {{ $card_desc_9 }}
        </p>
       </div>
      </div>

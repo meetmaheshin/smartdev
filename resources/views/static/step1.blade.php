@@ -2,11 +2,11 @@
    <div class="container">
     <div class="section-title text-center">
      <h3 class="common_h3">
-      How Does Our Cryptocurrency Coin Development Company Create Your Project?
+      {{ $title }}
      </h3>
      <hr/>
      <p class="text-center">
-      As a cryptocurrency coin development company we have blockchain experts and market research analysts who will help you to achieve your ideal revenue goal.
+      {{ $desc }}
      </p>
      <br/>
     </div>
@@ -25,20 +25,20 @@
         </div>
         <div class="timeline7-content">
          <h4>
-          Business Planning
+          {{ $card_title_1 }}
          </h4>
          <p>
-          To begin with, we garner your requirements and conduct market research to come up with the perfect business model.
+          {{ $card_desc_1 }}
          </p>
         </div>
        </div>
        <div class="col-md-2 col-sm-4 timeline7">
         <div class="timeline7-content">
          <h4>
-          Whitepaper Drafting
+            {{ $card_title_2 }}
          </h4>
          <p>
-          We create the official whitepaper representing all your project’s specifics that could attract prospective investors.
+            {{ $card_desc_2 }}
          </p>
         </div>
         <div class="border">
@@ -63,20 +63,20 @@
         </div>
         <div class="timeline7-content">
          <h4>
-          Technical Design
+            {{ $card_title_3 }}
          </h4>
          <p>
-          Our experts design various elements of the project, like wallets, nodes, and setup explorers, that make it functional.
+            {{ $card_desc_3 }}
          </p>
         </div>
        </div>
        <div class="col-md-2 col-sm-4 timeline7">
         <div class="timeline7-content">
          <h4>
-          Technical Development
+            {{ $card_title_4 }}
          </h4>
          <p>
-          Now, we build the project’s smart contracts and algorithms, hash values, technical packages, and wallet provisions.
+            {{ $card_desc_4 }}
          </p>
         </div>
         <div class="border">
@@ -101,20 +101,20 @@
         </div>
         <div class="timeline7-content">
          <h4>
-          Testing
+            {{ $card_title_5 }}
          </h4>
          <p>
-          We test the project’s app meticulously to detect and troubleshoot possible defects using manual and automated test cases.
+            {{ $card_desc_5 }}
          </p>
         </div>
        </div>
        <div class="col-md-2 col-sm-4 timeline7">
         <div class="timeline7-content">
          <h4>
-          Launching
+            {{ $card_title_6 }}
          </h4>
          <p>
-          Finally, we launch your cryptocurrency project and maintain it periodically to ensure optimal performance at all times.
+            {{ $card_desc_6 }}
          </p>
         </div>
         <div class="border">
@@ -135,14 +135,14 @@
      <br/>
     </div>
     <div align="center" class="contentall" style="padding-top: 0;">
-     <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" rel="nofollow" style="border-radius: 30px !important;" target="_blank">
+     <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="" rel="nofollow" style="border-radius: 30px !important;" target="_blank">
       <span>
-       Schedule A Meeting
+         Schedule a Consultation with Our Experts Today
       </span>
      </a>
-     <a href="#newsletter-form-sec" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
+     {{-- <a href="#newsletter-form-sec" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
       Connect With Our Experts
-     </a>
+     </a> --}}
     </div>
    </div>
   </section>
