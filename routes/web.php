@@ -355,8 +355,38 @@ Route::get('/freelance-jobs/apply/{slug}', [ShareableLinkController::class, 'sho
 // cryptocurrency
 Route::get('/cryptocurrency-development', function () {
     return view('static.cryptocurrency-development');
-})->name('cryptocurrency-development.blade.page');
+})->name('cryptocurrency-development');
 
 Route::get('/token-development', function () {
     return view('static.token-development');
-})->name('token-development.blade.page');
+})->name('token-development');
+
+Route::get('/ethereum-token-development', function () {
+    return view('static.ethereum-token-development');
+})->name('ethereum-token-development');
+
+Route::get('/tron-token-development', function () {
+    return view('static.tron-token-development');
+})->name('tron-token-development');
+
+
+Route::get('/rebase-token-development', function () {
+    return view('static.rebase-token-development');
+})->name('rebase-token-development');
+
+Route::get('/brc-20-token-development', function () {
+    return view('static.brc-20-token-development');
+})->name('brc-20-token-development');
+
+Route::get('/src-20-token-development', function () {
+    return view('static.src-20-token-development');
+})->name('src-20-token-development');
+
+// bep20-token-development
+Route::get('/bep20-token-development', function () {
+    return view('static.bep20-token-development');
+})->name('bep20-token-development');
+
+Route::get('/altcoin-development', function () {
+    return view('static.altcoin-development');
+})->name('altcoin-development');

@@ -3,8 +3,6 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/inline-css.css')}}">
-@section('css')
-@endsection
 @section('content')
 <div class="login-popup">
    <div class="box-1">
@@ -125,22 +123,44 @@ We focus on creating utility tokens that give users access to future products or
 We emphasize transparency and security, customizing our services to fit your needs and make your project stand out in the crypto world.',
    'cta' => 'Talk to our experts now'
 ))
-@include('static.six-card-section',array(
-   'heading' => 'Cryptocurrency Development Services- For Every Business Needs', 
-   'para' => 'Harnessing our extensive tech stack and precise market analysis, we offer unparalleled cryptocurrency development services designed to propel your business forward.',
-   'card_title_1' => 'Strategic Crypto Consulting',
-   'card_desc_1' => 'Our consulting experts deliver crucial insights to shape your project, whether you’re building exchanges, wallets, coins, or launching initial offerings.',
-   'card_title_2' => 'Tailored Crypto Coin Creation',
-   'card_desc_2' => 'We facilitate the launch of custom coins on your chosen blockchain(s), designed to foster a robust community and support your crypto platform’s growth.',
-   'card_title_3' => 'Versatile Crypto Asset Development',
-   'card_desc_3' => 'From equity shares to fiat-backed coins, we develop cryptocurrencies that integrate seamlessly with various crypto and Web3 models, capturing the attention of a broad audience.',
-   'card_title_4' => 'Premier Crypto Listing Services',
-   'card_desc_4' => 'Our team ensures your coins are featured on leading exchange platforms, enhancing visibility and accessibility to crypto enthusiasts globally.',
-   'card_title_5' => 'Innovative Crypto Wallet Solutions',
-   'card_desc_5' => 'We design advanced cryptocurrency wallets that enable secure, seamless transactions while offering unique features to enhance user experience.',
-   'card_title_6' => 'Advanced Crypto Exchange Development',
-   'card_desc_6' => 'We build sophisticated cryptocurrency exchanges, providing a platform for trading multiple cryptocurrencies, including yours, to generate substantial revenue.'
-))
+
+@include('static.six-card-section', [
+   'title' => 'Cryptocurrency Development Services- For Every Business Needs', 
+   'desc' => 'Harnessing our extensive tech stack and precise market analysis, we offer unparalleled cryptocurrency development services designed to propel your business forward.',
+   'cards' => [
+         [
+            'title' => 'Strategic Crypto Consulting',
+            'desc' => "Our consulting experts deliver crucial insights to shape your project, whether you’re building exchanges, wallets, coins, or launching initial offerings.",
+            'image' => 'cryptocurrency-development/icons/consulting.webp'
+         ],
+         [
+            'title' => 'Tailored Crypto Coin Creation',
+            'desc' => "We facilitate the launch of custom coins on your chosen blockchain(s), designed to foster a robust community and support your crypto platform’s growth.",
+            'image' => "cryptocurrency-development/icons/crypto.png"
+         ],
+         [
+            'title' => 'Versatile Crypto Asset Development',
+            'desc' => 'From equity shares to fiat-backed coins, we develop cryptocurrencies that integrate seamlessly with various crypto and Web3 models, capturing the attention of a broad audience.',
+            'image' => 'cryptocurrency-development/icons/tokens.png'
+         ],
+         [
+            'title' => 'Premier Crypto Listing Services',
+            'desc' => 'Our team ensures your coins are featured on leading exchange platforms, enhancing visibility and accessibility to crypto enthusiasts globally.',
+            'image' => 'cryptocurrency-development/icons/listing.png'
+         ],
+         [
+            'title' => 'Innovative Crypto Wallet Solutions',
+            'desc' => 'We design advanced cryptocurrency wallets that enable secure, seamless transactions while offering unique features to enhance user experience.',
+            'image' => 'cryptocurrency-development/icons/crypto-wallet.png'
+         ],
+         [
+            'title' => 'Advanced Crypto Exchange Development',
+            'desc' => 'We build sophisticated cryptocurrency exchanges, providing a platform for trading multiple cryptocurrencies, including yours, to generate substantial revenue.',
+            'image' => 'cryptocurrency-development/icons/exchange.png'
+         ],
+   ],
+])
+
 @include('static.scroll-card-section',array(
    'title' => 'Pioneering Cryptocurrency Development Excellence- Tailored Solutions from Our Experts', 
    'desc_1' => 'As a leading provider of advanced cryptocurrency development services, we deliver a diverse range of solutions crafted by our experienced developers. Our offerings are driven by meticulously designed programs that introduce groundbreaking features.',
@@ -159,22 +179,31 @@ We emphasize transparency and security, customizing our services to fit your nee
    'desc' => 'As a leading global provider of cryptocurrency development, we deliver cutting-edge features and tailored solutions for every project, ensuring exceptional results.',
    'card_title_1' => 'Advanced Multi-Factor Security',
    'card_desc_1' => 'We implement robust, multi-layered security measures for both front-end and back-end systems, providing a secure environment for users and protecting your crypto projects from threats.',
+   'card_image_1' => 'cryptocurrency-development/icons/security.png',
    'card_title_2' => 'Seamless Smart Contract Integration',
    'card_desc_2' => 'Our skilled team creates smart contract solutions that facilitate decentralized trading operations with unparalleled efficiency and minimal costs.',
+   'card_image_2' => 'cryptocurrency-development/icons/trading.png',
    'card_title_3' => 'Secure Payment Integrations',
    'card_desc_3' => 'We integrate high-security payment solutions into your cryptocurrency platform, ensuring safe and reliable transactions across various types.',
+   'card_image_3' => 'cryptocurrency-development/icons/payment-method.webp',
    'card_title_4' => 'Comprehensive Crypto Liquidity Solutions',
    'card_desc_4' => 'We offer extensive liquidity provisions to maintain the consistent availability of funds, enhancing user satisfaction and project stability.',
+   'card_image_4' => 'cryptocurrency-development/icons/liquidity.webp',
    'card_title_5' => 'Global Multi-Language Support',
    'card_desc_5' => ' Our applications are designed with support for major global languages, making your cryptocurrency platform accessible to a diverse, international audience.',
+   'card_image_5' => 'cryptocurrency-development/icons/global.png',
    'card_title_6' => 'Robust User Verification Systems',
    'card_desc_6' => ' We incorporate essential verification features such as Know-Your-Customer (KYC) and Anti-Money Laundering (AML) protocols to uphold the integrity and security of your cryptocurrency venture.',
+   'card_image_6' => 'cryptocurrency-development/icons/kyc.png',
    'card_title_7' => 'Extensive Multi-Currency Compatibility',
    'card_desc_7' => 'Our platforms support a wide range of prominent cryptocurrencies, helping your business capture the attention of the broader crypto community.',
+   'card_image_7' => 'cryptocurrency-development/icons/support.png',
    'card_title_8' => 'Integrated Crypto and Fiat Gateways',
    'card_desc_8' => 'We build platforms with integrated payment gateways for both cryptocurrency and fiat transactions, facilitating seamless trading experiences for users.',
+   'card_image_8' => 'cryptocurrency-development/icons/payment-gateways.png',
    'card_title_9' => 'Direct Transactions with Zero Intermediaries',
    'card_desc_9' => 'Our projects eliminate intermediaries, providing a streamlined process that maximizes benefits and meets all participant needs efficiently.',
+   'card_image_9' => 'cryptocurrency-development/icons/benefits.png',
 ))
 @include('static.coins-table',array(
    'title' => 'Create Your Own Game-Changing Cryptocurrency', 
@@ -216,6 +245,8 @@ We emphasize transparency and security, customizing our services to fit your nee
 @include('static.crypto-coins', array(
    'title' => 'Built on the top of secured Cryptocurrency Website Development Platforms', 
    'desc' => 'We offer an ideal solution for creating custom replicas of major cryptocurrencies, tailored to your specific needs.',
+   'cta_1' => '',
+   'cta_2' => ''
 ))
 @include('static.why-choose-us', array(
    'title' => 'Why Altcoin Development is a Strategic Advantage for Your Business', 
@@ -223,9 +254,9 @@ We emphasize transparency and security, customizing our services to fit your nee
    'desc_2' => 'From a business perspective, creating altcoins provides an opportunity to offer unique services and establish a tailored ecosystem. Altcoins, operating independently of the Bitcoin blockchain, can leverage eco-friendly Proof-of-Stake (PoS) networks to enhance operational efficiency. With the global rise in cryptocurrency adoption, developing your own altcoin can position your business for long-term success and innovation.',
    'cta' => 'Connect with our experts!'
 ))
-@include('static.testimonial-card')
+{{-- @include('static.testimonial-card') --}}
 
-<div class="container common_spacing">
+{{-- <div class="container common_spacing">
    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
       <div class="section-header underline">
          <h4 class="common_h3">
@@ -255,7 +286,7 @@ We emphasize transparency and security, customizing our services to fit your nee
          </div>
       </div>
    </div>
-</div>
+</div> --}}
 
 
 <div class="What-one common_spacing" style="background:#140050;">

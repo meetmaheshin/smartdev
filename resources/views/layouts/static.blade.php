@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="> 500 experienced blockchain engineers to choose from for you Blockchain development Idea ; Solidity Developers, Rust Developers  for Smart Contract,  Defi Exchange, NFT Marketplace, Defi Wallet, ENS Forks and for other crypto development projects. Contact us and let us help you!" />
-    <title>Hire Blockchain Coders, Solidity programmers from SmartDev3 Ecosystem</title>
+    <title>@yield('title', 'Hire Blockchain Coders, Solidity programmers from SmartDev3 Ecosystem')</title>
     <link rel="shortcut icon" href="{{url('images/dev3dao_fav_icon.png')}}" type="{{url('images/dev3dao_fav_icon.png')}}" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/home-comman.css')}}">
@@ -288,13 +288,13 @@
                                     <ul class="list-unstyled custom-list">
                                         <li class=""><a href="{{ url('cryptocurrency-development') }}" class="font_11">Cryptocurrency Development</a></li>
                                         <li><a href="{{ url('token-development') }}" class="font_11">Token Development</a></li>
-                                        <li><a href="#" class="font_11">Ethereum Token Development</a></li>
-                                        <li><a href="#" class="font_11">Torn Token Development</a></li>
-                                        <li><a href="#" class="font_11">Rebase Token Development</a></li>
-                                        <li><a href="#" class="font_11">BRC 20 Token Development</a></li>
-                                        <li><a href="#" class="font_11">SRC 20 Token Development</a></li>
-                                        <li><a href="#" class="font_11">BEP - 20 Token Development</a></li>
-                                        <li><a href="#" class="font_11">Altcoin Development</a></li>
+                                        <li><a href="{{ url('ethereum-token-development') }}" class="font_11">Ethereum Token Development</a></li>
+                                        <li><a href="{{ url('tron-token-development') }}" class="font_11">Torn Token Development</a></li>
+                                        <li><a href="{{ url('rebase-token-development') }}" class="font_11">Rebase Token Development</a></li>
+                                        <li><a href="{{ url('brc-20-token-development') }}" class="font_11">BRC 20 Token Development</a></li>
+                                        <li><a href="{{ url('src-20-token-development') }}" class="font_11">SRC 20 Token Development</a></li>
+                                        <li><a href="{{ url('bep20-token-development') }}" class="font_11">BEP - 20 Token Development</a></li>
+                                        <li><a href="{{ url('altcoin-development') }}" class="font_11">Altcoin Development</a></li>
                                         <li><a href="#" class="font_11">Stable Coin Development</a></li>
                                         <li><a href="#" class="font_11">Gaming Utility Token Development</a></li>
                                         <li><a href="#" class="font_11">Cryptocurrency MLM Software</a></li>
