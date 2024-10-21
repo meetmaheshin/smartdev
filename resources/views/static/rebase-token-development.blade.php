@@ -3608,7 +3608,7 @@
             ],
             [
                 'title' => 'Token Testing',
-                'desc' => 'Perform thorough testing on the smart contracts to identify and resolve any issues, enhancing the token’s security and functionality for both immediate and future use.'
+                'desc' => "Perform thorough testing on the smart contracts to identify and resolve any issues, enhancing the token’s security and functionality for both immediate and future use."
             ],
             [
                 'title' => 'Public Launch',

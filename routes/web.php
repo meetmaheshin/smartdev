@@ -390,3 +390,88 @@ Route::get('/bep20-token-development', function () {
 Route::get('/altcoin-development', function () {
     return view('static.altcoin-development');
 })->name('altcoin-development');
+
+// stable-coin-development
+Route::get('/stable-coin-development', function () {
+    return view('static.stable-coin-development');
+})->name('stable-coin-development');
+
+
+Route::get('/gaming-utility-token-development', function () {
+    return view('static.gaming-utility-token-development');
+})->name('gaming-utility-token-development');
+
+Route::get('/cryptocurrency-mlm-software-development', function () {
+    return view('static.cryptocurrency-mlm-software-development');
+})->name('cryptocurrency-mlm-software-development');
+
+// lsd-token-development
+Route::get('/lsd-token-development', function () {
+    return view('static.lsd-token-development');
+})->name('lsd-token-development');
+
+
+Route::get('/ai-token-development', function () {
+    return view('static.ai-token-development');
+})->name('ai-token-development');
+
+Route::get('/ai-crypto-coin-development', function () {
+    return view('static.ai-crypto-coin-development');
+})->name('ai-crypto-coin-development');
+
+Route::get('/central-bank-digital-currency-development', function () {
+    return view('static.central-bank-digital-currency-development');
+})->name('central-bank-digital-currency-development');
+
+
+Route::get('/token-sale-services', function () {
+    return view('static.token-sale-services');
+})->name('token-sale-services');
+
+
+Route::get('/crypto-consulting', function () {
+    return view('static.crypto-consulting');
+})->name('crypto-consulting');
+
+
+Route::get('/tokenomics-consulting', function () {
+    return view('static.tokenomics-consulting');
+})->name('tokenomics-consulting');
+
+// hire-token-developer
+Route::get('/hire-token-developer', function () {
+    return view('static.hire-token-developer');
+})->name('hire-token-developer');
+
+// art-tokenization
+Route::get('/art-tokenization', function () {
+    return view('static.art-tokenization');
+})->name('art-tokenization');
+
+Route::get('/real-world-asset-tokenization', function () {
+    return view('static.real-world-asset-tokenization');
+})->name('real-world-asset-tokenization');
+
+Route::get('/real-estate-tokenization', function () {
+    return view('static.real-estate-tokenization');
+})->name('real-estate-tokenization');
+
+Route::get('/tokenization-platform-development', function () {
+    return view('static.tokenization-platform-development');
+})->name('tokenization-platform-development');
+
+Route::get('/crypto-etf-development', function () {
+    return view('static.crypto-etf-development');
+})->name('crypto-etf-development');
+
+Route::get('/bitcoin-ordinals-token-development', function () {
+    // return view('static.bitcoin-ordinals-token-development');
+})->name('bitcoin-ordinals-token-development');
+
+Route::get('/bitcoin-ordinals-token-marketing', function () {
+    // return view('static.bitcoin-ordinals-token-marketing');
+})->name('bitcoin-ordinals-token-marketing');
+
+Route::get('/rwa-tokenization-use-cases', function () {
+    // return view('static.rwa-tokenization-use-cases');
+})->name('rwa-tokenization-use-cases');

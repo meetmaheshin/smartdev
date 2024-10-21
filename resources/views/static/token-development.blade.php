@@ -1458,7 +1458,7 @@
    }
 </style>
 <div id="ico">
-   <div class="main">
+   <div class="main" style="background-image: linear-gradient(blue, lightblue);">
       <div class="banner my_banner">
          <div class="banner_content">
             <div class="container">
@@ -1468,9 +1468,6 @@
                         <div class="ovr">
                            <div itemscope="" itemtype="http://schema.org/CreativeWork">
                               <div class="ban_tirt">
-                                 {{-- <span style="font-weight: normal; font-size: 19px;">
-                                 Launch Your Crypto Tokens with Our Esteemed
-                                 </span> --}}
                                  <h1 itemprop="name">
                                     Transform Your Own Tokens with Our Top-Tier Development Services
                                  </h1>
