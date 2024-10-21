@@ -289,23 +289,23 @@
                                         <li class=""><a href="{{ url('cryptocurrency-development') }}" class="font_11">Cryptocurrency Development</a></li>
                                         <li><a href="{{ url('token-development') }}" class="font_11">Token Development</a></li>
                                         <li><a href="{{ url('ethereum-token-development') }}" class="font_11">Ethereum Token Development</a></li>
-                                        <li><a href="{{ url('tron-token-development') }}" class="font_11">Torn Token Development</a></li>
+                                        <li><a href="{{ url('tron-token-development') }}" class="font_11">Tron Token Development</a></li>
                                         <li><a href="{{ url('rebase-token-development') }}" class="font_11">Rebase Token Development</a></li>
                                         <li><a href="{{ url('brc-20-token-development') }}" class="font_11">BRC 20 Token Development</a></li>
                                         <li><a href="{{ url('src-20-token-development') }}" class="font_11">SRC 20 Token Development</a></li>
                                         <li><a href="{{ url('bep20-token-development') }}" class="font_11">BEP - 20 Token Development</a></li>
                                         <li><a href="{{ url('altcoin-development') }}" class="font_11">Altcoin Development</a></li>
-                                        <li><a href="#" class="font_11">Stable Coin Development</a></li>
-                                        <li><a href="#" class="font_11">Gaming Utility Token Development</a></li>
-                                        <li><a href="#" class="font_11">Cryptocurrency MLM Software</a></li>
-                                        <li><a href="#" class="font_11">LSD Token Development</a></li>
-                                        <li><a href="#" class="font_11">AI Token Development</a></li>
-                                        <li><a href="#" class="font_11">AI Crypto Coin Development</a></li>
-                                        <li><a href="#" class="font_11">Central Bank Digital Currency Development</a></li>
-                                        <li><a href="#" class="font_11">Token sale Services</a></li>
-                                        <li><a href="#" class="font_11">Crypto Consulting Services</a></li>
-                                        <li><a href="#" class="font_11">Tokenomics Consulting</a></li>
-                                        <li><a href="#" class="font_11">Hire Token Developer</a></li>
+                                        <li><a href="{{ url('stable-coin-development') }}" class="font_11">Stable Coin Development</a></li>
+                                        <li><a href="{{ url('gaming-utility-token-development') }}" class="font_11">Gaming Utility Token Development</a></li>
+                                        <li><a href="{{ url('cryptocurrency-mlm-software-development') }}" class="font_11">Cryptocurrency MLM Software</a></li>
+                                        <li><a href="{{ url('lsd-token-development') }}" class="font_11">LSD Token Development</a></li>
+                                        <li><a href="{{ url('ai-token-development') }}" class="font_11">AI Token Development</a></li>
+                                        <li><a href="{{ url('ai-crypto-coin-development') }}" class="font_11">AI Crypto Coin Development</a></li>
+                                        <li><a href="{{ url('central-bank-digital-currency-development') }}" class="font_11">Central Bank Digital Currency Development</a></li>
+                                        <li><a href="{{ url('token-sale-services') }}" class="font_11">Token sale Services</a></li>
+                                        <li><a href="{{ url('crypto-consulting') }}" class="font_11">Crypto Consulting Services</a></li>
+                                        <li><a href="{{ url('tokenomics-consulting') }}" class="font_11">Tokenomics Consulting</a></li>
+                                        <li><a href="{{ url('hire-token-developer') }}" class="font_11">Hire Token Developer</a></li>
 
                                         <!-- Add more links as per your image -->
                                     </ul>
@@ -313,15 +313,15 @@
                                 <div class="col-md-3">
                                     <h6>Tokenization</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Art Tokenization</a></li>
-                                        <li><a href="#" class="font_11">Real World Asset Tokenization</a></li>
-                                        <li><a href="#" class="font_11">Real Estate Tokenization</a></li>
-                                        <li><a href="#" class="font_11">Tokenization Platform Development</a></li>
-                                        <li><a href="#" class="font_11">Real Estate Tokenization Essential Guide</a></li>
-                                        <li><a href="#" class="font_11">Crypto ETF Development</a></li>
-                                        <li><a href="#" class="font_11">Bitcoin Ordinals Token Development</a></li>
-                                        <li><a href="#" class="font_11">Bitcoin Ordinals Token Marketing</a></li>
-                                        <li><a href="#" class="font_11">RWA Tokenization Use Cases</a></li>
+                                        <li><a href="{{ url('art-tokenization') }}" class="font_11">Art Tokenization</a></li>
+                                        <li><a href="{{ url('real-world-asset-tokenization') }}" class="font_11">Real World Asset Tokenization</a></li>
+                                        <li><a href="{{ url('real-estate-tokenization') }}" class="font_11">Real Estate Tokenization</a></li>
+                                        <li><a href="{{ url('tokenization-platform-development') }}" class="font_11">Tokenization Platform Development</a></li>
+                                        {{-- <li><a href="{{ url('real-estate-tokenization') }}" class="font_11">Real Estate Tokenization Essential Guide</a></li> --}}
+                                        <li><a href="{{ url('crypto-etf-development') }}" class="font_11">Crypto ETF Development</a></li>
+                                        <li><a href="{{ url('bitcoin-ordinals-token-development') }}" class="font_11">Bitcoin Ordinals Token Development</a></li>
+                                        <li><a href="{{ url('bitcoin-ordinals-token-marketing') }}" class="font_11">Bitcoin Ordinals Token Marketing</a></li>
+                                        <li><a href="{{ url('rwa-tokenization-use-cases') }}" class="font_11">RWA Tokenization Use Cases</a></li>
                                         <li><a href="#" class="font_11">Gold Tokenization</a></li>
                                     </ul>
                                     <h6>Custom Solutions</h6>

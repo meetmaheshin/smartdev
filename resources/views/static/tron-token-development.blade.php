@@ -1,4 +1,5 @@
 @extends('layouts.static')
+@section('title', 'Tron Token Development')
 <link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">

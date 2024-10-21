@@ -223,7 +223,9 @@ We emphasize transparency and security, customizing our services to fit your nee
    'card_title_5' => 'Rigorous Testing',
    'card_desc_5' => 'We conduct thorough testing, both manual and automated, to identify and resolve any issues, ensuring a flawless and reliable application.',
    'card_title_6' => 'Launch and Maintenance',
-   'card_desc_6' => 'We launch your cryptocurrency project and provide ongoing maintenance to guarantee optimal performance and stability.'
+   'card_desc_6' => 'We launch your cryptocurrency project and provide ongoing maintenance to guarantee optimal performance and stability.',
+   'cta_text' => 'Schedule a Consultation with Our Experts Today',
+   'cta_link' => '#'
 ))
 @include('static.sqaure-card', array(
    'title' => 'Global Cryptocurrency projects powered by our expertise', 
@@ -321,7 +323,7 @@ We emphasize transparency and security, customizing our services to fit your nee
 </div>
 
 
-<section class="tech-stack" style="background: #f4f4f4; padding-top: 60px;">
+{{-- <section class="tech-stack" style="background: #f4f4f4; padding-top: 60px;">
    <div class="container">
       <div class="row">
          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -415,7 +417,12 @@ We emphasize transparency and security, customizing our services to fit your nee
          </div>
       </div>
    </div>
-</section>
+</section> --}}
+
+@include('static.tech-stack', array(
+   'title' => "Cutting-Edge Technology Stacks Utilized by Our Cryptocurrency Development Team",
+   'desc' => "By harnessing the latest technological advancements, our cryptocurrency software development team stands out globally. We employ state-of-the-art tech stacks to ensure that your cryptocurrency projects are innovative, future-proof, and positioned for long-term success."
+))
 
 
 @include('static.faq', array(
