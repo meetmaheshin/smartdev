@@ -111,7 +111,7 @@
    'banner_heading_1' => 'Launch Your Own Cryptocurrency with', 
    'banner_heading_2' => 'Leading Cryptocurrency Development Company', 
    'banner_para' => 'Lead the crypto revolution with our top development team. We create custom tokenomics and strategic upgrades to position your coin at the top of the market', 
-   'banner_CTA' => 'Build Your Coin Today',
+   'banner_CTA' => '/',
    'img_url' => 'images/crypto/banner-img.jpeg'
 ))
 @include('static.stats')
@@ -225,7 +225,7 @@ We emphasize transparency and security, customizing our services to fit your nee
    'card_title_6' => 'Launch and Maintenance',
    'card_desc_6' => 'We launch your cryptocurrency project and provide ongoing maintenance to guarantee optimal performance and stability.',
    'cta_text' => 'Schedule a Consultation with Our Experts Today',
-   'cta_link' => '#'
+   'cta_link' => 'consultation'
 ))
 @include('static.sqaure-card', array(
    'title' => 'Global Cryptocurrency projects powered by our expertise', 
@@ -242,7 +242,7 @@ We emphasize transparency and security, customizing our services to fit your nee
    'card_desc_3' => 'We facilitate a structured pre-ICO and ICO process, allowing investors to commit funds and purchase your coin according to your set pricing and timing.',
    'card_title_4' => 'Wallet Integration & Coin Distribution',
    'card_desc_4' => 'We ensure the distribution of purchased coins to investors through secure, branded web and mobile wallets.',
-   'cta' => 'Talk to our experts!'
+   'cta' => 'consultation'
 ))
 @include('static.crypto-coins', array(
    'title' => 'Built on the top of secured Cryptocurrency Website Development Platforms', 
@@ -254,7 +254,7 @@ We emphasize transparency and security, customizing our services to fit your nee
    'title' => 'Why Altcoin Development is a Strategic Advantage for Your Business', 
    'desc_1' => 'As traditional financial institutions grapple with issues of over-centralization, cryptocurrencies, and altcoins offer a decentralized alternative through blockchain technology. This approach allows for secure, digital management of assets, largely unaffected by traditional economic fluctuations.',
    'desc_2' => 'From a business perspective, creating altcoins provides an opportunity to offer unique services and establish a tailored ecosystem. Altcoins, operating independently of the Bitcoin blockchain, can leverage eco-friendly Proof-of-Stake (PoS) networks to enhance operational efficiency. With the global rise in cryptocurrency adoption, developing your own altcoin can position your business for long-term success and innovation.',
-   'cta' => 'Connect with our experts!'
+   'cta' => 'consultation'
 ))
 {{-- @include('static.testimonial-card') --}}
 
@@ -307,7 +307,7 @@ We emphasize transparency and security, customizing our services to fit your nee
                   Our expertise spans the entire Software Development Life Cycle (SDLC), ensuring flawless execution from ideation and design to development, testing, and promotion. You’ll benefit from a team of experienced professionals dedicated to every stage of your project. Moreover, we provide prompt, ongoing support to address any issues post-launch.
                </p>
                <div align="center" class="contentall" style="padding-top: 0px;">
-                  <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="#" rel="nofollow" style="border-radius: 30px !important;" target="_blank">
+                  <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="{{ url('consultation') }}" rel="nofollow" style="border-radius: 30px !important;" target="_blank">
                   <span>
                      Schedule a Consultation with Our Experts Today
                   </span>

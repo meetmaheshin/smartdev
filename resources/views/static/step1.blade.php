@@ -137,7 +137,7 @@
       @if($cta_text)
          <div align="center" class="contentall" style="padding-top: 0;">
             <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false"
-               data-hover-color-override="false" data-hover-text-color-override="#fff" href="{{ $cta_link }}" rel="nofollow"
+               data-hover-color-override="false" data-hover-text-color-override="#fff" href="{{ url("$cta_link") }}" rel="nofollow"
                style="border-radius: 30px !important;" target="_blank">
                <span>
                   {{ $cta_text }}
