@@ -20,9 +20,9 @@
     </div>
    </div>
    <div align="center" class="contentall" style="padding-top: 0;">
-    <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="" rel="nofollow" style="border-radius: 30px !important;" target="_blank">
+    <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="{{ url("$cta") }}" rel="nofollow" style="border-radius: 30px !important;" target="_blank">
      <span>
-      {{ $cta }}
+      Connect with our experts!
      </span>
     </a>
     {{-- <a href="#newsletter-form-sec" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">

@@ -23,9 +23,9 @@
                 {{ $banner_para }}
                 </p>
                 <div class="txt">
-                <a class="nec-btn" href="#" id="cyz" rel="nofollow" style="border-radius: 30px !important; text-transform: capitalize !important; margin: 1px!important;">
+                <a class="nec-btn" href="{{ url("$banner_CTA") }}" id="cyz" rel="nofollow" style="border-radius: 30px !important; text-transform: capitalize !important; margin: 1px!important;">
                 {{-- Create your own coin --}}
-                {{ $banner_CTA }}
+                Build Your Coin Today
                 </a>
                 </div>
             </div>
