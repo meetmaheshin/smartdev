@@ -2713,7 +2713,7 @@
                                         <p itemprop="text">Ensure your token's economic framework is meticulously engineered with the guidance of our premier tokenomics consultants. As leaders in the field, we empower you to realize your visionary project from inception to success.</p><br>
                                         <div class="txt">
 
-                                            <a rel="nofollow" href="#" class="nec-btn" id="cyz"
+                                            <a rel="nofollow" href="{{ url('consultation') }}" class="nec-btn" id="cyz"
                                                 style="border-radius: 30px !important;">Connect with our experts today</a>
                                         </div>
                                     </div>
@@ -2911,7 +2911,7 @@
             <div class="clearfix"></div>
             <div class="text-center cta_mine txt">
                 <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
-                    target="_blank" href="#"
+                    target="_blank" href="{{ url('consultation') }}"
                     data-color-override="false" data-hover-color-override="false"
                     data-hover-text-color-override="#fff"><span>Book a Consultation with Our Experts!</span></a>
             </div>
@@ -3013,11 +3013,11 @@
         </div>
         <div class="clearfix"></div>
         <div class="text-center cta_mine txt">
-            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
+            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                 target="_blank" href="#"
                 data-color-override="false" data-hover-color-override="false"
-                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-            <a rel="nofollow" href="#"
+                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> --}}
+            <a rel="nofollow" href="{{ url('consultation') }}"
                 class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with our
                     Experts</span></a>
         </div>
@@ -3080,7 +3080,7 @@
         <div class="clearfix"></div>
         <div class="text-center cta_mine txt">
             <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
-                target="_blank" href="#"
+                target="_blank" href="{{ url('consultation') }}"
                 data-color-override="false" data-hover-color-override="false"
                 data-hover-text-color-override="#fff"><span>Schedule a Consultation Today</span>
             </a>
@@ -3198,11 +3198,11 @@
         </div>
         <div class="clearfix"></div>
         <div class="text-center cta_mine txt">
-            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
+            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                 target="_blank" href=""
                 data-color-override="false" data-hover-color-override="false"
-                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-            <a rel="nofollow" href="#"
+                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> --}}
+            <a rel="nofollow" href="{{ url('consultation') }}"
                 class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with our
                     Experts</span></a>
         </div>
@@ -3380,11 +3380,11 @@
         </div><br>
         <div class="clearfix"></div>
         <div class="text-center cta_mine txt">
-            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
+            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                 target="_blank" href="#"
                 data-color-override="false" data-hover-color-override="false"
-                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-            <a rel="nofollow" href="#"
+                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> --}}
+            <a rel="nofollow" href="{{ url('consultation') }}"
                 class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with our
                     Experts</span></a>
         </div>

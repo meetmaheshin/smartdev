@@ -1,8 +1,8 @@
 @extends('layouts.static')
-@section('title', 'Gaming Utility Token Development')
-<link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+    @section('title', 'Gaming Utility Token Development')
+    <link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
 @section('content')
 
 <style type="text/css">
@@ -3035,7 +3035,7 @@
                                         </div>
                                         <p itemprop="text">Transform your NFT game with cutting-edge utility tokens crafted by our expert development team. We specialize in turning your visionary gaming token ideas into reality with precision and expertise!</p>
                                         <div class="txt">
-                                            <a rel="nofollow" href="#" class="nec-btn" id="cyz"
+                                            <a rel="nofollow" href="{{ url('consultation') }}" class="nec-btn" id="cyz"
                                                 style="border-radius: 30px !important;">Connect with Our Specialists</a>
                                         </div>
                                     </div>
@@ -3234,11 +3234,11 @@
             </div>
             <div class="clearfix"></div>
             <div class="text-center cta_mine txt">
-                <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
+                {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                     target="_blank" href="#"
                     data-color-override="false" data-hover-color-override="false"
-                    data-hover-text-color-override="#fff"><span>Schedule a Meeting </span></a>
-                <a rel="nofollow" href="#"
+                    data-hover-text-color-override="#fff"><span>Schedule a Meeting </span></a> --}}
+                <a rel="nofollow" href="{{ url('consultation') }}"
                     class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Speak with Our Experts</span></a>
             </div>
         </div>
@@ -3487,7 +3487,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <h3 class="text-white">Build a Top-Notch Gaming Token to Draw in Web3 Gamers Worldwide!</h3>
                 <div class="contentall text-center">
-                    <a href="#" rel="nofollow" class="nec-btn"
+                    <a href="{{ url('consultation') }}" rel="nofollow" class="nec-btn"
                         style="border-radius: 30px !important; margin-top: 20px; text-transform:none !important;">Get in Touch Today!</a>
                 </div>
             </div>
@@ -3671,12 +3671,12 @@
                     <p class="text-white">Choose us to elevate your gaming venture with exceptional token development services. With over a decade of Web3 expertise and a team passionate about the evolving gaming landscape, we excel in creating high-impact tokens that capture the essence of your Web game. Our deep industry knowledge ensures your gaming tokens deliver outstanding value and immersive experiences. Connect with us to turn your Web3 game’s vision into a powerful reality!</p>
                     <div class="clearfix"></div>
                     <div class="text-left cta_mine txt">
-                        <a rel="nofollow"
+                        {{-- <a rel="nofollow"
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                             target="_blank" href="#"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>Book a Consultation</span></a>
-                        <a rel="nofollow" href="#"
+                            data-hover-text-color-override="#fff"><span>Book a Consultation</span></a> --}}
+                        <a rel="nofollow" href="{{ url('consultation') }}"
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Speak with Our Specialists</span></a>
                     </div>
                 </div>
@@ -3724,110 +3724,6 @@
         }
     }
 </style>
-{{-- <div class="common_spacing gray_bg">
-    <div class="container">
-        <div class="section-top ">
-            <div class="section-header text-center ">
-                <h3 class="section-title mt20 underline">FAQ</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <div class="faq-content">
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class role="button" data-toggle="collapse" data-parent="#accordion" href="#faq1">
-                                        <span>What is a Gaming Utility Token in Web3?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq1" class="panel-collapse collapse in" role="tabpanel"
-                                aria-labelledby="headingOne">
-                                <div class="panel-body">
-                                    A gaming utility token in Web3 lets gamers experience games based on NFTs and
-                                    cryptocurrencies by offering one of the various use cases possible inside the Web3
-                                    game.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq2">
-                                        <span>How are NFT Gaming Tokens Useful?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body">
-                                    NFT gaming tokens can be useful as in-game currencies, assets, initial offering
-                                    tokens, access-gating tokens, and rewards, which can promote investments.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq3">
-                                        <span>What Gaming Utility Token Development Services Do We Provide?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq3" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingThree">
-                                <div class="panel-body">
-                                    We provide various gaming utility token development services, such as consulting,
-                                    tokenomics design, token and smart contract development, token and smart contract
-                                    audit, token listing, token launch, and post-launch support.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq4">
-                                        <span>What are Some Famous Web3 Gaming Tokens in the Market?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq4" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFour">
-                                <div class="panel-body">Some famous Web3 gaming tokens in the modern-day gaming market
-                                    include Axie Infinity ($AXS), The Sandbox ($SAND), ApeCoin ($APE), Echelon Prime
-                                    ($PRIME), Pixels ($PIXEL), Magic ($MAGIC), My Neighbor Alice ($ALICE), Sweat Economy
-                                    ($SWEAT), Aavegotchi ($GHST), and Guild of Guardians ($GOG).</div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq5">
-                                        <span>Which is the Best Gaming Utility Token Development Company?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq5" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFive">
-                                <div class="panel-body">
-                                    Blockchain App Factory is the best gaming utility token development company. We have
-                                    experience creating tokens with various use cases for games across diverse niches.
-                                    Contact us to create tokens according to your game’s requirements!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
 
 {{-- simple-faqs.blade --}}
 @include('static.simple-faqs-section', [

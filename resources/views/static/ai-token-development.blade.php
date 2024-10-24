@@ -2414,7 +2414,9 @@
                                             <h1 itemprop="name">Revolutionize Your Venture with Pioneering AI Token Solutions</h1>
                                         </div>
                                         <p itemprop="text">Elevate your new venture with our cutting-edge AI token development services. Unleash your project to the world with a utility and innovative cryptocurrency.</p>
-                                        <div class="txt"> <a href="#" class="nec-btn" id="cyz" style="border-radius: 30px !important;">Connect with Our Experts Today</a> </div>
+                                        <div class="txt"> 
+                                            <a href="{{ url('consultation') }}" class="nec-btn" id="cyz" style="border-radius: 30px !important;">Connect with Our Experts Today</a> 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2437,12 +2439,14 @@
                         </p>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="text-center cta_mine txt"> <a
+                    <div class="text-center cta_mine txt"> 
+                        {{-- <a
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                             target="_blank" href="#"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> <a
-                            href="#"
+                            data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> --}}
+                             <a
+                            href="{{ url('consultation') }}"
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Connect with Our Experts</span></a> </div>
                 </div>
             </div>
@@ -2518,14 +2522,13 @@
                     </li>
                 </ul>
                 <div class="clearfix"></div>
-                <div class="text-center cta_mine txt"> <a
-                        class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank"
-                        href="#"
-                        data-color-override="false" data-hover-color-override="false"
-                        data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> <a
-                        href="#"
-                        class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with
-                            our Experts</span></a> </div>
+                <div class="text-center cta_mine txt"> 
+                    {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Schedule A Meeting</span>
+                    </a> --}}
+                    <a href="{{ url('consultation') }}" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with
+                        our Experts</span>
+                    </a> 
+                    </div>
             </div>
         </div>
     </div>
@@ -2780,7 +2783,7 @@
                         <p class="text-white">As a leading name in AI token development, we excel in launching groundbreaking crypto projects tailored for AI-driven businesses. Our expertise in blockchain technology, smart contracts, Web3 frameworks, and artificial intelligence positions us as your top choice to bring your AI crypto vision to life.</p>
                         <div class="contentall" align="center" style="padding-top: 0px;">
 
-                            <a href="#" rel="nofollow"
+                            <a href="{{ url('consultation') }}" rel="nofollow"
                                 style="border-radius: 30px !important; text-transform:none !important;">Get Started with Our AI Token Developers Today!</a>
                         </div>
                     </div>
@@ -2986,8 +2989,8 @@
                         <hr class="mb40">
                         <p class="text-white">We offer top-notch AI token development services for Web3 projects. With our deep expertise in blockchain and artificial intelligence, we ensure high-quality support from start to finish. Whether you’re at the idea stage or need post-launch maintenance, we’re here to help. Contact us today to start your AI crypto project!</p>
                         <div class="contentall" align="center" style="padding-top: 0px;">
-                            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="border-radius: 30px !important;"> <span>Schedule a Meeting</span></a>
-                            <a href="#" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">Connect with Our Experts</a>
+                            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="border-radius: 30px !important;"> <span>Schedule a Meeting</span></a> --}}
+                            <a href="{{ url('consultation') }}" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">Connect with Our Experts</a>
                         </div>
                     </div>
                 </div>

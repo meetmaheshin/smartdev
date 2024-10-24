@@ -2649,7 +2649,7 @@
                                             <h1 itemprop="name">Lead the Digital Currency Era with Our CBDC Innovations</h1>
                                         </div>
                                         <p itemprop="text">Embark on your journey into the decentralized finance revolution with our premier central bank digital currency (CBDC) development services. Position yourself at the forefront of digital finance by launching a cutting-edge CBDC with us today.</p>
-                                        <div class="txt"> <a rel="nofollow" href="#" class="nec-btn"
+                                        <div class="txt"> <a rel="nofollow" href="{{ url('consultation') }}" class="nec-btn"
                                                 id="cyz" style="border-radius: 30px !important;">Connect with Our Experts</a> </div>
                                     </div>
                                 </div>
@@ -2749,12 +2749,12 @@
                     </div>
                     <div class="clearfix"></div>
                     <div class="text-center cta_mine txt">
-                        <a rel="nofollow"
+                        {{-- <a rel="nofollow"
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                             target="_blank" href="#"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a>
-                        <a rel="nofollow" href="#"
+                            data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> --}}
+                        <a rel="nofollow" href="{{ url('consultation') }}"
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Connect with Our Experts</span></a>
                     </div>
                 </div>
@@ -2871,7 +2871,7 @@
 <section class="common_spacing  ">
     <div class="container">
         <div class="row">
-            <h3 class="sec_tit underline text-center">The 5P Framework for Effective CBDC Development</h3>
+            <h3 class="sec_tit underline text-center" style="width: 100%">The 5P Framework for Effective CBDC Development</h3>
         </div>
         <p class="text-center" style="color: #000;">To ensure a successful central bank digital currency (CBDC) project, it’s crucial to follow the 5P methodology. This approach helps central banks navigate challenges from various stakeholders effectively. Leveraging our industry expertise, we deliver top-tier digital currency solutions for national banks.
         </p>
@@ -2975,13 +2975,16 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <div class="text-center cta_mine txt"> <a rel="nofollow"
+                <div class="text-center cta_mine txt"> 
+                    {{-- <a rel="nofollow"
                         class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank"
                         href="#"
                         data-color-override="false" data-hover-color-override="false"
-                        data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> <a rel="nofollow"
-                        href="#"
-                        class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Connect with Our Experts</span></a> </div>
+                        data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> --}}
+                         <a rel="nofollow"
+                        href="{{ url('consultation') }}"
+                        class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Connect with Our Experts</span></a>
+                     </div>
             </div>
         </div>
     </div>

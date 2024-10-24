@@ -2115,7 +2115,7 @@ window.setTimeout(function() {
                                 </div>
                                 <p itemprop="text">Transform your vision into a sophisticated token on the Tron blockchain, backed by our industry-leading development capabilities. Experience optimized transactions and enhanced functionalities tailored to your needs.</p>
                                 <div class="banner-btn">
-                                    <a href="#" rel="nofollow" class="nec-btn" id="cyz"
+                                    <a href="{{ url('consultation') }}" rel="nofollow" class="nec-btn" id="cyz"
                                         style="border-radius: 30px !important; text-transform: capitalize !important;margin-left: 0 !important;">Create
                                         your own token</a>
 
@@ -2168,14 +2168,17 @@ window.setTimeout(function() {
                         <h2 class="sec_tit underline text-center">Unlock High-Performance Tokens with Our TRC-20 Development Expertise</h2>
                         <p class="section-subtitle mb20 text-center">Discover the power of cost-effective, customizable TRC-20 tokens designed for maximum interoperability and secure transactions. Leverage the efficiency of the Tron network to boost user engagement and raise capital in the dynamic cryptocurrency landscape. Our dedicated team provides comprehensive services to deploy and promote your token, ensuring visibility and driving your Web3 venture to new heights.</p>
                     </div>
-                    <div class="text-center cta_min" style="width: 100%;"> <a rel="nofollow"
+                    <div class="text-center cta_min" style="width: 100%;">
+                         {{-- <a rel="nofollow"
                             class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
                             href="#" data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>SCHEDULE A CONSULTATION</span></a>
-                            <a rel="nofollow"
+                            data-hover-text-color-override="#fff"><span>SCHEDULE A CONSULTATION</span>
+                        </a> --}}
+                        <a rel="nofollow"
                             class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
-                            href="#" data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>CONNECT WITH OUR EXPERTS</span></a>
+                            href="{{ url('consultation') }}" data-color-override="false" data-hover-color-override="false"
+                            data-hover-text-color-override="#fff"><span>CONNECT WITH OUR EXPERTS</span>
+                        </a>
                         </div>
                 </div>
             </div>
@@ -2463,12 +2466,12 @@ window.setTimeout(function() {
                             </div>
                         </div>
                         <div class="text-center cta_min mt20">
-                            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+                            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                                 target="_blank"
                                 href="#"
                                 data-color-override="false" data-hover-color-override="false"
-                                data-hover-text-color-override="#fff"><span>SCHEDULE A CONSULTATION</span></a>
-                            <a rel="nofollow" href="#newsletter-form-sec"
+                                data-hover-text-color-override="#fff"><span>SCHEDULE A CONSULTATION</span></a> --}}
+                            <a rel="nofollow" href="{{ url('consultation') }}"
                                 class="nectar-button medium regular accent-color regular-button nec-btn"><span>CONNECT WITH OUR EXPERTS</span></a>
                         </div>
                     </div>
@@ -2644,8 +2647,8 @@ window.setTimeout(function() {
                     'image' => 'tron-token-development/icons/digital-assets.webp'
                 ],
             ],
-            'cta_1' => 'SCHEDULE A CONSULTATION',
-            'cta_2' => 'CONNECT WITH OUR EXPERTS'
+            'cta_1' => '#',
+            'cta_2' => 'consultation'
         ])
 
         
@@ -3186,7 +3189,7 @@ window.setTimeout(function() {
                     <div class="tab-content technology">
                         <div role="tabpanel" class="tab-pane in active" id="vtab28">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy"
                                             src="{{ asset('images/tron-token-development/tech-stack/solidity.webp') }}">
                                         <p>Solidity</p>
@@ -3210,7 +3213,7 @@ window.setTimeout(function() {
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab26">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy"
                                             src="{{ asset('images/tron-token-development/tech-stack/manogodb.png') }}">
                                         <p>MongoDB </p>
@@ -3227,7 +3230,7 @@ window.setTimeout(function() {
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab29">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy"
                                             src="{{ asset('images/tron-token-development/tech-stack/truffle.webp') }}">
                                         <p>Truffle Suite</p>
@@ -3245,7 +3248,7 @@ window.setTimeout(function() {
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab27">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy" src="{{ asset('images/tron-token-development/tech-stack/tron.webp') }}">
                                         <p>TronLink Browser</p>
                                     </li>
@@ -3254,7 +3257,7 @@ window.setTimeout(function() {
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab50">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy"
                                             src="{{ asset('images/tron-token-development/tech-stack/python.webp') }}">
                                         <p>Python SDK</p>
@@ -3271,7 +3274,7 @@ window.setTimeout(function() {
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab51">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy"
                                             src="{{ asset('images/tron-token-development/tech-stack/node-js_logo.webp') }}">
                                         <p>Node.js</p>
@@ -3281,7 +3284,7 @@ window.setTimeout(function() {
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab52">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy"
                                             src="{{ asset('images/tron-token-development/tech-stack/react.webp') }}">
                                         <p>React</p>
@@ -3299,7 +3302,7 @@ window.setTimeout(function() {
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab53">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy" src="{{ asset('images/tron-token-development/tech-stack/tron.webp') }}">
                                         <p>TRON Grid </p>
                                     </li>
@@ -3401,12 +3404,12 @@ window.setTimeout(function() {
                             </div>
                         </div>
                         <div class="text-center cta_min mt20">
-                            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+                            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                                 target="_blank"
                                 href="#"
                                 data-color-override="false" data-hover-color-override="false"
-                                data-hover-text-color-override="#fff"><span>GET STARTED TODAY</span></a>
-                            <a rel="nofollow" href="#newsletter-form-sec"
+                                data-hover-text-color-override="#fff"><span>GET STARTED TODAY</span></a> --}}
+                            <a rel="nofollow" href="{{ url('consultation') }}"
                                 class="nectar-button medium regular accent-color regular-button nec-btn">
                                 <span>CONNECT WITH OUR EXPERTS</span></a>
                         </div>

@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="{{ $cta }}"
+            <a href="{{ url("$cta") }}"
                 class="nectar-button medium regular accent-color regular-button" id="cyz"
                 style="border-radius: 30px !important; padding: 10px 25px; text-align: center; background: #03b787; color:#fff;">View
                 CaseStudies</a>

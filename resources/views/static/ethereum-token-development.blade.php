@@ -2079,7 +2079,7 @@ transition: all .3s ease-in-out;
 </div>
 {{-- <p itemprop="text">Craft a fully customized token with our Ethereum token development firm, where we meet all types of standards depending on your needs.</p> --}}
 <div class="txt">
-<a href="" rel="nofollow" class="nec-btn" id="cyz" style="border-radius: 30px !important; text-transform: capitalize !important; margin-left: 0;">Get your token today!</a>
+<a href="{{ url('consultation') }}" rel="nofollow" class="nec-btn" id="cyz" style="border-radius: 30px !important; text-transform: capitalize !important; margin-left: 0;">Get your token today!</a>
 {{-- <a rel="nofollow" href="#demo" class="nec-btn" id="cyz" style="border-radius: 30px !important;">View Demo</a> --}}
 
 </div>
@@ -2249,8 +2249,9 @@ Our professional team will help you build and launch Ethereum tokens designed ju
 </div>
 <div class="clearfix"></div>
 <div class="text-center cta_mine txt">
-<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Book your consultation</span></a>
-<a rel="nofollow" href="#newsletter-form-sec" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Meet our experts today</span></a> </div>
+<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="{{ url('consultation') }}" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Book your consultation</span></a>
+{{-- <a rel="nofollow" href="#newsletter-form-sec" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Meet our experts today</span></a> --}}
+ </div>
 </div>
 </div>
 </div>
@@ -2340,7 +2341,7 @@ Our professional team will help you build and launch Ethereum tokens designed ju
 </div>
 <div class="clearfix"></div>
 <div class="text-center cta_mine txt">
-<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Let us explain how</span></a>
+<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="{{ url('consultation') }}" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Let us explain how</span></a>
 {{-- <a rel="nofollow" href="#newsletter-form-sec" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with our Experts</span></a> </div> --}}
 </div>
 </section>
@@ -2460,7 +2461,7 @@ Our professional team will help you build and launch Ethereum tokens designed ju
 </div>
 <div class="clearfix"></div>
 <div class="text-center cta_mine txt">
-<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>schedule a meeting today</span></a>
+<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="{{ url('consultation') }}" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Talk to our expert now</span></a>
 </div>
 </section>
 
@@ -2778,7 +2779,7 @@ background: linear-gradient(45deg, #961e52, #d26490) !important;
 </div>
 <div class="clearfix"></div>
 <div class="text-center cta_mine txt">
-<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Let’s talk business</span></a>
+<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="{{ url('consultation') }}" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Let’s talk business</span></a>
  </div>
 </div>
 </section>
@@ -2886,7 +2887,7 @@ background: linear-gradient(45deg, #961e52, #d26490) !important;
 </div>
 <div class="clearfix"></div>
 <div class="text-center cta_mine txt">
-<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>schedule a demo</span></a>
+<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="{{ url('consultation') }}" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>schedule a demo</span></a>
 </div>
 </div>
 </section>
@@ -2922,7 +2923,7 @@ background: linear-gradient(45deg, #961e52, #d26490) !important;
 </div>
 <div class="clearfix"></div>
 <div class="text-center cta_mine txt">
-<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Connect with our experts</span></a></div>
+<a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank" href="{{ url('consultation') }}" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Connect with our experts</span></a></div>
 </div>
 </section>
 <div class="common_spacing uniq_features ">
@@ -2934,7 +2935,7 @@ background: linear-gradient(45deg, #961e52, #d26490) !important;
 <hr>
 </div>
 <div class="col-lg-6 text-center">
-<img class="lazy" src="{{ asset('images/ethereum-token-development/ethereum.png') }}" alt="ERC 20 Token Wallet Development Company" title="ERC 20 Token Wallet Development Company" style="max-height: 400px;">
+<img class="lazy" src="{{ asset('images/ethereum-token-development/ethereum.png') }}" alt="ERC 20 Token Wallet Development Company" title="ERC 20 Token Wallet Development Company" style="max-height: 200px;">
 </div>
 <div class="col-lg-6">
 <p>We stand out as a top ERC20 token wallet development company by delivering tailored solutions that meet your unique business needs. Our expertise and global reach ensure exceptional results for your project.</p>

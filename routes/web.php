@@ -465,13 +465,25 @@ Route::get('/crypto-etf-development', function () {
 })->name('crypto-etf-development');
 
 Route::get('/bitcoin-ordinals-token-development', function () {
-    // return view('static.bitcoin-ordinals-token-development');
+    return view('static.bitcoin-ordinals-token-development');
 })->name('bitcoin-ordinals-token-development');
 
 Route::get('/bitcoin-ordinals-token-marketing', function () {
-    // return view('static.bitcoin-ordinals-token-marketing');
+    return view('static.bitcoin-ordinals-token-marketing');
 })->name('bitcoin-ordinals-token-marketing');
 
 Route::get('/rwa-tokenization-use-cases', function () {
-    // return view('static.rwa-tokenization-use-cases');
+    return view('static.rwa-tokenization-use-cases');
 })->name('rwa-tokenization-use-cases');
+
+Route::get('/gold-tokenization', function () {
+    return view('static.gold-tokenization');
+})->name('gold-tokenization');
+
+Route::get('/crypto-prediction-market-platform', function () {
+    // return view('static.crypto-prediction-market-platform');
+})->name('crypto-prediction-market-platform');
+
+Route::get('/decentralized-sports-betting-platform', function () {
+    // return view('static.decentralized-sports-betting-platform');
+})->name('decentralized-sports-betting-platform');

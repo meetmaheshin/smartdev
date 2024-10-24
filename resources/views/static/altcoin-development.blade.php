@@ -2353,13 +2353,13 @@
                                             <h1 itemprop="name">Altcoin Development Solutions</h1>
                                         </div>
                                         <p itemprop="text">Transform your vision into reality with our premier altcoin development solutions. Leveraging cutting-edge technology and unparalleled industry expertise, we deliver comprehensive services that enable businesses to dominate the dynamic cryptocurrency market.</p>
-                                        <div class="txt"> <a href="#" class="nec-btn" id="cyz" style="border-radius: 30px !important;">Consult with Our Experts Today</a> </div>
+                                        <div class="txt"> <a href="{{ url('consultation') }}" class="nec-btn" id="cyz" style="border-radius: 30px !important;">Consult with Our Experts Today</a> </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 col-xs-12 text-center"> <img class="magic"
-                                src="images/altcoin-development/banner-img.png" alt=" " title=" "> </div>
+                                src="{{ asset('images/altcoin-development/banner-img.png') }}" alt=" " title=" "> </div>
                     </div>
                 </div>
             </div>
@@ -2377,13 +2377,19 @@
                         </p>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="text-center cta_mine txt"> <a
+                    <div class="text-center cta_mine txt">
+                         {{-- <a
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                             target="_blank" href=""
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>Schedule a Consultation</span></a> <a
-                            href="#"
-                            class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Connect with Our Experts</span></a> </div>
+                            data-hover-text-color-override="#fff"><span>Schedule a Consultation</span>
+                        </a>  --}}
+                        <a
+                            href="{{ url('consultation') }}"
+                            class="nectar-button medium regular accent-color regular-button nec-btn med-btn">
+                            <span>Connect with Our Experts</span>
+                        </a> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -2555,12 +2561,14 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="text-center">
                     <div class="cta_mine">
-                        <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+                        {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                             target="_blank" href="#"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>Schedule a Consultation Today</span></a>
-                        <a rel="nofollow" href="#"
-                            class="nectar-button medium regular accent-color regular-button nec-btn"><span>Connect with Our Leading Experts</span></a>
+                            data-hover-text-color-override="#fff"><span>Schedule a Consultation Today</span>
+                        </a> --}}
+                        <a rel="nofollow" href="{{ url('consultation') }}"
+                            class="nectar-button medium regular accent-color regular-button nec-btn"><span>Connect with Our Leading Experts</span>
+                        </a>
                     </div>
                 </div>
             </div>

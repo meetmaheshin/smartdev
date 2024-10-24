@@ -322,12 +322,12 @@
                                         <li><a href="{{ url('bitcoin-ordinals-token-development') }}" class="font_11">Bitcoin Ordinals Token Development</a></li>
                                         <li><a href="{{ url('bitcoin-ordinals-token-marketing') }}" class="font_11">Bitcoin Ordinals Token Marketing</a></li>
                                         <li><a href="{{ url('rwa-tokenization-use-cases') }}" class="font_11">RWA Tokenization Use Cases</a></li>
-                                        <li><a href="#" class="font_11">Gold Tokenization</a></li>
+                                        <li><a href="{{ url('gold-tokenization') }}" class="font_11">Gold Tokenization</a></li>
                                     </ul>
                                     <h6>Custom Solutions</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Crypto Prediction Market Platform</a></li>
-                                        <li><a href="#" class="font_11">Decentralized Sports Betting Platform</a></li>
+                                        <li><a href="{{ url('crypto-prediction-market-platform') }}" class="font_11">Crypto Prediction Market Platform</a></li>
+                                        <li><a href="{{ url('decentralized-sports-betting-platform') }}" class="font_11">Decentralized Sports Betting Platform</a></li>
                                         <li><a href="#" class="font_11">KYT Platform Development</a></li>
                                         <li><a href="#" class="font_11">Carbon Credits Development</a></li>
                                         <li><a href="#" class="font_11">Crypto Banking Solutions</a></li>

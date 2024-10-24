@@ -3022,7 +3022,7 @@
                                         <div class="txt">
 
 
-                                            <a rel="nofollow" href="#newsletter-form-sec" class="nec-btn" id="cyz"
+                                            <a rel="nofollow" href="{{ url('consultation') }}" class="nec-btn" id="cyz"
                                                 style="border-radius: 30px !important;">Create your Rebase token
                                                 today!</a>
                                         </div>
@@ -3247,8 +3247,7 @@
     <div class="common_spacing">
         <div class="container">
             <div class="section-title text-center">
-                <h2 class="title-th sec_tit underline">Achieve Market Balance with Innovative Rebase Token Development
-                </h2>
+                <h2 class="title-th sec_tit underline">Achieve Market Balance with Innovative Rebase Token Development</h2>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 text-center">
@@ -3262,11 +3261,11 @@
                 <div class="clearfix"></div>
                 <div class="text-center cta_mine txt">
                     <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
-                        target="_blank" href="#" data-color-override="false" data-hover-color-override="false"
+                        target="_blank" href="{{ url('consultation') }}" data-color-override="false" data-hover-color-override="false"
                         data-hover-text-color-override="#fff"><span>Talk to our crypto experts</span></a>
-                    <a rel="nofollow" href="#newsletter-form-sec"
+                    {{-- <a rel="nofollow" href="#newsletter-form-sec"
                         class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Schedule
-                            a free meeting</span></a>
+                            a free meeting</span></a> --}}
                 </div>
             </div>
         </div>
@@ -3565,7 +3564,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                     <h3 class="text-white" style="text-align:center;">Elevate Your Business with Our Expert Rebase Token Development</h3>
                     <div class="contentall text-center">
-                        <a href="#" rel="nofollow" class="nec-btn"
+                        <a href="{{ url('consultation') }}" rel="nofollow" class="nec-btn"
                             style="border-radius: 30px !important; margin-top: 20px; text-transform:none !important;">Get in Touch Today!</a>
                     </div>
                 </div>
@@ -3651,7 +3650,7 @@
                 <div class="tab-content technology">
                     <div role="tabpanel" class="tab-pane in active" id="vtab28">
                         <div class="row">
-                            <ul>
+                            <ul style="width: 100%">
                                 <li><img class="lazy" src="{{ asset('images/home-new/eth.webp') }}">
                                     <p>Ethereum</p>
                                 </li>
@@ -3672,7 +3671,7 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="vtab26">
                         <div class="row">
-                            <ul>
+                            <ul style="width: 100%">
                                 <li><img class="lazy"
                                         src="{{ asset('images/cryptocurrency-development/tech-stack/angular.webp') }}">
                                     <p>Angular JS</p>
@@ -3695,7 +3694,7 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="vtab29">
                         <div class="row">
-                            <ul>
+                            <ul style="width: 100%">
                                 <li><img class="lazy" src="{{ asset('images/ai-token-development/icons/solidity.webp') }}">
                                     <p>Solidity </p>
                                 </li>
@@ -3715,7 +3714,7 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="vtab27">
                         <div class="row">
-                            <ul>
+                            <ul style="width: 100%">
                                 <li><img class="lazy"
                                         src="{{ asset('images/cryptocurrency-development/tech-stack/manogodb.png') }}">
                                     <p>MongoDB</p>
@@ -3753,13 +3752,13 @@
                         <p class="text-white">We focus on advancing groundbreaking solutions in the crypto world and making them practical. With over a decade of experience in the industry, we specialize in developing cutting-edge rebase tokens that pave the way for the future. Ready to bring your rebase token vision to life? Reach out to our experts today to start shaping your innovative crypto project!</p>
                         <div class="clearfix"></div>
                         <div class="text-left cta_mine txt">
-                            <a rel="nofollow"
+                            {{-- <a rel="nofollow"
                                 class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                                 target="_blank"
                                 href="#"
                                 data-color-override="false" data-hover-color-override="false"
-                                data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a>
-                            <a rel="nofollow" href="#newsletter-form-sec"
+                                data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> --}}
+                            <a rel="nofollow" href="{{ url('consultation') }}"
                                 class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Consult with Our Specialists</span></a>
                         </div>
                     </div>
