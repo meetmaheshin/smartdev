@@ -26,14 +26,15 @@
             </div>
         </div>
         <div class="text-center cta_min mt20">
-            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                target="_blank"
-               href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1">
-                <span>{{ $cta_1 }}</span>
-            </a>
-            <a rel="nofollow" href="#newsletter-form-sec"
+               href="{{ url("$cta_1") }}">
+                <span>
+                    SCHEDULE A CONSULTATION</span>
+            </a> --}}
+            <a rel="nofollow" href="{{ url("$cta_2") }}"
                class="nectar-button medium regular accent-color regular-button nec-btn">
-                <span>{{ $cta_2 }}</span>
+                <span>CONNECT WITH OUR EXPERTS</span>
             </a>
         </div>
     </div>

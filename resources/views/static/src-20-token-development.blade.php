@@ -1468,7 +1468,7 @@
                                 </div>
                                 <p itemprop="text">Step into the future with our cutting-edge SRC-20 token development services. Create SRC-20 tokens that will endure on the Bitcoin blockchain, joining the growing ecosystem of innovative digital assets.</p>
                                 <div class="banner-btn">
-                                    <a href="#"
+                                    <a href="{{ url('consultation') }}"
                                         rel="nofollow" class="nec-btn" id="cyz"
                                         style="border-radius: 30px !important; text-transform: capitalize !important; margin-left: 0px;">LET'S DISCUSS YOUR PROJECT</a>
                                 </div>
@@ -1662,7 +1662,7 @@
                     </div>
                     <div class="text-center cta_min " style="width: 100%;"> <a rel="nofollow"
                             class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
-                            href="#"
+                            href="{{ url('consultation') }}"
                             data-color-override="false" data-hover-color-override="false"
                             data-hover-text-color-override="#fff"><span>SCHEDULE A FREE CONSULTATION!</span></a>
                     </div>
@@ -2868,8 +2868,8 @@
     @include('static.crypto-coins', array(
         'title' => 'Your Premier Resource for SRC-20 Token Development', 
         'desc' => 'We are committed to delivering outstanding results with our SRC-20 token development services. In a short span, we have become a leading force in this space, showcasing our expertise. If you’re ready to explore new opportunities in the crypto world, our SRC-20 token creation services are your perfect starting point. Reach out to our experts today to bring your project to life.',
-        'cta_1' => 'Share Your Vision Here',
-        'cta_2' => 'Consult with Our Experts'
+        'cta_1' => '#',
+        'cta_2' => 'consultation'
     ))
     {{-- <section class="tech-stack" style="padding-bottom: 0;">
         <div class="container">

@@ -2643,7 +2643,7 @@
                                             services. Build your token on the Bitcoin blockchain to improve your
                                             operational efficiency.</p>
                                         <div class="txt">
-                                            <a href="#" rel="nofollow" class="nec-btn" id="cyz"
+                                            <a href="{{ url('consultation') }}" rel="nofollow" class="nec-btn" id="cyz"
                                                 style="border-radius: 30px !important; text-transform: capitalize !important; margin-left: 0px;">Create
                                                 your token today</a>
                                         </div>
@@ -2855,10 +2855,10 @@
         </div>
     </div>
     <div class="contentall" align="center">
-        <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
+        {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
             href="#" data-color-override="false" data-hover-color-override="false"
-            data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a>
-        <a href="#" rel="nofollow" class="nec-btn"
+            data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> --}}
+        <a href="{{ url('consultation') }}" rel="nofollow" class="nec-btn"
             style="border-radius: 30px !important; text-transform:none !important;">Consult with Our Specialists</a>
     </div>
 </div>
@@ -3038,10 +3038,10 @@
             </div>
         </div>
         <div class="contentall" align="center">
-            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
+            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
                 href="#" data-color-override="false" data-hover-color-override="false"
-                data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a>
-            <a href="#" rel="nofollow" class="nec-btn"
+                data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> --}}
+            <a href="{{ url('consultation') }}" rel="nofollow" class="nec-btn"
                 style="border-radius: 30px !important; text-transform:none !important;">Consult with Our Experts</a>
         </div>
     </div>
@@ -3182,10 +3182,10 @@
             <div class="clearfix"></div>
         </div>
         <div class="text-center cta_min mt20">
-            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
+            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
                 href="#" data-color-override="false"
-                data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a>
-            <a rel="nofollow" href="#"
+                data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> --}}
+            <a rel="nofollow" href="{{ url('consultation') }}"
                 class="nectar-button medium regular accent-color regular-button nec-btn">
                 <span>Speak with Our Experts</span></a>
         </div>
@@ -3943,11 +3943,11 @@
             </ul>
             <div class="clearfix"></div>
             <div class="text-center cta_min mt20">
-                <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+                {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                     target="_blank" href="#"
                     data-color-override="false" data-hover-color-override="false"
-                    data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-                <a rel="nofollow" href="#"
+                    data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> --}}
+                <a rel="nofollow" href="{{ url('consultation') }}"
                     class="nectar-button medium regular accent-color regular-button nec-btn">
                     <span>Talk with our Experts</span></a>
             </div>
@@ -4140,11 +4140,11 @@
                     </div>
                 </div>
                 <div class="text-center cta_min mt20">
-                    <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+                    {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                         target="_blank" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
                         data-color-override="false" data-hover-color-override="false"
-                        data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-                    <a rel="nofollow" href="#newsletter-form-sec"
+                        data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> --}}
+                    <a rel="nofollow" href="{{ url('consultation') }}"
                         class="nectar-button medium regular accent-color regular-button nec-btn">
                         <span>Talk with our Experts</span></a>
                 </div>
@@ -4295,8 +4295,8 @@
 @include('static.crypto-coins', array(
    'title' => 'Comprehensive Blockchain Support from Our BRC-20 Token Development Team', 
    'desc' => 'In addition to pioneering BRC-20 token development on the Bitcoin blockchain, we also provide expertise in creating tokens across various other blockchain networks, utilizing their unique features and strengths.',
-   'cta_1' => 'Schedule A Meeting',
-   'cta_2' => 'Talk to Our Experts'
+   'cta_1' => '#',
+   'cta_2' => 'consultation'
 ))
 <style type="text/css">
     .nft_marketplace {
@@ -4413,7 +4413,7 @@
             <div class="tab-content technology">
                 <div role="tabpanel" class="tab-pane in active" id="vtab28">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/brc-20-token-development/icons/bitcoin-network.webp') }}">
                                 <p>Bitcoin Network</p>
                             </li>
@@ -4422,7 +4422,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" id="vtab27">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/brc-20-token-development/icons/script.webp') }}">
                                 <p>Script</p>
                             </li>
@@ -4443,7 +4443,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab26">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/brc-20-token-development/icons/manogodb.webp') }}">
                                 <p>MongoDB </p>
                             </li>
@@ -4461,7 +4461,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab30">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/brc-20-token-development/icons/unisat.webp') }}">
                                 <p>UniSat</p>
                             </li>
@@ -4473,7 +4473,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab29">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/brc-20-token-development/icons/truffle.webp') }}">
                                 <p>Truffle Suite</p>
                             </li>
@@ -4488,7 +4488,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab51">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/brc-20-token-development/icons/react.webp') }}">
                                 <p>React</p>
                             </li>
@@ -4503,7 +4503,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab52">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/brc-20-token-development/icons/node-js_logo.webp') }}">
                                 <p>Node.js</p>
                             </li>

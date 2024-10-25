@@ -1733,9 +1733,9 @@
                                             3. Expanded Accessibility
                                         </p>
                                         <div class="txt">
-                                            <a rel="nofollow" href="#newsletter-form-sec" class="nec-btn" id="cyz"
-                                                style="border-radius: 30px !important; margin-left: 0px !important;">SEE IT IN ACTION</a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a rel="nofollow" href="#demo"
+                                            {{-- <a rel="nofollow" href="#newsletter-form-sec" class="nec-btn" id="cyz"
+                                                style="border-radius: 30px !important; margin-left: 0px !important;">SEE IT IN ACTION</a> &nbsp;&nbsp;&nbsp;&nbsp; --}}
+                                            <a rel="nofollow" href="{{ url('consultation') }}"
                                                 class="nectar-button medium regular accent-color regular-button nec-btn">CONNECT WITH OUR SPECIALISTS</a>
                                         </div>
                                     </div>

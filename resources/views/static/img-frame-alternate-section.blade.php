@@ -22,12 +22,12 @@
         </div>
         <div class="text-center cta_min mt20">
             <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
-                target="_blank" href="#"
+                target="_blank" href="{{ url("$cta1") }}"
                 data-color-override="false" data-hover-color-override="false"
-                data-hover-text-color-override="#fff"><span>{{ $cta1 }}</span></a>
-            <a rel="nofollow" href="#"
+                data-hover-text-color-override="#fff"><span>CONNECT WITH OUR EXPERTS</span></a>
+            {{-- <a rel="nofollow" href="{{ url("$cta2") }}"
                 class="nectar-button medium regular accent-color regular-button nec-btn">
-                <span>{{ $cta2 }}</span></a>
+                <span>SCHEDULE A CONSULTATION</span></a> --}}
         </div>
     </div>
 </section>

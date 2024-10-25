@@ -2623,14 +2623,14 @@
                                 <p>Leverage the elite services of our tokenization platform development experts to unlock transformative applications for asset tokenization. Propel the traditional economy into the era of full digitalization and decentralization now!</p>
                                 <div class="text-left">
 
-                                    <a href="#" rel="nofollow"
+                                    <a href="{{ url('consultation') }}" rel="nofollow"
                                         style="border-radius: 30px !important; text-transform:none !important;">Connect with Our Visionaries</a>
-                                    <a href="#"
+                                    {{-- <a href="#"
                                         class="launch nectar-button medium regular accent-color regular-button nec-btn"
                                         id="cyz" style="border-radius: 30px !important;">Explore Our Demo</a>
                                     <a href="#"
                                         style="border-radius: 30px !important; text-transform:none !important;"
-                                        class=" launch nectar-button medium regular accent-color regular-button nec-btn">Discover Tokenizer Pricing</a>
+                                        class=" launch nectar-button medium regular accent-color regular-button nec-btn">Discover Tokenizer Pricing</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -2653,13 +2653,15 @@
                         Harness our tokenization platform development expertise to craft seamless applications that cater to both retail and institutional clients. Step into the future of asset tokenization with a platform that combines ease of use, cutting-edge technology, and robust security.
                     </p>
                     <div class="contentall" align="center" style="padding-top: 0;">
-                        <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+                        {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                             target="_blank" href="#"
                             data-color-override="false" data-hover-color-override="false"
                             data-hover-text-color-override="#fff" style="border-radius: 30px !important;">
-                            <span>Schedule a Consultation</span></a>
-                        <a href="#" rel="nofollow"
-                            style="border-radius: 30px !important; text-transform:none !important;">Connect with Our Experts</a>
+                            <span>Schedule a Consultation</span>
+                        </a> --}}
+                        <a href="{{ url('consultation') }}" rel="nofollow"
+                            style="border-radius: 30px !important; text-transform:none !important;">Connect with Our Experts
+                        </a>
                     </div>
                 </div>
             </div>
@@ -3878,12 +3880,12 @@
             </div>
             <div class="clearfix"><br><br></div>
             <div class="contentall" align="center" style="padding-top: 0;">
-                <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+                {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                     target="_blank" href="#"
                     data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"
                     style="border-radius: 30px !important;">
-                    <span>Schedule a Consultation</span></a>
-                <a href="#" rel="nofollow"
+                    <span>Schedule a Consultation</span></a> --}}
+                <a href="{{ url('consultation') }}" rel="nofollow"
                     style="border-radius: 30px !important; text-transform:none !important;">Connect with Our Experts</a>
             </div>
         </div>

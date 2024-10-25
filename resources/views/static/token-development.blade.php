@@ -1560,12 +1560,12 @@
                   </div>
                </div>
                <div class="contentall">
-                  <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="#" rel="nofollow" target="_blank">
+                  {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="#" rel="nofollow" target="_blank">
                   <span>
                      Book a Consultation 
                   </span>
-                  </a>
-                  <a class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
+                  </a> --}}
+                  <a href="{{ url('consultation') }}" class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
                      Connect with Our Experts Today!
                   </a>
                </div>
@@ -1950,7 +1950,7 @@
                   Elevate Your Crypto Venture with Exclusive Token Development Services!
                </h3>
                <div class="contentall" style="text-align: right;">
-                  <a class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; margin-top: 20px; text-transform:none !important;">
+                  <a href="{{ url('consultation') }}" class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; margin-top: 20px; text-transform:none !important;">
                      Empower Your Crypto Vision with Expert Token Solutions!
                   </a>
                </div>
@@ -2273,7 +2273,7 @@
             <div class="clearfix">
             </div>
             <div class="text-center cta_mine txt contentall">
-               <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" target="_blank">
+               <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="{{ url('consultation') }}" target="_blank">
                <span>
                   Book a free demo today
                </span>
@@ -3295,12 +3295,12 @@
                      }
                   </style>
                   <div class="cta_mine contentall">
-                     <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="#" rel="nofollow" target="_blank">
+                     {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" href="#" rel="nofollow" target="_blank">
                      <span>
                      Schedule A Meeting
                      </span>
-                     </a>
-                     <a class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
+                     </a> --}}
+                     <a href="{{ url('consultation') }}" class="nec-btn crypto-popup" rel="nofollow" style="border-radius: 30px !important; text-transform:none !important;">
                      Talk to Our Experts
                      </a>
                   </div>

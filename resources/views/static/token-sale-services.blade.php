@@ -2603,7 +2603,7 @@
                                         <div class="txt">
 
                                             <a rel="nofollow"
-                                                href="#"
+                                                href="{{ url('consultation') }}"
                                                 class="nec-btn" id="cyz" style="border-radius: 30px !important;">Create Your Own Token</a>
                                         </div>
                                     </div>
@@ -2800,7 +2800,7 @@
             </div>
             <div class="text-center cta_mine txt">
                 <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
-                    target="_blank" href="#"
+                    target="_blank" href="{{ url('consultation') }}"
                     data-color-override="false" data-hover-color-override="false"
                     data-hover-text-color-override="#fff"><span>Schedule A Meeting Consult With Our Experts</span></a>
             </div>
@@ -2980,11 +2980,11 @@
         </div>
         <div class="clearfix"></div>
         <div class="text-center cta_mine txt">
-            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
+            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                 target="_blank" href="#"
                 data-color-override="false" data-hover-color-override="false"
-                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-            <a rel="nofollow" href="#"
+                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> --}}
+            <a rel="nofollow" href="{{ url('consultation') }}"
                 class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Consult With Our Experts</span></a>
         </div>
     </div>
@@ -3056,11 +3056,11 @@
         </div>
         <div class="clearfix"></div>
         <div class="text-center cta_mine txt">
-            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
+            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                 target="_blank" href="#"
                 data-color-override="false" data-hover-color-override="false"
-                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-            <a rel="nofollow" href="#"
+                data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> --}}
+            <a rel="nofollow" href="{{ url('consultation') }}"
                 class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Consult With Our Experts</span></a>
         </div>
     </div>

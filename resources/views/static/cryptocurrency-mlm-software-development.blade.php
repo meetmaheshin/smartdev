@@ -147,10 +147,10 @@
                         <div class="contentall">
                             <h1>Secure and Dynamic Crypto MLM Software for Modern Enterprises</h1>
                             <p>Revolutionize crypto adoption with our state-of-the-art MLM software, designed to amplify your reach through dynamic marketing strategies. Our team crafts robust multi-level marketing solutions featuring an engaging user experience and top-tier security measures.</p>
-                            <div class="tex"> <a href="#"
+                            <div class="tex"> <a href="{{ url('consultation') }}"
                                     class="nectar-button medium regular accent-color regular-button nec-btn med_btn"
                                     style="border-radius: 30px;">CONNECT WITH OUR SPECIALISTS</a>
-                                <a href="#d" class="nec-btn" id="cyz" style="border-radius: 30px !important;">REQUEST A DEMO</a>
+                                {{-- <a href="#d" class="nec-btn" id="cyz" style="border-radius: 30px !important;">REQUEST A DEMO</a> --}}
 
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                             <p>As digital platforms increasingly embrace multi-level marketing, we deliver top-tier white-label MLM software powered by blockchain technology, designed for businesses looking to deploy Ethereum and TRON-based MLM systems. Our solutions guarantee complete decentralization, unparalleled transparency, and robust security. With an immutable smart contract at its core, our software ensures precise, tamper-proof calculations and automates transactions with remarkable speed and efficiency—no human intervention is needed.
                             </p>
                             <div class="text-left mt20">
-                                <a href="#"
+                                <a href="{{ url('consultation') }}"
                                     class="nectar-button medium regular accent-color regular-button nec-btn med_btn"
                                     style="border-radius: 30px;">CONNECT WITH OUR EXPERTS</a>
                             </div>
@@ -480,7 +480,7 @@
                             <div class="cta_mine">
                                 <a class="nectar-button medium regular accent-color regular-button nec-btn"
                                     target="_blank"
-                                    href="#"
+                                    href="{{ url('consultation') }}"
                                     data-color-override="false" data-hover-color-override="false"
                                     data-hover-text-color-override="#fff"><span>Book a Personalized Demo</span></a>
                             </div>
@@ -809,7 +809,7 @@
                 /* zoom: 0.98; */
             }
         </style>
-        <section id="demo" class>
+        {{-- <section id="demo" class>
             <div class="container gray-bg">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -850,7 +850,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <style type="text/css">
             .pro-timeline:after {
                 content: '';
@@ -1074,7 +1074,7 @@
                 </div>
             </div>
             <div class=" text-center" style="margin-top:20px;">
-                <a href="#"
+                <a href="{{ url('consultation') }}"
                     class="nectar-button medium regular accent-color regular-button nec-btn med_btn"
                     style="border-radius: 30px;">CONNECT WITH OUR EXPERTS</a>
             </div>
@@ -1151,11 +1151,13 @@
                     </div>
                     <div class="text-center cta_mine">
                         <a rel="nofollow" class="nectar-button medium regular accent-color regular-button med_btn"
-                            target="_blank" href="#"
+                            target="_blank" href="{{ url('consultation') }}"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff" style="border-radius: 30px;"><span>Schedule a Consultation</span></a>
+                            data-hover-text-color-override="#fff" style="border-radius: 30px;"><span>Schedule a Consultation</span>
+                        </a>
                         <a rel="nofollow" href="https://t.me/smartdev3ai" target="_blank"
-                            class="nectar-button med_btn" style="border-radius: 30px;"><span>Connect with Us on Telegram</span></a>
+                            class="nectar-button med_btn" style="border-radius: 30px;"><span>Connect with Us on Telegram</span>
+                        </a>
                     </div>
                 </div>
             </div>

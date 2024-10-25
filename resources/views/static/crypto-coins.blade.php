@@ -199,15 +199,15 @@
             <br />
             @if($cta_1 || $cta_2)
                <div class="contentall" align="center">
-                  @if($cta_1)
+                  {{-- @if($cta_1)
                      <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
-                        target="_blank" href="#"
+                        target="_blank" href="{{ url("$cta_1") }}"
                         data-color-override="false" data-hover-color-override="false"
-                        data-hover-text-color-override="#fff"><span>{{ $cta_1 }}</span></a>
-                  @endif
+                        data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
+                  @endif --}}
                   @if( $cta_2 )
-                     <a href="#" rel="nofollow" class="nec-btn"
-                     style="border-radius: 30px !important; text-transform:none !important;">{{ $cta_2 }}</a>
+                     <a href="{{ url("$cta_2") }}" rel="nofollow" class="nec-btn"
+                     style="border-radius: 30px !important; text-transform:none !important;">Talk to Our Experts</a>
                   @endif
                   
                </div>

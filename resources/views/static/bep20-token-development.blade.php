@@ -1763,7 +1763,7 @@
                                 </div>
                                 <p itemprop="text">Harness the power of the BNB Chain to craft a bespoke token with our cutting-edge BEP-20 development solutions. Amplify your reach and create highly efficient tokens with the guidance of our expert team.</p>
                                 <div class="banner-btn">
-                                    <a href="#"
+                                    <a href="{{ url('consultation') }}"
                                         rel="nofollow" class="nec-btn" id="cyz"
                                         style="border-radius: 30px !important; text-transform: capitalize !important; margin-left: 0px;">Design Your Custom Token Today</a>
                                 </div>
@@ -1957,13 +1957,18 @@
                         <h2 class="sec_tit underline text-center"> Launch Your Groundbreaking Token with Our BEP-20 Development Experts</h2>
                         <p class="section-subtitle mb20 text-center">BEP-20 tokens are rapidly gaining traction in the crypto space, driving innovation and enhancing the Binance ecosystem. By developing these tokens, businesses can create tailored crypto assets on the BNB Chain for effective fundraising, rewarding users, or building decentralized apps. Our specialized team crafts feature-rich tokens with robust smart contracts, seamlessly integrating them with the BNB Chain to ensure smooth functionality and broader acceptance within the Binance ecosystem. Our comprehensive services are tailored to deliver numerous advantages, setting the stage for your project's success.</p>
                     </div>
-                    <div class="text-center cta_min" style="width: 100%"> <a rel="nofollow"
+                    <div class="text-center cta_min" style="width: 100%"> 
+                        {{-- <a rel="nofollow"
                             class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
                             href="#"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a> <a rel="nofollow"
-                            href="#"
-                            class="nectar-button medium regular accent-color regular-button nec-btn"><span>CONNECT WITH OUR EXPERTS</span></a> </div>
+                            data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span>
+                        </a> --}}
+                        <a rel="nofollow"
+                            href="{{ url('consultation') }}"
+                            class="nectar-button medium regular accent-color regular-button nec-btn"><span>CONNECT WITH OUR EXPERTS</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2080,8 +2085,8 @@
                     'image' => 'bep20/icons/cross-chain.webp',
                 ],
             ],
-            'cta_1' => 'BOOK A MEETING',
-            'cta_2' => 'SPEAK WITH OUR EXPERTS'
+            'cta_1' => '#',
+            'cta_2' => 'consultation'
         ])
         
 
@@ -2355,10 +2360,15 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="text-center cta_min mt50"> <a rel="nofollow"
+                        <div class="text-center cta_min mt50"> 
+                            <a rel="nofollow"
                                 class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
-                                href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>CONNECT WITH OUR TEAM</span></a> <a
-                                rel="nofollow" href="#" class="nectar-button medium regular accent-color regular-button nec-btn"><span>EXPLORE YOUR IDEAS!</span></a> </div>
+                                href="{{ url('consultation') }}" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>CONNECT WITH OUR TEAM</span>
+                            </a> 
+                            {{-- <a
+                                rel="nofollow" href="#" class="nectar-button medium regular accent-color regular-button nec-btn"><span>EXPLORE YOUR IDEAS!</span>
+                            </a>  --}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2439,8 +2449,8 @@
                     'image' => 'bep20/icons/testing.png'
                 ],
             ],
-            'cta1' => 'CONNECT WITH OUR EXPERTS',
-            'cta2' => 'SCHEDULE A CONSULTATION'
+            'cta1' => 'consultation',
+            'cta2' => '#'
         ])
 
         <section class="welcome-content" style="background: #fff;">
@@ -2658,14 +2668,16 @@
                             </div>
                         </div>
                         <div class="text-center cta_min mt20">
-                            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+                            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                                 target="_blank"
                                 href="#"
                                 data-color-override="false" data-hover-color-override="false"
-                                data-hover-text-color-override="#fff"><span>SCHEDULE A MEETING</span></a>
-                            <a rel="nofollow" href="#"
+                                data-hover-text-color-override="#fff"><span>SCHEDULE A MEETING</span>
+                            </a> --}}
+                            <a rel="nofollow" href="{{ url('consultation') }}"
                                 class="nectar-button medium regular accent-color regular-button nec-btn">
-                                <span>TALK WITH OUR EXPERTS</span></a>
+                                <span>TALK WITH OUR EXPERTS</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -2692,13 +2704,13 @@
                                 BEP-20 tokens are particularly useful in DeFi markets due to their enhanced features, offering advantages to both new and established businesses. As a strong alternative to ERC-20 tokens, we build BEP-20 tokens compatible with the Ethereum Virtual Machine (EVM), allowing for scalable and cross-chain projects. Partner with our experts to simplify your BEP-20 token creation and effectively enter the market.
                             </p>
                             <div class="text-center cta_min mt20">
-                                <a rel="nofollow"
+                                {{-- <a rel="nofollow"
                                     class="nectar-button medium regular accent-color regular-button nec-btn"
                                     target="_blank"
                                     href="#"
                                     data-color-override="false" data-hover-color-override="false"
-                                    data-hover-text-color-override="#fff"><span>SCHEDULE A MEETING</span></a>
-                                <a rel="nofollow" href="#"
+                                    data-hover-text-color-override="#fff"><span>SCHEDULE A MEETING</span></a> --}}
+                                <a rel="nofollow" href="{{ url('consultation') }}"
                                     class="nectar-button medium regular accent-color regular-button nec-btn">
                                     <span>TALK WITH OUR EXPERTS</span></a>
                             </div>
@@ -2744,7 +2756,7 @@
                     <div class="tab-content technology">
                         <div role="tabpanel" class="tab-pane in active" id="vtab28">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy" src="{{ asset('images/tron-token-development/tech-stack/solidity.webp') }}">
                                         <p>Solidity</p>
                                     </li>
@@ -2765,7 +2777,7 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab26">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy" src="{{ asset('images/tron-token-development/tech-stack/manogodb.png') }}">
                                         <p>MongoDB </p>
                                     </li>
@@ -2781,7 +2793,7 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab29">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy" src="{{ asset('images/tron-token-development/tech-stack/truffle.webp') }}">
                                         <p>Truffle Suite</p>
                                     </li>
@@ -2797,7 +2809,7 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab51">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy"
                                             src="{{ asset('images/tron-token-development/tech-stack/node-js_logo.webp') }}">
                                         <p>Node.js</p>
@@ -2807,7 +2819,7 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab52">
                             <div class="row">
-                                <ul>
+                                <ul style="width: 100%">
                                     <li><img class="lazy" src="{{ asset('images/tron-token-development/tech-stack/react.webp') }}">
                                         <p>React</p>
                                     </li>

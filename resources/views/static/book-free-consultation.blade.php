@@ -1,4 +1,5 @@
 @extends('layouts.static')
+@section('title', 'Consultation')
 @section('body')
     <style>
         body {

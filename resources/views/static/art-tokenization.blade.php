@@ -1856,7 +1856,7 @@
                                             Transform Art into Digital Assets within Legal Boundaries
                                         </p>
                                         <div class="txt">
-                                            <a rel="nofollow" href="#" class="nec-btn" id="cyz"
+                                            <a rel="nofollow" href="{{ url('consultation') }}" class="nec-btn" id="cyz"
                                                 style="border-radius: 30px !important; margin-left: 0px !important;">BOOK A CONSULTATION CONNECT WITH OUR SPECIALISTS</a> 
                                         </div>
                                     </div>

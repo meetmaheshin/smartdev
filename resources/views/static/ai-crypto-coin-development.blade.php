@@ -2350,7 +2350,7 @@
                                             <h1 itemprop="name"> Develop a Cutting-Edge Crypto Project with Our Expert AI Coin Development Team</h1>
                                         </div>
                                         <p itemprop="text">Bring your visionary AI-driven altcoin project to life with our top-tier AI crypto coin development services. We provide all the essential elements you need to create a groundbreaking technological innovation.</p>
-                                        <div class="txt"> <a href="#" class="nec-btn" id="cyz" style="border-radius: 30px !important;">Connect with Our Experts Today</a> </div>
+                                        <div class="txt"> <a href="{{ url('consultation') }}" class="nec-btn" id="cyz" style="border-radius: 30px !important;">Connect with Our Experts Today</a> </div>
                                     </div>
                                 </div>
                             </div>
@@ -2371,13 +2371,13 @@
                         <p class="text-center">Looking to create an altcoin for your innovative AI-based business? Our expert team specializes in developing high-quality AI-driven altcoins that captivate both clients and their users. Let us handle your altcoin development to drive users towards your business goals seamlessly.<br><br>
                             With our services, you’ll create tokens with valuable use cases and features that boost your presence in the Web3 market. This could be the game-changer that propels your AI project to a global audience!</p>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="text-center cta_mine txt"> <a
+                    <div class="text-center cta_mine txt"> 
+                        {{-- <a
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                             target="_blank" href="#"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> <a
-                            href="#"
+                            data-hover-text-color-override="#fff"><span>Schedule a Meeting</span></a> --}}
+                            <a href="{{ url('consultation') }}"
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Connect with Our Experts</span></a> </div>
                 </div>
             </div>
@@ -2584,7 +2584,7 @@
                 <div class="text-center">
                     <div class="cta_mine">
                         <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
-                            target="_blank" href="#"
+                            target="_blank" href="{{ url('consultation') }}"
                             data-color-override="false" data-hover-color-override="false"
                             data-hover-text-color-override="#fff"><span>Connect with Our Experts Now</span></a>
                     </div>

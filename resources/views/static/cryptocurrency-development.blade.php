@@ -111,7 +111,7 @@
    'banner_heading_1' => 'Launch Your Own Cryptocurrency with', 
    'banner_heading_2' => 'Leading Cryptocurrency Development Company', 
    'banner_para' => 'Lead the crypto revolution with our top development team. We create custom tokenomics and strategic upgrades to position your coin at the top of the market', 
-   'banner_CTA' => '/',
+   'banner_CTA' => 'consultation',
    'img_url' => 'images/crypto/banner-img.jpeg'
 ))
 @include('static.stats')

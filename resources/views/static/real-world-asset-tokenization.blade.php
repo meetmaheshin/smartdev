@@ -1381,9 +1381,9 @@
                                 </div>
                                 <p itemprop="text">Unlock the full potential of blockchain technology with our premier real-world asset (RWA) tokenization solutions. Partner with our leading asset tokenization firm to access top-tier services that deliver unmatched excellence.</p>
                                 <div class="banner-btn">
-                                    <a rel="nofollow" href="#newsletter-form-sec" class="nec-btn" id="cyz"><strong>CONNECT WITH OUR SPECIALISTS</strong></a>
-                                    <a rel="nofollow" href="#demo" class="nec-btn btn1" id="cyz">SEE A LIVE DEMO</a>
-                                    <a rel="nofollow" href="#demo" class="nec-btn btn1" id="cyz">REQUEST PRICING DETAILS</a>
+                                    <a rel="nofollow" href="{{ url('consultation') }}" class="nec-btn" id="cyz"><strong>CONNECT WITH OUR SPECIALISTS</strong></a>
+                                    {{-- <a rel="nofollow" href="#demo" class="nec-btn btn1" id="cyz">SEE A LIVE DEMO</a>
+                                    <a rel="nofollow" href="#demo" class="nec-btn btn1" id="cyz">REQUEST PRICING DETAILS</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -1629,7 +1629,7 @@
                             <a rel="nofollow"
                                 class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                                 target="_blank"
-                                href="#"
+                                href="{{ url('consultation') }}"
                                 data-color-override="false" data-hover-color-override="false"
                                 data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION CONNECT WITH OUR SPECIALISTS</span>
                             </a>

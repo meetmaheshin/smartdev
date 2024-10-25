@@ -1716,7 +1716,7 @@
                                         </div>
                                         <p itemprop="text">Elevate your position in the crypto financial sector with our cutting-edge services in crypto ETF development. Our expertise streamlines the creation of high-performance crypto ETF applications, making it simpler than ever to succeed.
                                         </p>
-                                        <div class="txt"> <a href="#" class="nec-btn" id="cyz"
+                                        <div class="txt"> <a href="{{ url('consultation') }}" class="nec-btn" id="cyz"
                                                 style="border-radius: 30px !important;">CONNECT WITH OUR SPECIALISTS</a> </div>
                                     </div>
                                 </div>
@@ -1739,14 +1739,14 @@
                         <p class="text-center">With recent SEC approvals, the excitement around crypto ETFs is intensifying. Bitcoin spot ETFs, in particular, are gaining traction as firms seek safer investment avenues within the cryptocurrency space.<br><br>
                             As a leader in blockchain innovation, we excel in blockchain ETF development, positioning ourselves at the forefront of this financial revolution. These ETFs not only make cryptocurrencies accessible to retail investors but also open doors for institutional participation. The rise of crypto ETFs is set to transform various business models, including exchange platforms offering these financial products.</p>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="text-center cta_mine txt"> <a
-                            class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
+                    <div class="text-center cta_mine txt"> 
+                        {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                             target="_blank" href="#"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a> <a
-                            href="#"
-                            class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>CONNECT WITH OUR EXPERTS</span></a> </div>
+                            data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span>
+                        </a>  --}}
+                        <a href="{{ url('consultation') }}" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>CONNECT WITH OUR EXPERTS</span></a> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -1939,12 +1939,12 @@
                             }
                         </style>
                         <div class="cta_mine">
-                            <a class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
+                            {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
                                 href="#"
                                 data-color-override="false" data-hover-color-override="false"
-                                data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a>
-                            <a href="#"
-                                class="nectar-button medium regular accent-color regular-button nec-btn"><span>CONNECT WITH OUR EXPERTS</span></a>
+                                data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span>
+                            </a> --}}
+                            <a href="{{ url('consultation') }}" class="nectar-button medium regular accent-color regular-button nec-btn"><span>CONNECT WITH OUR EXPERTS</span></a>
                         </div>
                     </div>
                 </div>
@@ -1987,8 +1987,6 @@
                 'image' => 'crypto-etf-development/icons/trading.png',
             ],
         ],
-        'cta_1' => '',
-        'cta_2' => ''
     ])
 
     <section class="service-section web-servic pad-tb">

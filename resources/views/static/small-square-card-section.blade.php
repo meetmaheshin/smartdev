@@ -23,15 +23,15 @@
 
         @if($cta_1 || $cta_2)
             <div class="text-center cta_min ">
-                @if($cta_1)
+                {{-- @if($cta_1)
                 <a rel="nofollow"
                     class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
-                    href="#" data-color-override="false"
-                    data-hover-color-override="false" data-hover-text-color-override="#fff"><span>{{ $cta_1 }}</span>
+                    href="{{ url("$cta_1") }}" data-color-override="false"
+                    data-hover-color-override="false" data-hover-text-color-override="#fff"><span>BOOK A MEETING</span>
                 </a>
-                @endif
+                @endif --}}
                 @if( $cta_2 )
-                    <a rel="nofollow" href="#" class="nectar-button medium regular accent-color regular-button nec-btn"><span>{{ $cta_2 }}</span>
+                    <a rel="nofollow" href="{{ url("$cta_2") }}" class="nectar-button medium regular accent-color regular-button nec-btn"><span>SPEAK WITH OUR EXPERTS</span>
                     </a> 
                 @endif
             </div>

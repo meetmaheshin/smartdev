@@ -2261,8 +2261,9 @@
                                             <h1 itemprop="name">Transformative LSD Token Creation</h1>
                                         </div>
                                         <p itemprop="text">Leverage the cutting-edge potential of LSD token development to revolutionize how investors redeem and retake their cryptocurrencies seamlessly. Partner with our expert LSD token developers to bring your innovative vision to life with sophistication!</p>
-                                        <div class="txt"> <a href="#" class="nec-btn" id="cyz"
-                                                style="border-radius: 30px !important;">Connect with Our Experts</a> </div>
+                                        <div class="txt"> <a href="{{ url('consultation') }}" class="nec-btn" id="cyz"
+                                            style="border-radius: 30px !important;">Connect with Our Experts</a> 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2286,7 +2287,7 @@
                     <div class="clearfix"></div>
                     <div class="text-center cta_mine txt"> <a
                             class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
-                            target="_blank" href="#"
+                            target="_blank" href="{{ url('consultation') }}"
                             data-color-override="false" data-hover-color-override="false"
                             data-hover-text-color-override="#fff"><span>Schedule a Consultation Speak with Our Specialists</span></a></div>
                 </div>
@@ -2455,11 +2456,11 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="text-center">
                     <div class="cta_mine">
-                        <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
+                        {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
                             target="_blank" href="#"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>Set Up a Meeting Today</span></a>
-                        <a rel="nofollow" href="#newsletter-form-sec"
+                            data-hover-text-color-override="#fff"><span>Set Up a Meeting Today</span></a> --}}
+                        <a rel="nofollow" href="{{ url('consultation') }}"
                             class="nectar-button medium regular accent-color regular-button nec-btn"><span>Talk to Our Experts</span></a>
                     </div>
                 </div>
@@ -2525,16 +2526,16 @@
 <section class="common_spacing welcome-content">
     <div class="container">
         <div class="row">
-            <h3 class="sec_tit underline text-center text-white">Why Partner with Us for Cutting-Edge LSD Token Development?</h3>
+            <h3 class="sec_tit underline text-center text-white" style="width: 100%">Why Partner with Us for Cutting-Edge LSD Token Development?</h3>
             <p class="text-center text-white">With over seven years of pioneering experience in blockchain technology, our firm leads the way in LSD token development. Our expert team delivers robust solutions for liquid staking derivatives, combining in-depth blockchain knowledge with advanced DeFi integration. Trust us to craft your LSD tokens, optimize returns, and immerse yourself in the dynamic blockchain landscape.</p>
-            <div class="text-center">
-                <div class="cta_mine">
+            <div class="text-center" style="width: 100%">
+                <div class="cta_mine" >
                     <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
-                        target="_blank" href="#"
+                        target="_blank" href="{{ url('consultation') }}"
                         data-color-override="false" data-hover-color-override="false"
                         data-hover-text-color-override="#fff"><span>Schedule a Consultation</span></a>
-                    <a rel="nofollow" href="#"
-                        class="nectar-button medium regular accent-color regular-button nec-btn"><span>Connect with Our Specialists</span></a>
+                    {{-- <a rel="nofollow" href="#"
+                        class="nectar-button medium regular accent-color regular-button nec-btn"><span>Connect with Our Specialists</span></a> --}}
                 </div>
             </div>
         </div>
