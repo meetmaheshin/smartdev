@@ -1741,13 +1741,13 @@
                         </p>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="text-center cta_mine txt"> <a
-                            class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
+                    <div class="text-center cta_mine txt"> 
+                        {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
                             target="_blank" href="#"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a> <a
-                            href="#"
-                            class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>ENGAGE WITH OUR EXPERTS</span></a> </div>
+                            data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a> --}}
+                        <a href="{{ url('consultation') }}" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>ENGAGE WITH OUR EXPERTS</span></a> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -1780,7 +1780,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                src="{{ asset('images/decentralized-sports-betting-platform/icons/easy-to-use.webp') }}"> </div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/easy-to-use.png') }}"> </div>
                         <div class="awesome-features-text">
                             <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Risk-Free Bets</strong>Hassle-free betting lets users place bets on two possible outcomes, ensuring a risk-free and profitable experience for all participants.</p>
                         </div>
@@ -1789,7 +1789,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                src="{{ asset('images/decentralized-sports-betting-platform/icons/rewards.webp') }}"> </div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/rewards.png') }}"> </div>
                         <div class="awesome-features-text">
                             <p> <strong
                                     style="display:block; font-size: 18px; padding-bottom: 5px;">High-Stakes Parlays</strong>Parlay betting empowers users to wager on multiple outcomes, with the potential for substantial rewards aligned with increased risk.</p>
@@ -1799,7 +1799,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                src="{{ asset('images/decentralized-sports-betting-platform/icons/decisions.webp') }}"> </div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/decisions.png') }}"> </div>
                         <div class="awesome-features-text">
                             <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Pool Bets</strong>Pool betting distributes rewards as per the collective accuracy of bets across all fixtures within the pool, creating a communal betting experience.</p>
                         </div>
@@ -1808,7 +1808,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                src="{{ asset('images/decentralized-sports-betting-platform/icons/sports.webp') }}"> </div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/sports-bet.png') }}"> </div>
                         <div class="awesome-features-text">
                             <p> <strong
                                     style="display:block; font-size: 18px; padding-bottom: 5px;">Over/Under Bets</strong>Over/under betting allows users to wager on whether outcomes will exceed or fall short of a number, to secure their winnings.</p>
@@ -1818,7 +1818,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                src="{{ asset('images/decentralized-sports-betting-platform/icons/wheelchair.webp') }}"> </div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/wheelchair.png') }}"> </div>
                         <div class="awesome-features-text">
                             <p> <strong
                                     style="display:block; font-size: 18px; padding-bottom: 5px;">Handicaps</strong>Handicap betting provides a competitive edge by allowing players to define margins, balancing the odds in games with clear favorites.</p>
@@ -1828,7 +1828,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                src="{{ asset('images/decentralized-sports-betting-platform/icons/bet.webp') }}"> </div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/bet.png') }}"> </div>
                         <div class="awesome-features-text">
                             <p> <strong
                                     style="display:block; font-size: 18px; padding-bottom: 5px;">Head-to-Head Bets</strong>Head-to-head betting focuses on choosing between two options where ties are not possible, offering a straightforward yet engaging betting experience.</p>
@@ -1843,8 +1843,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <h2 class="text-white">Build Your Web3 Sports Betting Platform with Our Professional Developers!
-                </h2>
+                <h2 class="text-white">Elevate Your Decentralized Sports Betting Platform with Expert Developers!</h2>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="text-center">
@@ -1878,13 +1877,12 @@
                         }
                     </style>
                     <div class="cta_mine">
-                        <a class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
+                        {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
                             href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-                        <a href="#newsletter-form-sec"
-                            class="nectar-button medium regular accent-color regular-button nec-btn"><span>Talk with our
-                                Experts</span></a>
+                            data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a> --}}
+                        <a href="{{ url('consultation') }}"
+                            class="nectar-button medium regular accent-color regular-button nec-btn"><span>ENGAGE WITH OUR SPECIALISTS</span></a>
                     </div>
                 </div>
             </div>
@@ -1894,12 +1892,9 @@
 <section class="service-section web-servic pad-tb">
     <div class="container">
         <div class="section-header underline text-center">
-            <h3 class="text-white title-th">Leading Features of Our Crypto Sports Betting Platform Development Solution
-            </h3>
+            <h3 class="text-white title-th">Features for Transformative Crypto Sports Betting Platform</h3>
         </div>
-        <p class="text-white text-center" style="position: relative;">Our prowess in crypto sports betting platform
-            development empowers your software with intricate features that can power your project to success. We ensure
-            to offer friendly experiences to users and efficient operations for businesses. </p>
+        <p class="text-white text-center" style="position: relative;">Our expertise in crypto sports betting platform development equips your software with advanced features designed to drive success and deliver exceptional user experiences. Here’s what sets our solution apart:</p>
         <div class="row upset link-hover shape-num justify-content-center">
             <div class="container container-center">
                 <div class="col-lg-4 col-sm-4 equalize mt30  shape-loc wow fadeInUp" data-wow-delay="0.2s"
@@ -1907,11 +1902,9 @@
                     <div class="box4"
                         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                         <div class="s-card-icon"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/account.webp" alt=" ">
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/account.png') }}" alt=" ">
                         </div>
-                        <p> <strong style="display:block; font-size:18px; margin-bottom: 5px;">User Account
-                            </strong>Bettors can register themselves using multiple means and manage their bets and
-                            rewards from their account tab on the sports betting platform.</p>
+                        <p> <strong style="display:block; font-size:18px; margin-bottom: 5px;">Seamless User Accounts</strong>Users can effortlessly register through various methods and manage bets and rewards using a comprehensive account dashboard.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 equalize mt30 shape-loc wow fadeInUp" data-wow-delay="0.4s"
@@ -1919,12 +1912,10 @@
                     <div class="box4"
                         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                         <div class="s-card-icon"><img
-                                data-src="images/decentralized-sports-betting-platform/icons/exchange.webp" class="lazy"
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/exchange.png') }}" class="lazy"
                                 alt=" "></div>
                         <p> <strong
-                                style="display:block; font-size:18px;margin-bottom: 5px;">Exchanges</strong>Exchanges in
-                            Web3 sports betting platforms allow bettors to bet against each other in a decentralized
-                            setting rather than a central sportsbook.</p>
+                                style="display:block; font-size:18px;margin-bottom: 5px;">Decentralized Exchanges</strong>Our platform enables bettors to engage in decentralized exchanges, allowing them to bet directly against one another, bypassing traditional centralized sportsbooks.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 equalize mt30 shape-loc wow fadeInUp" data-wow-delay="0.4s"
@@ -1932,11 +1923,9 @@
                     <div class="box4"
                         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                         <div class="s-card-icon"><img
-                                data-src="images/decentralized-sports-betting-platform/icons/sports.webp" class="lazy"
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/sports.png') }}" class="lazy"
                                 alt=" "></div>
-                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Slips</strong> Bettors can
-                            compile their wagers into betting slips for a particular sports fixture, using which you can
-                            place bets of different types in the app.</p>
+                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Dynamic Betting Slips</strong>Bettors can aggregate the wagers into organized slips for specific sports events, facilitating the placement of diverse bet types within the app.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 equalize mt30 shape-loc wow fadeInUp" data-wow-delay="0.4s"
@@ -1944,11 +1933,9 @@
                     <div class="box4"
                         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                         <div class="s-card-icon"><img
-                                data-src="images/decentralized-sports-betting-platform/icons/live-streaming.webp"
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/live-streaming.png') }}"
                                 class="lazy" alt=" "></div>
-                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Live Updates</strong>The
-                            platform comes with live score updates and video streams of sports matches that bettors can
-                            view to make changes to bets wherever applicable.</p>
+                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Real-Time Live Updates</strong>Stay ahead with real-time score updates and video streaming of ongoing sports matches, enabling users to adjust their bets with up-to-the-minute information.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 equalize mt30 shape-loc wow fadeInUp" data-wow-delay="0.4s"
@@ -1956,11 +1943,9 @@
                     <div class="box4"
                         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                         <div class="s-card-icon"><img
-                                data-src="images/decentralized-sports-betting-platform/icons/bet.webp" class="lazy"
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/bet.png') }}" class="lazy"
                                 alt=" "></div>
-                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Bet
-                                Tracking</strong>During the game, bettors can track their bets in real-time to have the
-                            latest insights on their bets’ performance and make changes if necessary.</p>
+                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Advanced Bet Tracking</strong>Monitor bets with our real-time advanced tracking system, providing bettors with current insights into their bets' performance and allowing for strategic adjustments.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 equalize mt30 shape-loc wow fadeInUp" data-wow-delay="0.4s"
@@ -1968,11 +1953,9 @@
                     <div class="box4"
                         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                         <div class="s-card-icon"><img
-                                data-src="images/decentralized-sports-betting-platform/icons/withdraw.webp" class="lazy"
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/withdraw.png') }}" class="lazy"
                                 alt=" "></div>
-                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Withdrawals</strong>The
-                            Web3 sports betting platform has a portal where users can withdraw rewards to their crypto
-                            wallet at any time without any locking period.</p>
+                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Instant Withdrawals</strong>Users can swiftly withdraw rewards directly to their wallets through a dedicated portal, with no waiting periods or restrictions.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 equalize mt30 shape-loc wow fadeInUp" data-wow-delay="0.4s"
@@ -1980,11 +1963,9 @@
                     <div class="box4"
                         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                         <div class="s-card-icon"><img
-                                data-src="images/decentralized-sports-betting-platform/icons/loyalty.webp" class="lazy"
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/loyalty.webp') }}" class="lazy"
                                 alt=" "></div>
-                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Loyalty
-                                Programs</strong>The application has a built-in loyalty program that can enable users to
-                            gain premium rewards and exclusive in-app and real-world experiences.
+                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Loyalty Rewards</strong>Our application features an integrated loyalty program, allowing users to earn rewards and access in-app benefits with advanced experiences.
                         </p>
                     </div>
                 </div>
@@ -1993,11 +1974,9 @@
                     <div class="box4"
                         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                         <div class="s-card-icon"><img
-                                data-src="images/decentralized-sports-betting-platform/icons/mechanisms.webp"
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/mechanisms.webp') }}"
                                 class="lazy" alt=" "></div>
-                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Fair Mechanism</strong>Our
-                            decentralized betting platform development thrives on fair betting environments that enable
-                            great experiences for users irrespective of results.</p>
+                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Equitable System</strong>Our decentralized betting platform is designed to foster a fair and transparent betting environment, ensuring exceptional experiences for all users regardless of outcomes.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 equalize mt30 shape-loc wow fadeInUp" data-wow-delay="0.4s"
@@ -2005,11 +1984,9 @@
                     <div class="box4"
                         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                         <div class="s-card-icon"><img
-                                data-src="images/decentralized-sports-betting-platform/icons/platform.webp" class="lazy"
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/platform.webp') }}" class="lazy"
                                 alt=" "></div>
-                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Cross-Platform</strong>The
-                            Web3 betting platform we built works seamlessly across platforms like web browsers and
-                            mobile devices, allowing users to participate anytime.</p>
+                        <p> <strong style="display:block; font-size:18px;margin-bottom: 5px;">Multi-Platform Compatibility</strong>Our Web3 betting platform operates flawlessly across various devices, including web browsers and mobile applications, enabling users to engage anytime, anywhere.</p>
                     </div>
                 </div>
             </div>
@@ -2021,23 +1998,19 @@
         <div class="row mt20">
             <div class="section-title text-center">
                 <div class="sec_tit mb20">
-                    <h2 class="section-title underline mb20">Problems P2P Sports Betting Platform Development Aims to
-                        Solve</h2>
+                    <h2 class="section-title underline mb20">Tackle Top Challenges with Top-tier Sports Betting Platform Development</h2>
                 </div>
-                <p>While the current sports betting has a humongous market size, it comes with several difficulties. Our
-                    expertise in P2P sports betting platform development aims to overcome the existing problems by
-                    integrating decentralized technological stacks and mechanisms.</p>
+                <p>Despite the vast market size of traditional sports betting, it is plagued by several significant issues. Our P2P sports betting platform development addresses these challenges by leveraging advanced decentralized technologies and solutions.</p>
             </div>
         </div>
         <div class="row mt20 container-center">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 equalize">
                 <div class="icon-text-1">
                     <div class="icon-text-icon"><img class="lazy"
-                            data-src="images/decentralized-sports-betting-platform/icons/registration.webp"></div>
+                            src="{{ asset('images/decentralized-sports-betting-platform/icons/registration.png') }}"></div>
                     <div class="icon_content">
-                        <h4>Tedious Registration</h4>
-                        <p class="c-grey"> Sports betting platforms currently come with registration processes that
-                            require users to fulfill extensive KYC needs and mandate linking bank accounts.</p>
+                        <h4>Cumbersome Registration Processes</h4>
+                        <p class="c-grey"> Current platforms impose lengthy registration requirements, including extensive KYC procedures and mandatory bank account linkages, causing unnecessary friction for users.</p>
                     </div>
                 </div>
             </div>
@@ -2045,11 +2018,10 @@
                 <div class="icon-text-1-group">
                     <div class="icon-text-1">
                         <div class="icon-text-icon"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/ux-design.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/ux-design.png') }}"></div>
                         <div class="icon_content">
-                            <h4>Complex UX</h4>
-                            <p class="c-grey">Existing sports betting websites have complex user interfaces and offer
-                                redundant experiences, making it tough for people to access these platforms.</p>
+                            <h4>Complex User Experience</h4>
+                            <p class="c-grey">Traditional sports betting sites often feature convoluted interfaces and redundant processes, making navigation and access unnecessarily difficult for users.</p>
                         </div>
                     </div>
                 </div>
@@ -2058,11 +2030,10 @@
                 <div class="icon-text-1-group">
                     <div class="icon-text-1">
                         <div class="icon-text-icon"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/liquidity.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/liquidity.webp') }}"></div>
                         <div class="icon_content">
-                            <h4>Low Liquidity</h4>
-                            <p class="c-grey">Traditional online betting applications tend to have a small liquidity
-                                pool, meaning users cannot bet higher stake amounts on a sports fixture.</p>
+                            <h4>Limited Liquidity</h4>
+                            <p class="c-grey">Many conventional betting applications suffer from restricted liquidity pools, preventing users from placing higher stakes on sports events.</p>
                         </div>
                     </div>
                 </div>
@@ -2071,11 +2042,10 @@
                 <div class="icon-text-1-group">
                     <div class="icon-text-1">
                         <div class="icon-text-icon"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/mechanisms.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/mechanisms.webp') }}"></div>
                         <div class="icon_content">
-                            <h4>Unfair Mechanisms</h4>
-                            <p class="c-grey">Conventional betting platforms tend to have unfair gaming mechanisms
-                                powered by manipulations and unwarranted restrictions that restrict bettors.</p>
+                            <h4>Unfair Practices</h4>
+                            <p class="c-grey">Existing platforms frequently engage in unfair practices, including manipulative mechanisms and restrictive conditions that hinder a fair betting experience.</p>
                         </div>
                     </div>
                 </div>
@@ -2084,11 +2054,10 @@
                 <div class="icon-text-1-group">
                     <div class="icon-text-1">
                         <div class="icon-text-icon"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/crowd-fund.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/crowd-fund.webp') }}"></div>
                         <div class="icon_content">
-                            <h4>Locked Funds</h4>
-                            <p class="c-grey">Most betting portals do not allow users to withdraw rewards until a set
-                                period, which makes it difficult for people wishing to withdraw quickly.</p>
+                            <h4>Restricted Fund Access</h4>
+                            <p class="c-grey">Numerous betting sites impose withdrawal delays, preventing users from accessing their funds promptly when they wish to withdraw.</p>
                         </div>
                     </div>
                 </div>
@@ -2097,24 +2066,22 @@
                 <div class="icon-text-1-group">
                     <div class="icon-text-1">
                         <div class="icon-text-icon"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/risk-free.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/risk-free.webp') }}"></div>
                         <div class="icon_content">
-                            <h4>Counterparty Risk</h4>
-                            <p class="c-grey">In the worst-case scenario, the betting venture might go offline with user
-                                funds, leaving people in the dark without any possibility of fund recovery.</p>
+                            <h4>Counterparty Risks</h4>
+                            <p class="c-grey">In extreme cases, betting platforms may become non-operational, potentially leaving users' funds unrecoverable and their bets unresolved.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="clearfix"></div>
-            <div class="text-center cta_mine txt"> <a
-                    class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank"
+            <div class="text-center cta_mine txt"> 
+                {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank"
                     href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
                     data-color-override="false" data-hover-color-override="false"
-                    data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> <a
-                    href="#newsletter-form-sec"
-                    class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with our
-                        Experts</span></a> </div>
+                    data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a> --}}
+                <a href="{{ url('consultation') }}" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>CONNECT WITH OUR EXPERTS</span></a> 
+            </div>
         </div>
     </div>
 </section>
@@ -2123,12 +2090,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h2 class="common_h3 text-center font-wei">The Solution Our Decentralized Sports Betting Software
-                        Offers</h2>
+                    <h2 class="common_h3 text-center font-wei">Breakthrough Benefits of Our Advanced Sports Betting Platform</h2>
                     <hr class="mb40">
-                    <p class="text-center">To combat the issues encountered in conventional sports betting portals, we
-                        brought a breakthrough decentralized sports betting software. This new-gen application from us
-                        aims to offer friendly experiences for bettors and fair-playing experiences.</p>
+                    <p class="text-center">To address the challenges faced by traditional sports betting platforms, we have developed a groundbreaking decentralized sports betting software. Our advanced solution is designed to deliver exceptional user experiences and ensure fair play.</p>
                 </div>
             </div>
         </div>
@@ -2137,13 +2101,12 @@
                 <div class="perfect-script-items1">
                     <div class="icon">
                         <img class="lazy"
-                            data-src="images/decentralized-sports-betting-platform/icons/easy-to-use.webp">
+                            src="{{ asset('images/decentralized-sports-betting-platform/icons/easy-to-use.png') }}">
                     </div>
                     <div class="content">
-                        <h4>Easy Sign-Up</h4>
+                        <h4>Seamless Registration</h4>
 
-                        <p>Users can register for the sports betting platform easily using any one among crypto wallets,
-                            social media handles, and email accounts.</p>
+                        <p>Users can effortlessly sign up using crypto wallets, social accounts, or email addresses, simplifying the entry process and enhancing accessibility.</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -2151,12 +2114,11 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                 <div class="perfect-script-items1">
                     <div class="icon">
-                        <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/withdraw.webp">
+                        <img class="lazy" src="{{ asset('images/decentralized-sports-betting-platform/icons/withdraw.png') }}">
                     </div>
                     <div class="content">
-                        <h4>Instant Withdrawals </h4>
-                        <p>Bettors can withdraw their rewards to their crypto wallets safely anytime without any
-                            restrictions, making the experience more rewarding.
+                        <h4>Immediate Withdrawals </h4>
+                        <p>Quickly and securely withdraw winnings to crypto wallets at any time, with no restrictions, ensuring a more gratifying experience.
                         </p>
                     </div>
                     <div class="clearfix"></div>
@@ -2165,12 +2127,11 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                 <div class="perfect-script-items1">
                     <div class="icon">
-                        <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/crowd-fund.webp">
+                        <img class="lazy" src="{{ asset('images/decentralized-sports-betting-platform/icons/crowd-fund.webp') }}">
                     </div>
                     <div class="content">
-                        <h4>Secure Funds </h4>
-                        <p>Funds in the platform are kept secure in cold storage with on-chain records that update
-                            periodically, ensuring optimal security levels. </p>
+                        <h4>Robust Fund Security</h4>
+                        <p>Funds are securely stored in cold storage with continuously updated records, providing top-tier protection and transparency.</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -2178,12 +2139,11 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                 <div class="perfect-script-items1">
                     <div class="icon">
-                        <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/global.webp">
+                        <img class="lazy" src="{{ asset('images/decentralized-sports-betting-platform/icons/global.png') }}">
                     </div>
                     <div class="content">
-                        <h4>Global Access </h4>
-                        <p>The Web3 sports betting app is accessible by users from worldwide without the need for
-                            complex KYC processes or linking bank accounts.</p>
+                        <h4>Universal Accessibility</h4>
+                        <p>Access the app from anywhere, eliminating the need for cumbersome KYC processes and bank account linkages.</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -2191,12 +2151,11 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                 <div class="perfect-script-items1">
                     <div class="icon">
-                        <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/experience.webp">
+                        <img class="lazy" src="{{ asset('images/decentralized-sports-betting-platform/icons/experiences.png') }}">
                     </div>
                     <div class="content">
-                        <h4>Engaging Experience </h4>
-                        <p>Our blockchain sports betting software provides highly engaging experiences for users with
-                            live bets and interactive betting provisions.</p>
+                        <h4>Immersive Betting Experience</h4>
+                        <p>Enjoy a highly interactive and engaging betting environment with live betting features and dynamic interactive options that captivate users.</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -2204,12 +2163,11 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                 <div class="perfect-script-items1">
                     <div class="icon">
-                        <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/bet.webp">
+                        <img class="lazy" src="{{ asset('images/decentralized-sports-betting-platform/icons/bet.png') }}">
                     </div>
                     <div class="content">
-                        <h4>On-chain Betting </h4>
-                        <p> All betting entries are stored on-chain, meaning manipulation of bets becomes impossible, as
-                            any changes will be visible to the public.</p>
+                        <h4>Transparent On-Chain Betting</h4>
+                        <p>All betting activities are recorded on the blockchain, making any manipulation impossible and ensuring that all changes are publicly visible.</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -2349,64 +2307,56 @@
         <div class="row">
             <div class="col-lg-12 text-center col-md-12 col-sm-12 col-xs-12">
                 <div class="section-title text-center">
-                    <h2 class="title-th sec_tit underline text-white">How Does Our Web3 Sports Betting Platform Work?
-                    </h2>
+                    <h2 class="title-th sec_tit underline text-white"> How Our Advanced Web3 Technology Reshapes Sports Betting</h2>
                 </div>
-                <p class="text-white">Our experienced team at Blockchain App Factory can build a Web3 sports betting
-                    platform that functions effectively using decentralized technological elements. Using such advanced
-                    technologies, we ensure to launch a betting solution that provides enriched experiences to users.
+                <p class="text-white">Our expert team designs Web3 sports betting platforms that harness the power of cutting-edge decentralized technologies to deliver unparalleled user experiences.
                 </p>
             </div>
             <div class="col-lg-12 text-center col-md-12 col-sm-12 col-xs-12">
                 <ul>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/decentralized.webp" />
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/decentralized.png') }}" />
                         </div>
                         <div class="contents">
-                            <h3>Decentralized Storage</h3>
+                            <h3>Advanced Decentralized Storage</h3>
                             <p>
-                                Decentralized storage solutions can be used to store betting records safely, zeroing the
-                                risk of data breaches or hacking attempts.</p>
+                                Our platform utilizes cutting-edge decentralized storage to securely manage betting records, effectively mitigating the risks of data breaches and cyber-attacks.</p>
                         </div>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/smart-contracts.webp" />
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/smart-contracts.webp') }}" />
                         </div>
                         <div class="contents">
-                            <h3>Smart Contracts</h3>
-                            <p>Smart contracts are used to conduct all processes inside the Web3 sports betting
-                                platform, ensuring high transparency and trust.</p>
+                            <h3>Automated Smart Contracts</h3>
+                            <p>Every action within our Web3 sports betting platform is governed by smart contracts, ensuring unparalleled transparency and reliability.</p>
                         </div>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/profile.webp" /></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/profile.png') }}" /></div>
                         <div class="contents">
-                            <h3>Decentralized User Profiles</h3>
+                            <h3>Self-Managed Decentralized Profiles</h3>
                             <p>
-                                User profiles based on Web3 technology give bettors complete control over their funds
-                                and bets without third-party involvement.</p>
+                                Leveraging Web3 technology, user profiles are fully decentralized, providing bettors with complete control over their funds and bets without intermediary involvement.</p>
                         </div>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/payment-gateways.webp" />
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/payment-gateways.png') }}" />
                         </div>
                         <div class="contents">
-                            <h3>Decentralized Payment Gateway</h3>
-                            <p>Decentralized payment gateways process in-app fund transactions between peers using
-                                cryptocurrency tokens using blockchain technology.</p>
+                            <h3>Direct Decentralized Transactions</h3>
+                            <p>Our platform features decentralized payment gateways that enable direct cryptocurrency transactions between users via blockchain technology.</p>
                         </div>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/exchange.webp" /></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/exchange.png') }}" /></div>
                         <div class="contents">
-                            <h3>Decentralized Exchange</h3>
-                            <p>The decentralized exchange in the sports betting apps lets users bet using different
-                                tokens seamlessly through easy trading practices.
+                            <h3>Integrated Decentralized Exchange</h3>
+                            <p>The platform includes a built-in decentralized exchange that allows users to place bets using various tokens effortlessly, enhancing the overall betting experience.
                             </p>
                         </div>
                     </li>
@@ -2420,29 +2370,23 @@
 <div class="common_spacing">
     <div class="container">
         <div class="section-title text-center">
-            <h2 class="title-th sec_tit underline">Whitelabel Decentralized Sports Betting Platform </h2>
+            <h2 class="title-th sec_tit underline">Launch Your Own Whitelabel Web3 Sports Betting Software</h2>
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                <p class="text-center mt20">For Web3 business enthusiasts like you who want to explore newer aspects of
-                    the market in a quick time, we present our Whitelabel decentralized sports betting platform. Our
-                    ready-made solutions empower you to launch your platform within a matter of days with all the
-                    customization you need. <br><br>
-                    Our seasoned professionals build your platform with support for a plethora of sports, enabling you
-                    to appeal to the global market. Worried about look-alikes? Don’t worry; we ensure to make your
-                    application as unique as possible with customized portals that reflect your brand’s themes. Approach
-                    our experts to learn more about tapping into our pre-built crypto sports betting solution!
+                <p class="text-center mt20">For ambitious Web3 entrepreneurs looking to quickly enter the market, our Whitelabel decentralized sports betting platform is the perfect solution. Our ready-to-use package lets you launch your custom platform in just days, with all the features you need.<br><br>
+                    Our team will design a platform that covers many sports to attract a global audience. We ensure your application stands out with unique branding and custom features. Contact our experts to see how our pre-built crypto sports betting solution can help you succeed!
+
                 </p>
             </div>
             <div class="clearfix"></div>
-            <div class="text-center cta_mine txt"> <a
-                    class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank"
+            <div class="text-center cta_mine txt"> 
+                {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank"
                     href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
                     data-color-override="false" data-hover-color-override="false"
-                    data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> <a
-                    href="#newsletter-form-sec"
-                    class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with our
-                        Experts</span></a> </div>
+                    data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a> --}}
+                <a href="{{ url('consultation') }}" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>ENGAGE WITH OUR EXPERTS</span></a>
+            </div>
         </div>
     </div>
 </div>
@@ -2452,8 +2396,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <h2 class="text-white">Launch Your New Decentralized Web3 Sports Betting App with Our Pre-made Solution!
-                </h2>
+                <h2 class="text-white">Accelerate Your Launch with Our Pre-Built Decentralized Web3 Sports Betting Solution!</h2>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="text-center">
@@ -2487,13 +2430,12 @@
                         }
                     </style>
                     <div class="cta_mine">
-                        <a class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
+                        {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
                             href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
                             data-color-override="false" data-hover-color-override="false"
-                            data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-                        <a href="#newsletter-form-sec"
-                            class="nectar-button medium regular accent-color regular-button nec-btn"><span>Talk with our
-                                Experts</span></a>
+                            data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a> --}}
+                        <a href="{{ url('consultation') }}"
+                            class="nectar-button medium regular accent-color regular-button nec-btn"><span>CONNECT WITH OUR EXPERTS</span></a>
                     </div>
                 </div>
             </div>
@@ -2943,15 +2885,13 @@
 </style>
 <section class="common_spacing gray_bg">
     <div class="container">
-        <div class="row">
+        <div class="">
             <div class="section-title underline text-center">
                 <div class="sec_tit">
-                    <h2>Breakthrough Benefits of Our Crypto Sports Betting Platform</h2>
+                    <h2>Transformative Advantages of Our Crypto-based Sports Betting Software</h2>
                 </div>
             </div>
-            <p class="text-center">Every crypto sports betting platform we build comes with several breathtaking
-                benefits that redefine how sports betting in Web3 functions. The application is more user-centric than
-                ever, thanks to our focus on Web3 technology and ideals.</p>
+            <p class="text-center">Our crypto sports betting platforms are designed to deliver game-changing benefits that revolutionize sports betting within the Web3 landscape. With a strong focus on Web3 technology and principles, our platforms offer an unprecedented user experience.</p>
             <div class=" feature-block mt30">
                 <div class="col-sm-6 ">
                     <div class="app-overview equal-height">
@@ -2959,13 +2899,12 @@
                             <div class="media-left">
                                 <div class="app-icon text-center">
                                     <img class="lazy"
-                                        data-src="images/decentralized-sports-betting-platform/icons/transactions.webp">
+                                        src="{{ asset('images/decentralized-sports-betting-platform/icons/transactions.png') }}">
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4>Secure Transactions</h4>
-                                <p> The Web3 sports betting app offers secure transactions aided by blockchain
-                                    technology, enabling easy fund transfers between markets and users.</p>
+                                <h4>Fortified Security</h4>
+                                <p>Harness the power of blockchain for secure transactions, ensuring smooth and protected fund transfers between users and markets.</p>
                             </div>
                         </div>
                     </div>
@@ -2974,13 +2913,12 @@
                             <div class="media-left">
                                 <div class="app-icon text-center">
                                     <img class="lazy"
-                                        data-src="images/decentralized-sports-betting-platform/icons/bet.webp">
+                                        src="{{ asset('images/decentralized-sports-betting-platform/icons/bet.png') }}">
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4>Customized Betting</h4>
-                                <p>The decentralized sports betting platform can offer customized betting options
-                                    reflecting your brand’s themes in terms of visuals and experience.</p>
+                                <h4>Tailored Betting Experiences</h4>
+                                <p>Customize your betting options to align with your brand’s identity, offering a unique and personalized user interface and experience.</p>
                             </div>
                         </div>
                     </div>
@@ -2989,13 +2927,12 @@
                             <div class="media-left">
                                 <div class="app-icon text-center">
                                     <img class="lazy"
-                                        data-src="images/decentralized-sports-betting-platform/icons/events.webp">
+                                        src="{{ asset('images/decentralized-sports-betting-platform/icons/events.webp') }}">
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4>Diverse Events</h4>
-                                <p>Web3 sports betting platforms we launch support diverse real-world and virtual sports
-                                    events, allowing you to garner considerable user support.</p>
+                                <h4>Wide-Ranging Events</h4>
+                                <p>Support for a broad spectrum of both real-world and virtual sports events ensures extensive engagement and user attraction.</p>
                             </div>
                         </div>
                     </div>
@@ -3006,13 +2943,12 @@
                             <div class="media-left">
                                 <div class="app-icon text-center">
                                     <img class="lazy"
-                                        data-src="images/decentralized-sports-betting-platform/icons/global.webp">
+                                        src="{{ asset('images/decentralized-sports-betting-platform/icons/global.png') }}">
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4>Legal Compliance</h4>
-                                <p>The application comes with sufficient compliance with relevant global and regional
-                                    legal regulations that offer users safe betting experiences.</p>
+                                <h4>Regulatory Assurance</h4>
+                                <p>Our platforms adhere to stringent global and regional legal standards, providing users with a compliant and secure betting environment.</p>
                             </div>
                         </div>
                     </div>
@@ -3021,13 +2957,12 @@
                             <div class="media-left">
                                 <div class="app-icon text-center">
                                     <img class="lazy"
-                                        data-src="images/decentralized-sports-betting-platform/icons/integration.webp">
+                                        src="{{ asset('images/decentralized-sports-betting-platform/icons/integration.png') }}">
                                 </div>
                             </div>
                             <div class="media-body">
                                 <h4>Seamless Integrations</h4>
-                                <p>Third-party integrations like wallets, payment gateways, sports scoreboards, and
-                                    crypto exchanges can be seamlessly brought inside the platform.
+                                <p>Easily connect with key third-party services, such as wallets, payment gateways, sports scoreboards, and cryptocurrency exchanges.
                                 </p>
                             </div>
                         </div>
@@ -3037,13 +2972,12 @@
                             <div class="media-left">
                                 <div class="app-icon text-center">
                                     <img class="lazy"
-                                        data-src="images/decentralized-sports-betting-platform/icons/improved-control.webp">
+                                        src="{{ asset('images/decentralized-sports-betting-platform/icons/improved-control.webp') }}">
                                 </div>
                             </div>
                             <div class="media-body">
-                                <h4>Complete Fund Control</h4>
-                                <p>Bettors in the Web3 betting platform will have full control over their funds, meaning
-                                    there will be no intermediary costs or purchasing requirements.</p>
+                                <h4>Total Fund Autonomy</h4>
+                                <p>Empower bettors with full control over their funds, eliminating intermediary fees and purchase barriers for a more transparent experience.</p>
                             </div>
                         </div>
                     </div>
@@ -3083,78 +3017,14 @@
         margin-bottom: 0 !important;
     }
 </style>
-<div class="technologies gray_bg" style="background:#fff;">
-    <div class="container">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h3 class="sec_tit underline text-center">Our Decentralized Sports Betting Software Supports These Renowned
-                Sports</h3>
-            <p class="text-center " style="font-size: 16px;">
-            </p>
-            <ul>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/badminton.webp">
-                    <p class="white">Badminton </p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/baseball.webp">
-                    <p class="white">Baseball</p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/basketball.webp">
-                    <p class="white">Basketball</p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/boxing.webp">
-                    <p class="white">Boxing</p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/cricket.webp">
-                    <p class="white">Cricket</p>
-                </li>
-                <li>
-                    <img class="lazy"
-                        data-src="images/decentralized-sports-betting-platform/icons/football-players.webp">
-                    <p class="white">Football</p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/hockey.webp">
-                    <p class="white">Hockey</p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/rpg.webp">
-                    <p class="white">MMORPG</p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/tennis.webp">
-                    <p class="white">Tennis</p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/racing.webp">
-                    <p class="white">Racing</p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/shooting.webp">
-                    <p class="white">Shooting</p>
-                </li>
-                <li>
-                    <img class="lazy" data-src="images/decentralized-sports-betting-platform/icons/volleyball.webp">
-                    <p class="white">Volleyball</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
 <section class="common_spacing gray_bg">
     <div class="container">
         <div class="row mt20">
             <div class="section-title text-center">
                 <div class="sec_tit mb20">
-                    <h2 class="section-title underline mb20">Our Team Can Launch Web3 Sports Betting Platforms Like
-                        These </h2>
+                    <h2 class="section-title underline mb20">Our Expertise in Developing Advanced Web3 Sports Betting Solutions</h2>
                 </div>
-                <p>Several Web3 sports betting platforms have already garnered considerable presence in the market, and
-                    more spots are up for grabs. If you want to unleash a modern sports betting app based on blockchain
-                    technology, now is the time to begin one simple and small!
+                <p>The opportunity to innovate in the Web3 sports betting arena is now. Our team is ready to guide you in launching a cutting-edge blockchain-based sports betting application.
                 </p>
             </div>
         </div>
@@ -3162,12 +3032,10 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="icon-text-1">
                     <div class="icon-text-icon"><img class="lazy"
-                            data-src="images/decentralized-sports-betting-platform/icons/sports.webp"></div>
+                            src="{{ asset('images/decentralized-sports-betting-platform/icons/sports.png') }}"></div>
                     <div class="icon_content">
                         <h4>Dexsport</h4>
-                        <p class="c-grey"> You can launch a decentralized sports betting platform like Dexsport loaded
-                            with contests across real-world and digital sports competitions and user-friendly
-                            experiences on multiple leading blockchains.</p>
+                        <p class="c-grey">Develop a versatile decentralized sports betting platform similar to Dexsport, featuring a broad selection of events across physical and virtual sports, coupled with a smooth user experience on top blockchain networks.</p>
                     </div>
                 </div>
             </div>
@@ -3175,12 +3043,10 @@
                 <div class="icon-text-1-group">
                     <div class="icon-text-1">
                         <div class="icon-text-icon"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/casino.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/casino.png') }}"></div>
                         <div class="icon_content">
                             <h4>LunaFi</h4>
-                            <p class="c-grey">You can create a decentralized sports betting protocol like LunaFi to tap
-                                into sports betting, online casino games, and multiple DeFi operations with community
-                                support through powerful native tokens.</p>
+                            <p class="c-grey">Create a decentralized betting framework like LunaFi, combining sports wagers, online casino games, and DeFi features, all supported by strong community-based native tokens.</p>
                         </div>
                     </div>
                 </div>
@@ -3189,25 +3055,22 @@
                 <div class="icon-text-1-group">
                     <div class="icon-text-1">
                         <div class="icon-text-icon"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/bet.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/bet.png') }}"></div>
                         <div class="icon_content">
                             <h4>BetDEX</h4>
-                            <p class="c-grey">You can build a decentralized sports betting exchange like BetDEX to bring
-                                seamless betting experiences powered by user-friendly operations, high liquidity
-                                provisions, and zero restrictions to users. </p>
+                            <p class="c-grey">Design a sophisticated decentralized sports betting exchange inspired by BetDEX, offering an exceptional betting environment with user-friendly interfaces, high liquidity, and open user access.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="clearfix"></div>
-            <div class="text-center cta_mine txt"> <a
-                    class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank"
+            <div class="text-center cta_mine txt"> 
+                {{-- <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank"
                     href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
                     data-color-override="false" data-hover-color-override="false"
-                    data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a> <a
-                    href="#newsletter-form-sec"
-                    class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with our
-                        Experts</span></a> </div>
+                    data-hover-text-color-override="#fff"><span>BOOK A CONSULTATION</span></a> --}}
+                    <a href="{{ url('consultation') }}" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>CONNECT WITH OUR EXPERTS</span></a>
+            </div>
         </div>
     </div>
 </section>
@@ -3266,91 +3129,89 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt20">
-                <h3 class="sec_tit underline text-center text-white">Technology Stack We Utilize for Web3 Sports Betting
-                    dApps</h3>
-                <p class="text-center text-white" style="font-size: 16px;">We tap into the best technology available to
-                    offer high-quality crypto token development services.</p>
+                <h3 class="sec_tit underline text-center text-white">Innovative Technology Stack for Web3 Sports Betting dApps</h3>
+                <p class="text-center text-white" style="font-size: 16px;">We leverage cutting-edge technologies to deliver top-tier crypto token development services, ensuring your Web3 sports betting dApps are built with excellence.</p>
             </div>
             <div align="center" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <ul>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/web3.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/web3.png') }}"></div>
                         <p class="white">Web3 JS</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/node-js_logo.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/node-js_logo.webp') }}"></div>
                         <p class="white">Node JS</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/angular.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/angular.webp') }}"></div>
                         <p class="white">Angular JS</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/express-js1.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/express-js1.webp') }}"></div>
                         <p class="white">Express JS</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/solidity.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/solidity.webp') }}"></div>
                         <p class="white">Solidity</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/go-lang.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/go-lang.webp') }}"></div>
                         <p class="white">Go</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/rust-w.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/rust-w.webp') }}"></div>
                         <p class="white">Rust</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/laravel.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/laravel.webp') }}"></div>
                         <p class="white">Laravel</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/truffle.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/truffle.webp') }}"></div>
                         <p class="white">Truffle</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/ganache.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/ganache.webp') }}"></div>
                         <p class="white">Ganache</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/metamask.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/metamask.webp') }}"></div>
                         <p class="white">MetaMask</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/aws-w.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/aws-w.webp') }}"></div>
                         <p class="white">AWS</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/mongodb.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/mongodb.webp') }}"></div>
                         <p class="white">MongoDB</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/ipfs.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/ipfs.webp') }}"></div>
                         <p class="white">IPFS</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/pinata.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/pinata.webp') }}"></div>
                         <p class="white">Pinata</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/decentralized-sports-betting-platform/icons/filecoin.webp"></div>
+                                src="{{ asset('images/decentralized-sports-betting-platform/icons/filecoin.webp') }}"></div>
                         <p class="white">Filecoin</p>
                     </li>
                 </ul>
@@ -3367,330 +3228,61 @@
 <section id="we-provide" class="common_spacing gray_bg">
     <div class="container">
         <div class="section-title text-center">
-            <h4 class="underline">Why Choose Our Web3 Sports Betting dApp Development Team?</h4>
+            <h4 class="underline">Why Choose Our Premier Web3 Sports Betting dApp Development Team?</h4>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
-            <p class="text-center">As an established company in Web3 sports betting dApp development, we offer
-                phenomenal services for clients. Our team taps into sophisticated tech stacks to bring your Web3 sports
-                betting application alive. From conceptualization to final deployment, our experts can offer extensive
-                assistance for your novel sports betting dApp.</p>
+            <p class="text-center">As a trailblazer in Web3 sports betting dApp development, we deliver exceptional services that transform your vision into a groundbreaking reality. Our expert team employs advanced technologies to develop your Web3 sports betting application from initial concept to successful launch, guaranteeing a flawless and impactful experience.</p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <ul class="ul-style-3" style="padding-left: 20px;;margin-top: 0;">
-                <li><i class="fa fa-star list-icon"></i>7+ Years Industry Experience</li>
-                <li><i class="fa fa-star list-icon"></i>150+ Blockchain Developers</li>
+                <li><i class="fa fa-star list-icon"></i>Over 15 Years of Industry Expertise</li>
+                <li><i class="fa fa-star list-icon"></i>A Team of 150+ Blockchain Specialists</li>
             </ul>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <ul class="ul-style-3" style="padding-left: 20px;;margin-top: 0;">
-                <li><i class="fa fa-star list-icon"></i>Advanced Technology Stacks</li>
-                <li><i class="fa fa-star list-icon"></i>On-Time Delivery</li>
+                <li><i class="fa fa-star list-icon"></i>Comprehensive Post-Launch Support</li>
+                <li><i class="fa fa-star list-icon"></i>State-of-the-Art Technology Solutions</li>
             </ul>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <ul class="ul-style-3" style="padding-left: 20px;;margin-top: 0;">
-                <li><i class="fa fa-star list-icon"></i>Visually Appealing Solutions</li>
-                <li><i class="fa fa-star list-icon"></i>Military-Grade Security Provisions</li>
+                <li><i class="fa fa-star list-icon"></i>On-Time Project Delivery</li>
+                <li><i class="fa fa-star list-icon"></i>Stunning, User-Centric Designs</li>
             </ul>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <ul class="ul-style-3" style="padding-left: 20px;;margin-top: 0;">
-                <li><i class="fa fa-star list-icon"></i>Post-Launch Professional Support</li>
+                <li><i class="fa fa-star list-icon"></i>Top-Tier Security Measures</li>
             </ul>
         </div>
     </div>
 </section>
-<div class="common_spacing gray_bg">
-    <div class="container">
-        <div class="row">
-            <h3 class="sec_tit mt20 underline text-center">FAQ</h3>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <div class="faq-content">
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title">
-                                    <a class role="button" data-toggle="collapse" data-parent="#accordion" href="#faq1">
-                                        <span>What is Prompt Engineering?</span>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="faq1" class="panel-collapse collapse in" role="tabpanel"
-                                aria-labelledby="headingOne">
-                                <div class="panel-body">Prompt engineering is the process of creating prompts for AI
-                                    language models to derive the answers we need. The sector has been undergoing
-                                    massive evolution following the abundance of large-scale language models (LLM).
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq2">
-                                        <span>What are Some Popular LLMs Where AI Prompt Engineering Can be Used?</span>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="faq2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body">
-                                    Popular LLMs where AI prompt engineering solutions can be used include the OpenAI
-                                    ecosystem, BARD, LLaMA, PaLM 2, Claude, and Stable Diffusion. With expert
-                                    assistance, you can create prompts fitting your business needs.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq3">
-                                        <span>Which Major Industries Use Prompt Engineering Solutions?</span>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="faq3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body">
-                                    Many real-world industries use prompt engineering solutions to maximize efficiency
-                                    by automating simple tasks. Major ones include marketing, insurance, healthcare,
-                                    customer service, education, and transportation.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq4">
-                                        <span>Is It Worthy to Invest in Generative AI Prompt Engineering Efforts?</span>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="faq4" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingfour">
-                                <div class="panel-body">Yes, it is worth investing in generative AI prompt engineering
-                                    efforts for your business. The resultant solutions facilitate efficient operations
-                                    by eliminating repetitive tasks from human workers through automation.</div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq5">
-                                        <span>Where Can I Find the Best AI Prompt Engineering Team?</span>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="faq5" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingfive">
-                                <div class="panel-body">Blockchain App Factory is a well-known AI prompt engineering
-                                    company renowned for its experts who build prompting solutions that work
-                                    effortlessly on various AI language models even during times of high user demand.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <h4 class="modal-title">Connect With Us <span type="button" data-dismiss="modal">&times;</span></h4>
-                </div>
-                <div class="formdiv" style="display: inline-block; width: 100%;padding: 15px;">
-                    <form class id="mailForms1" method="post" action>
-                        <input type="hidden" value="Coinbase like Controlled Exchange" name="btc_value">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-left">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" name="email" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="skype">Skype</label>
-                                <input type="text" class="form-control" id="skype" name="skype" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input id="phone21" name="phone_dummy" type="text" required
-                                    oninput="if (!window.__cfRLUnblockHandlers) return false; this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    data-cf-modified-5dcff6fed30b7b74977cbd0d->
-                                <input type="hidden" name="phone" id="phone_newsletter" value>
-                                <input type="hidden" name="url" id="url" value="/decentralized-sports-betting-platform">
-                                <input type="hidden" value="2607:5300:203:172e::" name="IP">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-right">
-                            <div class="form-group">
-                                <label>Requirement</label>
-                                <textarea placeholder="Write text here..." name="message" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="button" class="submit_send" value="send message">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="myModal1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <h4 class="modal-title">Connect With Us <span type="button" data-dismiss="modal">&times;</span></h4>
-                </div>
-                <div class="formdiv" style="display: inline-block; width: 100%;padding: 0 15px;">
-                    <form class id="mailForms2" method="post" action>
-                        <input type="hidden" value="Leverage - Margin Trading" name="btc_value">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-left">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" name="email" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="skype">Skype</label>
-                                <input type="text" class="form-control" name="skype" id="skype">
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input id="phone22" name="phone_dummy" type="text" required
-                                    oninput="if (!window.__cfRLUnblockHandlers) return false; this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    data-cf-modified-5dcff6fed30b7b74977cbd0d->
-                                <input type="hidden" name="phone" id="phone_newsletter" value>
-                                <input type="hidden" name="url" id="url" value="/decentralized-sports-betting-platform">
-                                <input type="hidden" value="2607:5300:203:172e::" name="IP">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-right">
-                            <div class="form-group">
-                                <label>Requirement</label>
-                                <textarea placeholder="Write text here..." name="message" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="button" class="submit_send" value="send message">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="myModal2" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <h4 class="modal-title">Connect With Us <span type="button" data-dismiss="modal">&times;</span></h4>
-                </div>
-                <div class="formdiv" style="display: inline-block; width: 100%;padding: 0 15px;">
-                    <form class id="mailForms3" method="post" action>
-                        <input type="hidden" value="Customised Binance Competitor" name="btc_value">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-left">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" name="email" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="skype">Skype</label>
-                                <input type="text" class="form-control" name="skype" id="skype">
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input id="phone23" name="phone_dummy" type="text" required
-                                    oninput="if (!window.__cfRLUnblockHandlers) return false; this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    data-cf-modified-5dcff6fed30b7b74977cbd0d->
-                                <input type="hidden" name="phone" id="phone_newsletter" value>
-                                <input type="hidden" name="url" id="url" value="/decentralized-sports-betting-platform">
-                                <input type="hidden" value="2607:5300:203:172e::" name="IP">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-right">
-                            <div class="form-group">
-                                <label>Requirement</label>
-                                <textarea placeholder="Write text here..." name="message" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="button" class="submit_send" value="send message">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="myModal3" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <h4 class="modal-title">View Product Demo <span type="button" data-dismiss="modal">&times;</span>
-                    </h4>
-                </div>
-                <div class="formdiv" style="display: inline-block; width: 100%;padding: 0 15px;">
-                    <form class id="mailForms3" method="post" action>
-                        <input type="hidden" value="2 BTC" name="btc_value">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-left">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" name="email" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="skype">Skype</label>
-                                <input type="text" class="form-control" name="skype" id="skype">
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input id="phone24" name="phone_dummy" type="text" required
-                                    oninput="if (!window.__cfRLUnblockHandlers) return false; this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    data-cf-modified-5dcff6fed30b7b74977cbd0d->
-                                <input type="hidden" name="phone" id="phone_newsletter" value>
-                                <input type="hidden" name="url" id="url" value="/decentralized-sports-betting-platform">
-                                <input type="hidden" value="2607:5300:203:172e::" name="IP">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-right">
-                            <div class="form-group">
-                                <label>Requirement</label>
-                                <textarea placeholder="Write text here..." name="message" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="button" class="submit_send" value="send message">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+{{-- simple-faqs.blade --}}
+@include('static.simple-faqs-section', [
+    'faqs' => [
+        [
+            'ques' => 'What is Prompt Engineering?',
+            'ans' => "Prompt engineering refers to the art of crafting and optimizing inputs to maximize the effectiveness of language models and AI systems, ensuring they produce more accurate and relevant outputs."
+        ],
+        [
+            'ques' => 'Which Leading LLMs Benefit from AI Prompt Engineering?',
+            'ans' => "AI prompt engineering is effectively applied to major large language models (LLMs) like GPT-4, GPT-3, BERT, and T5, enhancing their ability to generate precise and contextually appropriate responses."
+        ],
+        [
+            'ques' => 'What Sectors Make Use of Prompt Engineering?',
+            'ans' => "Prompt engineering is employed across diverse sectors such as technology, healthcare, finance, and marketing, where it enhances customer interactions, streamlines processes, and refines data analysis."
+        ],
+        [
+            'ques' => 'Is Investing in GenAI Prompt Engineering a Good Idea?',
+            'ans' => "Investing in generative AI prompt engineering is a wise choice, as it enhances the performance and accuracy of AI models, leading to improved outcomes, greater user satisfaction, and a stronger competitive edge."
+        ],
+        [
+            'ques' => 'Where Can I Locate a Top AI Prompt Engineering Team?',
+            'ans' => 'To find a leading AI prompt engineering team, seek out specialized companies with proven expertise in advanced AI technologies or get referrals from industry professionals with successful prompt engineering implementations.'
+        ],
+    ],
+])
 </div>
 <script src="js/jquery.min.js" type="5dcff6fed30b7b74977cbd0d-text/javascript"></script>
 <script type="5dcff6fed30b7b74977cbd0d-text/javascript">

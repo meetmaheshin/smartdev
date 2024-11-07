@@ -481,9 +481,81 @@ Route::get('/gold-tokenization', function () {
 })->name('gold-tokenization');
 
 Route::get('/crypto-prediction-market-platform', function () {
-    // return view('static.crypto-prediction-market-platform');
+    return view('static.crypto-prediction-market-platform');
 })->name('crypto-prediction-market-platform');
 
 Route::get('/decentralized-sports-betting-platform', function () {
-    // return view('static.decentralized-sports-betting-platform');
+    return view('static.decentralized-sports-betting-platform');
 })->name('decentralized-sports-betting-platform');
+
+Route::get('/know-your-transaction-platform-development', function () {
+    return view('static.know-your-transaction-platform-development');
+})->name('know-your-transaction-platform-development');
+
+Route::get('/carbon-credits-development', function () {
+    return view('static.carbon-credits-development');
+})->name('carbon-credits-development');
+
+Route::get('/crypto-banking-solutions', function () {
+    return view('static.crypto-banking-solutions');
+})->name('crypto-banking-solutions');
+
+Route::get('/solana-blockchain-development-company', function () {
+    return view('static.solana-blockchain-development-company');
+})->name('solana-blockchain-development-company');
+
+Route::get('/solana-token-development', function () {
+    return view('static.solana-token-development');
+})->name('solana-token-development');
+
+Route::get('/solana-meme-coin-development', function () {
+    return view('static.solana-meme-coin-development');
+})->name('solana-meme-coin-development');
+
+Route::get('/solana-dapp-development', function () {
+    return view('static.solana-dapp-development');
+})->name('solana-dapp-development');
+
+Route::get('/solana-based-nft-marketplace-development', function () {
+    return view('static.solana-based-nft-marketplace-development');
+})->name('solana-based-nft-marketplace-development');
+
+Route::get('/ido-launchpad-on-solana', function () {
+    return view('static.ido-launchpad-on-solana');
+})->name('ido-launchpad-on-solana');
+
+Route::get('/crypto-launchpad-development', function () {
+    return view('static.crypto-launchpad-development');
+})->name('crypto-launchpad-development');
+
+Route::get('/meme-coin-development', function () {
+    return view('static.meme-coin-development');
+})->name('meme-coin-development');
+
+Route::get('/bitcoin-ordinals-meme-coin-development', function () {
+    return view('static.bitcoin-ordinals-meme-coin-development');
+})->name('bitcoin-ordinals-meme-coin-development');
+
+Route::get('/how-to-launch-crypto-token', function () {
+    return view('static.how-to-launch-crypto-token');
+})->name('how-to-launch-crypto-token');
+
+// cryptocurrency-exchange-software
+Route::get('/cryptocurrency-exchange-software', function () {
+    return view('static.cryptocurrency-exchange-software');
+})->name('cryptocurrency-exchange-software');
+
+// white-label-crypto-exchange
+Route::get('/white-label-crypto-exchange', function () {
+    return view('static.white-label-crypto-exchange');
+})->name('white-label-crypto-exchange');
+
+// decentralized-exchange-development
+Route::get('/decentralized-exchange-development', function () {
+    // return view('static.decentralized-exchange-development');
+})->name('decentralized-exchange-development');
+
+// p2p-exchange-development
+Route::get('/p2p-exchange-development', function () {
+    // return view('static.p2p-exchange-development');
+})->name('p2p-exchange-development');
