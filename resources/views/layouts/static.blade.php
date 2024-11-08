@@ -328,46 +328,46 @@
                                     <ul class="list-unstyled custom-list">
                                         <li><a href="{{ url('crypto-prediction-market-platform') }}" class="font_11">Crypto Prediction Market Platform</a></li>
                                         <li><a href="{{ url('decentralized-sports-betting-platform') }}" class="font_11">Decentralized Sports Betting Platform</a></li>
-                                        <li><a href="#" class="font_11">KYT Platform Development</a></li>
-                                        <li><a href="#" class="font_11">Carbon Credits Development</a></li>
-                                        <li><a href="#" class="font_11">Crypto Banking Solutions</a></li>
+                                        <li><a href="{{ url('know-your-transaction-platform-development') }}" class="font_11">KYT Platform Development</a></li>
+                                        <li><a href="{{ url('carbon-credits-development') }}" class="font_11">Carbon Credits Development</a></li>
+                                        <li><a href="{{ url('crypto-banking-solutions') }}" class="font_11">Crypto Banking Solutions</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3">
                                     <h6>Solana</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Solana Blockchain Development</a></li>
-                                        <li><a href="#" class="font_11">Solana Token Development</a></li>
-                                        <li><a href="#" class="font_11">Solana Meme Coin Development</a></li>
-                                        <li><a href="#" class="font_11">Solana dApp Development</a></li>
-                                        <li><a href="#" class="font_11">Solana Based NFT Marketplace Development</a></li>
-                                        <li><a href="#" class="font_11">IDO Launchpad On Solana</a></li>
-                                        <li><a href="#" class="font_11">How To Launch Solana Meme Coin</a></li>
+                                        <li><a href="{{ url('solana-blockchain-development-company') }}" class="font_11">Solana Blockchain Development</a></li>
+                                        <li><a href="{{ url('solana-token-development') }}" class="font_11">Solana Token Development</a></li>
+                                        <li><a href="{{ url('solana-meme-coin-development') }}" class="font_11">Solana Meme Coin Development</a></li>
+                                        <li><a href="{{ url('solana-dapp-development') }}" class="font_11">Solana dApp Development</a></li>
+                                        <li><a href="{{ url('solana-based-nft-marketplace-development') }}" class="font_11">Solana Based NFT Marketplace Development</a></li>
+                                        <li><a href="{{ url('ido-launchpad-on-solana') }}" class="font_11">IDO Launchpad On Solana</a></li>
+                                        {{-- <li><a href="#" class="font_11">How To Launch Solana Meme Coin</a></li>
                                         <li><a href="#" class="font_11">Solana Development Guide</a></li>
-                                        <li><a href="#" class="font_11">Solana IDO Launchpad Guide</a></li>
+                                        <li><a href="#" class="font_11">Solana IDO Launchpad Guide</a></li> --}}
                                     </ul>
 
                                     {{-- Launchpad section --}}
                                     <h6>Launchpad</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Crypto Launchpad Development</a></li>
+                                        <li><a href="{{ url('crypto-launchpad-development') }}" class="font_11">Crypto Launchpad Development</a></li>
                                     </ul>
 
                                     {{-- Meme Coin --}}
                                     <h6>Meme Coin</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Meme Coin Development</a></li>
-                                        <li><a href="#" class="font_11">Bitcoin Ordinals Meme Coin Development</a></li>
+                                        <li><a href="{{ url('meme-coin-development') }}" class="font_11">Meme Coin Development</a></li>
+                                        <li><a href="{{ url('bitcoin-ordinals-meme-coin-development') }}" class="font_11">Bitcoin Ordinals Meme Coin Development</a></li>
                                     </ul>
 
                                     {{-- Crypto Guide --}}
                                     <h6>Crypto Guide</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">How To Launch Crypto Token</a></li>
-                                        <li><a href="#" class="font_11">Crypto Bull Run 2024</a></li>
+                                        <li><a href="{{ url('how-to-launch-crypto-token') }}" class="font_11">How To Launch Crypto Token</a></li>
+                                        {{-- <li><a href="#" class="font_11">Crypto Bull Run 2024</a></li>
                                         <li><a href="#" class="font_11">Altcoin Development Guide</a></li>
                                         <li><a href="#" class="font_11">Decentralized Stable Coin Development</a></li>
-                                        <li><a href="#" class="font_11">Virtual Classroom Learning Platform Development</a></li>
+                                        <li><a href="#" class="font_11">Virtual Classroom Learning Platform Development</a></li> --}}
                                     </ul>
                                 </div>
                             </div>
@@ -386,10 +386,10 @@
                                 <div class="col-md-3">
                                     <h6>Exchanges</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Cryptocurrency Exchanges Development</a></li>
-                                        <li><a href="#" class="font_11">White label Crypto Exchanges</a></li>
-                                        <li><a href="#" class="font_11">Dencentralized Exchnage Development</a></li>
-                                        <li><a href="#" class="font_11">P2P Exchange Development</a></li>
+                                        <li><a href="{{ url('cryptocurrency-exchange-software') }}" class="font_11">Cryptocurrency Exchanges Development</a></li>
+                                        <li><a href="{{ url('white-label-crypto-exchange') }}" class="font_11">White label Crypto Exchanges</a></li>
+                                        <li><a href="{{ url('decentralized-exchange-development') }}" class="font_11">Dencentralized Exchnage Development</a></li>
+                                        <li><a href="{{ url('p2p-exchange-development') }}" class="font_11">P2P Exchange Development</a></li>
                                         <li><a href="#" class="font_11">Exchange Listing Services</a></li>
                                         <li><a href="#" class="font_11">Centralzed Exchange Development</a></li>
                                         <li><a href="#" class="font_11">AI-Powered Crypto Exchange Development</a></li>
