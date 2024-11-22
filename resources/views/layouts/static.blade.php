@@ -390,45 +390,45 @@
                                         <li><a href="{{ url('white-label-crypto-exchange') }}" class="font_11">White label Crypto Exchanges</a></li>
                                         <li><a href="{{ url('decentralized-exchange-development') }}" class="font_11">Dencentralized Exchnage Development</a></li>
                                         <li><a href="{{ url('p2p-exchange-development') }}" class="font_11">P2P Exchange Development</a></li>
-                                        <li><a href="#" class="font_11">Exchange Listing Services</a></li>
-                                        <li><a href="#" class="font_11">Centralzed Exchange Development</a></li>
-                                        <li><a href="#" class="font_11">AI-Powered Crypto Exchange Development</a></li>
-                                        <li><a href="#" class="font_11">AI-Powered Crypto Dencentralized Development</a></li>
-                                        <li><a href="#" class="font_11">Crypto Derivatives Exchange Development</a></li>
-                                        <li><a href="#" class="font_11">OTC Crypto Exchange Development</a></li>
-                                        <li><a href="#" class="font_11">Leverage Margin Trading Exchange</a></li>
+                                        <li><a href="{{ url('listing-service') }}" class="font_11">Exchange Listing Services</a></li>
+                                        <li><a href="{{ url('centralized-exchange-development') }}" class="font_11">Centralzed Exchange Development</a></li>
+                                        <li><a href="{{ url('ai-powered-crypto-exchange-development') }}" class="font_11">AI-Powered Crypto Exchange Development</a></li>
+                                        {{-- <li><a href="#" class="font_11">AI-Powered Crypto Dencentralized Development</a></li> --}}
+                                        <li><a href="{{ url('crypto-derivatives-exchange-development') }}" class="font_11">Crypto Derivatives Exchange Development</a></li>
+                                        <li><a href="{{ url('otc-crypto-exchange-development') }}" class="font_11">OTC Crypto Exchange Development</a></li>
+                                        <li><a href="{{ url('leverage-margin-trading-exchange') }}" class="font_11">Leverage Margin Trading Exchange</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3">
                                     <h6>Exchange Clone</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Binance Clone</a></li>
-                                        <li><a href="#" class="font_11">Coinbase Clone</a></li>
-                                        <li><a href="#" class="font_11">Poloniex Clone</a></li>
-                                        <li><a href="#" class="font_11">Sushiswap Clone</a></li>
-                                        <li><a href="#" class="font_11">Bitstamp Clone</a></li>
-                                        <li><a href="#" class="font_11">Bitfinex Clone</a></li>
-                                        <li><a href="#" class="font_11">Bakeryswap Clone</a></li>
-                                        <li><a href="#" class="font_11">OKX Clone</a></li>
-                                        <li><a href="#" class="font_11">Huobi Clone</a></li>
-                                        <li><a href="#" class="font_11">Kraken Clone</a></li>
-                                        <li><a href="#" class="font_11">dYdX Clone</a></li>
-                                        <li><a href="#" class="font_11">WazirX Clone</a></li>
-                                        <li><a href="#" class="font_11">Cash App Clone</a></li>
-                                        <li><a href="#" class="font_11">Uniswap Clone</a></li>
-                                        <li><a href="#" class="font_11">Remitano Clone</a></li>
-                                        <li><a href="#" class="font_11">Crypto Exchange Like Wazirx</a></li>
-                                        <li><a href="#" class="font_11">Crypto Exchange Like Binance</a></li>
-                                        <li><a href="#" class="font_11">Crypto Exchange Like Coinbase</a></li>
+                                        <li><a href="{{ url('binance-clone') }}" class="font_11">Binance Clone</a></li>
+                                        <li><a href="{{ url('coinbase-clone') }}" class="font_11">Coinbase Clone</a></li>
+                                        <li><a href="{{ url('poloniex-clone') }}" class="font_11">Poloniex Clone</a></li>
+                                        <li><a href="{{ url('sushiswap-clone') }}" class="font_11">Sushiswap Clone</a></li>
+                                        <li><a href="{{ url('bitstamp-clone') }}" class="font_11">Bitstamp Clone</a></li>
+                                        <li><a href="{{ url('bitfinex-clone') }}" class="font_11">Bitfinex Clone</a></li>
+                                        <li><a href="{{ url('bakeryswap-clone') }}" class="font_11">Bakeryswap Clone</a></li>
+                                        <li><a href="{{ url('okx-clone') }}" class="font_11">OKX Clone</a></li>
+                                        <li><a href="{{ url('huobi-clone') }}" class="font_11">Huobi Clone</a></li>
+                                        <li><a href="{{ url('kraken-clone') }}" class="font_11">Kraken Clone</a></li>
+                                        <li><a href="{{ url('dydx-clone') }}" class="font_11">dYdX Clone</a></li>
+                                        <li><a href="{{ url('wazirx-clone') }}" class="font_11">WazirX Clone</a></li>
+                                        <li><a href="{{ url('cash-app-clone') }}" class="font_11">Cash App Clone</a></li>
+                                        <li><a href="{{ url('uniswap-clone') }}" class="font_11">Uniswap Clone</a></li>
+                                        <li><a href="{{ url('remitano-clone') }}" class="font_11">Remitano Clone</a></li>
+                                        <li><a href="{{ url('crypto-exchange-like-wazirx') }}" class="font_11">Crypto Exchange Like Wazirx</a></li>
+                                        <li><a href="{{ url('crypto-exchange-like-binance') }}" class="font_11">Crypto Exchange Like Binance</a></li>
+                                        <li><a href="{{ url('crypto-exchange-like-coinbase') }}" class="font_11">Crypto Exchange Like Coinbase</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3">
                                     <h6>Wallet</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Crypto Wallet Development</a></li>
-                                        <li><a href="#" class="font_11">Crypto-Payment Development</a></li>
-                                        <li><a href="#" class="font_11">Metamask Like Wallet Development</a></li>
-                                        <li><a href="#" class="font_11">Bitcoin Ordinals Wallet Development</a></li>
+                                        <li><a href="{{ url('cryptocurrency-wallet-development') }}" class="font_11">Crypto Wallet Development</a></li>
+                                        <li><a href="{{ url('crypto-payments-gateway') }}" class="font_11">Crypto-Payment Development</a></li>
+                                        <li><a href="{{ url('remitano-clone') }}" class="font_11">Metamask Like Wallet Development</a></li>
+                                        <li><a href="{{ url('remitano-clone') }}" class="font_11">Bitcoin Ordinals Wallet Development</a></li>
                                     </ul>
 
                                     {{-- Launchpad section --}}

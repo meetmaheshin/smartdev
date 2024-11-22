@@ -2189,36 +2189,36 @@ window.setTimeout(function() {
             'title' => 'Achieve Transparency with Cutting-Edge TRON Station Development', 
             'desc' => 'Our seasoned professionals excel in crafting Tron token solutions tailored to your business needs.',
             'cards' => [
-                  [
-                     'title' => 'TRON DApps',
-                     'desc' => "We build decentralized applications (dApps) for streamlined and secure crypto trading using TRX (Tronix).",
-                     'image' => 'tron-token-development/icons/dapp.webp'
-                  ],
-                  [
-                     'title' => 'TRON Wallets',
-                     'desc' => "We design custom TRON wallets for efficient management of Tronix, with secure and intuitive user interfaces.",
-                     'image' => "tron-token-development/icons/wallet.webp"
-                  ],
-                  [
-                     'title' => 'Smart Contract Programming',
-                     'desc' => 'Our experts create robust smart contracts on the TRON blockchain with Solidity, ensuring security and reliability.',
-                     'image' => 'tron-token-development/icons/smart-contracts.webp'
-                  ],
-                  [
-                     'title' => 'Decentralized Exchange Platforms',
-                     'desc' => 'We develop decentralized exchanges for smooth, secure cryptocurrency trading on the TRON network.',
-                     'image' => 'tron-token-development/icons/decentralized.webp'
-                  ],
-                  [
-                     'title' => 'API Integration',
-                     'desc' => 'We facilitate the integration of TRON network APIs to enable seamless interaction across various blockchain applications.',
-                     'image' => 'tron-token-development/icons/api.webp'
-                  ],
-                  [
-                     'title' => 'TRON Station',
-                     'desc' => 'Our services include developing TRON stations with API integrations to accurately track and measure transaction energy consumption, ensuring transparency.',
-                     'image' => 'tron-token-development/icons/transactions.webp'
-                  ],
+                [
+                    'title' => 'TRON DApps',
+                    'desc' => "We build decentralized applications (dApps) for streamlined and secure crypto trading using TRX (Tronix).",
+                    'image' => 'tron-token-development/icons/dapp.webp'
+                ],
+                [
+                    'title' => 'TRON Wallets',
+                    'desc' => "We design custom TRON wallets for efficient management of Tronix, with secure and intuitive user interfaces.",
+                    'image' => "tron-token-development/icons/wallet.webp"
+                ],
+                [
+                    'title' => 'Smart Contract Programming',
+                    'desc' => 'Our experts create robust smart contracts on the TRON blockchain with Solidity, ensuring security and reliability.',
+                    'image' => 'tron-token-development/icons/smart-contracts.webp'
+                ],
+                [
+                    'title' => 'Decentralized Exchange Platforms',
+                    'desc' => 'We develop decentralized exchanges for smooth, secure cryptocurrency trading on the TRON network.',
+                    'image' => 'tron-token-development/icons/decentralized.webp'
+                ],
+                [
+                    'title' => 'API Integration',
+                    'desc' => 'We facilitate the integration of TRON network APIs to enable seamless interaction across various blockchain applications.',
+                    'image' => 'tron-token-development/icons/api.webp'
+                ],
+                [
+                    'title' => 'TRON Station',
+                    'desc' => 'Our services include developing TRON stations with API integrations to accurately track and measure transaction energy consumption, ensuring transparency.',
+                    'image' => 'tron-token-development/icons/transactions.webp'
+                ],
             ],
         ])
         <style type="text/css">
