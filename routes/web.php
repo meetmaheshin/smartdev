@@ -540,22 +540,123 @@ Route::get('/how-to-launch-crypto-token', function () {
     return view('static.how-to-launch-crypto-token');
 })->name('how-to-launch-crypto-token');
 
-// cryptocurrency-exchange-software
 Route::get('/cryptocurrency-exchange-software', function () {
     return view('static.cryptocurrency-exchange-software');
 })->name('cryptocurrency-exchange-software');
 
-// white-label-crypto-exchange
 Route::get('/white-label-crypto-exchange', function () {
     return view('static.white-label-crypto-exchange');
 })->name('white-label-crypto-exchange');
 
-// decentralized-exchange-development
 Route::get('/decentralized-exchange-development', function () {
-    // return view('static.decentralized-exchange-development');
+    return view('static.decentralized-exchange-development');
 })->name('decentralized-exchange-development');
 
-// p2p-exchange-development
 Route::get('/p2p-exchange-development', function () {
-    // return view('static.p2p-exchange-development');
+    return view('static.p2p-exchange-development');
 })->name('p2p-exchange-development');
+
+Route::get('/listing-service', function () {
+    return view('static.listing-service');
+})->name('listing-service');
+
+Route::get('/centralized-exchange-development', function () {
+    return view('static.centralized-exchange-development');
+})->name('centralized-exchange-development');
+
+Route::get('/ai-powered-crypto-exchange-development', function () {
+    return view('static.ai-powered-crypto-exchange-development');
+})->name('ai-powered-crypto-exchange-development');
+
+Route::get('/crypto-derivatives-exchange-development', function () {
+    return view('static.crypto-derivatives-exchange-development');
+})->name('crypto-derivatives-exchange-development');
+
+Route::get('/otc-crypto-exchange-development', function () {
+    return view('static.otc-crypto-exchange-development');
+})->name('otc-crypto-exchange-development');
+
+Route::get('/leverage-margin-trading-exchange', function () {
+    return view('static.leverage-margin-trading-exchange');
+})->name('leverage-margin-trading-exchange');
+
+Route::get('/binance-clone', function () {
+    return view('static.binance-clone');
+})->name('binance-clone');
+
+Route::get('/coinbase-clone', function () {
+    return view('static.coinbase-clone');
+})->name('coinbase-clone');
+
+Route::get('/poloniex-clone', function () {
+    return view('static.poloniex-clone');
+})->name('poloniex-clone');
+
+Route::get('/sushiswap-clone', function () {
+    return view('static.sushiswap-clone');
+})->name('sushiswap-clone');
+
+Route::get('/bitstamp-clone', function () {
+    return view('static.bitstamp-clone');
+})->name('bitstamp-clone');
+
+Route::get('/bitfinex-clone', function () {
+    return view('static.bitfinex-clone');
+})->name('bitfinex-clone');
+
+Route::get('/bakeryswap-clone', function () {
+    return view('static.bakeryswap-clone');
+})->name('bakeryswap-clone');
+
+Route::get('/okx-clone', function () {
+    return view('static.okx-clone');
+})->name('okx-clone');
+
+Route::get('/huobi-clone', function () {
+    return view('static.huobi-clone');
+})->name('huobi-clone');
+
+Route::get('/kraken-clone', function () {
+    return view('static.kraken-clone');
+})->name('kraken-clone');
+
+Route::get('/dydx-clone', function () {
+    return view('static.dydx-clone');
+})->name('dydx-clone');
+
+Route::get('/wazirx-clone', function () {
+    return view('static.wazirx-clone');
+})->name('wazirx-clone');
+
+Route::get('/cash-app-clone', function () {
+    return view('static.cash-app-clone');
+})->name('cash-app-clone');
+
+Route::get('/uniswap-clone', function () {
+    return view('static.uniswap-clone');
+})->name('uniswap-clone');
+
+Route::get('/remitano-clone', function () {
+    return view('static.remitano-clone');
+})->name('remitano-clone');
+
+Route::get('/crypto-exchange-like-wazirx', function () {
+    // return view('static.crypto-exchange-like-wazirx');
+})->name('crypto-exchange-like-wazirx');
+
+Route::get('/crypto-exchange-like-binance', function () {
+    // return view('static.crypto-exchange-like-binance');
+})->name('crypto-exchange-like-binance');
+
+Route::get('/crypto-exchange-like-coinbase', function () {
+    // return view('static.crypto-exchange-like-coinbase');
+})->name('crypto-exchange-like-coinbase');
+
+Route::get('/cryptocurrency-wallet-development', function () {
+    // return view('static.cryptocurrency-wallet-development');
+})->name('cryptocurrency-wallet-development');
+
+// crypto-payments-gateway
+Route::get('/crypto-payments-gateway', function () {
+    // return view('static.crypto-payments-gateway');
+})->name('crypto-payments-gateway');
