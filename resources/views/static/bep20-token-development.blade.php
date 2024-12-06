@@ -1,8 +1,8 @@
 @extends('layouts.static')
-@section('title', 'BEP-20 Token Development')
-<link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+    @section('title', 'BEP-20 Token Development')
+    <link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
 {{--
 <link rel="stylesheet" type="text/css" href="{{asset('css/inline-css.css')}}"> --}}
 @section('content')
@@ -2299,7 +2299,7 @@
         </style>
         <section class="common_spacing gray_bg">
             <div class="container">
-                <h3 class="sec_tit underline text-center">Discover the Versatility of BEP-20 Tokens We Craft at Our BNB Chain Development Firm</h3>
+                <h3 class="sec_tit underline text-center"> margin-top: 15px</h3>
                 <p class="text-center">At our development firm, our expert team specializes in creating a wide range of BEP-20 tokens on the BNB Chain, customized to meet your unique objectives.</p>
                 <div class="row">
                     <div class="col-md-12">
@@ -2308,7 +2308,7 @@
                                 <a href="#" class="timeline-content">
                                     <div class="timeline-year">1</div>
                                     <div class="timeline-icon"><img class="lazy"
-                                            src="{{ asset('images/bep20/icons/governance.png') }}" style="width: 60px;"></div>
+                                            src="{{ asset('images/bep20/icons/governance.png') }}" style="width: 60px; margin-top: 15px"></div>
                                     <h4 class="title">Governance Tokens</h4>
                                     <p class="description">We build governance tokens that enable community participation, letting holders vote on key decisions to ensure a decentralized and democratic process.</p>
                                 </a>
@@ -2317,7 +2317,7 @@
                                 <a href="#" class="timeline-content">
                                     <div class="timeline-yearleft">2</div>
                                     <div class="timeline-icon"><img class="lazy"
-                                            src="{{ asset('images/bep20/icons/utility.png') }}" style="width: 60px;"></div>
+                                            src="{{ asset('images/bep20/icons/utility.png') }}" style="width: 60px; margin-top: 15px"></div>
                                     <h4 class="titleleft">Utility Tokens</h4>
                                     <p class="descriptionleft">Our team designs utility tokens in line with BEP-20 standards, facilitating activities like farming, staking, and internal transactions, while offering rewarding user engagement.</p>
                                 </a>
@@ -2326,7 +2326,7 @@
                                 <a href="#" class="timeline-content">
                                     <div class="timeline-year">3</div>
                                     <div class="timeline-icon"><img class="lazy"
-                                            src="{{ asset('images/bep20/icons/experts.png') }}" style="width: 60px;"></div>
+                                            src="{{ asset('images/bep20/icons/experts.png') }}" style="width: 60px; margin-top: 15px"></div>
                                     <h4 class="title">Crypto Derivatives</h4>
                                     <p class="description">We develop asset-backed tokens that comply with BEP-20 standards, linking on-chain and off-chain assets for stable value correlation, similar to traditional stocks.</p>
                                 </a>
@@ -2335,7 +2335,7 @@
                                 <a href="#" class="timeline-content">
                                     <div class="timeline-yearleft">4</div>
                                     <div class="timeline-icon"><img class="lazy"
-                                            src="{{ asset('images/bep20/icons/security.png') }}" style="width: 60px;"></div>
+                                            src="{{ asset('images/bep20/icons/security.png') }}" style="width: 60px; margin-top: 15px"></div>
                                     <h4 class="titleleft">Security Tokens</h4>
                                     <p class="descriptionleft">Our bespoke BNB tokens represent real-world assets such as company shares, real estate, or valuable art pieces, leveraging blockchain for superior security and transparency.</p>
                                 </a>
@@ -2344,7 +2344,7 @@
                                 <a href="#" class="timeline-content">
                                     <div class="timeline-year">5</div>
                                     <div class="timeline-icon"><img class="lazy"
-                                            src="{{ asset('images/bep20/icons/payment-gateways.png') }}" style="width: 60px;">
+                                            src="{{ asset('images/bep20/icons/payment-gateways.png') }}" style="width: 60px; margin-top: 15px">
                                     </div>
                                     <h4 class="title">Payment Tokens</h4>
                                     <p class="description">We create BEP-20 tokens designed for payment solutions, simplifying transactions for goods and services within specific ecosystems or platforms.</p>
@@ -2354,7 +2354,7 @@
                                 <a href="#" class="timeline-content">
                                     <div class="timeline-yearleft">6</div>
                                     <div class="timeline-icon"><img class="lazy" src="{{ asset('images/bep20/icons/nft.webp') }}"
-                                            style="width: 60px;"></div>
+                                            style="width: 60px; margin-top: 15px"></div>
                                     <h4 class="titleleft">Non-Fungible Tokens (NFTs)</h4>
                                     <p class="descriptionleft">Our team produces BEP-721 NFTs on the BNB Chain and wrapped BEP-20 versions, enhancing trading and seamless integration with decentralized finance (DeFi) applications.</p>
                                 </a>
@@ -2373,6 +2373,12 @@
                 </div>
             </div>
         </section>
+
+        <style>
+            .testimonials-item .user i img{
+                margin-top: 8px;
+            }
+        </style>
 
 
         @include('static.left-img-motion-section', [
@@ -2837,6 +2843,37 @@
             </div>
         </section>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navTabs = document.querySelectorAll('#nav-tabs-wrapper1 a[data-toggle="tab"]');
+                const tabPanes = document.querySelectorAll('.tab-pane');
+        
+                navTabs.forEach(tab => {
+                    tab.addEventListener('click', function (e) {
+                        e.preventDefault();
+        
+                        // Remove 'in active' from all tab panes and add 'fade'
+                        tabPanes.forEach(pane => {
+                            pane.classList.remove('in', 'active');
+                            pane.classList.add('fade');
+                        });
+        
+                        // Add 'in active' to the target pane
+                        const targetPane = document.querySelector(this.getAttribute('href'));
+                        if (targetPane) {
+                            targetPane.classList.remove('fade');
+                            targetPane.classList.add('in', 'active');
+                        }
+        
+                        // Handle nav item active class
+                        const navItems = document.querySelectorAll('#nav-tabs-wrapper1 li');
+                        navItems.forEach(item => item.classList.remove('active'));
+                        this.parentElement.classList.add('active');
+                    });
+                });
+            });
+        </script>
+
         @include('static.small-round-card-section',array(
             'title' => ' What Sets Us Apart as a Top BEP-20 Token Development Company?', 
             'desc' => "As a leading BEP-20 token development company, we provide expert guidance and full-service support to boost your project’s success in the competitive crypto market.",
@@ -3149,6 +3186,7 @@
                 a[type="button"] {
                     background: linear-gradient(to right, rgb(8 226 244), rgb(40 144 220)) !important;
                 }
+            }
         </style>
 
 
@@ -3601,209 +3639,6 @@
     
 </div>
 </div>
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <h4 class="modal-title">Connect With Us <span type="button" data-dismiss="modal">&times;</span></h4>
-                </div>
-                <div class="formdiv" style="display: inline-block; width: 100%;padding: 0 15px;">
-                    <form class id="mailForms1" method="post" action>
-                        <input type="hidden" value="3 BTC" name="btc_value">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-left">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" name="email" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Skype</label>
-                                <input type="text" class="form-control" id="skype" name="skype" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input id="phone21" name="phone_dummy" type="text" required
-                                    oninput="if (!window.__cfRLUnblockHandlers) return false; this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    data-cf-modified-62b9e06135650e78d69ea276->
-                                <input type="hidden" name="phone" id="phone_newsletter" value>
-                                <input type="hidden" name="url" id="url" value="/bep20-token-development">
-                                <input type="hidden" value="2607:5300:203:172e::" name="IP">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-right">
-                            <div class="form-group">
-                                <label>Requirement</label>
-                                <textarea placeholder="Write text here..." name="message" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="button" class="submit_send" value="send message">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="myModal1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <h4 class="modal-title">Connect With Us <span type="button" data-dismiss="modal">&times;</span></h4>
-                </div>
-                <div class="formdiv" style="display: inline-block; width: 100%;padding: 0 15px;">
-                    <form class id="mailForms2" method="post" action>
-                        <input type="hidden" value="6 BTC" name="btc_value">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-left">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" name="email" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Skype</label>
-                                <input type="text" class="form-control" id="skype" name="skype" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input id="phone22" name="phone_dummy" type="text" required
-                                    oninput="if (!window.__cfRLUnblockHandlers) return false; this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    data-cf-modified-62b9e06135650e78d69ea276->
-                                <input type="hidden" name="phone" id="phone_newsletter" value>
-                                <input type="hidden" name="url" id="url" value="/bep20-token-development">
-                                <input type="hidden" value="2607:5300:203:172e::" name="IP">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-right">
-                            <div class="form-group">
-                                <label>Requirement</label>
-                                <textarea placeholder="Write text here..." name="message" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="button" class="submit_send" value="send message">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="myModal2" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <h4 class="modal-title">Connect With Us <span type="button" data-dismiss="modal">&times;</span></h4>
-                </div>
-                <div class="formdiv" style="display: inline-block; width: 100%;padding: 0 15px;">
-                    <form class id="mailForms3" method="post" action>
-                        <input type="hidden" value="12 BTC" name="btc_value">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-left">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" name="email" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Skype</label>
-                                <input type="text" class="form-control" id="skype" name="skype" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input id="phone23" name="phone_dummy" type="text" required
-                                    oninput="if (!window.__cfRLUnblockHandlers) return false; this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    data-cf-modified-62b9e06135650e78d69ea276->
-                                <input type="hidden" name="phone" id="phone_newsletter" value>
-                                <input type="hidden" name="url" id="url" value="/bep20-token-development">
-                                <input type="hidden" value="2607:5300:203:172e::" name="IP">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-right">
-                            <div class="form-group">
-                                <label>Requirement</label>
-                                <textarea placeholder="Write text here..." name="message" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="button" class="submit_send" value="send message">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="js/vendor.js" type="62b9e06135650e78d69ea276-text/javascript"></script>
-<script src="js/plugins.js" type="62b9e06135650e78d69ea276-text/javascript"></script>
-<script src="js/main.js" type="62b9e06135650e78d69ea276-text/javascript"></script>
-<script src="build/js/intlTelInput.js" type="62b9e06135650e78d69ea276-text/javascript"></script>
-<script type="62b9e06135650e78d69ea276-text/javascript">
-    $("#phone").intlTelInput({
-                utilsScript: "build/js/utils.js"
-            });
-            $("#phone21").intlTelInput({
-                utilsScript: "build/js/utils.js"
-            });
-            $("#phone22").intlTelInput({
-                utilsScript: "build/js/utils.js"
-            });
-            $("#phone23").intlTelInput({
-                utilsScript: "build/js/utils.js"
-            });
-</script>
-<script type="62b9e06135650e78d69ea276-text/javascript">
-    $('.home-talk-experts').click(function() {
-                $('html, body').animate({
-                    scrollTop: $('#newsletter-form-sec').offset().top
-                }, 2000);
-            });
-            var url = window.location.href;
-            $('#url').val(url);
-            // alert(url);
-</script>
-<script type="62b9e06135650e78d69ea276-text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-                var lazyloadImages = document.querySelectorAll("img.lazy");
-                var lazyloadThrottleTimeout;
-    
-                function lazyload() {
-                    if(lazyloadThrottleTimeout) {
-                        clearTimeout(lazyloadThrottleTimeout);
-                    }
-                    lazyloadThrottleTimeout = setTimeout(function() {
-                        var scrollTop = window.pageYOffset;
-                        lazyloadImages.forEach(function(img) {
-                            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-                                img.src = img.dataset.src;
-                                img.classList.remove('lazy');
-                            }
-                        });
-                        if(lazyloadImages.length == 0) {
-                            document.removeEventListener("scroll", lazyload);
-                            window.removeEventListener("resize", lazyload);
-                            window.removeEventListener("orientationChange", lazyload);
-                        }
-                    }, 20);
-                }
-                document.addEventListener("scroll", lazyload);
-                window.addEventListener("resize", lazyload);
-                window.addEventListener("orientationChange", lazyload);
-            });
-</script>
-
 <style type="text/css">
     .header .menu-item {
         padding: 0 3px !important;
@@ -3907,19 +3742,6 @@
         }
     }
 
-    /*@media  (max-width: 1024px){
-        .header-nabar-icon .pull-right, .pull-right-tow {
-          background-color: #47b475;
-        font-weight: 700;
-        font-size: 15px;
-        padding: 3px 15px;
-        margin-right: 0px;
-        position: relative;
-        right: 16px;
-        bottom: -30px;
-        }
-    }*/
-
     .color-btn {
         background-color: #1fd1f9 !important;
         background-image: -o-linear-gradient(135deg, #b621fe 0, #1fd1f9 74%) !important;
@@ -3964,17 +3786,6 @@
         }
     }
 
-    /*.color-btn1:before{
-        content: "";
-        background: rgba(0,0,0,0.9);
-        border-radius: 50px;
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        right: 5px;
-        bottom: 5px;
-        z-index: -1;
-    }*/
     @keyframes glow {
         0% {
             box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
@@ -4004,50 +3815,8 @@
         font-size: 14px;
     }
 
-    /*@media (max-width: 1024px){
-        .sticky_form_bp {
-            display:block !important;
-    }
-    }
-    
-    @media (max-width: 320px){
-        .sticky_form_bp  {
-            display: block;
-            
-    }
-    }*/
 </style>
 
-<a class="sticky_form_bp color-btn1 hidden-lg"
-    href="https://www.blockchainappfactory.com/create-your-own-token-and-coin" style="color:#fff !important;">Contact to
-    Create a Token! </a>
-<div class="sticky-form">
-    <div class="formdiv">
-        <form class="form-side" id="mailForm_sticky" method="post" action>
-            <h4>Connect With Us</h4> <button type="button" class="close" aria-label="Close quick contact"><i
-                    class="fa fa-times-circle" aria-hidden="true"></i></button>
-            <hr>
-            <div class="form-group"><label for="name">Name</label><input type="text" class="form-control" name="name"
-                    id="name_sticky" placeholder="Your Name"> </div>
-            <div class="form-group"><label for="email">Email Address</label><input type="email" class="form-control"
-                    name="email" id="email_sticky" placeholder="Your Email"> </div>
-            <div class="form-group"><label for="skype">Skype</label><input type="text" class="form-control" name="skype"
-                    id="skype_sticky" placeholder="Your Skype"> </div>
-            <div class="form-group">
-                <label>Phone</label>
-                <input id="phone_sticky" name="phone_dummy" type="text" required
-                    oninput="if (!window.__cfRLUnblockHandlers) return false; this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                    data-cf-modified-62b9e06135650e78d69ea276->
-                <input type="hidden" name="phone" id="phone_newsletter">
-                <input type="hidden" name="url" id="url" value="/bep20-token-development">
-            </div>
-            <div class="form-group"><label>messages</label><textarea placeholder="Write text here..."
-                    id="textarea_sticky" name="message"></textarea></div>
-            <div class="form-group"><input type="button" id="submit" class="common_send_btn" value="send message">
-            </div>
-        </form>
-    </div>
-</div>
 <style type="text/css">
     .footer-wrap h6 {
         color: #fff;
@@ -4081,412 +3850,6 @@
         top: 1px;
     }
 </style>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script type="62b9e06135650e78d69ea276-text/javascript"
-    src="https://www.blockchainappfactory.com/fbox/jquery.fancybox.js?v=2.1.5"></script>
-<script type="62b9e06135650e78d69ea276-text/javascript"
-    src="https://www.blockchainappfactory.com/js/jquery.matchHeight-min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://www.blockchainappfactory.com/fbox/jquery.fancybox.css?v=2.1.5"
-    media="screen">
-<script type="62b9e06135650e78d69ea276-text/javascript"
-    src="https://www.blockchainappfactory.com/fbox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-<script type="62b9e06135650e78d69ea276-text/javascript">
-    $.fn.jQuerySimpleCounter = function( options ) {
-            var settings = $.extend({
-                start:  0,
-                end:    100,
-                easing: 'swing',
-                duration: 400,
-                complete: ''
-            }, options );
-            var thisElement = $(this);
-            $({count: settings.start}).animate({count: settings.end}, {
-                duration: settings.duration,
-                easing: settings.easing,
-                step: function() {
-                    var mathCount = Math.ceil(this.count);
-                    thisElement.text(mathCount);
-                },
-                complete: settings.complete
-            });
-        };
-        $('#number1').jQuerySimpleCounter({end: 500,duration: 3000});
-        $('#number2').jQuerySimpleCounter({end: 200,duration: 3000});
-        $('#number3').jQuerySimpleCounter({end: 100,duration: 2000});
-        /* AUTHOR LINK */
-        $('.about-me-img').hover(function(){
-                $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
-            }, function(){
-                $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
-        });
-        $(".close").click(function(e) {
-            $('body').removeClass('fixedPosition full-width');
-            $(".sticky-form .formdiv").removeClass('show');
-            e.stopPropagation();
-        });
-        $("#phone_common").intlTelInput({
-            utilsScript: "build/js/utils.js",
-            dropdownContainer: 'body'
-        });
-        $("#phone_sticky").intlTelInput({
-            utilsScript: "build/js/utils.js",
-            dropdownContainer: 'body'
-        });
-        $("#phone_banner").intlTelInput({
-            utilsScript: "build/js/utils.js",
-            dropdownContainer: 'body'
-        });
-        $('.home-talk-experts').click(function() {
-            $('html, body').animate({
-                scrollTop: $('#newsletter-form-sec').offset().top
-            }, 2000);
-        });
-        var url = window.location.href;
-        $('#url').val(url);
-        // alert(url);
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "100%";
-        }
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-        adroll_adv_id = "WDBK654P6ZFTPNTJ7HT4W5";
-        adroll_pix_id = "BYKIZBXZ5BBFHHTUURKSLV";
-        (function() {
-            var _onload = function() {
-                if(document.readyState && !/loaded|complete/.test(document.readyState)) {
-                    setTimeout(_onload, 10);
-                    return
-                }
-                if(!window.__adroll_loaded) {
-                    __adroll_loaded = true;
-                    setTimeout(_onload, 50);
-                    return
-                }
-                var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-                scr.setAttribute('async', 'true');
-                scr.type = "text/javascript";
-                scr.src = host + "/j/roundtrip.js";
-                ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-            };
-            if(window.addEventListener) {
-                window.addEventListener('load', _onload, false);
-            } else {
-                window.attachEvent('onload', _onload)
-            }
-        }());
-        function validateEmail($email) {
-        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-        return pattern.test($email);
-    }
-    
-    function validatePhone($phone) {
-        var pattern1 = new RegExp("[0-9]+");
-        return pattern1.test($phone);
-    }
-    // For Common Newsletter AjaxMail Function
-    $(".common_send_btn").click(function() {
-        function loader() {
-            $('<div id="loader"></div>').insertAfter(".common_send_btn");
-            $(".common_send_btn").next().addClass("loading");
-            setTimeout(function() {
-                $(".common_send_btn").next().remove();
-            }, 7000);
-        }
-        var formname = $(this).parent().parent().attr('id');
-        // alert(formname);
-        $(".ajax-loader").hide();
-        var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-        var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-        var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-        if(name != '') {
-            if((email != '') && (validateEmail(email))) {
-                if((phone != '') && (validatePhone(phone))) {
-                    var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                    $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                    //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                    // console.log( $("#"+formname).serialize() );
-                    $(this).attr("disabled", true);
-                    $(this).addClass('disabled');
-                    loader();
-                    $(".ajax-loader").hide();
-                    var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                    $.ajax({
-                        url: "ajaxmail.php",
-                        type: "POST",
-                        data: formdata,
-                        success: function(result) {
-                            //window.location.href="success";
-                            if(result == 1) {
-                                // alert("Mail Sent Successfully");
-                                window.location.href = "success";
-                                return false;
-                            } else {
-                                alert("Something went wrong, please try again later.");
-                                return false;
-                            }
-                            $(".ajax-loader").hide();
-                        },
-                        error: function() {
-                            window.location.href = "success";
-                        }
-                    });
-                } else if(!validatePhone(phone)) {
-                    alert("Please type correct mobile number format");
-                } else {
-                    alert("please type your phone number");
-                }
-            } else if(!validateEmail(email)) {
-                alert("Please type correct email format");
-            } else {
-                alert("please type your email");
-            }
-        } else {
-            alert("please fill all fields");
-        }
-    });
-    $(".submit_send").click(function() {
-        function loader() {
-            $('<div id="mloader"></div>').insertAfter(".submit_send");
-            $(".submit_send").next().addClass("loading");
-            setTimeout(function() {
-                $(".submit_send").next().remove();
-            }, 7000);
-        }
-        var formname = $(this).parent().parent().parent().attr('id');
-        // alert(formname);
-        $(".ajax-loader").hide();
-        var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-        var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-        var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-        // console.log(name, email, phone);
-        if(name != '') {
-            if((email != '') && (validateEmail(email))) {
-                if((phone != '') && (validatePhone(phone))) {
-                    $(this).attr("disabled", true);
-                    $(this).addClass('disabled');
-                    loader();
-                    $(".ajax-loader").hide();
-                    var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                    $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                    //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                    var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                    $.ajax({
-                        url: "ajaxmail.php",
-                        type: "POST",
-                        data: formdata,
-                        success: function(result) {
-                            console.log(result);
-                            if(result == 1) {
-                                // alert("Mail Sent Successfully");
-                                window.location.href = "success";
-                                return false;
-                            } else {
-                                alert("Something went wrong, please try again later.");
-                                return false;
-                            }
-                            $(".ajax-loader").hide();
-                        }
-                    });
-                } else if(!validatePhone(phone)) {
-                    alert("Please type correct mobile number format");
-                } else {
-                    alert("please type your mobile number");
-                }
-            } else if(!validateEmail(email)) {
-                alert("Please type correct email format");
-            } else {
-                alert("please type your email");
-            }
-        } else {
-            alert("please fill all fields");
-        }
-    });
-    $(".close_send").click(function() {
-        function loader() {
-            $('<div id="mloader"></div>').insertAfter(".close_send");
-            $(".close_send").next().addClass("loading");
-            setTimeout(function() {
-                $(".close_send").next().remove();
-            }, 7000);
-        }
-        var formname = $(this).parent().parent().parent().attr('id');
-        // alert(formname);
-        $(".ajax-loader").hide();
-        var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-        var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-        var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-        // console.log(name, email, phone);
-        if(name != '') {
-            if((email != '') && (validateEmail(email))) {
-                if((phone != '') && (validatePhone(phone))) {
-                    $(this).attr("disabled", true);
-                    $(this).addClass('disabled');
-                    loader();
-                    $(".ajax-loader").hide();
-                    var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                    $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                    //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                    var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                    $.ajax({
-                        url: "ajaxmail.php",
-                        type: "POST",
-                        data: formdata,
-                        success: function(result) {
-                            console.log(result);
-                            if(result == 1) {
-                                // alert("Mail Sent Successfully");
-                                window.location.href = "success";
-                                return false;
-                            } else {
-                                alert("Something went wrong, please try again later.");
-                                return false;
-                            }
-                            $(".ajax-loader").hide();
-                        }
-                    });
-                } else if(!validatePhone(phone)) {
-                    alert("Please type correct mobile number format");
-                } else {
-                    alert("please type your mobile number");
-                }
-            } else if(!validateEmail(email)) {
-                alert("Please type correct email format");
-            } else {
-                alert("please type your email");
-            }
-        } else {
-            alert("please fill all fields");
-        }
-    });
-    /*-- pdf mail --*/
-    $(".submit_send_pdf").click(function() {
-        function loader() {
-            $('<div id="loader"></div>').insertAfter(".submit_send_pdf");
-            $(".submit_send_pdf").next().addClass("loading");
-            setTimeout(function() {
-                $(".submit_send_pdf").next().remove();
-            }, 7000);
-        }
-        var formname = $(this).parent().parent().parent().attr('id');
-        $(".ajax-loader").hide();
-        var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-        var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-        var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-        // console.log(name, email, phone);
-        if(name != '') {
-            if((email != '') && (validateEmail(email))) {
-                if((phone != '') && (validatePhone(phone))) {
-                    $(this).attr("disabled", true);
-                    $(this).addClass('disabled');
-                    $(".ajax-loader").hide();
-                    loader();
-                    var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                    $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                    //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                    var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                    $.ajax({
-                        url: "pdfmail.php",
-                        type: "POST",
-                        data: formdata,
-                        success: function(result) {
-                            console.log(result);
-                            if(result == 1) {
-                                // alert("Mail Sent Successfully");
-                                window.open("https://www.blockchainappfactory.com/pdf/BlockchainAppFactory.pdf", '_blank');
-                                window.location.href = "success";
-                                return false;
-                            } else {
-                                alert("Something went wrong, please try again later.");
-                                return false;
-                            }
-                            $(".ajax-loader").hide();
-                        }
-                    });
-                } else if(!validatePhone(phone)) {
-                    alert("Please type correct mobile number format");
-                } else {
-                    alert("please type your phone number");
-                }
-            } else if(!validateEmail(email)) {
-                alert("Please type correct email format");
-            } else {
-                alert("please type your email");
-            }
-        } else {
-            alert("please fill all fields");
-        }
-    });
-    // video fancybox
-    $('.fancybox-media1').attr('rel', 'media-gallery').fancybox({
-        openEffect: 'none',
-        closeEffect: 'none',
-        prevEffect: 'none',
-        nextEffect: 'none',
-        arrows: false,
-        helpers: {
-            media: {},
-            buttons: {}
-        }
-    });
-    // Macth Height
-    $('.equal-height').matchHeight({
-        property: 'min-height'
-    });
-    $('.submit_send').click(function() {
-        qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-    });
-    $('#submit').click(function() {
-        qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-    });
-    $('.common_send_btn').click(function() {
-        qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-    });
-    $('.submit_sends').click(function() {
-        qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-    });
-    $(document).ready(function() {
-        // Disable cut copy paste
-        $('body').bind('cut copy paste', function(e) {
-            e.preventDefault();
-        });
-        // Disable mouse right click
-        $("body").on("contextmenu", function(e) {
-            return false;
-        });
-    });
-</script>
-
-<script type="62b9e06135650e78d69ea276-text/javascript">
-    window.__lc = window.__lc || {};
-        window.__lc.license = 9464790;
-        ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-</script>
-<noscript><a href="https://www.livechatinc.com/chat-with/9464790/" rel="nofollow">Chat with us</a>, powered by <a
-        href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6VQVFF" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-
-<script type="62b9e06135650e78d69ea276-text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-            const imageObserver = new IntersectionObserver((entries, imgObserver) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const lazyImage = entry.target
-                        //console.log("lazy loading ", lazyImage)
-                        lazyImage.src = lazyImage.dataset.src
-                    }
-                })
-            });
-            const arr = document.querySelectorAll('img.lazy')
-            arr.forEach((v) => {
-                imageObserver.observe(v);
-            })
-        })
-</script>
-
 
 <style type="text/css">
     @media (min-width: 320px) and (max-width: 768px) {
@@ -4585,20 +3948,6 @@
         }
     }
 </style>
-<script type="62b9e06135650e78d69ea276-text/javascript">
-    /* Set the width of the sidebar to 250px (show it) */
-    function openNav4() {
-      document.getElementById("mySidepanel4").style.width = "250px";
-    }
-    
-    /* Set the width of the sidebar to 0 (hide it) */
-    function closeNav4() {
-      document.getElementById("mySidepanel4").style.width = "0";
-    }
-</script>
-
-
-
 
 <style type="text/css">
     .close-btn {
@@ -4739,90 +4088,6 @@
         }
     }
 </style>
-<button id="btn" class="close-btn">x</button>
-<div id="box">
-    <div id="fixed-social" class="fixed-social hide">
-
-
-
-        <div class="items">
-            <a rel="nofollow" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" target="blank">
-                <div class="icons"><img src="https://www.blockchainappfactory.com/images/appointment.webp"></div>
-
-            </a>
-        </div>
-        <div class="items">
-            <a rel="nofollow" href="https://t.me/amarbaf" target="blank">
-                <div class="icons"><i class="fa fa-paper-plane"></i></div>
-
-            </a>
-        </div>
-
-    </div>
-</div>
-
-
-
-
-<script type="62b9e06135650e78d69ea276-text/javascript">
-    /*-- For Scroll --*/    
-        $(document).scroll(function() {
-    
-            myID = document.getElementById("fixed-social");
-    
-            var myScrollFunc = function () {
-                var y = window.scrollY;
-                if (y >= 800) {
-                    myID.className = "fixed-social show1"
-                } else {
-                    myID.className = "fixed-social hide"
-                }
-            };
-    
-            window.addEventListener("scroll", myScrollFunc);
-        });
-    
-    
-    $(document).scroll(function(){ 
-      //more then or equals to 
-      if($(document).scrollTop() >= 800 ){ 
-          $( "#btn" ).css( "display", "block" ); 
-     
-      //less then 800px from top 
-      } else { 
-          
-     $( "#btn" ).css( "display", "none" ); 
-      } 
-    }); 
-    
-     
-     
-    /*-- For Close Button --*/
-    const box = document.getElementById('box'); 
-    const btn = document.getElementById('btn'); 
-    btn.addEventListener('click', function handleClick() {
-      if (box.style.display === 'none') {
-        box.style.display = 'block'; 
-        btn.textContent = 'x';
-      } else {
-        box.style.display = 'none'; 
-        btn.textContent = '>';
-      }
-    });
-     
-</script>
-
-
-<script type="62b9e06135650e78d69ea276-text/javascript">
-    $(".crypto-popup").click(function(e) {
-            $('crypto-popup').addClass('fixedPosition full-width');
-            $(".login-popup").addClass('show');
-            e.stopPropagation();
-        });
-</script>
-
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
-    data-cf-settings="62b9e06135650e78d69ea276-|49" defer></script>
 </div>
 
 @endsection

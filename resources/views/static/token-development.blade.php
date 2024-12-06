@@ -1,8 +1,8 @@
 @extends('layouts.static')
-<link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/inline-css.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{asset('css/inline-css.css')}}">
 @section('css')
 @endsection
 @section('content')
@@ -2017,7 +2017,12 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       }
+      .step-points i{
+         font-size: 26px;
+         margin-top: 19px;
+      } 
    </style>
+
    <section class="common_spacing">
       <div class="container">
          <div class="row">
@@ -2036,7 +2041,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb10">
                <ul class="step-points">
                   <li>
-                     <i class="fa fa-lock">
+                     <i class="fas fa-lock">
                      </i>
                      <div class="step-points-content">
                         <h4>
@@ -2048,7 +2053,7 @@
                      </div>
                   </li>
                   <li>
-                     <i class="fa fa-life-ring">
+                     <i class="fas fa-life-ring">
                      </i>
                      <div class="step-points-content">
                         <h4>
@@ -2064,7 +2069,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb10">
                <ul class="step-points">
                   <li>
-                     <i class="fa fa-dot-circle-o">
+                     <i class="fas fa-dot-circle-o">
                      </i>
                      <div class="step-points-content">
                         <h4>
@@ -2076,7 +2081,7 @@
                      </div>
                   </li>
                   <li>
-                     <i class="fa fa-adjust">
+                     <i class="fas fa-adjust">
                      </i>
                      <div class="step-points-content">
                         <h4>
@@ -2305,7 +2310,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                <div class="perfect-script-items1">
                   <div class="icon">
-                     <i class="fa fa-toggle-on">
+                     <i class="fas fa-toggle-on">
                      </i>
                   </div>
                   <div class="content">
@@ -2323,7 +2328,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                <div class="perfect-script-items1">
                   <div class="icon">
-                     <i class="fa fa-bars">
+                     <i class="fas fa-bars">
                      </i>
                   </div>
                   <div class="content">
@@ -2341,7 +2346,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                <div class="perfect-script-items1">
                   <div class="icon">
-                     <i class="fa fa-money">
+                     <i class="fas fa-money">
                      </i>
                   </div>
                   <div class="content">
@@ -2359,7 +2364,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                <div class="perfect-script-items1">
                   <div class="icon">
-                     <i class="fa fa-external-link-square">
+                     <i class="fas fa-link">
                      </i>
                   </div>
                   <div class="content">
@@ -2377,7 +2382,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                <div class="perfect-script-items1">
                   <div class="icon">
-                     <i class="fa fa-pause-circle">
+                     <i class="fas fa-pause-circle">
                      </i>
                   </div>
                   <div class="content">
@@ -2395,7 +2400,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 my-auto">
                <div class="perfect-script-items1">
                   <div class="icon">
-                     <i class="fa fa-fire">
+                     <i class="fas fa-fire">
                      </i>
                   </div>
                   <div class="content">
@@ -2581,7 +2586,10 @@
          min-height: 160px;
          margin-bottom: 20px;
          }
-         .perfect-script-items1 .icon i{font-size: 26px;}
+         .perfect-script-items1 .icon i{
+            font-size: 26px;
+            margin-top: 19px;
+         }
          .perfect-script-items1 .icon {
          width: 70px;
          height: 70px;
@@ -2687,15 +2695,16 @@
          padding-left: 29px;
          }
          .uniq_features ul li:after {
-         font-family: FontAwesome;
-         top: 3px;
-         right: 0;
-         padding-right: 10px;
-         content: "\f0a9";
-         position: absolute;
-         left: 0;
-         font-size: 20px;
-         color: #108ad6;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            top: -3px;
+            right: 0;
+            padding-right: 10px;
+            content: "\f0a9";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+            color: #108ad6;
          }
          .faq-content #accordion a[data-toggle=collapse]::before {background: #108ad6;}
          .faq-content #accordion a.collapsed[data-toggle=collapse]::before, .faq-content #accordion a[data-toggle=collapse]::before{margin-top: 5px !important;}
@@ -3331,703 +3340,6 @@
       }*/
       }
    </style>
-   {{-- <section class="gray_bg" id="demo" style="padding:40px 0px;">
-      <div class="container">
-         <div class="row">
-            <div class="section-title text-center">
-               <h2 class="title-th sec_tit underline">
-                  Experience Seamless Token Development with Our Demo
-               </h2>
-            </div>
-            <p class="text-center">
-               Join us for an exclusive demo showcasing our cutting-edge token development platform. Discover how easy it is to create, manage, and launch your own tokens with our intuitive tools. Whether you're a blockchain novice or an experienced developer, our demo will guide you through the entire process, from token creation to deployment. Experience the future of tokenization with our powerful platform, designed to make token development accessible to everyone.
-            </p>
-            <div class="col-md-12 col-sm-12 col-xs-12" style="border-radius: 10px; border: 1px solid #000; padding-bottom:40px; padding-top:30px;">
-               <div class="col-md-6 col-sm-6 col-xs-12 text-center" style="margin-top:20px;">
-                  <h4 class="sec_tit underline text-center" style="font-size: 24px;">
-                     Admin Demo
-                  </h4>
-                  <img class="lazy" src="https://www.blockchainappfactory.com/images/ico-devlopment/admin-ico1.png" style="max-width: 100%;"/>
-                  <div class="design" style="background: transparent;">
-                     <p style="margin-bottom:10px;">
-                        <b>
-                        Email:
-                        </b>
-                        <span>
-                        <a class="__cf_email__" data-cfemail="0b6a6f6662654b6f6e666425686466" href="/cdn-cgi/l/email-protection">
-                        [email protected]
-                        </a>
-                        </span>
-                     </p>
-                     <p style="margin-bottom:10px;">
-                        <b>
-                        Password:
-                        </b>
-                        <span>
-                        123456
-                        </span>
-                     </p>
-                     <div class="clearfix">
-                     </div>
-                     <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" href="https://retoken.deliveryclouds.com/admin/login" rel="nofollow" style="display:inline-block; border-radius: 10px !important; text-transform: capitalize !important;" target="_blank">
-                     <span>
-                     Click to View Admin Demo
-                     </span>
-                     </a>
-                  </div>
-               </div>
-               <div class="col-md-6 col-sm-6 col-xs-12 text-center" style="margin-top:20px;">
-                  <h4 class="sec_tit underline text-center" style="font-size: 24px;">
-                     User Demo
-                  </h4>
-                  <img class="lazy" src="https://www.blockchainappfactory.com/images/ico-devlopment/user-ico1.png" style="max-width: 100%;"/>
-                  <div class="design" style="background: transparent;">
-                     <p style="margin-bottom:10px;">
-                        <b>
-                        Email:
-                        </b>
-                        <span>
-                        <a class="__cf_email__" data-cfemail="2044454d4f6044454d4f0e434f4d" href="/cdn-cgi/l/email-protection">
-                        [email protected]
-                        </a>
-                        </span>
-                     </p>
-                     <p style="margin-bottom:10px;">
-                        <b>
-                        Password:
-                        </b>
-                        <span>
-                        12345678
-                        </span>
-                     </p>
-                     <div class="clearfix">
-                     </div>
-                     <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" href="https://ico.deliveryclouds.com/" rel="nofollow" style="display:inline-block; border-radius: 10px !important; text-transform: capitalize !important;" target="_blank">
-                     <span>
-                     Click to View User Demo
-                     </span>
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <br/>
-      </div>
-   </section> --}}
-   <!-- =============SECTION-START============== -->
-   {{-- <div class="pricing-table gray-bg" id="pricing-tabs" style="padding: 60px 0px;">
-      <div class="container">
-         <div class="data table-responsive">
-            <div class="section-title">
-               <h3 class="sec_tit underline text-center">
-                  Packages We Offer At Our Crypto Token Creation Services
-               </h3>
-               <div class="accordion" id="accordion2">
-                  <table class="table-striped" style="width:100%;">
-                     <tbody>
-                     </tbody>
-                     <thead>
-                        <tr class="pr_pack">
-                           <th rowspan="1">
-                              Packages
-                           </th>
-                           <th>
-                              Basic
-                           </th>
-                           <th>
-                              Premium
-                           </th>
-                           <th>
-                              Ultimate
-                           </th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <th class="theme-color-bg" colspan="4">
-                              Token Website Development
-                           </th>
-                        </tr>
-                        <tr>
-                           <td>
-                              Whitepaper Writing and Designing
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              Explainer Video Creation
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              Sale Timer
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              Roadmap
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              Token Details
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              Contact Form
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                           <td>
-                              <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <div class="accordion-group">
-                     <div class="accordion-heading">
-                        <a class="accordion-toggle tab_high" data-parent="#accordion2" data-toggle="collapse" href="#collapseOne">
-                        Token Investor Dashboard Development
-                        </a>
-                     </div>
-                     <div class="accordion-body collapse" id="collapseOne">
-                        <div class="accordion-inner">
-                           <table class="table-striped" style="width:100%;">
-                              <tbody>
-                                 <tr>
-                                    <td>
-                                       Registration
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Login
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Forget Password
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Edit Profile
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Invite Friends for Referral Program
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Add Fund in the Dashboard
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Order Coin Process
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Coin Earning History
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Submit a ticket for a Complaint
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Multi-language Support
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="accordion-group">
-                     <div class="accordion-heading">
-                        <a class="accordion-toggle tab_high" data-parent="#accordion2" data-toggle="collapse" href="#collapseTwo">
-                        Coin Owner Dashboard Development
-                        </a>
-                     </div>
-                     <div class="accordion-body collapse" id="collapseTwo">
-                        <div class="accordion-inner">
-                           <table class="table-striped" style="width:100%;">
-                              <tbody>
-                                 <tr>
-                                    <td>
-                                       Login
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Forget Password
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Token Manager
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Content Manager
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Complaints Manager
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="accordion-group">
-                     <div class="accordion-heading">
-                        <a class="accordion-toggle tab_high" data-parent="#accordion2" data-toggle="collapse" href="#collapseThree">
-                        Token Development
-                        </a>
-                     </div>
-                     <div class="accordion-body collapse" id="collapseThree">
-                        <div class="accordion-inner">
-                           <table class="table-striped" style="width:100%;">
-                              <tbody>
-                                 <tr>
-                                    <td>
-                                       Smart Contract Development
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       dApp Development
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Web Wallet Development
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="accordion-group">
-                     <div class="accordion-heading">
-                        <a class="accordion-toggle tab_high" data-parent="#accordion2" data-toggle="collapse" href="#collapseFour">
-                        Token Marketing
-                        </a>
-                     </div>
-                     <div class="accordion-body collapse" id="collapseFour">
-                        <div class="accordion-inner">
-                           <table class="table-striped" style="width:100%;">
-                              <tbody>
-                                 <tr>
-                                    <td>
-                                       Token Marketing
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Marketing Advice
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Airdrop Campaign setup
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Bounty Campaign setup
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Paid Exchange Listings
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Token PR Campaign
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Community Building
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Content Marketing Campaign
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Token Listing
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Social Media Campaign
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       Post-launch Maintenance
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/no.webp"/>
-                                    </td>
-                                    <td>
-                                       <img src="https://www.blockchainappfactory.com/images/yes.webp"/>
-                                    </td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-                     </div>
-                  </div>
-                  <table class="table-striped" style="width:100%;">
-                     <tbody>
-                        <tr>
-                           <td style="padding: 20px 0px;">
-                           </td>
-                           <td class="btnpro">
-                              <a data-target="#myModal" data-toggle="modal" rel="nofollow" type="button">
-                              Order Now
-                              </a>
-                           </td>
-                           <td class="btnpro">
-                              <a data-target="#myModal1" data-toggle="modal" rel="nofollow" type="button">
-                              Order Now
-                              </a>
-                           </td>
-                           <td class="btnpro">
-                              <a data-target="#myModal2" data-toggle="modal" rel="nofollow" type="button">
-                              Order Now
-                              </a>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div> --}}
    <style type="text/css">
       .pricing-table {
       display: block;
@@ -4207,61 +3519,57 @@
       }
    </style>
    <!-- =============SECTION-START============== -->
+
    <div class="common_spacing uniq_features">
       <div class="why-blockchain-sec">
          <div class="container">
             <div class="row">
                <div class="col-lg-12 text-center">
+                  <!-- Optional: Add heading or intro text here -->
                </div>
             </div>
-            <div class="row md-flex">
-               <div class="col-md-6 col-sm-12 col-md-12 pull-left">
-                  <img alt=" " class="lazy br-5" src="{{ asset('images/token-development/img-1.webp') }}" title=" "/>
+            <div class="row d-flex align-items-center">
+               <!-- Image Section -->
+               <div class="col-md-6 col-sm-12">
+                  <img 
+                     alt="Supercharge Your Project" 
+                     class="lazy br-5 w-100" 
+                     src="{{ asset('images/token-development/img-1.webp') }}" 
+                     title="Supercharge Your Project"
+                  />
                </div>
-               <div class="col-md-6 col-sm-12 col-md-12 pull-right">
-                  <h3 class="font-wei mb20">
+               <!-- Text Section -->
+               <div class="col-md-6 col-sm-12">
+                  <h3 class="font-wei mb-3">
                      Supercharge Your Project with Custom-Built Crypto Tokens
                   </h3>
                   <p>
                      Our expert token development team crafts custom crypto tokens designed to elevate your business. By harnessing the latest trends and cutting-edge technologies, we drive your venture to achieve its maximum potential.
                   </p>
-                  <div class="col-lg-6 col-md-6 col-sm-12 col-md-12 pull-right">
-                     <ul>
-                        <li>
-                           Ensure Token Liquidity
-                        </li>
-                        <li>
-                           Build Brand Value
-                        </li>
-                        <li>
-                           Improve Market Efficiency
-                        </li>
-                        <li>
-                           Leverage Airdrop Marketing
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12 col-md-12 pull-right">
-                     <ul>
-                        <li>
-                           Remove Intermediaries
-                        </li>
-                        <li>
-                           Offer Token Rewards for Signups
-                        </li>
-                        <li>
-                           Facilitate Global Investments
-                        </li>
-                        <li>
-                           Expand Your User Base
-                        </li>
-                     </ul>
+                  <div class="row">
+                     <div class="col-md-6 col-sm-12">
+                        <ul>
+                           <li>Ensure Token Liquidity</li>
+                           <li>Build Brand Value</li>
+                           <li>Improve Market Efficiency</li>
+                           <li>Leverage Airdrop Marketing</li>
+                        </ul>
+                     </div>
+                     <div class="col-md-6 col-sm-12">
+                        <ul>
+                           <li>Remove Intermediaries</li>
+                           <li>Offer Token Rewards for Signups</li>
+                           <li>Facilitate Global Investments</li>
+                           <li>Expand Your User Base</li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
    </div>
+   
    <!-- =============SECTION-START============== -->
    <div class="technologies gray_bg" style="background:#eee;">
       <div class="container">
@@ -4463,70 +3771,63 @@
       </div>
    </section>
    <!-- =============SECTION-START============== -->
+
    <div class="common_spacing uniq_features">
       <div class="why-blockchain-sec">
          <div class="container">
+            <!-- Header Section -->
             <div class="row">
                <div class="col-lg-12 text-center">
-                  <h3 class="font-wei mb20">
+                  <h3 class="font-wei mb-4">
                      Partner with a Leading Token Development Company
-                     
                   </h3>
                   <p>
                      Our team of expert token developers is committed to turning your project vision into reality. We specialize in creating tokens across various blockchain standards, ensuring top-notch utility and security.
-                        <br/>
-                        <br/>
-                        At Blockchain App Factory, we transform the goals of entrepreneurs and brand owners into successful outcomes. Our expertise covers over 10 leading layer-1 and layer-2 blockchain networks, delivering versatile tokens with a range of features.
-                     </p>
+                     <br /><br />
+                     At Blockchain App Factory, we transform the goals of entrepreneurs and brand owners into successful outcomes. Our expertise covers over 10 leading layer-1 and layer-2 blockchain networks, delivering versatile tokens with a range of features.
+                  </p>
                </div>
             </div>
-            <div class="row md-flex">
-               <p>Why Choose Us?</p>
-               <div class="col-md-4 col-sm-12 col-md-12 pull-right">
-                  <ul>
-                     <li>
-                        Experienced Blockchain Developers
-                     </li>
-                     <li>
-                        Expertise in Multiple Token Standards
-                     </li>
-                     <li>
-                        Certified and Skilled Teams
-                     </li>
-                     <li>
-                        Business-Focused Solutions
-                     </li>
-                     <li>
-                        Cost-Effective Services
-                     </li>
-                  </ul>
+            <!-- Content Section -->
+            <div class="row align-items-center">
+               <!-- Text Section -->
+               <div class="col-md-7 col-sm-12">
+                  <h4 class="mb-3">Why Choose Us?</h4>
+                  <div class="row">
+                     <div class="col-md-6 col-sm-12">
+                        <ul>
+                           <li>Experienced Blockchain Developers</li>
+                           <li>Expertise in Multiple Token Standards</li>
+                           <li>Certified and Skilled Teams</li>
+                           <li>Business-Focused Solutions</li>
+                           <li>Cost-Effective Services</li>
+                        </ul>
+                     </div>
+                     <div class="col-md-6 col-sm-12">
+                        <ul>
+                           <li>Custom Token Solutions</li>
+                           <li>Complete ICO Support</li>
+                           <li>Free Consultation</li>
+                           <li>Timely Project Delivery</li>
+                           <li>24/7/365 Technical Support</li>
+                        </ul>
+                     </div>
+                  </div>
                </div>
-               <div class="col-md-3 col-sm-12 col-md-12 pull-right">
-                  <ul>
-                     <li>
-                        Custom Token Solutions
-                     </li>
-                     <li>
-                        Complete ICO Support
-                     </li>
-                     <li>
-                        Free Consultation
-                     </li>
-                     <li>
-                        Timely Project Delivery
-                     </li>
-                     <li>
-                        24/7/365 Technical Support
-                     </li>
-                  </ul>
-               </div>
-               <div class="col-md-5 col-sm-12 col-md-12 pull-left">
-                  <img alt=" " class="lazy br-5" src="{{asset('images/token-development/img-2.webp')}}" title=" "/>
+               <!-- Image Section -->
+               <div class="col-md-5 col-sm-12">
+                  <img 
+                     alt="Leading Token Development Company" 
+                     class="lazy br-5 w-100" 
+                     src="{{ asset('images/token-development/img-2.webp') }}" 
+                     title="Leading Token Development Company"
+                  />
                </div>
             </div>
          </div>
       </div>
    </div>
+   
    <!-- =============SECTION-START============== -->
     {{-- <div class="common_spacing gray_bg"> @include('static.faq')</div> --}}
 

@@ -2721,7 +2721,8 @@
                         </div>
                         <div class="col-md-7 col-sm-12 col-xs-12 text-center"> <img class="magic"
                                 src="{{ asset('images/hire-token-developer/banner-img2.png') }}" alt="Hire Token Developers"
-                                title="Hire Token Developers"> </div>
+                                title="Hire Token Developers"> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2939,96 +2940,6 @@
         </div>
     </div>
 </div>
-{{-- <section class="complimentary-features gray-bg" style="padding: 60px 0px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center col-md-12 col-sm-12 col-xs-12">
-                <div class="section-title">
-                    <h3 class="title"><strong>Prominent Types of Tokens Crafted By Our Cryptocurrency Token
-                            Developers</strong></h3>
-                    <hr />
-                    <p>Our cryptocurrency token developers serve numerous types of tokens to enhance the project’s
-                        functionalities and enable <br>new business models within the crypto space.</p>
-                </div>
-            </div>
-            <div class="col-lg-12 text-center col-md-12 col-sm-12 col-xs-12">
-                <ul>
-                    <li>
-                        <div class="icons"><img class="lazy"
-                                data-src="images/hire-token-developer/icons/ethereum.webp" /></div>
-                        <div class="content">
-                            <h4>Ethereum Tokens</h4>
-                            <p>Our Ethereum token developers enhance your blockchain applications by creating tokens
-                                compliant with standards like ERC-20, ERC-1155, and more, with robust smart contracts
-                                and built-in security protocols.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icons"><img class="lazy" data-src="images/hire-token-developer/icons/tron.webp" />
-                        </div>
-                        <div class="content">
-                            <h4>Tron Tokens</h4>
-                            <p>With our profound industry expertise, our developer team specializes in launching your
-                                customized tokens on the TRON blockchain in various standards like TRC-10, TRC-20, and
-                                TRC-721, tailored to your needs.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icons"><img class="lazy" data-src="images/hire-token-developer/icons/bep-20.png" />
-                        </div>
-                        <div class="content">
-                            <h4>BEP20 Tokens</h4>
-                            <p>We design and create BEP tokens on the BNB chain tailored for utility token projects. Our
-                                seasoned team of experts facilitates ICO fundraising and provides utility benefits to
-                                enhance community engagement.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icons"><img class="lazy" data-src="images/hire-token-developer/icons/solana.webp" />
-                        </div>
-                        <div class="content">
-                            <h4>Solana Tokens</h4>
-                            <p>Leading the way in token creation on Solana, our developers deliver custom smart
-                                contracts and high-functionality tokens that are precisely aligned with your specific
-                                business requirements and objectives.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icons"><img class="lazy" data-src="images/hire-token-developer/icons/plan.webp" />
-                        </div>
-                        <div class="content">
-                            <h4>Token Launch and Distribution Planning</h4>
-                            <p>Our developers create non-fungible tokens (NFTs) to elevate your presence in the market.
-                                We specialize in tokenizing collectibles across various niches, ensuring each NFT is
-                                uniquely secure and functional.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icons"><img class="lazy" data-src="images/hire-token-developer/icons/defi.webp" />
-                        </div>
-                        <div class="content">
-                            <h4>DeFi Tokens</h4>
-                            <p>Our developer team crafts DeFi-based tokens with unique functionalities designed to meet
-                                your specific business needs. We allow you to thrive in the decentralized finance
-                                ecosystem with tailor-made tokens.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <hr>
-            <div class="clearfix"></div>
-            <div class="text-center cta_mine txt">
-                <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"
-                    target="_blank" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
-                    data-color-override="false" data-hover-color-override="false"
-                    data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-                <a rel="nofollow" href="#newsletter-form-sec"
-                    class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>Talk with our
-                        Experts</span></a>
-            </div>
-        </div>
-    </div>
-</section> --}}
 @include('static.six-card-section', [
     'title' => "Cutting-edge token Solutions for Various Blockchain Platforms", 
     'desc' => 'Our cryptocurrency token developers offer a range of specialized tokens designed to improve project capabilities and explore new opportunities in the crypto ecosystem.',
@@ -3621,7 +3532,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab26">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/angular.webp') }}">
                                 <p>Angular JS</p>
                             </li>
@@ -3648,17 +3559,17 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab27">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/metamask.webp') }}">
                                 <p>MetaMask </p>
                             </li>
                             <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/trust.webp') }}">
                                 <p>TrustWallet </p>
                             </li>
-                            <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/walletconnect.png') }}">
+                            <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/walletconnect.webp') }}">
                                 <p>WalletConnect</p>
                             </li>
-                            <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/exodus.png') }}">
+                            <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/exodus.webp') }}">
                                 <p>Exodus</p>
                             </li>
                             <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/coinbase.webp') }}">
@@ -3669,14 +3580,14 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab28">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/aws.webp') }}">
                                 <p>AWS (Amazon Web Services)</p>
                             </li>
                             <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/azure.webp') }}">
                                 <p>Microsoft Azure</p>
                             </li>
-                            <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/google-cloud.png') }}">
+                            <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/google-cloud.webp') }}">
                                 <p>Google Cloud Platform (GCP)</p>
                             </li>
                         </ul>
@@ -3684,7 +3595,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab29">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/MongoDB-black.webp') }}">
                                 <p>MongoDB</p>
                             </li>
@@ -3696,7 +3607,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="vtab30">
                     <div class="row">
-                        <ul>
+                        <ul style="width: 100%">
                             <li><img class="lazy" src="{{ asset('images/hire-token-developer/icons/pinata.webp') }}">
                                 <p>Pinata</p>
                             </li>
@@ -3710,6 +3621,36 @@
         </div>
     </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navTabs = document.querySelectorAll('#nav-tabs-wrapper1 a[data-toggle="tab"]');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        navTabs.forEach(tab => {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Remove 'in active' from all tab panes and add 'fade'
+                tabPanes.forEach(pane => {
+                    pane.classList.remove('in', 'active');
+                    pane.classList.add('fade');
+                });
+
+                // Add 'in active' to the target pane
+                const targetPane = document.querySelector(this.getAttribute('href'));
+                if (targetPane) {
+                    targetPane.classList.remove('fade');
+                    targetPane.classList.add('in', 'active');
+                }
+
+                // Handle nav item active class
+                const navItems = document.querySelectorAll('#nav-tabs-wrapper1 li');
+                navItems.forEach(item => item.classList.remove('active'));
+                this.parentElement.classList.add('active');
+            });
+        });
+    });
+</script>
 <section class="product-features package_includes" style="background:#f4f4f4;">
     <div class="container">
         <div class="section-title text-center">
@@ -3800,212 +3741,6 @@
     ],
 ])
 </div>
-<script src="js/jquery.min.js" type="7db0b87f1577b54e54f39d75-text/javascript"></script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    var swiper = new Swiper('.blog-slider', {
-    spaceBetween: 30,
-    effect: 'fade',
-    loop: true,
-    mousewheel: {
-    invert: false,
-    },
-    // autoHeight: true,
-    pagination: {
-    el: '.blog-slider__pagination',
-    clickable: true,
-    }
-    });
-</script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    (function($) {
-    $.fn.countTo = function(options, viewCounter) {
-    if(viewCounter == 1) {
-    options = options || {};
-    return $(this).each(function() {
-    // set options for current element
-    var settings = $.extend({}, $.fn.countTo.defaults, {
-    from: $(this).data('from'),
-    to: $(this).data('to'),
-    speed: $(this).data('speed'),
-    refreshInterval: $(this).data('refresh-interval'),
-    decimals: $(this).data('decimals')
-    }, options);
-    // how many times to update the value, and how much to increment the value on each update
-    var loops = Math.ceil(settings.speed / settings.refreshInterval),
-    increment = (settings.to - settings.from) / loops;
-    // references & variables that will change with each update
-    var self = this,
-    $self = $(this),
-    loopCount = 0,
-    value = settings.from,
-    data = $self.data('countTo') || {};
-    $self.data('countTo', data);
-    // if an existing interval can be found, clear it first
-    if(data.interval) {
-    clearInterval(data.interval);
-    }
-    data.interval = setInterval(updateTimer, settings.refreshInterval);
-    // initialize the element with the starting value
-    render(value);
-    
-    function updateTimer() {
-    value += increment;
-    loopCount++;
-    render(value);
-    if(typeof(settings.onUpdate) == 'function') {
-    settings.onUpdate.call(self, value);
-    }
-    if(loopCount >= loops) {
-    // remove the interval
-    $self.removeData('countTo');
-    clearInterval(data.interval);
-    value = settings.to;
-    if(typeof(settings.onComplete) == 'function') {
-    settings.onComplete.call(self, value);
-    }
-    }
-    }
-    
-    function render(value) {
-    var formattedValue = settings.formatter.call(self, value, settings);
-    $self.html(formattedValue);
-    }
-    });
-    };
-    }
-    $.fn.countTo.defaults = {
-    from: 0, // the number the element should start at
-    to: 0, // the number the element should end at
-    speed: 3000, // how long it should take to count between the target numbers
-    refreshInterval: 100, // how often the element should be updated
-    decimals: 0, // the number of decimal places to show
-    formatter: formatter, // handler for formatting the value before rendering
-    onUpdate: null, // callback method for every time the element is updated
-    onComplete: null // callback method for when the element finishes updating
-    };
-    
-    function formatter(value, settings) {
-    return value.toFixed(settings.decimals);
-    }
-    }(jQuery));
-    jQuery(function($) {
-    // custom formatting example
-    $('.count-number').data('countToOptions', {
-    formatter: function(value, options) {
-    return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-    }
-    });
-    // start all the timers
-    var viewCounter = 0;
-    $(document).on('scroll', function() {
-    if($('.timer').each(count).isOnScreen() && viewCounter < 2) {
-    viewCounter++;
-    console.log(viewCounter);
-    }
-    });
-    
-    function count(options) {
-    var $this = $(this);
-    options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-    $this.countTo(options, viewCounter);
-    }
-    });
-    // check if element visible in viewport
-    $.fn.isOnScreen = function() {
-    var win = $(window);
-    var viewport = {
-    top: win.scrollTop(),
-    left: win.scrollLeft()
-    };
-    viewport.right = viewport.left + win.width();
-    viewport.bottom = viewport.top + win.height();
-    var bounds = this.offset();
-    //bounds.right = bounds.left + this.outerWidth();
-    //bounds.bottom = bounds.top + this.outerHeight();
-    return(!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-    };
-</script>
-<script src="js/vendor.js" type="7db0b87f1577b54e54f39d75-text/javascript"></script>
-<script src="js/plugins.js" type="7db0b87f1577b54e54f39d75-text/javascript"></script>
-<script src="js/main.js" type="7db0b87f1577b54e54f39d75-text/javascript"></script>
-<script src="build/js/intlTelInput.js" type="7db0b87f1577b54e54f39d75-text/javascript"></script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    $("#phone21").intlTelInput({
-    utilsScript: "sto-baf/utils.js"
-    });
-    $("#phone22").intlTelInput({
-    utilsScript: "sto-baf/utils.js"
-    });
-    $("#phone23").intlTelInput({
-    utilsScript: "sto-baf/utils.js"
-    });
-    $("#phone24").intlTelInput({
-    utilsScript: "sto-baf/utils.js"
-    });
-</script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    $('.home-talk-experts').click(function() {
-    $('html, body').animate({
-    scrollTop: $('#newsletter-form-sec').offset().top
-    }, 2000);
-    });
-    $('.uniq_features').click(function() {
-    $('html, body').animate({
-    scrollTop: $('#uniq_features').offset().top
-    }, 2000);
-    });
-    $('.view_demo').click(function() {
-    $('html, body').animate({
-    scrollTop: $('.view_demo_sec').offset().top
-    }, 2000);
-    });
-</script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    $('.view_pricing').click(function() {
-    $('html, body').animate({
-    scrollTop: $('#pricing-section').offset().top
-    }, 2000);
-    });
-</script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    var url = window.location.href;
-    $('#url').val(url);
-</script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    $(".pricing-body").mCustomScrollbar({
-    theme: "minimal"
-    });
-</script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-    var lazyloadImages = document.querySelectorAll("img.lazy");
-    var lazyloadThrottleTimeout;
-    
-    function lazyload() {
-    if(lazyloadThrottleTimeout) {
-    clearTimeout(lazyloadThrottleTimeout);
-    }
-    lazyloadThrottleTimeout = setTimeout(function() {
-    var scrollTop = window.pageYOffset;
-    lazyloadImages.forEach(function(img) {
-    if(img.offsetTop < (window.innerHeight + scrollTop)) {
-    img.src = img.dataset.src;
-    img.classList.remove('lazy');
-    }
-    });
-    if(lazyloadImages.length == 0) {
-    document.removeEventListener("scroll", lazyload);
-    window.removeEventListener("resize", lazyload);
-    window.removeEventListener("orientationChange", lazyload);
-    }
-    }, 20);
-    }
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-    });
-</script>
-
 <style type="text/css">
     .header .menu-item {
         padding: 0 3px !important;
@@ -4109,18 +3844,6 @@
         }
     }
 
-    /*@media (max-width: 1024px){
-    .header-nabar-icon .pull-right, .pull-right-tow {
-    background-color: #47b475;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 3px 15px;
-    margin-right: 0px;
-    position: relative;
-    right: 16px;
-    bottom: -30px;
-    }
-    }*/
 
     .color-btn {
         background-color: #1fd1f9 !important;
@@ -4166,17 +3889,6 @@
         }
     }
 
-    /*.color-btn1:before{
-    content: "";
-    background: rgba(0,0,0,0.9);
-    border-radius: 50px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    z-index: -1;
-    }*/
     @keyframes glow {
         0% {
             box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
@@ -4206,50 +3918,8 @@
         font-size: 14px;
     }
 
-    /*@media (max-width: 1024px){
-    .sticky_form_bp {
-    display:block !important;
-    }
-    }
-    
-    @media (max-width: 320px){
-    .sticky_form_bp {
-    display: block;
-    
-    }
-    }*/
 </style>
 
-<a class="sticky_form_bp color-btn1 hidden-lg"
-    href="https://www.blockchainappfactory.com/create-your-own-token-and-coin" style="color:#fff !important;">Contact to
-    Create a Token! </a>
-<div class="sticky-form">
-    <div class="formdiv">
-        <form class="form-side" id="mailForm_sticky" method="post" action>
-            <h4>Connect With Us</h4> <button type="button" class="close" aria-label="Close quick contact"><i
-                    class="fa fa-times-circle" aria-hidden="true"></i></button>
-            <hr>
-            <div class="form-group"><label for="name">Name</label><input type="text" class="form-control" name="name"
-                    id="name_sticky" placeholder="Your Name"> </div>
-            <div class="form-group"><label for="email">Email Address</label><input type="email" class="form-control"
-                    name="email" id="email_sticky" placeholder="Your Email"> </div>
-            <div class="form-group"><label for="skype">Skype</label><input type="text" class="form-control" name="skype"
-                    id="skype_sticky" placeholder="Your Skype"> </div>
-            <div class="form-group">
-                <label>Phone</label>
-                <input id="phone_sticky" name="phone_dummy" type="text" required
-                    oninput="if (!window.__cfRLUnblockHandlers) return false; this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                    data-cf-modified-7db0b87f1577b54e54f39d75->
-                <input type="hidden" name="phone" id="phone_newsletter">
-                <input type="hidden" name="url" id="url" value="/hire-token-developer">
-            </div>
-            <div class="form-group"><label>messages</label><textarea placeholder="Write text here..."
-                    id="textarea_sticky" name="message"></textarea></div>
-            <div class="form-group"><input type="button" id="submit" class="common_send_btn" value="send message">
-            </div>
-        </form>
-    </div>
-</div>
 <style type="text/css">
     .footer-wrap h6 {
         color: #fff;
@@ -4283,412 +3953,6 @@
         top: 1px;
     }
 </style>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript"
-    src="https://www.blockchainappfactory.com/fbox/jquery.fancybox.js?v=2.1.5"></script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript"
-    src="https://www.blockchainappfactory.com/js/jquery.matchHeight-min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://www.blockchainappfactory.com/fbox/jquery.fancybox.css?v=2.1.5"
-    media="screen">
-<script type="7db0b87f1577b54e54f39d75-text/javascript"
-    src="https://www.blockchainappfactory.com/fbox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    $.fn.jQuerySimpleCounter = function( options ) {
-    var settings = $.extend({
-    start: 0,
-    end: 100,
-    easing: 'swing',
-    duration: 400,
-    complete: ''
-    }, options );
-    var thisElement = $(this);
-    $({count: settings.start}).animate({count: settings.end}, {
-    duration: settings.duration,
-    easing: settings.easing,
-    step: function() {
-    var mathCount = Math.ceil(this.count);
-    thisElement.text(mathCount);
-    },
-    complete: settings.complete
-    });
-    };
-    $('#number1').jQuerySimpleCounter({end: 500,duration: 3000});
-    $('#number2').jQuerySimpleCounter({end: 200,duration: 3000});
-    $('#number3').jQuerySimpleCounter({end: 100,duration: 2000});
-    /* AUTHOR LINK */
-    $('.about-me-img').hover(function(){
-    $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
-    }, function(){
-    $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
-    });
-    $(".close").click(function(e) {
-    $('body').removeClass('fixedPosition full-width');
-    $(".sticky-form .formdiv").removeClass('show');
-    e.stopPropagation();
-    });
-    $("#phone_common").intlTelInput({
-    utilsScript: "build/js/utils.js",
-    dropdownContainer: 'body'
-    });
-    $("#phone_sticky").intlTelInput({
-    utilsScript: "build/js/utils.js",
-    dropdownContainer: 'body'
-    });
-    $("#phone_banner").intlTelInput({
-    utilsScript: "build/js/utils.js",
-    dropdownContainer: 'body'
-    });
-    $('.home-talk-experts').click(function() {
-    $('html, body').animate({
-    scrollTop: $('#newsletter-form-sec').offset().top
-    }, 2000);
-    });
-    var url = window.location.href;
-    $('#url').val(url);
-    // alert(url);
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-    }
-    function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    }
-    adroll_adv_id = "WDBK654P6ZFTPNTJ7HT4W5";
-    adroll_pix_id = "BYKIZBXZ5BBFHHTUURKSLV";
-    (function() {
-    var _onload = function() {
-    if(document.readyState && !/loaded|complete/.test(document.readyState)) {
-    setTimeout(_onload, 10);
-    return
-    }
-    if(!window.__adroll_loaded) {
-    __adroll_loaded = true;
-    setTimeout(_onload, 50);
-    return
-    }
-    var scr = document.createElement("script");
-    var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-    scr.setAttribute('async', 'true');
-    scr.type = "text/javascript";
-    scr.src = host + "/j/roundtrip.js";
-    ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-    };
-    if(window.addEventListener) {
-    window.addEventListener('load', _onload, false);
-    } else {
-    window.attachEvent('onload', _onload)
-    }
-    }());
-    function validateEmail($email) {
-    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-    return pattern.test($email);
-    }
-    
-    function validatePhone($phone) {
-    var pattern1 = new RegExp("[0-9]+");
-    return pattern1.test($phone);
-    }
-    // For Common Newsletter AjaxMail Function
-    $(".common_send_btn").click(function() {
-    function loader() {
-    $('<div id="loader"></div>').insertAfter(".common_send_btn");
-    $(".common_send_btn").next().addClass("loading");
-    setTimeout(function() {
-    $(".common_send_btn").next().remove();
-    }, 7000);
-    }
-    var formname = $(this).parent().parent().attr('id');
-    // alert(formname);
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-    if((phone != '') && (validatePhone(phone))) {
-    var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-    $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-    //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-    // console.log( $("#"+formname).serialize() );
-    $(this).attr("disabled", true);
-    $(this).addClass('disabled');
-    loader();
-    $(".ajax-loader").hide();
-    var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-    $.ajax({
-    url: "ajaxmail.php",
-    type: "POST",
-    data: formdata,
-    success: function(result) {
-    //window.location.href="success";
-    if(result == 1) {
-    // alert("Mail Sent Successfully");
-    window.location.href = "success";
-    return false;
-    } else {
-    alert("Something went wrong, please try again later.");
-    return false;
-    }
-    $(".ajax-loader").hide();
-    },
-    error: function() {
-    window.location.href = "success";
-    }
-    });
-    } else if(!validatePhone(phone)) {
-    alert("Please type correct mobile number format");
-    } else {
-    alert("please type your phone number");
-    }
-    } else if(!validateEmail(email)) {
-    alert("Please type correct email format");
-    } else {
-    alert("please type your email");
-    }
-    } else {
-    alert("please fill all fields");
-    }
-    });
-    $(".submit_send").click(function() {
-    function loader() {
-    $('<div id="mloader"></div>').insertAfter(".submit_send");
-    $(".submit_send").next().addClass("loading");
-    setTimeout(function() {
-    $(".submit_send").next().remove();
-    }, 7000);
-    }
-    var formname = $(this).parent().parent().parent().attr('id');
-    // alert(formname);
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    // console.log(name, email, phone);
-    if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-    if((phone != '') && (validatePhone(phone))) {
-    $(this).attr("disabled", true);
-    $(this).addClass('disabled');
-    loader();
-    $(".ajax-loader").hide();
-    var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-    $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-    //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-    var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-    $.ajax({
-    url: "ajaxmail.php",
-    type: "POST",
-    data: formdata,
-    success: function(result) {
-    console.log(result);
-    if(result == 1) {
-    // alert("Mail Sent Successfully");
-    window.location.href = "success";
-    return false;
-    } else {
-    alert("Something went wrong, please try again later.");
-    return false;
-    }
-    $(".ajax-loader").hide();
-    }
-    });
-    } else if(!validatePhone(phone)) {
-    alert("Please type correct mobile number format");
-    } else {
-    alert("please type your mobile number");
-    }
-    } else if(!validateEmail(email)) {
-    alert("Please type correct email format");
-    } else {
-    alert("please type your email");
-    }
-    } else {
-    alert("please fill all fields");
-    }
-    });
-    $(".close_send").click(function() {
-    function loader() {
-    $('<div id="mloader"></div>').insertAfter(".close_send");
-    $(".close_send").next().addClass("loading");
-    setTimeout(function() {
-    $(".close_send").next().remove();
-    }, 7000);
-    }
-    var formname = $(this).parent().parent().parent().attr('id');
-    // alert(formname);
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    // console.log(name, email, phone);
-    if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-    if((phone != '') && (validatePhone(phone))) {
-    $(this).attr("disabled", true);
-    $(this).addClass('disabled');
-    loader();
-    $(".ajax-loader").hide();
-    var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-    $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-    //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-    var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-    $.ajax({
-    url: "ajaxmail.php",
-    type: "POST",
-    data: formdata,
-    success: function(result) {
-    console.log(result);
-    if(result == 1) {
-    // alert("Mail Sent Successfully");
-    window.location.href = "success";
-    return false;
-    } else {
-    alert("Something went wrong, please try again later.");
-    return false;
-    }
-    $(".ajax-loader").hide();
-    }
-    });
-    } else if(!validatePhone(phone)) {
-    alert("Please type correct mobile number format");
-    } else {
-    alert("please type your mobile number");
-    }
-    } else if(!validateEmail(email)) {
-    alert("Please type correct email format");
-    } else {
-    alert("please type your email");
-    }
-    } else {
-    alert("please fill all fields");
-    }
-    });
-    /*-- pdf mail --*/
-    $(".submit_send_pdf").click(function() {
-    function loader() {
-    $('<div id="loader"></div>').insertAfter(".submit_send_pdf");
-    $(".submit_send_pdf").next().addClass("loading");
-    setTimeout(function() {
-    $(".submit_send_pdf").next().remove();
-    }, 7000);
-    }
-    var formname = $(this).parent().parent().parent().attr('id');
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    // console.log(name, email, phone);
-    if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-    if((phone != '') && (validatePhone(phone))) {
-    $(this).attr("disabled", true);
-    $(this).addClass('disabled');
-    $(".ajax-loader").hide();
-    loader();
-    var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-    $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-    //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-    var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-    $.ajax({
-    url: "pdfmail.php",
-    type: "POST",
-    data: formdata,
-    success: function(result) {
-    console.log(result);
-    if(result == 1) {
-    // alert("Mail Sent Successfully");
-    window.open("https://www.blockchainappfactory.com/pdf/BlockchainAppFactory.pdf", '_blank');
-    window.location.href = "success";
-    return false;
-    } else {
-    alert("Something went wrong, please try again later.");
-    return false;
-    }
-    $(".ajax-loader").hide();
-    }
-    });
-    } else if(!validatePhone(phone)) {
-    alert("Please type correct mobile number format");
-    } else {
-    alert("please type your phone number");
-    }
-    } else if(!validateEmail(email)) {
-    alert("Please type correct email format");
-    } else {
-    alert("please type your email");
-    }
-    } else {
-    alert("please fill all fields");
-    }
-    });
-    // video fancybox
-    $('.fancybox-media1').attr('rel', 'media-gallery').fancybox({
-    openEffect: 'none',
-    closeEffect: 'none',
-    prevEffect: 'none',
-    nextEffect: 'none',
-    arrows: false,
-    helpers: {
-    media: {},
-    buttons: {}
-    }
-    });
-    // Macth Height
-    $('.equal-height').matchHeight({
-    property: 'min-height'
-    });
-    $('.submit_send').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-    });
-    $('#submit').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-    });
-    $('.common_send_btn').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-    });
-    $('.submit_sends').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-    });
-    $(document).ready(function() {
-    // Disable cut copy paste
-    $('body').bind('cut copy paste', function(e) {
-    e.preventDefault();
-    });
-    // Disable mouse right click
-    $("body").on("contextmenu", function(e) {
-    return false;
-    });
-    });
-</script>
-
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    window.__lc = window.__lc || {};
-    window.__lc.license = 9464790;
-    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-</script>
-<noscript><a href="https://www.livechatinc.com/chat-with/9464790/" rel="nofollow">Chat with us</a>, powered by <a
-        href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6VQVFF" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-    const imageObserver = new IntersectionObserver((entries, imgObserver) => {
-    entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-    const lazyImage = entry.target
-    //console.log("lazy loading ", lazyImage)
-    lazyImage.src = lazyImage.dataset.src
-    }
-    })
-    });
-    const arr = document.querySelectorAll('img.lazy')
-    arr.forEach((v) => {
-    imageObserver.observe(v);
-    })
-    })
-</script>
-
 
 <style type="text/css">
     @media (min-width: 320px) and (max-width: 768px) {
@@ -4754,17 +4018,6 @@
 
     /* Style the button that is used to open the sidepanel */
     .openbtn1 {
-        /*font-size: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    color: white;
-    padding: 0px;
-    border: none;
-    position: fixed;
-    top: 43%;
-    left: 0;
-    width: 90px;
-    z-index: 99999;*/
         /*animation: zoom-in-zoom-out 1s ease infinite;*/
         filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
     }
@@ -4787,20 +4040,6 @@
         }
     }
 </style>
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    /* Set the width of the sidebar to 250px (show it) */
-    function openNav4() {
-    document.getElementById("mySidepanel4").style.width = "250px";
-    }
-    
-    /* Set the width of the sidebar to 0 (hide it) */
-    function closeNav4() {
-    document.getElementById("mySidepanel4").style.width = "0";
-    }
-</script>
-
-
-
 
 <style type="text/css">
     .close-btn {
@@ -4941,90 +4180,6 @@
         }
     }
 </style>
-<button id="btn" class="close-btn">x</button>
-<div id="box">
-    <div id="fixed-social" class="fixed-social hide">
-
-
-
-        <div class="items">
-            <a rel="nofollow" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" target="blank">
-                <div class="icons"><img src="https://www.blockchainappfactory.com/images/appointment.webp"></div>
-
-            </a>
-        </div>
-        <div class="items">
-            <a rel="nofollow" href="https://t.me/amarbaf" target="blank">
-                <div class="icons"><i class="fa fa-paper-plane"></i></div>
-
-            </a>
-        </div>
-
-    </div>
-</div>
-
-
-
-
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    /*-- For Scroll --*/
-    $(document).scroll(function() {
-    
-    myID = document.getElementById("fixed-social");
-    
-    var myScrollFunc = function () {
-    var y = window.scrollY;
-    if (y >= 800) {
-    myID.className = "fixed-social show1"
-    } else {
-    myID.className = "fixed-social hide"
-    }
-    };
-    
-    window.addEventListener("scroll", myScrollFunc);
-    });
-    
-    
-    $(document).scroll(function(){
-    //more then or equals to
-    if($(document).scrollTop() >= 800 ){
-    $( "#btn" ).css( "display", "block" );
-    
-    //less then 800px from top
-    } else {
-    
-    $( "#btn" ).css( "display", "none" );
-    }
-    });
-    
-    
-    
-    /*-- For Close Button --*/
-    const box = document.getElementById('box');
-    const btn = document.getElementById('btn');
-    btn.addEventListener('click', function handleClick() {
-    if (box.style.display === 'none') {
-    box.style.display = 'block';
-    btn.textContent = 'x';
-    } else {
-    box.style.display = 'none';
-    btn.textContent = '>';
-    }
-    });
-    
-</script>
-
-
-<script type="7db0b87f1577b54e54f39d75-text/javascript">
-    $(".crypto-popup").click(function(e) {
-    $('crypto-popup').addClass('fixedPosition full-width');
-    $(".login-popup").addClass('show');
-    e.stopPropagation();
-    });
-</script>
-
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
-    data-cf-settings="7db0b87f1577b54e54f39d75-|49" defer></script>
 </div>
 
 @endsection

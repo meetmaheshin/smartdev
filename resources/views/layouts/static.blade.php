@@ -427,15 +427,16 @@
                                     <ul class="list-unstyled custom-list">
                                         <li><a href="{{ url('cryptocurrency-wallet-development') }}" class="font_11">Crypto Wallet Development</a></li>
                                         <li><a href="{{ url('crypto-payments-gateway') }}" class="font_11">Crypto-Payment Development</a></li>
-                                        <li><a href="{{ url('remitano-clone') }}" class="font_11">Metamask Like Wallet Development</a></li>
-                                        <li><a href="{{ url('remitano-clone') }}" class="font_11">Bitcoin Ordinals Wallet Development</a></li>
+                                        <li><a href="{{ url('metamask-like-wallet-development') }}" class="font_11">Metamask Like Wallet Development</a></li>
+                                        <li><a href="{{ url('bitcoin-ordinals-wallet-development') }}" class="font_11">Bitcoin Ordinals Wallet Development</a></li>
                                     </ul>
 
                                     {{-- Launchpad section --}}
                                     <h6>Trading Bot</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Crypto Trading Bot Development</a></li>
-                                        <li><a href="#" class="font_11">Crypto Arbitrage Bot Development</a></li>
+                                        <li><a href="{{ url('crypto-trading-bot-development') }}" class="font_11">Crypto Trading Bot Development</a></li>
+                                        <li><a href="{{ url('crypto-arbitrage-bot-development') }}" class="font_11">Crypto Arbitrage Bot Development</a></li>
+                                        <li><a href="{{ url('flash-loan-arbitrage-bot-development') }}" class="font_11">Flash loan arbitrage Bot Development</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -455,34 +456,34 @@
                                 <div class="col-md-3">
                                     <h6>Marketplace Development</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">NFT Marketplace Development</a></li>
-                                        <li><a href="#" class="font_11">White label Crypto Exchanges</a></li>
-                                        <li><a href="#" class="font_11">Bitcoin Ordinals Marketplaces</a></li>
-                                        <li><a href="#" class="font_11">Zksync 2.0 Integration service</a></li>
-                                        <li><a href="#" class="font_11">AI-Powered NFT MarketPlace Development</a></li>
-                                        <li><a href="#" class="font_11">NFT MarketPlace For Music</a></li>
-                                        <li><a href="#" class="font_11">NFT MarketPlace For Art</a></li>
-                                        <li><a href="#" class="font_11">NFT MarketPlace For sports</a></li>
-                                        <li><a href="#" class="font_11">NFT For real Estate</a></li>
-                                        <li><a href="#" class="font_11">NFT Ticketing Marketplace</a></li>
-                                        <li><a href="#" class="font_11">NFT Aggregator Marketplace</a></li>
-                                        <li><a href="#" class="font_11">Carbon Credits Development</a></li>
-                                        <li><a href="#" class="font_11">Phygital NFT Marketplace</a></li>
-                                        <li><a href="#" class="font_11">Fractional NFT Marketplace</a></li>
+                                        <li><a href="{{ url('nft-marketplace-development') }}" class="font_11">NFT Marketplace Development</a></li>
+                                        <li><a href="{{ url('white-label-nft-marketplace') }}" class="font_11">White label Crypto Exchanges</a></li>
+                                        <li><a href="{{ url('bitcoin-ordinals-marketplace-development') }}" class="font_11">Bitcoin Ordinals Marketplaces</a></li>
+                                        <li><a href="{{ url('zksync2-integration-in-nft-platform') }}" class="font_11">Zksync 2.0 Integration service</a></li>
+                                        <li><a href="{{ url('ai-powered-nft-marketplace-development') }}" class="font_11">AI-Powered NFT MarketPlace Development</a></li>
+                                        <li><a href="{{ url('nft-music-marketplace-development') }}" class="font_11">NFT MarketPlace For Music</a></li>
+                                        <li><a href="{{ url('nft-art-marketplace-development') }}" class="font_11">NFT MarketPlace For Art</a></li>
+                                        <li><a href="{{ url('nft-for-sports') }}" class="font_11">NFT MarketPlace For sports</a></li>
+                                        <li><a href="{{ url('nft-for-realestate') }}" class="font_11">NFT For real Estate</a></li>
+                                        <li><a href="{{ url('nft-ticketing-marketplace') }}" class="font_11">NFT Ticketing Marketplace</a></li>
+                                        <li><a href="{{ url('nft-aggregator-marketplace-development') }}" class="font_11">NFT Aggregator Marketplace</a></li>
+                                        <li><a href="{{ url('carbon-credits-platform') }}" class="font_11">Carbon Credits Development</a></li>
+                                        <li><a href="{{ url('phygital-nft-marketplace') }}" class="font_11">Phygital NFT Marketplace</a></li>
+                                        <li><a href="{{ url('fractional-nft-marketplace-development') }}" class="font_11">Fractional NFT Marketplace</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3">
                                     <h6>NFT Services</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">NFT Development Services</a></li>
-                                        <li><a href="#" class="font_11">NFT Launchpad Development</a></li>
-                                        <li><a href="#" class="font_11">NFT Exchange Development</a></li>
-                                        <li><a href="#" class="font_11">NFT Wallet Development</a></li>
-                                        <li><a href="#" class="font_11">NFT Minting Platform</a></li>
-                                        <li><a href="#" class="font_11">NFT Layer 2  Development</a></li>
-                                        <li><a href="#" class="font_11">NFT Ecosystem</a></li>
+                                        <li><a href="{{ url('nft-development-services') }}" class="font_11">NFT Development Services</a></li>
+                                        <li><a href="{{ url('nft-launchpad-development') }}" class="font_11">NFT Launchpad Development</a></li>
+                                        <li><a href="{{ url('nft-exchange-development') }}" class="font_11">NFT Exchange Development</a></li>
+                                        <li><a href="{{ url('nft-wallet-development') }}" class="font_11">NFT Wallet Development</a></li>
+                                        <li><a href="{{ url('nft-minting-platform-development') }}" class="font_11">NFT Minting Platform</a></li>
+                                        <li><a href="{{ url('nft-layer-2-development') }}" class="font_11">NFT Layer 2  Development</a></li>
+                                        <li><a href="{{ url('nft-carbon-credits-development') }}" class="font_11">Carbon Credits Development</a></li>
+                                        <li><a href="{{ url('nft-carbon-credits-development') }}" class="font_11">NFT Ecosystem</a></li>
                                         <li><a href="#" class="font_11">SFT Development</a></li>
-                                        <li><a href="#" class="font_11">Carbon Credits Development</a></li>
                                         <li><a href="#" class="font_11">Social Token Development</a></li>
                                         <li><a href="#" class="font_11">NFT Staking Platform</a></li>
                                         <li><a href="#" class="font_11">NFT Streaming Platform</a></li>

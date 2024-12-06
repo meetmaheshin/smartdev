@@ -1,8 +1,8 @@
 @extends('layouts.static')
-@section('title', 'Crypto Payments Gateway')
-<link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+    @section('title', 'Crypto Payments Gateway')
+    <link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
 @section('content')
 
 <style type="text/css">
@@ -612,17 +612,12 @@
         <div class="section-header common_spacing">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12 mt30">
-                        <h2 class="text-left small_h3 section-title underline font-wei">Defi crypto Payment Gateway
-                            Development</h2>
-                        <p class="text-justify">We ensure that users have complete control over their funds through
-                            their exclusive private keys. Our Defi crypto payment gateway development services ensure
-                            ease of usage, are non-custodial in nature, and embedded with institutional-grade security.
-                            It ensures a transparent financial ecosystem without the involvement of any central
-                            authority. </p>
+                    <div class="col-md-6 col-sm-6 col-xs-12 mt30" style="margin-top: 105px !important">
+                        <h2 class="text-left small_h3 section-title underline font-wei">Empower Your Transactions with DeFi Payment Gateways</h2>
+                        <p class="text-justify">Our DeFi crypto payment gateway development services empower users with full control over their funds through private keys. We focus on creating user-friendly, non-custodial solutions with institutional-grade security. This approach fosters a transparent financial ecosystem free from central authority control.</p>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 text-center mb50">
-                        <img src="images/crypto_payments/decentralize.webp" width="380"
+                        <img src="{{ asset('images/crypto_payments/crypto-payment-gateway-development.webp') }}" width="380"
                             alt="Defi Crypto Payment Gateway Development" title="Defi Payment Gateway">
                     </div>
                 </div>
@@ -631,19 +626,16 @@
         <div class="section-header common_spacing gray_bg">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12 mt30 pull-right">
-                        <h2 class="text-left small_h3 section-title underline font-wei">What is multi cryptocurrency
-                            payment gateway development?</h2>
-                        <p class="text-justify">Multi crypto payment gateway development processes transactions at a low
-                            cost through automated smart contracts. Payments can be sent and received in numerous
-                            cryptocurrencies simultaneously. They are faster and facilitate more transaction and
-                            anonymity due to the presence of blockchain.</p>
-                    </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 text-center mb30 pull-left">
-                        <img src="images/crypto_payments/multi.webp" width="380"
+                        <img src="{{ asset('images/crypto_payments/multi.jpg') }}" width="380"
                             alt="Multi Cryptocurrency Payment Gateway Development"
                             title="Multi Cryptocurrency Payment Gateway">
                     </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 mt30 pull-right">
+                        <h2 class="text-left small_h3 section-title underline font-wei">The Mechanics of Multi-Cryptocurrency Payment Gateways</h2>
+                        <p class="text-justify">Multi-cryptocurrency payment gateway development involves processing transactions cost-effectively through automated smart contracts. This technology enables simultaneous transactions in various cryptocurrencies, enhancing speed and anonymity due to the underlying blockchain infrastructure.</p>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -651,29 +643,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12 mt30">
-                        <h2 class="text-left small_h3 section-title underline font-wei">Why you should have a multi
-                            cryptocurrency payment gateway for your business ?</h2>
-                        <p class="text-justify">Multi cryptocurrency payment gateways are a must-have for international
-                            businesses. It accommodates different varieties of coins and processes transactions without
-                            any intermediaries. The advantages include lower transaction costs, ample flexibility as
-                            crypto can be converted to fiat anytime, no chance of chargeback fraud, and completely safe.
+                        <h2 class="text-left small_h3 section-title underline font-wei">Why Your Business Needs a Multi-Cryptocurrency Payment Gateway</h2>
+                        <p class="text-justify">A multi-cryptocurrency payment gateway is essential for global businesses. It supports various cryptocurrencies and processes transactions directly, without intermediaries. Benefits include reduced transaction fees, flexibility with crypto-to-fiat conversions, elimination of chargeback fraud, and enhanced security.
                         </p>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 mt30">
-                        <h2 class="text-left small_h3 section-title underline font-wei">Crypto Payment Gateway Solutions
-                            Like Simplex for All Enterprises</h2>
-                        <p class="text-justify">In current times, more businesses are delving into Web3, which
-                            necessitates crypto payment gateways. Simplex has been one of the frontrunners in the
-                            domain, and many enterprises across the world are using it. We also have expertise in
-                            developing crypto payment gateway solutions like Simplex for enterprises. Our experts ensure
-                            that enterprises have the most efficient crypto payment gateway like Simplex tailored to
-                            suit all their requirements.
+                        <h2 class="text-left small_h3 section-title underline font-wei">Crypto Payment Gateway Solutions Like Simplex for Your Business</h2>
+                        <p class="text-justify">As more companies explore Web3, the need for effective crypto payment gateways grows. Simplex is a leader in this field, widely adopted by businesses worldwide. Our expertise includes developing crypto payment gateway solutions similar to Simplex, ensuring that enterprises receive a highly efficient, customized gateway to meet their needs.
                         </p>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
 
@@ -711,189 +690,75 @@
         <section class="common_spacing gray_bg">
             <div class="container">
                 <div class="section-title text-center mb30">
-                    <h2 class="text-center small_h3 section-title underline font-wei">Advantage Of Cryptocurrency
-                        Payment Gateway Development </h2>
+                    <h2 class="text-center small_h3 section-title underline font-wei">Benefits of Cryptocurrency Payment Gateway Development</h2>
                 </div>
                 <div class="row text-center">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-reason equal-height">
-                            <img src="images/crypto_payments/global-usage.webp" alt="">
-                            <h3>Global Usage</h3>
-                            <p>Anyone from across the world can use the Cryptocurrency payment gateway development to
-                                pay the merchants with bitcoin or any other cryptocurrency of their choice.</p>
+                            <img src="{{ asset('images/crypto_payments/global-usage.webp') }}" alt="">
+                            <h3>Global Reach</h3>
+                            <p>Cryptocurrency payment gateways enable transactions from anywhere in the world, allowing customers to pay with Bitcoin or other digital currencies of their choice.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-reason equal-height">
-                            <img src="images/crypto_payments/secure-transactions.webp" alt="">
-                            <h3>Secure Transactions</h3>
-                            <p>The transactions are highly secure and anonymous since the transactions are wallet to
-                                wallet and no third party can access your data.</p>
+                            <img src="{{ asset('images/crypto_payments/secure.webp') }}" alt="">
+                            <h3>Enhanced Security</h3>
+                            <p>Transactions are secure and anonymous, occurring directly between wallets with no third-party access to your data.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-reason equal-height">
-                            <img src="images/crypto_payments/minimal-fees.webp" alt="">
-                            <h3>Minimal fees</h3>
-                            <p>The transaction fees are minimal, and can go as low as zero. This is applicable for
-                                transactions from one corner of the earth to another.</p>
+                            <img src="{{ asset('images/crypto_payments/low-fees.webp') }}" alt="">
+                            <h3>Low Transaction Fees</h3>
+                            <p>Fees are minimal and can even be zero, regardless of the transaction's global distance.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-reason equal-height">
-                            <img src="images/crypto_payments/fastest-uptime.webp" alt="">
-                            <h3>Fastest Uptime</h3>
-                            <p>You can have your crypto-payment gateway, up and running in the fastest time, so that you
-                                do not lose business in the meantime. </p>
+                            <img src="{{ asset('images/crypto_payments/fastest-uptime.webp') }}" alt="">
+                            <h3>Rapid Deployment</h3>
+                            <p>Get your crypto payment gateway operational quickly to avoid business interruptions.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-reason equal-height">
-                            <img src="images/crypto_payments/first-mover-advantage.webp" alt="">
-                            <h3>First Mover Advantage</h3>
-                            <p>There aren’t many merchants who accept bitcoin and other cryptocurrencies for the
-                                delivery of goods and services.</p>
+                            <img src="{{ asset('images/crypto_payments/first-mover-advantage.webp') }}" alt="">
+                            <h3>Early Adoption Advantage</h3>
+                            <p>Few merchants accept cryptocurrencies, giving you a competitive edge as an early adopter.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-reason  equal-height">
-                            <img src="images/crypto_payments/multiple-pos.webp" alt="">
-                            <h3>Multiple POS</h3>
-                            <p>Cryptocurrency payment gateway development with POS Apps helps the merchants/consumers
-                                use cryptos in the store with a simple iPad.</p>
+                            <img src="{{ asset('images/crypto_payments/multiple-pos.webp') }}" alt="">
+                            <h3>Multiple POS Integration</h3>
+                            <p>Integrate cryptocurrency payment gateways with POS systems, enabling in-store crypto transactions via devices like iPads.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-reason  equal-height">
-                            <img src="images/crypto_payments/24-hour-withdrawal.webp" alt="">
-                            <h3>24 Hour Withdrawal </h3>
-                            <p>Merchants can withdraw their earnings faster than any other payment methods and enhance
-                                their liquidity to run their business.</p>
+                            <img src="{{ asset('images/crypto_payments/withdraw.png') }}" alt="">
+                            <h3>24/7 Withdrawals</h3>
+                            <p>Merchants benefit from faster withdrawals compared to traditional payment methods, improving liquidity.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-reason equal-height">
-                            <img src="images/crypto_payments/new-customers.webp" alt="">
-                            <h3>New Customers</h3>
-                            <p>Your business is exposed to totally new set of customers/consumers who would like to pay
-                                in cryptocurrencies due to low transactions costs with fastest transactions times.</p>
+                            <img src="{{ asset('images/crypto_payments/new-customers.webp') }}" alt="">
+                            <h3>Attract New Customers</h3>
+                            <p>Appeal to a new demographic of customers who prefer cryptocurrency payments due to lower fees and faster transaction speeds.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="content-section common_spacing">
-            <div class="container">
-                <div class="row real-estate-list">
-                    <div class="section-title text-center">
-                        <h2 class="text-center small_h3 section-title underline font-wei">CryptoCurrency Payment Options
-                        </h2>
-                    </div>
-                </div>
-                <div class="row mt30">
-                    <div class="col-5 logo-item">
-                        <div class="feature_box_7 text-center">
-                            <div class="box-icon">
-                                <img src="images/logos/bitcoin.webp" alt="Fastest Transaction Time">
-                            </div>
-                            <div class="content">
-                                <h5>Bitcoin</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-5 logo-item">
-                        <div class="feature_box_7 text-center">
-                            <div class="box-icon">
-                                <img src="images/logos/bitcoin-cash.webp" alt="Fastest Transaction Time">
-                            </div>
-                            <div class="content">
-                                <h5>Bitcoin Cash</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-5 logo-item">
-                        <div class="feature_box_7 text-center">
-                            <div class="box-icon">
-                                <img src="images/logos/lite-coin.webp" alt="Fastest Transaction Time">
-                            </div>
-                            <div class="content">
-                                <h5>Litecoin</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-5 logo-item">
-                        <div class="feature_box_7 text-center">
-                            <div class="box-icon">
-                                <img src="images/logos/Ethereum.webp" alt="Fastest Transaction Time">
-                            </div>
-                            <div class="content">
-                                <h5>Ethereum</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-5 logo-item">
-                        <div class="feature_box_7 text-center">
-                            <div class="box-icon">
-                                <img src="images/logos/dash.webp" alt="Fastest Transaction Time">
-                            </div>
-                            <div class="content">
-                                <h5>DASH</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="cta_mine">
-                        <style type="text/css">
-                            .nec-btn {
-                                position: relative !important;
-                                color: #fff !important;
-                                border-radius: 30px !important;
-                                font-size: 11px;
-                                text-transform: uppercase !important;
-                                transform: scale(1.1, 1.1) !important;
-                                transition: all 0.3s ease-out 0s !important;
-                                background: #47b475 !important;
-                            }
-
-                            .nec-btn:hover {
-                                transform: scale(1, 1) !important;
-                                color: #fff !important;
-                                background: #00a9e2 !important;
-                            }
-
-                            a.nectar-button.medium.regular.accent-color.regular-button.nec-btn {
-                                margin-bottom: 15px !important;
-                                display: inline-block;
-                                margin-right: 26px !important;
-                            }
-
-                            .contentall a,
-                            a.home-talk-experts {
-                                padding: 10px 20px !important;
-                            }
-                        </style>
-                        <div class="cta_mine">
-
-                            <a href="#newsletter-form-sec"
-                                class="nectar-button medium regular accent-color regular-button nec-btn"><span>Talk with
-                                    our Experts</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="section-header common_spacing gray_bg">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12 pull-right">
-                        <h2 class="text-left small_h3 section-title underline font-wei">Why Choose Us for Cryptocurrency
-                            Payment Gateway Development</h2>
-                        <p class="text-justify">Choose our Cryptocurrency Payment gateway development services
-                            wholeheartedly as we offer the lowest industry fees for both merchants and enterprises,
-                            support crypto-fiat and fiat-crypto withdrawals, and accept a wide range of coins, tokens,
-                            and stablecoins. Our solution is easy to set up via a single API. </p>
+                        <h2 class="text-left small_h3 section-title underline font-wei">Why Opt for Our Cryptocurrency Payment Gateway Solutions</h2>
+                        <p class="text-justify">Select our Cryptocurrency Payment Gateway development services for unmatched value. We offer the industry's lowest fees for merchants and enterprises, facilitate seamless crypto-to-fiat and fiat-to-crypto withdrawals, and support a diverse array of coins, tokens, and stablecoins. Our solution is straightforward to implement with a single API integration.</p>
                         <div class="cta_mine">
                             <style type="text/css">
                                 .nec-btn {
@@ -926,302 +791,53 @@
                             </style>
 
                             <div class="cta_mine">
-                                <a rel="nofollow"
+                                {{-- <a rel="nofollow"
                                     class="nectar-button medium regular accent-color regular-button nec-btn"
                                     target="_blank"
-                                    href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
+                                    href="#"
                                     data-color-override="false" data-hover-color-override="false"
-                                    data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-                                <a href="#newsletter-form-sec"
-                                    class="nectar-button medium regular accent-color regular-button nec-btn"><span>Talk
-                                        with our Experts</span></a>
+                                    data-hover-text-color-override="#fff"><span>SCHEDULE A MEETING</span></a> --}}
+                                <a href="{{ url('consultation') }}"
+                                    class="nectar-button medium regular accent-color regular-button nec-btn"><span>TALK WITH OUR EXPERTS</span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 text-center pull-left">
-                        <img src="images/crypto_payments/develop.webp" width="400"
+                        <img src="{{ asset('images/crypto_payments/develop.png') }}" width="308"
                             alt="Cryptocurrency Payment Gateway Solution" title="Crypto Payment Gateway solutions">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="product-section fag_sec p-50">
-            <div class="container">
-                <div class="section-top ">
-                    <div class="section-header text-center ">
-                        <h3 class="section-title mt20 underline font-wei">FAQ</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-12">
-                        <div class="faq-content">
-                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab">
-                                        <h4 class="panel-title">
-                                            <a class="" role="button" data-toggle="collapse" data-parent="#accordion"
-                                                href="#faq1">
-                                                <span>How to accept cryptocurrency payments ?</span>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="faq1" class="panel-collapse collapse in" role="tabpanel"
-                                        aria-labelledby="headingOne">
-                                        <div class="panel-body">
-                                            Cryptocurrency payments can be accepted by having either a payment gateway,
-                                            compatible wallet, a point of sale (POS) system or an NFC-powered product.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion" href="#faq2">
-                                                <span>I want to integrate my own Cryptocurrency to the payment gateway,
-                                                    is it possible? </span>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="faq2" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="headingTwo">
-                                        <div class="panel-body">
-                                            Yes, it is possible. You need to add your specific cryptocurrency to the
-                                            payment gateway and ensure a seamless transaction processing experience for
-                                            your business.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion" href="#faq3">
-                                                <span>To start a payment gateway that accepts cryptocurrency, are there
-                                                    any regulatory norms that need to be met? </span>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="faq3" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="headingTwo">
-                                        <div class="panel-body">
-                                            Yes, ensure that your business is completely legal depending on the country
-                                            from where you operate and the location where it is registered. Hire a
-                                            knowledgeable legal expert and follow the local regulations to stay on the
-                                            right side of the law.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion" href="#faq4">
-                                                <span> Apart from the payment gateway, is there anything else you guys
-                                                    develop?</span>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="faq4" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="headingTwo">
-                                        <div class="panel-body">
-                                            We develop hot and cold wallets, Point of Sale (POS) systems, mobile
-                                            applications, create API plugins, and build NFC-powered products.
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>>
+        {{-- simple-faqs.blade --}}
+        @include('static.simple-faqs-section', [
+            'faqs' => [
+                [
+                    'ques' => "How can I accept cryptocurrency payments?",
+                    'ans' => "To accept cryptocurrency payments, you need to integrate a cryptocurrency payment gateway with your business. This gateway will enable you to receive payments in various cryptocurrencies seamlessly and convert them into your preferred currency if needed."
+                ],
+                [
+                    'ques' => "Can I integrate my own cryptocurrency into the payment gateway?",
+                    'ans' => "Yes, you can integrate your own cryptocurrency into the payment gateway. Our team can customize the gateway to support your specific cryptocurrency, ensuring smooth transactions and compatibility with your system."
+                ],
+                [
+                    'ques' => "Are there any regulatory requirements for starting a cryptocurrency payment gateway?",
+                    'ans' => "Yes, launching a cryptocurrency payment gateway involves adhering to specific regulatory requirements, which vary by region. Compliance with local financial regulations, anti-money laundering (AML) laws, and know-your-customer (KYC) protocols is essential."
+                ],
+                [
+                    'ques' => "Do you offer services beyond cryptocurrency payment gateway development?",
+                    'ans' => "Yes, we offer a range of services beyond just payment gateway development. Our portfolio includes solutions for crypto wallet development, blockchain technology integration, and various custom software solutions tailored to your needs."
+                ],
+            ],
+        ])
     </div>
 
     <script src="js/jquery.min.js" type="c27a7a8160b19d566dba0c58-text/javascript"></script>
-    <script type="c27a7a8160b19d566dba0c58-text/javascript">
-        var swiper = new Swiper('.blog-slider', {
-    spaceBetween: 30,
-    effect: 'fade',
-    loop: true,
-    mousewheel: {
-        invert: false,
-    },
-    // autoHeight: true,
-    pagination: {
-        el: '.blog-slider__pagination',
-        clickable: true,
-    }
-});
-    </script>
-    <script type="c27a7a8160b19d566dba0c58-text/javascript">
-        (function($) {
-    $.fn.countTo = function(options, viewCounter) {
-        if(viewCounter == 1) {
-            options = options || {};
-            return $(this).each(function() {
-                // set options for current element
-                var settings = $.extend({}, $.fn.countTo.defaults, {
-                    from: $(this).data('from'),
-                    to: $(this).data('to'),
-                    speed: $(this).data('speed'),
-                    refreshInterval: $(this).data('refresh-interval'),
-                    decimals: $(this).data('decimals')
-                }, options);
-                // how many times to update the value, and how much to increment the value on each update
-                var loops = Math.ceil(settings.speed / settings.refreshInterval),
-                    increment = (settings.to - settings.from) / loops;
-                // references & variables that will change with each update
-                var self = this,
-                    $self = $(this),
-                    loopCount = 0,
-                    value = settings.from,
-                    data = $self.data('countTo') || {};
-                $self.data('countTo', data);
-                // if an existing interval can be found, clear it first
-                if(data.interval) {
-                    clearInterval(data.interval);
-                }
-                data.interval = setInterval(updateTimer, settings.refreshInterval);
-                // initialize the element with the starting value
-                render(value);
-
-                function updateTimer() {
-                    value += increment;
-                    loopCount++;
-                    render(value);
-                    if(typeof(settings.onUpdate) == 'function') {
-                        settings.onUpdate.call(self, value);
-                    }
-                    if(loopCount >= loops) {
-                        // remove the interval
-                        $self.removeData('countTo');
-                        clearInterval(data.interval);
-                        value = settings.to;
-                        if(typeof(settings.onComplete) == 'function') {
-                            settings.onComplete.call(self, value);
-                        }
-                    }
-                }
-
-                function render(value) {
-                    var formattedValue = settings.formatter.call(self, value, settings);
-                    $self.html(formattedValue);
-                }
-            });
-        };
-    }
-    $.fn.countTo.defaults = {
-        from: 0, // the number the element should start at
-        to: 0, // the number the element should end at
-        speed: 3000, // how long it should take to count between the target numbers
-        refreshInterval: 100, // how often the element should be updated
-        decimals: 0, // the number of decimal places to show
-        formatter: formatter, // handler for formatting the value before rendering
-        onUpdate: null, // callback method for every time the element is updated
-        onComplete: null // callback method for when the element finishes updating
-    };
-
-    function formatter(value, settings) {
-        return value.toFixed(settings.decimals);
-    }
-}(jQuery));
-jQuery(function($) {
-    // custom formatting example
-    $('.count-number').data('countToOptions', {
-        formatter: function(value, options) {
-            return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-        }
-    });
-    // start all the timers
-    var viewCounter = 0;
-    $(document).on('scroll', function() {
-        if($('.timer').each(count).isOnScreen() && viewCounter < 2) {
-            viewCounter++;
-            console.log(viewCounter);
-        }
-    });
-
-    function count(options) {
-        var $this = $(this);
-        options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-        $this.countTo(options, viewCounter);
-    }
-});
-// check if element visible in viewport
-$.fn.isOnScreen = function() {
-    var win = $(window);
-    var viewport = {
-        top: win.scrollTop(),
-        left: win.scrollLeft()
-    };
-    viewport.right = viewport.left + win.width();
-    viewport.bottom = viewport.top + win.height();
-    var bounds = this.offset();
-    //bounds.right = bounds.left + this.outerWidth();
-    //bounds.bottom = bounds.top + this.outerHeight();
-    return(!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-};
-    </script>
     <!-- scripts included -->
     <script src="js/vendor.js" type="c27a7a8160b19d566dba0c58-text/javascript"></script>
     <script src="js/plugins.js" type="c27a7a8160b19d566dba0c58-text/javascript"></script>
     <script src="js/main.js" type="c27a7a8160b19d566dba0c58-text/javascript"></script>
     <script src="build/js/intlTelInput.js" type="c27a7a8160b19d566dba0c58-text/javascript"></script>
-    <script type="c27a7a8160b19d566dba0c58-text/javascript">
-        $("#phone").intlTelInput({
-        utilsScript: "build/js/utils.js"
-    });
-    $("#phone21").intlTelInput({
-        utilsScript: "build/js/utils.js"
-    });
-    $("#phone22").intlTelInput({
-        utilsScript: "build/js/utils.js"
-    });
-    $("#phone23").intlTelInput({
-        utilsScript: "build/js/utils.js"
-    });
-    </script>
-    <script type="c27a7a8160b19d566dba0c58-text/javascript">
-        $('.home-talk-experts').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#newsletter-form-sec').offset().top
-        }, 2000);
-    });
-    var url = window.location.href;
-    $('#url').val(url);
-    // alert(url);
-    </script>
-    <script type="c27a7a8160b19d566dba0c58-text/javascript">
-        document.addEventListener("DOMContentLoaded", function() {
-        var lazyloadImages = document.querySelectorAll("img.lazy");
-        var lazyloadThrottleTimeout;
-
-        function lazyload() {
-            if(lazyloadThrottleTimeout) {
-                clearTimeout(lazyloadThrottleTimeout);
-            }
-            lazyloadThrottleTimeout = setTimeout(function() {
-                var scrollTop = window.pageYOffset;
-                lazyloadImages.forEach(function(img) {
-                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                    }
-                });
-                if(lazyloadImages.length == 0) {
-                    document.removeEventListener("scroll", lazyload);
-                    window.removeEventListener("resize", lazyload);
-                    window.removeEventListener("orientationChange", lazyload);
-                }
-            }, 20);
-        }
-        document.addEventListener("scroll", lazyload);
-        window.addEventListener("resize", lazyload);
-        window.addEventListener("orientationChange", lazyload);
-    });
-    </script>
     <!-- header (top) -->
 
     <!------------------------ New MegaMenu  ----------------------------->
@@ -2034,378 +1650,7 @@ z-index: -1;
         media="screen">
     <script type="c27a7a8160b19d566dba0c58-text/javascript"
         src="https://www.blockchainappfactory.com/fbox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-    <script type="c27a7a8160b19d566dba0c58-text/javascript">
-        $.fn.jQuerySimpleCounter = function( options ) {
-    var settings = $.extend({
-        start:  0,
-        end:    100,
-        easing: 'swing',
-        duration: 400,
-        complete: ''
-    }, options );
-    var thisElement = $(this);
-    $({count: settings.start}).animate({count: settings.end}, {
-        duration: settings.duration,
-        easing: settings.easing,
-        step: function() {
-            var mathCount = Math.ceil(this.count);
-            thisElement.text(mathCount);
-        },
-        complete: settings.complete
-    });
-};
-$('#number1').jQuerySimpleCounter({end: 500,duration: 3000});
-$('#number2').jQuerySimpleCounter({end: 200,duration: 3000});
-$('#number3').jQuerySimpleCounter({end: 100,duration: 2000});
-/* AUTHOR LINK */
-$('.about-me-img').hover(function(){
-        $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
-    }, function(){
-        $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
-});
-$(".sticky-form .quick-cont-btn").click(function(e) {
-    $('body').addClass('fixedPosition full-width');
-    $(".sticky-form .formdiv").addClass('show');
-    e.stopPropagation();
-});
-$(".close").click(function(e) {
-    $('body').removeClass('fixedPosition full-width');
-    $(".sticky-form .formdiv").removeClass('show');
-    e.stopPropagation();
-});
-$("#phone_common").intlTelInput({
-    utilsScript: "build/js/utils.js",
-    dropdownContainer: 'body'
-});
-$("#phone_sticky").intlTelInput({
-    utilsScript: "build/js/utils.js",
-    dropdownContainer: 'body'
-});
-$("#phone_banner").intlTelInput({
-    utilsScript: "build/js/utils.js",
-    dropdownContainer: 'body'
-});
-$('.home-talk-experts').click(function() {
-    $('html, body').animate({
-        scrollTop: $('#newsletter-form-sec').offset().top
-    }, 2000);
-});
-var url = window.location.href;
-$('#url').val(url);
-// alert(url);
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-adroll_adv_id = "WDBK654P6ZFTPNTJ7HT4W5";
-adroll_pix_id = "BYKIZBXZ5BBFHHTUURKSLV";
-(function() {
-    var _onload = function() {
-        if(document.readyState && !/loaded|complete/.test(document.readyState)) {
-            setTimeout(_onload, 10);
-            return
-        }
-        if(!window.__adroll_loaded) {
-            __adroll_loaded = true;
-            setTimeout(_onload, 50);
-            return
-        }
-        var scr = document.createElement("script");
-        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-        scr.setAttribute('async', 'true');
-        scr.type = "text/javascript";
-        scr.src = host + "/j/roundtrip.js";
-        ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-    };
-    if(window.addEventListener) {
-        window.addEventListener('load', _onload, false);
-    } else {
-        window.attachEvent('onload', _onload)
-    }
-}());
-function validateEmail($email) {
-var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-return pattern.test($email);
-}
 
-function validatePhone($phone) {
-var pattern1 = new RegExp("[0-9]+");
-return pattern1.test($phone);
-}
-// For Common Newsletter AjaxMail Function
-$(".common_send_btn").click(function() {
-function loader() {
-    $('<div id="loader"></div>').insertAfter(".common_send_btn");
-    $(".common_send_btn").next().addClass("loading");
-    setTimeout(function() {
-        $(".common_send_btn").next().remove();
-    }, 7000);
-}
-var formname = $(this).parent().parent().attr('id');
-// alert(formname);
-$(".ajax-loader").hide();
-var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-        if((phone != '') && (validatePhone(phone))) {
-            var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-            $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-            //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-            // console.log( $("#"+formname).serialize() );
-            $(this).attr("disabled", true);
-            $(this).addClass('disabled');
-            loader();
-            $(".ajax-loader").hide();
-            var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-            $.ajax({
-                url: "ajaxmail.php",
-                type: "POST",
-                data: formdata,
-                success: function(result) {
-                    //window.location.href="success";
-                    if(result == 1) {
-                        // alert("Mail Sent Successfully");
-                        window.location.href = "success";
-                        return false;
-                    } else {
-                        alert("Something went wrong, please try again later.");
-                        return false;
-                    }
-                    $(".ajax-loader").hide();
-                },
-                error: function() {
-                    window.location.href = "success";
-                }
-            });
-        } else if(!validatePhone(phone)) {
-            alert("Please type correct mobile number format");
-        } else {
-            alert("please type your phone number");
-        }
-    } else if(!validateEmail(email)) {
-        alert("Please type correct email format");
-    } else {
-        alert("please type your email");
-    }
-} else {
-    alert("please fill all fields");
-}
-});
-$(".submit_send").click(function() {
-function loader() {
-    $('<div id="mloader"></div>').insertAfter(".submit_send");
-    $(".submit_send").next().addClass("loading");
-    setTimeout(function() {
-        $(".submit_send").next().remove();
-    }, 7000);
-}
-var formname = $(this).parent().parent().parent().attr('id');
-// alert(formname);
-$(".ajax-loader").hide();
-var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-// console.log(name, email, phone);
-if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-        if((phone != '') && (validatePhone(phone))) {
-            $(this).attr("disabled", true);
-            $(this).addClass('disabled');
-            loader();
-            $(".ajax-loader").hide();
-            var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-            $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-            //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-            var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-            $.ajax({
-                url: "ajaxmail.php",
-                type: "POST",
-                data: formdata,
-                success: function(result) {
-                    console.log(result);
-                    if(result == 1) {
-                        // alert("Mail Sent Successfully");
-                        window.location.href = "success";
-                        return false;
-                    } else {
-                        alert("Something went wrong, please try again later.");
-                        return false;
-                    }
-                    $(".ajax-loader").hide();
-                }
-            });
-        } else if(!validatePhone(phone)) {
-            alert("Please type correct mobile number format");
-        } else {
-            alert("please type your mobile number");
-        }
-    } else if(!validateEmail(email)) {
-        alert("Please type correct email format");
-    } else {
-        alert("please type your email");
-    }
-} else {
-    alert("please fill all fields");
-}
-});
-$(".close_send").click(function() {
-function loader() {
-    $('<div id="mloader"></div>').insertAfter(".close_send");
-    $(".close_send").next().addClass("loading");
-    setTimeout(function() {
-        $(".close_send").next().remove();
-    }, 7000);
-}
-var formname = $(this).parent().parent().parent().attr('id');
-// alert(formname);
-$(".ajax-loader").hide();
-var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-// console.log(name, email, phone);
-if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-        if((phone != '') && (validatePhone(phone))) {
-            $(this).attr("disabled", true);
-            $(this).addClass('disabled');
-            loader();
-            $(".ajax-loader").hide();
-            var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-            $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-            //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-            var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-            $.ajax({
-                url: "ajaxmail.php",
-                type: "POST",
-                data: formdata,
-                success: function(result) {
-                    console.log(result);
-                    if(result == 1) {
-                        // alert("Mail Sent Successfully");
-                        window.location.href = "success";
-                        return false;
-                    } else {
-                        alert("Something went wrong, please try again later.");
-                        return false;
-                    }
-                    $(".ajax-loader").hide();
-                }
-            });
-        } else if(!validatePhone(phone)) {
-            alert("Please type correct mobile number format");
-        } else {
-            alert("please type your mobile number");
-        }
-    } else if(!validateEmail(email)) {
-        alert("Please type correct email format");
-    } else {
-        alert("please type your email");
-    }
-} else {
-    alert("please fill all fields");
-}
-});
-/*-- pdf mail --*/
-$(".submit_send_pdf").click(function() {
-function loader() {
-    $('<div id="loader"></div>').insertAfter(".submit_send_pdf");
-    $(".submit_send_pdf").next().addClass("loading");
-    setTimeout(function() {
-        $(".submit_send_pdf").next().remove();
-    }, 7000);
-}
-var formname = $(this).parent().parent().parent().attr('id');
-$(".ajax-loader").hide();
-var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-// console.log(name, email, phone);
-if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-        if((phone != '') && (validatePhone(phone))) {
-            $(this).attr("disabled", true);
-            $(this).addClass('disabled');
-            $(".ajax-loader").hide();
-            loader();
-            var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-            $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-            //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-            var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-            $.ajax({
-                url: "pdfmail.php",
-                type: "POST",
-                data: formdata,
-                success: function(result) {
-                    console.log(result);
-                    if(result == 1) {
-                        // alert("Mail Sent Successfully");
-                        window.open("https://www.blockchainappfactory.com/pdf/BlockchainAppFactory.pdf", '_blank');
-                        window.location.href = "success";
-                        return false;
-                    } else {
-                        alert("Something went wrong, please try again later.");
-                        return false;
-                    }
-                    $(".ajax-loader").hide();
-                }
-            });
-        } else if(!validatePhone(phone)) {
-            alert("Please type correct mobile number format");
-        } else {
-            alert("please type your phone number");
-        }
-    } else if(!validateEmail(email)) {
-        alert("Please type correct email format");
-    } else {
-        alert("please type your email");
-    }
-} else {
-    alert("please fill all fields");
-}
-});
-// video fancybox
-$('.fancybox-media1').attr('rel', 'media-gallery').fancybox({
-openEffect: 'none',
-closeEffect: 'none',
-prevEffect: 'none',
-nextEffect: 'none',
-arrows: false,
-helpers: {
-    media: {},
-    buttons: {}
-}
-});
-// Macth Height
-$('.equal-height').matchHeight({
-property: 'min-height'
-});
-$('.submit_send').click(function() {
-qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('#submit').click(function() {
-qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('.common_send_btn').click(function() {
-qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('.submit_sends').click(function() {
-qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$(document).ready(function() {
-// Disable cut copy paste
-$('body').bind('cut copy paste', function(e) {
-    e.preventDefault();
-});
-// Disable mouse right click
-$("body").on("contextmenu", function(e) {
-    return false;
-});
-});
-    </script>
 
 
 
