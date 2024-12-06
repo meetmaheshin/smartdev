@@ -2669,7 +2669,7 @@
         <section class="common_spacing gray_bg">
             <div class="container">
                 <div class="row">
-                    <h3 class="sec_tit underline text-center">Breakthrough Components of Our Asset Tokenization Ecosystem</h3>
+                    <h3 class="sec_tit underline text-center" style="width: 100%">Breakthrough Components of Our Asset Tokenization Ecosystem</h3>
                 </div>
                 <p class="text-center" style="color: #000;">Embarking on the journey to create an asset tokenization platform with us? Our expert team integrates critical components to ensure your application excels in functionality and appeals to every investor. Elevate your platform’s market impact with these essential features:</p>
                 <div class="row mt40">
@@ -3483,7 +3483,9 @@
 
         .list li:before {
             content: " \f0a9 ";
-            font-family: FontAwesome;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            top: 4px;
             color: #47b475;
             margin-right: 10px;
             font-size: 20px;

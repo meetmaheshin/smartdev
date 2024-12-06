@@ -641,22 +641,125 @@ Route::get('/remitano-clone', function () {
 })->name('remitano-clone');
 
 Route::get('/crypto-exchange-like-wazirx', function () {
-    // return view('static.crypto-exchange-like-wazirx');
+    return view('static.crypto-exchange-like-wazirx');
 })->name('crypto-exchange-like-wazirx');
 
 Route::get('/crypto-exchange-like-binance', function () {
-    // return view('static.crypto-exchange-like-binance');
+    return view('static.crypto-exchange-like-binance');
 })->name('crypto-exchange-like-binance');
 
 Route::get('/crypto-exchange-like-coinbase', function () {
-    // return view('static.crypto-exchange-like-coinbase');
+    return view('static.crypto-exchange-like-coinbase');
 })->name('crypto-exchange-like-coinbase');
 
 Route::get('/cryptocurrency-wallet-development', function () {
-    // return view('static.cryptocurrency-wallet-development');
+    return view('static.cryptocurrency-wallet-development');
 })->name('cryptocurrency-wallet-development');
 
-// crypto-payments-gateway
 Route::get('/crypto-payments-gateway', function () {
-    // return view('static.crypto-payments-gateway');
+    return view('static.crypto-payments-gateway');
 })->name('crypto-payments-gateway');
+
+Route::get('/metamask-like-wallet-development', function () {
+    return view('static.metamask-like-wallet-development');
+})->name('metamask-like-wallet-development');
+
+Route::get('/bitcoin-ordinals-wallet-development', function () {
+    return view('static.bitcoin-ordinals-wallet-development');
+})->name('bitcoin-ordinals-wallet-development');
+
+Route::get('/crypto-trading-bot-development', function () {
+    return view('static.crypto-trading-bot-development');
+})->name('crypto-trading-bot-development');
+
+Route::get('/crypto-arbitrage-bot-development', function () {
+    return view('static.crypto-arbitrage-bot-development');
+})->name('crypto-arbitrage-bot-development');
+
+Route::get('/flash-loan-arbitrage-bot-development', function () {
+    return view('static.flash-loan-arbitrage-bot-development');
+})->name('flash-loan-arbitrage-bot-development');
+
+Route::get('/nft-marketplace-development', function () {
+    return view('static.nft-marketplace-development');
+})->name('nft-marketplace-development');
+
+Route::get('/white-label-nft-marketplace', function () {
+    return view('static.white-label-nft-marketplace');
+})->name('white-label-nft-marketplace');
+
+Route::get('/bitcoin-ordinals-marketplace-development', function () {
+    return view('static.bitcoin-ordinals-marketplace-development');
+})->name('bitcoin-ordinals-marketplace-development');
+
+Route::get('/zksync2-integration-in-nft-platform', function () {
+    return view('static.zksync2-integration-in-nft-platform');
+})->name('zksync2-integration-in-nft-platform');
+
+Route::get('/ai-powered-nft-marketplace-development', function () {
+    return view('static.ai-powered-nft-marketplace-development');
+})->name('ai-powered-nft-marketplace-development');
+
+Route::get('/nft-music-marketplace-development', function () {
+    return view('static.nft-music-marketplace-development');
+})->name('nft-music-marketplace-development');
+
+Route::get('/nft-art-marketplace-development', function () {
+    return view('static.nft-art-marketplace-development');
+})->name('nft-art-marketplace-development');
+
+Route::get('/nft-for-sports', function () {
+    return view('static.nft-for-sports');
+})->name('nft-for-sports');
+
+Route::get('/nft-for-realestate', function () {
+    return view('static.nft-for-realestate');
+})->name('nft-for-realestate');
+
+Route::get('/nft-ticketing-marketplace', function () {
+    return view('static.nft-ticketing-marketplace');
+})->name('nft-ticketing-marketplace');
+
+Route::get('/nft-aggregator-marketplace-development', function () {
+    return view('static.nft-aggregator-marketplace-development');
+})->name('nft-aggregator-marketplace-development');
+
+Route::get('/carbon-credits-platform', function () {
+    return view('static.carbon-credits-platform');
+})->name('carbon-credits-platform');
+
+Route::get('/phygital-nft-marketplace', function () {
+    // return view('static.phygital-nft-marketplace');
+})->name('phygital-nft-marketplace');
+
+Route::get('/fractional-nft-marketplace-development', function () {
+    // return view('static.fractional-nft-marketplace-development');
+})->name('fractional-nft-marketplace-development');
+
+Route::get('/nft-development-services', function () {
+    // return view('static.nft-development-services');
+})->name('nft-development-services');
+
+Route::get('/nft-launchpad-development', function () {
+    return view('static.nft-launchpad-development');
+})->name('nft-launchpad-development');
+
+Route::get('/nft-exchange-development', function () {
+    return view('static.nft-exchange-development');
+})->name('nft-exchange-development');
+
+Route::get('/nft-wallet-development', function () {
+    return view('static.nft-wallet-development');
+})->name('nft-wallet-development');
+
+Route::get('/nft-minting-platform-development', function () {
+    return view('static.nft-minting-platform-development');
+})->name('nft-minting-platform-development');
+
+Route::get('/nft-layer-2-development', function () {
+    return view('static.nft-layer-2-development');
+})->name('nft-layer-2-development');
+
+Route::get('/nft-carbon-credits-development', function () {
+    return view('static.nft-carbon-credits-development');
+})->name('nft-carbon-credits-development');

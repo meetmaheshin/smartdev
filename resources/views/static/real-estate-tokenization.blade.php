@@ -1839,6 +1839,12 @@
         </div>
     </section>
 
+    <style>
+        .feature-box-3 .icon img{
+            margin-top: 8px;
+        }
+    </style>
+
     <div id="our_services" class="defisec gray_bg">
         <div class="container">
             <div class="section-title text-center">
@@ -2591,7 +2597,7 @@
                             <a href="#" class="timeline-content">
                                 <div class="timeline-year">1</div>
                                 <div class="timeline-icon"><img class="lazy"
-                                        src="{{ asset('images/asset-token/icons/assets.png') }}" style="width: 60px;"></div>
+                                        src="{{ asset('images/asset-token/icons/assets.png') }}" style="width: 60px; margin-top: 15px"></div>
                                 <h4 class="title">Deal Finalization</h4>
                                 <p class="description">TDetermine key factors like asset type, legal jurisdiction, shareholder composition, and applicable regulations to finalize the deal structure.
                                 </p>
@@ -2601,7 +2607,7 @@
                             <a href="#" class="timeline-content">
                                 <div class="timeline-yearleft">2</div>
                                 <div class="timeline-icon"><img class="lazy"
-                                        src="{{ asset('images/asset-token/icons/structure.png') }}" style="width: 60px;"></div>
+                                        src="{{ asset('images/asset-token/icons/structure.png') }}" style="width: 60px; margin-top: 15px"></div>
                                 <h4 class="titleleft">Legal Structure Setup</h4>
                                 <p class="descriptionleft">
                                     Choose from various legal frameworks such as forming a Special Purpose Vehicle (SPV), joining a real estate fund, engaging in project financing, or participating in a Real Estate Investment Trust (REIT).</p>
@@ -2611,7 +2617,7 @@
                             <a href="#" class="timeline-content">
                                 <div class="timeline-year">3</div>
                                 <div class="timeline-icon"><img class="lazy"
-                                        src="{{ asset('images/asset-token/icons/investors.png') }}" style="width: 60px;"></div>
+                                        src="{{ asset('images/asset-token/icons/investors.png') }}" style="width: 60px; margin-top: 15px"></div>
                                 <h4 class="title">Technology Selection</h4>
                                 <p class="description">
                                     Select an appropriate blockchain network for token creation and establish a secure custody solution for token storage. Tokens can be offered through primary issuance or traded on prominent secondary markets.
@@ -2622,7 +2628,7 @@
                             <a href="#" class="timeline-content">
                                 <div class="timeline-yearleft">4</div>
                                 <div class="timeline-icon"><img class="lazy"
-                                        src="{{ asset('images/asset-token/icons/creation.png') }}" style="width: 60px;"></div>
+                                        src="{{ asset('images/asset-token/icons/creation.png') }}" style="width: 60px; margin-top: 15px"></div>
                                 <h4 class="titleleft">Token Issuance and Distribution</h4>
                                 <p class="descriptionleft">
                                     Develop a distribution strategy for the token, considering the total supply and incorporating multiple payment methods. Track fundraising progress in real time through an updated cap table. </p>
@@ -3469,6 +3475,10 @@
             color: #000000;
             font-weight: 700;
         }
+
+        .flip-box .flip-icon-outer img{
+            margin-top: 15px;
+        }
     </style>
 
 
@@ -3939,7 +3949,7 @@
         }
     </style>
     {{-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> --}}
-    <script>
+    <script type="text/javascript">
         $(document).ready(function() {
             var getProductHeight = $('.product.active').height();
 

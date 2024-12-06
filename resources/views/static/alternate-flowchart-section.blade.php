@@ -1,7 +1,7 @@
 <section class="flowchart common_spacing">
     <div class="container">
         <div class="row">
-            <div class="section-title text-center">
+            <div class="section-title text-center" style="width: 100%">
                 <h2 class="small_h3 section-title underline title-th">{{ $title }}</h2>
             </div>
         </div>

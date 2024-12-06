@@ -2269,8 +2269,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab61">
@@ -2343,6 +2341,50 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            // $(document).ready(function () {
+            //     $('#nav-tabs-wrapper1 a[data-toggle="tab"]').on('click', function (e) {
+            //         e.preventDefault();
+            //         // Remove 'in active' from all tab panes
+            //         $('.tab-pane').removeClass('in active').addClass('fade');
+            //         // Add 'in active' to the target pane
+            //         $($(this).attr('href')).removeClass('fade').addClass('in active');
+                    
+            //         // Handle nav item active class
+            //         $('#nav-tabs-wrapper1 li').removeClass('active');
+            //         $(this).parent('li').addClass('active');
+            //     });
+            // });
+            document.addEventListener("DOMContentLoaded", function () {
+                const navTabs = document.querySelectorAll('#nav-tabs-wrapper1 a[data-toggle="tab"]');
+                const tabPanes = document.querySelectorAll('.tab-pane');
+        
+                navTabs.forEach(tab => {
+                    tab.addEventListener('click', function (e) {
+                        e.preventDefault();
+        
+                        // Remove 'in active' from all tab panes and add 'fade'
+                        tabPanes.forEach(pane => {
+                            pane.classList.remove('in', 'active');
+                            pane.classList.add('fade');
+                        });
+        
+                        // Add 'in active' to the target pane
+                        const targetPane = document.querySelector(this.getAttribute('href'));
+                        if (targetPane) {
+                            targetPane.classList.remove('fade');
+                            targetPane.classList.add('in', 'active');
+                        }
+        
+                        // Handle nav item active class
+                        const navItems = document.querySelectorAll('#nav-tabs-wrapper1 li');
+                        navItems.forEach(item => item.classList.remove('active'));
+                        this.parentElement.classList.add('active');
+                    });
+                });
+            });
+        </script>
 
 
         <section class="perfect-script common_spacing bg-colour">

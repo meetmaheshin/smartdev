@@ -1112,7 +1112,7 @@ window.setTimeout(function() {
 
     .testimonials-item .user i img {
         width: 55px;
-        margin-top: -10px;
+        margin-top: 8px;
     }
 
     .testimonials-item .testimonials-content {
@@ -2433,7 +2433,7 @@ window.setTimeout(function() {
                                     <div class="timeline-year">1</div>
                                     <div class="timeline-icon"><img class="lazy"
                                             src="{{ asset('images/tron-token-development/icons/tron.webp') }}"
-                                            style="width: 60px;"></div>
+                                            style="width: 60px; margin-top: 15px"></div>
                                     <h4 class="title">TRC-10 Tokens</h4>
                                     <p class="description">
                                         We create custom TRC-10 tokens ideal for ICOs, featuring easy transferability, minting capabilities, and upgradability within smart contracts.
@@ -2445,7 +2445,7 @@ window.setTimeout(function() {
                                     <div class="timeline-yearleft">2</div>
                                     <div class="timeline-icon"><img class="lazy"
                                             src="{{ asset('images/tron-token-development/icons/tron.webp') }}"
-                                            style="width: 60px;"></div>
+                                            style="width: 60px; margin-top: 15px"></div>
                                     <h4 class="titleleft">TRC-20 Tokens</h4>
                                     <p class="descriptionleft">
                                         Our TRC-20 tokens are fully compatible with ERC-20 tokens, allowing for smooth integration and enhanced functionalities through smart contracts. 
@@ -2457,7 +2457,7 @@ window.setTimeout(function() {
                                     <div class="timeline-year">3</div>
                                     <div class="timeline-icon"><img class="lazy"
                                             src="{{ asset('images/tron-token-development/icons/tron.webp') }}"
-                                            style="width: 60px;"></div>
+                                            style="width: 60px; margin-top: 15px"></div>
                                     <h4 class="title">TRC-721 Tokens</h4>
                                     <p class="description">
                                         We specialize in TRC-721 tokens, facilitating the creation of cutting-edge non-fungible tokens (NFTs) with the latest advancements in TRON technology.
@@ -3322,6 +3322,36 @@ window.setTimeout(function() {
                 </div>
             </div>
         </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navTabs = document.querySelectorAll('#nav-tabs-wrapper1 a[data-toggle="tab"]');
+                const tabPanes = document.querySelectorAll('.tab-pane');
+        
+                navTabs.forEach(tab => {
+                    tab.addEventListener('click', function (e) {
+                        e.preventDefault();
+        
+                        // Remove 'in active' from all tab panes and add 'fade'
+                        tabPanes.forEach(pane => {
+                            pane.classList.remove('in', 'active');
+                            pane.classList.add('fade');
+                        });
+        
+                        // Add 'in active' to the target pane
+                        const targetPane = document.querySelector(this.getAttribute('href'));
+                        if (targetPane) {
+                            targetPane.classList.remove('fade');
+                            targetPane.classList.add('in', 'active');
+                        }
+        
+                        // Handle nav item active class
+                        const navItems = document.querySelectorAll('#nav-tabs-wrapper1 li');
+                        navItems.forEach(item => item.classList.remove('active'));
+                        this.parentElement.classList.add('active');
+                    });
+                });
+            });
+        </script>
         <section class="perfect-script common_spacing gray-bg">
             <div class="container">
                 <div class="row">
@@ -3544,7 +3574,7 @@ window.setTimeout(function() {
 
         .perfect-script-items1 .icon img {
             width: 45px;
-            margin-top: -8px;
+            margin-top: 11px;
         }
 
         .perfect-script-items1 .content {
@@ -3717,66 +3747,6 @@ window.setTimeout(function() {
             ],
         ])
 
-
-
-    <script src="js/vendor.js" type="e18c40ca7d4462a01d41d60c-text/javascript"></script>
-    <script src="js/plugins.js" type="e18c40ca7d4462a01d41d60c-text/javascript"></script>
-    <script src="js/main.js" type="e18c40ca7d4462a01d41d60c-text/javascript"></script>
-    <script src="build/js/intlTelInput.js" type="e18c40ca7d4462a01d41d60c-text/javascript"></script>
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript">
-        $("#phone").intlTelInput({
-        utilsScript: "build/js/utils.js"
-    });
-    $("#phone21").intlTelInput({
-        utilsScript: "build/js/utils.js"
-    });
-    $("#phone22").intlTelInput({
-        utilsScript: "build/js/utils.js"
-    });
-    $("#phone23").intlTelInput({
-        utilsScript: "build/js/utils.js"
-    });
-    </script>
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript">
-        $('.home-talk-experts').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#newsletter-form-sec').offset().top
-        }, 2000);
-    });
-    var url = window.location.href;
-    $('#url').val(url);
-    // alert(url);
-    </script>
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript">
-        document.addEventListener("DOMContentLoaded", function() {
-        var lazyloadImages = document.querySelectorAll("img.lazy");
-        var lazyloadThrottleTimeout;
-
-        function lazyload() {
-            if(lazyloadThrottleTimeout) {
-                clearTimeout(lazyloadThrottleTimeout);
-            }
-            lazyloadThrottleTimeout = setTimeout(function() {
-                var scrollTop = window.pageYOffset;
-                lazyloadImages.forEach(function(img) {
-                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                    }
-                });
-                if(lazyloadImages.length == 0) {
-                    document.removeEventListener("scroll", lazyload);
-                    window.removeEventListener("resize", lazyload);
-                    window.removeEventListener("orientationChange", lazyload);
-                }
-            }, 20);
-        }
-        document.addEventListener("scroll", lazyload);
-        window.addEventListener("resize", lazyload);
-        window.addEventListener("orientationChange", lazyload);
-    });
-    </script>
-
     <style type="text/css">
         .header .menu-item {
             padding: 0 3px !important;
@@ -3880,19 +3850,6 @@ border-bottom-left-radius: 10px;*/
             }
         }
 
-        /*@media  (max-width: 1024px){
-.header-nabar-icon .pull-right, .pull-right-tow {
-  background-color: #47b475;
-font-weight: 700;
-font-size: 15px;
-padding: 3px 15px;
-margin-right: 0px;
-position: relative;
-right: 16px;
-bottom: -30px;
-}
-}*/
-
         .color-btn {
             background-color: #1fd1f9 !important;
             background-image: -o-linear-gradient(135deg, #b621fe 0, #1fd1f9 74%) !important;
@@ -3937,17 +3894,6 @@ bottom: -30px;
             }
         }
 
-        /*.color-btn1:before{
-content: "";
-background: rgba(0,0,0,0.9);
-border-radius: 50px;
-position: absolute;
-top: 5px;
-left: 5px;
-right: 5px;
-bottom: 5px;
-z-index: -1;
-}*/
         @keyframes glow {
             0% {
                 box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
@@ -3977,18 +3923,6 @@ z-index: -1;
             font-size: 14px;
         }
 
-        /*@media (max-width: 1024px){
-.sticky_form_bp {
-    display:block !important;
-}
-}
-
-@media (max-width: 320px){
-.sticky_form_bp  {
-    display: block;
-    
-}
-}*/
     </style>
     <style type="text/css">
         .footer-wrap h6 {
@@ -4023,411 +3957,6 @@ z-index: -1;
             top: 1px;
         }
     </style>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript"
-        src="https://www.blockchainappfactory.com/fbox/jquery.fancybox.js?v=2.1.5"></script>
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript"
-        src="https://www.blockchainappfactory.com/js/jquery.matchHeight-min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://www.blockchainappfactory.com/fbox/jquery.fancybox.css?v=2.1.5"
-        media="screen">
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript"
-        src="https://www.blockchainappfactory.com/fbox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript">
-        $.fn.jQuerySimpleCounter = function( options ) {
-    var settings = $.extend({
-        start:  0,
-        end:    100,
-        easing: 'swing',
-        duration: 400,
-        complete: ''
-    }, options );
-    var thisElement = $(this);
-    $({count: settings.start}).animate({count: settings.end}, {
-        duration: settings.duration,
-        easing: settings.easing,
-        step: function() {
-            var mathCount = Math.ceil(this.count);
-            thisElement.text(mathCount);
-        },
-        complete: settings.complete
-    });
-};
-$('#number1').jQuerySimpleCounter({end: 500,duration: 3000});
-$('#number2').jQuerySimpleCounter({end: 200,duration: 3000});
-$('#number3').jQuerySimpleCounter({end: 100,duration: 2000});
-/* AUTHOR LINK */
-$('.about-me-img').hover(function(){
-        $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
-    }, function(){
-        $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
-});
-$(".close").click(function(e) {
-    $('body').removeClass('fixedPosition full-width');
-    $(".sticky-form .formdiv").removeClass('show');
-    e.stopPropagation();
-});
-$("#phone_common").intlTelInput({
-    utilsScript: "build/js/utils.js",
-    dropdownContainer: 'body'
-});
-$("#phone_sticky").intlTelInput({
-    utilsScript: "build/js/utils.js",
-    dropdownContainer: 'body'
-});
-$("#phone_banner").intlTelInput({
-    utilsScript: "build/js/utils.js",
-    dropdownContainer: 'body'
-});
-$('.home-talk-experts').click(function() {
-    $('html, body').animate({
-        scrollTop: $('#newsletter-form-sec').offset().top
-    }, 2000);
-});
-var url = window.location.href;
-$('#url').val(url);
-// alert(url);
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-adroll_adv_id = "WDBK654P6ZFTPNTJ7HT4W5";
-adroll_pix_id = "BYKIZBXZ5BBFHHTUURKSLV";
-(function() {
-    var _onload = function() {
-        if(document.readyState && !/loaded|complete/.test(document.readyState)) {
-            setTimeout(_onload, 10);
-            return
-        }
-        if(!window.__adroll_loaded) {
-            __adroll_loaded = true;
-            setTimeout(_onload, 50);
-            return
-        }
-        var scr = document.createElement("script");
-        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-        scr.setAttribute('async', 'true');
-        scr.type = "text/javascript";
-        scr.src = host + "/j/roundtrip.js";
-        ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-    };
-    if(window.addEventListener) {
-        window.addEventListener('load', _onload, false);
-    } else {
-        window.attachEvent('onload', _onload)
-    }
-}());
-function validateEmail($email) {
-var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-return pattern.test($email);
-}
-
-function validatePhone($phone) {
-var pattern1 = new RegExp("[0-9]+");
-return pattern1.test($phone);
-}
-// For Common Newsletter AjaxMail Function
-$(".common_send_btn").click(function() {
-function loader() {
-    $('<div id="loader"></div>').insertAfter(".common_send_btn");
-    $(".common_send_btn").next().addClass("loading");
-    setTimeout(function() {
-        $(".common_send_btn").next().remove();
-    }, 7000);
-}
-var formname = $(this).parent().parent().attr('id');
-// alert(formname);
-$(".ajax-loader").hide();
-var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-        if((phone != '') && (validatePhone(phone))) {
-            var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-            $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-            //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-            // console.log( $("#"+formname).serialize() );
-            $(this).attr("disabled", true);
-            $(this).addClass('disabled');
-            loader();
-            $(".ajax-loader").hide();
-            var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-            $.ajax({
-                url: "ajaxmail.php",
-                type: "POST",
-                data: formdata,
-                success: function(result) {
-                    //window.location.href="success";
-                    if(result == 1) {
-                        // alert("Mail Sent Successfully");
-                        window.location.href = "success";
-                        return false;
-                    } else {
-                        alert("Something went wrong, please try again later.");
-                        return false;
-                    }
-                    $(".ajax-loader").hide();
-                },
-                error: function() {
-                    window.location.href = "success";
-                }
-            });
-        } else if(!validatePhone(phone)) {
-            alert("Please type correct mobile number format");
-        } else {
-            alert("please type your phone number");
-        }
-    } else if(!validateEmail(email)) {
-        alert("Please type correct email format");
-    } else {
-        alert("please type your email");
-    }
-} else {
-    alert("please fill all fields");
-}
-});
-$(".submit_send").click(function() {
-function loader() {
-    $('<div id="mloader"></div>').insertAfter(".submit_send");
-    $(".submit_send").next().addClass("loading");
-    setTimeout(function() {
-        $(".submit_send").next().remove();
-    }, 7000);
-}
-var formname = $(this).parent().parent().parent().attr('id');
-// alert(formname);
-$(".ajax-loader").hide();
-var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-// console.log(name, email, phone);
-if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-        if((phone != '') && (validatePhone(phone))) {
-            $(this).attr("disabled", true);
-            $(this).addClass('disabled');
-            loader();
-            $(".ajax-loader").hide();
-            var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-            $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-            //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-            var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-            $.ajax({
-                url: "ajaxmail.php",
-                type: "POST",
-                data: formdata,
-                success: function(result) {
-                    console.log(result);
-                    if(result == 1) {
-                        // alert("Mail Sent Successfully");
-                        window.location.href = "success";
-                        return false;
-                    } else {
-                        alert("Something went wrong, please try again later.");
-                        return false;
-                    }
-                    $(".ajax-loader").hide();
-                }
-            });
-        } else if(!validatePhone(phone)) {
-            alert("Please type correct mobile number format");
-        } else {
-            alert("please type your mobile number");
-        }
-    } else if(!validateEmail(email)) {
-        alert("Please type correct email format");
-    } else {
-        alert("please type your email");
-    }
-} else {
-    alert("please fill all fields");
-}
-});
-$(".close_send").click(function() {
-function loader() {
-    $('<div id="mloader"></div>').insertAfter(".close_send");
-    $(".close_send").next().addClass("loading");
-    setTimeout(function() {
-        $(".close_send").next().remove();
-    }, 7000);
-}
-var formname = $(this).parent().parent().parent().attr('id');
-// alert(formname);
-$(".ajax-loader").hide();
-var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-// console.log(name, email, phone);
-if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-        if((phone != '') && (validatePhone(phone))) {
-            $(this).attr("disabled", true);
-            $(this).addClass('disabled');
-            loader();
-            $(".ajax-loader").hide();
-            var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-            $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-            //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-            var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-            $.ajax({
-                url: "ajaxmail.php",
-                type: "POST",
-                data: formdata,
-                success: function(result) {
-                    console.log(result);
-                    if(result == 1) {
-                        // alert("Mail Sent Successfully");
-                        window.location.href = "success";
-                        return false;
-                    } else {
-                        alert("Something went wrong, please try again later.");
-                        return false;
-                    }
-                    $(".ajax-loader").hide();
-                }
-            });
-        } else if(!validatePhone(phone)) {
-            alert("Please type correct mobile number format");
-        } else {
-            alert("please type your mobile number");
-        }
-    } else if(!validateEmail(email)) {
-        alert("Please type correct email format");
-    } else {
-        alert("please type your email");
-    }
-} else {
-    alert("please fill all fields");
-}
-});
-/*-- pdf mail --*/
-$(".submit_send_pdf").click(function() {
-function loader() {
-    $('<div id="loader"></div>').insertAfter(".submit_send_pdf");
-    $(".submit_send_pdf").next().addClass("loading");
-    setTimeout(function() {
-        $(".submit_send_pdf").next().remove();
-    }, 7000);
-}
-var formname = $(this).parent().parent().parent().attr('id');
-$(".ajax-loader").hide();
-var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-// console.log(name, email, phone);
-if(name != '') {
-    if((email != '') && (validateEmail(email))) {
-        if((phone != '') && (validatePhone(phone))) {
-            $(this).attr("disabled", true);
-            $(this).addClass('disabled');
-            $(".ajax-loader").hide();
-            loader();
-            var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-            $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-            //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-            var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-            $.ajax({
-                url: "pdfmail.php",
-                type: "POST",
-                data: formdata,
-                success: function(result) {
-                    console.log(result);
-                    if(result == 1) {
-                        // alert("Mail Sent Successfully");
-                        window.open("https://www.blockchainappfactory.com/pdf/BlockchainAppFactory.pdf", '_blank');
-                        window.location.href = "success";
-                        return false;
-                    } else {
-                        alert("Something went wrong, please try again later.");
-                        return false;
-                    }
-                    $(".ajax-loader").hide();
-                }
-            });
-        } else if(!validatePhone(phone)) {
-            alert("Please type correct mobile number format");
-        } else {
-            alert("please type your phone number");
-        }
-    } else if(!validateEmail(email)) {
-        alert("Please type correct email format");
-    } else {
-        alert("please type your email");
-    }
-} else {
-    alert("please fill all fields");
-}
-});
-// video fancybox
-$('.fancybox-media1').attr('rel', 'media-gallery').fancybox({
-openEffect: 'none',
-closeEffect: 'none',
-prevEffect: 'none',
-nextEffect: 'none',
-arrows: false,
-helpers: {
-    media: {},
-    buttons: {}
-}
-});
-// Macth Height
-$('.equal-height').matchHeight({
-property: 'min-height'
-});
-$('.submit_send').click(function() {
-qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('#submit').click(function() {
-qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('.common_send_btn').click(function() {
-qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('.submit_sends').click(function() {
-qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$(document).ready(function() {
-// Disable cut copy paste
-$('body').bind('cut copy paste', function(e) {
-    e.preventDefault();
-});
-// Disable mouse right click
-$("body").on("contextmenu", function(e) {
-    return false;
-});
-});
-    </script>
-
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript">
-        window.__lc = window.__lc || {};
-window.__lc.license = 9464790;
-;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-    </script>
-    <noscript><a href="https://www.livechatinc.com/chat-with/9464790/" rel="nofollow">Chat with us</a>, powered by <a
-            href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6VQVFF" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript">
-        document.addEventListener("DOMContentLoaded", function() {
-    const imageObserver = new IntersectionObserver((entries, imgObserver) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const lazyImage = entry.target
-                //console.log("lazy loading ", lazyImage)
-                lazyImage.src = lazyImage.dataset.src
-            }
-        })
-    });
-    const arr = document.querySelectorAll('img.lazy')
-    arr.forEach((v) => {
-        imageObserver.observe(v);
-    })
-})
-    </script>
 
 
     <style type="text/css">
@@ -4494,17 +4023,6 @@ window.__lc.license = 9464790;
 
         /* Style the button that is used to open the sidepanel */
         .openbtn1 {
-            /*font-size: 20px;
-cursor: pointer;
-background-color: transparent;
-color: white;
-padding: 0px;
-border: none;
-position: fixed;
-top: 43%;
-left: 0;
-width: 90px;
-z-index: 99999;*/
             /*animation: zoom-in-zoom-out 1s ease infinite;*/
             filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
         }
@@ -4527,20 +4045,6 @@ z-index: 99999;*/
             }
         }
     </style>
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript">
-        /* Set the width of the sidebar to 250px (show it) */
-function openNav4() {
-document.getElementById("mySidepanel4").style.width = "250px";
-}
-
-/* Set the width of the sidebar to 0 (hide it) */
-function closeNav4() {
-document.getElementById("mySidepanel4").style.width = "0";
-}
-    </script>
-
-
-
 
     <style type="text/css">
         .close-btn {
@@ -4681,91 +4185,6 @@ document.getElementById("mySidepanel4").style.width = "0";
             }
         }
     </style>
-    <button id="btn" class="close-btn">x</button>
-    <div id="box">
-        <div id="fixed-social" class="fixed-social hide">
-
-
-
-            <div class="items">
-                <a rel="nofollow" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
-                    target="blank">
-                    <div class="icons"><img src="https://www.blockchainappfactory.com/images/appointment.webp"></div>
-
-                </a>
-            </div>
-            <div class="items">
-                <a rel="nofollow" href="https://t.me/amarbaf" target="blank">
-                    <div class="icons"><i class="fa fa-paper-plane"></i></div>
-
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript">
-        /*-- For Scroll --*/    
-$(document).scroll(function() {
-
-    myID = document.getElementById("fixed-social");
-
-    var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-            myID.className = "fixed-social show1"
-        } else {
-            myID.className = "fixed-social hide"
-        }
-    };
-
-    window.addEventListener("scroll", myScrollFunc);
-});
-
-
-$(document).scroll(function(){ 
-//more then or equals to 
-if($(document).scrollTop() >= 800 ){ 
-  $( "#btn" ).css( "display", "block" ); 
-
-//less then 800px from top 
-} else { 
-  
-$( "#btn" ).css( "display", "none" ); 
-} 
-}); 
-
-
-
-/*-- For Close Button --*/
-const box = document.getElementById('box'); 
-const btn = document.getElementById('btn'); 
-btn.addEventListener('click', function handleClick() {
-if (box.style.display === 'none') {
-box.style.display = 'block'; 
-btn.textContent = 'x';
-} else {
-box.style.display = 'none'; 
-btn.textContent = '>';
-}
-});
-
-    </script>
-
-
-    <script type="e18c40ca7d4462a01d41d60c-text/javascript">
-        $(".crypto-popup").click(function(e) {
-    $('crypto-popup').addClass('fixedPosition full-width');
-    $(".login-popup").addClass('show');
-    e.stopPropagation();
-});
-    </script>
-
-    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
-        data-cf-settings="e18c40ca7d4462a01d41d60c-|49" defer></script>
 
 
     @endsection

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="section-top ">
             <div class="section-header text-center">
-                <h2 class="section-title mt20 underline common_h3 font_wei" style="color: black">FAQ</h2>
+                <h2 class="section-title mt20 underline common_h3 font_wei" style="color: black !important">FAQ</h2>
             </div>
         </div>
         <div class="row">

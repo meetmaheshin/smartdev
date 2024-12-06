@@ -2898,6 +2898,37 @@
     </div>
 </section>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navTabs = document.querySelectorAll('#nav-tabs-wrapper1 a[data-toggle="tab"]');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        navTabs.forEach(tab => {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Remove 'in active' from all tab panes and add 'fade'
+                tabPanes.forEach(pane => {
+                    pane.classList.remove('in', 'active');
+                    pane.classList.add('fade');
+                });
+
+                // Add 'in active' to the target pane
+                const targetPane = document.querySelector(this.getAttribute('href'));
+                if (targetPane) {
+                    targetPane.classList.remove('fade');
+                    targetPane.classList.add('in', 'active');
+                }
+
+                // Handle nav item active class
+                const navItems = document.querySelectorAll('#nav-tabs-wrapper1 li');
+                navItems.forEach(item => item.classList.remove('active'));
+                this.parentElement.classList.add('active');
+            });
+        });
+    });
+</script>
+
 {{-- simple-faqs.blade --}}
 @include('static.simple-faqs-section', [
     'faqs' => [
