@@ -482,37 +482,36 @@
                                         <li><a href="{{ url('nft-minting-platform-development') }}" class="font_11">NFT Minting Platform</a></li>
                                         <li><a href="{{ url('nft-layer-2-development') }}" class="font_11">NFT Layer 2  Development</a></li>
                                         <li><a href="{{ url('nft-carbon-credits-development') }}" class="font_11">Carbon Credits Development</a></li>
-                                        <li><a href="{{ url('nft-carbon-credits-development') }}" class="font_11">NFT Ecosystem</a></li>
-                                        <li><a href="#" class="font_11">SFT Development</a></li>
-                                        <li><a href="#" class="font_11">Social Token Development</a></li>
-                                        <li><a href="#" class="font_11">NFT Staking Platform</a></li>
-                                        <li><a href="#" class="font_11">NFT Streaming Platform</a></li>
-                                        <li><a href="#" class="font_11">NFT Consulting Development</a></li>
-                                        <li><a href="#" class="font_11">NFT Studio</a></li>
-                                        <li><a href="#" class="font_11">NFT Art Design Services</a></li>
-                                        <li><a href="#" class="font_11">AR And VR For NFT Development</a></li>
-
+                                        {{-- <li><a href="{{ url('nft-carbon-credits-development') }}" class="font_11">NFT Ecosystem</a></li> --}}
+                                        <li><a href="{{ url('semi-fungible-token-development') }}" class="font_11">SFT Development</a></li>
+                                        <li><a href="{{ url('social-token-development-platform') }}" class="font_11">Social Token Development</a></li>
+                                        <li><a href="{{ url('nft-staking-platform-development') }}" class="font_11">NFT Staking Platform</a></li>
+                                        <li><a href="{{ url('nft-streaming-platform-development-solutions') }}" class="font_11">NFT Streaming Platform</a></li>
+                                        <li><a href="{{ url('nft-consulting') }}" class="font_11">NFT Consulting Development</a></li>
+                                        <li><a href="{{ url('nft-studio') }}" class="font_11">NFT Studio</a></li>
+                                        <li><a href="{{ url('nft-art-design-services') }}" class="font_11">NFT Art Design Services</a></li>
+                                        <li><a href="{{ url('ar-and-vr-for-nft-development') }}" class="font_11">AR And VR For NFT Development</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3">
                                     <h6>Custom Solutions</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">NFT Loyalty Program</a></li>
-                                        <li><a href="#" class="font_11">Token Gating Platform</a></li>
+                                        <li><a href="{{ url('nft-loyalty-program') }}" class="font_11">NFT Loyalty Program</a></li>
+                                        <li><a href="{{ url('token-gating-platform') }}" class="font_11">Token Gating Platform</a></li>
                                     </ul>
 
                                     {{-- Report --}}
                                     <h6>Report</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">NFT Adoption Report</a></li>
-                                        <li><a href="#" class="font_11">NFT Development Trends 2024</a></li>
+                                        <li><a href="{{ url('nft-adoption-market-analysis-report') }}" class="font_11">NFT Adoption Report</a></li>
+                                        {{-- <li><a href="{{ url('nft-studio') }}" class="font_11">NFT Development Trends 2024</a></li> --}}
                                     </ul>
 
                                     {{-- Marketplace Clone --}}
                                     <h6>Marketplace Clone</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">OpenSea Clone</a></li>
-                                        <li><a href="#" class="font_11">Blue Clone</a></li>
+                                        <li><a href="{{ url('opensea-clone') }}" class="font_11">OpenSea Clone</a></li>
+                                        <li><a href="{{ url('blur-clone') }}" class="font_11">Blue Clone</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -531,19 +530,19 @@
                                 <div class="col-md-3">
                                     <h6>Crypto</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">Crypto Marketing</a></li>
-                                        <li><a href="#" class="font_11">Token Marketing</a></li>
-                                        <li><a href="#" class="font_11">Crypto Advertising</a></li>
-                                        <li><a href="#" class="font_11">Crypto PR</a></li>
-                                        <li><a href="#" class="font_11">Crypto Influencer Marketing</a></li>
-                                        <li><a href="#" class="font_11">Crypto Community Marketing</a></li>
-                                        <li><a href="#" class="font_11">Discord Marketing</a></li>
-                                        <li><a href="#" class="font_11">Discord Game Marketing</a></li>
-                                        <li><a href="#" class="font_11">DeFi Marketing</a></li>
-                                        <li><a href="#" class="font_11">Cryptocurrency Exchange Marketing</a></li>
-                                        <li><a href="#" class="font_11">Web 3.0 Marketing</a></li>
-                                        <li><a href="#" class="font_11">Influencer Marketing</a></li>
-                                        <li><a href="#" class="font_11">Bounty Campaign Marketing</a></li>
+                                        <li><a href="{{ url('crypto-marketing-agency') }}" class="font_11">Crypto Marketing</a></li>
+                                        <li><a href="{{ url('token-marketing-services') }}" class="font_11">Token Marketing</a></li>
+                                        <li><a href="{{ url('crypto-advertising-agency') }}" class="font_11">Crypto Advertising</a></li>
+                                        <li><a href="{{ url('crypto-pr-agency') }}" class="font_11">Crypto PR</a></li>
+                                        <li><a href="{{ url('crypto-influencer-marketing') }}" class="font_11">Crypto Influencer Marketing</a></li>
+                                        <li><a href="{{ url('crypto-community-management') }}" class="font_11">Crypto Community Marketing</a></li>
+                                        <li><a href="{{ url('discord-marketing-agency') }}" class="font_11">Discord Marketing</a></li>
+                                        <li><a href="{{ url('discord-game-marketing-agency') }}" class="font_11">Discord Game Marketing</a></li>
+                                        <li><a href="{{ url('blur-clone') }}" class="font_11">DeFi Marketing</a></li>
+                                        <li><a href="{{ url('blur-clone') }}" class="font_11">Cryptocurrency Exchange Marketing</a></li>
+                                        <li><a href="{{ url('blur-clone') }}" class="font_11">Web 3.0 Marketing</a></li>
+                                        <li><a href="{{ url('blur-clone') }}" class="font_11">Influencer Marketing</a></li>
+                                        <li><a href="{{ url('blur-clone') }}" class="font_11">Bounty Campaign Marketing</a></li>
                                         <li><a href="#" class="font_11">DApp Marketing Agency</a></li>
                                         <li><a href="#" class="font_11">KOL Marketing Agency</a></li>
                                     </ul>

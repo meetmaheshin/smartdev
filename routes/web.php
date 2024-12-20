@@ -729,15 +729,15 @@ Route::get('/carbon-credits-platform', function () {
 })->name('carbon-credits-platform');
 
 Route::get('/phygital-nft-marketplace', function () {
-    // return view('static.phygital-nft-marketplace');
+    return view('static.phygital-nft-marketplace');
 })->name('phygital-nft-marketplace');
 
 Route::get('/fractional-nft-marketplace-development', function () {
-    // return view('static.fractional-nft-marketplace-development');
+    return view('static.fractional-nft-marketplace-development');
 })->name('fractional-nft-marketplace-development');
 
 Route::get('/nft-development-services', function () {
-    // return view('static.nft-development-services');
+    return view('static.nft-development-services');
 })->name('nft-development-services');
 
 Route::get('/nft-launchpad-development', function () {
@@ -763,3 +763,87 @@ Route::get('/nft-layer-2-development', function () {
 Route::get('/nft-carbon-credits-development', function () {
     return view('static.nft-carbon-credits-development');
 })->name('nft-carbon-credits-development');
+
+Route::get('/semi-fungible-token-development', function () {
+    return view('static.semi-fungible-token-development');
+})->name('semi-fungible-token-development');
+
+Route::get('/social-token-development-platform', function () {
+    return view('static.social-token-development-platform');
+})->name('social-token-development-platform');
+
+Route::get('/nft-staking-platform-development', function () {
+    return view('static.nft-staking-platform-development');
+})->name('nft-staking-platform-development');
+
+Route::get('/nft-streaming-platform-development-solutions', function () {
+    return view('static.nft-streaming-platform-development-solutions');
+})->name('nft-streaming-platform-development-solutions');
+
+Route::get('/nft-consulting', function () {
+    return view('static.nft-consulting');
+})->name('nft-consulting');
+
+Route::get('/nft-studio', function () {
+    return view('static.nft-studio');
+})->name('nft-studio');
+
+Route::get('/nft-art-design-services', function () {
+    return view('static.nft-art-design-services');
+})->name('nft-art-design-services');
+
+Route::get('/ar-and-vr-for-nft-development', function () {
+    return view('static.ar-and-vr-for-nft-development');
+})->name('ar-and-vr-for-nft-development');
+
+Route::get('/nft-loyalty-program', function () {
+    return view('static.nft-loyalty-program');
+})->name('nft-loyalty-program');
+
+Route::get('/token-gating-platform', function () {
+    return view('static.token-gating-platform');
+})->name('token-gating-platform');
+
+Route::get('/nft-adoption-market-analysis-report', function () {
+    return view('static.nft-adoption-market-analysis-report');
+})->name('nft-adoption-market-analysis-report');
+
+Route::get('/opensea-clone', function () {
+    return view('static.opensea-clone');
+})->name('opensea-clone');
+
+Route::get('/blur-clone', function () {
+    return view('static.blur-clone');
+})->name('blur-clone');
+
+Route::get('/crypto-marketing-agency', function () {
+    return view('static.crypto-marketing-agency');
+})->name('crypto-marketing-agency');
+
+Route::get('/token-marketing-services', function () {
+    return view('static.token-marketing-services');
+})->name('token-marketing-services');
+
+Route::get('/crypto-advertising-agency', function () {
+    return view('static.crypto-advertising-agency');
+})->name('crypto-advertising-agency');
+
+Route::get('/crypto-pr-agency', function () {
+    return view('static.crypto-pr-agency');
+})->name('crypto-pr-agency');
+
+Route::get('/crypto-influencer-marketing', function () {
+    return view('static.crypto-influencer-marketing');
+})->name('crypto-influencer-marketing');
+
+Route::get('/crypto-community-management', function () {
+    return view('static.crypto-community-management');
+})->name('crypto-community-management');
+
+Route::get('/discord-marketing-agency', function () {
+    return view('static.discord-marketing-agency');
+})->name('discord-marketing-agency');
+
+Route::get('/discord-game-marketing-agency', function () {
+    return view('static.discord-game-marketing-agency');
+})->name('discord-game-marketing-agency');
