@@ -25,11 +25,11 @@ class ClientCompanyDetailsRequest extends FormRequest
     {
         return [
             'companyName' => 'required',
-            'website' => 'required',
+            'website' => 'required|url',
             'addYourIndustry' => 'required',
             'people' => 'required',
             'tagline' => 'required',
-            'description' => 'required',
+            'description' => 'required|min:100',
         ];
     }
 }

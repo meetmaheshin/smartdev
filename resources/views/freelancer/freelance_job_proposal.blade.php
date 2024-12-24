@@ -164,14 +164,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="up-card mt-5">
-                    <div class="col-12">
-                        <div class="cover_letter">
-                            <h5 class="mb-5 font_weight_600">Cover Letter</h5>
-                            <p class="pre_line">{{ $proposal_list->cover_letter }}</p>
+                @if($proposal_list->proposal_proposed_by == 0)
+                    <div class="up-card mt-5">
+                        <div class="col-12">
+                            <div class="cover_letter">
+                                <h5 class="mb-5 font_weight_600">Cover Letter</h5>
+                                <p class="pre_line">{{ $proposal_list->cover_letter }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
             <aside class="col-lg-3 mb-5 p-3">
                 <div class="up-card-992">

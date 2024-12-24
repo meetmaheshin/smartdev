@@ -847,3 +847,16 @@ Route::get('/discord-marketing-agency', function () {
 Route::get('/discord-game-marketing-agency', function () {
     return view('static.discord-game-marketing-agency');
 })->name('discord-game-marketing-agency');
+
+Route::get('/defi-marketing-company', function () {
+    return view('static.defi-marketing-company');
+})->name('defi-marketing-company');
+
+Route::get('/cryptocurrency-exchange-marketing', function () {
+    // return view('static.cryptocurrency-exchange-marketing');
+})->name('cryptocurrency-exchange-marketing');
+
+// web3-marketing-services
+Route::get('/web3-marketing-services', function () {
+    // return view('static.web3-marketing-services');
+})->name('web3-marketing-services');
