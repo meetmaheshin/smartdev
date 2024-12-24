@@ -53,10 +53,11 @@
                         <h5 class="w-100 m-0 font_weight_600">Account</h5>
                         <button class="change_c_details border-0 bg-transparent"><i class="fas fa-pen fade_edit_btn"></i></button>
                     </div>
-                    <div class="d-flex my-4 justify-content-center">
+                    <div class="d-flex my-4 justify-content-center flex-column align-items-center">
                         <label for="client-user-file-upload">
                             <img class="m-0 mb-3 rounded-circle object-fit-cover" src="{{ $clientInfo->profile_photo_path ?  asset('/storage/thumbnail/client_profile/'.$clientInfo->profile_photo_path) : asset('images/user_default.jpeg') }}" id="client-user-preview-selected-image" width="145" height="145" />
                         </label>
+                        <div>Upload Profile Photo</div>
                         <div class="text-danger error" data-error="filename"></div>
                     </div>
 
@@ -105,7 +106,7 @@
                         <h5 class="w-100 m-0 font_weight_600">Company details</h5>
                         <button class="change_c_company border-0 bg-transparent"><i class="fas fa-pen fade_edit_btn"></i></button>
                     </div>
-                    <div class="d-flex my-4 justify-content-center">
+                    <div class="d-flex my-4 justify-content-center flex-column align-items-center">
                         <label for="client-company-file-upload">
                             @if ($clientInfo->clientDetails->profile_photo_path ?? '')
                             <img class="m-0 mb-3 rounded-circle object-fit-cover" src="{{ asset($clientInfo->clientDetails->profile_photo_path) }}" id="client-company-preview-selected-image" width="145" height="145" />
@@ -113,6 +114,7 @@
                             <img class="m-0 mb-3 rounded-circle object-fit-cover" src="{{ asset('images/user_default.jpeg') }}" id="client-company-preview-selected-image" width="145" height="145" />
                             @endif
                         </label>
+                        <span>Upload Company Logo</span>
                     </div>
 
                     <div class="text-danger error" data-error="client-company-file-upload"></div>
@@ -182,7 +184,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label" for="description">Description <span class="asterisk">*</span></label>
-                                    <input class="form-control" id="description" name="description" type="text" value="{{ $clientInfo->clientDetails->description ?? '' }}" placeholder="Description" data-sb-validations="" />
+                                    <textarea class="form-control" id="description" name="description" rows="4" placeholder="Description" data-sb-validations="">{{ $clientInfo->clientDetails->description ?? '' }}</textarea>
                                     <div class="text-danger error" data-error="description"></div>
                                 </div>
                                 <div class="mt-3">

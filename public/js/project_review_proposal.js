@@ -200,6 +200,7 @@ $(".invite_to_job").click(function (e) {
     var userId = $(this).attr("data-user_id");
     var url = $(this).attr("data-url");
     var projectId = $(this).attr("data-project_id");
+    console.log(projectId, "kushal");
     $("#user_skill").html('');
     $.ajax({
         url: url,
@@ -217,12 +218,25 @@ $(".invite_to_job").click(function (e) {
                     options.push(value.skill.skills_sub);
                 });
                 $("#user_skill").append(options.join("|"));
+                var interviewUrl = base_url + '/freelancer/proposals/interview/uid/' + projectId;
+                // var message =
+                //     "Hello!" +
+                //     "\n" +
+                //     "I'd like to invite you to take a look at the job I've posted. Please submit a proposal if you're available and interested." +
+                //     "\n" +
+                //     "Interview Link: <a href='" + interviewUrl + "' target='_blank'>Click here to view the invitation</a>" +
+                //     "\n" +
+                //     "\n" +
+                //     response.project.firstname;
+
                 var message =
                     "Hello!" +
-                    "\n" +
+                    "<br>" +
                     "I'd like to invite you to take a look at the job I've posted. Please submit a proposal if you're available and interested." +
-                    "\n" +
-                    "\n" +
+                    "<br>" +
+                    "Interview Link: <a href='" + interviewUrl + "' target='_blank'>Click here to view the invitation</a>" +
+                    "<br>" +
+                    "<br>" +
                     response.project.firstname;
 
                 $("#message").html(message);

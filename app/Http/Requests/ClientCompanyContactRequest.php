@@ -31,7 +31,7 @@ class ClientCompanyContactRequest extends FormRequest
             'state' => 'required',
             'city' => 'required',
             'address' => 'required',
-            'zip' => 'required',
+            'zip' => 'required|regex:/^[A-Za-z0-9\- ]{3,}$/',
         ];
     }
 

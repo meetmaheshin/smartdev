@@ -37,8 +37,11 @@ class JobPostedRequest extends FormRequest
                 'required_if:budget,hourly',
                 'numeric', 'nullable',
                 function ($attribute, $value, $fail) {
-                    if ($this->input('budget') === 'hourly' && $value < $this->input('hourly_from')) {
-                        $fail('Hourly rate must be greater than starting charges when budget type is hourly.');
+                    if ($this->input('budget') === 'hourly') {
+                        $hourlyFrom = $this->input('hourly_from');
+                        if (is_numeric($value) && is_numeric($hourlyFrom) && $value <= $hourlyFrom) {
+                            $fail('Hourly rate must be greater than the starting charges when budget type is hourly.');
+                        }
                     }
                 },
             ],

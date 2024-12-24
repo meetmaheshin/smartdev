@@ -538,9 +538,9 @@
                                         <li><a href="{{ url('crypto-community-management') }}" class="font_11">Crypto Community Marketing</a></li>
                                         <li><a href="{{ url('discord-marketing-agency') }}" class="font_11">Discord Marketing</a></li>
                                         <li><a href="{{ url('discord-game-marketing-agency') }}" class="font_11">Discord Game Marketing</a></li>
-                                        <li><a href="{{ url('blur-clone') }}" class="font_11">DeFi Marketing</a></li>
-                                        <li><a href="{{ url('blur-clone') }}" class="font_11">Cryptocurrency Exchange Marketing</a></li>
-                                        <li><a href="{{ url('blur-clone') }}" class="font_11">Web 3.0 Marketing</a></li>
+                                        <li><a href="{{ url('defi-marketing-company') }}" class="font_11">DeFi Marketing</a></li>
+                                        <li><a href="{{ url('cryptocurrency-exchange-marketing') }}" class="font_11">Cryptocurrency Exchange Marketing</a></li>
+                                        <li><a href="{{ url('web3-marketing-services') }}" class="font_11">Web 3.0 Marketing</a></li>
                                         <li><a href="{{ url('blur-clone') }}" class="font_11">Influencer Marketing</a></li>
                                         <li><a href="{{ url('blur-clone') }}" class="font_11">Bounty Campaign Marketing</a></li>
                                         <li><a href="#" class="font_11">DApp Marketing Agency</a></li>

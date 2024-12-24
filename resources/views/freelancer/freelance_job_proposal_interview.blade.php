@@ -108,7 +108,8 @@
             <div class="col-9 my-5">
                 <div class="up-card">
                     <h4 class="font_weight_600">Original message from client</h4>
-                    <p class="mt-4">{{$proposalSettings->cover_letter}}</p>
+                    {{-- <p class="mt-4">{{$proposalSettings->cover_letter}}</p> --}}
+                    <p class="mt-4">{!! $proposalSettings->cover_letter !!}</p>                
                 </div>
             </div>
         </div>
