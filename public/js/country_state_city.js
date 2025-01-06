@@ -36,6 +36,7 @@ $('#country_states').change(function(){
 });
 
 function getCountry(countryId){
+    console.log(countryId, " ", _token);
     $.ajax({
         type:'POST',
         url: "/fetch-country-code",

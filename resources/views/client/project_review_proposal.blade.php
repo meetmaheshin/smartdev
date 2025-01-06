@@ -439,7 +439,7 @@
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button" data-bs-dismiss="modal">Close</button>
-                                                                                <button type="submit" class="up_green_btn">Send invite</button>
+                                                                                <button type="submit" id="send_invite" class="up_green_btn">Send invite <span class="loader"></span> </button>
                                                                             </div>
 
                                                                         </div>

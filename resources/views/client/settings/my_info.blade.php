@@ -220,14 +220,14 @@
                     </div>
                     <div class="c_contacts_contacts_edit">
                         <form>
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="firstNameContact">First Name <span class="asterisk">*</span></label>
                                     <input class="form-control" id="firstNameContact" type="text" placeholder="First Name" name="firstNameContact" value="{{ $clientInfo->clientDetails->firstname ?? '' }}" />
                                     <div class="text-danger error" data-error="firstNameContact"></div>
 
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="row">
                                 {{-- country list --}}
                                 <div class="col-md-6 mb-3">

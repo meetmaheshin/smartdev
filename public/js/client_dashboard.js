@@ -71,7 +71,16 @@ $(".remove_posting,.reuse_posting,.remove_draft").on("click", function (e) {
 
 $('#send_invitation_form').on("submit", function (e) {
     e.preventDefault();
-    // var modalDown = document.getElementById("inviteJob");
+
+    // Show the loader and disable the button
+    const sendInviteButton = $('#send_invite');
+
+    sendInviteButton.prop('disabled', true);
+    if (!sendInviteButton.find('.loader').length) {
+        sendInviteButton.append('<span class="loader"></span>'); // Add loader after the text
+    }
+    sendInviteButton.find('.loader').css('display', 'inline-block'); // Ensure loader is visible
+
     $.ajax({
         url: '/client/send_invitation',
         data : $(this).serialize(),
@@ -100,6 +109,10 @@ $('#send_invitation_form').on("submit", function (e) {
             }
         },error(err){
             console.log("error"+err);
+        },
+        complete: function () {
+            sendInviteButton.prop('disabled', false);
+            sendInviteButton.find('.loader').css('display', 'none');
         }
     });
 });

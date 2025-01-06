@@ -68,5 +68,6 @@ class Kernel extends HttpKernel
         'prevent-back-history' => \App\Http\Middleware\PreventBackLogin::class,
         'check-profile' => \App\Http\Middleware\FreelancerProfile::class,
         'unverified' => \App\Http\Middleware\EnsureEmailIsNotVerified::class,
+        'client.profile' => \App\Http\Middleware\ClientProfile::class,
     ];
 }

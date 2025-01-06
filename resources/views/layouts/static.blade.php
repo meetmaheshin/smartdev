@@ -541,10 +541,10 @@
                                         <li><a href="{{ url('defi-marketing-company') }}" class="font_11">DeFi Marketing</a></li>
                                         <li><a href="{{ url('cryptocurrency-exchange-marketing') }}" class="font_11">Cryptocurrency Exchange Marketing</a></li>
                                         <li><a href="{{ url('web3-marketing-services') }}" class="font_11">Web 3.0 Marketing</a></li>
-                                        <li><a href="{{ url('blur-clone') }}" class="font_11">Influencer Marketing</a></li>
-                                        <li><a href="{{ url('blur-clone') }}" class="font_11">Bounty Campaign Marketing</a></li>
-                                        <li><a href="#" class="font_11">DApp Marketing Agency</a></li>
-                                        <li><a href="#" class="font_11">KOL Marketing Agency</a></li>
+                                        <li><a href="{{ url('influencer-marketing-agency') }}" class="font_11">Influencer Marketing</a></li>
+                                        <li><a href="{{ url('bounty-marketing') }}" class="font_11">Bounty Campaign Marketing</a></li>
+                                        <li><a href="{{ url('dapp-marketing-agency') }}" class="font_11">DApp Marketing Agency</a></li>
+                                        <li><a href="{{ url('kol-marketing-agency') }}" class="font_11">KOL Marketing Agency</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3">

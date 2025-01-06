@@ -211,7 +211,7 @@ $("#companyDetails").on("submit", function (e) {
 $("#companyContact").click(function (e) {
     e.preventDefault();
     var data = {
-        firstNameContact: $("#firstNameContact").val(),
+        // firstNameContact: $("#firstNameContact").val(),
         phone: $("#phone").val(),
         timeZone: $("#timeZone").val(),
         country: $("#country").val(),

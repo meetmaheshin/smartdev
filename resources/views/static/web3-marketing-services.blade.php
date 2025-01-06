@@ -152,7 +152,7 @@
     }
 
     .banner {
-        background-image: url(images/lab/banner.webp);
+        background-image: url('{{ asset('images/lab/banner.webp') }}');
         background-size: cover;
         padding-top: 165px;
         padding-bottom: 50px;
@@ -2082,22 +2082,20 @@
                                 <div class="ovr">
                                     <div itemscope itemtype="http://schema.org/CreativeWork">
                                         <div class="ban_tirt">
-                                            <h1 itemprop="name">Best Web3 Marketing Agency</h1>
+                                            <h1 itemprop="name">Top-Tier Web3 Marketing Agency</h1>
                                         </div>
-                                        <p itemprop="text">Promote your NFT business with assistance from a classic Web3
-                                            marketing agency. Reach the world and form a loyal customer base through
-                                            various proven promotional strategies. </p>
+                                        <p itemprop="text">Elevate your NFT venture with the expertise of a premier Web3 marketing agency. Expand your global reach and cultivate a dedicated customer base using cutting-edge promotional tactics. </p>
 
                                         <div class="cta_mine txt">
-                                            <a href="#newsletter-form-sec" class="nec-btn" id="cyz"
-                                                style="border-radius: 30px;">Request Proposal</a>
+                                            <a href="{{ url('consultation') }}" class="nec-btn" id="cyz"
+                                                style="border-radius: 30px;">Request a Proposal</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-7 col-sm-12 col-xs-12 text-center"> <img class="magic"
-                                src="images/web3-marketing-services/img-1.webp" width="450" height="auto"
+                                src="{{ asset('images/web3-marketing-services/img-1.webp') }}" width="450" height="auto"
                                 alt="Web3 Marketing Agency" title="Web3 Marketing Agency"> </div>
                     </div>
                 </div>
@@ -2107,19 +2105,11 @@
         <div class="common_spacing">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2 class="title-th sec_tit underline">Web3 Marketing Services: Empower Your Business for the New
-                        Era!</h2>
+                    <h2 class="title-th sec_tit underline">Web3 Marketing Services: Propel Your Business into the Future!</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                        <p class="text-center mt20">Today, the world has been adapting to Web3. And the process behind
-                            it has not been a road full of roses. Two problems await a Web3 entrepreneur; Way too many
-                            projects to compete with; Way too many people without the knowledge of Web3. Such challenges
-                            have given rise to Web3 NFT marketing services. These ensure a business garners its initial
-                            user base without hurdles. Blockchain App Factory has been aiding Web3 businesses through
-                            its marketing services. Our Web 3.0 marketing services have helped many humble enterprises
-                            rise to phenomenal heights. Many industry experts have certified us as the best Web 3.0
-                            marketing agency. </p>
+                        <p class="text-center mt20">In today’s rapidly evolving Web3 landscape, navigating the crowded marketplace and bridging knowledge gaps can be daunting. The rise of Web3 NFT marketing services addresses these challenges, helping businesses build their initial user base effectively. Our expertise in Web 3.0 marketing has catapulted numerous emerging enterprises to unprecedented success, earning us accolades as a leading authority in the field. </p>
                     </div>
                 </div>
             </div>
@@ -2128,7 +2118,7 @@
             <div class="container ">
                 <div class="row">
                     <div class="col-md-12  section-title text-center">
-                        <h2 class="text-center title-th sec_tit underline">Web3 Marketing Services We Offer:</h2>
+                        <h2 class="text-center title-th sec_tit underline">Web3 Marketing Services We Provide:</h2>
                     </div>
                 </div>
                 <div class="choose-content-box mt20">
@@ -2136,72 +2126,60 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="choose-wrapper">
                                 <div class="wrappwer-icon text-center"> <img class="lazy"
-                                        data-src="images/web-3-marketing/icons/community-marketing.webp"> </div>
+                                        src="{{ asset('images/web-3-marketing/icons/community-marketing.png') }}"> </div>
                                 <div class="choose-para text-center">
-                                    <h3>Community Marketing</h3>
-                                    <p class="text-justify"> One of our successful Web3 marketing tactics is to reach
-                                        the thriving Web3 communities. We can popularize your business through platforms
-                                        like Telegram using different tactics.</p>
+                                    <h3>Community Engagement</h3>
+                                    <p class="text-justify"> Harness the power of vibrant Web communities to elevate your brand. Our strategies utilize platforms like Telegram, deploying diverse tactics to amplify your business.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="choose-wrapper">
                                 <div class="wrappwer-icon text-center"> <img class="lazy"
-                                        data-src="images/web-3-marketing/icons/influencer-marketing.webp"> </div>
+                                        src="{{ asset('images/web-3-marketing/icons/influencer.png') }}"> </div>
                                 <div class="choose-para text-center">
-                                    <h3>Influencer Marketing</h3>
-                                    <p class="text-justify">Our Web3 influencer marketing helps you earn high
-                                        engagements within a short time. We have partnered with leading NFT influencers
-                                        who can promote your brand wholeheartedly.</p>
+                                    <h3>Influencer Partnerships</h3>
+                                    <p class="text-justify">Accelerate engagement with our tailored influencer marketing approach. We collaborate with top NFT influencers to champion your brand and drive significant interaction.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="choose-wrapper">
                                 <div class="wrappwer-icon text-center"> <img class="lazy"
-                                        data-src="images/web-3-marketing/icons/public.webp"> </div>
+                                        src="{{ asset('images/web-3-marketing/icons/pr-media.png') }}"> </div>
                                 <div class="choose-para text-center">
                                     <h3>Public Relations</h3>
-                                    <p class="text-justify">Our Web 3.0 marketing agency comprises expert PR
-                                        professionals by your side. They can advertise your Web3 venture through press
-                                        and social media globally.</p>
+                                    <p class="text-justify">Our team of expert PR professionals will elevate your Web venture on a global scale, leveraging press and social media to boost visibility and credibility.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="choose-wrapper">
                                 <div class="wrappwer-icon text-center"> <img class="lazy"
-                                        data-src="images/web-3-marketing/icons/seo.webp"> </div>
+                                        src="{{ asset('images/web-3-marketing/icons/seo.png') }}"> </div>
                                 <div class="choose-para text-center">
                                     <h3>Search Engine Optimization</h3>
-                                    <p class="text-justify">Search Engine Optimization has been one of our best Web3
-                                        marketing tactics. Our professionals can place your business’s web pages in the
-                                        upper ranks of search engines.</p>
+                                    <p class="text-justify">Our SEO strategies position your web pages at the forefront of search engine results, enhancing your business’s online presence and discoverability.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="choose-wrapper">
                                 <div class="wrappwer-icon text-center"> <img class="lazy"
-                                        data-src="images/web-3-marketing/icons/content.webp"> </div>
+                                        src="{{ asset('images/web-3-marketing/icons/content-marketing.png') }}"> </div>
                                 <div class="choose-para text-center">
                                     <h3>Content Management</h3>
-                                    <p class="text-justify"> Content management has been a landmark in our Web3
-                                        advertising and digital marketing services. We can promote your venture through
-                                        various types of blogs with enriched content.</p>
+                                    <p class="text-justify">Our content management services drive your Web advertising efforts through rich and engaging blog posts, showcasing your venture’s expertise.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="choose-wrapper">
                                 <div class="wrappwer-icon text-center"> <img class="lazy"
-                                        data-src="images/web-3-marketing/icons/social-media.webp"> </div>
+                                        src="{{ asset('images/web-3-marketing/icons/social-media.png') }}"> </div>
                                 <div class="choose-para text-center">
-                                    <h3>Social Media Marketing</h3>
-                                    <p class="text-justify"> Our Web3 advertising experts excel in promoting on social
-                                        media through various means. We create insightful and informative content which
-                                        can earn followers for your business.</p>
+                                    <h3>Social Media Promotion</h3>
+                                    <p class="text-justify"> Our experts excel in leveraging social media platforms, creating impactful content that attracts and retains followers, boosting your brand's reach.</p>
                                 </div>
                             </div>
                         </div>
@@ -2209,24 +2187,20 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="choose-wrapper">
                                 <div class="wrappwer-icon text-center"> <img class="lazy"
-                                        data-src="images/web-3-marketing/icons/video.webp"> </div>
+                                        src="{{ asset('images/web-3-marketing/icons/video-marketing.png') }}"> </div>
                                 <div class="choose-para text-center">
-                                    <h3>Video Marketing</h3>
-                                    <p class="text-justify">We specialize in creating insightful and informative videos
-                                        that promote your Web3 business to increase awareness among the general public
-                                        and stamp your Web3 brand’s name.</p>
+                                    <h3>Video Production</h3>
+                                    <p class="text-justify">We craft compelling and educational videos that enhance public awareness and firmly establish your Web3 brand in the market.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="choose-wrapper">
                                 <div class="wrappwer-icon text-center"> <img class="lazy"
-                                        data-src="images/web-3-marketing/icons/discord.webp"> </div>
+                                        src="{{ asset('images/web-3-marketing/icons/discord.webp') }}"> </div>
                                 <div class="choose-para text-center">
-                                    <h3>Discord Marketing</h3>
-                                    <p class="text-justify">Our skilled Discord marketers can help you maintain your
-                                        community servers diplomatically and regularly engage with your community
-                                        members to ensure that your venture stays relevant.</p>
+                                    <h3>Discord Management</h3>
+                                    <p class="text-justify">Our adept Discord marketers will strategically manage and engage your community servers, ensuring ongoing relevance and interaction with your audience.</p>
                                 </div>
                             </div>
                         </div>
@@ -2234,12 +2208,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="choose-wrapper">
                                 <div class="wrappwer-icon text-center"> <img class="lazy"
-                                        data-src="images/web-3-marketing/icons/forum-marketing.webp"> </div>
+                                        src="{{ asset('images/web-3-marketing/icons/forum-marketing.png') }}"> </div>
                                 <div class="choose-para text-center">
                                     <h3>Forum Marketing</h3>
-                                    <p class="text-justify">Our creative minds can advertise your Web3 business on
-                                        forums such as Quora and CryptoTalk through bit-sized posts to garner the
-                                        attention of the Web3 community.</p>
+                                    <p class="text-justify">We deploy strategic posts on forums like Quora and CryptoTalk, capturing the attention of the Web3 community with targeted, bite-sized content.</p>
                                 </div>
                             </div>
                         </div>
@@ -2252,84 +2224,56 @@
         <section id="Workflow" class="common_spacing">
             <div class="container">
                 <div class="row">
-                    <h3 class="sec_tit underline mb20 text-center">We Specialize in Efficient Blockchain Marketing
-                        Campaigns</h3>
+                    <h3 class="sec_tit underline mb20 text-center" style="width: 100%">Mastering Cutting-Edge Blockchain Marketing Campaigns</h3>
                 </div>
                 <div class="row mt-30">
-                    <p>Web 3.0 marketing is still an evolving domain as there are innovations every day. People often
-                        confuse conventional and Web3 digital marketing as the strategies look the same. But, bringing
-                        knowledge to the masses unaware of Web3 has been challenging. Our Web3 marketing tactics help
-                        ventures to grow massively to form themselves as brands. Our strategies involve unconventional
-                        strategies which most businesses might not be aware of. Yet, we have tasted huge success with
-                        them and continue to be so. Our market analysis helps us frame suitable strategies for our
-                        clients’ marketing campaigns. Such planning makes us excellent blockchain marketing campaigns
-                        across the world.</p>
+                    <p>As Web 3.0 continues to evolve with daily innovations, distinguishing between traditional and Web3 digital marketing strategies is crucial. While they may appear similar, effectively educating the masses about Web3 presents unique challenges. Our Web3 marketing tactics are designed to propel ventures into formidable brands through unconventional and highly effective strategies. Our expertise in market analysis allows us to craft targeted marketing campaigns that achieve exceptional global results.</p>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="work-process">
-                            <div class="work-icon"> <img class="lazy" data-src="images/web-3-marketing/icons/p2e.webp">
+                            <div class="work-icon"> <img class="lazy" src="{{ asset('images/web-3-marketing/icons/p2e.png') }}">
                             </div>
-                            <h4>P2E Game Marketing</h4>
-                            <p>We promote play-to-earn NFT game platforms through various proven methods that instill
-                                excitement and hype among the gamer community. We partner with famous Web3 gaming
-                                influencers to ensure that your P2E game reaches heights through social media-based NFT
-                                airdrops and giveaways, along with videos that amuse the Web3 gamer community.</p>
+                            <h4>Play-to-Earn (P2E) Game Marketing</h4>
+                            <p>We excel in promoting play-to-earn NFT games using dynamic methods that generate buzz and excitement within the gaming community. Partnering with prominent Web3 gaming influencers, we drive engagement through social media NFT airdrops, giveaways, and captivating videos tailored for gamers.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="work-process">
                             <div class="work-icon"> <img class="lazy"
-                                    data-src="images/web-3-marketing/icons/metaverse.webp"> </div>
+                                    src="{{ asset('images/web-3-marketing/icons/metaverse.png') }}"> </div>
                             <h4>Metaverse Marketing </h4>
-                            <p> Our marketing professionals assist aspiring metaverse projects to advertise themselves
-                                in the competitive Web3 business ecosystem. We employ promotional tools, such as
-                                influencers, social media networks, press releases, community adverts (including
-                                Discord, Telegram, Reddit, and Clubhouse), discussion forums, and other metaverse
-                                worlds.</p>
+                            <p>Our specialists help emerging metaverse projects navigate the competitive Web3 landscape. Utilizing a range of promotional tools, including influencers, social media networks, press releases, and community advertising on platforms like Discord, Telegram, Reddit, and Clubhouse, we ensure effective exposure and engagement.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="work-process">
-                            <div class="work-icon"> <img class="lazy" data-src="images/web-3-marketing/icons/defi.webp">
+                            <div class="work-icon"> <img class="lazy" src="{{ asset('images/web-3-marketing/icons/defi.webp') }}">
                             </div>
                             <h4>DeFi Marketing</h4>
-                            <p>Marketing ventures based on decentralized financial operations have been our expertise
-                                for quite some time as we have promoted platforms based on staking, lending and
-                                borrowing, flash loaning, crowdfunding, and yield farming. We use well-known Web3
-                                marketing strategies in full swing to ensure that your venture gains a formidable user
-                                base.</p>
+                            <p>With extensive experience in marketing decentralized finance ventures, we expertly promote platforms focused on staking, lending, borrowing, flash loans, crowdfunding, and yield farming. Our robust Web3 strategies are designed to build a substantial user base and drive significant growth.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 ">
                         <div class="work-process">
-                            <div class="work-icon"> <img class="lazy" data-src="images/web-3-marketing/icons/nft.webp">
+                            <div class="work-icon"> <img class="lazy" src="{{ asset('images/web-3-marketing/icons/nft.webp') }}">
                             </div>
                             <h4>NFT Marketing</h4>
-                            <p>We master marketing NFTs from creators and niche businesses through our exciting team of
-                                creative advertising professionals. Our marketing wing promotes NFT collections using
-                                strategical campaigns that are custom-built for every project to ensure that the
-                                project’s uniqueness is well-understood by the NFT niche community.</p>
+                            <p>Our team of innovative advertising professionals excels in promoting NFTs from creators and niche businesses. We implement strategic, custom-built campaigns to highlight the uniqueness of each project, ensuring strong visibility within the NFT community.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="work-process">
                             <div class="work-icon"> <img class="lazy"
-                                    data-src="images/web-3-marketing/icons/nft-marketing.webp"> </div>
+                                    src="{{ asset('images/web-3-marketing/icons/nft-marketing.webp') }}"> </div>
                             <h4>NFT Marketplace Marketing</h4>
-                            <p> Our experts can promote your NFT marketplace platform to the intended audience using
-                                tailor-made advertising plans based on your business niche and target audience. We help
-                                to build your user community by creating official groups and spreading the word on
-                                interest-based forums on applications like Discord, Telegram, and Reddit.</p>
+                            <p>We offer tailored marketing strategies for NFT marketplaces, focusing on your specific niche and target audience. By establishing official groups and engaging with interest-based forums on platforms like Discord, Telegram, and Reddit, we build and expand your user community.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="work-process">
                             <div class="work-icon"> <img class="lazy"
-                                    data-src="images/web-3-marketing/icons/crypto.webp"> </div>
-                            <h4>Cryptocurrency Marketing </h4>
-                            <p>Promoting cryptocurrencies in the current market might look challenging, but our experts
-                                have solutions to reach the crypto community through thoroughly-planned tactics. We use
-                                tactics such as exchange listing, community building, AMA sessions, social media
-                                promotions, influencers, and video creation, among others, to reach investors.
+                                    src="{{ asset('images/web-3-marketing/icons/crypto.png') }}"> </div>
+                            <h4>Crypto Exchange Marketing</h4>
+                            <p>Navigating the complexities of advertising crypto exchanges is our specialty. We utilize community-building strategies, social media, SEO-friendly content, and video marketing to create a buzz around your exchange. Our approach also includes leveraging influencers, mainstream media, and email campaigns for maximum impact.
                             </p>
                         </div>
                     </div>
@@ -2337,14 +2281,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="work-process">
                             <div class="work-icon"> <img class="lazy"
-                                    data-src="images/web-3-marketing/icons/cryptocurrency.webp"> </div>
-                            <h4>Crypto Exchange Marketing</h4>
-                            <p><a href="https://www.blockchainappfactory.com/cryptocurrency-exchange-marketing"
-                                    target="_blank"><b>Advertising crypto exchanges</b></a> can sound daunting, but our
-                                professionals can make it easy for you to reach the masses with proven strategies. We
-                                use community building, social media, SEO-friendly blogging, and videos to create buzz
-                                around your venture. Influencers, mainstream press, and emails can also be used by us to
-                                market your business.</p>
+                                    src="{{ asset('images/web-3-marketing/icons/cryptocurrency.png') }}"> </div>
+                            <h4>Cryptocurrency Marketing</h4>
+                            <p>Promoting cryptocurrencies in today’s market presents its own set of challenges. Our expert team employs a comprehensive range of tactics, including exchange listings, community engagement, AMA sessions, social media promotions, influencer partnerships, and video content, to effectively reach and attract investors.</p>
                         </div>
                     </div>
 
@@ -2355,7 +2294,8 @@
         <section class="exp_function common_spacing gray_bg">
             <div class="container">
                 <div class="row">
-                    <h3 class="sec_tit underline text-center">Preparing Your Brand for Web 3.0 Marketing</h3>
+                    <h3 class="sec_tit underline text-center">Preparing Your Brand for the Web 3.0 Era</h3>
+                    <p>Though Web3 might seem distant, its mainstream adoption is imminent. Prepare your brand to excel in this evolving space with these strategic approaches.</p>
                 </div>
                 <div class="row">
 
@@ -2363,60 +2303,52 @@
                         <ul class="f_point">
                             <li>
                                 <div class="icon"><img class="lazy"
-                                        data-src="images/web-3-marketing/icons/up-to-date.webp"></div>
-                                <h4>Be Up-to-Date</h4>
-                                <p>As a firm, you should be up-to-date with the latest Web3 trends. Staying updated can
-                                    be a great Web 3.0 marketing strategy as innovations arrive.</p>
+                                        src="{{ asset('images/web-3-marketing/icons/up-to-date.webp') }}"></div>
+                                <h4>Stay Ahead of Trends</h4>
+                                <p>To thrive in the Web 3.0 landscape, ensure your firm remains at the forefront of the latest trends. Being current with innovations is a strategic advantage in Web 3.0 marketing.</p>
                             </li>
                             <li>
                                 <div class="icon transaction"><img class="lazy"
-                                        data-src="images/web-3-marketing/icons/utility-nft.webp"></div>
-                                <h4>Utilize NFTs</h4>
-                                <p> You should also use NFTs as a Web3 marketing strategy in different ways. They help
-                                    increase brand awareness and loyalty and give exclusive experiences to users. </p>
+                                        src="{{ asset('images/web-3-marketing/icons/utility-nft.webp') }}"></div>
+                                <h4>Leverage NFTs</h4>
+                                <p>Integrate NFTs into your Web 3.0 strategy to boost brand visibility and loyalty. Use them creatively to offer exclusive experiences and elevate user engagement.</p>
                             </li>
                             <li>
                                 <div class="icon address"><img class="lazy"
-                                        data-src="images/web-3-marketing/icons/social.webp"></div>
-                                <h4>Connect Through Social Media </h4>
-                                <p> Although Web3 users will have control over their data, which needs user-based
-                                    marketing. Social media platforms will help in building a community that will stay
-                                    forever. </p>
+                                        src="{{ asset('images/web-3-marketing/icons/social.webp') }}"></div>
+                                <h4>Engage via Social Media</h4>
+                                <p>While Web3 users value data sovereignty, social media remains a powerful tool for building and nurturing a lasting community. Leverage these platforms to forge strong connections.</p>
                             </li>
                             <li>
                                 <div class="icon contract"><img class="lazy"
-                                        data-src="images/web-3-marketing/icons/humor.webp"></div>
-                                <h4>Add that Tinge of Humor</h4>
-                                <p> Memes represent today’s digital social world, and Web3 marketing cannot escape the
-                                    norm. Promote your venture using humorous memes, and your brand value will shoot up.
+                                        src="{{ asset('images/web-3-marketing/icons/humor.webp') }}"></div>
+                                <h4>Infuse Humor</h4>
+                                <p>Incorporate humor and memes into your marketing approach. They resonate deeply in the digital age and can significantly enhance your brand’s appeal and recognition.
                                 </p>
                             </li>
                             <li>
                                 <div class="icon contract"><img class="lazy"
-                                        data-src="images/web-3-marketing/icons/kpi.webp"></div>
-                                <h4>Rethink Your KPIs</h4>
-                                <p>Restructuring key performance indicators is applicable when you switch from Web2 to
-                                    Web3. You should plan accordingly so that your Web3 business goals are set
-                                    correctly. </p>
+                                        src="{{ asset('images/web-3-marketing/icons/kpi.webp') }}"></div>
+                                <h4>Reevaluate Your KPIs</h4>
+                                <p>Transitioning from Web2 to Web3 requires a reassessment of key performance indicators. Align your goals with Web3 dynamics to ensure they are relevant and achievable.</p>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                         <div class="ouaram_funtion_img"> <img class="lazy ig-sz"
-                                data-src="images/web3-marketing-services/img-2.webp" alt="Web3 Marketing Services"
+                                src="{{ asset('images/web3-marketing-services/img-2.webp') }}" alt="Web3 Marketing Services"
                                 title="Web3 Marketing Services"> </div>
-                        <p class="text-justify">Although it seems that Web3 is far away, it might become mainstream
+                        {{-- <p class="text-justify">Although it seems that Web3 is far away, it might become mainstream
                             sooner than anticipated. Hence, it is important to prepare your brand for Web 3.0 marketing.
-                            The following tactics can land you in a higher spot in the Web3 world.</p>
+                            The following tactics can land you in a higher spot in the Web3 world.</p> --}}
                     </div>
-
                 </div>
             </div>
         </section>
         <section class="service-section web-servic pad-tb">
             <div class="container">
                 <div class="section-header underline text-center">
-                    <h2 class="text-white title-th">How do we drive measurable results through web3 marketing?</h2>
+                    <h2 class="text-white title-th">How We Achieve Tangible Results Through Web3 Marketing</h2>
                 </div>
                 <div class="row upset link-hover shape-num justify-content-center">
                     <div class="col-lg-3 col-sm-6 mt30 shape-loc wow fadeInUp" data-wow-delay="0.2s"
@@ -2424,81 +2356,49 @@
                         <div class="box4"
                             style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
                             <div class="s-card-icon"><img class="lazy"
-                                    data-src="images/web-3-marketing/icons/build.webp" alt=""></div>
-                            <h4>Analyze and Build</h4>
-                            <p> We first start with your inputs and existing Web3 marketing tactics in place. We analyze
-                                them and report on the findings and improvements required for success.</p>
+                                    src="{{ asset('images/web-3-marketing/icons/build.webp') }}" alt=""></div>
+                            <h4>Analyze and Strategize</h4>
+                            <p> We begin by evaluating your current Web3 marketing efforts and gathering your insights. Our comprehensive analysis identifies key improvements to drive success.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 mt30 shape-loc wow fadeInUp" data-wow-delay="0.4s"
                         style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
                         <div class="box4"
                             style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-                            <div class="s-card-icon"><img data-src="images/web-3-marketing/icons/roadmap.webp"
+                            <div class="s-card-icon"><img src="{{ asset('images/web-3-marketing/icons/roadmap.png') }}"
                                     class="lazy" alt=""></div>
-                            <h4>Frame the Roadmap</h4>
-                            <p>We believe in working based on data-based results in our Web3 marketing services. We form
-                                the roadmap for your marketing campaign based on detailed research. </p>
+                            <h4>Develop the Strategy</h4>
+                            <p>Guided by data-driven insights, we craft a precise roadmap for your marketing campaign. Our approach is rooted in meticulous research and tailored to achieve impactful results. </p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 mt30 shape-loc wow fadeInUp" data-wow-delay="0.6s"
                         style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
                         <div class="box4"
                             style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-                            <div class="s-card-icon"><img data-src="images/web-3-marketing/icons/tactics.webp"
+                            <div class="s-card-icon"><img src="{{ asset('images/web-3-marketing/icons/tactics.png') }}"
                                     class="lazy" alt=""></div>
-                            <h4>Execute Tactics </h4>
-                            <p> Our experts work to ensure that all strategies are employed based on the roadmap. We
-                                ensure that your brand will be promoted smoothly through our tactics.</p>
+                            <h4>Implement Tactics </h4>
+                            <p> Our experts execute the strategy with precision, ensuring your brand receives optimal promotion. Each tactic is seamlessly integrated to enhance your campaign’s effectiveness.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 mt30 shape-loc wow fadeInUp" data-wow-delay="0.8s"
                         style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
                         <div class="box4 mb0"
                             style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-                            <div class="s-card-icon"><img data-src="images/web-3-marketing/icons/time.webp" alt=""
+                            <div class="s-card-icon"><img src="{{ asset('images/web-3-marketing/icons/time.png') }}" alt=""
                                     class="lazy"></div>
-                            <h4>Improve with Time </h4>
-                            <p>As a Web 3.0 marketing firm, we want to give the best results. Our team always improves
-                                and tests strategies to create better marketing campaigns.</p>
+                            <h4>Evolve Continuously </h4>
+                            <p>Committed to delivering superior outcomes, we constantly refine and test our strategies. Our dedication to innovation ensures that your Web3 marketing campaigns evolve and improve over time.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="product-features package_includes" style="background: #fff !important;">
-            <div class="container">
-                <div class="row">
-                    <div class="section-title text-center">
-                        <div class="sec_tit mb20">
-                            <h2 class="section-title underline mb20" style="color:#000;">Esteemed<span
-                                    style="color:#47b475;"> Web3 Clients</span> <br>We Propelled to Popularity</h2>
-                        </div>
-                        <p class="" style="color:#000; font-size:1.2rem !important; text-align: center;">
-                            As a reputed Web3 marketing agency, we strive to offer the best-in-class services to promote
-                            projects<br> to the intended audience using a plethora of strategies. Such an approach has
-                            led us to work with <br>top Web3 businesses, and we have generated fabulous results for
-                            them.</p>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <div class="Package_list" style="background:#c0fcd9; "> <img class="lazy"
-                                data-src="images/marketing-clients/sui-1.webp" alt=""><span></span> </div>
-                        <div class="Package_list" style="background:#c0fcd9;"> <img class="lazy"
-                                data-src="images/marketing-clients/ton-1.webp" alt=""><span></span> </div>
-                        <div class="Package_list" style="background:#c0fcd9;"> <img class="lazy"
-                                data-src="images/marketing-clients/apots-1.webp" alt=""><span></span> </div>
-                        <div class="Package_list" style="background:#c0fcd9;"> <img class="lazy"
-                                data-src="images/marketing-clients/sandbox-1.webp" alt=""><span></span> </div>
-                        <div class="Package_list" style="background:#c0fcd9;"> <img class="lazy"
-                                data-src="images/marketing-clients/coindcx-1.webp" alt=""><span></span> </div>
-                        <div class="Package_list" style="background:#c0fcd9;"> <img class="lazy"
-                                data-src="images/marketing-clients/coinswitch-1.webp" alt=""><span></span> </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
+        @include('static.web3-clients', array(
+            'title' => "Renowned <span style='color:#47b475;'>Web3 Clients</span> <br> Elevated to Prominence",
+            'desc' => "As a leading authority in Web3 marketing, we deliver unparalleled services designed to elevate projects and reach target audiences through an array of advanced strategies. This commitment has positioned us alongside top Web3 enterprises, where we have consistently achieved outstanding results."
+        ))
 
         <style type="text/css">
             .Package_list img {
@@ -2640,137 +2540,6 @@
             }
         </style>
 
-        <div id="packages" class="common_spacing" style="padding:40px 0px;">
-            <div class="container">
-                <div class="row">
-
-
-
-
-                    <div class="pricingTable-header">
-                        <h2 class="sec_tit underline text-center">We Provide Specialized KOL Marketing Packages</h2>
-                    </div>
-
-                    <div class="container-center">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 equalize">
-                            <div class="pricingTable purple">
-                                <div class="price-value"> Starter <span>$10,000/Month</span></div>
-                                <ul class="pricing-content">
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> KOL Content
-                                        Strategy & Amplification</li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>KOL
-                                            Collaborations:</b> <br>
-                                        Partner with 3-5 micro-KOLs </li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Promotion
-                                            Platform:</b> <br>
-                                        <b>- Twitter:</b> 3 KOLs will tweet promoting your brand/product<br>
-                                        <b>- Telegram:</b> 5+ posts in channels/groups. <br>
-                                        <b>- YouTube:</b> 1 KOL video.
-                                    </li>
-
-                                </ul>
-                                <div class="pricingTable-signup">
-                                    <a rel="nofollow"
-                                        class="nectar-button medium regular accent-color regular-button nec-btn"
-                                        style="font-size: 18px;" href="#newsletter-form-sec">Buy Now</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 equalize">
-                            <div class="pricingTable purple">
-                                <div class="price-value"> Growth <span>$30,000/Month</span></div>
-                                <ul class="pricing-content">
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> KOL Content
-                                        Strategy & Amplification</li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>KOL
-                                            Collaborations:</b> <br>
-                                        Partner with 5-10 mid-tier KOLs </li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Promotion
-                                            Platform:</b> <br>
-                                        <b>- Twitter:</b> 5 KOLs will tweet promoting your brand/product <br>
-                                        <b>- Telegram:</b> 15+ posts in channels/groups. <br>
-                                        <b>- YouTube:</b> 2 KOL videos.
-                                    </li>
-
-                                </ul>
-                                <div class="pricingTable-signup">
-                                    <a rel="nofollow"
-                                        class="nectar-button medium regular accent-color regular-button nec-btn"
-                                        style="font-size: 18px;" href="#newsletter-form-sec">Buy Now</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 equalize">
-                            <div class="pricingTable purple">
-                                <div class="price-value"> Elite <span>$50,000/One-time</span></div>
-                                <ul class="pricing-content">
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> KOL Content
-                                        Strategy & Amplification</li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>KOL
-                                            Collaborations:</b> <br>
-                                        Partner with 5-10 mid-tier and top-tier KOLs </li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Promotion
-                                            Platform:</b><br>
-                                        <b>- Twitter:</b> 10 KOLs will tweet promoting your brand/product.<br>
-                                        <b>- Telegram:</b> 30+ posts in channels/groups. <br>
-                                        <b>- YouTube:</b> 3 KOL videos. Instagram: 2 KOL posts.<br>
-                                        <b>- Instagram:</b> 5+ KOLs Post.
-                                    </li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Additional
-                                            Services:</b><br>
-                                        <b>- Giveaway or Contest:</b> Organized by KOLs. <br>
-                                        <b>- Twitter Spaces:</b> At least 2 Twitter Spaces with KOLs to discuss your
-                                        brand and engage with the audience.
-                                    </li>
-                                </ul>
-                                <div class="pricingTable-signup">
-                                    <a rel="nofollow"
-                                        class="nectar-button medium regular accent-color regular-button nec-btn"
-                                        style="font-size: 18px;" href="#newsletter-form-sec">Buy Now</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 equalize">
-                            <div class="pricingTable purple">
-                                <div class="price-value"> Supreme Influence Suite <span>$100,000/One-time</span></div>
-                                <ul class="pricing-content">
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> KOL Content
-                                        Strategy & Amplification</li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>KOL
-                                            Collaborations:</b> <br>
-                                        Partner with 10-30 mix of micro, macro, and top-tier KOLs </li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Promotion
-                                            Platform:</b><br>
-                                        <b>- Twitter:</b> 15 KOLs will tweet promoting your brand/product.<br>
-                                        <b>- Telegram:</b> 50+ posts in channels/groups.<br>
-                                        <b>- YouTube:</b> 5+ KOL videos. Instagram: 5 KOL posts.<br>
-                                        <b>- Instagram:</b> 10+ KOLs Post.
-                                    </li>
-                                    <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Additional
-                                            Services:</b><br>
-                                        <b>- Giveaway or Contest:</b> Organized by KOLs. <br>
-                                        <b>- Hashtag Campaign:</b> To increase brand visibility. <br>
-                                        <b>- Twitter Spaces:</b> At least 3 Twitter Spaces with KOLs to discuss your
-                                        brand and engage with the audience.
-                                    </li>
-                                </ul>
-                                <div class="pricingTable-signup">
-                                    <a rel="nofollow"
-                                        class="nectar-button medium regular accent-color regular-button nec-btn"
-                                        style="font-size: 18px;" href="#newsletter-form-sec">Buy Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
         <div class="common_spacing uniq_features gray_bg">
             <div class="why-blockchain-sec">
                 <div class="container">
@@ -2778,41 +2547,26 @@
                     <div class="row">
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-md-12">
-                            <h2 class="common_h3 sec-tit underline text-center font-wei" style="font-size: 25px;">Why
-                                choose Blockchain App Factory As Your Web3 Marketing Agency</h2>
-                        </div>
-
-                        <div class="col-lg-7 col-md-6 col-sm-12 col-md-12 pull-right">
-
-
-                            <ul>
-                                <li>We concentrate on building tailored Web3 marketing strategies to fit your business
-                                    needs. Our ability to market on multiple channels makes us a domain leader globally.
-                                </li>
-                                <li>Our experts can forge loyal communities around your brand that stays for long. They
-                                    use various tools and tactics to garner people around your Web3 brand. </li>
-                                <li>We also use a combination of organic and paid advertising in our marketing
-                                    campaigns. This helps your Web3 business in earning reputation quickly among the
-                                    masses.</li>
-                                <li>Our professionals assist your business with generating quality leads that can shoot
-                                    up sales. We do so through customized Web3 marketing solutions executed to utmost
-                                    perfection.</li>
-                                <li>You need not fear since our experts have pioneered Web3 marketing campaigns. We can
-                                    build your marketing plan based on the target requirements of your business.</li>
-                                <li>Our marketing professionals focus on high-ROI promotions to make our client
-                                    businesses successful. We use systems that monitor engagement and leads in real-time
-                                    to plan ahead.</li>
-                                <li>Our Web3 marketing tactics are based on concrete results supported by necessary
-                                    data. We thrive on using statistics to focus on the current trends in marketing.
-                                </li>
-
-
-                            </ul>
+                            <h2 class="common_h3 sec-tit underline text-center font-wei" style="font-size: 25px;">Why Select Us as Your Premier Web3 Marketing Agency</h2>
                         </div>
                         <div class="col-lg-5 col-md-6 col-sm-12 col-md-12 pull-left">
-                            <img class="lazy" data-src="images/web3-marketing-services/img-3.webp"
+                            <img class="lazy" src="{{ asset('images/web3-marketing-services/img-3.webp') }}"
                                 alt="Web3 Marketing Company" title="Web3 Marketing Company">
                         </div>
+                        <div class="col-lg-7 col-md-6 col-sm-12 col-md-12 pull-right">
+                            <ul>
+                                <li>We specialize in crafting bespoke Web3 marketing strategies tailored to your unique business needs. Our expertise in multi-channel marketing establishes us as a global leader in the domain.
+                                </li>
+                                <li>Our team excels at building enduring communities around your brand, employing a diverse toolkit and innovative techniques to engage and grow your Web3 audience. </li>
+                                <li>We blend organic and paid advertising to rapidly build your Web3 business's reputation, ensuring swift recognition and credibility.</li>
+                                <li>Our professionals are adept at generating high-quality leads that drive significant sales growth through meticulously executed, customized Web3 marketing solutions.</li>
+                                <li>With a track record of pioneering successful Web3 campaigns, we develop marketing plans aligned with your specific business goals and target requirements.</li>
+                                <li>We prioritize high-ROI promotions, utilizing real-time engagement and lead monitoring systems to strategize effectively and drive success.</li>
+                                <li>Our approach is data-driven, leveraging comprehensive analytics to guide our marketing tactics and capitalize on emerging trends in the Web3 landscape.
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -2845,8 +2599,9 @@
             }
 
             .uniq_features ul li:after {
-                font-family: FontAwesome;
-                top: 3px;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                top: -4px;
                 right: 0;
                 padding-right: 10px;
                 content: "\f0a9";
@@ -2892,129 +2647,47 @@
             <div class="container">
                 <div class="section-title text-center">
                     <div class="sec_tit">
-                        <h2>Book a consultation with a web3 advertising expert!</h2>
+                        <h2>Get Ahead in Web3: Schedule Your Expert Consultation Today!</h2>
                     </div>
                 </div>
                 <div class="row mt10">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p class="mt10 text-center para">We offer various Web 3.0 marketing services for our global
-                            clients. Our experts have a concrete understanding of what it takes to make businesses
-                            successful. Reach out now to book a consultation with a Web3 advertising expert! </p>
+                        <p class="mt10 text-center para">Unlock the potential of your business with our premier Web3 marketing services. Our experts possess profound insights into driving success in the Web3 realm. Contact us today to secure a consultation with a leading Web3 advertising strategist!</p>
                     </div>
                 </div>
                 <div class="text-center cta_mine mt20 txt">
-                    <a href="#newsletter-form-sec"
+                    <a href="{{ url('consultation') }}"
                         class="nectar-button medium regular accent-color regular-button nec-btn"
-                        style="border-radius: 30px!important;"><span>Talk with our Experts</span></a>
+                        style="border-radius: 30px!important;"><span>Connect with Our Experts Now</span></a>
                 </div>
             </div>
         </div>
 
-        <div class="common_spacing gray_bg">
-            <div class="container">
-                <div class="section-top ">
-                    <div class="section-header text-center ">
-                        <h3 class="section-title mt20 underline">FAQ</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-12">
-                        <div class="faq-content">
-                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab">
-                                        <h4 class="panel-title">
-                                            <a class="" role="button" data-toggle="collapse" data-parent="#accordion"
-                                                href="#faq1"><span>How much does Web 3 marketing cost?</span></a>
-                                        </h4>
-                                    </div>
-                                    <div id="faq1" class="panel-collapse collapse in" role="tabpanel"
-                                        aria-labelledby="headingOne">
-                                        <div class="panel-body">The cost of Web 3.0 marketing depends on the strategies
-                                            required for your brand. Prices vary with tactics and tools employed
-                                            throughout your marketing campaign.</div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion" href="#faq2"><span>Why should I choose
-                                                    Blockchain App Factory for your Web3 marketing and
-                                                    advertising?</span></a>
-                                        </h4>
-                                    </div>
-                                    <div id="faq2" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="headingTwo">
-                                        <div class="panel-body">You should choose Blockchain App Factory for our
-                                            expertise in Web3 marketing and advertising expertise. We have a creative
-                                            team of marketers who can cater to your needs.</div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion" href="#faq3"><span>What makes Blockchain App
-                                                    Factory different from other Web3 marketing agencies?
-                                                </span></a>
-                                        </h4>
-                                    </div>
-                                    <div id="faq3" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="headingTwo">
-                                        <div class="panel-body">Our Web3 marketing agency has been outstanding with its
-                                            experimental approaches to promotions. We advertise our client businesses to
-                                            their target audience through perfectly tailored strategies.</div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion" href="#faq4"><span>How will Web 3.0 affect
-                                                    search marketing?</span></a>
-                                        </h4>
-                                    </div>
-                                    <div id="faq4" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="headingTwo">
-                                        <div class="panel-body">Web 3.0 will affect search marketing as users own their
-                                            data. Such degrees of decentralization necessitate the need for interactive
-                                            and personalized ads without manipulations.</div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion" href="#faq5"><span>What are examples of Web
-                                                    3.0?</span></a>
-                                        </h4>
-                                    </div>
-                                    <div id="faq5" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="headingTwo">
-                                        <div class="panel-body">Although Web 3.0 is emerging, we have already seen
-                                            applications making rapid strides. Bitcoin (Cryptocurrency), OpenSea (NFT
-                                            marketplace), Coinbase (Crypto exchange), and Aave (DeFi protocol) are some
-                                            examples.</div>
-                                    </div>
-                                </div>
-                                <!-- <div class="panel panel-default">
-                                <div class="panel-heading" role="tab">
-                                    <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#faq6"><span></span></a>
-                                        </h4> </div>
-                                <div id="faq6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                    <div class="panel-body"> </div>
-                                </div>
-                            </div> -->
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{-- simple-faqs.blade --}}
+        @include('static.simple-faqs-section', [
+            'faqs' => [
+                [
+                    'ques' => 'What is the cost of Web3 marketing services?',
+                    'ans' => "The cost of Web3 marketing varies based on the scope and complexity of your campaign. Factors like the range of services, duration, and targeted strategies will influence the overall expense. Contact us for a customized quote tailored to your specific needs."
+                ],
+                [
+                    'ques' => 'Why should I choose your agency for Web3 marketing and advertising?',
+                    'ans' => "Our agency offers specialized expertise in Web3 marketing with a proven track record of success. We deliver customized strategies that align with your business goals, leveraging the latest innovations to maximize your impact in the Web3 space."
+                ],
+                [
+                    'ques' => 'How does your agency differ from other Web3 marketing firms?',
+                    'ans' => "We stand out through our deep industry knowledge, cutting-edge strategies, and commitment to personalized service. Our approach is data-driven and results-oriented, ensuring we meet your unique needs and exceed expectations."
+                ],
+                [
+                    'ques' => 'What impact will Web3.0 have on search marketing?',
+                    'ans' => "Web3.0 is poised to revolutionize search marketing by emphasizing decentralized and user-controlled data. It will shift focus towards personalized, privacy-respecting marketing tactics, making traditional methods evolve to stay relevant."
+                ],
+                [
+                    'ques' => 'Can you provide examples of Web3.0 technologies?',
+                    'ans' => "Examples of Web3.0 technologies include decentralized applications (dApps), blockchain-based smart contracts, and non-fungible tokens (NFTs). These innovations drive the evolution of the internet towards greater decentralization and user autonomy."
+                ],
+            ],
+        ])
 
     </div>
 
@@ -3132,167 +2805,7 @@
         }
     </style>
     <!-- <script src="js/owl.carousel.js"></script> -->
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript">
-        (function($) {
-        $.fn.countTo = function(options, viewCounter) {
-            if(viewCounter == 1) {
-                options = options || {};
-                return $(this).each(function() {
-                    // set options for current element
-                    var settings = $.extend({}, $.fn.countTo.defaults, {
-                        from: $(this).data('from'),
-                        to: $(this).data('to'),
-                        speed: $(this).data('speed'),
-                        refreshInterval: $(this).data('refresh-interval'),
-                        decimals: $(this).data('decimals')
-                    }, options);
-                    // how many times to update the value, and how much to increment the value on each update
-                    var loops = Math.ceil(settings.speed / settings.refreshInterval),
-                        increment = (settings.to - settings.from) / loops;
-                    // references & variables that will change with each update
-                    var self = this,
-                        $self = $(this),
-                        loopCount = 0,
-                        value = settings.from,
-                        data = $self.data('countTo') || {};
-                    $self.data('countTo', data);
-                    // if an existing interval can be found, clear it first
-                    if(data.interval) {
-                        clearInterval(data.interval);
-                    }
-                    data.interval = setInterval(updateTimer, settings.refreshInterval);
-                    // initialize the element with the starting value
-                    render(value);
-
-                    function updateTimer() {
-                        value += increment;
-                        loopCount++;
-                        render(value);
-                        if(typeof(settings.onUpdate) == 'function') {
-                            settings.onUpdate.call(self, value);
-                        }
-                        if(loopCount >= loops) {
-                            // remove the interval
-                            $self.removeData('countTo');
-                            clearInterval(data.interval);
-                            value = settings.to;
-                            if(typeof(settings.onComplete) == 'function') {
-                                settings.onComplete.call(self, value);
-                            }
-                        }
-                    }
-
-                    function render(value) {
-                        var formattedValue = settings.formatter.call(self, value, settings);
-                        $self.html(formattedValue);
-                    }
-                });
-            };
-        }
-        $.fn.countTo.defaults = {
-            from: 0, // the number the element should start at
-            to: 0, // the number the element should end at
-            speed: 3000, // how long it should take to count between the target numbers
-            refreshInterval: 100, // how often the element should be updated
-            decimals: 0, // the number of decimal places to show
-            formatter: formatter, // handler for formatting the value before rendering
-            onUpdate: null, // callback method for every time the element is updated
-            onComplete: null // callback method for when the element finishes updating
-        };
-
-        function formatter(value, settings) {
-            return value.toFixed(settings.decimals);
-        }
-    }(jQuery));
-    jQuery(function($) {
-        // custom formatting example
-        $('.count-number').data('countToOptions', {
-            formatter: function(value, options) {
-                return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-            }
-        });
-        // start all the timers
-        var viewCounter = 0;
-        $(document).on('scroll', function() {
-            if($('.timer').each(count).isOnScreen() && viewCounter < 2) {
-                viewCounter++;
-                console.log(viewCounter);
-            }
-        });
-
-        function count(options) {
-            var $this = $(this);
-            options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-            $this.countTo(options, viewCounter);
-        }
-    });
-    // check if element visible in viewport
-    $.fn.isOnScreen = function() {
-        var win = $(window);
-        var viewport = {
-            top: win.scrollTop(),
-            left: win.scrollLeft()
-        };
-        viewport.right = viewport.left + win.width();
-        viewport.bottom = viewport.top + win.height();
-        var bounds = this.offset();
-        //bounds.right = bounds.left + this.outerWidth();
-        //bounds.bottom = bounds.top + this.outerHeight();
-        return(!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-    };
-    </script>
-    <script src="js/vendor.js" type="cc0b3da23b0bde7b9e651c0b-text/javascript"></script>
-    <script src="js/plugins-reduced.js" type="cc0b3da23b0bde7b9e651c0b-text/javascript"></script>
-    <script src="build/js/intlTelInput.js" type="cc0b3da23b0bde7b9e651c0b-text/javascript"></script>
-    <!-- <script>
-        $('.owl-carouseltwo').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-            dots: false,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        })
-    </script> -->
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript">
-        document.addEventListener("DOMContentLoaded", function() {
-        var lazyloadImages = document.querySelectorAll("img.lazy");
-        var lazyloadThrottleTimeout;
-
-        function lazyload() {
-            if(lazyloadThrottleTimeout) {
-                clearTimeout(lazyloadThrottleTimeout);
-            }
-            lazyloadThrottleTimeout = setTimeout(function() {
-                var scrollTop = window.pageYOffset;
-                lazyloadImages.forEach(function(img) {
-                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                    }
-                });
-                if(lazyloadImages.length == 0) {
-                    document.removeEventListener("scroll", lazyload);
-                    window.removeEventListener("resize", lazyload);
-                    window.removeEventListener("orientationChange", lazyload);
-                }
-            }, 20);
-        }
-        document.addEventListener("scroll", lazyload);
-        window.addEventListener("resize", lazyload);
-        window.addEventListener("orientationChange", lazyload);
-    });
-    </script>
+    
     <!-- header (top) -->
 
     <!------------------------ New MegaMenu  ----------------------------->
@@ -3683,11 +3196,6 @@
         }
     </style>
 
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript">
-        +function($){"use strict";var backdrop=".dropdown-backdrop";var Dropdownhover=function(element,options){this.options=options;this.$element=$(element);var that=this;this.dropdowns=this.$element.hasClass("dropdown-toggle")?this.$element.parent().find(".dropdown-menu").parent(".dropdown"):this.$element.find(".dropdown");if(!options.onClick){this.dropdowns.each(function(){$(this).on("mouseenter.bs.dropdownhover",function(e){that.show($(this).children("a, button"))})});this.dropdowns.each(function(){$(this).on("mouseleave.bs.dropdownhover",function(e){that.hide($(this).children("a, button"))})})}else{this.dropdowns.each(function(){$(this).children("a, button").on("click.bs.dropdownhover",function(e){var isActive=$(this).parent().hasClass("open");isActive?that.hide($(this)):that.show($(this))})})}};Dropdownhover.TRANSITION_DURATION=300;Dropdownhover.DELAY=150;Dropdownhover.TIMEOUT;Dropdownhover.DEFAULTS={onClick:false,animations:["fadeInDown","fadeInRight","fadeInUp","fadeInLeft"]};function getParent($this){var selector=$this.attr("data-target");if(!selector){selector=$this.attr("href");selector=selector&&/#[A-Za-z]/.test(selector)&&selector.replace(/.*(?=#[^\s]*$)/,"")}var $parent=selector&&$(document).find(selector);return $parent&&$parent.length?$parent:$this.parent()}function clearMenus(e){if(e&&e.which===3)return;$(backdrop).remove();$('[data-hover="dropdown"]').each(function(){var $this=$(this);var $parent=getParent($this);var relatedTarget={relatedTarget:this};if(!$parent.hasClass("open"))return;if(e&&e.type=="click"&&/input|textarea/i.test(e.target.tagName)&&$.contains($parent[0],e.target))return;$parent.trigger(e=$.Event("hide.bs.dropdownhover",relatedTarget));if(e.isDefaultPrevented())return;$this.attr("aria-expanded","false");$parent.removeClass("open").trigger($.Event("hidden.bs.dropdownhover",relatedTarget))})}Dropdownhover.prototype.show=function(_dropdownLink){var $this=$(_dropdownLink);window.clearTimeout(Dropdownhover.TIMEOUT);$(".dropdown").not($this.parents()).each(function(){$(this).removeClass("open")});var effect=this.options.animations[0];if($this.is(".disabled, :disabled"))return;var $parent=$this.parent();var isActive=$parent.hasClass("open");if(!isActive){if("ontouchstart"in document.documentElement&&!$parent.closest(".navbar-nav").length){$(document.createElement("div")).addClass("dropdown-backdrop").insertAfter($(this)).on("click",clearMenus)}var $dropdown=$this.next(".dropdown-menu");$parent.addClass("open");$this.attr("aria-expanded",true);$parent.siblings().each(function(){if(!$(this).hasClass("open")){$(this).find('[data-hover="dropdown"]').attr("aria-expanded",false)}});var side=this.position($dropdown);switch(side){case"top":effect=this.options.animations[2];break;case"right":effect=this.options.animations[3];break;case"left":effect=this.options.animations[1];break;default:effect=this.options.animations[0];break}$dropdown.addClass("animated "+effect);var transition=$.support.transition&&$dropdown.hasClass("animated");transition?$dropdown.one("bsTransitionEnd",function(){$dropdown.removeClass("animated "+effect)}).emulateTransitionEnd(Dropdownhover.TRANSITION_DURATION):$dropdown.removeClass("animated "+effect)}return false};Dropdownhover.prototype.hide=function(_dropdownLink){var that=this;var $this=$(_dropdownLink);var $parent=$this.parent();var $this_delay=$this.data("dropdown-hover-delay");Dropdownhover.TIMEOUT=window.setTimeout(function(){$parent.removeClass("open");$this.attr("aria-expanded",false)},$this_delay?$this_delay:Dropdownhover.DELAY)};Dropdownhover.prototype.position=function(dropdown){var win=$(window);dropdown.css({bottom:"",left:"",top:"",right:""}).removeClass("dropdownhover-top");var viewport={top:win.scrollTop(),left:win.scrollLeft()};viewport.right=viewport.left+win.width();viewport.bottom=viewport.top+win.height();var bounds=dropdown.offset();bounds.right=bounds.left+dropdown.outerWidth();bounds.bottom=bounds.top+dropdown.outerHeight();var position=dropdown.position();position.right=bounds.left+dropdown.outerWidth();position.bottom=bounds.top+dropdown.outerHeight();var side="";var isSubnow=dropdown.parents(".dropdown-menu").length;if(isSubnow){if(position.left<0){side="left";dropdown.removeClass("dropdownhover-right").addClass("dropdownhover-left")}else{side="right";dropdown.addClass("dropdownhover-right").removeClass("dropdownhover-left")}if(bounds.left<viewport.left){side="right";dropdown.css({left:"100%",right:"auto"}).addClass("dropdownhover-right").removeClass("dropdownhover-left")}else if(bounds.right>viewport.right){side="left";dropdown.css({left:"auto",right:"100%"}).removeClass("dropdownhover-right").addClass("dropdownhover-left")}if(bounds.bottom>viewport.bottom){dropdown.css({bottom:"auto",top:-(bounds.bottom-viewport.bottom)})}else if(bounds.top<viewport.top){dropdown.css({bottom:-(viewport.top-bounds.top),top:"auto"})}}else{var parentLi=dropdown.parent(".dropdown");var pBounds=parentLi.offset();pBounds.right=pBounds.left+parentLi.outerWidth();pBounds.bottom=pBounds.top+parentLi.outerHeight();if(bounds.right>viewport.right){dropdown.css({left:-(bounds.right-viewport.right),right:"auto"})}if(bounds.bottom>viewport.bottom&&pBounds.top-viewport.top>viewport.bottom-pBounds.bottom||dropdown.position().top<0){side="top";dropdown.css({bottom:"100%",top:"auto"}).addClass("dropdownhover-top").removeClass("dropdownhover-bottom")}else{side="bottom";dropdown.addClass("dropdownhover-bottom")}}return side};function Plugin(option){return this.each(function(){var $this=$(this);var data=$this.data("bs.dropdownhover");var settings=$this.data();if($this.data("animations")!==undefined&&$this.data("animations")!==null)settings.animations=$.isArray(settings.animations)?settings.animations:settings.animations.split(" ");var options=$.extend({},Dropdownhover.DEFAULTS,settings,typeof option=="object"&&option);if(!data)$this.data("bs.dropdownhover",data=new Dropdownhover(this,options))})}var old=$.fn.dropdownhover;$.fn.dropdownhover=Plugin;$.fn.dropdownhover.Constructor=Dropdownhover;$.fn.dropdownhover.noConflict=function(){$.fn.dropdownhover=old;return this};$(document).ready(function(){$('[data-hover="dropdown"]').each(function(){var $target=$(this);if("ontouchstart"in document.documentElement){Plugin.call($target,$.extend({},$target.data(),{onClick:true}))}else{Plugin.call($target,$target.data())}})})}(jQuery);
-     
-    </script>
-
     <!------------------------ New MegaMenu  ----------------------------->
 
     <style type="text/css">
@@ -3887,18 +3395,6 @@
             }
         }
 
-        /*@media  (max-width: 1024px){
-    .header-nabar-icon .pull-right, .pull-right-tow {
-      background-color: #47b475;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 3px 15px;
-    margin-right: 0px;
-    position: relative;
-    right: 16px;
-    bottom: -30px;
-    }
-}*/
 
         .color-btn {
             background-color: #1fd1f9 !important;
@@ -3945,17 +3441,6 @@
             }
         }
 
-        /*.color-btn1:before{
-    content: "";
-    background: rgba(0,0,0,0.9);
-    border-radius: 50px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    z-index: -1;
-}*/
         @keyframes glow {
             0% {
                 box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
@@ -3985,30 +3470,6 @@
             font-size: 14px;
         }
 
-        /*@media (max-width: 1024px){
-    .sticky_form_bp {
-        display:block !important;
-}
-}
-
-@media (max-width: 320px){
-    .sticky_form_bp  {
-        display: block;
-        
-}
-}*/
-
-        /*menu height mobile view*/
-        /*@media screen and (max-width: 320px) {
-    .main {
-        margin-top: 10px !important;
-    }
-}*/
-        /*@media screen and (max-width: 768px) {
-    .main {
-        margin-top: 10px !important;
-    }
-}*/
     </style>
 
     <style type="text/css">
@@ -4044,430 +3505,6 @@
             top: 1px;
         }
     </style>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript"
-        src="https://www.blockchainappfactory.com/fbox/jquery.fancybox.js?v=2.1.5"></script>
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript"
-        src="https://www.blockchainappfactory.com/js/jquery.matchHeight-min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://www.blockchainappfactory.com/fbox/jquery.fancybox.css?v=2.1.5"
-        media="screen">
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript"
-        src="https://www.blockchainappfactory.com/fbox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript">
-        $.fn.jQuerySimpleCounter = function( options ) {
-        var settings = $.extend({
-            start:  0,
-            end:    100,
-            easing: 'swing',
-            duration: 400,
-            complete: ''
-        }, options );
-        var thisElement = $(this);
-        $({count: settings.start}).animate({count: settings.end}, {
-            duration: settings.duration,
-            easing: settings.easing,
-            step: function() {
-                var mathCount = Math.ceil(this.count);
-                thisElement.text(mathCount);
-            },
-            complete: settings.complete
-        });
-    };
-    $('#number1').jQuerySimpleCounter({end: 500,duration: 3000});
-    $('#number2').jQuerySimpleCounter({end: 200,duration: 3000});
-    $('#number3').jQuerySimpleCounter({end: 100,duration: 2000});
-    /* AUTHOR LINK */
-    $('.about-me-img').hover(function(){
-            $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
-        }, function(){
-            $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
-    });
-    $(".sticky-form .quick-cont-btn").click(function(e) {
-        $('body').addClass('fixedPosition full-width');
-        $(".sticky-form .formdiv").addClass('show');
-        e.stopPropagation();
-    });
-    $(".close").click(function(e) {
-        $('body').removeClass('fixedPosition full-width');
-        $(".sticky-form .formdiv").removeClass('show');
-        e.stopPropagation();
-    });
-    $("#phone_common").intlTelInput({
-        utilsScript: "build/js/utils.js",
-        dropdownContainer: 'body'
-    });
-    $("#phone_sticky").intlTelInput({
-        utilsScript: "build/js/utils.js",
-        dropdownContainer: 'body'
-    });
-    $("#phone_banner").intlTelInput({
-        utilsScript: "build/js/utils.js",
-        dropdownContainer: 'body'
-    });
-    $('.home-talk-experts').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#newsletter-form-sec').offset().top
-        }, 2000);
-    });
-    var url = window.location.href;
-    $('#url').val(url);
-    // alert(url);
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "100%";
-    }
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
-    adroll_adv_id = "WDBK654P6ZFTPNTJ7HT4W5";
-    adroll_pix_id = "BYKIZBXZ5BBFHHTUURKSLV";
-    (function() {
-        var _onload = function() {
-            if(document.readyState && !/loaded|complete/.test(document.readyState)) {
-                setTimeout(_onload, 10);
-                return
-            }
-            if(!window.__adroll_loaded) {
-                __adroll_loaded = true;
-                setTimeout(_onload, 50);
-                return
-            }
-            var scr = document.createElement("script");
-            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-            scr.setAttribute('async', 'true');
-            scr.type = "text/javascript";
-            scr.src = host + "/j/roundtrip.js";
-            ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        };
-        if(window.addEventListener) {
-            window.addEventListener('load', _onload, false);
-        } else {
-            window.attachEvent('onload', _onload)
-        }
-    }());
-    function validateEmail($email) {
-    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-    return pattern.test($email);
-}
-
-function validatePhone($phone) {
-    var pattern1 = new RegExp("[0-9]+");
-    return pattern1.test($phone);
-}
-// For Common Newsletter AjaxMail Function
-$(".common_send_btn").click(function() {
-    function loader() {
-        $('<div id="loader"></div>').insertAfter(".common_send_btn");
-        $(".common_send_btn").next().addClass("loading");
-        setTimeout(function() {
-            $(".common_send_btn").next().remove();
-        }, 7000);
-    }
-    var formname = $(this).parent().parent().attr('id');
-    // alert(formname);
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    if(name != '') {
-        if((email != '') && (validateEmail(email))) {
-            if((phone != '') && (validatePhone(phone))) {
-                var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                // console.log( $("#"+formname).serialize() );
-                $(this).attr("disabled", true);
-                $(this).addClass('disabled');
-                loader();
-                $(".ajax-loader").hide();
-                var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                $.ajax({
-                    url: "ajaxmail.php",
-                    type: "POST",
-                    data: formdata,
-                    success: function(result) {
-                        //window.location.href="success";
-                        if(result == 1) {
-                            // alert("Mail Sent Successfully");
-                            window.location.href = "success";
-                            return false;
-                        } else {
-                            alert("Something went wrong, please try again later.");
-                            return false;
-                        }
-                        $(".ajax-loader").hide();
-                    },
-                    error: function() {
-                        window.location.href = "success";
-                    }
-                });
-            } else if(!validatePhone(phone)) {
-                alert("Please type correct mobile number format");
-            } else {
-                alert("please type your phone number");
-            }
-        } else if(!validateEmail(email)) {
-            alert("Please type correct email format");
-        } else {
-            alert("please type your email");
-        }
-    } else {
-        alert("please fill all fields");
-    }
-});
-$(".submit_send").click(function() {
-    function loader() {
-        $('<div id="mloader"></div>').insertAfter(".submit_send");
-        $(".submit_send").next().addClass("loading");
-        setTimeout(function() {
-            $(".submit_send").next().remove();
-        }, 7000);
-    }
-    var formname = $(this).parent().parent().parent().attr('id');
-    // alert(formname);
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    // console.log(name, email, phone);
-    if(name != '') {
-        if((email != '') && (validateEmail(email))) {
-            if((phone != '') && (validatePhone(phone))) {
-                $(this).attr("disabled", true);
-                $(this).addClass('disabled');
-                loader();
-                $(".ajax-loader").hide();
-                var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                $.ajax({
-                    url: "ajaxmail.php",
-                    type: "POST",
-                    data: formdata,
-                    success: function(result) {
-                        console.log(result);
-                        if(result == 1) {
-                            // alert("Mail Sent Successfully");
-                            window.location.href = "success";
-                            return false;
-                        } else {
-                            alert("Something went wrong, please try again later.");
-                            return false;
-                        }
-                        $(".ajax-loader").hide();
-                    }
-                });
-            } else if(!validatePhone(phone)) {
-                alert("Please type correct mobile number format");
-            } else {
-                alert("please type your mobile number");
-            }
-        } else if(!validateEmail(email)) {
-            alert("Please type correct email format");
-        } else {
-            alert("please type your email");
-        }
-    } else {
-        alert("please fill all fields");
-    }
-});
-$(".close_send").click(function() {
-    function loader() {
-        $('<div id="mloader"></div>').insertAfter(".close_send");
-        $(".close_send").next().addClass("loading");
-        setTimeout(function() {
-            $(".close_send").next().remove();
-        }, 7000);
-    }
-    var formname = $(this).parent().parent().parent().attr('id');
-    // alert(formname);
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    // console.log(name, email, phone);
-    if(name != '') {
-        if((email != '') && (validateEmail(email))) {
-            if((phone != '') && (validatePhone(phone))) {
-                $(this).attr("disabled", true);
-                $(this).addClass('disabled');
-                loader();
-                $(".ajax-loader").hide();
-                var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                $.ajax({
-                    url: "ajaxmail.php",
-                    type: "POST",
-                    data: formdata,
-                    success: function(result) {
-                        console.log(result);
-                        if(result == 1) {
-                            // alert("Mail Sent Successfully");
-                            window.location.href = "success";
-                            return false;
-                        } else {
-                            alert("Something went wrong, please try again later.");
-                            return false;
-                        }
-                        $(".ajax-loader").hide();
-                    }
-                });
-            } else if(!validatePhone(phone)) {
-                alert("Please type correct mobile number format");
-            } else {
-                alert("please type your mobile number");
-            }
-        } else if(!validateEmail(email)) {
-            alert("Please type correct email format");
-        } else {
-            alert("please type your email");
-        }
-    } else {
-        alert("please fill all fields");
-    }
-});
-/*-- pdf mail --*/
-$(".submit_send_pdf").click(function() {
-    function loader() {
-        $('<div id="loader"></div>').insertAfter(".submit_send_pdf");
-        $(".submit_send_pdf").next().addClass("loading");
-        setTimeout(function() {
-            $(".submit_send_pdf").next().remove();
-        }, 7000);
-    }
-    var formname = $(this).parent().parent().parent().attr('id');
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    // console.log(name, email, phone);
-    if(name != '') {
-        if((email != '') && (validateEmail(email))) {
-            if((phone != '') && (validatePhone(phone))) {
-                $(this).attr("disabled", true);
-                $(this).addClass('disabled');
-                $(".ajax-loader").hide();
-                loader();
-                var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                $.ajax({
-                    url: "pdfmail.php",
-                    type: "POST",
-                    data: formdata,
-                    success: function(result) {
-                        console.log(result);
-                        if(result == 1) {
-                            // alert("Mail Sent Successfully");
-                            window.open("https://www.blockchainappfactory.com/pdf/BlockchainAppFactory.pdf", '_blank');
-                            window.location.href = "success";
-                            return false;
-                        } else {
-                            alert("Something went wrong, please try again later.");
-                            return false;
-                        }
-                        $(".ajax-loader").hide();
-                    }
-                });
-            } else if(!validatePhone(phone)) {
-                alert("Please type correct mobile number format");
-            } else {
-                alert("please type your phone number");
-            }
-        } else if(!validateEmail(email)) {
-            alert("Please type correct email format");
-        } else {
-            alert("please type your email");
-        }
-    } else {
-        alert("please fill all fields");
-    }
-});
-// video fancybox
-$('.fancybox-media1').attr('rel', 'media-gallery').fancybox({
-    openEffect: 'none',
-    closeEffect: 'none',
-    prevEffect: 'none',
-    nextEffect: 'none',
-    arrows: false,
-    helpers: {
-        media: {},
-        buttons: {}
-    }
-});
-// Macth Height
-$('.equal-height').matchHeight({
-    property: 'min-height'
-});
-$('.submit_send').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('#submit').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('.common_send_btn').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('.submit_sends').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$(document).ready(function() {
-    // Disable cut copy paste
-    $('body').bind('cut copy paste', function(e) {
-        e.preventDefault();
-    });
-    // Disable mouse right click
-    $("body").on("contextmenu", function(e) {
-        return false;
-    });
-});
-    </script>
-
-
-
-
-    <!-- Side Panel - End -->
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript">
-        window.__lc = window.__lc || {};
-    window.__lc.license = 9464790;
-    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-    </script>
-    <noscript><a href="https://www.livechatinc.com/chat-with/9464790/" rel="nofollow">Chat with us</a>, powered by <a
-            href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6VQVFF" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript">
-        document.addEventListener("DOMContentLoaded", function() {
-        const imageObserver = new IntersectionObserver((entries, imgObserver) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const lazyImage = entry.target
-                    //console.log("lazy loading ", lazyImage)
-                    lazyImage.src = lazyImage.dataset.src
-                }
-            })
-        });
-        const arr = document.querySelectorAll('img.lazy')
-        arr.forEach((v) => {
-            imageObserver.observe(v);
-        })
-    })
-    </script>
-
-    <!-- Side Panel - Start -->
-    <!-- <div id="mySidepanel4" class="sidepanel4">
-  <a href="" class="closebtn1" onclick="closeNav4()">&times;</a>
-    <a href="https://www.blockchainappfactory.com/offer" id="halloween-offer"> <img src="https://www.blockchainappfactory.com/images/offer/newyear-image-10.png" style="max-width: 240px !important; "></a> 
-</div>
-
-<button class="openbtn1" onclick="openNav4()" style="max-width:60px; border:0; border-radius: 50%; left: 20px; padding: 0; margin:0; box-shadow: none; filter: none; background: none; position: fixed; top: 50%; z-index: 1;" > <img src="https://www.blockchainappfactory.com/images/offer/new-year.gif" > </button> -->
 
 
     <style type="text/css">
@@ -4546,17 +3583,6 @@ $(document).ready(function() {
 
         /* Style the button that is used to open the sidepanel */
         .openbtn1 {
-            /*font-size: 20px;
-  cursor: pointer;
-  background-color: transparent;
-  color: white;
-  padding: 0px;
-  border: none;
-  position: fixed;
-  top: 43%;
-  left: 0;
-  width: 90px;
-  z-index: 99999;*/
             /*animation: zoom-in-zoom-out 1s ease infinite;*/
             filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
         }
@@ -4579,54 +3605,6 @@ $(document).ready(function() {
             }
         }
     </style>
-
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript">
-        /* Set the width of the sidebar to 250px (show it) */
-function openNav4() {
-  document.getElementById("mySidepanel4").style.width = "250px";
-}
-
-/* Set the width of the sidebar to 0 (hide it) */
-function closeNav4() {
-  document.getElementById("mySidepanel4").style.width = "0";
-}
-    </script>
-
-    <!-- Side Icon - Start -->
-    <!-- <style type="text/css">
-    .social-icons{position: fixed; bottom: 20%; left: 15px; z-index: 100000; width: 50px; height: 50px; /*box-shadow: -3px -6px 16px 0px rgb(253 253 253 / 69%), 9px 5px 14px 0px rgb(0 0 0 / 15%);*/ border-radius: 50px; padding: 5px 0 0 12px;}
-    .social-icons ul{margin: 0; padding: 0;}
-    .social-icons ul li{margin: 5px 0; width: 40px; height: 40px; background-color: #4caf50; border-radius: 50%; text-align: center; line-height: 22px;}
-    .social-icons ul li:after {position: absolute; content: ""; height: calc(100% + 16px); width: calc(100% + 16px); top: -8px; left: -8px; border-radius: 50%; border: 3px solid #4caf50 !important; animation: 1.5s linear 0s normal none infinite focuse;}
-    .social-icons ul li i{color: #fff; font-size: 26px; text-align: center; line-height: 40px;}
-@keyframes  focuse {
-  0% {
-    transform: scale(0.8);
-    opacity: 1; }
-  75% {
-    transform: scale(1.2);
-    opacity: 0; }
-  100% {
-    transform: scale(1.2);
-    opacity: 0; } }
-</style>
-<div class="social-icons">
-<ul>
-<li style="margin-bottom:20px; position:relative; background: #07b7f6;">
-<a href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" target="blank" style="position: relative; z-index: 999999;">
-<img src="images/appointment.webp"> 
-</a>
-</li>
-<li style="margin-bottom:20px; position:relative;">
-<a href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" target="blank" style="position: relative; z-index: 999999;">
-<i class="fa fa-whatsapp"></i> 
-</a>
-</li>
-</ul>
-</div> -->
-    <!-- Side Icon - End -->
-
-
 
 
     <!-- SocialMedia Bottom - Start -->
@@ -4771,142 +3749,6 @@ function closeNav4() {
         }
     </style>
 
-    <button id="btn" class="close-btn">x</button>
-
-    <div id="box">
-        <div id="fixed-social" class="fixed-social hide">
-            <!-- <div class="items">
-        <a rel="nofollow" href="https://api.whatsapp.com/send?l=en&amp;text=Hi!%20I%27m%20interested%20in%20one%20of%20your%20products%20at%20BLOCKCHAIN%20APP%20FACTORY&amp;phone= " target="blank">
-            <div class="icons"><img src="https://www.blockchainappfactory.com/images/whatsapp.webp" style="border-radius: 50%;"></div>
-        </a>
-    </div> -->
-
-            <!-- <div class="items">
-        <a href=" " target="blank">
-            <div class="icons"><img src="img/mail.webp"></div>
-        </a>
-    </div> -->
-
-            <!-- <div class="items"> 
-        <a rel="nofollow" href="mailto:info@blockchainappfactory.com" target="blank">
-            <div class="icons"><i class="fa fa-envelope"></i></div>
-        </a>
-    </div> -->
-
-            <div class="items">
-                <a rel="nofollow" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1"
-                    target="blank">
-                    <div class="icons"><img src="https://www.blockchainappfactory.com/images/appointment.webp"></div>
-                    <!-- <div class="text">Free 15-Minute Consultation</div> -->
-                </a>
-            </div>
-
-            <div class="items">
-                <a rel="nofollow" href="https://t.me/amarbaf" target="blank">
-                    <div class="icons"><i class="fa fa-paper-plane"></i></div>
-                    <!-- <div class="text">Free 15-Minute Consultation</div> -->
-                </a>
-            </div>
-
-            <!-- <div class="items"> 
-        <a href="https://www.blockchainappfactory.com/offer" target="blank">
-            <div class="icons openbtn1" onclick="openNav4()"><img src="https://www.blockchainappfactory.com/images/offer/new-year.gif"></div>
-        </a>
-    </div> -->
-        </div>
-
-    </div>
-
-    <!-- <div id="mySidepanel4" class="sidepanel4">
-  <a href="" class="closebtn1" onclick="closeNav4()">&times;</a>
-    <a href="https://www.blockchainappfactory.com/offer" id="halloween-offer"> <img src="https://www.blockchainappfactory.com/images/offer/newyear-image-10.png" style="max-width: 240px !important; "></a> 
-</div> -->
-
-
-    <!-- xmas_box Start -->
-    <!-- <div class="mob_not">
-<div id="hideDiv">
-<div class="alert xmas_box1 alert-primary alert-dismissible show">
-    <div class="x_box"><a href="offer-zone"> <img src="img/black-friday.webp" style="max-width: 240px !important; margin-bottom: 10px; box-shadow: 5px 5px 11px -3px #999; border-radius: 15px;"></a></div>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-</div>
-</div>
-</div>
-
-<style type="text/css">
-    #hideDivs .alert.xmas_box1{background:none;bottom:60px;width:280;left:0px}#hideDivs{text-align:center;z-index:100;position:relative}#hideDiv{/*animation:fadeOut 0.5s forwards;*/animation-delay:5s;text-align:center;z-index:100;position:relative}@keyframes  fadeOut{from{opacity:1}to{opacity:0}}.xmas_box1{position:fixed;bottom:100px;/*width:100%;*/ border:none;border-radius:0px;z-index:1000;padding:0;margin:0;max-width:250px;left:0px;right:0;}.xmas_box1 p{margin:0px;color:#fff;max-width:990px;margin:0 auto;font-size:13px;line-height:20px;padding:10px;text-align:center}.xmas_box1.alert-dismissible .close{top:-15px;right:5px;position:absolute;color:#fff;opacity:1 !important;text-shadow:none;font-size:36px;z-index:100;padding:0px;border:none;border-radius:0px;height:30px;width:30px;background:red !important;border-radius:7px;line-height:0px}.xmas_box1.alert-dismissible .close:hover{background:#303030} 
-    .alert-primary{background-color: transparent; border-color: transparent;}
-   @media only screen and (min-width: 320px) and (max-width: 767px) { .xmas_box1{width: 260px;bottom: 180px; display:block !important;} }
-   @media only screen and (min-width: 768px) and (max-width: 899px) { .xmas_box1{width: 260px;bottom: 180px; display:block !important;} }
-   @media only screen and (min-width: 1024px) and (max-width: 1200px) { .xmas_box1{width: 260px;display:block !important;} } 
-</style>  -->
-    <!-- xmas_box End -->
-
-
-
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript">
-        /*-- For Scroll --*/    
-    $(document).scroll(function() {
-
-        myID = document.getElementById("fixed-social");
-
-        var myScrollFunc = function () {
-            var y = window.scrollY;
-            if (y >= 800) {
-                myID.className = "fixed-social show1"
-            } else {
-                myID.className = "fixed-social hide"
-            }
-        };
-
-        window.addEventListener("scroll", myScrollFunc);
-    });
-
-
-$(document).scroll(function(){ 
-  //more then or equals to 
-  if($(document).scrollTop() >= 800 ){ 
-      $( "#btn" ).css( "display", "block" ); 
- 
-  //less then 800px from top 
-  } else { 
-      
- $( "#btn" ).css( "display", "none" ); 
-  } 
-}); 
-
- 
- 
-/*-- For Close Button --*/
-const box = document.getElementById('box'); 
-const btn = document.getElementById('btn'); 
-btn.addEventListener('click', function handleClick() {
-  if (box.style.display === 'none') {
-    box.style.display = 'block'; 
-    btn.textContent = 'x';
-  } else {
-    box.style.display = 'none'; 
-    btn.textContent = '>';
-  }
-});
- 
-    </script>
-
-    <!-- SocialMedia Bottom - End -->
-
-
-    <!-- Button Lightbox Script - Start -->
-    <script type="cc0b3da23b0bde7b9e651c0b-text/javascript">
-        $(".crypto-popup").click(function(e) {
-        $('crypto-popup').addClass('fixedPosition full-width');
-        $(".login-popup").addClass('show');
-        e.stopPropagation();
-    });
-    </script>
-    <!-- Button Lightbox Script - End -->
-
-    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
-        data-cf-settings="cc0b3da23b0bde7b9e651c0b-|49" defer></script>
 </div>
 
 
