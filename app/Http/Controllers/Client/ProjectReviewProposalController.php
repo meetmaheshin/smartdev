@@ -242,7 +242,7 @@ class ProjectReviewProposalController extends Controller
             'proposal_url' => $projectData->id
         ];
     
-        Mail::to('kushalvarin.ongraph@gmail.com')->send(new JobInvitationMail($jobDetails));
+        Mail::to($userReciverData->email)->send(new JobInvitationMail($jobDetails));
 
         return response()->json(['status' => true, 'url'=>route('project.proposal.view', ['proposalId' => $projectId, 'view=nav-invite-freelancers']),'notification'=>$userReciverData->notifications->first()]);
     }
