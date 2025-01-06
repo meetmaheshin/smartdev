@@ -3332,7 +3332,7 @@
 <section class="common_spacing " style="padding-top: 30px;">
     <div class="container">
         <div class="row">
-            <h3 class="sec_tit underline text-center">Additional Token Marketing Strategies to Elevate Your Campaign</h3>
+            <h3 class="sec_tit underline text-center" style="width: 100%">Additional Token Marketing Strategies to Elevate Your Campaign</h3>
         </div>
         <p class="text-center" style="color: #000;">Our seasoned team employs a range of cutting-edge token marketing tactics designed to enhance your token’s value and captivate investors.</p>
         <div class="row mt40">

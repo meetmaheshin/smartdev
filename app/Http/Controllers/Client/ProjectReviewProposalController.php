@@ -21,6 +21,8 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Notification;
 use Auth, Session, URL,DB;
 use App\Models\ProjectQuestion;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\JobInvitationMail;
 
 
 class ProjectReviewProposalController extends Controller
@@ -226,7 +228,22 @@ class ProjectReviewProposalController extends Controller
         $userReciverData  = User::where('id',$receiver)->first();
 
         $projectData  = $this->project->projectData($projectId);
+        // dd($projectData);
         Notification::send($userReciverData, new SendInvitation($projectData));
+
+        // send mail to the freelancer
+        $jobDetails = [
+            'name' => $projectData->title,
+            'payment_type' => $projectData->budget,
+            'budget' => $projectData->project_budget,
+            'hourly_from' => $projectData->hourly_from,
+            'hourly_to' => $projectData->hourly_to,
+            'time_estimate' => $projectData->duration,
+            'proposal_url' => $projectData->id
+        ];
+    
+        Mail::to('kushalvarin.ongraph@gmail.com')->send(new JobInvitationMail($jobDetails));
+
         return response()->json(['status' => true, 'url'=>route('project.proposal.view', ['proposalId' => $projectId, 'view=nav-invite-freelancers']),'notification'=>$userReciverData->notifications->first()]);
     }
 

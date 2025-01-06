@@ -218,18 +218,18 @@ jQuery(document).ready(function () {
                                                     <p class="m-0 font_11 color_black">Looking for comprehensive and deep expertise in this field</p>\
                                                 </div>\
                                             </label>\
-                                        </div>\
-                                        <div class="project_term_radio custom_radio_btn">\
-                                            <label for="project_level_3" class="position-relative d-flex mb-3"> \
-                                                <input type="radio" name="level" id="project_level_3"  value="level_small" ' +
-            (projectLevel == "level_small" ? "checked" : "") +
-            '><span class="mid_dot_parent"></span>\
-                                                <div class="label_content">\
-                                                    <p class="font_14 color_black font_weight_500">Small</p>\
-                                                    <p class="m-0 font_11 color_black">Quick and straightforward tasks (ex. update text and images on a webpage)</p>\
-                                                </div>\
-                                            </label>\
                                         </div>';
+            //                             <div class="project_term_radio custom_radio_btn">\
+            //                                 <label for="project_level_3" class="position-relative d-flex mb-3"> \
+            //                                     <input type="radio" name="level" id="project_level_3"  value="level_small" ' +
+            // (projectLevel == "level_small" ? "checked" : "") +
+            // '><span class="mid_dot_parent"></span>\
+            //                                     <div class="label_content">\
+            //                                         <p class="font_14 color_black font_weight_500">Small</p>\
+            //                                         <p class="m-0 font_11 color_black">Quick and straightforward tasks (ex. update text and images on a webpage)</p>\
+            //                                     </div>\
+            //                                 </label>\
+            //                             </div>';
 
         jQuery(document).on("click", ".project_term_radio input", function () {
             let input_change = jQuery(this);

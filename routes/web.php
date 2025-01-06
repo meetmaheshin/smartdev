@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\Auth\JobController as AdminJobController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\ShareableLinkController;
+use App\Http\Controllers\Client\ClientDetailController;
 
 
 /*
@@ -187,6 +188,16 @@ Route::middleware(['auth', 'prevent-back-history','verified'])->group(function (
     });
 
     Route::group(['middleware' => 'accessControl'], function () {
+        Route::prefix('create-client')->group(function () {
+            // Route for creating client company details
+            Route::get('/company-details', [ClientDetailController::class, 'createCompanyDetails'])->name('create_client.company_details');
+
+            Route::get('/profile', [ClientDetailController::class, 'createProfile'])->name('create_client.profile');
+
+            // Route for creating client location
+            Route::get('/location', [ClientDetailController::class, 'createLocation'])->name('create_client.location');
+        });
+
         // for client
         Route::group(['prefix' => 'client'], function () {
             Route::get('/details', [DashboardController::class, 'details'])->name('client.details');
@@ -853,10 +864,25 @@ Route::get('/defi-marketing-company', function () {
 })->name('defi-marketing-company');
 
 Route::get('/cryptocurrency-exchange-marketing', function () {
-    // return view('static.cryptocurrency-exchange-marketing');
+    return view('static.cryptocurrency-exchange-marketing');
 })->name('cryptocurrency-exchange-marketing');
 
-// web3-marketing-services
 Route::get('/web3-marketing-services', function () {
-    // return view('static.web3-marketing-services');
+    return view('static.web3-marketing-services');
 })->name('web3-marketing-services');
+
+Route::get('/influencer-marketing-agency', function () {
+    return view('static.influencer-marketing-agency');
+})->name('influencer-marketing-agency');
+
+Route::get('/bounty-marketing', function () {
+    return view('static.bounty-marketing');
+})->name('bounty-marketing');
+
+Route::get('/dapp-marketing-agency', function () {
+    return view('static.dapp-marketing-agency');
+})->name('dapp-marketing-agency');
+
+Route::get('/kol-marketing-agency', function () {
+    return view('static.kol-marketing-agency');
+})->name('kol-marketing-agency');

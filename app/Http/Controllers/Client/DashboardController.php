@@ -24,6 +24,10 @@ class DashboardController extends Controller
     public function __construct()
     {
         $this->middleware(['auth', 'verified']);
+        // Apply 'client.profile' middleware only if the request is not AJAX
+        if (!request()->ajax()) {
+            $this->middleware(['client.profile']);
+        }
         $this->project = new Project;
         $this->proposalSetting = new ProposalSetting;
 

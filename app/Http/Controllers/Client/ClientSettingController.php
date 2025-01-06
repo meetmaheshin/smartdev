@@ -130,7 +130,7 @@ class ClientSettingController extends Controller
                 'user_id'   => auth()->user()->id,
             ],
             [
-                'firstname' => $request->firstNameContact,
+                // 'firstname' => $request->firstNameContact,
                 'phone' =>  $request->phone,
                 'time_zone' =>  $request->timeZone,
                 'country' =>  $request->country,

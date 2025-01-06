@@ -24,7 +24,7 @@ class ClientCompanyContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'firstNameContact' => 'required',
+            // 'firstNameContact' => 'required',
             'phone' => 'required|numeric|digits:10',
             'timeZone' => 'required',
             'country' => 'required',

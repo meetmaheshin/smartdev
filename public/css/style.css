@@ -2372,3 +2372,35 @@ a.remove_portfolio_attachment {
 .active-bar{
     background: powderblue;
 }
+
+
+
+.loader {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+    margin-left: 12px; /* Add space between text and loader */
+    display: none; /* Hide by default */
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    inset: -10px;
+    border-radius: 50%;
+    border: 3px solid #4EA52F;
+    animation: prixClipFix 2s infinite linear;
+}
+
+@keyframes prixClipFix {
+    0% { clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0); }
+    25% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0); }
+    50% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%); }
+    75% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
+    100% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0); }
+}
