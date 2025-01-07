@@ -1,8 +1,8 @@
 @extends('layouts.static')
-@section('title', 'KOL Marketing Agency')
-<link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+    @section('title', 'KOL Marketing Agency')
+    <link rel="stylesheet" type="text/css" href="{{asset('css/vendor.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/mystyle.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
 @section('content')
 
 <style type="text/css">
@@ -3853,132 +3853,94 @@
     ],
 ])
 
-<section id="why_ben" class="tinder-bg gray-bg">
-    <div class="container container-center">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="section-title center text-center">
-                <h2 class="sec_tit underline text-center">Impactful Roles of KOLs in Web3 Project Marketing Campaigns
-                </h2>
-                <p>We are dedicated to collaborating with KOLs, impacting the project growth results through their
-                    dynamic roles in the Web3 marketing ecosystem.</p>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 equalize">
-            <div class="ben_wrap">
-                <span><img class="lazy" data-src="images/kol-marketing-agency/icons/brand.webp"></span>
-                <div class="bent_cnt">
-                    <h5>Brand Ambassador</h5>
-                    <p>Our targeted KOLs serve as the face of a brand, sharing their personal experiences, reviews, and
-                        recommendations about projects to influence their followers' decisions.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 equalize">
-            <div class="ben_wrap">
-                <span><img class="lazy" data-src="images/kol-marketing-agency/icons/creator.webp"></span>
-                <div class="bent_cnt">
-                    <h5>Content Creator</h5>
-                    <p>KOLs that we collaborate with produce high-quality content, such as videos or blogs, to boost
-                        brand awareness and drive audience engagement for your Web3 projects.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 equalize">
-            <div class="ben_wrap">
-                <span><img class="lazy" data-src="images/kol-marketing-agency/icons/community.webp"></span>
-                <div class="bent_cnt">
-                    <h5>Community Builder</h5>
-                    <p>Our KOL roster fosters loyal online communities by engaging with followers, answering their
-                        questions, and providing support to strengthen your brand connections.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 equalize">
-            <div class="ben_wrap">
-                <span><img class="lazy" data-src="images/kol-marketing-agency/icons/influencer.webp"></span>
-                <div class="bent_cnt">
-                    <h5>Influencers</h5>
-                    <p>KOLs take part in Web3 marketing campaigns, promoting projects to their ideal audience in
-                        exchange for compensation, effectively being the reason to drive sales.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 equalize">
-            <div class="ben_wrap">
-                <span><img class="lazy" data-src="images/kol-marketing-agency/icons/leadership.webp"></span>
-                <div class="bent_cnt">
-                    <h5>Thought Leaders</h5>
-                    <p>We connect KOLs who share industry insights, position Web3 brands as thought leaders, and build
-                        trust and credibility with potential users for capable projects.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 equalize">
-            <div class="ben_wrap">
-                <span><img class="lazy" data-src="images/kol-marketing-agency/icons/testing.webp"></span>
-                <div class="bent_cnt">
-                    <h5>Project Testers</h5>
-                    <p>We allow KOLs to test projects before launch, offering feedback to improve the functionalities
-                        and reduce potential issues before reaching the wider Web3 market.</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="clearfix"></div>
+@include('static.small-square-card-section', [
+    'title' => 'Powerful Roles of KOLs in Web3 Project Marketing', 
+    'desc' => "We excel in leveraging KOLs to drive transformative growth for Web3 projects, utilizing their influential roles within the marketing landscape.",
+    'cards' => [
+        [
+            'title' => 'Brand Ambassador',
+            'desc' => "Our strategic KOLs embody your brand, sharing their authentic experiences, reviews, and endorsements to shape their followers' perceptions and decisions.",
+            'image' => 'kol-marketing-agency/icons/brand.png',
+        ],
+        [
+            'title' => 'Content Creator',
+            'desc' => "The KOLs we partner with craft compelling, high-impact content—videos, blogs, and more—to elevate brand visibility and drive deep engagement with your Web3 initiatives.",
+            'image' => 'kol-marketing-agency/icons/creator.png',
+        ],
+        [
+            'title' => 'Community Builder',
+            'desc' => "Our KOLs cultivate vibrant, loyal online communities by actively engaging with followers, addressing inquiries, and fortifying brand relationships.",
+            'image' => 'kol-marketing-agency/icons/community.png',
+        ],
+        [
+            'title' => 'Influencers',
+            'desc' => "KOLs drive your Web3 project’s success by reaching and resonating with their target audiences, turning their endorsements into tangible engagement and sales.",
+            'image' => 'kol-marketing-agency/icons/influencer.png',
+        ],
+        [
+            'title' => 'Thought Leaders',
+            'desc' => "We connect with KOLs who share profound industry insights, positioning your Web3 brand as a leader and earning the trust and credibility of potential users.",
+            'image' => 'kol-marketing-agency/icons/leadership.png',
+        ],
+        [
+            'title' => 'Project Testers',
+            'desc' => "Our KOLs rigorously test your project pre-launch, providing critical feedback to refine functionalities and minimize issues before your broader Web3 rollout.",
+            'image' => 'kol-marketing-agency/icons/testing.png',
+        ],
+    ],
+    'cta_1' => '#',
+    'cta_2' => 'consultation'
+])
 
-    </div>
-</section>
 
 <section class="welcome-content">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h2 class="sec_tit underline text-center text-white">Deliverables You Can Avail through Our Web3 KOL
-                    Marketing Agency</h2>
-                <p class="text-center text-white" style="font-size: 16px;">Our team ensures that we provide a
-                    comprehensive set of deliverables that cover all the necessary aspects of the plan to effectively
-                    enhance your project visibility through our Web3 KOL marketing agency.</p>
+                <h2 class="sec_tit underline text-center text-white">Exceptional Deliverables from Our Web3 KOL Marketing Agency</h2>
+                <p class="text-center text-white" style="font-size: 16px;">Our team is committed to delivering a thorough suite of services to amplify your project's presence through our premier Web3 KOL marketing agency:</p>
             </div>
             <div align="center" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <ul>
                     <li>
-                        <div class="icons"><img class="lazy" data-src="images/kol-marketing-agency/icons/identity.svg">
+                        <div class="icons"><img class="lazy" src="{{ asset('images/kol-marketing-agency/icons/identity.png') }}">
                         </div>
                         <p class="white">KOL Identification</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/onboarding.svg"></div>
+                                src="{{ asset('images/kol-marketing-agency/icons/onboarding.png') }}"></div>
                         <p class="white">KOL Onboarding</p>
                     </li>
                     <li>
-                        <div class="icons"><img class="lazy" data-src="images/kol-marketing-agency/icons/campaign.webp">
+                        <div class="icons"><img class="lazy" src="{{ asset('images/kol-marketing-agency/icons/campaign.png') }}">
                         </div>
-                        <p class="white">Campaign Plan and strategy</p>
+                        <p class="white">Campaign Planning and Strategy</p>
                     </li>
                     <li>
-                        <div class="icons"><img class="lazy" data-src="images/kol-marketing-agency/icons/content.webp">
+                        <div class="icons"><img class="lazy" src="{{ asset('images/kol-marketing-agency/icons/content.png') }}">
                         </div>
                         <p class="white">Content Creation</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/monitoring.webp"></div>
+                                src="{{ asset('images/kol-marketing-agency/icons/monitoring.png') }}"></div>
                         <p class="white">Monitoring Tools and Techniques</p>
                     </li>
                     <li>
-                        <div class="icons"><img class="lazy" data-src="images/kol-marketing-agency/icons/reports.webp">
+                        <div class="icons"><img class="lazy" src="{{ asset('images/kol-marketing-agency/icons/report.png') }}">
                         </div>
                         <p class="white">Reporting and Analytics</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/management.svg"></div>
+                                src="{{ asset('images/kol-marketing-agency/icons/management.svg') }}"></div>
                         <p class="white">Crisis Management</p>
                     </li>
                     <li>
                         <div class="icons"><img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/community.webp"></div>
+                                src="{{ asset('images/kol-marketing-agency/icons/community.png') }}"></div>
                         <p class="white">Community Building</p>
                     </li>
                 </ul>
@@ -3989,145 +3951,99 @@
     </div>
 </section>
 
-<section class="integration">
-    <div class="container container-center">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="section-title text-center">
-                <h2 class="title-th sec_tit underline">Our Streamlined Strategy for Conducting KOL Influencer Marketing
-                    Campaign</h2>
-                <p>We develop an ideal strategy, ticking all the aspects in our checklist to conduct a successful KOL
-                    influencer marketing campaign.</p>
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
-            <div class="integration-items">
-                <div class="icons"> <img class="lazy" data-src="images/kol-marketing-agency/icons/testing.webp"></div>
-                <p>Check Alignment and Synergy</p>
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
-            <div class="integration-items">
-                <div class="icons"> <img class="lazy" data-src="images/kol-marketing-agency/icons/kpi-optimization.webp"
-                        style="width:54px;"> </div>
-                <p>Set Clear Objectives and KPIs</p>
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
-            <div class="integration-items">
-                <div class="icons"> <img class="lazy" data-src="images/kol-marketing-agency/icons/content.webp"
-                        style="width:54px;"> </div>
-                <p>Create Engaging Content</p>
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
-            <div class="integration-items">
-                <div class="icons"> <img class="lazy" data-src="images/kol-marketing-agency/icons/community.webp"
-                        style="width:54px;"> </div>
-                <p>Engaging the Community with Active Sessions</p>
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
-            <div class="integration-items">
-                <div class="icons"> <img class="lazy" data-src="images/kol-marketing-agency/icons/optimization.webp"
-                        style="width:54px;"> </div>
-                <p>Monitor and Optimize Campaign Performance</p>
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 equalize">
-            <div class="integration-items">
-                <div class="icons"> <img class="lazy" data-src="images/kol-marketing-agency/icons/trust.webp"
-                        style="width:54px;"> </div>
-                <p>Build Long-Term Relationships</p>
-            </div>
-        </div>
-
-    </div>
-</section>
+@include('static.round-image-card-with-text', [
+    'title' => "Our Expert Blueprint for Effective KOL Marketing", 
+    'desc' => "We implement a meticulously crafted strategy to ensure the success of your KOL influencer marketing campaign, covering all critical elements",
+    'cards' => [
+        [
+            'title' => 'Align and Synergize KPIs',
+            'image' => 'kol-marketing-agency/icons/kpi-optimization.webp'
+        ],
+        [
+            'title' => 'Define Clear Objectives and Metrics',
+            'image' => "kol-marketing-agency/icons/objectives.png"
+        ],
+        [
+            'title' => 'Develop Compelling Content',
+            'image' => 'kol-marketing-agency/icons/content.png'
+        ],
+        [
+            'title' => 'Foster Community Engagement through Active Sessions',
+            'image' => 'kol-marketing-agency/icons/community.png'
+        ],
+        [
+            'title' => 'Continuously Monitor and Refine Performance',
+            'image' => 'kol-marketing-agency/icons/optimization.png'
+        ],
+        [
+            'title' => 'Cultivate Lasting Relationships',
+            'image' => 'kol-marketing-agency/icons/trust.webp'
+        ],
+    ],
+])
 
 <div class="common_spacing" style="padding-top: 0">
     <div class="container">
         <div class=" ">
-            <h3 class="sec_tit underline text-center">Compelling Benefits of Leveraging Our Web3 KOL Marketing Services
-            </h3>
-            <p class="text-center">Our expert marketing team collaborates with KOLs to empower projects with enormous
-                advantages with our exceptional Web3 KOL marketing services.</p>
+            <h3 class="sec_tit underline text-center">Unlock Exceptional Benefits Through Elite KOL Collaborations</h3>
+            <p class="text-center">Our expert team delivers transformative benefits by partnering with top KOLs to elevate your Web3 project's success.</p>
         </div>
         <div class="row mt20">
             <div class="container container-center">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/brand.webp"> </div>
+                                src="{{ asset('images/kol-marketing-agency/icons/brand.png') }}"> </div>
                         <div class="awesome-features-text">
-                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Increased Brand
-                                    Awareness</strong>We help you amplify the reach of a larger audience and enhance
-                                project recognition by harnessing the power of top KOLs' extensive and engaged
-                                followings and networks.</p>
+                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Enhanced Brand Visibility</strong>Leverage the extensive reach and engaged followings of leading KOLs to significantly expand your project's audience and boost recognition.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/community.webp"> </div>
+                                src="{{ asset('images/kol-marketing-agency/icons/community.png') }}"> </div>
                         <div class="awesome-features-text">
-                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Improved Community
-                                    Engagement</strong>We collaborate with leading KOLs, fostering a loyal community and
-                                driving new user acquisition by building strong engagement and excitement around your
-                                Web3 project.</p>
+                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Elevated Community Engagement</strong>Collaborate with influential KOLs to cultivate a dedicated community, sparking enthusiasm and driving new user acquisition for your Web3 initiative.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/growth.webp"> </div>
+                                src="{{ asset('images/kol-marketing-agency/icons/growth.webp') }}"> </div>
                         <div class="awesome-features-text">
-                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Accelerated
-                                    Adoption and Growth</strong>Our team strategically plans and executes KOL marketing
-                                campaigns that boost user adoption and market penetration by recommending your project
-                                to their loyal followers.</p>
+                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Accelerated Growth and Adoption</strong>Strategically crafted KOL campaigns propel user adoption and market penetration, positioning your project prominently within the Web3 landscape.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/credibility.webp"> </div>
+                                src="{{ asset('images/kol-marketing-agency/icons/credibility.png') }}"> </div>
                         <div class="awesome-features-text">
-                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Enhanced
-                                    Credibility and Trust</strong>Our KOL marketing strategy enables endorsements that
-                                build trust and address skepticism, enhancing your project's credibility and overcoming
-                                misconceptions about Web3.</p>
+                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Strengthened Credibility and Trust</strong>Utilize authoritative KOL endorsements to build trust and dispel skepticism, solidifying your project's reputation and addressing potential doubts.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/marketing.webp"> </div>
+                                src="{{ asset('images/kol-marketing-agency/icons/marketing.png') }}"> </div>
                         <div class="awesome-features-text">
-                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Cost-Effective
-                                    Marketing</strong>Our experienced KOL marketing team offers a cost-effective way for
-                                Web3 projects to reach a broad audience with targeted campaigns compared to traditional
-                                advertising.</p>
+                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Cost-Efficient Promotion</strong>Achieve broad outreach and targeted impact with our cost-effective KOL marketing, delivering superior results compared to traditional advertising methods.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 equalize">
                     <div class="awesome-features-wrapper text-center mb-30">
                         <div class="awesome-features-icon-img"> <img class="lazy"
-                                data-src="images/kol-marketing-agency/icons/roi.webp"> </div>
+                                src="{{ asset('images/kol-marketing-agency/icons/roi.png') }}"> </div>
                         <div class="awesome-features-text">
-                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Faster
-                                    ROI</strong>We partner with the right KOLs in our marketing campaign to deliver
-                                quicker returns by driving user acquisition and improving conversion rates, leading to
-                                faster ROI.</p>
+                            <p> <strong style="display:block; font-size: 18px; padding-bottom: 5px;">Rapid Return on Investment</strong>Partner with the ideal KOLs to expedite user acquisition and enhance conversion rates, ensuring swift and substantial returns on your marketing investment.</p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -4137,87 +4053,46 @@
     .time-line .year {
         overflow: hidden;
     }
+    
+    .time-line .timeline .timeline-content .year img {
+        width: 60px;
+        margin-top: 8px;
+    }
 </style>
-<section class="gray_bg">
-    <div class="container">
 
-        <div class="section-title center text-center">
-            <h3 class="sec_tit underline text-center">Our Stable Approach Towards Web3 KOL Marketing</h3>
-            <p>We follow a steady and stable approach towards Web3 KOL marketing to help various projects achieve their
-                goals by perfectly aligning with their business requirements.</p>
-        </div>
-
-        <div class="time-line">
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            data-src="images/kol-marketing-agency/icons/identity.svg"></span>
-                    <div class="inner-content">
-                        <h4 class="title">Identifying the Right KOLs</h4>
-                        <p class="description">
-                            We find KOLs whose audience matches the target market, evaluate their engagement rates for
-                            effective reach, and choose those who genuinely support our Web3 project.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy" data-src="images/kol-marketing-agency/icons/trust.webp"
-                            style="width:64px"></span>
-                    <div class="inner-content">
-                        <h4 class="title">Building Strong Relationships</h4>
-                        <p class="description">
-                            Our team uses personalized outreach to highlight collaboration value, offer incentives like
-                            exclusive access, and maintain regular communication to ensure alignment.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            data-src="images/kol-marketing-agency/icons/tailored.webp"></span>
-                    <div class="inner-content">
-                        <h4 class="title">Creating Tailored Content</h4>
-                        <p class="description">
-                            We collaborate with KOLs to produce content that resonates with their audience, aligns with
-                            your project values, and includes interactive elements to boost engagement.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            data-src="images/kol-marketing-agency/icons/influencer.webp"></span>
-                    <div class="inner-content">
-                        <h4 class="title">Leveraging KOL Influence</h4>
-                        <p class="description">
-                            We utilize KOLs' social media platforms to amplify the project’s message, encourage
-                            community interaction, and establish KOL as a thought leader in the Web3 space.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            data-src="images/kol-marketing-agency/icons/optimization.webp"></span>
-                    <div class="inner-content">
-                        <h4 class="title">Measuring and Optimizing</h4>
-                        <p class="description">
-                            We track KPIs such as traffic and engagement to evaluate success, use data to refine
-                            strategies, and apply insights from campaigns to enhance future marketing efforts.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
+@include('static.img-frame-alternate-section', [
+    'title' => 'Our Proven Methodology for Web3 KOL Marketing', 
+    'desc' => "We implement a robust and strategic approach to Web3 KOL marketing, meticulously aligning with your project’s objectives to deliver exceptional results.",
+    'cards' => [
+        [
+            'title' => 'Strategic KOL Selection',
+            'desc' => "We meticulously identify KOLs whose followers align with your target demographic, assessing their engagement metrics to ensure impactful reach and authentic advocacy for your Web3 initiative.",
+            'image' => 'kol-marketing-agency/icons/creation.png'
+        ],
+        [
+            'title' => 'Forging Strong Partnerships',
+            'desc' => "Our approach involves tailored outreach to establish valuable relationships, offering exclusive incentives and maintaining consistent communication to ensure a synergistic collaboration.",
+            'image' => 'kol-marketing-agency/icons/partnerships.png'
+        ],
+        [
+            'title' => 'Crafting Customized Content',
+            'desc' => "We work closely with KOLs to develop compelling content that resonates with their audience and reflects your project’s core values, incorporating interactive elements to drive heightened engagement.",
+            'image' => 'kol-marketing-agency/icons/tailored.webp'
+        ],
+        [
+            'title' => 'Harnessing KOL Influence',
+            'desc' => "We leverage KOLs’ platforms to amplify your project’s message, foster community interaction, and position the KOL as a leading authority within the Web3 landscape.",
+            'image' => 'kol-marketing-agency/icons/influencer.png'
+        ],
+        [
+            'title' => 'Data-Driven Refinement',
+            'desc' => "We rigorously monitor key performance indicators such as traffic and engagement, using data-driven insights to fine-tune strategies and enhance the effectiveness of future marketing endeavors.",
+            'image' => 'kol-marketing-agency/icons/optimization.png'
+        ],
+    ],
+    'cta1' => 'consultation',
+    'cta2' => '#'
+])
 
 <style type="text/css">
     :root {
@@ -4332,242 +4207,6 @@
     }
 </style>
 
-
-<div id="packages" class="common_spacing" style="padding:40px 0px;">
-    <div class="container">
-        <div class="row">
-
-
-
-
-            <div class="pricingTable-header">
-                <h2 class="sec_tit underline text-center">Tailored Packages We Offer for Executing KOL Marketing
-                    Campaigns</h2>
-                <p class="text-center">Our outstanding KOL marketing solutions offer a range of customized packages,
-                    each designed to meet diverse business needs effectively.</p>
-            </div>
-
-            <div class="container-center">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 equalize">
-                    <div class="pricingTable purple">
-                        <div class="price-value"> Starter <span>$10,000/Month</span></div>
-                        <ul class="pricing-content">
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> KOL Content Strategy &
-                                Amplification</li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>KOL Collaborations:</b>
-                                <br>
-                                Partner with 3-5 micro-KOLs </li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Promotion Platform:</b>
-                                <br>
-                                <b>- Twitter:</b> 3 KOLs will tweet promoting your brand/product<br>
-                                <b>- Telegram:</b> 5+ posts in channels/groups. <br>
-                                <b>- YouTube:</b> 1 KOL video.
-                            </li>
-
-                        </ul>
-                        <div class="pricingTable-signup">
-                            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
-                                style="font-size: 18px;" href="#newsletter-form-sec">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 equalize">
-                    <div class="pricingTable purple">
-                        <div class="price-value"> Growth <span>$30,000/Month</span></div>
-                        <ul class="pricing-content">
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> KOL Content Strategy &
-                                Amplification</li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>KOL Collaborations:</b>
-                                <br>
-                                Partner with 5-10 mid-tier KOLs </li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Promotion Platform:</b>
-                                <br>
-                                <b>- Twitter:</b> 5 KOLs will tweet promoting your brand/product <br>
-                                <b>- Telegram:</b> 15+ posts in channels/groups. <br>
-                                <b>- YouTube:</b> 2 KOL videos.
-                            </li>
-
-                        </ul>
-                        <div class="pricingTable-signup">
-                            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
-                                style="font-size: 18px;" href="#newsletter-form-sec">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 equalize">
-                    <div class="pricingTable purple">
-                        <div class="price-value"> Elite <span>$50,000/One-time</span></div>
-                        <ul class="pricing-content">
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> KOL Content Strategy &
-                                Amplification</li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>KOL Collaborations:</b>
-                                <br>
-                                Partner with 5-10 mid-tier and top-tier KOLs </li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Promotion
-                                    Platform:</b><br>
-                                <b>- Twitter:</b> 10 KOLs will tweet promoting your brand/product.<br>
-                                <b>- Telegram:</b> 30+ posts in channels/groups. <br>
-                                <b>- YouTube:</b> 3 KOL videos. Instagram: 2 KOL posts.<br>
-                                <b>- Instagram:</b> 5+ KOLs Post.
-                            </li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Additional
-                                    Services:</b><br>
-                                <b>- Giveaway or Contest:</b> Organized by KOLs. <br>
-                                <b>- Twitter Spaces:</b> At least 2 Twitter Spaces with KOLs to discuss your brand and
-                                engage with the audience.
-                            </li>
-                        </ul>
-                        <div class="pricingTable-signup">
-                            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
-                                style="font-size: 18px;" href="#newsletter-form-sec">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 equalize">
-                    <div class="pricingTable purple">
-                        <div class="price-value"> Supreme Influence Suite <span>$100,000/One-time</span></div>
-                        <ul class="pricing-content">
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> KOL Content Strategy &
-                                Amplification</li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>KOL Collaborations:</b>
-                                <br>
-                                Partner with 10-30 mix of micro, macro, and top-tier KOLs </li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Promotion
-                                    Platform:</b><br>
-                                <b>- Twitter:</b> 15 KOLs will tweet promoting your brand/product.<br>
-                                <b>- Telegram:</b> 50+ posts in channels/groups.<br>
-                                <b>- YouTube:</b> 5+ KOL videos. Instagram: 5 KOL posts.<br>
-                                <b>- Instagram:</b> 10+ KOLs Post.
-                            </li>
-                            <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <b>Additional
-                                    Services:</b><br>
-                                <b>- Giveaway or Contest:</b> Organized by KOLs. <br>
-                                <b>- Hashtag Campaign:</b> To increase brand visibility. <br>
-                                <b>- Twitter Spaces:</b> At least 3 Twitter Spaces with KOLs to discuss your brand and
-                                engage with the audience.
-                            </li>
-                        </ul>
-                        <div class="pricingTable-signup">
-                            <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn"
-                                style="font-size: 18px;" href="#newsletter-form-sec">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-    </div>
-</div>
-
-<div class="ptb60 gray_bg">
-    <div class="container">
-        <div class="section-header underline text-center">
-            <h4 class="font-wei">Our KOL Roster</h4>
-        </div>
-        <p class="text-center">Our experts team up with leading KOLs to elevate your brand visibility and attract
-            enthusiastic users and investors for your Web3 projects.</p>
-        <div class="row m-0">
-            <div class="owl-carousel client-carousel blockchain-plateform">
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/twitter-1.webp" alt="" title="">
-                    <h6>KateMillerGems</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/twitter-2.webp" alt="" title="">
-                    <h6>Flordelav</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/twitter-3.webp" alt="" title="">
-                    <h6>CryptoKing4Ever</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/twitter-4.webp" alt="" title="">
-                    <h6>furrincrypto</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/twitter-5.webp" alt="" title="">
-                    <h6>MrJenus</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/twitter-6.webp" alt="" title="">
-                    <h6>sof1azara03</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/twitter-7.webp" alt="" title="">
-                    <h6>TheRavenCrypto</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/yt-1.webp" alt="" title="">
-                    <h6>cryptocity006</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path
-                            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/yt-2.webp" alt="" title="">
-                    <h6>CRYPTO_GEMS_YT</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path
-                            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/yt-3.webp" alt="" title="">
-                    <h6>CryptoTrainer</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path
-                            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
-                    </svg>
-                </div>
-                <div class="client-box text-center">
-                    <img src="images/crypto-kol-influencer-marketing/icons/yt-4.webp" alt="" title="">
-                    <h6>CRYPTOEARNING786</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path
-                            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
-                    </svg>
-                </div>
-
-            </div>
-            <p class="text-center"></p>
-        </div>
-    </div>
-</div>
-
 <style type="text/css">
     .market {
         padding: 10px;
@@ -4582,149 +4221,14 @@
     }
 </style>
 
-<section class="common_spacing ">
-    <div class="container">
-        <div class="row">
-            <h3 class="sec_tit underline text-center">Our Market Recognition</h3>
-            <p class="text-center">Our experienced team is recognized and known for our extended support services for
-                executing successful KOL Marketing campaigns across the globe, leading numerous web3 projects to
-                success.</p>
-        </div>
-
-        <div class="container-center">
-
-            <div class="col-lg-6 col-md-6 col-sm-12 equalize">
-                <div class="market">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="images/crypto-kol-influencer-marketing/beincrypto.png" alt="" title="">
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p>10 Best NFT Marketing Agencies To Promote Your Digital Art</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-6 col-md-6 col-sm-12 equalize">
-                <div class="market">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="images/crypto-kol-influencer-marketing/hackernoon.png" alt="" title="">
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p>Top 10 NFT Marketing Company/Agencies in 2023</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 equalize">
-                <div class="market">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="images/crypto-kol-influencer-marketing/influencermarketing.png" alt="" title="">
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p>17 Best Crypto Marketing Agencies To Check Out</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 equalize">
-                <div class="market">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="images/crypto-kol-influencer-marketing/influencermarketing.png" alt="" title="">
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p>Top 17 NFT & Crypto Marketing Agencies for 2024</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 equalize">
-                <div class="market">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="images/crypto-kol-influencer-marketing/analyticsinsight.png" alt="" title="">
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p>10 Best Crypto Marketing Agencies for 2023</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 equalize">
-                <div class="market">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="images/crypto-kol-influencer-marketing/cryptoblogs.png" alt="" title="">
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p>11 Best Crypto Marketing Agencies to look out for in 2023</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 equalize">
-                <div class="market">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="images/crypto-kol-influencer-marketing/goodfirms.png" alt="" title="">
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p>Top 10+ ICO Marketing Firms/Agencies</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 equalize">
-                <div class="market">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="images/crypto-kol-influencer-marketing/coincodex.png" alt="" title="">
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p>8 Best Crypto Marketing Agencies in 2024</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 equalize">
-                <div class="market">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="images/crypto-kol-influencer-marketing/coindoo.png" alt="" title="">
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p>Best 15 NFT Marketing Agencies in 2024</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
 <div class="intro_cnt common_spacing" style="background:  linear-gradient(140deg, #230666, #110039);
     background-size: cover;">
     <div class="container">
         <div class="row">
-            <div class="sec_tit underline text-center">
-                <h3 class="text-white">Top Reasons You Should Partner with Our Web3 KOL Marketing Experts</h3>
+            <div class="sec_tit underline text-center" style="width: 100%">
+                <h3 class="text-white">Why Partner with Our Web3 KOL Marketing Experts?</h3>
             </div>
-            <p class="text-center text-white">Our Web3 KOL marketing experts provide enormous valid reasons to initiate
-                your campaign with our proficient and strategic services.</p>
+            <p class="text-center text-white"></p>
 
         </div>
         <div class="version-table">
@@ -4734,64 +4238,53 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="serviceBox1">
                                 <div class="service-icon">
-                                    <i class><img src="images/kol-marketing-agency/icons/network.webp" alt></i>
+                                    <i class><img src="{{ asset('images/kol-marketing-agency/icons/network.png') }}" alt></i>
                                 </div>
-                                <h2 class="title1">Extensive Network</h2>
-                                <p class="description1">We have cultivated strong connections with a diverse network of
-                                    KOLs, granting you access to the most influential voices for maximum impact.</p>
+                                <h2 class="title1">Unmatched Network Access</h2>
+                                <p class="description1">We offer unparalleled access to a vast network of top-tier KOLs, ensuring your campaign reaches the most influential voices and achieves maximum impact.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <div class="serviceBox1">
                                 <div class="service-icon">
-                                    <i class><img src="images/kol-marketing-agency/icons/analysis.webp" alt></i>
+                                    <i class><img src="{{ asset('images/kol-marketing-agency/icons/analysis.png') }}" alt></i>
                                 </div>
-                                <h2 class="title1">Data-Driven Analysis</h2>
-                                <p class="description1">By utilizing advanced analytics, we monitor and optimize
-                                    campaign performance and deliver actionable insights to drive continuous
-                                    optimization.</p>
+                                <h2 class="title1">Precision Analytics</h2>
+                                <p class="description1">Our advanced data analytics enable us to meticulously track and refine campaign performance, providing you with actionable insights for continuous improvement.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <div class="serviceBox1">
                                 <div class="service-icon">
-                                    <i class><img src="images/kol-marketing-agency/icons/trends.webp" alt></i>
+                                    <i class><img src="{{ asset('images/kol-marketing-agency/icons/trend.webp') }}" alt></i>
                                 </div>
-                                <h2 class="title1">Trend Awareness</h2>
-                                <p class="description1">We stay at the forefront of emerging trends and best practices
-                                    in Web3 marketing to keep your strategies remain relevant in the dynamic landscape.
+                                <h2 class="title1">Cutting-Edge Trends</h2>
+                                <p class="description1">We remain at the forefront of the latest Web3 marketing trends and practices, ensuring your strategies are always aligned with the evolving digital landscape.
                                 </p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-lg-offset-2 col-md-offset-2">
                             <div class="serviceBox1">
                                 <div class="service-icon">
-                                    <i class><img src="images/kol-marketing-agency/icons/strategy.webp" alt></i>
+                                    <i class><img src="{{ asset('images/kol-marketing-agency/icons/strategy.webp') }}" alt></i>
                                 </div>
-                                <h2 class="title1">Strategic Development</h2>
-                                <p class="description1">Our team of experts designs detailed marketing plans customized
-                                    to your project's objectives, ensuring they resonate with your target audience.</p>
+                                <h2 class="title1">Tailored Strategy Development</h2>
+                                <p class="description1">Our expert team crafts bespoke marketing strategies tailored to your project's unique objectives, ensuring a deep connection with your target audience.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <div class="serviceBox1">
                                 <div class="service-icon">
-                                    <i class><img src="images/kol-marketing-agency/icons/risk.webp" alt></i>
+                                    <i class><img src="{{ asset('images/kol-marketing-agency/icons/risk.webp') }}" alt></i>
                                 </div>
-                                <h2 class="title1">Risk Management</h2>
-                                <p class="description1">We proactively address potential risks in KOL marketing, such as
-                                    negative publicity or fraudulent activities, for a secure campaign environment.</p>
+                                <h2 class="title1">Proactive Risk Management</h2>
+                                <p class="description1">We meticulously identify and mitigate potential risks in KOL marketing, including negative publicity and fraud, to ensure a secure and successful campaign environment.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="shape-1">
-<img src="images/crypto-kol-influencer-marketing/icons/arw-shape.webp" alt>
-</div> -->
         </div>
-
-
     </div>
 </div>
 
@@ -4906,409 +4399,55 @@
         }
     }
 </style>
-<div class="common_spacing gray_bg">
-    <div class="container">
-        <div class="section-top ">
-            <div class="section-header text-center ">
-                <h3 class="section-title mt20 underline">FAQ</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <div class="faq-content">
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class role="button" data-toggle="collapse" data-parent="#accordion" href="#faq1">
-                                        <span>What is Web3 KOL marketing?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq1" class="panel-collapse collapse in" role="tabpanel"
-                                aria-labelledby="headingOne">
-                                <div class="panel-body">
-                                    Web3 KOL marketing involves partnering with KOLs in the Web3 space to promote
-                                    projects through their influence and reach, leveraging their credibility and
-                                    audience.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq2">
-                                        <span>How can KOLs benefit a Web3 project?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body">
-                                    KOLs can enhance visibility, build trust, and drive engagement by promoting Web3
-                                    projects to their dedicated followers, leading to increased adoption and
-                                    credibility.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq3">
-                                        <span>How do I choose the right KOL for my Web3 project?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq3" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingThree">
-                                <div class="panel-body">
-                                    Select KOLs whose audience aligns with your target market, have high engagement
-                                    rates, and demonstrate genuine interest in your project to ensure effective
-                                    promotion.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq4">
-                                        <span>What types of content can KOLs create for Web3 projects?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq4" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFour">
-                                <div class="panel-body">KOLs create various content types, including reviews, tutorials,
-                                    unboxings, and live streams in marketing campaigns to engage their audience and
-                                    promote your project.</div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq5">
-                                        <span>How do KOLs measure the success of their campaigns?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq5" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFive">
-                                <div class="panel-body">
-                                    The success of a KOL campaign is measured through KPIs such as engagement rates,
-                                    website traffic, conversion rates, and the impact on brand visibility and growth.
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq6">
-                                        <span>What are the advantages of KOLs over traditional influencers?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq6" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFive">
-                                <div class="panel-body">
-                                    KOLs typically have deeper expertise and credibility in specific niches, leading to
-                                    more authentic promotion and greater influence within their specialized communities.
-                                </div>
-                            </div>
-                        </div>
+{{-- simple-faqs.blade --}}
+@include('static.simple-faqs-section', [
+    'faqs' => [
+        [
+            'ques' => 'What is Web3 KOL marketing?',
+            'ans' => "Web3 KOL marketing leverages Key Opinion Leaders (KOLs) to promote Web3 projects by utilizing their influence and expertise to build credibility, engage audiences, and drive growth in the decentralized space."
+        ],
+        [
+            'ques' => 'How can KOLs benefit a Web3 project?',
+            'ans' => "KOLs can enhance a Web3 project's visibility and trustworthiness through their established following. Their endorsements and content can drive user engagement, attract investors, and amplify the project's message effectively."
+        ],
+        [
+            'ques' => 'How do I select the right KOL for my Web3 project?',
+            'ans' => "Choosing the right KOL involves assessing their audience demographics, engagement rates, and alignment with your project's goals. Ensure their influence matches your target market and they genuinely resonate with your project’s values."
+        ],
+        [
+            'ques' => 'What types of content can KOLs create for Web3 projects?',
+            'ans' => "KOLs can produce a range of content, including reviews, tutorials, interviews, and social media posts. This content is designed to educate, engage, and attract potential users and investors to your Web3 project."
+        ],
+        [
+            'ques' => 'How do KOLs measure the success of their campaigns?',
+            'ans' => "KOLs typically measure campaign success through metrics such as engagement rates, audience growth, click-through rates, and conversion metrics. They use these insights to gauge the effectiveness and impact of their promotional efforts."
+        ],
+        [
+            'ques' => 'What are the advantages of KOLs over traditional influencers?',
+            'ans' => "KOLs often offer deeper industry knowledge and credibility, which can be more influential in niche markets. Their established authority in specific areas of Web3 can drive more targeted and effective engagement compared to general influencers."
+        ],
+        [
+            'ques' => 'How can I ensure KOLs effectively represent my Web3 project?',
+            'ans' => "To ensure effective representation, provide clear guidelines, align expectations, and maintain open communication with KOLs. Regularly review their content and engagement strategies to ensure they accurately reflect your project’s vision and values."
+        ],
+        [
+            'ques' => 'What are some common strategies for Web3 KOL marketing?',
+            'ans' => "Common strategies include leveraging KOLs for content creation, hosting AMAs (Ask Me Anything), organizing giveaways, and engaging in collaborative projects. These tactics help boost visibility and foster a deeper connection with the Web3 community."
+        ],
+        [
+            'ques' => 'How do I measure the ROI of a Web3 KOL marketing campaign?',
+            'ans' => "ROI can be measured through various metrics such as increased traffic, user acquisition rates, engagement levels, and conversion rates. Analyzing these metrics helps determine the effectiveness and return on investment of the KOL marketing efforts."
+        ],
+        [
+            'ques' => 'Can KOL marketing be cost-effective for Web3 projects?',
+            'ans' => "Yes, KOL marketing can be cost-effective, especially when compared to traditional advertising. By targeting specific, influential audiences and leveraging authentic endorsements, KOL marketing can offer a high return on investment within a controlled budget."
+        ],
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq7">
-                                        <span>How can I ensure KOLs effectively represent my Web3 project?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq7" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFive">
-                                <div class="panel-body">
-                                    Provide KOLs with clear guidelines, collaborate on content creation, and maintain
-                                    open communication to ensure they accurately and positively represent your project.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq8">
-                                        <span> What are some common strategies for Web3 KOL marketing?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq8" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFive">
-                                <div class="panel-body">
-                                    Effective KOL marketing strategies include sponsored content, social media
-                                    takeovers, community engagement, and exclusive event access to maximize reach and
-                                    impact.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq9">
-                                        <span>How do I measure the ROI of a Web3 KOL marketing campaign?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq9" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFive">
-                                <div class="panel-body">
-                                    Evaluate ROI by analyzing metrics such as engagement rates, conversion rates,
-                                    increased traffic, and overall influence on project growth compared to the
-                                    campaign's cost.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#faq10">
-                                        <span>Can KOL marketing be cost-effective for Web3 projects?</span>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="faq10" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFive">
-                                <div class="panel-body">
-                                    Yes, KOL marketing can be cost-effective, especially when targeting niche audiences
-                                    and using their established credibility for higher engagement and conversion rates.
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    ],
+])
 
 </div>
-<script src="js/jquery.min.js" type="49f7d3580663b4e01c30f855-text/javascript"></script>
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    var swiper = new Swiper('.blog-slider', {
-        spaceBetween: 30,
-        effect: 'fade',
-        loop: true,
-        mousewheel: {
-            invert: false,
-        },
-        // autoHeight: true,
-        pagination: {
-            el: '.blog-slider__pagination',
-            clickable: true,
-        }
-    });
-</script>
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    (function($) {
-        $.fn.countTo = function(options, viewCounter) {
-            if(viewCounter == 1) {
-                options = options || {};
-                return $(this).each(function() {
-                    // set options for current element
-                    var settings = $.extend({}, $.fn.countTo.defaults, {
-                        from: $(this).data('from'),
-                        to: $(this).data('to'),
-                        speed: $(this).data('speed'),
-                        refreshInterval: $(this).data('refresh-interval'),
-                        decimals: $(this).data('decimals')
-                    }, options);
-                    // how many times to update the value, and how much to increment the value on each update
-                    var loops = Math.ceil(settings.speed / settings.refreshInterval),
-                        increment = (settings.to - settings.from) / loops;
-                    // references & variables that will change with each update
-                    var self = this,
-                        $self = $(this),
-                        loopCount = 0,
-                        value = settings.from,
-                        data = $self.data('countTo') || {};
-                    $self.data('countTo', data);
-                    // if an existing interval can be found, clear it first
-                    if(data.interval) {
-                        clearInterval(data.interval);
-                    }
-                    data.interval = setInterval(updateTimer, settings.refreshInterval);
-                    // initialize the element with the starting value
-                    render(value);
-
-                    function updateTimer() {
-                        value += increment;
-                        loopCount++;
-                        render(value);
-                        if(typeof(settings.onUpdate) == 'function') {
-                            settings.onUpdate.call(self, value);
-                        }
-                        if(loopCount >= loops) {
-                            // remove the interval
-                            $self.removeData('countTo');
-                            clearInterval(data.interval);
-                            value = settings.to;
-                            if(typeof(settings.onComplete) == 'function') {
-                                settings.onComplete.call(self, value);
-                            }
-                        }
-                    }
-
-                    function render(value) {
-                        var formattedValue = settings.formatter.call(self, value, settings);
-                        $self.html(formattedValue);
-                    }
-                });
-            };
-        }
-        $.fn.countTo.defaults = {
-            from: 0, // the number the element should start at
-            to: 0, // the number the element should end at
-            speed: 3000, // how long it should take to count between the target numbers
-            refreshInterval: 100, // how often the element should be updated
-            decimals: 0, // the number of decimal places to show
-            formatter: formatter, // handler for formatting the value before rendering
-            onUpdate: null, // callback method for every time the element is updated
-            onComplete: null // callback method for when the element finishes updating
-        };
-
-        function formatter(value, settings) {
-            return value.toFixed(settings.decimals);
-        }
-    }(jQuery));
-    jQuery(function($) {
-        // custom formatting example
-        $('.count-number').data('countToOptions', {
-            formatter: function(value, options) {
-                return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-            }
-        });
-        // start all the timers
-        var viewCounter = 0;
-        $(document).on('scroll', function() {
-            if($('.timer').each(count).isOnScreen() && viewCounter < 2) {
-                viewCounter++;
-                console.log(viewCounter);
-            }
-        });
-
-        function count(options) {
-            var $this = $(this);
-            options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-            $this.countTo(options, viewCounter);
-        }
-    });
-    // check if element visible in viewport
-    $.fn.isOnScreen = function() {
-        var win = $(window);
-        var viewport = {
-            top: win.scrollTop(),
-            left: win.scrollLeft()
-        };
-        viewport.right = viewport.left + win.width();
-        viewport.bottom = viewport.top + win.height();
-        var bounds = this.offset();
-        //bounds.right = bounds.left + this.outerWidth();
-        //bounds.bottom = bounds.top + this.outerHeight();
-        return(!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-    };
-</script>
-<script src="js/vendor.js" type="49f7d3580663b4e01c30f855-text/javascript"></script>
-<script src="js/plugins.js" type="49f7d3580663b4e01c30f855-text/javascript"></script>
-<script src="js/main.js" type="49f7d3580663b4e01c30f855-text/javascript"></script>
-<script src="build/js/intlTelInput.js" type="49f7d3580663b4e01c30f855-text/javascript"></script>
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    $("#phone21").intlTelInput({
-        utilsScript: "sto-baf/utils.js"
-    });
-    $("#phone22").intlTelInput({
-        utilsScript: "sto-baf/utils.js"
-    });
-    $("#phone23").intlTelInput({
-        utilsScript: "sto-baf/utils.js"
-    });
-    $("#phone24").intlTelInput({
-        utilsScript: "sto-baf/utils.js"
-    });
-</script>
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    $('.home-talk-experts').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#newsletter-form-sec').offset().top
-        }, 2000);
-    });
-    $('.uniq_features').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#uniq_features').offset().top
-        }, 2000);
-    });
-    $('.view_demo').click(function() {
-        $('html, body').animate({
-            scrollTop: $('.view_demo_sec').offset().top
-        }, 2000);
-    });
-</script>
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    $('.view_pricing').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#pricing-section').offset().top
-        }, 2000);
-    });
-</script>
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    var url = window.location.href;
-    $('#url').val(url);
-</script>
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    $(".pricing-body").mCustomScrollbar({
-        theme: "minimal"
-    });
-</script>
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-        var lazyloadImages = document.querySelectorAll("img.lazy");
-        var lazyloadThrottleTimeout;
-
-        function lazyload() {
-            if(lazyloadThrottleTimeout) {
-                clearTimeout(lazyloadThrottleTimeout);
-            }
-            lazyloadThrottleTimeout = setTimeout(function() {
-                var scrollTop = window.pageYOffset;
-                lazyloadImages.forEach(function(img) {
-                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                    }
-                });
-                if(lazyloadImages.length == 0) {
-                    document.removeEventListener("scroll", lazyload);
-                    window.removeEventListener("resize", lazyload);
-                    window.removeEventListener("orientationChange", lazyload);
-                }
-            }, 20);
-        }
-        document.addEventListener("scroll", lazyload);
-        window.addEventListener("resize", lazyload);
-        window.addEventListener("orientationChange", lazyload);
-    });
-</script>
-<!-- header (top) -->
 
 <!------------------------ New MegaMenu  ----------------------------->
 
@@ -5698,11 +4837,6 @@
     }
 </style>
 
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    +function($){"use strict";var backdrop=".dropdown-backdrop";var Dropdownhover=function(element,options){this.options=options;this.$element=$(element);var that=this;this.dropdowns=this.$element.hasClass("dropdown-toggle")?this.$element.parent().find(".dropdown-menu").parent(".dropdown"):this.$element.find(".dropdown");if(!options.onClick){this.dropdowns.each(function(){$(this).on("mouseenter.bs.dropdownhover",function(e){that.show($(this).children("a, button"))})});this.dropdowns.each(function(){$(this).on("mouseleave.bs.dropdownhover",function(e){that.hide($(this).children("a, button"))})})}else{this.dropdowns.each(function(){$(this).children("a, button").on("click.bs.dropdownhover",function(e){var isActive=$(this).parent().hasClass("open");isActive?that.hide($(this)):that.show($(this))})})}};Dropdownhover.TRANSITION_DURATION=300;Dropdownhover.DELAY=150;Dropdownhover.TIMEOUT;Dropdownhover.DEFAULTS={onClick:false,animations:["fadeInDown","fadeInRight","fadeInUp","fadeInLeft"]};function getParent($this){var selector=$this.attr("data-target");if(!selector){selector=$this.attr("href");selector=selector&&/#[A-Za-z]/.test(selector)&&selector.replace(/.*(?=#[^\s]*$)/,"")}var $parent=selector&&$(document).find(selector);return $parent&&$parent.length?$parent:$this.parent()}function clearMenus(e){if(e&&e.which===3)return;$(backdrop).remove();$('[data-hover="dropdown"]').each(function(){var $this=$(this);var $parent=getParent($this);var relatedTarget={relatedTarget:this};if(!$parent.hasClass("open"))return;if(e&&e.type=="click"&&/input|textarea/i.test(e.target.tagName)&&$.contains($parent[0],e.target))return;$parent.trigger(e=$.Event("hide.bs.dropdownhover",relatedTarget));if(e.isDefaultPrevented())return;$this.attr("aria-expanded","false");$parent.removeClass("open").trigger($.Event("hidden.bs.dropdownhover",relatedTarget))})}Dropdownhover.prototype.show=function(_dropdownLink){var $this=$(_dropdownLink);window.clearTimeout(Dropdownhover.TIMEOUT);$(".dropdown").not($this.parents()).each(function(){$(this).removeClass("open")});var effect=this.options.animations[0];if($this.is(".disabled, :disabled"))return;var $parent=$this.parent();var isActive=$parent.hasClass("open");if(!isActive){if("ontouchstart"in document.documentElement&&!$parent.closest(".navbar-nav").length){$(document.createElement("div")).addClass("dropdown-backdrop").insertAfter($(this)).on("click",clearMenus)}var $dropdown=$this.next(".dropdown-menu");$parent.addClass("open");$this.attr("aria-expanded",true);$parent.siblings().each(function(){if(!$(this).hasClass("open")){$(this).find('[data-hover="dropdown"]').attr("aria-expanded",false)}});var side=this.position($dropdown);switch(side){case"top":effect=this.options.animations[2];break;case"right":effect=this.options.animations[3];break;case"left":effect=this.options.animations[1];break;default:effect=this.options.animations[0];break}$dropdown.addClass("animated "+effect);var transition=$.support.transition&&$dropdown.hasClass("animated");transition?$dropdown.one("bsTransitionEnd",function(){$dropdown.removeClass("animated "+effect)}).emulateTransitionEnd(Dropdownhover.TRANSITION_DURATION):$dropdown.removeClass("animated "+effect)}return false};Dropdownhover.prototype.hide=function(_dropdownLink){var that=this;var $this=$(_dropdownLink);var $parent=$this.parent();var $this_delay=$this.data("dropdown-hover-delay");Dropdownhover.TIMEOUT=window.setTimeout(function(){$parent.removeClass("open");$this.attr("aria-expanded",false)},$this_delay?$this_delay:Dropdownhover.DELAY)};Dropdownhover.prototype.position=function(dropdown){var win=$(window);dropdown.css({bottom:"",left:"",top:"",right:""}).removeClass("dropdownhover-top");var viewport={top:win.scrollTop(),left:win.scrollLeft()};viewport.right=viewport.left+win.width();viewport.bottom=viewport.top+win.height();var bounds=dropdown.offset();bounds.right=bounds.left+dropdown.outerWidth();bounds.bottom=bounds.top+dropdown.outerHeight();var position=dropdown.position();position.right=bounds.left+dropdown.outerWidth();position.bottom=bounds.top+dropdown.outerHeight();var side="";var isSubnow=dropdown.parents(".dropdown-menu").length;if(isSubnow){if(position.left<0){side="left";dropdown.removeClass("dropdownhover-right").addClass("dropdownhover-left")}else{side="right";dropdown.addClass("dropdownhover-right").removeClass("dropdownhover-left")}if(bounds.left<viewport.left){side="right";dropdown.css({left:"100%",right:"auto"}).addClass("dropdownhover-right").removeClass("dropdownhover-left")}else if(bounds.right>viewport.right){side="left";dropdown.css({left:"auto",right:"100%"}).removeClass("dropdownhover-right").addClass("dropdownhover-left")}if(bounds.bottom>viewport.bottom){dropdown.css({bottom:"auto",top:-(bounds.bottom-viewport.bottom)})}else if(bounds.top<viewport.top){dropdown.css({bottom:-(viewport.top-bounds.top),top:"auto"})}}else{var parentLi=dropdown.parent(".dropdown");var pBounds=parentLi.offset();pBounds.right=pBounds.left+parentLi.outerWidth();pBounds.bottom=pBounds.top+parentLi.outerHeight();if(bounds.right>viewport.right){dropdown.css({left:-(bounds.right-viewport.right),right:"auto"})}if(bounds.bottom>viewport.bottom&&pBounds.top-viewport.top>viewport.bottom-pBounds.bottom||dropdown.position().top<0){side="top";dropdown.css({bottom:"100%",top:"auto"}).addClass("dropdownhover-top").removeClass("dropdownhover-bottom")}else{side="bottom";dropdown.addClass("dropdownhover-bottom")}}return side};function Plugin(option){return this.each(function(){var $this=$(this);var data=$this.data("bs.dropdownhover");var settings=$this.data();if($this.data("animations")!==undefined&&$this.data("animations")!==null)settings.animations=$.isArray(settings.animations)?settings.animations:settings.animations.split(" ");var options=$.extend({},Dropdownhover.DEFAULTS,settings,typeof option=="object"&&option);if(!data)$this.data("bs.dropdownhover",data=new Dropdownhover(this,options))})}var old=$.fn.dropdownhover;$.fn.dropdownhover=Plugin;$.fn.dropdownhover.Constructor=Dropdownhover;$.fn.dropdownhover.noConflict=function(){$.fn.dropdownhover=old;return this};$(document).ready(function(){$('[data-hover="dropdown"]').each(function(){var $target=$(this);if("ontouchstart"in document.documentElement){Plugin.call($target,$.extend({},$target.data(),{onClick:true}))}else{Plugin.call($target,$target.data())}})})}(jQuery);
-     
-</script>
-
 
 <!------------------------ New MegaMenu  ----------------------------->
 
@@ -5961,17 +5095,6 @@
         }
     }
 
-    /*.color-btn1:before{
-    content: "";
-    background: rgba(0,0,0,0.9);
-    border-radius: 50px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    z-index: -1;
-}*/
     @keyframes glow {
         0% {
             box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
@@ -6001,30 +5124,6 @@
         font-size: 14px;
     }
 
-    /*@media (max-width: 1024px){
-    .sticky_form_bp {
-        display:block !important;
-}
-}
-
-@media (max-width: 320px){
-    .sticky_form_bp  {
-        display: block;
-        
-}
-}*/
-
-    /*menu height mobile view*/
-    /*@media screen and (max-width: 320px) {
-    .main {
-        margin-top: 10px !important;
-    }
-}*/
-    /*@media screen and (max-width: 768px) {
-    .main {
-        margin-top: 10px !important;
-    }
-}*/
 </style>
 
 <style type="text/css">
@@ -6060,431 +5159,6 @@
         top: 1px;
     }
 </style>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script type="49f7d3580663b4e01c30f855-text/javascript"
-    src="https://www.blockchainappfactory.com/fbox/jquery.fancybox.js?v=2.1.5"></script>
-<script type="49f7d3580663b4e01c30f855-text/javascript"
-    src="https://www.blockchainappfactory.com/js/jquery.matchHeight-min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://www.blockchainappfactory.com/fbox/jquery.fancybox.css?v=2.1.5"
-    media="screen">
-<script type="49f7d3580663b4e01c30f855-text/javascript"
-    src="https://www.blockchainappfactory.com/fbox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    $.fn.jQuerySimpleCounter = function( options ) {
-        var settings = $.extend({
-            start:  0,
-            end:    100,
-            easing: 'swing',
-            duration: 400,
-            complete: ''
-        }, options );
-        var thisElement = $(this);
-        $({count: settings.start}).animate({count: settings.end}, {
-            duration: settings.duration,
-            easing: settings.easing,
-            step: function() {
-                var mathCount = Math.ceil(this.count);
-                thisElement.text(mathCount);
-            },
-            complete: settings.complete
-        });
-    };
-    $('#number1').jQuerySimpleCounter({end: 500,duration: 3000});
-    $('#number2').jQuerySimpleCounter({end: 200,duration: 3000});
-    $('#number3').jQuerySimpleCounter({end: 100,duration: 2000});
-    /* AUTHOR LINK */
-    $('.about-me-img').hover(function(){
-            $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
-        }, function(){
-            $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
-    });
-    $(".sticky-form .quick-cont-btn").click(function(e) {
-        $('body').addClass('fixedPosition full-width');
-        $(".sticky-form .formdiv").addClass('show');
-        e.stopPropagation();
-    });
-    $(".close").click(function(e) {
-        $('body').removeClass('fixedPosition full-width');
-        $(".sticky-form .formdiv").removeClass('show');
-        e.stopPropagation();
-    });
-    $("#phone_common").intlTelInput({
-        utilsScript: "build/js/utils.js",
-        dropdownContainer: 'body'
-    });
-    $("#phone_sticky").intlTelInput({
-        utilsScript: "build/js/utils.js",
-        dropdownContainer: 'body'
-    });
-    $("#phone_banner").intlTelInput({
-        utilsScript: "build/js/utils.js",
-        dropdownContainer: 'body'
-    });
-    $('.home-talk-experts').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#newsletter-form-sec').offset().top
-        }, 2000);
-    });
-    var url = window.location.href;
-    $('#url').val(url);
-    // alert(url);
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "100%";
-    }
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
-    adroll_adv_id = "WDBK654P6ZFTPNTJ7HT4W5";
-    adroll_pix_id = "BYKIZBXZ5BBFHHTUURKSLV";
-    (function() {
-        var _onload = function() {
-            if(document.readyState && !/loaded|complete/.test(document.readyState)) {
-                setTimeout(_onload, 10);
-                return
-            }
-            if(!window.__adroll_loaded) {
-                __adroll_loaded = true;
-                setTimeout(_onload, 50);
-                return
-            }
-            var scr = document.createElement("script");
-            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-            scr.setAttribute('async', 'true');
-            scr.type = "text/javascript";
-            scr.src = host + "/j/roundtrip.js";
-            ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        };
-        if(window.addEventListener) {
-            window.addEventListener('load', _onload, false);
-        } else {
-            window.attachEvent('onload', _onload)
-        }
-    }());
-    function validateEmail($email) {
-    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-    return pattern.test($email);
-}
-
-function validatePhone($phone) {
-    var pattern1 = new RegExp("[0-9]+");
-    return pattern1.test($phone);
-}
-// For Common Newsletter AjaxMail Function
-$(".common_send_btn").click(function() {
-    function loader() {
-        $('<div id="loader"></div>').insertAfter(".common_send_btn");
-        $(".common_send_btn").next().addClass("loading");
-        setTimeout(function() {
-            $(".common_send_btn").next().remove();
-        }, 7000);
-    }
-    var formname = $(this).parent().parent().attr('id');
-    // alert(formname);
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    if(name != '') {
-        if((email != '') && (validateEmail(email))) {
-            if((phone != '') && (validatePhone(phone))) {
-                var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                // console.log( $("#"+formname).serialize() );
-                $(this).attr("disabled", true);
-                $(this).addClass('disabled');
-                loader();
-                $(".ajax-loader").hide();
-                var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                $.ajax({
-                    url: "ajaxmail.php",
-                    type: "POST",
-                    data: formdata,
-                    success: function(result) {
-                        //window.location.href="success";
-                        if(result == 1) {
-                            // alert("Mail Sent Successfully");
-                            window.location.href = "success";
-                            return false;
-                        } else {
-                            alert("Something went wrong, please try again later.");
-                            return false;
-                        }
-                        $(".ajax-loader").hide();
-                    },
-                    error: function() {
-                        window.location.href = "success";
-                    }
-                });
-            } else if(!validatePhone(phone)) {
-                alert("Please type correct mobile number format");
-            } else {
-                alert("please type your phone number");
-            }
-        } else if(!validateEmail(email)) {
-            alert("Please type correct email format");
-        } else {
-            alert("please type your email");
-        }
-    } else {
-        alert("please fill all fields");
-    }
-});
-$(".submit_send").click(function() {
-    function loader() {
-        $('<div id="mloader"></div>').insertAfter(".submit_send");
-        $(".submit_send").next().addClass("loading");
-        setTimeout(function() {
-            $(".submit_send").next().remove();
-        }, 7000);
-    }
-    var formname = $(this).parent().parent().parent().attr('id');
-    // alert(formname);
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    // console.log(name, email, phone);
-    if(name != '') {
-        if((email != '') && (validateEmail(email))) {
-            if((phone != '') && (validatePhone(phone))) {
-                $(this).attr("disabled", true);
-                $(this).addClass('disabled');
-                loader();
-                $(".ajax-loader").hide();
-                var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                $.ajax({
-                    url: "ajaxmail.php",
-                    type: "POST",
-                    data: formdata,
-                    success: function(result) {
-                        console.log(result);
-                        if(result == 1) {
-                            // alert("Mail Sent Successfully");
-                            window.location.href = "success";
-                            return false;
-                        } else {
-                            alert("Something went wrong, please try again later.");
-                            return false;
-                        }
-                        $(".ajax-loader").hide();
-                    }
-                });
-            } else if(!validatePhone(phone)) {
-                alert("Please type correct mobile number format");
-            } else {
-                alert("please type your mobile number");
-            }
-        } else if(!validateEmail(email)) {
-            alert("Please type correct email format");
-        } else {
-            alert("please type your email");
-        }
-    } else {
-        alert("please fill all fields");
-    }
-});
-$(".close_send").click(function() {
-    function loader() {
-        $('<div id="mloader"></div>').insertAfter(".close_send");
-        $(".close_send").next().addClass("loading");
-        setTimeout(function() {
-            $(".close_send").next().remove();
-        }, 7000);
-    }
-    var formname = $(this).parent().parent().parent().attr('id');
-    // alert(formname);
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    // console.log(name, email, phone);
-    if(name != '') {
-        if((email != '') && (validateEmail(email))) {
-            if((phone != '') && (validatePhone(phone))) {
-                $(this).attr("disabled", true);
-                $(this).addClass('disabled');
-                loader();
-                $(".ajax-loader").hide();
-                var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                $.ajax({
-                    url: "ajaxmail.php",
-                    type: "POST",
-                    data: formdata,
-                    success: function(result) {
-                        console.log(result);
-                        if(result == 1) {
-                            // alert("Mail Sent Successfully");
-                            window.location.href = "success";
-                            return false;
-                        } else {
-                            alert("Something went wrong, please try again later.");
-                            return false;
-                        }
-                        $(".ajax-loader").hide();
-                    }
-                });
-            } else if(!validatePhone(phone)) {
-                alert("Please type correct mobile number format");
-            } else {
-                alert("please type your mobile number");
-            }
-        } else if(!validateEmail(email)) {
-            alert("Please type correct email format");
-        } else {
-            alert("please type your email");
-        }
-    } else {
-        alert("please fill all fields");
-    }
-});
-/*-- pdf mail --*/
-$(".submit_send_pdf").click(function() {
-    function loader() {
-        $('<div id="loader"></div>').insertAfter(".submit_send_pdf");
-        $(".submit_send_pdf").next().addClass("loading");
-        setTimeout(function() {
-            $(".submit_send_pdf").next().remove();
-        }, 7000);
-    }
-    var formname = $(this).parent().parent().parent().attr('id');
-    $(".ajax-loader").hide();
-    var name = $(this).parent().parent().parent().find('input[name="name"]').val();
-    var email = $(this).parent().parent().parent().find('input[name="email"]').val();
-    var phone = $(this).parent().parent().parent().find('input[name="phone_dummy"]').val();
-    // console.log(name, email, phone);
-    if(name != '') {
-        if((email != '') && (validateEmail(email))) {
-            if((phone != '') && (validatePhone(phone))) {
-                $(this).attr("disabled", true);
-                $(this).addClass('disabled');
-                $(".ajax-loader").hide();
-                loader();
-                var phone_title = $("#" + formname + " " + ".selected-flag").attr("title").replace(/ *\([^)]*\) */g, "");
-                $(this).parent().parent().parent().find('input[name="phone"]').val(phone_title + " " + phone);
-                //$(this).parent().parent().parent().find('input[name="phone"]').val($("#"+formname+" "+".selected-flag").attr("title")+" "+phone);
-                var formdata = $("#" + formname).serialize() + '&_token=' + $('meta[name="csrf-token"]').attr('content');
-                $.ajax({
-                    url: "pdfmail.php",
-                    type: "POST",
-                    data: formdata,
-                    success: function(result) {
-                        console.log(result);
-                        if(result == 1) {
-                            // alert("Mail Sent Successfully");
-                            window.open("https://www.blockchainappfactory.com/pdf/BlockchainAppFactory.pdf", '_blank');
-                            window.location.href = "success";
-                            return false;
-                        } else {
-                            alert("Something went wrong, please try again later.");
-                            return false;
-                        }
-                        $(".ajax-loader").hide();
-                    }
-                });
-            } else if(!validatePhone(phone)) {
-                alert("Please type correct mobile number format");
-            } else {
-                alert("please type your phone number");
-            }
-        } else if(!validateEmail(email)) {
-            alert("Please type correct email format");
-        } else {
-            alert("please type your email");
-        }
-    } else {
-        alert("please fill all fields");
-    }
-});
-// video fancybox
-$('.fancybox-media1').attr('rel', 'media-gallery').fancybox({
-    openEffect: 'none',
-    closeEffect: 'none',
-    prevEffect: 'none',
-    nextEffect: 'none',
-    arrows: false,
-    helpers: {
-        media: {},
-        buttons: {}
-    }
-});
-// Macth Height
-$('.equal-height').matchHeight({
-    property: 'min-height'
-});
-$('.submit_send').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('#submit').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('.common_send_btn').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$('.submit_sends').click(function() {
-    qp('track', 'CompleteRegistration'); // Call this function when inline action happens);
-});
-$(document).ready(function() {
-    // Disable cut copy paste
-    $('body').bind('cut copy paste', function(e) {
-        e.preventDefault();
-    });
-    // Disable mouse right click
-    $("body").on("contextmenu", function(e) {
-        return false;
-    });
-});
-</script>
-
-
-
-
-<!-- Side Panel - End -->
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    window.__lc = window.__lc || {};
-    window.__lc.license = 9464790;
-    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-</script>
-<noscript><a href="https://www.livechatinc.com/chat-with/9464790/" rel="nofollow">Chat with us</a>, powered by <a
-        href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6VQVFF" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-        const imageObserver = new IntersectionObserver((entries, imgObserver) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const lazyImage = entry.target
-                    //console.log("lazy loading ", lazyImage)
-                    lazyImage.src = lazyImage.dataset.src
-                }
-            })
-        });
-        const arr = document.querySelectorAll('img.lazy')
-        arr.forEach((v) => {
-            imageObserver.observe(v);
-        })
-    })
-</script>
-
-<!-- Side Panel - Start -->
-<!-- <div id="mySidepanel4" class="sidepanel4">
-  <a href="" class="closebtn1" onclick="closeNav4()">&times;</a>
-    <a href="https://www.blockchainappfactory.com/offer" id="halloween-offer"> <img src="https://www.blockchainappfactory.com/images/offer/newyear-image-10.png" style="max-width: 240px !important; "></a> 
-</div>
-
-<button class="openbtn1" onclick="openNav4()" style="max-width:60px; border:0; border-radius: 50%; left: 20px; padding: 0; margin:0; box-shadow: none; filter: none; background: none; position: fixed; top: 50%; z-index: 1;" > <img src="https://www.blockchainappfactory.com/images/offer/new-year.gif" > </button> -->
-
 
 <style type="text/css">
     @media (min-width: 320px) and (max-width: 768px) {
@@ -6562,18 +5236,6 @@ $(document).ready(function() {
 
     /* Style the button that is used to open the sidepanel */
     .openbtn1 {
-        /*font-size: 20px;
-  cursor: pointer;
-  background-color: transparent;
-  color: white;
-  padding: 0px;
-  border: none;
-  position: fixed;
-  top: 43%;
-  left: 0;
-  width: 90px;
-  z-index: 99999;*/
-        /*animation: zoom-in-zoom-out 1s ease infinite;*/
         filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
     }
 
@@ -6595,54 +5257,6 @@ $(document).ready(function() {
         }
     }
 </style>
-
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    /* Set the width of the sidebar to 250px (show it) */
-function openNav4() {
-  document.getElementById("mySidepanel4").style.width = "250px";
-}
-
-/* Set the width of the sidebar to 0 (hide it) */
-function closeNav4() {
-  document.getElementById("mySidepanel4").style.width = "0";
-}
-</script>
-
-<!-- Side Icon - Start -->
-<!-- <style type="text/css">
-    .social-icons{position: fixed; bottom: 20%; left: 15px; z-index: 100000; width: 50px; height: 50px; /*box-shadow: -3px -6px 16px 0px rgb(253 253 253 / 69%), 9px 5px 14px 0px rgb(0 0 0 / 15%);*/ border-radius: 50px; padding: 5px 0 0 12px;}
-    .social-icons ul{margin: 0; padding: 0;}
-    .social-icons ul li{margin: 5px 0; width: 40px; height: 40px; background-color: #4caf50; border-radius: 50%; text-align: center; line-height: 22px;}
-    .social-icons ul li:after {position: absolute; content: ""; height: calc(100% + 16px); width: calc(100% + 16px); top: -8px; left: -8px; border-radius: 50%; border: 3px solid #4caf50 !important; animation: 1.5s linear 0s normal none infinite focuse;}
-    .social-icons ul li i{color: #fff; font-size: 26px; text-align: center; line-height: 40px;}
-@keyframes  focuse {
-  0% {
-    transform: scale(0.8);
-    opacity: 1; }
-  75% {
-    transform: scale(1.2);
-    opacity: 0; }
-  100% {
-    transform: scale(1.2);
-    opacity: 0; } }
-</style>
-<div class="social-icons">
-<ul>
-<li style="margin-bottom:20px; position:relative; background: #07b7f6;">
-<a href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" target="blank" style="position: relative; z-index: 999999;">
-<img src="images/appointment.webp"> 
-</a>
-</li>
-<li style="margin-bottom:20px; position:relative;">
-<a href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" target="blank" style="position: relative; z-index: 999999;">
-<i class="fa fa-whatsapp"></i> 
-</a>
-</li>
-</ul>
-</div> -->
-<!-- Side Icon - End -->
-
-
 
 
 <!-- SocialMedia Bottom - Start -->
@@ -6787,141 +5401,6 @@ function closeNav4() {
     }
 </style>
 
-<button id="btn" class="close-btn">x</button>
-
-<div id="box">
-    <div id="fixed-social" class="fixed-social hide">
-        <!-- <div class="items">
-        <a rel="nofollow" href="https://api.whatsapp.com/send?l=en&amp;text=Hi!%20I%27m%20interested%20in%20one%20of%20your%20products%20at%20BLOCKCHAIN%20APP%20FACTORY&amp;phone= " target="blank">
-            <div class="icons"><img src="https://www.blockchainappfactory.com/images/whatsapp.webp" style="border-radius: 50%;"></div>
-        </a>
-    </div> -->
-
-        <!-- <div class="items">
-        <a href=" " target="blank">
-            <div class="icons"><img src="img/mail.webp"></div>
-        </a>
-    </div> -->
-
-        <!-- <div class="items"> 
-        <a rel="nofollow" href="mailto:info@blockchainappfactory.com" target="blank">
-            <div class="icons"><i class="fa fa-envelope"></i></div>
-        </a>
-    </div> -->
-
-        <div class="items">
-            <a rel="nofollow" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" target="blank">
-                <div class="icons"><img src="https://www.blockchainappfactory.com/images/appointment.webp"></div>
-                <!-- <div class="text">Free 15-Minute Consultation</div> -->
-            </a>
-        </div>
-
-        <div class="items">
-            <a rel="nofollow" href="https://t.me/amarbaf" target="blank">
-                <div class="icons"><i class="fa fa-paper-plane"></i></div>
-                <!-- <div class="text">Free 15-Minute Consultation</div> -->
-            </a>
-        </div>
-
-        <!-- <div class="items"> 
-        <a href="https://www.blockchainappfactory.com/offer" target="blank">
-            <div class="icons openbtn1" onclick="openNav4()"><img src="https://www.blockchainappfactory.com/images/offer/new-year.gif"></div>
-        </a>
-    </div> -->
-    </div>
-
-</div>
-
-<!-- <div id="mySidepanel4" class="sidepanel4">
-  <a href="" class="closebtn1" onclick="closeNav4()">&times;</a>
-    <a href="https://www.blockchainappfactory.com/offer" id="halloween-offer"> <img src="https://www.blockchainappfactory.com/images/offer/newyear-image-10.png" style="max-width: 240px !important; "></a> 
-</div> -->
-
-
-<!-- xmas_box Start -->
-<!-- <div class="mob_not">
-<div id="hideDiv">
-<div class="alert xmas_box1 alert-primary alert-dismissible show">
-    <div class="x_box"><a href="offer-zone"> <img src="img/black-friday.webp" style="max-width: 240px !important; margin-bottom: 10px; box-shadow: 5px 5px 11px -3px #999; border-radius: 15px;"></a></div>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-</div>
-</div>
-</div>
-
-<style type="text/css">
-    #hideDivs .alert.xmas_box1{background:none;bottom:60px;width:280;left:0px}#hideDivs{text-align:center;z-index:100;position:relative}#hideDiv{/*animation:fadeOut 0.5s forwards;*/animation-delay:5s;text-align:center;z-index:100;position:relative}@keyframes  fadeOut{from{opacity:1}to{opacity:0}}.xmas_box1{position:fixed;bottom:100px;/*width:100%;*/ border:none;border-radius:0px;z-index:1000;padding:0;margin:0;max-width:250px;left:0px;right:0;}.xmas_box1 p{margin:0px;color:#fff;max-width:990px;margin:0 auto;font-size:13px;line-height:20px;padding:10px;text-align:center}.xmas_box1.alert-dismissible .close{top:-15px;right:5px;position:absolute;color:#fff;opacity:1 !important;text-shadow:none;font-size:36px;z-index:100;padding:0px;border:none;border-radius:0px;height:30px;width:30px;background:red !important;border-radius:7px;line-height:0px}.xmas_box1.alert-dismissible .close:hover{background:#303030} 
-    .alert-primary{background-color: transparent; border-color: transparent;}
-   @media only screen and (min-width: 320px) and (max-width: 767px) { .xmas_box1{width: 260px;bottom: 180px; display:block !important;} }
-   @media only screen and (min-width: 768px) and (max-width: 899px) { .xmas_box1{width: 260px;bottom: 180px; display:block !important;} }
-   @media only screen and (min-width: 1024px) and (max-width: 1200px) { .xmas_box1{width: 260px;display:block !important;} } 
-</style>  -->
-<!-- xmas_box End -->
-
-
-
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    /*-- For Scroll --*/    
-    $(document).scroll(function() {
-
-        myID = document.getElementById("fixed-social");
-
-        var myScrollFunc = function () {
-            var y = window.scrollY;
-            if (y >= 800) {
-                myID.className = "fixed-social show1"
-            } else {
-                myID.className = "fixed-social hide"
-            }
-        };
-
-        window.addEventListener("scroll", myScrollFunc);
-    });
-
-
-$(document).scroll(function(){ 
-  //more then or equals to 
-  if($(document).scrollTop() >= 800 ){ 
-      $( "#btn" ).css( "display", "block" ); 
- 
-  //less then 800px from top 
-  } else { 
-      
- $( "#btn" ).css( "display", "none" ); 
-  } 
-}); 
-
- 
- 
-/*-- For Close Button --*/
-const box = document.getElementById('box'); 
-const btn = document.getElementById('btn'); 
-btn.addEventListener('click', function handleClick() {
-  if (box.style.display === 'none') {
-    box.style.display = 'block'; 
-    btn.textContent = 'x';
-  } else {
-    box.style.display = 'none'; 
-    btn.textContent = '>';
-  }
-});
- 
-</script>
-
-<!-- SocialMedia Bottom - End -->
-
-
-<!-- Button Lightbox Script - Start -->
-<script type="49f7d3580663b4e01c30f855-text/javascript">
-    $(".crypto-popup").click(function(e) {
-        $('crypto-popup').addClass('fixedPosition full-width');
-        $(".login-popup").addClass('show');
-        e.stopPropagation();
-    });
-</script>
-<!-- Button Lightbox Script - End -->
-
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
-    data-cf-settings="49f7d3580663b4e01c30f855-|49" defer></script>
 </div>
 
 

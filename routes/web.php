@@ -886,3 +886,11 @@ Route::get('/dapp-marketing-agency', function () {
 Route::get('/kol-marketing-agency', function () {
     return view('static.kol-marketing-agency');
 })->name('kol-marketing-agency');
+
+Route::get('/nft-marketing-services', function () {
+    return view('static.nft-marketing-services');
+})->name('nft-marketing-services');
+
+Route::get('/nft-influencer-marketing-services', function () {
+    return view('static.nft-influencer-marketing-services');
+})->name('nft-influencer-marketing-services');

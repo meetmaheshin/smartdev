@@ -3237,6 +3237,10 @@
             'image' => 'token-marketing-services/icons/promotions.webp'
         ],
     ],
+    'cta1_name' => 'Schedule A Meeting',
+    'cta1_link' => '#',
+    'cta2_name' => 'Talk with our Experts',
+    'cta2_link' => '#'
 ])
 
 <style type="text/css">

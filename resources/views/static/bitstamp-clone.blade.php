@@ -2412,11 +2412,20 @@
     </div>
 </div>
 
+<style>
+    .timeline-center .timeline-row:nth-of-type(odd) .tm-detail {
+        margin-left: 150px !important;
+    }
+
+    .timeline-center .timeline-row:nth-of-type(even) {
+        margin-left: 50% !important;
+    }
+</style>
 
 <div class="common_spacing">
     <div class="container">
         <div class="row">
-            <h3 class="sec_tit underline text-center">Workflow of the Bitstamp Clone Solution</h3>
+            <h3 class="sec_tit underline text-center" style="width: 100%">Workflow of the Bitstamp Clone Solution</h3>
             <p class="text-center">Our Bitstamp clone solution features a streamlined workflow, encompassing thorough planning, precise prototyping, and the creation of a robust backend coupled with a dynamic front end. Our methodology ensures the delivery of a sophisticated, user-focused Bitstamp exchange clone tailored to your specific needs.</p>
         </div>
         <div class="col-md-12 mt30">
@@ -2974,57 +2983,6 @@
         padding-top: 10px;
         padding-bottom: 10px;
         line-height: 20px;
-    }
-
-    .dropdown-menu {
-        /* background-color: rgb(11 53 113); */
-        backdrop-filter: blur(23px);
-        box-shadow: 0 12px 28px 1px rgb(0 0 0 / 15%), 0 2px 4px 0 rgb(255 255 255 / 50%);
-        border: 1px solid #ffffff12;
-        transform: translate(0, 0);
-        border-radius: 5px !important;
-        transition: all 0.2s ease-out;
-        padding: 5px 10px;
-    }
-
-    .dropdown-menu>li>a {
-        color: #fff;
-        border-radius: 5px;
-        padding: 3px 7px;
-    }
-
-    .dropdown-menu>li>a:hover {
-        color: #23417f !important
-    }
-
-    .dropdown-menu>li>a:hover .caret {
-        border-left-color: #23417f !important;
-    }
-
-    @media (max-width: 767px) {
-        .navbar-nav .open .dropdown-menu {
-            position: static;
-            float: none;
-            width: auto;
-            margin-top: 0;
-            background-color: transparent;
-            border: 0;
-            box-shadow: none;
-        }
-
-        .navbar-nav .open .dropdown-menu>li>a,
-        .navbar-nav .open .dropdown-menu .dropdown-header {
-            padding: 5px 15px 5px 25px;
-        }
-
-        .navbar-nav .open .dropdown-menu>li>a {
-            line-height: 20px;
-        }
-
-        .navbar-nav .open .dropdown-menu>li>a:hover,
-        .navbar-nav .open .dropdown-menu>li>a:focus {
-            /*background-image: none;*/
-        }
     }
 
     @media (min-width: 768px) {

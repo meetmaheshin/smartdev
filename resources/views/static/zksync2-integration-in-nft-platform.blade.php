@@ -153,7 +153,7 @@
     }
 
     .banner {
-        background-image: url(images/zksync/banner-bg.webp);
+        background-image: url('{{ asset('images/zksync/banner-bg.webp') }}');
         background-size: cover;
         padding-top: 165px;
         padding-bottom: 50px;

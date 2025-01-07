@@ -550,11 +550,11 @@
                                 <div class="col-md-3">
                                     <h6>NFT</h6>
                                     <ul class="list-unstyled custom-list">
-                                        <li><a href="#" class="font_11">NFT Marketing</a></li>
-                                        <li><a href="#" class="font_11">NFT Influencer Marketing</a></li>
-                                        <li><a href="#" class="font_11">NFT Game Marketing</a></li>
-                                        <li><a href="#" class="font_11">NFT PR/Media Marketing</a></li>
-                                        <li><a href="#" class="font_11">NFT Telegram Marketing</a></li>
+                                        <li><a href="{{ url('nft-marketing-services') }}" class="font_11">NFT Marketing</a></li>
+                                        <li><a href="{{ url('nft-influencer-marketing-services') }}" class="font_11">NFT Influencer Marketing</a></li>
+                                        <li><a href="{{ url('kol-marketing-agency') }}" class="font_11">NFT Game Marketing</a></li>
+                                        <li><a href="{{ url('kol-marketing-agency') }}" class="font_11">NFT PR/Media Marketing</a></li>
+                                        <li><a href="{{ url('kol-marketing-agency') }}" class="font_11">NFT Telegram Marketing</a></li>
                                         <li><a href="#" class="font_11">NFT Discord Influencer Marketing</a></li>
                                         <li><a href="#" class="font_11">NFT Community Management</a></li>
                                         <li><a href="#" class="font_11">NFT Marketplace Marketing</a></li>

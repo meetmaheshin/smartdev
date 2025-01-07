@@ -25,7 +25,7 @@
     }
 
     .banner {
-        background-image: url('images/phygital-nft-marketplace/banner.webp');
+        background-image: url('{{ asset('images/phygital-nft-marketplace/banner.webp') }}');
         background-size: cover;
         padding-top: 165px;
         padding-bottom: 50px;

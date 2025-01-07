@@ -1,4 +1,4 @@
-<section class="product-features package_includes" style="background: #fff !important;">
+<section class="product-features package_includes my-5" style="background: #fff !important;">
     <div class="container">
         <div class="row">
             <div class="section-title text-center">

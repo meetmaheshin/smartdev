@@ -390,7 +390,7 @@
         <div class="banner">
 
             <div id="large-header" class="large-header">
-                <img src="images/crypto_payments/banner.webp" alt="Cryptocurrency Payment Gateway Development"
+                <img src="{{ asset('images/crypto_payments/banner.webp') }}" alt="Cryptocurrency Payment Gateway Development"
                     title="Cryptocurrency Payment Gateway Solutions">
             </div>
             <div class="banner-overlay"></div>

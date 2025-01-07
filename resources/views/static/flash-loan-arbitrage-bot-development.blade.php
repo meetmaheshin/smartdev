@@ -3673,82 +3673,42 @@
     </div>
 </div>
 
-<section class="common_spacing">
-    <div class="container">
+<style type="text/css">
+    
+    .time-line .timeline .timeline-content .year img {
+        width: 60px;
+        margin-top: 8px;
+    }
+</style>
 
-        <div class="section-title center text-center">
-            <h2 class="sec_tit underline text-center">How the Flash Loan Crypto Arbitrage Bot Operates</h2>
-            <p>Our flash loan crypto arbitrage bot follows a precise, rapid process designed to maximize profits for traders by leveraging market price discrepancies. Here's how it efficiently transforms market variations into profitable opportunities:</p>
-        </div>
-
-        <div class="time-line">
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            src="{{ asset('images/flash-loan-arbitrage-bot-development/icons/marketing.png') }}"></span>
-                    <div class="inner-content">
-                        <h3 class="title">Identify Market Discrepancies</h3>
-                        <p class="description">The bot continuously monitors real-time cryptocurrency markets to detect price differences across various exchanges, pinpointing optimal trading options.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            src="{{ asset('images/flash-loan-arbitrage-bot-development/icons/secure.webp') }}"></span>
-                    <div class="inner-content">
-                        <h3 class="title">Securing Flash Loan</h3>
-                        <p class="description">It safeguards a flash loan from providers, acquiring the necessary funds to capitalize on the identified arbitrage opportunity.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            src="{{ asset('images/flash-loan-arbitrage-bot-development/icons/arbitrage-bot.webp') }}"></span>
-                    <div class="inner-content">
-                        <h3 class="title">Perform the Arbitrage Trade</h3>
-                        <p class="description">Using advanced algorithms, the bot performs trade promptly, ensuring that traders can realize maximum profit from the price variations.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            src="{{ asset('images/flash-loan-arbitrage-bot-development/icons/flash-card.webp') }}"></span>
-                    <div class="inner-content">
-                        <h3 class="title">Repay the Flash Loan</h3>
-                        <p class="description">The loan is repaid inside the same transaction block, with any remaining cryptocurrency profit retained by the trader for further use or reinvestment.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- <div class="text-center cta_min mt20"> 
-  <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank" href="https://calendly.com/blockchainappfactory/15min?hide_gdpr_banner=1" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Schedule A Meeting</span></a>
-   <a rel="nofollow" href="#newsletter-form-sec" class="nectar-button medium regular accent-color regular-button nec-btn">
-    <span>Talk with our Experts</span></a> </div> -->
-
-
-    </div>
-</section>
-
-{{-- <div id="ret-inv" class="common_spacing" style="background: linear-gradient(140deg, #001da9, #00c1ff);">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h3 class="text-white">Opt for the Best Team to Develop Your New Flash Loan Crypto Arbitrage Trading
-                    Bot!</h3>
-                <div class="contentall text-center">
-                    <a href="#newsletter-form-sec" rel="nofollow" class="nec-btn"
-                        style="border-radius: 30px !important; margin-top: 20px; text-transform:none !important;">Contact
-                        Now!</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
+@include('static.img-frame-alternate-section', [
+    'title' => 'How the Flash Loan Crypto Arbitrage Bot Operates', 
+    'desc' => "Our flash loan crypto arbitrage bot follows a precise, rapid process designed to maximize profits for traders by leveraging market price discrepancies. Here's how it efficiently transforms market variations into profitable opportunities:",
+    'cards' => [
+        [
+            'title' => 'Identify Market Discrepancies',
+            'desc' => "The bot continuously monitors real-time cryptocurrency markets to detect price differences across various exchanges, pinpointing optimal trading options.",
+            'image' => 'flash-loan-arbitrage-bot-development/icons/marketing.png'
+        ],
+        [
+            'title' => 'Securing Flash Loan',
+            'desc' => "It safeguards a flash loan from providers, acquiring the necessary funds to capitalize on the identified arbitrage opportunity.",
+            'image' => 'flash-loan-arbitrage-bot-development/icons/secure.webp'
+        ],
+        [
+            'title' => 'Perform the Arbitrage Trade',
+            'desc' => "Using advanced algorithms, the bot performs trade promptly, ensuring that traders can realize maximum profit from the price variations.",
+            'image' => 'flash-loan-arbitrage-bot-development/icons/arbitrage-bot.webp'
+        ],
+        [
+            'title' => 'Repay the Flash Loan',
+            'desc' => "The loan is repaid inside the same transaction block, with any remaining cryptocurrency profit retained by the trader for further use or reinvestment.",
+            'image' => 'flash-loan-arbitrage-bot-development/icons/flash-card.webp'
+        ],
+    ],
+    'cta1' => 'consultation',
+    'cta2' => '#'
+])
 
 <style type="text/css">
     .icon-text-1 h3 {

@@ -3747,69 +3747,41 @@
     </div>
 </div>
 
+<style type="text/css">
+    .time-line .timeline .timeline-content .year img {
+        width: 60px;
+        margin-top: 8px;
+    }
+</style>
 
-<section class="common_spacing gray_bg">
-    <div class="container">
-
-        <div class="section-title center text-center">
-            <h3 class="sec_tit underline text-center">How We Craft Your Decentralized Application Marketing Campaign</h3>
-            <p>Our seasoned experts execute a meticulously designed process to elevate your dApp, reaching diverse audiences and maximizing impact.
-            </p>
-        </div>
-
-        <div class="time-line">
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy" src="{{ asset('images/dapp-marketing-agency/icons/plan.png') }}" style="width: 60px; margin-top: 10px"></span>
-                    <div class="inner-content">
-                        <h4 class="title">Strategic Planning</h4>
-                        <p class="description">Our team dives deep into your dApp’s features, audience, and competitive landscape. We set precise, actionable goals centered on user acquisition and community expansion.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            src="{{ asset('images/dapp-marketing-agency/icons/strategy.webp') }}" style="width: 60px; margin-top: 10px"></span>
-                    <div class="inner-content">
-                        <h4 class="title">Strategic Execution</h4>
-                        <p class="description">We deploy a strategic mix of content marketing and influencer collaborations to drive user education and foster community engagement across social media, forums, and AMAs.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            src="{{ asset('images/dapp-marketing-agency/icons/campaign.png') }}" style="width: 60px; margin-top: 10px"></span>
-                    <div class="inner-content">
-                        <h4 class="title">Campaign Launch</h4>
-                        <p class="description">We generate and distribute premium content that aligns with your strategy, manage online communities to enhance interaction and leverage key metrics to track and boost visibility.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <span class="year"><img class="lazy"
-                            src="{{ asset('images/dapp-marketing-agency/icons/optimization.png') }}" style="width: 60px; margin-top: 10px"></span>
-                    <div class="inner-content">
-                        <h4 class="title">Continuous Optimization</h4>
-                        <p class="description">Our experts scrutinize campaign data to pinpoint successes and areas for improvement. We provide detailed reports and continually refine strategies to ensure peak performance.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="text-center cta_min mt20">
-            {{-- <a rel="nofollow" class="nectar-button medium regular accent-color regular-button nec-btn" target="_blank"
-                href="#" data-color-override="false"
-                data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Schedule a Consultation</span></a> --}}
-            <a rel="nofollow" href="{{ url('consultation') }}"
-                class="nectar-button medium regular accent-color regular-button nec-btn">
-                <span>Connect with Our Experts</span></a>
-        </div>
-    </div>
-</section>
+@include('static.img-frame-alternate-section', [
+    'title' => 'How We Craft Your Decentralized Application Marketing Campaign', 
+    'desc' => "Our seasoned experts execute a meticulously designed process to elevate your dApp, reaching diverse audiences and maximizing impact.",
+    'cards' => [
+        [
+            'title' => 'Strategic Planning',
+            'desc' => "Our team dives deep into your dApp’s features, audience, and competitive landscape. We set precise, actionable goals centered on user acquisition and community expansion.",
+            'image' => 'dapp-marketing-agency/icons/plan.png'
+        ],
+        [
+            'title' => 'Strategic Execution',
+            'desc' => "We deploy a strategic mix of content marketing and influencer collaborations to drive user education and foster community engagement across social media, forums, and AMAs.",
+            'image' => 'dapp-marketing-agency/icons/strategy.webp'
+        ],
+        [
+            'title' => 'Campaign Launch',
+            'desc' => "We generate and distribute premium content that aligns with your strategy, manage online communities to enhance interaction and leverage key metrics to track and boost visibility.",
+            'image' => 'dapp-marketing-agency/icons/campaign.png'
+        ],
+        [
+            'title' => 'Continuous Optimization',
+            'desc' => "Our experts scrutinize campaign data to pinpoint successes and areas for improvement. We provide detailed reports and continually refine strategies to ensure peak performance.",
+            'image' => 'dapp-marketing-agency/icons/optimization.png'
+        ],
+    ],
+    'cta1' => 'consultation',
+    'cta2' => '#'
+])
 
 <div class="technologies" style="background: #fff;">
     <div class="container">
