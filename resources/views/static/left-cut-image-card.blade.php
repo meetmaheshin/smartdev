@@ -21,6 +21,20 @@
                     @endforeach
                 </ul>
             </div>
+            @if( !empty($cta1_name || $cta2_name))
+                <div class="text-center cta_mine txt"> 
+                    @if((!empty($cta1_link)) && ($cta1_link != '#' && $cta1_link != ''))
+                        <a class="nectar-button medium regular accent-color regular-button nec-btn med-btn" target="_blank"
+                            href="{{ url("$cta1_link") }}"
+                            data-color-override="false" data-hover-color-override="false"
+                            data-hover-text-color-override="#fff"><span>{{ ($cta1_name) }}</span>
+                        </a>
+                    @endif
+                    @if((!empty($cta2_link)) && ($cta2_link != '#' && $cta2_link != ''))
+                        <a href="{{ url("$cta2_link") }}" class="nectar-button medium regular accent-color regular-button nec-btn med-btn"><span>{{ ($cta2_name) }}</span></a>    
+                    @endif
+                </div>
+            @endif
         </div>
     </div>
 </div>

@@ -2690,6 +2690,12 @@ transition: all .3s ease-in-out;
             </div>
         </section>
 
+        <style>
+            .feature-box-3 .icon img {
+                margin-top: 12px;
+            }
+        </style>
+
         <div id="our_services" class="defisec gray_bg">
             <div class="container">
                 <div class="section-title text-center">

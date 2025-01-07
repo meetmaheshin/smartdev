@@ -153,7 +153,7 @@
     }
 
     .banner {
-        background-image: url(images/metamask-like-wallet-development/banner-bg.webp);
+        background-image: url('{{ asset('images/metamask-like-wallet-development/banner-bg.webp') }}');
         background-size: cover;
         padding-top: 165px;
         padding-bottom: 50px;

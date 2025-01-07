@@ -143,7 +143,7 @@
     }
 
     .banner {
-        background: url(images/wallet.webp);
+        background: url('{{ asset('images/wallet.webp') }}');
         background-size: cover;
         padding-top: 110px;
         padding-bottom: 100px;
@@ -741,7 +741,7 @@
     }
 
     .cont.cont2 ul li {
-        background-image: url(images/icons/right-arrow-circular-button.svg);
+        background-image: url('{{ asset('images/icons/right-arrow-circular-button.svg') }}');
         background-size: 26px;
         padding-left: 37px;
         background-position: left 4px;

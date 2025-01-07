@@ -150,7 +150,7 @@
     }
 
     .banner {
-        background: url('{{ asset('images/nft-ticketing-marketplace/banner_nft_ticket.jpg') }}');
+        background: url('{{ asset('images/nft-ticketing-marketplace/banner_nft_ticket.webp') }}');
         background-size: cover;
         padding-top: 110px;
         padding-bottom: 100px;
@@ -305,7 +305,7 @@
 
     .list li:before {
         content: " \f0a4";
-        font-family: FontAwesome;
+        font-family: "Font Awesome 5 Free";
         color: #47b475;
         margin-right: 10px;
         text-indent: 50px;
@@ -374,8 +374,8 @@
         position: absolute;
         left: 4px;
         top: 4px;
-        content: '\f10c';
-        font-family: FontAwesome;
+        content: '\f192';
+        font-family: "Font Awesome 5 Free";
         font-size: 16px;
         line-height: 1;
         color: #47b475;
@@ -394,7 +394,8 @@
 
     .list1 li:before {
         content: " \f0da ";
-        font-family: FontAwesome;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
         color: #47b475;
         margin-right: 10px;
         font-size: 18px;

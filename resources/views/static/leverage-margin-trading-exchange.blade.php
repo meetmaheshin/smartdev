@@ -1337,8 +1337,8 @@
     }
 
     .uniq_features ul li:after {
-        font-family: FontAwesome;
-        top: 3px;
+        font-family: "Font Awesome 5 Free";
+        top: -4px;
         right: 0;
         padding-right: 10px;
         content: "\f0a9";
