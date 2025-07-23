@@ -52,7 +52,7 @@ class DashboardController extends Controller
         $skillArry = [];
         $skillsMatch = FreelancerSkill::where('user_id',auth()->user()->id)->with('skill')->get();
         foreach($skillsMatch as $matches){
-            $skillArry[] = $matches->skill->skills_sub;
+            $skillArry[] = $matches->skill?->skills_sub;
         }
         // best matches 
         $data['project_best']  = Project::withCount('getProposalSetting')

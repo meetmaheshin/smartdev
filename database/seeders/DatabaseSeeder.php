@@ -18,11 +18,9 @@ class DatabaseSeeder extends Seeder
         $this->call(IndustrySeeder::class);
         $this->call(SqlFileSeeder::class);
         $this->call(CountryStateSeeder::class);
-        $this->call(UsersTableSeeder::class);
+        // $this->call(UsersTableSeeder::class);
 
-        // $this->call(SkillSeeder::class);
-        // $this->call(SpecialitySeeder::class);
-
+        
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
