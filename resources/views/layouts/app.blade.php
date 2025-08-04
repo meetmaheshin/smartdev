@@ -98,12 +98,6 @@
 	<script type="text/javascript" src="{{asset('js/socket.js')}}"></script>
 	@yield('before_js')
 	<script> 
-		// toastr.options.timeOut = 10000;
-		// @if (Session::has('error'))
-		// 	toastr.error("{{ Session::get('error') }}");
-		// @elseif(Session::has('success'))
-		// 	toastr.success("{{ Session::get('success') }}");
-		// @endif
 		Filevalidation = () => {
             const fi = document.getElementById('file');
             // Check if any file is selected.
@@ -115,15 +109,12 @@
                     // The size of the file.
                     if (file >= 2048) {
                         alert(
-                          "File too Big, please select a file less than 2mb");
+                          "File tooo Big, please select a file less than 2mb");
 						  fi.value= '';
                     }  
                 }
             }
         }
-
-		
-
     </script>
 
 	@yield('js')
